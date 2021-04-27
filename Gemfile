@@ -1,3 +1,4 @@
 source "https://rubygems.org"
 
-gem "jekyll"
+# keep insync with GH-Pages 
+gem "github-pages"
