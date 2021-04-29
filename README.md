@@ -10,13 +10,22 @@ Draft documentation for CollectionBuilder, migrating docs from collectionbuilder
 This repository is based on "Just the Docs" theme (<https://github.com/pmarsceill/just-the-docs>).
 The theme was forked in 2021-04 and all files are included in this repository (rather than as a gem theme). 
 
+## Contributing 
+
+Outside contributors are welcome and encouraged to help make these docs better!
+If you discover an error, or a page in need of an update or clarification, please [open an new Issue](https://github.com/CollectionBuilder/cb-docs/issues) describing the problem, including link to the page.
+If you would like to edit directly, please [Fork this repository and open a Pull Request with your changes](https://guides.github.com/activities/forking/). 
+This can be facilitated by following the "Edit this page on GitHub" link at the bottom of any content page.
+
 Documentation follows these conventions:
 
-- All documentation files are written in Markdown. 
-    - For clearer version control and editing, please write one sentence per line and provide a blank line between headers and paragraphs.
-- Files are located in the "docs" folder and further organized into folders for each section.
+- All documentation files are written in Markdown. For clearer version control and editing, please:
+    - write one sentence per line.
+    - provide a blank line between elements (i.e. headers, paragraphs, lists, code blocks).
+    - headers should follow logical order on page without skipping levels.
+- Files are located in the "docs" folder and are further organized into folders for each section.
 - Each section should have an "index.md" presenting an introduction to the section. 
-    - The index should have front matter variables `nav_order` (setting over all order in doc side bar nav) and `has_children: true`. 
+    - The index should have front matter variables `nav_order` (setting over all order in side bar nav) and `has_children: true`. 
     - The index does NOT need a TOC of section contents, as that will be added automatically.
 - Individual doc topics should be their own Markdown file. 
     - Each should have front matter variables `parent` (matching the title of section index) and `nav_order` (setting order within the section). 
