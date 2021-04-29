@@ -19,9 +19,9 @@ This can be facilitated by following the "Edit this page on GitHub" link at the 
 
 Documentation follows these conventions:
 
-- All documentation files are written in Markdown. For clearer version control and editing, please:
+- All documentation files are written in Markdown. For clearer version control, editing, and accessibility please:
     - write one sentence per line.
-    - provide a blank line between elements (i.e. headers, paragraphs, lists, code blocks).
+    - always provide a blank line between elements (i.e. headers, paragraphs, lists, code blocks).
     - headers should follow logical order on page without skipping levels.
     - page should start with an H1 (`# `)
 - Files are located in the "docs" folder and are further organized into folders for each section.
@@ -30,6 +30,7 @@ Documentation follows these conventions:
     - The index does NOT need a TOC of section contents, as that will be added automatically.
 - Individual doc topics should be their own Markdown file. 
     - Each should have front matter variables `parent` (matching the title of section index) and `nav_order` (setting order within the section). 
+    - Content can be styled using [Just the Docs classes and utilities](https://pmarsceill.github.io/just-the-docs/)
 - Pages that shouldn't appear in nav, add front matter `nav_exclude: true`.
 
 Example section index front matter:
