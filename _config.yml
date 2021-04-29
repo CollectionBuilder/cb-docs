@@ -100,6 +100,14 @@ color_scheme: cb
 plugins:
   - jekyll-seo-tag
 
+# set defaults
+defaults:
+  - scope:
+      path: "docs/*"
+    values:
+      layout: "page"
+  
+
 kramdown:
   syntax_highlighter_opts:
     block:
