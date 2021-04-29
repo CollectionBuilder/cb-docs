@@ -10,9 +10,6 @@ nav_order: 10
 
 {% capture image-card %}
 
-<div class="row" markdown="1">
-
-<div class="col-md-8" markdown="1">
 ### Image Size:
 
 **CDM-Users only**: This is a *CONTENTdm-specific* variable section for adjusting size of images used throughout the site.
@@ -30,12 +27,9 @@ The percentage must be 10% or greater.
 - **image-percentage-small**
 	- Default `20`
 	- example --> `image-percentage-small: 10`
-</div>
 
-<div class="col-md-4" markdown ="1">
 {% include feature/alert.html color="info" text="**Tip:** If your images are appearing blurry or take too long to load, try adjusting the image-sizing settings. The appropriate percentage depends on the full size of images contained in your CDM repository and may require some experimentation." %} 
-</div>
-</div>
+
 {% endcapture %}
 {% include feature/card.html text=image-card %}
 

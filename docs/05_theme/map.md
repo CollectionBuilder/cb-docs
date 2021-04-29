@@ -4,7 +4,6 @@ parent: Theme
 nav_order: 7
 ---
 
-<div class="row" markdown="1">
 ## Map Page
 
 - **latitude**: Determines the center of map.
@@ -23,7 +22,6 @@ nav_order: 7
 
 **The fields below determine *map search* and *map cluster* features. For larger collections with many items at one spot, we recommend turning on the map-cluster option and turning off the map-search feature.**
 
-<div class="col-md-8" markdown="1">
 - **map-search**: Enables a user to search the map via the large magnifying glass on the top right. 
 	- Not suggested for large collections.
 	- Options: `true`, `false`
@@ -43,11 +41,7 @@ nav_order: 7
 - **map-cluster-radius**: Determines the size of clusters
 	- Range: `10` to `80`
 	- example --> `map-cluster-radius: 25`
-</div>
 
-<div class="col-md-4" markdown ="1">
 {% include feature/alert.html color="info" text="**Tip:** A user can change the **layer** the map is using by clicking on the Layer button at the top right of the map in the browser. 
 
 The map can be **searched** by clicking on the magnifying glass just below the layers option at the top right." %}
-</div>
-</div>

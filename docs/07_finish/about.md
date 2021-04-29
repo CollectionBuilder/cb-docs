@@ -20,8 +20,6 @@ In fact all of the CollectionBuilder docs are written in Markdown.
 Jekyll has Markdown support built in, so it's a good skill to learn as you get further into this type of development. 
 There are a number of tutorials on the web to learn more (see Markdown Resources box above), and we suggest you check them out.
 
-<div class="row">
-<div class="col-md-7" markdown="1">
 When you open the `about.md` file, you'll see that there is already one include command at the beginning of the file which is pulling in the page's jumbotron image: `{% raw %}{% include about/jumbotron.html %}{% endraw %}` (remember, you chose this image in the [theme.yml](theme.html#about) file). If you don't want the jumbotron on your About page, just delete this line of code.
 
 Alternately, if you'd like to add *more* visual features to the page we've made it easy to do this too, by including templated files.
@@ -30,16 +28,11 @@ You'll find the files below in the `_includes/feature/` directory:
 - `card.md`
 - `item-figure.html`
 - `modal.md`
-</div>
 
-<div class="col-md-5" markdown ="1">
 {% include feature/alert.html color="info ml-4 mb-4 mt-2" text="**Include Files:** 
 
 Jekyll's include command is a really powerful feature that allows specific elements or content to be drawn into pages from one central location. For more on includes and other Jekyll features, check out the [Jekyll docs](https://jekyllrb.com/docs/)" %}
-</div>
-</div>
 
-{:.mt-4}
 ### Adding an image to the About Page
 
 The `item-figure.html` include adds a [Bootstrap-styled figure](https://getbootstrap.com/docs/4.4/content/figures/){:target="_blank" rel="noopener"} to the page.

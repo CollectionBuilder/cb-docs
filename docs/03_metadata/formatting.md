@@ -4,10 +4,8 @@ parent: Metadata
 nav_order: 5
 ---
 
-<div class="row" markdown="1">
 ## 5. Formatting Your Metadata
 
-<div class="col-md-7" markdown="1">
 Make sure you're following the guidelines below, otherwise CollectionBuilder may not work.
 
 - **Field Names Should Be Lowercase and Not Contain Special Characters**
@@ -17,12 +15,7 @@ Make sure you're following the guidelines below, otherwise CollectionBuilder may
 - **No Special Characters in ID values**
     - When creating **objectids** and **filenames** do not use spaces (` `), slashes (`/`, `\`), and special characters (`&`). Since these values will be used in URLs, they should be web safe characters.
 
-</div>
-
-<div class="col-md-5" markdown ="1">
 {% include feature/alert.html color="primary" text="**Tip:** In Visual Studio Code, there's **an easy way to make your fields lowercase**: 
 1. Highlight the first row of your CSV (the row containing field names) 
 2. Click the 'Command Palette' option in the View menu 
 3. Start typing 'Transform to lowercase'--the option will appear!" %}
-</div>
-</div>

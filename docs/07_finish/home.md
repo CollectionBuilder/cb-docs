@@ -37,8 +37,6 @@ Just like the About page, the Home page is composed of a number of include comma
 {% endraw %}
 
 {:.mt-4}
-<div class="row">
-<div class="col-md-7" markdown="1">
 
 You can easily delete an include command or move it to another location in the file to change the look of your Home page.  
 For instance:
@@ -48,20 +46,14 @@ For instance:
     - You might make this change if you wanted space for your carousel to be taller and more prominent. 
     - You could then adjust the `carousel-height` variable in the [theme](theme.html#home) file. 
 
-</div>
-
-<div class="col-md-5" markdown ="1">
 {% include feature/alert.html color="primary ml-4 mb-4 mt-2" text="**Tip:**
 
 These edits move content around, but the home page's column sizing and layout can also be adjusted. Columns follow the Bootstrap Grid, so if you're diving deeper into customizing the layout, refer to the [Bootstrap Documentation](https://getbootstrap.com/docs/4.3/layout/grid/)." %}
-</div>
-</div>
 
 There are a lot of possibilities for customization here! 
 CollectionBuilder is designed as a flexible template that can be adapted to the needs of a collection.
 We recommend experimenting to find what works best for you.
 
-{:.mt-4}
 ### Featured Terms Cards
 
 You might have noticed that the includes for the top subjects and locations cards in the home-infographic layout look a little more complicated than the others on this page.

@@ -7,7 +7,7 @@ nav_order: 3
 ## 3. Fields Required for Visualizations
 CollectionBuilder uses these fields to generate contextual visualizations, including a map, timeline, and word clouds reflecting the frequency of subjects and locations in a collection.
 
-<table class='table table-striped float-right col-md-5 ml-2 p-0'>
+<table class='table table-striped'>
 <tr><th>Page</th><th>Required Fields</th></tr>
 <tr><td>Map</td><td class="font-italic">latitude & longitude</td></tr>
 <tr><td>Timeline</td><td class="font-italic">date (yyyy at minimum)</td></tr>
