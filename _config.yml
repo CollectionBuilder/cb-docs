@@ -18,7 +18,7 @@
 title: CollectionBuilder Documentation
 description: documentation for CollectionBuilder, an open source tool for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
 baseurl: /cb-docs # the subpath of your site, e.g. /blog
-#url: "https://evanwill.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "https://collectionbuilder.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE.txt", "README.md", "Rakefile"]
@@ -84,7 +84,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/evanwill/cb-docs" # the github URL for your repo
+gh_edit_repository: "https://github.com/collectionbuilder/cb-docs" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
