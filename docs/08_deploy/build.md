@@ -4,9 +4,6 @@ parent: Deploy
 nav_order: 2
 ---
 
-{:.py-4 .mt-4 #build}
-***
-
 {% include feature/alert.html color="warning" text="#### **CDM & SA Users**:" %}
 
 ### 1. Building the Site 

@@ -4,9 +4,6 @@ parent: Deploy
 nav_order: 3
 ---
 
-{:.py-4 .mt-4 #move}
-***
-
 {% include feature/alert.html color="warning" text="#### **CDM & SA Users**:" %}
 
 ### 2. Moving the _site Files to Your Web Server

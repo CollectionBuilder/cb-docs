@@ -4,9 +4,6 @@ parent: Finish
 nav_order: 1
 ---
 
-{:.py-4 .mt-4 #about-page}
-***
-
 ## 1. Editing the About Page
 
 To edit the About page, find and open the `about.md` file which is in the Pages directory of your repository. 

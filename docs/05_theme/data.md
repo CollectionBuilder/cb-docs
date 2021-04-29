@@ -4,9 +4,6 @@ parent: Theme
 nav_order: 9
 ---
 
-{:.py-4 .mt-4 #data}
-***
-
 ## Data Download
 
 - **metadata-export-fields**: A list of metadata fields available for export via data downloads.

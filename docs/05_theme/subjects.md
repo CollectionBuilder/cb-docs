@@ -4,9 +4,6 @@ parent: Theme
 nav_order: 5
 ---
 
-{:.py-4 .mt-4 #subjects}
-***
-
 ## Subjects Page
 
 - **subjects-fields**: Choose metadata fields from your collection metadata CSV to be included in the Subjects page tag cloud.

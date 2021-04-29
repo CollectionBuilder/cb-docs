@@ -4,9 +4,6 @@ parent: Config
 nav_order: 2
 ---
 
-{:.py-4 .mt-4 #site}
-***
-
 ## Site Settings
 
 These are the primary settings of your site:

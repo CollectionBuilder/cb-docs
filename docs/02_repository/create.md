@@ -4,9 +4,6 @@ parent: Repository
 nav_order: 1
 ---
 
-{:.py-4 .mt-4 #create}
-***
-
 ## 1. Create a New Repository
 
 First, set up a repository on GitHub for your CollectionBuilder project.

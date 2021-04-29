@@ -4,9 +4,6 @@ parent: Repository
 nav_order: 3
 ---
 
-{:.py-4 .mt-4 #commit}
-***
-
 ## 3. Commit Your First File
 
 Open the _config.yml folder in your text editor. Change the "title" variable, and save the change. Now go back to GitHub Desktop to commit that change following the instructions below.

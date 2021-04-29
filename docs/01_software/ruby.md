@@ -4,9 +4,6 @@ parent: Software
 nav_order: 3
 ---
 
-{:.py-4 .mt-4 #ruby}
-***
-
 ## 3. Install Ruby
 
 [Ruby](https://www.ruby-lang.org/en/){:target="_blank" rel="noopener"} is a programming language popular with web applications.

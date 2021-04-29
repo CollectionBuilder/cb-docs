@@ -4,9 +4,6 @@ parent: Customize
 nav_order: 2
 ---
 
-{:.py-4 .mt-4 #config-metadata}
-***
-
 ## Metadata / Item Page Configuration (config-metadata.csv)
 
 The most important CSV (if you're measuring by the number of pages it creates!) is the one that controls the metadata. 

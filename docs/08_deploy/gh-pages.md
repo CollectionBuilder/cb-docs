@@ -4,8 +4,6 @@ parent: Deploy
 nav_order: 1
 ---
 
-{:.py-4 .mt-4 #gh-pages}
-***
 {% include feature/alert.html color="warning" text="#### **GH Users**:" %}
 
 ### Enabling GitHub Pages

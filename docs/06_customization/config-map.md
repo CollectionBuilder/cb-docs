@@ -4,9 +4,6 @@ parent: Customize
 nav_order: 4
 ---
 
-{:.py-4 .mt-4 #config-map}
-***
-
 ## Map Page Configuration (config-map.csv)
 
 The config-map.csv determines what information displays on the pop-ups on the map. More on map search options can be found on the [theme page](theme.html#map-page)

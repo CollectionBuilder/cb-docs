@@ -4,9 +4,6 @@ parent: Finish
 nav_order: 2
 ---
 
-{:.py-4 .mt-4 #home-page}
-***
-
 ## 2. Editing the Home Page
 
 You may finish your collection and realize that you want to remove or shift around the content on your Home page. 

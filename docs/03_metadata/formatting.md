@@ -4,9 +4,6 @@ parent: Metadata
 nav_order: 5
 ---
 
-{:.py-4 .mt-4 #format}
-***
-
 <div class="row" markdown="1">
 ## 5. Formatting Your Metadata
 

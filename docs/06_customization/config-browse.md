@@ -4,16 +4,18 @@ parent: Customize
 nav_order: 3
 ---
 
-{:.py-4 .mt-4 #config-browse}
-***
-
 ## Browse Page Configuration (config-browse.csv)
 
-The Browse page displays each item in the collection as a "card," which is a design feature common to Bootstrap. At the top of the page, a search box allows users to limit the display by searching for certain terms. We also use subject links throughout the site that link back into the browse page and filter the collection based on the filter chosen. 
+The Browse page displays each item in the collection as a "card," which is a design feature common to Bootstrap. 
+At the top of the page, a search box allows users to limit the display by searching for certain terms. 
+We also use subject links throughout the site that link back into the browse page and filter the collection based on the filter chosen. 
 
-So, for instance, if on the Subjects page, you clicked a button for "Forests," you would actually be clicking a link whose url ended as "browse.html#forests." The Browse page would take anything after the hashtag ('#') and filter the collection's cards by it. 
+So, for instance, if on the Subjects page, you clicked a button for "Forests," you would actually be clicking a link whose url ended as "browse.html#forests." 
+The Browse page would take anything after the hashtag ('#') and filter the collection's cards by it. 
 
-The Browse page configuration CSV allows you to control which metadata appears on a card for each item. Title appears on the card automatically. After that, you can add whatever metadata you'd like to the csv, as well as determine how that metadata will be displayed. 
+The Browse page configuration CSV allows you to control which metadata appears on a card for each item. 
+Title appears on the card automatically. 
+After that, you can add whatever metadata you'd like to the csv, as well as determine how that metadata will be displayed. 
 
 - **field**: Selects the field from your metadata CSV.
 - **display_name**: Determines the field name as it is displayed to users.

@@ -4,9 +4,6 @@ parent: Customize
 nav_order: 6
 ---
 
-{:.py-4 .mt-4 #config-colors}
-***
-
 ## Theme Color Configuration (config-theme-colors.csv)
 
 For simplicity, CollectionBuilder uses pre-compiled Bootstrap CSS.

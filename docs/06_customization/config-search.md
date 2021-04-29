@@ -4,9 +4,6 @@ parent: Customize
 nav_order: 7
 ---
 
-{:.py-4 .mt-4 #config-search}
-***
-
 ## Search Configuration (config-search.csv)
 
 {% include feature/alert.html text="This section is for **GH Users Only**" color="info" %}

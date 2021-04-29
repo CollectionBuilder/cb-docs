@@ -4,9 +4,6 @@ parent: Repository
 nav_order: 4
 ---
 
-{:.py-4 .mt-4 #generate}
-***
-
 ## 4. Generating Your Site on a Test Server
 
 Let's test the new code. 

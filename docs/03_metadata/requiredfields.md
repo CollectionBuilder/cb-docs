@@ -4,9 +4,6 @@ parent: Metadata
 nav_order: 2
 ---
 
-{:.py-4 .mt-4 #required}
-***
-
 ## 2. Required Fields 
 
 Without values in the fields below, CollectionBuilder will not work properly.

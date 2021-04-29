@@ -4,9 +4,6 @@ parent: Software
 nav_order: 2
 ---
 
-{:.py-4 .mt-4 #text-editor}
-***
-
 ## 1. Get a Text Editor
 
 The CollectionBuilder team suggests these open-source, cross platform options for text editors:

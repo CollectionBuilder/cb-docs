@@ -4,9 +4,6 @@ parent: Metadata
 nav_order: 6
 ---
 
-{:.py-4 .mt-4 #upload}
-***
-
 ## 6. Uploading Your Metadata
 
 {% include feature/alert.html color="warning mt-4" text='*Note:* CSV metadata should be in UTF-8 encoding. CSVs downloaded from Google Sheets or exported from OpenRefine will have the correct encoding. However, Excel does not handle UTF-8 correctly, and may cause issues. The encoding "UTF-8 with BOM" (created by Excel save as CSV) will not work!' %}

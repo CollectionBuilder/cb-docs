@@ -4,9 +4,6 @@ parent: Config
 nav_order: 3
 ---
 
-{:.py-4 .mt-4 #coll}
-***
-
 ## Collection Settings
 
 These are settings specific to your collection:

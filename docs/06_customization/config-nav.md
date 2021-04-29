@@ -4,9 +4,6 @@ parent: Customize
 nav_order: 1
 ---
 
-{:.py-4 .mt-4 #config-nav}
-***
-
 ## Navigation Header Configuration (config-nav.csv)
 
 This CSV controls what and in what order the links appear in your collection's navigation bar. 

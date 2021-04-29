@@ -4,9 +4,6 @@ parent: Config
 nav_order: 4
 ---
 
-{:.py-4 .mt-4 #additional}
-***
-
 ## Additional Variables
 
 {:.alert .alert-success}

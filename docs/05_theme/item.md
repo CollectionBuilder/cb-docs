@@ -4,9 +4,6 @@ parent: Theme
 nav_order: 4
 ---
 
-{:.py-4 .mt-4 #item}
-***
-
 ## Item Page 
 
 - **browse-buttons**: Adds previous/next arrows to items, but doubles build time. 

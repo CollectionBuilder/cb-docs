@@ -4,9 +4,6 @@ parent: Software
 nav_order: 4
 ---
 
-{:.py-4 .mt-4 #jekyll}
-***
-
 ## 4. Install Jekyll
 
 Finally, we get to [Jekyll](https://jekyllrb.com/){:target="_blank" rel="noopener"}!

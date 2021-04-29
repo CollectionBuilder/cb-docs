@@ -4,10 +4,6 @@ parent: Theme
 nav_order: 2
 ---
 
-
-{:.py-4 .mt-4 #about}
-***
-
 ## About Page
 
 - **about-featured-image**: This is the image that appears at the top of the about page of your collection. It can be ***one*** of the following:

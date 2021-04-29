@@ -4,9 +4,6 @@ parent: Repository
 nav_order: 5
 ---
 
-{:.py-4 .mt-4 #edit}
-***
-
 ## 5. Editing Your Repository
 
 Once you start **customizing your repository**, here are a few things you should know:

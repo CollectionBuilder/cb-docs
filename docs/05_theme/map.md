@@ -4,9 +4,6 @@ parent: Theme
 nav_order: 7
 ---
 
-{:.py-4 .mt-4 #map}
-*** 
-
 <div class="row" markdown="1">
 ## Map Page
 

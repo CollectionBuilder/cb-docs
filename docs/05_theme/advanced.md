@@ -4,12 +4,7 @@ parent: Theme
 nav_order: 10
 ---
 
-{:.py-4 .mt-4 #advancedoptions}
-***
-
 # Advanced Theme Options
-
-{:.py-4 .mt-4}
 
 ## Images 
 

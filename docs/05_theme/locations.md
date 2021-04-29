@@ -4,10 +4,6 @@ parent: Theme
 nav_order: 6
 ---
 
-{:.py-4 .mt-4 #locations}
-***
-
-
 ## Locations Page
 
 This page functions exactly as the Subjects page does. 

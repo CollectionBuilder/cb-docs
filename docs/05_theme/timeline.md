@@ -4,12 +4,11 @@ parent: Theme
 nav_order: 8
 ---
 
-{:.py-4 .mt-4 #timeline}
-***
-
-
 ## Timeline Page
-The Timeline page represents each year as a row and each corresponding item as a thumbnail. This section will let you determine which years are in the **dropdown button** at the top right of the Timeline page. This button allows a user to jump down the page.
+
+The Timeline page represents each year as a row and each corresponding item as a thumbnail. 
+This section will let you determine which years are in the **dropdown button** at the top right of the Timeline page. 
+This button allows a user to jump down the page.
 
 - **year-navigation**: Sets the years to appear in Timeline dropdown nav. 
 	- *Tip*: If left blank, these will auto-generate. (We recommend leaving this blank.)
