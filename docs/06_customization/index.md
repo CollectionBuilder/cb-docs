@@ -4,6 +4,8 @@ has_children: true
 nav_order: 6
 ---
 
+# Customize and Configure 
+
 Refer to the [Theme File section](theme.html) for more information about customizing the various pages in your collection. 
 The files discussed in this section will help you customize the website to fit the metadata that's driving it. 
 

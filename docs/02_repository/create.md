@@ -4,7 +4,7 @@ parent: Repository
 nav_order: 1
 ---
 
-## 1. Create a New Repository
+# Create a New Repository
 
 First, set up a repository on GitHub for your CollectionBuilder project.
 Each repository on GitHub is basically a folder for storing and tracking the code for a project.

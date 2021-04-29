@@ -4,6 +4,8 @@ has_children: true
 nav_order: 2
 ---
 
+# Set up CollectionBuilder Project Repository
+
 Now that your *development environment* is ready to go, we need to get the code and set up a CollectionBuilder project.
 
 **Note**: As of 2020, all newly-created GitHub repositories will contain a primary branch called **main** instead of **master**. 

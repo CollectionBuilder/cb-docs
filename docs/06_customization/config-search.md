@@ -4,7 +4,7 @@ parent: Customize
 nav_order: 7
 ---
 
-## Search Configuration (config-search.csv)
+# Search Configuration (config-search.csv)
 
 {% include feature/alert.html text="This section is for **GH Users Only**" color="info" %}
 

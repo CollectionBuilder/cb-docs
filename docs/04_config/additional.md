@@ -4,7 +4,7 @@ parent: Config
 nav_order: 4
 ---
 
-## Additional Variables
+# Additional Variables
 
 {:.alert .alert-success}
 For **all user-types**, the following settings in **_config.yml** are optional. Your site will work successfully without changing the variables below.

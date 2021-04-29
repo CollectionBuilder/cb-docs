@@ -4,7 +4,7 @@ parent: Theme
 nav_order: 6
 ---
 
-## Locations Page
+# Locations Page
 
 This page functions exactly as the Subjects page does. 
 

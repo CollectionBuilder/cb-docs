@@ -4,7 +4,7 @@ parent: Customize
 nav_order: 3
 ---
 
-## Browse Page Configuration (config-browse.csv)
+# Browse Page Configuration (config-browse.csv)
 
 The Browse page displays each item in the collection as a "card," which is a design feature common to Bootstrap. 
 At the top of the page, a search box allows users to limit the display by searching for certain terms. 

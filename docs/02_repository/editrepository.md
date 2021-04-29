@@ -4,7 +4,7 @@ parent: Repository
 nav_order: 5
 ---
 
-## 5. Editing Your Repository
+# Editing Your Repository
 
 Once you start **customizing your repository**, here are a few things you should know:
 

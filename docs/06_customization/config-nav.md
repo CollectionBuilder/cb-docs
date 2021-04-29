@@ -4,7 +4,7 @@ parent: Customize
 nav_order: 1
 ---
 
-## Navigation Header Configuration (config-nav.csv)
+# Navigation Header Configuration (config-nav.csv)
 
 This CSV controls what and in what order the links appear in your collection's navigation bar. 
 

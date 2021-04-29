@@ -4,7 +4,7 @@ parent: Theme
 nav_order: 8
 ---
 
-## Timeline Page
+# Timeline Page
 
 The Timeline page represents each year as a row and each corresponding item as a thumbnail. 
 This section will let you determine which years are in the **dropdown button** at the top right of the Timeline page. 

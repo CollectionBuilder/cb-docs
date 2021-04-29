@@ -4,7 +4,7 @@ parent: Theme
 nav_order: 9
 ---
 
-## Data Download
+# Data Download
 
 - **metadata-export-fields**: A list of metadata fields available for export via data downloads.
 	- If you'd like all your fields included, paste in the first row of your collection's CSV

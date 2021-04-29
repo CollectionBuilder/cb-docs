@@ -4,7 +4,7 @@ parent: Config
 nav_order: 1
 ---
 
-## URL Variables
+# URL Variables
 
 These variables should be defined based on the url you will use to serve your site:
 

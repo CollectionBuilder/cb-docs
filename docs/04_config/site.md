@@ -4,7 +4,7 @@ parent: Config
 nav_order: 2
 ---
 
-## Site Settings
+# Site Settings
 
 These are the primary settings of your site:
 

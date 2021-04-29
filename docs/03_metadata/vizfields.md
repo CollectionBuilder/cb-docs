@@ -4,7 +4,8 @@ parent: Metadata
 nav_order: 3
 ---
 
-## 3. Fields Required for Visualizations
+# Fields Required for Visualizations
+
 CollectionBuilder uses these fields to generate contextual visualizations, including a map, timeline, and word clouds reflecting the frequency of subjects and locations in a collection.
 
 <table class='table table-striped'>

@@ -4,7 +4,7 @@ parent: Theme
 nav_order: 1
 ---
 
-## Home Page
+# Home Page
 
 {% include feature/alert.html text="**Note:** The features that display on the home page can be customized via the 'home-infographic.html' file in the layouts folder. More on customizing that file can be found in our [finishing section](finish.html#home-page)" color="success" %} 
 

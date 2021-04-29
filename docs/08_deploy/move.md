@@ -6,7 +6,7 @@ nav_order: 3
 
 {% include feature/alert.html color="warning" text="#### **CDM & SA Users**:" %}
 
-### 2. Moving the _site Files to Your Web Server
+# Moving the _site Files to Your Web Server
 
 Once you've completed the build process, the web files you need will all be in your `_site` directory. 
 

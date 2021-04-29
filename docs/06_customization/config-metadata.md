@@ -4,7 +4,7 @@ parent: Customize
 nav_order: 2
 ---
 
-## Metadata / Item Page Configuration (config-metadata.csv)
+# Metadata / Item Page Configuration (config-metadata.csv)
 
 The most important CSV (if you're measuring by the number of pages it creates!) is the one that controls the metadata. 
 The `config-metadata.csv` controls how an item's metadata is displayed on its web page, as well as configuring the machine-readable meta markup in the underlying code. 

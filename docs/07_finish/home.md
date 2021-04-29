@@ -4,7 +4,7 @@ parent: Finish
 nav_order: 2
 ---
 
-## 2. Editing the Home Page
+# Editing the Home Page
 
 You may finish your collection and realize that you want to remove or shift around the content on your Home page. 
 To access the content on this page, you'll need to locate the `home-infographic.html` file in the `_layouts/` directory.

@@ -6,7 +6,7 @@ nav_order: 1
 
 {% include feature/alert.html color="warning" text="#### **GH Users**:" %}
 
-### Enabling GitHub Pages
+# Enabling GitHub Pages
 
 1. In your GitHub account, click on the "Settings" button at the top right of your repository page
 2. When you're on the settings page, scroll down to the "GitHub Pages" section. 

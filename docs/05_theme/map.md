@@ -4,7 +4,7 @@ parent: Theme
 nav_order: 7
 ---
 
-## Map Page
+# Map Page
 
 - **latitude**: Determines the center of map.
 	- example --> `latitude: 46.727485 `

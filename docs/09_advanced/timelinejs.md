@@ -3,10 +3,8 @@ title: TimelineJS
 parent: Advanced
 nav_order: 1
 ---
-{:.py-4 .mt-4 #timelinejs}
-***
 
-### Building a TimelineJS Feature
+# Building a TimelineJS Feature
 
 [TimelineJS](http://timeline.knightlab.com/) is an open source timeline builder that creates an interactive timeline based on underlying data. We've incorporated the TimelineJS code into CollectionBuilder in order to offer this feature. 
 

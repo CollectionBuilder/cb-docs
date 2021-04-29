@@ -4,7 +4,7 @@ parent: Repository
 nav_order: 4
 ---
 
-## 4. Generating Your Site on a Test Server
+# Generating Your Site on a Test Server
 
 Let's test the new code. 
 

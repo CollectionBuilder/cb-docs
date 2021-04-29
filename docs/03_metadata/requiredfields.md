@@ -4,7 +4,7 @@ parent: Metadata
 nav_order: 2
 ---
 
-## 2. Required Fields 
+# Required Fields 
 
 Without values in the fields below, CollectionBuilder will not work properly.
 

@@ -6,7 +6,7 @@ nav_order: 1
 
 {% include feature/alert.html color="info mb-4" text="**Before You Start:** To prevent formatting and encoding errors that can result from using Microsoft Excel, we recommend editing your metadata in Google Sheets. If your data will require a good amount of wrangling to get it into CollectionBuilder's format, we suggest you use [OpenRefine](http://openrefine.org/), a platform that facilitates large scale data cleaning and transformation." %}  
 
-## 1. Metadata Template
+# Metadata Template
 
 CollectionBuilder can accomodate any metadata field you dream up (well, within reason...) 
 

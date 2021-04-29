@@ -4,7 +4,7 @@ parent: Config
 nav_order: 3
 ---
 
-## Collection Settings
+# Collection Settings
 
 These are settings specific to your collection:
 

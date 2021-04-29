@@ -23,6 +23,7 @@ Documentation follows these conventions:
     - write one sentence per line.
     - provide a blank line between elements (i.e. headers, paragraphs, lists, code blocks).
     - headers should follow logical order on page without skipping levels.
+    - page should start with an H1 (`# `)
 - Files are located in the "docs" folder and are further organized into folders for each section.
 - Each section should have an "index.md" presenting an introduction to the section. 
     - The index should have front matter variables `nav_order` (setting over all order in side bar nav) and `has_children: true`. 

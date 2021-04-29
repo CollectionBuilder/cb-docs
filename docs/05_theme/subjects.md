@@ -4,7 +4,7 @@ parent: Theme
 nav_order: 5
 ---
 
-## Subjects Page
+# Subjects Page
 
 - **subjects-fields**: Choose metadata fields from your collection metadata CSV to be included in the Subjects page tag cloud.
 	- Multiple fields must be separated by a semicolon(`;`)

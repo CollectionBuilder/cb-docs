@@ -2,9 +2,10 @@
 title: Quick Start
 ---
 
-## CollectionBuilder-GH
+If you are familiar with Jekyll and GitHub, the basic concepts and set up of CollectionBuilder will be pretty simple to master.
+Instructions below provide the *way to fast* steps to creating a collection.
 
-For those who can't wait, below are six quick steps to get you started.
+## CollectionBuilder-GH
 
 1. Create a new project using the [CB GH](https://github.com/CollectionBuilder/collectionbuilder-gh) template
 2. Download the <a href="https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit#gid=0" target="_blank" rel="noopener">Metadata Template</a>.
@@ -14,8 +15,6 @@ For those who can't wait, below are six quick steps to get you started.
 6. Check out your site via the link provided on your repository's setting's page!
 
 ## Skin - CONTENTdm
-
-For those who can't wait, below are six quick steps to get you started.
 
 1. Make sure you have Git, Ruby, and Jekyll Installed on your computer.
 1. Import [the CollectionBuilder CONTENTdm Skin repository](https://github.com/CollectionBuilder/collectionbuilder-cdm) into your own GitHub repository.

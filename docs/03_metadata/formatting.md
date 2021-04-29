@@ -4,7 +4,7 @@ parent: Metadata
 nav_order: 5
 ---
 
-## 5. Formatting Your Metadata
+# Formatting Your Metadata
 
 Make sure you're following the guidelines below, otherwise CollectionBuilder may not work.
 

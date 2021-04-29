@@ -7,7 +7,7 @@ nav_order: 2
 {:.alert .alert-warning}
 **For GH users** The rest of the instructions on this page are optional for you. You can move on to the [metadata](metadata.html) section. GH was designed so that all the edits can be made through the GitHub web interface. <br>If you'd like to work on your repository on your local computer, and you've [installed](software.html) all the software required), you can follow the steps below and work in the same way as the other types.   
 
-## 2. Clone Your New Repository to Your Local Machine
+# Clone Your New Repository to Your Local Machine
 
 Now that you have a repository set up on GitHub, we need to copy that folder down to your local machine. 
 *Cloning* the repository ensures the local version on your laptop is automatically configured to be connected to the version on GitHub.

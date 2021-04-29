@@ -4,7 +4,7 @@ parent: Software
 nav_order: 1
 ---
 
-## 2. Install Git and GitHub Desktop
+# Install Git and GitHub Desktop
 
 To manage the code and collaborate on developing your CollectionBuilder project, you need a version control system to keep everything organized. 
 

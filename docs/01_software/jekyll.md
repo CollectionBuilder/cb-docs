@@ -4,7 +4,7 @@ parent: Software
 nav_order: 4
 ---
 
-## 4. Install Jekyll
+# Install Jekyll
 
 Finally, we get to [Jekyll](https://jekyllrb.com/){:target="_blank" rel="noopener"}!
 Jekyll is a static site generator that uses templates and data to build out websites. 

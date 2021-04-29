@@ -4,7 +4,7 @@ parent: Metadata
 nav_order: 4
 ---
 
-## 4. Optional Fields
+# Optional Fields
 
 The rest of the fields in the CollectionBuilder metadata template are not required for CollectionBuilder or its visualizations to work, but their use is encouraged to ensure a richly informative collection. These remaining fields are listed below, along with their respective definitions and examples.
 

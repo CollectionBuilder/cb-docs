@@ -4,7 +4,7 @@ parent: Software
 nav_order: 2
 ---
 
-## 1. Get a Text Editor
+# Get a Text Editor
 
 The CollectionBuilder team suggests these open-source, cross platform options for text editors:
 
