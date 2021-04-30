@@ -1,1 +1,32 @@
 // add custom sass here to override any styles
+
+
+/* 
+    Alert border color utilities
+    - cross between bootstrap .alert/.card and JtDs .code-example
+    - color options similar to JtDs btn- classes 
+*/ 
+.alert {
+    padding: $sp-3;
+    margin-bottom: $sp-3;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+}
+.alert-primary {
+    border-color: $btn-primary-color;
+}
+.alert-purple {
+    border-color: $purple-100;
+}
+.alert-blue {
+    border-color: $blue-000;
+}
+.alert-green {
+    border-color: $green-100;
+}
+.alert-yellow {
+    border-color: $yellow-100;
+}
+.alert-red {
+    border-color: $red-300;
+}
