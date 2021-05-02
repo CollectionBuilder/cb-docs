@@ -9,8 +9,10 @@
 .alert {
     padding: $sp-3;
     margin-bottom: $sp-3;
-    border: 1px solid $border-color;
+    border: 2px solid $border-color;
     border-radius: $border-radius;
+    box-shadow: 3px 3px 5px darkgrey;
+    background-color: #999999;
 }
 .alert-primary {
     border-color: $btn-primary-color;
