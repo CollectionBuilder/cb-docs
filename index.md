@@ -18,7 +18,7 @@ Once the initial set-up is complete, users will be able to create their collecti
 
 ### Types
 
-This Documentation applies to all the "Types" of the CollectionBuilder tool. 
+This Documentation applies to all the current "Types" of the CollectionBuilder tool. 
 For the majority of the tool's features and setups, the documentation is the same. 
 When it is different--**GH users**, for instance, can ignore many steps--we indicate that via columns, bolded font, and colored-alerts. 
 
@@ -28,4 +28,4 @@ The types are currently:
 
 - **CDM** - for [CollectionBuilder-CONTENTdm](/skins/), a skin version that works with the CONTENTdm API.
 
-- **SA** - for CollectionBuilder-Stand-Alone, the full digital library solution we are currently developing. 
+- **SA** - for [CollectionBuilder-Stand-Alone](https://collectionbuilder.github.io/sa/), our robust, stand-alone version for developing your own exhibits on your local computer (and serving them from anywhere!).
