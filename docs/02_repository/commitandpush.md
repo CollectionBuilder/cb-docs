@@ -6,7 +6,7 @@ nav_order: 3
 
 # Commit Your First File
 
-Open the _config.yml folder in your text editor. Change the "title" variable, and save the change. Now go back to GitHub Desktop to commit that change following the instructions below.
+Open the **_config.yml** folder in your text editor. Change the "title" variable, and save the change. Now go back to GitHub Desktop to commit that change following the instructions below.
 
 #### Commit to your change!
 
@@ -22,5 +22,5 @@ You've committed your changes locally, but haven't pushed them to the online rep
 To push your commit up to GitHub, click on the button at the top right of the GitHub desktop screen that says "Push changes."
 
 - Click "Push changes"
-- Navigate to your repository on GitHub web interface (On windows you can use the keyboard shortcut `Ctrl` + `SHIFT` + `G` in GitHub Desktop). You'll see that the _config.yml file has been updated with the new changes.
+- Navigate to your repository on GitHub web interface (You can click the `Repository` menu and select `View on GitHub` in GitHub Desktop). You'll see that the _config.yml file has been updated with the new changes.
 - **Congratulations, you've pushed your first commit to GitHub!**
