@@ -4,7 +4,9 @@ parent: Deploy
 nav_order: 1
 ---
 
-{% include feature/alert.html color="warning" text="#### **GH Users**:" %}
+**These instructions are for GH Users**
+
+If you're using one of the other types, CollectionBuilder will not properly build using GitHub Pages due to its inclusion of plugins to build the individual item pages. 
 
 # Enabling GitHub Pages
 
@@ -18,4 +20,4 @@ nav_order: 1
 8. Add your copied URL to the website section and click "Save" -- This will let you easily access the generated site whenever you come to edit the page.
 
 {:.alert .alert-success}
-Congratulations! Your site is now live. **GH users** can now move on to the [Advanced Topics](advanced.html) section.
+Congratulations! Your site is now live. **GH users** can now move on to the [Advanced Topics](../09_advanced/) section.

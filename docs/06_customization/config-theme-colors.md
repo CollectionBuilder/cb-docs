@@ -33,12 +33,12 @@ The nav elements use `bg-dark` and `text-dark` by default.
 ```
 color_class,color
 primary,green
-secondary,yellow
+secondary,red
 success,#32a89c
 info,#4232a8
 warning,#90a832
 danger,#a83259
-light,#f8faf2
+light,#a4c9e8
 dark,#080812
 ```
 
