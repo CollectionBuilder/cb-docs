@@ -24,20 +24,32 @@ After that, you can add whatever metadata you'd like to the csv, as well as dete
     - `true` will turn all metadata in that field into buttons, and is recommend for fields that have multiple entries, like 'subject.' 
 - **hidden**: Determines whether this field is hidden.
     - Useful when you don't want a metadata field to be visibly present on Browse page cards, but still want to filter for that field.
+- **sort_name**: Determines if the field will be used as an option to sort cards on the browse page via the dropdown menu to the right of the search box. This option also determines the label used in that dropdown menu for the field. 
 
 ### Example 
 
-{:.p-4 .bg-light .mb-4}
 ```
-field,display_name,btn,hidden
-date,Date,
-description,,
+field,display_name,btn,hidden,sort_name
+date,Date,,,Date Created
+creator,Creator,,,
 subject,,true
 location,,true
+identifier,,,true,Identifier
+
 ```
 
-
+### Field and Display Names
 
 If you want to add a description to the browse cards, and label it "Description" on the user interface, you would include a value of `description` in the "field" column and then include `Description` as the value of that row's "displayName" column.
 
 If you want to include items' descriptions on the browse cards but feel that including the label is unnecessary, you could simply include a value of `description` in the "field" column and then leave that row's "displayName" column blank. The above example embodies this approach.
+
+### Hiding Metadata (so sneaky!) 
+
+If, using the above example, you wanted a user's browse page search to pull up items that include words in the description, but you don't want those descriptions making the cards too big, you could add "true" to its `hidden` variable. 
+
+### Sort Option
+
+The sort option appears as a dropdown menu next to the search box on the browse page. You can also use the hidden option with a sort feature that allows you to sort the browse page items by any metadata variable. In the above example, we include the identifier as part of the browse card, but we hide it while making it one of the search options. This allows a user to see the collection in its original order. 
+
+The sort option doesn't have to match the field name, so, again in the above example, we let the user sort by the `date` field, but we label that `Date Original` in the sort dropdown menu. 

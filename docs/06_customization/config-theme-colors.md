@@ -1,7 +1,7 @@
 ---
 title: Colors
 parent: Customize
-nav_order: 6
+nav_order: 7
 ---
 
 # Theme Color Configuration (config-theme-colors.csv)
@@ -28,4 +28,18 @@ E.g. "color_class" `special` will generate CSS for `.btn-special` and `.btn-outl
 CollectionBuilder uses `btn-primary`, `btn-outline-primary`, `btn-success`, `btn-info`, `btn-outline-info`, `btn-outline-secondary`, `btn-light`, and `btn-outline-light` in page layouts, so overriding those styles will have immediate effects on the colors.
 The nav elements use `bg-dark` and `text-dark` by default.
 
+## Example
 
+```
+color_class,color
+primary,green
+secondary,yellow
+success,#32a89c
+info,#4232a8
+warning,#90a832
+danger,#a83259
+light,#f8faf2
+dark,#080812
+```
+
+The above example would really change the look of your site! We've kind of randomly generated these, but you could use more color cooridinated attempts, or your brand colors (for instance), to redo just a few of these and see some real changes to the look and feel of the site. 

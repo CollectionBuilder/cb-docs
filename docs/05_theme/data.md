@@ -1,5 +1,5 @@
 ---
-title: Data Download
+title: Data
 parent: Theme
 nav_order: 9
 ---

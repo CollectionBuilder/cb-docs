@@ -6,8 +6,8 @@ nav_order: 2
 
 # Metadata / Item Page Configuration (config-metadata.csv)
 
-The most important CSV (if you're measuring by the number of pages it creates!) is the one that controls the metadata. 
-The `config-metadata.csv` controls how an item's metadata is displayed on its web page, as well as configuring the machine-readable meta markup in the underlying code. 
+The most important CSV (if you're measuring by the number of pages it creates!), the `config-metadata.csv` controls how an item's metadata is displayed on its web page. It also configures the machine-readable meta markup in the underlying code. 
+
 The columns are described below: 
 
 - **field**: This variable corresponds to the field listed in the metadata for the collection. For instance, if you have a metadata field called "original-collection", you would put `original-collection` here. 
@@ -43,9 +43,8 @@ However, configuring these options adds rich machine readable markup to each ite
         - `encodingFormat` (This corresponds to the [format](metadata#required) field of CollectionBuilder items)
         - `license` (Should only be used with a standardized rights URL)
 
-### Example 
+## Example 
 
-{:.p-4 .bg-light .mb-4}
 ```
 field,display_name,browse_link,dc_map,schema_map
 title,Title,,DCTERMS.title,headline
@@ -61,11 +60,11 @@ format,Format,,,encodingFormat
 rightsstatement,,,DCTERMS.rights,license
 ```
 
-**Browse Links** 
+### Browse Links 
 
 In the case of this example, only the location and subject fields have a value (`true`) for "browse-link", so those fields will turn each individual subject and location term (delimited by semicolon in that field) into a link (e.g. browse.html#dogs) that links back to a browse page view that will only list those items that share that term. 
 
-**Dublin Core and Schema Markup** 
+### Dublin Core and Schema Markup
 
 The title, creator, date, description, subject, and type fields in the above example all have a `dc_map` variable, so each of them would  be represented in the item page's <head> meta section in a way that follows the Dublin Core schema to enable better machine readability and indexing.
 

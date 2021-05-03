@@ -15,7 +15,7 @@ This CSV controls what and in what order the links appear in your collection's n
     - If the item has no `stub`, it will become a dropdown menu
     - If the item has a value in `dropdown_parent`, it will only show up under its parent dropdown
 
-### Example
+## Example
 
 {:.p-4 .bg-light}
 ```
@@ -32,13 +32,13 @@ CollectionBuilder,/tech.html,About
 ```
 
 
-**Some Explaining** 
+### Some Explaining
 
 The above CSV will create 7 links in the nav bar for the referenced pages. These same nav items will also automatically appear in the footer. 
 
 You might have noticed that the Locations Page has been deleted, so it won't show up in your nav bar. If you want to add it back in, you'll just need to add a line after the `Subjects,/subjects.html,` line that reads: `Locations,/locations.html,`
 
-**How the Dropdown Works**
+### How the Dropdown Works
 
 The last two lines of this CSV will appear within the "About" dropdown menu. To enable this, "About" must have no value in `stub` or `dropdown_parent` cells--this will direct the code to make "About" a dropdown button and store any link that lists "About" as it's `dropdown_parent` in its dropdown menu. So in the above, when About is clicked the dropdown menu will appear with "About the Collection" and "CollectionBuilder" listed, both linking to their respective pages.
 
