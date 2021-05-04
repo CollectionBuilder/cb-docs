@@ -16,25 +16,4 @@ Once you've completed the build process, the web files you need will all be in y
 
 *Note: If you'd like to serve this up from a GitHub Pages enabled repository, that is also possible. Talk to us.*
 
-{% include feature/alert.html color="success" text="That's it. You've Done It. And hopefully now you can do it again (and again and again), and after awhile, teach others this development model and/or tool as well. Please let us know if we can help! ([Evan](mailto:ewilliamson@uidaho.edu) has time, I'm sure.)" %}
-
-<!--<div class="alert-warning p-4">
-{%capture noteonjekyll %}
-#### Note on Jekyll
-
-Jekyll will work its Jekyll/Liquid/Markdown magic on any file in a folder that starts with an underscore ('_') or any file that starts with a YML portion, which starts on the first line with a "---" and ends after the assigned metadata (or no assigned metadata) with another line reading "---"
-
-I'll provide this page's YML as an example:
-
-{:.ml-4}
-    `---`
-    `title: Deploying the Collection`
-    `step: 8`
-    `---`
-
-Then everything I'm writing here is below that. 
-
-Jekyll uses that metadata to create the page, or any of the other commands you might need. 
-{%endcapture%}
-{{noteonjekyll | markdownify}}
-</div>-->
+That's it. You've Done It. And hopefully now you can do it again (and again and again), and after awhile, teach others this development model and/or tool as well. Please let us know if we can help! ([Evan](mailto:ewilliamson@uidaho.edu) has time, I'm sure.)
