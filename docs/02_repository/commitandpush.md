@@ -8,7 +8,7 @@ nav_order: 3
 
 Open the **_config.yml** folder in your text editor. Change the "title" variable, and save the change. Now go back to GitHub Desktop to commit that change following the instructions below.
 
-#### Commit to your change!
+### Commit to your change!
 
 On GitHub Desktop, below the the column that lists your change to _config.yml, you'll see a text-entry box labeled "Summary (required)." 
 
@@ -16,11 +16,11 @@ On GitHub Desktop, below the the column that lists your change to _config.yml, y
 - When you've finished your commit message, click on the blue button toward the bottom of the column that says "Commit to main."
 - The "Changes" disappear, you've just made a Git Commit!
 
-#### Now you need to Push!!!
+### Now you need to Push your Commit!!!
 
 You've committed your changes locally, but haven't pushed them to the online repository yet. 
 To push your commit up to GitHub, click on the button at the top right of the GitHub desktop screen that says "Push changes."
 
 - Click "Push changes"
 - Navigate to your repository on GitHub web interface (You can click the `Repository` menu and select `View on GitHub` in GitHub Desktop). You'll see that the _config.yml file has been updated with the new changes.
-- **Congratulations, you've pushed your first commit to GitHub!**
+- **Congratulations, you've pushed your first CollectionBuilder commit to GitHub!**
