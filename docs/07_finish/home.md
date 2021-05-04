@@ -1,15 +1,30 @@
 ---
 title: Home Page
 parent: Finish
-nav_order: 2
+nav_order: 1
 ---
 
 # Editing the Home Page
 
 You may finish your collection and realize that you want to remove or shift around the content on your Home page. 
-To access the content on this page, you'll need to locate the `home-infographic.html` file in the `_layouts/` directory.
+To access the content on this page, you'll need to locate the `home-infographic.html` file in the `_layouts/` directory. 
 
-Just like the About page, the Home page is composed of a number of include commands, arranged in three [Bootstrap columns](https://getbootstrap.com/docs/4.0/layout/grid/){:target="_blank" rel="noopener"}:
+Some options: 
+
+- [Delete a Home Page Feature](#delete-a-home-page-feature)
+- [Move a Home Page Feature Around](#move-a-home-page-feature-around)
+- [Featured Terms Cards](#featured-terms-cards)
+- [Adjust the Size and Number of Columns](#adjust-the-size-and-number-of-columns)
+
+## Home Page Overview
+
+The Home page is composed of a number of include commands, arranged in three [Bootstrap columns](https://getbootstrap.com/docs/4.0/layout/grid/){:target="_blank" rel="noopener"}:
+
+{:.alert}
+**Include Files:** Jekyll's include command is a really powerful feature that allows specific elements or content to be drawn into pages from one central location. For more on includes and other Jekyll features, check out the [Jekyll docs](https://jekyllrb.com/docs/).
+
+This is what the default home-infographic layout looks like: 
+
 
 {% raw %}
     <div class="col-md-8">
@@ -38,21 +53,19 @@ Just like the About page, the Home page is composed of a number of include comma
 
 {:.mt-4}
 
-You can easily delete an include command or move it to another location in the file to change the look of your Home page.  
-For instance:
+You can easily delete an include command or move it to another location in the file to change the look of your Home page.  Below are some typical options.
 
-1. You could delete the "Time Span" feature box from the Home page by removing the `{% raw %}{% include index/time.html %}{% endraw %}` line. Deleting a line is the most common edit we make to this file. 
-2. You could move the collection's description from the top left to the top right of the page by copy and pasting `{% raw %}{% include index/description.html %}{% endraw %}` from the first column into the second (and deleting it from the first).
-    - You might make this change if you wanted space for your carousel to be taller and more prominent. 
-    - You could then adjust the `carousel-height` variable in the [theme](theme.html#home) file. 
+### Delete a Home Page Feature
 
-{% include feature/alert.html color="primary ml-4 mb-4 mt-2" text="**Tip:**
+Let's say your collection didn't include dates. In that case, you could delete the "Time Span" feature box from the Home page by removing the `{% raw %}{% include index/time.html %}{% endraw %}` line. 
 
-These edits move content around, but the home page's column sizing and layout can also be adjusted. Columns follow the Bootstrap Grid, so if you're diving deeper into customizing the layout, refer to the [Bootstrap Documentation](https://getbootstrap.com/docs/4.3/layout/grid/)." %}
+Deleting a line is the most common edit we make to this file. You might also want to delete the locations include command, or another feature. 
 
-There are a lot of possibilities for customization here! 
-CollectionBuilder is designed as a flexible template that can be adapted to the needs of a collection.
-We recommend experimenting to find what works best for you.
+### Move a Home Page Feature Around
+
+Say you wanted space for your carousel to be taller and more prominent. To make room, you could move the collection's description from the top left to the top right of the page by copy and pasting `{% raw %}{% include index/description.html %}{% endraw %}` from the first column into the second (and deleting it from the first).
+
+You could then adjust the `carousel-height` variable in the [theme](theme.html#home) file. 
 
 ### Featured Terms Cards
 
@@ -73,3 +86,40 @@ For example, `{% raw %}{% include index/featured-terms.html field="subject" titl
     - example --> `"dogs;muffins;cats"`
 - **max**: Indicates the maximum amount of terms to be included in the card. By default this can be set using the `featured-subjects-max` value in theme.yml.
     - example --> `3`
+
+
+### Adjust the Size and Number of Columns
+
+The above edits move content around or delete it, but the home page's column sizing and layout can also be adjusted. Columns follow the Bootstrap Grid, so if you're diving deeper into customizing the layout, refer to the [Bootstrap Documentation](https://getbootstrap.com/docs/4.3/layout/grid/).
+
+There are a lot of possibilities for customization here! 
+CollectionBuilder is designed as a flexible template that can be adapted to the needs of a collection.
+We recommend experimenting to find what works best for you.
+
+Here's an example where there is one big top carousel, then three separate sections below with time, subjects, and object data, followed by a final row that includes a description and the data download buttons.  
+
+{% raw %}
+    <div class="col-md-12">
+    {% include index/carousel.html%}
+    </div>
+    <div class="col-md-4">  
+    {% include index/time.html %}
+    </div>
+    <div class="col-md-4">  
+    {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="info" featured=site.data.theme.featured-subjects max=site.data.theme.featured-subjects-max %}    
+    </div>
+    <div class="col-md-4">  
+    {% include index/objects.html %}
+    </div>
+
+    <div class="col-md-6">
+
+    {% include index/description.html %}
+
+    </div>
+    <div class="col-md-6">
+
+    {% include index/data-download.html %}
+
+    </div>
+{% endraw %}
