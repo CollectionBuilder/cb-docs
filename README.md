@@ -5,10 +5,7 @@
 
 Draft documentation for CollectionBuilder, migrating docs from collectionbuilder.github.io.
 
-## About 
-
-This repository is based on "Just the Docs" theme (<https://github.com/pmarsceill/just-the-docs>).
-The theme was forked in 2021-04 and all files are included in this repository (rather than as a gem theme). 
+This documentation covers details for CollectionBuilder-GH, CollectionBuilder-CONTENTdm, and CollectionBuilder-SA.
 
 ## Contributing 
 
@@ -64,3 +61,8 @@ nav_order: 1
 - create new UI components in "_includes/feature"
 - develop custom color scheme by overriding base variables in "_sass/color_schemes/cb.scss"
 - add new custom SASS to "_sass/custom/custom.scss"
+
+## About 
+
+This repository is based on "Just the Docs" theme (<https://github.com/pmarsceill/just-the-docs>).
+The theme was forked in 2021-04 and all files are included in this repository (rather than as a gem theme). 
