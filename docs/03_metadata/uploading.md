@@ -12,10 +12,11 @@ Once your metadata is ready, you'll want to deposit it into the repository eithe
 *Note:* CSV metadata should be in UTF-8 encoding. CSVs downloaded from Google Sheets or exported from OpenRefine will have the correct encoding. However, Excel does not handle UTF-8 correctly, and may cause issues. The encoding "UTF-8 with BOM" (created by Excel save as CSV) will not work!'
 
 ## **Prepare your metadata file:**
-    - Once you've finished creating your metadata in Google Sheets (or other software), click "File" and select "Download as Comma-separated values."
-    - Locate the metadata CSV you've just downloaded on your computer. 
-    - Without opening it, rename this file using all lowercase letters, no spaces, and no hyphens.
-    - Example filenames: `idahowater.csv`, `hjccc_dev.csv`
+
+- Once you've finished creating your metadata in Google Sheets (or other software), click "File" and select "Download as Comma-separated values."
+- Locate the metadata CSV you've just downloaded on your computer. 
+- Without opening it, rename this file using all lowercase letters, no spaces, and no hyphens.
+- Example filenames: `idahowater.csv`, `hjccc_dev.csv`
 
 ## **Deposit your metadata:**
 
