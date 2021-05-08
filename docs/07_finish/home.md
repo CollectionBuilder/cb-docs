@@ -26,44 +26,47 @@ The Home page is composed of a number of include commands, arranged in three [Bo
 This is what the default home-infographic layout looks like: 
 
 
-{% raw %}
-    <div class="col-md-8">
+```{% raw %}
+<div class="col-md-8">
 
-    {% include index/description.html %}
-    {% include index/carousel.html%}
+{% include index/description.html %}
+{% include index/carousel.html%}
 
-    </div>
-    <div class="col-md-4">  
+</div>
+<div class="col-md-4">  
 
-    {% include index/time.html %}
+{% include index/time.html %}
 
-    {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="info" featured=site.data.theme.featured-subjects max=site.data.theme.featured-subjects-max %}
+{% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="info" featured=site.data.theme.featured-subjects max=site.data.theme.featured-subjects-max %}
 
-    {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" featured=site.data.theme.featured-locations max=site.data.theme.featured-locations-max %}
+{% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" featured=site.data.theme.featured-locations max=site.data.theme.featured-locations-max %}
 
-    {% include index/objects.html %}
+{% include index/objects.html %}
 
-    </div>
-    <div class="col-md-12">
+</div>
+<div class="col-md-12">
 
-    {% include index/data-download.html %}
+{% include index/data-download.html %}
 
-    </div>
+</div>
 {% endraw %}
+```
 
-{:.mt-4}
-
-You can easily delete an include command or move it to another location in the file to change the look of your Home page.  Below are some typical options.
+You can delete an include command or move it to another location in the file to change the look of your Home page. 
+Below are some typical options.
 
 ### Delete a Home Page Feature
 
-Let's say your collection didn't include dates. In that case, you could delete the "Time Span" feature box from the Home page by removing the `{% raw %}{% include index/time.html %}{% endraw %}` line. 
+Let's say your collection didn't include dates. 
+In that case, you could delete the "Time Span" feature box from the Home page by removing the `{% raw %}{% include index/time.html %}{% endraw %}` line. 
 
-Deleting a line is the most common edit we make to this file. You might also want to delete the locations include command, or another feature. 
+Deleting a line is the most common edit we make to this file. 
+You might also want to delete the locations include command, or another feature. 
 
 ### Move a Home Page Feature Around
 
-Say you wanted space for your carousel to be taller and more prominent. To make room, you could move the collection's description from the top left to the top right of the page by copy and pasting `{% raw %}{% include index/description.html %}{% endraw %}` from the first column into the second (and deleting it from the first).
+Say you wanted space for your carousel to be taller and more prominent. 
+To make room, you could move the collection's description from the top left to the top right of the page by copy and pasting `{% raw %}{% include index/description.html %}{% endraw %}` from the first column into the second (and deleting it from the first).
 
 You could then adjust the `carousel-height` variable in the [theme](theme.html#home) file. 
 
@@ -98,28 +101,29 @@ We recommend experimenting to find what works best for you.
 
 Here's an example where there is one big top carousel, then three separate sections below with time, subjects, and object data, followed by a final row that includes a description and the data download buttons.  
 
-{% raw %}
-    <div class="col-md-12">
-    {% include index/carousel.html%}
-    </div>
-    <div class="col-md-4">  
-    {% include index/time.html %}
-    </div>
-    <div class="col-md-4">  
-    {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="info" featured=site.data.theme.featured-subjects max=site.data.theme.featured-subjects-max %}    
-    </div>
-    <div class="col-md-4">  
-    {% include index/objects.html %}
-    </div>
+```{% raw %}
+<div class="col-md-12">
+{% include index/carousel.html%}
+</div>
+<div class="col-md-4">  
+{% include index/time.html %}
+</div>
+<div class="col-md-4">  
+{% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="info" featured=site.data.theme.featured-subjects max=site.data.theme.featured-subjects-max %}    
+</div>
+<div class="col-md-4">  
+{% include index/objects.html %}
+</div>
 
-    <div class="col-md-6">
+<div class="col-md-6">
 
-    {% include index/description.html %}
+{% include index/description.html %}
 
-    </div>
-    <div class="col-md-6">
+</div>
+<div class="col-md-6">
 
-    {% include index/data-download.html %}
+{% include index/data-download.html %}
 
-    </div>
+</div>
 {% endraw %}
+```

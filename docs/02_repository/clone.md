@@ -4,7 +4,7 @@ parent: Repository
 nav_order: 2
 ---
 
-{:.alert .alert-warning}
+{:.alert .alert-yellow}
 **Attention GH users:** The rest of the instructions on this page are optional for you. You can move on to the [metadata](metadata.html) section. GH was designed so that all the edits can be made through the GitHub web interface. <br><br>If you'd like to work on your repository on your local computer, and you've [installed](software.html) all the software required), you can follow the steps below and work in the same way as the other types.   
 
 # Clone Your New Repository to Your Local Machine
@@ -12,13 +12,10 @@ nav_order: 2
 Now that you have a repository set up on GitHub, we need to copy that folder down to your local machine. 
 *Cloning* the repository ensures the local version on your laptop is automatically configured to be connected to the version on GitHub.
 
-{% capture clone %}
 1. On your new repository page, click on the green button in the upper right labeled "Code"
 2. In the box that pops up, click on the button labeled "Open in Desktop." 
     - This action will automatically open GitHub Desktop for you. 
     - GitHub Desktop will ask you to confirm the path of the repository you are cloning to your computer. In most cases, the path that it suggests is fine to use so you can just click on the blue "Clone" button.
-{% endcapture %}
-{% include feature/card.html text=clone %}
 
 GitHub Desktop *clones* your repository by downloading a complete copy of the code and history from GitHub and storing it in a folder on your computer.
 It is important to realize that the repository really is just a folder of files!

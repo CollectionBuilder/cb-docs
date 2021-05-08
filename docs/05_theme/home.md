@@ -42,14 +42,11 @@ nav_order: 1
 	- Indicates pixels, but don't include "px" in your input.
 	- example --> `carousel-height: 500`
 
-{% capture carousel-type %}
 #### CDM and SA Only:
 ### **carousel-type**: 
 - Determines the type of object you'd like shown in the carousel on the home page.
 	- Options: `image`,`pdf`,`youtube`,`thumbs`
 	- example --> `carousel-type: image`
-{% endcapture %}
-{% include feature/alert.html text=carousel-type color="secondary" %}
 
 ### **featured-subjects**: 
 - Generates home page "subject" buttons for select subjects.
