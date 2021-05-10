@@ -73,7 +73,7 @@ After you run the command `rbenv init` (as instructed in the previous step), the
 
 - Back in your terminal, install the latest version of ruby by copy/pasting or writing, `rbenv install 2.7.3` and pressing `Enter`.
 
-{:.alert .my-3}
+{:.alert .alert-purple .my-3}
 Note: 2.7.3 is the latest solid version as of this writing; if you are reading this past Fall 2020, you may want to check the "Stable Releases" section on [the download Ruby page](https://www.ruby-lang.org/en/downloads/){:target="_blank" rel="noopener"} and install the latest stable version.
 
 - Now let's set that version as your global Ruby version by entering `rbenv global 2.7.3` into the terminal prompt and pressing `Enter`.
