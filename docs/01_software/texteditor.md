@@ -29,3 +29,8 @@ To configure the editor, click the *gear icon* in the bottom left corner of the 
 The searchable *Settings* pane has information about all the configuration options.
 
 When you first install VS Code, the default settings can be distracting, so **don't be afraid to turn things off!**
+
+Finally, if you are on Windows, you will want to configure your built in terminal to use Git Bash (rather than Power Shell). 
+Open the build in terminal window using Ctrl + backtick (that little character next to the "1" key).
+A dropdown is available on the upper left of the terminal pane to switch your terminal.
+Set it to use Git Bash as default to ensure you can use Jekyll correctly.
