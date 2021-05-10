@@ -18,7 +18,11 @@ Once you have a terminal open, type in the command:
 gem install jekyll bundler
 ```
 
-This process will take awhile as the Gem installs all the dependencies and builds extensions. 
+This will install the Gems "Jekyll" and [Bundler](https://bundler.io/).
+Bundler is a Ruby utility to manage dependencies on per project basis. 
+Because Jekyll is a complex Gem with many dependencies, they recommend using Bundler to keep everything in working order. 
+
+This process will take awhile as Gem installs all the dependencies and builds extensions. 
 On Windows it may appear as if nothing is happening for a very very long time, since the terminal does not provide a progress bar, be patient!
 {:.alert .alert-yellow}
 
