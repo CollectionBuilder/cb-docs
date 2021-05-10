@@ -6,7 +6,7 @@ nav_order: 1
 
 # Software for Working with CollectionBuilder
 
-{:.alert .alert-warning}
+{:.alert}
 **GH users:** No software needs to be installed to work with CollectionBuilder-gh. All actions and edits can be accomplished through the web interface on GitHub.com. However, some GH users might enjoy working with the tool on their local desktop using a text editor and GitHub Desktop. In that case, follow the instructions below to install the required software.
 
 To get started editing code, managing your project, and building websites with CollectionBuilder on your computer you will need: 
