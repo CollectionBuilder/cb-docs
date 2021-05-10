@@ -8,93 +8,97 @@ nav_order: 5
 
 # GitHub Actions
 
-The following steps document how to host your site with GitHub Pages using GitHub Actions. 
-The regular workflow for setting up GitHub Pages will not work for this repository because of its plugins, so Actions needs to be used instead.
+GitHub Pages' default build process runs an older version of Jekyll and does not support plugins.
+Since CB-CDM and -SA use custom CollectionBuilder plugins to generate item pages and process data, they can not be built using the default GitHub Pages process. 
 
-## In Visual Studio Code, do the following:
+However, you *can* still host your site on GitHub Pages by setting up an alternative build using the [GitHub Actions](https://docs.github.com/en/actions) feature.
 
-Go to your _config.yml file. 
-Under URL VARIABLES, make sure the value for `url` reflects the GitHub organization or GitHub username, whichever you are working under (i.e. `https://erholmes.github.io` or `https://ncdigitalcollections.github.io`). 
-Make sure the value for `baseurl` matches the name of your repository (i.e. `/ncdctest`).
- 
-If this is a temporary url for the site, you probably don’t want Google to index it yet. 
-You can easily adjust this in the config.yml file. 
-Scroll down to the ROBOTS EXCLUDE section and delete the hashtag (`#`) in front of the words `noindex: true`. 
-When it comes time to officially host your site, you can comment this line out again by putting the hashtag back in front of it, and your site will then be indexed.
+Setting up the Action take a few extra steps, detailed below.
 
-## Don't commit/push your changes yet. Instead, view your repository on GitHub in the browser and do the following:
+## Prep Project Repository
 
-Make sure you have administrator privileges for the repository, otherwise you won't be able to do the next steps.
-(Note: if it's your own repository you already have admin privileges).
+1. Double check your "_config.yml" to ensure the `url` and `baseurl` values are set correctly for hosting on GitHub Pages (i.e. following the pattern `url: https://username.github.io` and `baseurl: /repository-name`).
+2. If this is a temporary url for testing / demo purposes, you probably want to uncomment `noindex: true` in the ROBOTS EXCLUDE section of "config.yml". This tells Google not to index the site.
+3. Make sure your project has a "Gemfile". CollectionBuilder templates should have one by default.
+4. Optional: Commit your "Gemfile.lock" to ensure the build uses the same setup as you have been using to develop the project. By default "Gemfile.lock" is usually listed in the ".gitignore" file, thus Git will not track it. Edit the ".gitignore" file to remove "Gemfile.lock" then commit the changes.
 
-Make sure you have a `Gemfile` and `Gemfile.lock` file. If you copied from the ncdigitalcollections collectionbuilder template you should already have these so you shouldn't need to worry about creating them.
+## Setup Action YML
 
-From the base of your repo, create a folder called `.github` (don't forget the period in front of it).
-Inside this folder create a subfolder called `workflows`.
-Inside the `workflows` folder create a file called `jekyll.yml`.
-Into this `jekyll.yml` file paste the following:
+To setup a GitHub Action you will be creating a file in your project repository named ".github/workflows/jekyll.yml".
+To add this action you will need full "owner" administrative privileges for the repository (permission to create a "workflow" level token).
+Sometimes your local GitHub authentication is not setup with full rights--so to avoid permissions issues, it is best to complete this step directly in the GitHub web interface.
 
-```{%raw%}
-name: build with jekyll and deploy on github pages
+On the repository home page, click "Add file" > "Create new file".
+In the filename field start typing `.github/workflows/jekyll.yml`.
+This will create a folder ".github" (with a period in front!), with "workflows" folder inside, with a file "jekyll.yml" inside.
+
+In the editor pane below, paste in this action:
+
+```{% raw %}
+name: build site with jekyll and deploy on github pages
 
 on:
   push: 
     branches: 
-      - master
+      - main
   pull_request:
     branches: 
-      - master
+      - main
 
 jobs:
   jekyll:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04 # ubuntu-latest is now 20.04 and doesn't seem to work
     steps:
       # checkout code
       - uses: actions/checkout@v2
 
-      # Use GitHub Actions' cache to shorten build times and decrease load on servers
-      - uses: actions/cache@v1
+      # Use ruby/setup-ruby to shorten build times
+      # https://github.com/ruby/setup-ruby
+      - uses: ruby/setup-ruby@v1
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-      # use jekyll action from jekyll docs example
-      - uses: helaili/jekyll-action@2.0.2
-        env:
-          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}{%endraw%}
+          ruby-version: 2.7 # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      # use jekyll-action-ts to build
+      # https://github.com/limjh16/jekyll-action-ts
+      - uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+
+      # use actions-gh-pages to deploy
+      # https://github.com/peaceiris/actions-gh-pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # GITHUB_TOKEN secret is set up automatically
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+{% endraw %}
 ```
 
-Close and commit the `jekyll.yml` file.
+Scroll to the bottom of the editor page, and write your Commit message, and commit the file. 
+Adding the file will automatically set up a `GITHUB_TOKEN` secret which will allow the Action to build your site, and commit the output to the "gh-pages" branch.
 
-Create a personal access token here, https://github.com/settings/tokens.
-Give it access to public repos.
-Copy the key (you can only see the key once so you need to be sure to copy it at this point).
+Once committed, the action will run immediately and will repeat each time you push a new commit or merge a pull request.
 
-In your repository, go to Settings > Secrets. 
-Select "New secret" (top right button) and name it exactly `JEKYLL_PAT`.
-Paste in the key that you copied from your personal access token.
+However, you may have to manually activate GitHub Pages the first time.
+Go to the repository Settings, click "Pages" in the side nav, select "gh-pages" branch in the "Source" drop down, and save.
 
-## Go back to Visual Studio Code
+### Action Details 
 
-Commit and push your changes you made to the _config.yml file.
- 
-The site will start to build as soon as you do this push. 
-It may take a few minutes, so give it some time. 
-To check the build status, you can click on the Actions tab.
-A green checkmark should appear when the page is done building.
+The `on` key says to build on any push or Pull Request to the "main" branch (you could switch it to what ever branch works for you, just don't try to use gh-pages branch).
 
-To find the url, click on Settings and scroll down to the GitHub Pages section.
-You should see a message that says "your site is published at" with the name of the url.
+The `jobs` key gives the list of things to do.
+Each `uses` value is a repository on GitHub, so you can go look at the code to see what it is doing, or set up your own version. 
+In this workflow: 
 
-You're all set up at this point; whenever you push a new commit the site will rebuild and you'll be able to view your live changes.
+- [actions/checkout@v2](https://github.com/actions/checkout) checks out the code from the main branch (from GitHub).
+- [ruby/setup-ruby@v1](https://github.com/ruby/setup-ruby) uses a pre-built Ruby and cached gems to speed up built time (when using Ruby, this is apparently preferable to using "actions/cache").
+- [limjh16/jekyll-action-ts@v2](https://github.com/limjh16/jekyll-action-ts) runs the `jekyll build` (supposedly faster than "helaili/jekyll-action").
+- [peaceiris/actions-gh-pages@v3](https://github.com/peaceiris/actions-gh-pages) takes the output and commits it to the `gh-pages` branch. 
 
-For more information, see: <https://jekyllrb.com/docs/continuous-integration/github-actions/>
+The Actions tab of the repository provides detailed progress for your workflow, so if something goes wrong it is a bit easier to debug than default GitHub Pages.
+If everything goes well, you will get a green check next to your latest commit message. 
+If there is an error, a red X will appear.
 
-## To turn off GitHub pages
-
-View the repository's branches.
-
-Delete the gh-pages branch.
-
-For more information, see: <https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/unpublishing-a-github-pages-site#unpublishing-a-project-site>
+Each time the action runs, you will see a commit from "github actions" bot, pushing the newly built site files to the "gh-pages" branch.
