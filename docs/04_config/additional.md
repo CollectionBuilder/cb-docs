@@ -15,8 +15,8 @@ Fill in your Google Analytics ID, if you have one:
 
 #### **google-analytics-id**: 
 
-    1. Remove the hash (`#`) before the field to activate it. 
-    2. Enter your Google Analytics ID." %}
+1. Remove the hash (`#`) before the field to activate it. 
+2. Enter your Google Analytics ID.
 
 ### Robots Exclude 
 
@@ -24,9 +24,9 @@ Disallow indexers like Google from crawling your site and adding them to their i
 
 #### **noindex**:
 
-    1. Remove the hash (`#`) before the field to activate it. 
-    2. Set to true if you do NOT want Google to index your site (If you do want your site to be indexed, just leave the `#` in front of this field name to keep it commented it out.)
-    - example -> `noindex: true`" %}
+1. Remove the hash (`#`) before the field to activate it. 
+2. Set to true if you do NOT want Google to index your site (If you do want your site to be indexed, just leave the `#` in front of this field name to keep it commented it out.)
+- example -> `noindex: true`
 
 ## Build Settings
 
