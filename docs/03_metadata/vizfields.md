@@ -1,7 +1,7 @@
 ---
 title: Fields Required for Visualizations
 parent: Metadata
-nav_order: 3
+nav_order: 5
 ---
 
 # Fields Required for Visualizations
@@ -24,7 +24,7 @@ Location | `location` |
 - A geographic coordinate specifying the east-west position of an item. See the [Map](theme.html#map-page) section for more information.
 - Example value: `-117.165625`
 
-{:.alert .alert-warning}
+{:.alert .alert-red}
 **Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. The first option you will see is to copy the coordinates. You can click to copy those and then paste the location into your metadata
 
 ### **date**: 
@@ -42,7 +42,7 @@ Location | `location` |
 - See the [Subjects](theme.html#subjects-page) section for more information.
 - Example value: `Dogs; Cats; Zebras`
 
-{:.alert .alert-warning}
+{:.alert .alert-red}
 *Note:* This field needs to be named **_'subject' (not 'subjects')_** for many default features in CollectionBuilder to work. Data in this field will create the word cloud that allows users to visualize the frequency of subjects used within the collection.
 
 ### **location**: 

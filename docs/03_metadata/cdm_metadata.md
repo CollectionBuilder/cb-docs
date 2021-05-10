@@ -1,13 +1,25 @@
 ---
-title: Metadata from CONTENTdm
+title: CONTENTdm Metadata
 parent: Metadata
-nav_order: 6
+nav_order: 1
 ---
 
 - how to export from CONTENTdm
 - fields to prep for CB
 - option to enhance metadata beyond what is in contentdm repository
 - option to curate only select items, or curate from multiple collections
+
+# Metadata Template
+
+CollectionBuilder can accommodate any metadata field you dream up. 
+
+A few fields, nevertheless, are required for the tool to work, and others are required if you would like certain visualizations to work. 
+We've created metadata templates that contain all the required, visualization-dependent, and recommended fields. 
+
+If you'd like a model for your metadata, take a look at your type's metadata template by clicking on the appropriate button. 
+The templates are contained in Google Sheets for easy re-use (just "Make a Copy" via the File menu to get started).
+
+{% include feature/button.html color="blue" text="CONTENTdm<br/><small>CollectionBuilder Metadata Template</small>" link="https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing" %}
 
 ## Required Fields for CONTENTdm
 

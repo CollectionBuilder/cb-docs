@@ -1,7 +1,7 @@
 ---
 title: Required Fields
 parent: Metadata
-nav_order: 2
+nav_order: 4
 ---
 
 # Required Fields 
