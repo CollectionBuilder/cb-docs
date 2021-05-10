@@ -8,7 +8,7 @@ nav_order: 1
 
 [TimelineJS](http://timeline.knightlab.com/) is an open source timeline builder that creates an interactive timeline based on underlying data. We've incorporated the TimelineJS code into CollectionBuilder in order to offer this feature. 
 
-{:.alert .alert-warning}
+{:.alert .alert-red}
 Currently, the timelinejs feature will create a timeline based on your entire collection metadata file by default. **This will likely be too large for it to work well.** Below we detail ways to further customize and curate your timeline. 
 
 #### Step 1: Including TimelineJS on a page

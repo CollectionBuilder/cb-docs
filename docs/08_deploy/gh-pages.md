@@ -24,5 +24,5 @@ If you're using one of the other types, CollectionBuilder will not properly buil
 7. At the right-hand side of the top of the page, click on the "Edit" button.
 8. Add your copied URL to the website section and click "Save" -- This will let you easily access the generated site whenever you come to edit the page.
 
-{:.alert .alert-success}
+{:.alert .alert-green}
 Congratulations! Your site is now live. **GH users** can now move on to the [Advanced Topics](../09_advanced/) section.
