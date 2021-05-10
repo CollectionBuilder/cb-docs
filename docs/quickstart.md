@@ -26,7 +26,7 @@ Instructions below provide the *way to fast* steps to creating a collection.
 6. Follow the formatting of the example record in the template and adjust your own metadata accordingly.
   - Your metadata file and our example need not match up one-to-one, but certain fields, like "format," do need to follow certain standards. See [our Metadata Page]({{'/metadata/' | relative_url}}) for more details.
 7. Save your metadata as a CSV file into the _data directory of your repository. 
-8. Edit the _config.yml file to include your CONTENTdm server link and the directory details for where your collection ultimately ends up.  
+8. Edit the _config.yml file to include your CONTENTdm server link and the directory details for where your collection ultimately ends up.
 9. Edit the theme.yml file found in the _data directory to reflect your specific collection details, including, most importantly, the name of the CSV file containing your metadata and the CONTENTdm id for your collection. 
 10. Open up the terminal in your directory and write 'jekyll s' to serve up your website. 
 11. Check your website and use the theme.yml file and the other "-config.csv" files in the _data directory to adjust the pages, layouts, and metadata displayed. 

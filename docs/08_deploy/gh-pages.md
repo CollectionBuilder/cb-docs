@@ -14,8 +14,8 @@ If you're using one of the other types, CollectionBuilder will not properly buil
 # Enabling GitHub Pages
 
 1. In your GitHub account, click on the "Settings" button at the top right of your repository page
-2. When you're on the settings page, scroll down to the " Pages" tab that is  towards the bottom of the menu on the left and click on it. 
-3. You'll be on a new page now. In the **Source** section,  change the dropdown button from "none" to "main" (or "master" if that is your default branch) which will cause the page to refresh. 
+2. When you're on the settings page, scroll down to the " Pages" tab that is towards the bottom of the menu on the left and click on it. 
+3. You'll be on a new page now. In the **Source** section, change the dropdown button from "none" to "main" (or "master" if that is your default branch) which will cause the page to refresh. 
 5. Wait a couple minutes, then refresh the page (or just refresh constantly). The alert will change to green when the site is ready. When it does, click on the URL that appears in the GitHub Pages box to check out your site!!!
 
 #### While you Wait ... Get the Link

@@ -9,7 +9,7 @@ nav_order: 1
 
 # Metadata Template
 
-CollectionBuilder can accommodate any metadata field you dream up.  
+CollectionBuilder can accommodate any metadata field you dream up. 
 
 A few fields, nevertheless, are required for the tool to work, and others are required if you would like certain visualizations to work. 
 We've created metadata templates that contain all the required, visualization-dependent, and recommended fields. 

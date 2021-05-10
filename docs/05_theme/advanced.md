@@ -40,7 +40,7 @@ These options will adjust the basic colors of your site's navigation bar (see [B
 
 #### **navbar-color**: 
 - Choose from `navbar-light` for use with light background colors, or `navbar-dark` for dark background colors.
-	- Options:  `navbar-light`, `navbar-dark`
+	- Options: `navbar-light`, `navbar-dark`
 	- example --> `navbar-color: navbar-dark`
 
 #### **navbar-background**: 

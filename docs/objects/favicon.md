@@ -6,7 +6,7 @@ nav_order: 4
 
 # Create a site icon
 
-A favicon is that tiny image you see next to the page name in the browser tab or bookmark.  
+A favicon is that tiny image you see next to the page name in the browser tab or bookmark. 
 By default, the theme uses the CollectionBuilder icon. 
 To add a polishing touch to your collection, you can add your own custom favicon in a few steps.
 

@@ -66,6 +66,6 @@ In the case of this example, only the location and subject fields have a value (
 
 ### Dublin Core and Schema Markup
 
-The title, creator, date, description, subject, and type fields in the above example all have a `dc_map` variable, so each of them would  be represented in the item page's <head> meta section in a way that follows the Dublin Core schema to enable better machine readability and indexing.
+The title, creator, date, description, subject, and type fields in the above example all have a `dc_map` variable, so each of them would be represented in the item page's <head> meta section in a way that follows the Dublin Core schema to enable better machine readability and indexing.
 
 Similarly, the title, creator, date, description, subject, location, format, and rightstatement fields all have a `schema_map` entry, so each of these would be represented in an item page's <head> meta section in a way that follows Schema.org recommendations in order to enable better machine readability and indexing.

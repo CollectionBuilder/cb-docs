@@ -13,7 +13,7 @@ Render offers a static site service that will connect to your GitHub repository 
 To do this, you'll need to Create a new Static Site on Render then connect your repository to Render by giving it permission to install a connecting module on your repository. (You can give Render permission to access your entire account or just certain repositories.)
 
 {:.alert}
-**Important note**: If you are going to use render, make sure the  `url` and `baseurl` options in your `_config.yml` file are left blank! Render sites have no subdirectories so they need to be created as an "apex" site. 
+**Important note**: If you are going to use render, make sure the `url` and `baseurl` options in your `_config.yml` file are left blank! Render sites have no subdirectories so they need to be created as an "apex" site. 
 
 ### Instructions
 

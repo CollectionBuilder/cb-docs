@@ -60,7 +60,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
       # use jekyll action from jekyll docs example
-      - uses:  helaili/jekyll-action@2.0.2
+      - uses: helaili/jekyll-action@2.0.2
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}{%endraw%}
 ```

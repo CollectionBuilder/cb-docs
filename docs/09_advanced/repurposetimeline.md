@@ -19,7 +19,7 @@ If we were changing it to map the field `depth`, it would then look this:
 {% raw %}`{%- assign raw-dates = site.data[site.metadata] | map: 'depth' | compact | uniq -%}`{% endraw%}
 
 {:.alert}
-We'll use this as our example for the rest. If you'd like, you can [look at the example page](https://www.lib.uidaho.edu/digital/watkins/depth.html) these changes can generate, or  look at the [revised timeline.html layout](https://github.com/uidaholib/collectionbuilder-cdm-template/blob/watkins/_layouts/timeline.html) we used to make that page in the uidaholib digital collections GitHub repository. 
+We'll use this as our example for the rest. If you'd like, you can [look at the example page](https://www.lib.uidaho.edu/digital/watkins/depth.html) these changes can generate, or look at the [revised timeline.html layout](https://github.com/uidaholib/collectionbuilder-cdm-template/blob/watkins/_layouts/timeline.html) we used to make that page in the uidaholib digital collections GitHub repository. 
 
 ### Connect Your New Field to the Output
 
@@ -58,7 +58,7 @@ permalink: /depth.html
 {:.mt-5}
 ## Collection Depth
 ```
-{% endraw%}
+{% endraw %}
 
 
 ### Change Timeline Visualization to Include Words Rather than Numbers
@@ -72,16 +72,11 @@ Nothing's showing up, and you can see why -- the former processing code got rid 
 This
 
 {% raw %}
-`{%- assign uniqueYears = clean-years | remove: " " | split: ";" | uniq | sort -%}`{% endraw%}
+`{%- assign uniqueYears = clean-years | remove: " " | split: ";" | uniq | sort -%}`{% endraw %}
 
 becomes
 
 {% raw %}
-`{%- assign uniqueYears = clean-years  | split: ";" | uniq | sort -%}`{% endraw%}
+`{%- assign uniqueYears = clean-years | split: ";" | uniq | sort -%}`{% endraw%}
 
 And it should work!
-
-
-
-
-

@@ -5,7 +5,10 @@ nav_order: 2
 ---
 
 {:.alert .alert-yellow}
-**Attention GH users:** The rest of the instructions on this page are optional for you. You can move on to the [metadata](metadata.html) section. GH was designed so that all the edits can be made through the GitHub web interface. <br><br>If you'd like to work on your repository on your local computer, and you've [installed](software.html) all the software required), you can follow the steps below and work in the same way as the other types.   
+**Attention GH users:** The rest of the instructions on this page are optional for you. 
+You can move on to the [metadata](metadata.html) section. 
+GH was designed so that all the edits can be made through the GitHub web interface. <br>
+If you'd like to work on your repository on your local computer, and you've [installed](software.html) all the software required), you can follow the steps below and work in the same way as the other types.
 
 # Clone Your New Repository to Your Local Machine
 
@@ -22,6 +25,6 @@ It is important to realize that the repository really is just a folder of files!
 You can open, move, or edit it just like any other folder on your computer.
 
 Now, in the top bar of GitHub Desktop you should see three buttons. 
-On the left, the "Current repository" button lists the repository  you just cloned. 
+On the left, the "Current repository" button lists the repository you just cloned. 
 In the middle, you can check your current branch (it should say *main*), and on the right there is a button that allows you to "**Fetch origin**," "**Pull origin**," or "**Push origin**." 
 As you work, this button allows you to sync the local version of your repository with the version on GitHub, and push and pull changes between them.

@@ -9,7 +9,7 @@ nav_order: 1
 This CSV controls what and in what order the links appear in your collection's navigation bar. 
 
 - **display_name**: This field determines what words will display in the nav bar. 
-- **stub**: This field determines what link the display text will follow.  
+- **stub**: This field determines what link the display text will follow.
 - **dropdown_parent**: This field is used to add dropdown functionality to your nav bar. Use it to indicate items that should appear inside a dropdown menu. It should be left empty for any non-dropdown nav item. Follow these rules to configure your nav dropdown:
     - If the item has a `stub`, but no value in `dropdown_parent`, it becomes a normal nav item
     - If the item has no `stub`, it will become a dropdown menu

@@ -33,7 +33,7 @@ This is what the default home-infographic layout looks like:
 {% include index/carousel.html%}
 
 </div>
-<div class="col-md-4">  
+<div class="col-md-4">
 
 {% include index/time.html %}
 
@@ -99,19 +99,19 @@ There are a lot of possibilities for customization here!
 CollectionBuilder is designed as a flexible template that can be adapted to the needs of a collection.
 We recommend experimenting to find what works best for you.
 
-Here's an example where there is one big top carousel, then three separate sections below with time, subjects, and object data, followed by a final row that includes a description and the data download buttons.  
+Here's an example where there is one big top carousel, then three separate sections below with time, subjects, and object data, followed by a final row that includes a description and the data download buttons.
 
 ```{% raw %}
 <div class="col-md-12">
 {% include index/carousel.html%}
 </div>
-<div class="col-md-4">  
+<div class="col-md-4">
 {% include index/time.html %}
 </div>
-<div class="col-md-4">  
-{% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="info" featured=site.data.theme.featured-subjects max=site.data.theme.featured-subjects-max %}    
+<div class="col-md-4">
+{% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="info" featured=site.data.theme.featured-subjects max=site.data.theme.featured-subjects-max %}
 </div>
-<div class="col-md-4">  
+<div class="col-md-4">
 {% include index/objects.html %}
 </div>
 

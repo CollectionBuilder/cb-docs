@@ -19,7 +19,7 @@ Fill in your Google Analytics ID, if you have one:
 
 ### Robots Exclude 
 
-Disallow indexers like Google from crawling your site and adding them to their indexes. In other words ... *If you mark this `true`, the site won't show up in Google.*  
+Disallow indexers like Google from crawling your site and adding them to their indexes. In other words ... *If you mark this `true`, the site won't show up in Google.*
 
 #### **noindex**:
     1. Remove the hash (`#`) before the field to activate it. 

@@ -27,6 +27,4 @@ We recommend that you edit them using your text editor, but Google Sheets or ano
 - [Theme Color Configuration](config-colors/) (config-theme-colors.csv)
     - configure the site's colors
 
-
-
 Refer to the [Theme File section](../05_theme/) for more information about customizing the various pages in your collection. 

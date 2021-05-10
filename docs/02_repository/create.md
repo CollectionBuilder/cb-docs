@@ -20,7 +20,7 @@ The best/fastest way to do this is by clicking the green "Use This Template" but
         - <https://github.com/CollectionBuilder/collectionbuilder-contentdm>{:target="_blank"} 
     - **SA** 
         - <https://github.com/CollectionBuilder/collectionbuilder-sa>{:target="_blank"} 
-3. Click the green "Use This Template" button.    
+3. Click the green "Use This Template" button.
 4. This brings you to a "Create a new repository" page. Follow these steps:
     1. **Enter your new repository name**. Use a lowercase name without spaces or odd characters. We often append `_source` or `_draft` to our projects to keep track of the status. If you are using GH, this name will become part of your site URL, so think through how it will look as a link.
     2. Most users should choose "Public" repository. If you are hosting on GitHub Pages it *must* be public unless you upgrade to a paid account.

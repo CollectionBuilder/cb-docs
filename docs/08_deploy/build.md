@@ -14,7 +14,7 @@ nav_order: 2
 2. Type `rake deploy` in the command line. 
 3. Jekyll will build your files in the _site directory. 
 
-#### Build using "jekyll build"  (not recommended)
+#### Build using "jekyll build" (not recommended)
 
 1. If you're running a development server, stop the server by typing `CTRL C` in the terminal. 
 2. Type `jekyll build` in the command line. 
@@ -23,7 +23,7 @@ nav_order: 2
 
 ## Overview of the Web Page Building Process
 
-Jekyll creates the web like it's 1999, outputting a folder of HTML, CSS, and other static assets as a complete site--but when first using the generator, it's hard to know  where those files actually are and how you might move them to another server. 
+Jekyll creates the web like it's 1999, outputting a folder of HTML, CSS, and other static assets as a complete site--but when first using the generator, it's hard to know where those files actually are and how you might move them to another server. 
 Let's lift the veil: 
 
 **Jekyll outputs the complete website in a directory called "_site"**. It does this both while generating the files for development and when you command it to build for production. 
@@ -48,4 +48,6 @@ Using `rake deploy` does three important things:
     - Waiting until final deployment to add the analytics prevents false hits on your analytics account.
 
 {:.alert}
-**A Note on Google Analytics**: We don't necessarily recommend adding Google Analytics to your website. We assume, however, that a large number of our eventual users might use the tool to collect web statistics (we do in many of our sites). <br/><br/>If you're interested in an analytics platform that doesn't sell your users' data, we've enjoyed [Matomo](https://matomo.org/){:target='_blank' rel='noopener'} recently, and we intend to add more analytics options to CollectionBuilder in the future."  %}
+**A Note on Google Analytics**: We don't necessarily recommend adding Google Analytics to your website. 
+We assume, however, that a large number of our eventual users might use the tool to collect web statistics (we do in many of our sites). <br>
+If you're interested in an analytics platform that doesn't sell your users' data, we've enjoyed [Matomo](https://matomo.org/){:target='_blank' rel='noopener'} recently, and we intend to add more analytics options to CollectionBuilder in the future.

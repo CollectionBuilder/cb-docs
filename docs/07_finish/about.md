@@ -109,15 +109,13 @@ The options are detailed above, but this command will include an image from outs
 
 This will embed a pdf onto the page using the browser's built in pdf reader. 
 
-- PDF -- > `{% raw %}{% include feature/item-pdf-embed.html objectid="demo_002"  width="50" %}{% endraw %}`
+- PDF -- > `{% raw %}{% include feature/item-pdf-embed.html objectid="demo_002" width="50" %}{% endraw %}`
 
 #### Include a Video
 
 This will embed either a YouTube or a MP4 video from your collection into the page. 
 
 - Video: `{% raw %}{% include feature/item-video-embed.html objectid="demo_004" %}{% endraw %}`
-
-
 
 ### Include [Bootstrap](https://getbootstrap.com/) Features
 
@@ -136,7 +134,6 @@ This will include a [bootstrap button](https://getbootstrap.com/docs/4.0/compone
 
 - Buttons -- > `{% raw %}{% include feature/button.html text="Button Link to Somewhere" link="https://collectionbuilder.github.io/" color="success" %}{% endraw %}`
 
-  
 #### Include an Alert
 
 This will include a [bootstrap alert](https://getbootstrap.com/docs/4.0/components/alerts/) with the features you define in teh variables. 
@@ -147,7 +144,7 @@ This will include a [bootstrap alert](https://getbootstrap.com/docs/4.0/componen
 
 This will include a [bootstrap modal](https://getbootstrap.com/docs/4.0/components/modal/) with the features you define in teh variables. 
 
-- Modals -- > `{% raw %}{% include feature/modal.html button="This is a modal using a 'primary' colored button to invite clicking" title="when clicked:" text="A Modal will pop out a box with some more information" color="primary"  %}{% endraw %}`
+- Modals -- > `{% raw %}{% include feature/modal.html button="This is a modal using a 'primary' colored button to invite clicking" title="when clicked:" text="A Modal will pop out a box with some more information" color="primary" %}{% endraw %}`
 
 ### Include a TimelineJS Feature
 

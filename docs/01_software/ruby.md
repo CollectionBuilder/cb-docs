@@ -61,7 +61,7 @@ eval "$(rbenv init -)"
 ```
 
 To do this, follow these instructions:
-- Open your zsh configuration file with the terminal's text editor, nano, by copying and pasting  `nano ~/.zshrc` into the terminal prompt and pressing `Enter`. 
+- Open your zsh configuration file with the terminal's text editor, nano, by copying and pasting `nano ~/.zshrc` into the terminal prompt and pressing `Enter`. 
 - Your terminal should switch to a nano text editor screen that includes a path to `.zshrc` at the top. 
 - Use the down arrow on your keyboard to move to the end of the text file.
 - Paste `eval "$(rbenv init -)"` at the end of the file.
@@ -76,7 +76,7 @@ To do this, follow these instructions:
 **If using the bash environment:**
 
 The program will ask you to edit your bash profile. To do this, follow these instructions:
-- Open your bash profile with the terminal's text editor, nano, by copying and pasting  `nano ~/.bash_profile` into the terminal prompt and pressing `Enter`. 
+- Open your bash profile with the terminal's text editor, nano, by copying and pasting `nano ~/.bash_profile` into the terminal prompt and pressing `Enter`. 
 - Your terminal should switch to a nano text editor screen that includes a path to .bash_profile at the top. 
 - Use the down arrow on your keyboard to move to the end of the text file.
 - Paste `eval "$(rbenv init -)"` at the end of the profile's text.
