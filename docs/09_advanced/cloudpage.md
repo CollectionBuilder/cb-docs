@@ -66,7 +66,8 @@ Cloud-js include assumes a div with `id="cloud"` exists on the page for the clou
 So putting them together, you can add a cloud anywhere in a page.
 For example:
 
-```
+```{% raw %}
 <div id="cloud" class="text-center my-4 bg-light border rounded p-2"></div>
-{% raw%}{% include js/cloud-js.html fields="creator;publisher" min="2" stopwords="example;another" %}{%endraw%}
+{% include js/cloud-js.html fields="creator;publisher" min="2" stopwords="example;another" %}
+{% endraw %}
 ```

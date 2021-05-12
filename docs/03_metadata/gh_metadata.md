@@ -10,7 +10,7 @@ nav_order: 1
 
 You'll need to use the GitHub Pages/Stand Alone metadata template for your GH or SA collection. Find the template using the button below. It's stored in Google Sheets for easy re-use (just "Make a Copy" via the File menu to get started). Whether you're editing existing metadata or creating it from scratch, you'll want to be sure to follow the guidelines below to ensure you include the fields required for the site and visualizations to work.
 
-{% include feature/button.html color="purple" text="GitHub Pages/Stand Alone<br/><small>CollectionBuilder Metadata Template</small>" link="https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit?usp=sharing" %}
+[GitHub Pages/Stand Alone CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit?usp=sharing){:.btn .btn-purple }
 
 --- 
 

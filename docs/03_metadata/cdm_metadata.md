@@ -28,7 +28,7 @@ Pull up the metadata template below to get started, and read through the rest of
 
 The button below will take you to the CollectionBuilder-CONTENTdm metadata template. It's stored in Google Sheets for easy re-use (just "Make a Copy" via the File menu to get started).
 
-{% include feature/button.html color="blue" text="CONTENTdm<br/><small>CollectionBuilder Metadata Template</small>" link="https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing" %}
+[CONTENTdm CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing){:.btn .btn-purple }
 
 ---
 
