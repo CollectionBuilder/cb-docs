@@ -1,7 +1,7 @@
 ---
 title: Add Your Metadata
 parent: Metadata
-nav_order: 8
+nav_order: 7
 ---
 
 # Add Your Metadata

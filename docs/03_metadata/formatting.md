@@ -1,7 +1,7 @@
 ---
 title: Format Your Metadata
 parent: Metadata
-nav_order: 7
+nav_order: 6
 ---
 
 # Formatting Your Metadata

@@ -1,7 +1,7 @@
 ---
 title: CONTENTdm Metadata
 parent: Metadata
-nav_order: 1
+nav_order: 2
 ---
 
 - how to export from CONTENTdm
@@ -29,6 +29,8 @@ Pull up the metadata template below to get started, and read through the rest of
 The button below will take you to the CollectionBuilder-CONTENTdm metadata template. It's stored in Google Sheets for easy re-use (just "Make a Copy" via the File menu to get started).
 
 {% include feature/button.html color="blue" text="CONTENTdm<br/><small>CollectionBuilder Metadata Template</small>" link="https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing" %}
+
+---
 
 ## Required Fields for CollectionBuilder-CONTENTdm
 
@@ -69,6 +71,12 @@ The nav links to CDM search and database will be derived from unique values in `
 ### collectionid *(Only required if you are pulling in multiple CONTENTdm collections using the CollectionBuilder-CONTENTdm version)*:
 - This is the collection alias assigned by a collection creator in CONTENTdm.
 - Example Input: `archivalidaho`
+
+### youtubeid (Only required if your collection contains YouTube videos):
+- This is the unique string assigned to a video when it is uploaded to YouTube. An easy way to find this is to look at the url for your YouTube video. The ID will be the string attached to the end of this url: https://www.youtube.com/watch?v=
+- Example value: `sHhk1eAgopU`
+
+---
 
 ## Fields Required for Visualizations
 
@@ -114,16 +122,14 @@ Location | `location` |
 {:.alert .alert-green}
 **If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice."
 
+---
+
 ## Optional Fields
 
 The rest of the fields in the CollectionBuilder metadata template are not required for CollectionBuilder or its visualizations to work, but their use is encouraged to ensure a richly informative collection. These remaining fields are listed below, along with their respective definitions and examples.
 
 {:.alert .alert-green}
 CollectionBuilder can accommodate any field you include in your metadata once you customize your site. For example, you can display any field on item pages or on the Browse page. See the [Metadata](customize.html#config-metadata) and [Browse](customize.html#config-browse) customization sections for more information. "
-
-### youtubeid (Required if your collection contains YouTube videos):
-- This is the unique string assigned to a video when it is uploaded to YouTube. An easy way to find this is to look at the url for your YouTube video. The ID will be the string attached to the end of this url: https://www.youtube.com/watch?v=
-- Example value: `sHhk1eAgopU`
 
 ### creator:
 - The creator property designates an entity primarily responsible for making the resource. Multiple creators may be input, as long as each is separated by a semicolon (`;`).
