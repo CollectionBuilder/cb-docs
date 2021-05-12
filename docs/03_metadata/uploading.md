@@ -1,35 +1,45 @@
 ---
-title: Connecting Your Metadata
+title: Add Your Metadata
 parent: Metadata
 nav_order: 8
 ---
 
-# Connecting Your Metadata
+# Add Your Metadata
 
-Once your metadata is ready, you'll want to deposit it into the repository either by uploading it to GitHub (**GH**) or by adding it your local folder (**SA/CDM**)
+Once your metadata is ready, you'll want to add it to your project repository so CollectionBuilder can put it to use.
+This can be done either by uploading via the GitHub web interface (most **GH** users) or by adding it to your local repository folder (most **CDM/SA** users).
+This section provides the steps to do it!
 
-{:.alert}
-*Note:* CSV metadata should be in UTF-8 encoding. CSVs downloaded from Google Sheets or exported from OpenRefine will have the correct encoding. However, Excel does not handle UTF-8 correctly, and may cause issues. The encoding "UTF-8 with BOM" (created by Excel save as CSV) will not work!'
+## Prepare Metadata File
 
-## **Prepare your metadata file:**
+Once you have finished preparing your metadata spreadsheet using Google Sheets or other software, you will need save it as a CSV format and ensure it has a sensible filename. 
 
-- Once you've finished creating your metadata in Google Sheets (or other software), click "File" and select "Download as Comma-separated values."
-- Locate the metadata CSV you've just downloaded on your computer. 
-- Without opening it, rename this file using all lowercase letters, no spaces, and no hyphens.
-- Example filenames: `idahowater.csv`, `hjccc_dev.csv`
+{:.alert .alert-yellow}
+CSV metadata should be in UTF-8 encoding.
+It is important to note that you can create your metadata using Excel, however Excel **can not** correctly export a CSV for use with CollectionBuilder or Jekyll (the encoding "UTF-8 with BOM" will not work!).
+Google Sheets, OpenRefine, and LibreOffice Calc *can* correctly create the CSV, so we suggest working with those software. 
+If you use Excel, save the spreadsheet in ".xlsx" format, then use Sheets or OpenRefine to open the file and export a correctly formatted CSV.
 
-## **Deposit your metadata:**
+To download your metadata from Google Sheets:
 
-### For GH Users (Upload to GitHub)
+- Click "File" and select "Download as Comma-separated values"
+- Locate the metadata CSV you've just downloaded on your computer (probably in "Downloads" folder!) 
+- Without opening it (to avoid issues with Excel scrambling your UTF-8 encoding), rename this file using all lowercase letters, no spaces, and no hyphens. For example: "psychiana_demo.csv", "idaho_waters.csv", "hjccc_dev.csv"
 
-1. Navigate to the _data directory on the GitHub.com repository. 
-2. Click the "Upload Files" button at the top of the page.
-3. Open your File Explorer (PC) or Finder (Mac) and locate the CSV you just downloaded and renamed (it's probably in your "Downloads" folder). 
-4. Drag the file onto the web page. 
-5. Write a short commit message in the form at the bottom of the page and then click the green "Commit changes" button directly below the form.
+## Add to Project
 
-### For CDM and SA Users
+With a properly formatted and named CSV in hand, you are ready to add your metadata to your CollectionBuilder project.
+This can be done either by uploading via the GitHub web interface (most **GH** users) or by adding it to your local repository folder (most **CDM/SA** users).
 
-1. Locate the CSV you just downloaded and renamed (it's probably in your "Downloads" folder) in your File Explorer / Finder
-2. Copy (or drag and drop) the metadata file into your CollectionBuilder project repository's `_data` directory (your repository is probably in your Documents > GitHub folder). 
-3. Commit the new metadata using Git or GitHub Desktop, and push your changes to the repository.
+### Upload via GitHub web interface
+
+1. From the home page of your project repository on GitHub.com, click on the "_data" folder that appears in the code area of the page.
+2. On the "_data" folder page, click the "Add file" button and select "Upload files" (appears to right side of page).
+3. Click "choose your files", navigate to the location of the CSV on your local machine (probably in "Downloads"), and select your CSV file. Or drag the file from your File Explorer / Finder into the GitHub page. Once the file is uploaded, it will appear listed on the web page.
+4. Scroll down to the "Commit changes" box, write a short commit message in the form, then click the green "Commit changes" button to add it to your repository. 
+
+### Add to local repository via Git
+
+1. Locate your CSV in your File Explorer / Finder (probably in "Downloads"), and the your CollectionBuilder project repository folder (probably in "Documents" > "GitHub" folder).
+2. Copy (or drag and drop) the CSV file into your CollectionBuilder project's "_data" folder.
+3. Once the CSV is added, Git will notice that something has changes. Use Git on commandline, GitHub Desktop, or your editor's Git integration to add, commit, and push your changes to the repository.
