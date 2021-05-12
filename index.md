@@ -20,7 +20,7 @@ Once the initial set-up is complete, users will be able to create their collecti
 
 This Documentation applies to all the current "Types" of the CollectionBuilder tool. 
 For the majority of the tool's features and setups, the documentation is the same. 
-When it is different--**GH users**, for instance, can ignore many steps--we indicate that via columns, bolded font, and colored-alerts. 
+There are steps where the documentation does vary between types, however, so be on the lookout for bolded font and colored alerts that indicate when the documentation diverges. 
 
 The types are currently: 
 

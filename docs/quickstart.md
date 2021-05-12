@@ -3,7 +3,7 @@ title: Quick Start
 ---
 
 If you are familiar with Jekyll and GitHub, the basic concepts and set up of CollectionBuilder will be pretty simple to master.
-Instructions below provide the *way to fast* steps to creating a collection.
+Instructions below provide the *way too fast* steps to creating a collection.
 
 ## CollectionBuilder-GH
 
