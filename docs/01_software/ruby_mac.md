@@ -29,8 +29,16 @@ To do this, follow the instructions below, which outline the steps to install Ru
         - The terminal will then prompt you to press `Enter` once more to continue the install.
 
 2. **Install rbenv**
-    - Copy and paste the command `brew install rbenv` into your terminal prompt and press `Enter`. This installation might take a while.
-    - Once this rbenv installation is complete, copy and paste `rbenv init` into the terminal prompt and press `Enter`.
+    - Copy and paste the command 
+    ```bash
+    brew install rbenv
+    ```
+    into your terminal prompt and press `Enter`. This installation might take a while.
+    - Once this rbenv installation is complete, copy and paste
+    ```bash
+    rbenv init
+    ``` 
+    into the terminal prompt and press `Enter`.
     - Depending on whether you are using a [zsh](#zsh) or [bash](#bash) shell, follow the appropriate instructions below to finish the rbenv installation.
 
 {:#zsh}
@@ -38,7 +46,7 @@ To do this, follow the instructions below, which outline the steps to install Ru
 
 After you run the command `rbenv init` (as instructed in the previous step), you will see this message:
 
-```
+```bash
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
 
@@ -46,7 +54,11 @@ eval "$(rbenv init -)"
 ```
 
 To do this, follow these instructions:
-- Copy and paste `nano ~/.zshrc` into the terminal prompt and press `Enter` (this will open your zsh configuration file with the terminal's text editor, nano). 
+- Copy and paste 
+```bash
+nano ~/.zshrc 
+```
+into the terminal prompt and press `Enter` (this will open your zsh configuration file with the terminal's text editor, nano). 
 - Your terminal should switch to a nano text editor screen that includes a path to `.zshrc` at the top. 
 - Use the down arrow on your keyboard to move to the end of the text file.
 - Paste `eval "$(rbenv init -)"` at the end of the file.
@@ -58,7 +70,11 @@ To do this, follow these instructions:
 ### If using the bash environment:
 
 After you run the command `rbenv init` (as instructed in the previous step), the program will ask you to edit your bash profile. To do this, follow these instructions:
-- Copy and paste `nano ~/.bash_profile` into the terminal prompt and press `Enter` (this will open your bash profile with the terminal's text editor, nano). 
+- Copy and paste 
+```bash
+nano ~/.bash_profile
+```
+into the terminal prompt and press `Enter` (this will open your bash profile with the terminal's text editor, nano). 
 - Your terminal should switch to a nano text editor screen that includes a path to `.bash_profile` at the top. 
 - Use the down arrow on your keyboard to move to the end of the text file.
 - Paste `eval "$(rbenv init -)"` at the end of the profile's text.
