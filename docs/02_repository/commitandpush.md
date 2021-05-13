@@ -1,7 +1,7 @@
 ---
 title: Commit Your First File
 parent: Repository
-nav_order: 3
+nav_order: 4
 ---
 
 # Commit Your First File

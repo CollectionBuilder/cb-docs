@@ -1,5 +1,5 @@
 ---
-title: Clone Your Repository
+title: Clone Repository
 parent: Repository
 nav_order: 2
 ---

@@ -1,5 +1,5 @@
 ---
-title: Create a Repository
+title: Create Repository
 parent: Repository
 nav_order: 1
 ---
@@ -36,4 +36,4 @@ By clicking the "Code" button on the CB repository, you are given options to "Do
 The code can then be manually copied into your own repository or project location.
 This may be useful if you do not want to use GitHub.
 
-Using GitHub's "fork" option should be reserved for situations where you would like to edit the CB template and contribute back to the project via a Pull Request.
+Using GitHub's "fork" option should be reserved for situations where you would like to edit the CB template itself and contribute your changes back to the project via a Pull Request.
