@@ -11,15 +11,21 @@ nav_order: 1
 
 ## Home Page Banner:
 
-### **featured-image**: 
+### featured-image: 
 
 - This is the image that appears at the top of the home page of your collection. It can be ***one*** of the following:
 	- the objectid for the image from this collection that you would like to feature on your home page:
-		- example --> `featured-image: demo_psychiana15`
-	- ***OR*** a relative location of an image in your repository:
-		- example --> `featured-image: /images/palouse.jpg`
+	```yaml
+	featured-image: demo_psychiana15
+	```
+	- ***OR*** a relative location of an image in your repository: 
+	```yaml
+	featured-image: /images/palouse.jpg
+	```
 	- ***OR*** a full URL to an image elsewhere:
-		- example --> `featured-image: https://ctrl-shift.org/images/splash/armantrout.jpg`
+	```yaml
+	featured-image: https://ctrl-shift.org/images/splash/armantrout.jpg
+	```
 	- if you leave `featured-image` blank or comment it out, the home page of your collection will have the standard page banner with no image background.
 
 {:.alert}
