@@ -1,10 +1,10 @@
 ---
-title: Generate Your Site
+title: Generate Site
 parent: Repository
 nav_order: 3
 ---
 
-# Generate Your Site on a Dev Server
+# Generate Your Site
 
 With your project repository copied to your local machine, you can use **Jekyll** to generate and serve your site on a local development server.
 The complete website will be available to use in your browser *as if* it was on the live web--but it is only on your local computer.
@@ -13,7 +13,7 @@ This is great for iterative development, allowing you to test changes and see wh
 
 With a fresh copy of a CollectionBuilder template, you should be able to test out your Jekyll set up without making any changes to the code, generating the demo collection using the commands below.
 
-Once you start adding your own content, configuring, and customizing your project, you will follow exactly the same method to start the dev server.
+Once you start adding your own content, configuring, and customizing, you will follow exactly the same method to start the dev server to view your project.
 
 ## Open Terminal
 
