@@ -6,69 +6,41 @@ nav_order: 3
 
 # Collection Settings
 
-These are settings specific to your collection:
+This section of "_config.yml" provides important values to CollectionBuilder used to generate your site content and pull in images.
 
 ### metadata: 
 
-- The filename (not including the extension) of your CSV metadata file. 
-- ***Note: This should be the same entry as "data" in the page gen variables below.***
+- The filename **without the extension** of your metadata CSV file. 
+- Metadata specified in this value will drive the browsing features and item page generation--this is the true heart of your CollectionBuilder project!
 - example --> `metadata: boxing`
 
-{:.alert .alert-yellow}
-**GH users**: At this point you can skip to the [Additional Variables](../additional) section.
+{:.alert .alert-blue}
+**GH users**: At this point you can skip to the [Additional Variables]({{ '/docs/04_config/additional/' | relative_url }}) section.
 
 ---
 
-## Required Settings for CDM
+## Required Settings for CONTENTdm
 
 ### cdm-collection-id: 
 
-- The name of your CONTENTdm collection (a collection alias assigned by a collection's creator in CONTENTdm).
-	- example --> `cdm-collection-id: boxing` 
+- The "collection alias" of your CONTENTdm collection
+- The alias is a path assigned by CONTENTdm and can be found in CONTENTdm Admin on the Collections > Profile page, or by looking at the URL of the collection on the web. For example "https://cdm17254.contentdm.oclc.org/digital/collection/ui_ep/search" the collection alias is given after "/collection/", so would be `ui_ep`.
+- example --> `cdm-collection-id: boxing` 
 
 ### cdm-url (for CONTENTdm skin): 
 
-- The full url for your public CONTENTdm instance (*with NO trailing slash!*). Generally these follow the pattern "https://cdm" + a number + ".contentdm.oclc.org", although custom domains should also work. However, your CDM admin interface url (starting with "server", e.g. https://server12345.contentdm.oclc.org) will not work.
-	- example --> `cdm-url: https://cdm12345.contentdm.oclc.org`
+- The full url for your public CONTENTdm instance (*with NO trailing slash!*). 
+- Generally these follow the pattern "https://cdm" + a number + ".contentdm.oclc.org", although custom domains should also work. However, your CDM admin interface url (starting with "server", e.g. https://server12345.contentdm.oclc.org) will not work.
+- example --> `cdm-url: https://cdm12345.contentdm.oclc.org`
 
 ---
 
-## Page Generation Settings
+## Optional Page Generation Settings
 
-**For CDM and SA users**: The following variables are used by the "Page Gen" plugin included with CollectionBuilder.
-The plugin generates individual HTML pages for each item (row) in your collection's metadata (CSV):
+CollectionBuilder-CONTENTdm and -SA use a custom Jekyll plugin to generate individual HTML pages for each item (row) in your metadata CSV.
+By default, the "CollectionBuilder Page Generator" plugin needs no additional configuration--it will automatically use the value set in `metadata` to generate pages.
 
-### data: 
+In advanced use cases, you may want to tweak the CB defaults or generate pages from more than one data file. 
+The values under the `page_gen` key can be used to customize page generation. 
 
-- The name of your metadata file. 
-- ***This should be the same entry as "metadata" above***
-	- example --> `data: boxing`
-
-{:.alert .alert-red}
-**Important! -->** **CDM and SA Users**, you *must* change the data field in 'Page Gen' to reflect the metadata CSV the collection is using. ***This should be the same entry as "metadata" above***.
-
-"Data" is the only field you need to change. Leave the following fields the way they are in the default _config.yml template you downloaded:
-
-### template: 
-
-- The layout of the pages generated. 
-- CollectionBuilder entry --> `items`
-
-### name: 
-
-- Determines how the url will be written. For CollectionBuilder, we use is the "*objectid*" metadata field to generate the url.
-- CollectionBuilder entry --> `objectid`
-
-### dir: 
-
-- Determines the directory or folder in which the item pages are stored when the site is built. 
-	- CollectionBuilder entry --> `items`
-
-### extension: 
-
-- Determines the extension of each generated page. For us, `html` means our item pages will end as '.html' 
-	- CollectionBuilder entry --> `html`
-
-{:.alert .alert-purple}
-"Page Gen" used by CollectionBuilder is a modified version of the Jekyll plugin [jekyll-datapage_gen](https://github.com/avillafiorita/jekyll-datapage_gen) created by Adolfo Villafiorita. Thank you Adolfo!
-
+For details, please see "docs/plugins.md" in the template you are using.

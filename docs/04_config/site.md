@@ -6,51 +6,58 @@ nav_order: 2
 
 # Site Settings
 
-These are the primary settings of your site:
+This section of "_config.yml" is used to define the core information about your site. 
+The values will be pulled into pages throughout your collection, populating areas such as the banner, footer, and meta markup.
 
 ### title: 
+
 - The title of your digital collection. 
-- This will appear as the title on the home page and on every other page's header. 
+- This will appear as the title on the home page, and on every other page's header and footer. 
 	- example --> `title: Donald R. Theophilus Boxing Photograph Collection`
 
 ### tagline: 
-- A descriptive subtitle of the digital collection.
+
+- A *optional* descriptive subtitle for the digital collection.
 - This will appear underneath the title on the home page and on every other page's header.
 	- example --> `tagline: Photographs of University of Idaho Boxers and Boxing Teams, 1934 - 1953`
 
-### description: 
+### description:
+
 - One or two sentences of explanatory text about the collection.
-- Appears on the home page under the featured image.
+- Appears on the home page under the featured image and in meta markup. Since this description may appear in search result lists, keep it around 160 characters max.
 	-  example --> `description: "A digital collection comprised of 52 photographs of boxers and boxing teams from the University of Idaho"`
 
 ### author: 
+
 - You! The creator of the digital collection.
-- Use your GitHub username or your name. This will appear in the site's meta tags.
+- Use your GitHub username or your name. This will only appear in the site's meta tags.
 	- example --> `author: evanwill`
 
-{:.alert .alert-yellow}
-**GH users**: At this point you can skip to [Collection Settings](../collection/).
+## Organization Branding section 
 
----
-
-## Banner and Logo Settings for SA/CDM
+These values are **optional**, but should generally be all filled in or all skipped. 
+Filling in these values adds an organization logo and link to banner, footer, and nav elements.
 
 ### organization-name: 
+
 - The name of your organization.
 - Used to reference your organization in the site's citation, and serves as alternate text for your organization logos.
-	- example --> `"Digital Initiatives, University of Idaho Library"`
+	- example --> `organization-name: "Digital Initiatives, University of Idaho Library"`
 
 ### organization-link: 
+
 - A link to your organization's homepage.
 - This is the url connected to your organization name.
-	- example --> `https://www.lib.uidaho.edu/digital/`
+	- example --> `organization-link: https://www.lib.uidaho.edu/digital/`
 
 ### organization-logo-banner: 
-- The image source for your organization logo that appears at the top right of the screen on all pages *except* the home page.
+
+- The image source for your organization logo that appears at the top right of the screen on all pages *except* the home page. 
 - This logo is connected to the **organization-link** url you entered above.
-	- example --> `https://www.lib.uidaho.edu/media/digital/justdi_logo_sm.png`
+	- example --> `organization-logo-banner: https://www.lib.uidaho.edu/media/digital/justdi_logo_sm.png`
 
 ### organization-logo-nav: 
+
 - The image source for your organization logo that appears above your site title. 
 - This image will appear above the **title** on your collection's homepage. This logo is connected to the **organization-link** url you entered above.
-	- example --> `https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png`
+	- example --> `organization-logo-nav: https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png`

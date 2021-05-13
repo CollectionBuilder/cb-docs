@@ -6,8 +6,14 @@ nav_order: 4
 
 # Initial Site Configuration
 
-The instructions below outline the edits you need to make to the `_config.yml` file. This file serves as the base configuration for your site, containing information like the site's title and the name of your metadata (CSV!) file.
+The file "_config.yml" is used to configure the core features of your CollectionBuilder site. 
 
-To begin, locate and open the **_config.yml** file in the base of your repository. 
+This is a Jekyll convention (in general Jekyll puts an "_" underscore in front of files and folders that are important!)--so some values are related to technical details specific to Jekyll.
+The rest are the important values that will populate the template elements of your site--for example, the collection title, organization name, and the metadata CSV to use.
+These are made up of key value pairs written in YAML, e.g. `title: "Example Site Title"`.
 
-*No matter which version you're using, this file is used to configure the basics of your site.* 
+CollectionBuilder's "_config.yml" template is divided into sections to help keep the values organized, and it contains a lot of comments to help explain how to fill it out.
+
+When you start fresh from the template, placeholder values fill all the options.
+So to begin configuring and customizing your site, open the **_config.yml** file in the base of your project repository. 
+The docs in the following pages address how to edit the values.
