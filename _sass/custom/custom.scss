@@ -4,6 +4,10 @@
 .highlighter-rouge {
     color: #06044e;
 }
+// made code font size same as body
+code {
+    @include fs-4;
+}
 
 /* 
     Alert border color utilities
