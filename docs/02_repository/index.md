@@ -4,7 +4,15 @@ has_children: true
 nav_order: 2
 ---
 
-# Set up CollectionBuilder Project Repository
+# Set Up Project Repository
 
-To set up a CollectionBuilder project, you'll need a copy of our CollectionBuilder GitHub repository. If you've installed the software, you can pull that copy down to your local computer. If you're using GH with GitHub's online platform, you will make a copy of the repository totally in the browser. 
+To start your new project you will be making a copy of the CollectionBuilder template to use as a base.
+There are many ways to do this--however, GitHub's web interface makes the set up process straight forward, getting you prepped with version control to manage your project and code in just a few clicks.
 
+If you are unfamiliar with Git and GitHub here is the super quick overview:
+
+- **Git** is a version control system used for tracking the files 
+- a **Repository** is a folder of files for a project tracked by Git
+- **GitHub** is an online platform for collaborating on repositories
+
+*Note:* using other platforms such as GitLab or BitBucket (or no version control at all) is definitely possible, but is not covered directly in these docs.
