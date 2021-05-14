@@ -1,6 +1,6 @@
 ---
 title: Site Settings
-parent: Config
+parent: Site Config
 nav_order: 2
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Colors
-parent: Customize
+parent: Page Config
 nav_order: 7
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Additional Variables
-parent: Config
+parent: Site Config
 nav_order: 4
 ---
 

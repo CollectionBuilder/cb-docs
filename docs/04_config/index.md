@@ -1,5 +1,5 @@
 ---
-title: Config
+title: Site Config
 has_children: true
 nav_order: 4
 ---

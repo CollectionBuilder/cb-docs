@@ -1,6 +1,6 @@
 ---
 title: Collection Settings
-parent: Config
+parent: Site Config
 nav_order: 3
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Map Page
-parent: Theme
+parent: Theme Options
 nav_order: 7
 ---
 

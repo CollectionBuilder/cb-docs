@@ -1,5 +1,5 @@
 ---
-title: Customize
+title: Page Config
 has_children: true
 nav_order: 6
 ---

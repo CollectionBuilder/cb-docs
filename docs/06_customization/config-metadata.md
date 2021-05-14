@@ -1,6 +1,6 @@
 ---
 title: Metadata
-parent: Customize
+parent: Page Config
 nav_order: 2
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Table
-parent: Customize
+parent: Page Config
 nav_order: 6
 ---
 

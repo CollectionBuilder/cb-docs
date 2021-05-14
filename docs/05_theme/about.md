@@ -1,6 +1,6 @@
 ---
 title: About Page
-parent: Theme
+parent: Theme Options
 nav_order: 2
 ---
 

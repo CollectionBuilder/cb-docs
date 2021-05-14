@@ -1,6 +1,6 @@
 ---
 title: Advanced Options
-parent: Theme
+parent: Theme Options
 nav_order: 10
 ---
 

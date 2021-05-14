@@ -1,6 +1,6 @@
 ---
 title: Home Page
-parent: Theme
+parent: Theme Options
 nav_order: 1
 ---
 

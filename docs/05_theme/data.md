@@ -1,6 +1,6 @@
 ---
 title: Data
-parent: Theme
+parent: Theme Options
 nav_order: 9
 ---
 

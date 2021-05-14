@@ -1,6 +1,6 @@
 ---
 title: Search
-parent: Customize
+parent: Page Config
 nav_order: 5
 ---
 

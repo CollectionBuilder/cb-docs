@@ -1,6 +1,6 @@
 ---
 title: Browse
-parent: Customize
+parent: Page Config
 nav_order: 3
 ---
 

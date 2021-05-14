@@ -1,6 +1,6 @@
 ---
 title: Map
-parent: Customize
+parent: Page Config
 nav_order: 4
 ---
 

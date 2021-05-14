@@ -1,6 +1,6 @@
 ---
 title: URL Variables
-parent: Config
+parent: Site Config
 nav_order: 1
 ---
 
