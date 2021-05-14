@@ -50,3 +50,9 @@ With a terminal (integrated or not) open in your project folder follow these ste
 2. In the terminal you'll see some text appear (messages from Jekyll), including a URL that appears after the title "Server address:"
 3. Hold down `Ctrl` / `Command` and click the link to open the site in your browser, or copy the URL and paste it into a browser (we recommend doing this in a private window).
 4. When you're ready to end your Jekyll session, click into the terminal, then type `Ctrl + C`. This stops the server from running. (This is how to close most command line programs, not just Jekyll!)
+
+*Tip:* always check your terminal for messages.
+The error messages can be intimidating and confusing--but do often contain useful information!
+
+The "CollectionBuilder Page Generator" plugin creates item pages from your metadata while Jekyll is running. 
+It provides information in the terminal that might help debugging your metadata.
