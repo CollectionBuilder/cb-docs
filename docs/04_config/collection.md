@@ -35,6 +35,17 @@ This section of "_config.yml" provides important values to CollectionBuilder use
 
 ---
 
+## Required Settings for StandAlone
+
+### objects:
+
+- Provide the location of the digital objects folder
+- If using local folder, use the directory name with proceeding slash. If using an external web location, provide full URL to the folder containing the objects.
+- example using local folder --> `objects: /objects`
+- example using external location --> `objects: https://www.lib.uidaho.edu/digital/objects/hjccc`
+
+---
+
 ## Optional Page Generation Settings
 
 CollectionBuilder-CONTENTdm and -SA use a custom Jekyll plugin to generate individual HTML pages for each item (row) in your metadata CSV.
