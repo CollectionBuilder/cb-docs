@@ -1,19 +1,42 @@
 ---
-title: Collection Objects for SA
+title: Objects for SA
 parent: Objects
 nav_order: 3
 ---
 
-- objects are stored outside of github (don't commit your objects!)
-- object can be in "objects" folder along side the project code, or in any web accessible location.
-- set _config.yml objects value
-- derivatives must be generated for the objects so each object has a thumb and small image representation (no matter what original object type)
+# Collection Objects for CollectionBuilder-SA
+
+CollectionBuilder-SA is designed for large, standalone collections self-hosted on a basic static web server (i.e. generally beyond the size limitations of GitHub Pages).
+
+CB-SA requires that you generate a thumb and small image derivative/representation for each object in your collection (for all item formats), in additional to providing the full sized object for download.
+This can be automated using the included Rake tasks or manually created using other software.
+
+The digital object files will not be stored on GitHub (don't commit your objects! Git is not optimized for binary file storage and GitHub has size limits).
+Instead, the files can be deployed in any web accessible location--in the "objects" folder with the generated website code, or anywhere else that you can implement!
+
+## Example Deployments
+
+For example,
+
+## Objects Folder Structure
+
 - folder structure objects, objects/small, objects/thumbs
+- set _config.yml objects value
+
+## Object Guidelines for SA 
+
+- derivatives must be generated for the objects so each object has a thumb and small image representation (no matter what original object type)
 - filenaming convention, derivative convention _sm, _th
 - filename field in metadata
 - supported file types: jpg, png, pdf
 - youtube items
-- Rake task
+
+## Object Rake Tasks
+
+[Rake](https://github.com/ruby/rake) is a task automation tool written in Ruby. 
+It is a standard part of all Ruby installs, so if you are using Jekyll, you have it installed.
+
+CB-SA provides a Rake task to prep image derivatives for image and PDF items.
 
 ## generate_derivatives
 
