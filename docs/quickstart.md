@@ -1,35 +1,32 @@
 ---
-title: Quick Start
+title: Too Quick Start
 ---
 
-If you are familiar with Jekyll and GitHub, the basic concepts and set up of CollectionBuilder will be pretty simple to master.
+If you are familiar with Jekyll and GitHub, the basic concepts and set up of CollectionBuilder will be pretty straightforward to understand.
 Instructions below provide the *way too fast* steps to creating a collection.
 
 ## CollectionBuilder-GH
 
-1. Create a new project using the [CB GH](https://github.com/CollectionBuilder/collectionbuilder-gh) template
-2. Download the <a href="https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit#gid=0" target="_blank" rel="noopener">Metadata Template</a>.
-3. Follow the formatting of the example record in the template to fill in metadata on your own objects
-4. Upload your files into the "Objects" folder in your repository
-5. Turn on GitHub Pages for the repository 
-6. Check out your site via the link provided on your repository's setting's page!
+1. Create a new project repository using the [CollectionBuilder-GH](https://github.com/CollectionBuilder/collectionbuilder-gh) template by clicking the "Use this template" button.
+2. Copy the [Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit#gid=0).
+3. Follow the formatting of the example record in the template to fill in metadata for your own collection objects.
+4. Upload your collection files into the "objects" folder in your repository (.jpg, .png, .pdf, or .mp3).
+5. Upload your collection metadata as CSV to the "_data" folder in your repository.
+6. Edit the "_config.yml" with your site information.
+7. Activate GitHub Pages for the repository.
+8. Check out your site via the link provided on your repository's settings page!
 
-## Skin - CONTENTdm
+## CollectionBuilder-CONTENTdm
 
-1. Make sure you have Git, Ruby, and Jekyll Installed on your computer.
-1. Import [the CollectionBuilder CONTENTdm Skin repository](https://github.com/CollectionBuilder/collectionbuilder-cdm) into your own GitHub repository.
-2. Pull down the repository/folder and open it using Visual Studio Code (or Atom) on your desktop.
-2. Download and consult the [Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit#gid=0).
-3. Extract your own metadata from CONTENTdm using the Export Feature on the Collections Tab in the Administration portal. It can be found here: https://YOUR_SERVER_NUMBER.contentdm.oclc.org/cgi-bin/admin/exporth.exe?CISODB=/ui_ep
-  - Use the "Tab-delimited" option and make sure the "Return field names in first record" option is clicked.
-5. Upload that file into a Google Sheet
-6. Follow the formatting of the example record in the template and adjust your own metadata accordingly.
-  - Your metadata file and our example need not match up one-to-one, but certain fields, like "format," do need to follow certain standards. See [our Metadata Page]({{'/metadata/' | relative_url}}) for more details.
-7. Save your metadata as a CSV file into the _data directory of your repository. 
-8. Edit the _config.yml file to include your CONTENTdm server link and the directory details for where your collection ultimately ends up.
-9. Edit the theme.yml file found in the _data directory to reflect your specific collection details, including, most importantly, the name of the CSV file containing your metadata and the CONTENTdm id for your collection. 
-10. Open up the terminal in your directory and type `bundle exec jekyll s` to serve up your website. 
-11. Check your website and use the theme.yml file and the other "-config.csv" files in the _data directory to adjust the pages, layouts, and metadata displayed. 
-12. When satisfied, stop your jekyll server by clicking `CTRL + C` in the terminal, the type `rake deploy` to build the site. 
-13. Open up the _site folder, copy all the relevant HTML and css files, then paste these onto your web server. 
-14. Your Web Site is up!
+1. Make sure you have Git, Ruby, Jekyll, and a text editor installed on your computer.
+2. Create a new project repository using the [CollectionBuilder-CONTENTdm](https://github.com/CollectionBuilder/collectionbuilder-contentdm) template by clicking the "Use this template" button.
+3. Clone your repository to your local computer.
+4. Check the [Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit#gid=0).
+5. Export your collection metadata from CONTENTdm (CDM Admin > Collections > Export), using the "Tab-delimited" option with the "Return field names in first record" option checked.
+6. Transform your CDM metadata using OpenRefine or Google Sheets to include the fields required by CollectionBuilder.
+7. Save/export your metadata as a CSV and copy into the "_data" folder of your repository.
+8. Edit the "_config.yml" with your site and CDM information.
+9. Open up a terminal in your directory and type `bundle exec jekyll s` to serve up your website on a local dev server.
+10. Finish customizing your site with "theme.yml" and other config CSVs.
+11. To build for deployment, use command `rake deploy`.
+12. Open up the "_site" folder, copy all contents to your web server!
