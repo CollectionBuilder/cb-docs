@@ -6,81 +6,101 @@ nav_order: 10
 
 # Advanced Theme Options
 
-## Images 
+This section of "theme.yml" configures advanced options such as image and font size, and Bootstrap themes. 
+This is an optional section—-your site will work just fine without adjusting these variables, but they're available if you'd like the extra options for customization.
 
-### Image Size:
+## CDM image % for IIIF:
 
 **CDM-Users only**: This is a *CONTENTdm-specific* variable section for adjusting size of images used throughout the site.
-CollectionBuilder uses the IIIF API to retrieve images using a percentage size option. 
+CollectionBuilder uses the [IIIF Image API](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/API_Reference/IIIF_API_reference) to retrieve images using a percentage size option. 
 The percentage must be 10% or greater.
 
-#### **image-percentage-large**:
+### image-percentage-large:
 - Default `70`
-- example --> `image-percentage-large: 50`
+```yaml
+image-percentage-large: 50
+```
 
-#### **image-percentage-medium**: 
+### image-percentage-medium: 
 - Default `40` 
-- example --> `image-percentage-medium: 30`
+```yaml
+image-percentage-medium: 30
+```
 
-#### **image-percentage-small**
+### image-percentage-small:
 - Default `20`
-- example --> `image-percentage-small: 10`
+```yaml
+image-percentage-small: 10
+```
 
-{:.alert}
+{:.alert .alert-green}
 **Pro Tip:** If your images are appearing blurry or take too long to load, try adjusting the image-sizing settings. The appropriate percentage depends on the full size of images contained in your CDM repository and may require some experimentation.
 
+---
 
-***
-
-## Bootstrap Themes
-
-### Navbar Options:
+## Navbar Options:
 
 These options will adjust the basic colors of your site's navigation bar (see [Bootstrap navbar docs](https://getbootstrap.com/docs/4.4/components/navbar/){:target="_blank" rel="noopener"} for details).
 
-#### **navbar-color**: 
+### navbar-color: 
 - Choose from `navbar-light` for use with light background colors, or `navbar-dark` for dark background colors.
 	- Options: `navbar-light`, `navbar-dark`
-	- example --> `navbar-color: navbar-dark`
+```yaml
+navbar-color: navbar-dark
+```
 
-#### **navbar-background**: 
+### navbar-background: 
 - Choose from Bootstrap's background colors.
 	- Options: `bg-primary`, `bg-secondary`, `bg-success`, `bg-danger`, `bg-warning`, `bg-info`, `bg-light`, `bg-dark`, `bg-white`, `bg-dark`
-	- example --> `navbar-background: bg-dark`
+```yaml
+navbar-background: bg-dark
+```
 
-### Bootswatch:
+## Bootswatch:
 
 [Bootswatch](https://bootswatch.com/){:target="_blank" rel="noopener"} creates unique themes for Bootstrap-based sites. 
 Swap out the default Bootstrap for a Bootswatch version using the options below as a fun way to demonstrate the power of CSS to transform look and feel. 
 
-#### **bootswatch**: 
-- Leave blank or comment out for plain bootstrap
+### bootswatch: 
+- Leave blank or comment out (make a comment by placing a `#` in front of the variable) for plain bootstrap
 	- Options: `cerulean`, `cosmo`, `cyborg`, `darkly`, `flatly`, `journal`, `litera`, `lumen`, `lux`, `materia`, `minty`, `pulse`, `sandstone`, `simplex`, `sketchy`, `slate`, `solar`, `spacelab`, `superhero`, `united`, `yeti`
-	- example --> `bootswatch: cerulean`
+```yaml
+bootswatch: cerulean
+```
 
-### Theme Fonts:
+## Theme Fonts:
 
 These options change the way the fonts appear throughout your collection. 
 If you leave any option blank, it will revert to the CollectionBuilder defaults.
 
-#### **base-font-size**: 
+### base-font-size: 
 - Changes the base size for fonts throughout the site.
-	- example --> `base-font-size: 1.2em`
+```yaml
+base-font-size: 1.2em
+```
 
-#### **text-color**: 
+### text-color: 
 - Changes the color of the base font. Probably want a shade of black ... 
-	- example --> `text-color: "#191919"`
+```yaml
+text-color: "#191919"
+```
 
-#### **link-color**: 
+### link-color: 
 - Changes the link color used throughout the site. Base color is a primary blue. 
-	- example --> `link-color: "#17a2b8"`
+```yaml
+link-color: "#17a2b8"
+```
 
-#### **base-font-family**: 
+### base-font-family: 
 - Changes the font family
 	- If it's a google family, you'll need to use the font-cdn option below to add the style sheet link to the site.
-	- example --> `base-font-family: Georiga; serif;`
+```yaml
+base-font-family: Georgia; serif;
+```
 
-#### **font-cdn**: 
+### font-cdn: 
 - This lets you add fonts from Google Fonts or other online resources provided by a content delivery network (cdn). These are typically provided by the service you are using. 
-	- example --> `font-cdn: <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">`
+```yaml
+font-cdn: <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+```
 
