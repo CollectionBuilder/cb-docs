@@ -14,7 +14,7 @@ Your site will work successfully without changing the variables below.
 
 ## Google Services
 
-Fill in your Google Analytics ID, if you have one: 
+These options can add pre-configured Google services if desired.
 
 ### google-analytics-id: 
 
