@@ -45,7 +45,7 @@ For example, if you have an collection item file "example_document1.pdf", you en
 - **File size:** the full size object can be any size you think your users might want to download. Each object will have a "small" and "thumb" .jpg derivative for display on the collection web pages.
     - "small" image should be approximately 800x800 px max
     - "thumb" image should be approximately 400x400 px max
-- **Filenaming:** to avoid issues, please pay close attention to filenaming conventions! The filename should be an all lowercase unique string with no spaces or special characters. Underscores (`_`) are okay. You will use the exact filenames to populate the "filename" field of your collection metadata. The base filename (i.e. with out extension) should match the "objectid" in the metadata.
+- **Filenaming:** to avoid issues, please pay close attention to filenaming conventions! The filename should be an all lowercase unique string with no spaces or special characters. Underscores (`_`) are okay. You will use the exact filenames to populate the "filename" field of your collection metadata. The base filename (i.e. with out extension) should match the "objectid" used in the metadata.
 
 ## Object Rake Task
 
