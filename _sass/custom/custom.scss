@@ -10,6 +10,10 @@
 code {
     @include fs-4;
 }
+// add margin to top of code blocks
+div.highlighter-rouge {
+    margin-top: 0.75rem;
+}
 
 /* 
     Alert border color utilities
