@@ -7,9 +7,6 @@
 #
 #######
 
-# remote_theme: pmarsceill/just-the-docs
-# theme: "just-the-docs"
-
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
@@ -122,3 +119,8 @@ compress_html:
   profile: false
   # ignore:
   #   envs: all
+
+# Glossary collection
+collections: 
+  glossary:
+    sort_by: title

@@ -6,6 +6,8 @@ nav_order: 1
 
 # Home Page
 
+This section of "theme.yml" configures many of your collection's Home page features.
+
 {:.alert}
 **Note:** The features that display on the home page can be customized via the 'home-infographic.html' file in the layouts folder. More on customizing that file can be found in our [finishing section](../../07_finish/home/)
 
