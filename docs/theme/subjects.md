@@ -17,7 +17,7 @@ subjects-fields: subject;creator
 	- When this field is left blank, subjects will not be generated and the tag cloud on the Subjects page will be blank. 
 
 {:.alert .alert-yellow}
-***Important note:*** You must also remove the "Subjects" line from the [_data/config-nav.csv](../../06_customization/config-nav/) in order to remove the Subjects page from the site completely.
+***Important note:*** You must also remove the "Subjects" line from the [_data/config-nav.csv]({{ '/customization/config-nav/' | relative_url }}) in order to remove the Subjects page from the site completely.
 
 ### subjects-min: 
 - Minimum number of times a subject term must appear before being displayed in the tag cloud. 

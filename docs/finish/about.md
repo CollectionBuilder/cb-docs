@@ -148,4 +148,4 @@ This will include a [bootstrap modal](https://getbootstrap.com/docs/4.0/componen
 
 ### Include a TimelineJS Feature
 
-See information in our [TimelineJS Feature in the Advanced Section](../../09_advanced/timelinejs/).
+See information in our [TimelineJS Feature in the Advanced Section]({{ '/advanced/timelinejs/' | relative_url }}).

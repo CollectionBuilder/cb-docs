@@ -17,7 +17,7 @@ This can be automated using the included Rake tasks (see below) or manually crea
 When using CB-SA the digital object files will not be stored on GitHub (i.e. don't commit your objects! Git is not optimized for binary file storage and GitHub has size limits).
 Instead, the object files can be deployed in any web accessible location--in the "objects" folder with the generated website code, or anywhere else that you care to implement!
 
-The location of the "objects" directory will be set in ["_config.yml"]({{ '/docs/04_config/collection/#objects' | relative_url }}).
+The location of the "objects" directory will be set in ["_config.yml"]({{ '/docs/config/collection/#objects' | relative_url }}).
 
 For example, here are some options:
 

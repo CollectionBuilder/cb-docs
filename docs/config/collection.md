@@ -17,7 +17,7 @@ metadata: boxing
 ```
 
 {:.alert .alert-blue}
-**GH users**: At this point you can skip to the [Additional Variables]({{ '/docs/04_config/additional/' | relative_url }}) section.
+**GH users**: At this point you can skip to the [Additional Variables]({{ '/docs/config/additional/' | relative_url }}) section.
 
 ---
 

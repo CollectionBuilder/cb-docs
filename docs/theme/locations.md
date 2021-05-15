@@ -17,7 +17,7 @@ locations-fields: location;stadium
 	- When this field is left blank, locations will not be generated and the tag cloud on the Locations page will be blank. 
 
 {:.alert .alert-yellow}
-***Important note:*** You must also remove the "Locations" line from the [_data/config-nav.csv](../../06_customization/config-nav/) in order to remove the Locations page from the site completely.
+***Important note:*** You must also remove the "Locations" line from the [_data/config-nav.csv]({{ '/customization/config-nav/' | relative_url }}) in order to remove the Locations page from the site completely.
 
 ### locations-min: 
 - Minimum number of times a location term must appear before being displayed in the tag cloud. 

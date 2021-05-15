@@ -30,4 +30,4 @@ metadata-facets-fields: "subject,locations,format"
 ```
 
 {:.alert .alert-green}
-**Pro Tip:** We use the `facets.json` file quite extensively when designing our sites. By adding a variety of fields here, you can generate a quick overview of the metatdata terms and their counts that are used for a certain category. This often leads to our adding more fields to our `subject-fields` option described in the [Subjects Page](../../05_theme/subjects/) section.
+**Pro Tip:** We use the `facets.json` file quite extensively when designing our sites. By adding a variety of fields here, you can generate a quick overview of the metatdata terms and their counts that are used for a certain category. This often leads to our adding more fields to our `subject-fields` option described in the [Subjects Page]({{ '/theme/subjects/' | relative_url }}) section.
