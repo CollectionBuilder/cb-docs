@@ -6,11 +6,14 @@ nav_order: 1
 
 # Software for Working with CollectionBuilder
 
-{:.alert .alert-yellow}
-**GH users:** No software needs to be installed to work with CollectionBuilder-GH. All actions and edits can be accomplished through the web interface on GitHub.com. However, some GH users might enjoy working with the tool on their local desktop using a text editor and GitHub Desktop. In that case, follow the instructions below to install the required software.
+{:.alert .alert-blue}
+**GH users:** No software needs to be installed to work with CollectionBuilder-GH. 
+All actions and edits can be completed via GitHub's website making it easy to get started--you will just need a [GitHub account](https://github.com/). 
+However, some GH users might enjoy working with the tool on their local desktop using a text editor. 
+In that case, follow the instructions below to install the required software.
 
 To get started editing code, managing your project, and building websites with CollectionBuilder on your computer you will need: 
-a text editor, git (version control system), Ruby (programming language), and Jekyll (static web site generator). 
+a text editor, Git (version control system), Ruby (programming language), and Jekyll (static web site generator). 
 
 Installing software on your computer can be the biggest hurdle to getting started with CollectionBuilder. 
 Our advice is to stick with it. Having your local "development environment" for a Jekyll-based project set up will be rewarding, allowing you to edit code and see how the website changes right on your laptop.

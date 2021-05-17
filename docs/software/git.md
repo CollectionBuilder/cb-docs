@@ -1,23 +1,43 @@
 ---
-title: Install Git and GitHub Desktop
+title: Git Setup
 parent: Software
 nav_order: 1
 ---
 
-# Install Git and GitHub Desktop
+# Git Setup
 
-To manage the code and collaborate on developing your CollectionBuilder project, you need a version control system to keep everything organized. 
+To manage the code and collaborate on developing your CollectionBuilder project, you will need a version control platform to keep everything organized.
+We use [Git]({{ '/glossary/#git' | relative_url }}) and [GitHub]({{ '/glossary/#github' | relative_url }}).
+Although there are alternatives (such as [GitLab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/product)), these docs assume you will do the same!
 
-[GitHub](https://github.com/){:target="_blank" rel="noopener"} is a cloud [Git](https://git-scm.com/){:target="_blank" rel="noopener"} repository hosting service with features for collaboration and project management.
-Think of it as Google Drive for code with super robust "track changes" baked in.
+If you are working on a CollectionBuilder-GH project, it is possible to work entirely in the GitHub web interface--all you need is a GitHub account.
+To work with a copy of your project on your local machine, you'll need to install Git (the version control software that powers GitHub) and, *optionally*, GitHub Desktop (a handy visual way to use Git) on your computer.
 
-GitHub is the most popular platform for developing and sharing code -- from enterprise software, to hands-on learning, to academic projects.
-Thus, it is great to become familiar with the platform so that you can take part in this community.
+## GitHub Account
 
-Code for your CollectionBuilder project will be stored on GitHub. 
-To work with a copy on your local machine, you'll need to install Git (the version control software that powers GitHub) and, *optionally*, GitHub Desktop (a handy visual way to use Git) on your computer.
+GitHub is the most popular platform for developing and sharing code, hosting projects from giant enterprise software, to OER learning, to personal portfolios. 
+It is great to become familiar with the platform so that you can take part in this community and its resources.
+
+Code for your CollectionBuilder project will be stored on GitHub in a Git "repository". 
+So the first step is to sign up for a GitHub account if you do not have one already.
+
+Visit <https://github.com> and sign for a free account. 
+Be sure to verify your email to get all features activated!
+(check our [GitHub glossary entry]({{ '/glossary/#github' | relative_url }}) for more resources)
+
+{:.alert .alert-blue}
+Your email and user name is recorded with every commit.
+This helps ensure integrity and authenticity of the history.
+Most people keep their email public. 
+Alternatively, check GitHub's tips on how to [set up email privacy](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#about-commit-email-addresses){:target="_blank" rel="noopener"}. 
+GitHub can provide a no-reply email address that can be found via your email settings on your profile.
 
 ## Install Git
+
+[Git]({{ '/glossary/#git' | relative_url }}) version control system is a piece of software you install on your computer. 
+This is necessary to sync with your GitHub project.
+
+Installing it is pretty straightforward:
 
 **Windows:** 
 
@@ -61,13 +81,6 @@ For ease of use, we generally suggest using Nano editor:
 ```
 git config --global core.editor "nano -w"
 ```
-
-{:.alert .alert-blue}
-Your email and user name is recorded with every commit.
-This helps ensure integrity and authenticity of the history.
-Most people keep their email public. 
-However, if you are concerned about privacy, check GitHub's tips on how to [set up your email](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#about-commit-email-addresses){:target="_blank" rel="noopener"}. 
-GitHub can provide a no-reply email address that can be found via your email settings on your profile.
 
 ## Install GitHub Desktop
 
