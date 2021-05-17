@@ -56,3 +56,5 @@ The error messages can be intimidating and confusing--but do often contain usefu
 
 The "CollectionBuilder Page Generator" plugin creates item pages from your metadata while Jekyll is running. 
 It provides information in the terminal that might help debugging your metadata.
+
+When you are ready to build the final version of your site to deploy, the command is a bit different--see [Jekyll Build]({{ '/docs/deploy/build/' | relative_url }}).

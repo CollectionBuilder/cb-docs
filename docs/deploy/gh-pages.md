@@ -22,7 +22,7 @@ To make your repository public, go to the Settings page and scroll down to the r
 Once saved, the page will refresh with an alert providing the URL where your site will appear. 
 It will take a few minutes for the build to happen and your site to go live--so wait it out! 
 
-Meanwhile, you might want to copy the provided URL to display on your home page:
+Meanwhile, you might want to copy the URL to display on your home page:
 
 1. Copy the provided URL.
 2. Go to repository's home page.

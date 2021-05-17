@@ -6,11 +6,9 @@ nav_order: 8
 
 # Deploy Your Site
 
-Depending on the version of CollectionBuilder you're using, there are two ways to generate the site: 
+Depending on the version of CollectionBuilder you're using and where you would like to host the site, there are a few ways to generate and deploy your digital collection site: 
 
-- **GH** users will deploy their site using the free [GitHub Pages]((gh-pages/)) option in the settings page of their repository on GitHub.com. They don't need to follow any other instructions in this section. 
+- Most **GH** users: deploy using the free [GitHub Pages]({{ '/docs/deploy/gh-pages/' | relative_url }}) service.
+- Most **CDM** and **SA** users: [build the site with Jekyll]({{ '/docs/deploy/build/' | relative_url }}), then [move the files]({{ '/docs/deploy/move/' | relative_url }}) to a web server. 
 
-
-- **CDM** and **SA** users will use a Jekyll command to [build the site](build/) and then [move those files](move/) to a directory on a web server. 
-
-We also provide instructions here on using [third party services](thirdparty/) to serve your site (we often do this to show collaborators how a site is looking) and for deploying Stand Alone or CONTENTdm versions on GitHub Pages using [GitHub actions](actions/). 
+Alternatively, explore options such as [GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }}) and [Third party build services]({{ '/docs/deploy/thirdparty/' | relative_url }}) documented in this section.
