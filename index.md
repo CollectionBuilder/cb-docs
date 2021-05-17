@@ -7,16 +7,17 @@ description: "CollectionBuilder is an open source tool for creating digital coll
 
 # CollectionBuilder Docs
 
-Everything you ever wanted to know about how to use CollectionBuilder!
+Everything you ever wanted to know about how to use CollectionBuilder-GH, CollectionBuilder-CONTENTdm, and CollectionBuilder-SA!
 
 ## Introduction
 
-CollectionBuilder was built for a wide variety of users, so we've tried to make the tool as easy to use as possible. 
-Some initial set-up is required, especially for our Skin and Stand-Alone versions, as these require the installation of Ruby and Jekyll on a personal computer. 
+CollectionBuilder was designed with learning in mind--creating a CollectionBuilder project is a scaffolded process building web and data literacy skills with the outcome of generating awesome digital collections!
+Learning something new is never easy, but we've tried our best to make the documentation and CollectionBuilder templates comprehensible to novice users.
 
-Once the initial set-up is complete, users will be able to create their collections through adjustments to metadata and to config files. 
+Some initial setup is required to develop on your personal computer. 
+However, once your environment is complete, you will be able to agilely generate CollectionBuilder digital collections, exhibits, and scholarship projects--or any type of static web site!
 
-### Types
+## Types
 
 This Documentation applies to all the current "Types" of the CollectionBuilder tool. 
 For the majority of the tool's features and setups, the documentation is the same. 
@@ -24,8 +25,6 @@ There are steps where the documentation does vary between types, however, so be 
 
 The types are currently: 
 
-- **GH** - for [CollectionBuilder-GH](/gh/), our lightweight, GitHub Pages version.
-
-- **CDM** - for [CollectionBuilder-CONTENTdm](/skins/), a skin version that works with the CONTENTdm API.
-
-- **SA** - for [CollectionBuilder-Stand-Alone](https://collectionbuilder.github.io/sa/), our robust, stand-alone version for developing your own exhibits on your local computer (and serving them from anywhere!).
+- **GH** - for [CollectionBuilder-GH](https://github.com/CollectionBuilder/collectionbuilder-gh), a lightweight learning-focused template designed for free hosting on GitHub Pages.
+- **CDM** - for [CollectionBuilder-CONTENTdm](https://github.com/CollectionBuilder/collectionbuilder-contentdm), a template for generating a "skin" over an existing CONTENTdm repository.
+- **SA** - for [CollectionBuilder-StandAlone](https://github.com/CollectionBuilder/collectionbuilder-sa), a robust, stand-alone template for developing exhibits on your local computer (and serving them from anywhere!).
