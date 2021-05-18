@@ -37,3 +37,18 @@ The code can then be manually copied into your own repository or project locatio
 This may be useful if you do not want to use GitHub.
 
 Using GitHub's "fork" option should be reserved for situations where you would like to edit the CB template itself and contribute your changes back to the project via a Pull Request.
+
+------------
+
+## Delete a Repository
+
+Sometimes you will want to delete a GitHub repository. 
+For example, if you were testing something out, creating a demo project, or just want to clean up.
+
+To delete a repository on GitHub:
+
+1. On your project repository's home page, click the "Settings" button (appears on the right along the tabs above the code area).
+2. On "Settings" page: scroll down to the bottom to the red "Danger Zone" section.
+3. Click the "Delete this repository" button. 
+
+Alternatively, you can "Archive" the repository if you want to keep the project, but switch it to read-only mode.
