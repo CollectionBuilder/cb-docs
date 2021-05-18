@@ -21,6 +21,7 @@ These options can add pre-configured Google services if desired.
 - Uncomment `google-analytics-id` (by removing the hash `#` in front), and add your Google Analytics ID if you would like to add a pre-configured tracking code snippet.
 - The template uses "gtag" implementation, with "anonymize_ip" set to true for privacy.
 - example --> `google-analytics-id: "UA-76328753-1"`
+- *Note:* Any analytics service can be added to your site by pasting the tracking snippet they provide into "_includes/head/analytics.html". Analytics will only be added during final production build.
 
 ### google-cse-id:
 
