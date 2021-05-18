@@ -9,7 +9,7 @@ nav_order: 1
 **These instructions are for GH Users.**
 Other CollectionBuilder types rely on Jekyll plugins, thus will not build properly using GitHub Pages--see [GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }}) for an alternative.
 
-{:.alert}
+{:.alert .alert-blue}
 **Note**: Your repository must be public to use GitHub Pages unless you have a paid account. 
 To make your repository public, go to the Settings page and scroll down to the red box at the bottom and click the "Change repository visibility" option.
 
@@ -32,4 +32,18 @@ Meanwhile, you might want to copy the URL to display on your home page:
 {:.alert .alert-green}
 Congratulations! 
 Your site is now live. 
-**GH users** can now move on to the [Advanced Topics]({{ '/docs/advanced/' | relative_url }}) section.
+You can now move on to the [Advanced Topics]({{ '/docs/advanced/' | relative_url }}) section.
+
+-------------
+
+## Turn Off GitHub Pages
+
+Sometimes you may want to take down a live site, for example if you were just using it for a demo or prototype and want to deploy a new version somewhere else.
+GitHub Pages is just as easy to turn off as it is to activate:
+
+1. On your project repository's home page, click the "Settings" button (appears on the right along the tabs above the code area).
+2. On "Settings" page: click "Pages" in the left side menu.
+3. On the "Pages" page: in the "Source" section, change the dropdown button to "none", then click the "Save" button. 
+
+After deactivating GitHub Pages, visiting the old URL will result in an 404 page.
+Keep in mind that the repository still contains all the code--so you can always turn it back on!
