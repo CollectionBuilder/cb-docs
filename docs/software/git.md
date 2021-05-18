@@ -7,7 +7,7 @@ nav_order: 1
 # Git Setup
 
 To manage the code and collaborate on developing your CollectionBuilder project, you will need a version control platform to keep everything organized.
-We use [Git]({{ '/glossary/#git' | relative_url }}) and [GitHub]({{ '/glossary/#github' | relative_url }}).
+We use [Git]({{ '/docs/glossary/#git' | relative_url }}) and [GitHub]({{ '/docs/glossary/#github' | relative_url }}).
 Although there are alternatives (such as [GitLab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/product)), these docs assume you will do the same!
 
 If you are working on a CollectionBuilder-GH project, it is possible to work entirely in the GitHub web interface--all you need is a GitHub account.
@@ -15,7 +15,7 @@ To work with a copy of your project on your local machine, you'll need to instal
 
 ## GitHub Account
 
-GitHub is the most popular platform for developing and sharing code, hosting projects from giant enterprise software, to OER learning, to personal portfolios. 
+GitHub is the most popular platform for developing and sharing code online, hosting projects from giant enterprise software, to OER learning, to personal portfolios. 
 It is great to become familiar with the platform so that you can take part in this community and its resources.
 
 Code for your CollectionBuilder project will be stored on GitHub in a Git "repository". 
@@ -23,7 +23,7 @@ So the first step is to sign up for a GitHub account if you do not have one alre
 
 Visit <https://github.com> and sign for a free account. 
 Be sure to verify your email to get all features activated!
-(check our [GitHub glossary entry]({{ '/glossary/#github' | relative_url }}) for more resources)
+(check our [GitHub glossary entry]({{ '/docs/glossary/#github' | relative_url }}) for more resources)
 
 {:.alert .alert-blue}
 Your email and user name is recorded with every commit.
@@ -34,7 +34,7 @@ GitHub can provide a no-reply email address that can be found via your email set
 
 ## Install Git
 
-[Git]({{ '/glossary/#git' | relative_url }}) version control system is a piece of software you install on your computer. 
+[Git]({{ '/docs/glossary/#git' | relative_url }}) version control system is a piece of software you install on your computer. 
 This is necessary to sync with your GitHub project.
 
 Installing it is pretty straightforward:

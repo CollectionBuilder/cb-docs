@@ -6,7 +6,7 @@ nav_order: 3
 
 # Generate Your Site
 
-With your project repository copied to your local machine, you can use **Jekyll** to generate and serve your site on a local development server.
+With your project repository copied to your local machine, you can use [Jekyll]({{ '/docs/glossary/#jekyll' | relative_url }}) to generate and serve your site on a local development server.
 The complete website will be available to use in your browser *as if* it was on the live web--but it is only on your local computer.
 
 This is great for iterative development, allowing you to test changes and see what happens!
