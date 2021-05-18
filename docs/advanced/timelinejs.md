@@ -10,25 +10,35 @@ nav_order: 1
 We've incorporated the TimelineJS code into CollectionBuilder in order to offer this feature generated from your collection metadata and objects. 
 
 {:.alert .alert-yellow}
-Currently, the timelinejs feature will create a timeline based on your entire collection metadata file by default. 
-**This will likely be too large for it to work well.** 
+Currently, the CollectionBuilder timelinejs feature will create a timeline based on your entire collection metadata file by default. 
+**This will likely be too large for the timeline to work well.** 
 Below we detail ways to further customize and curate your timeline. 
 
 ## Step 1: Including TimelineJS on a page
 
-There are three basic options for including a TimelineJS feature. The instructions below detail those options. 
+There are three basic options for including a TimelineJS feature in your CollectionBuilder site: you may 1) insert the TimelineJS into the Home Page; 2) replace the current timeline page with a TimelineJS page; or 3) create a new TimelineJS page. 
+The instructions below detail each of these options. 
 
 ### Inserting TimelineJS into the Home Page
 
 1. Open the "home-infographic.html" file in the "_layouts" directory. 
-2. You may want to edit the column sizes or arrangement of the file. The TimelineJS feature will work decently in a smaller section, but it looks best in a wider format. 
-3. Add `{% raw %}{% include feature/timelinejs.html %}{%endraw%}` to the section in which you'd like the feature to appear. 
+2. You may want to edit the column sizes or arrangement of the "home-infographic.html" file (follow the instructions in the [Home Page](../../home/) documentation to rearrange the Home page layout). The TimelineJS feature will work decently in a smaller section, but it looks best in a wider format (for example, consider replacing the carousel with TimelineJS). 
+3. Add 
+`{% raw %}{% include feature/timelinejs.html %}{% endraw %}` 
+to the section of the "home-infographic.html" file in which you'd like the feature to appear. 
 4. Save the file.
 
 ### Replacing the Current Timeline Page
 
-1. Open the "timeline.md" page in the /pages/ directory and edit the layout variable so that it reads "full-width-page"
-2. Replace the `## Collection Timeline` line with the following "include" command: `{% raw %}{% include feature/timelinejs.html %}{%endraw%}`
+1. Navigate to the `pages/` directory, and open the `timeline.md` file.
+2. Locate the yaml frontmatter at the top of the file (the `key: value` pairs between two lines of dashes (`---`)).
+3. Edit the value for `layout` to look like this:
+```yaml
+layout: full-width-page
+```
+4. Locate the `## Collection Timeline` line of text, below the yaml frontmatter. 
+5. Replace `## Collection Timeline` with the following "include" command: `{% raw %}{% include feature/timelinejs.html %}{% endraw %}`
+6. Save the file.
 
 ### Creating a New Timeline Page & nav dropdown
 

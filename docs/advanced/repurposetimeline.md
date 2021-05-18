@@ -1,5 +1,5 @@
 ---
-title: Repuruposing the Timeline
+title: Repurposing the Timeline
 parent: Advanced
 nav_order: 2
 ---
