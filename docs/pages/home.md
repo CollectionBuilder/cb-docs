@@ -1,6 +1,6 @@
 ---
 title: Home Page
-parent: Finish
+parent: Edit Pages
 nav_order: 1
 ---
 

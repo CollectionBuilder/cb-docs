@@ -1,6 +1,6 @@
 ---
 title: About Page
-parent: Finish
+parent: Edit Pages
 nav_order: 2
 ---
 
