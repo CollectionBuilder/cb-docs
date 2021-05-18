@@ -4,12 +4,12 @@ has_children: true
 nav_order: 6
 ---
 
-# Customize and Configure 
+# Configure and Customize Pages
 
-**Each of these "config-" files is a CSV (comma-separated-values) file that is stored in the "_data" directory of your repository.** 
-They will configure what pages are displayed in the navigation menu and what metadata is featured on various pages.
+A variety of CollectionBuilder's navigation features and visualization pages are configured via "config" CSV files. 
+Look in your project's "_data" directory for the series of CSVs with the prefix "config-". 
 
-We recommend that you edit them using your text editor, but Google Sheets or another spreadsheet program (that supports UTF-8 encoding) will also work. 
+These configs tend to be more detailed than the page options set in the ["theme.yml" file]({{ '/docs/theme/' | relative_url }}).
+
+Since the CSVs are relatively small and simple, we recommend editing them directly in your text editor, but Google Sheets or LibreOffice will also work. 
 If you're using VS Code, adding the [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) plugin is helpful for reading CSVs in plain text format.
-
-Refer to the [Theme File section]({{ '/docs/theme/' | relative_url }}) for more information about customizing the various pages in your collection. 
