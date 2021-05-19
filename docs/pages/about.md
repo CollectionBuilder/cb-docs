@@ -1,10 +1,16 @@
 ---
-title: About Page
+title: Interpretive Pages
 parent: Edit Pages
 nav_order: 2
 ---
 
-# Editing the About Page
+# Interpretive Pages
+
+- about page
+- markdown
+- feature includes
+
+## About Page
 
 To edit the About page, find and open the `about.md` file which is in the Pages directory (/pages/) of your repository. 
 
