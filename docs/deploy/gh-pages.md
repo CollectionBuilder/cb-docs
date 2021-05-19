@@ -6,12 +6,18 @@ nav_order: 1
 
 # Deploy on GitHub Pages
 
+{:.alert .alert-blue}
 **These instructions are for GH Users.**
 Other CollectionBuilder types rely on Jekyll plugins, thus will not build properly using GitHub Pages--see [GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }}) for an alternative.
+Also note that GH users *can* use any deployment method--you are not limited to using GitHub Pages to host your site!
 
-{:.alert .alert-blue}
-**Note**: Your repository must be public to use GitHub Pages unless you have a paid account. 
-To make your repository public, go to the Settings page and scroll down to the red box at the bottom and click the "Change repository visibility" option.
+## Make Repository Public
+
+Your repository must be public to use GitHub Pages unless you have a paid account (most users make their projects public anyway!).
+If your project is *not* already public:
+
+1. On your project repository's home page, click the "Settings" button (appears on the right along the tabs above the code area).
+2. Scroll down to the red box at the bottom and click the "Change repository visibility" option.
 
 ## Activate GitHub Pages
 

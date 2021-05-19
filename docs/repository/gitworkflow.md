@@ -26,7 +26,7 @@ These are the basic Git terms you will be using:
 
 - `fetch` - download updates to the history from GitHub.
 - `pull` - download updates from GitHub *and* update your local repository files.
-- `add` - stage files with changes that you want to "commit".
+- `add` - stage files with changes that you want to "commit" (this step is sometimes not clear in GUI tools, or called "stage changes").
 - `commit` - record a snapshot of the staged changes in your local repository history.
 - `push` - upload your local history to update GitHub.
 

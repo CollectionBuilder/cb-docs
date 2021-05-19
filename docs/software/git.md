@@ -21,7 +21,7 @@ It is great to become familiar with the platform so that you can take part in th
 Code for your CollectionBuilder project will be stored on GitHub in a Git "repository". 
 So the first step is to sign up for a GitHub account if you do not have one already.
 
-Visit <https://github.com> and sign for a free account. 
+Visit <https://github.com> and sign up for a free account. 
 Be sure to verify your email to get all features activated!
 (check our [GitHub glossary entry]({{ '/docs/glossary/#github' | relative_url }}) for more resources)
 
@@ -73,10 +73,10 @@ Second, set your email so that it matches your GitHub account's email:
 git config --global user.email "myemail@gmail.com"
 ```
 
-*Optionally*, set your default command line text editor for use with git.
-This editor may pop up in your terminal during some command line git operations that require a message (it is not your normal code editor such as VS Code).
-By default it is set to Vim, which [can be very confusing](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/){:target="_blank" rel="noopener"} if unexpected. 
-For ease of use, we generally suggest using Nano editor:
+*Optionally*, set your default command line text editor for use with git (Windows users should have already done this when using the Git installer).
+This editor may pop up inside your terminal window during some command line git operations that require a message (it is not your normal code editor such as VS Code).
+By default it is set to Vim, which [can be very confusing](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/){:target="_blank" rel="noopener"} if unexpected.
+For ease of use, we generally suggest using Nano command line editor:
 
 ```
 git config --global core.editor "nano -w"

@@ -70,7 +70,7 @@ VS Code has basic GUI support for Git commands built in, which is convenient so 
 The main controls are available on the ["Source Control" pane](https://code.visualstudio.com/docs/editor/versioncontrol), i.e. the network icon on the left side nav, or `Ctrl + Shift + G`.
 
 1. Click on the Source Control pane (or `Ctrl + Shift + G`).
-2. Changed files will be listed under "Changes". Hover over the file name and click on the plus icon to add individual files, or hover next to "Changes" and click on the plus icon to add all. (this is "git add"). Once added, the files will move to a new list "Staged Changes" which are ready to commit.
+2. Changed files will be listed under "Changes". Hover over the file name and click on the plus icon to add individual files, or hover next to "Changes" and click on the plus icon to add all (the pop up label when hovering above the plus icon will be "Stage Changes", which is the same as "git add"). Once added, the files will move to a new list "Staged Changes" which are ready to commit.
 3. Click in the text box at the top labeled "Message".
 4. Type your "commit message" into the box (in this case something like "Updated README title for new project").
 5. Click the check-mark icon above the message box to Commit. 
