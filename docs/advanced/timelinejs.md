@@ -34,13 +34,13 @@ The instructions below detail each of these options.
 ### Replacing the Current Timeline Page
 
 1. Navigate to the `pages` directory, and open the `timeline.md` file.
-2. Locate the yaml frontmatter at the top of the file (the frontmatter is the `key: value` pairs between two lines of dashes (`---`)).
+2. Locate the yaml front matter at the top of the file (the front matter is the `key: value` pairs between two lines of dashes (`---`)).
 3. Edit the value for `layout` to look like this:
 ```yaml
 layout: full-width-page
 ```
-4. Locate the `## Collection Timeline` line of text, below the yaml frontmatter. 
-5. Replace `## Collection Timeline` with the following "include" command:  
+4. Locate the `## Collection Timeline` line of text, below the yaml front matter. 
+5. Replace `## Collection Timeline` with the following _include command:  
 `{% raw %}{% include feature/timelinejs.html %}{% endraw %}`
 6. Save the file.
 
@@ -50,8 +50,8 @@ layout: full-width-page
 2. Copy the contents of `timeline.md`.
 3. Create a new markdown file in the `pages` directory called `timelinejs.md`.
 4. Paste the contents copied from `timeline.md` into `timelinejs.md`.
-5. Locate the yaml frontmatter at the top of the file (the frontmatter is the `key: value` pairs between two lines of dashes (`---`)).
-6. Edit the frontmatter to look like this:
+5. Locate the yaml front matter at the top of the file (the front matter is the `key: value` pairs between two lines of dashes (`---`)).
+6. Edit the front matter to look like this:
 ```yaml
 title: TimelineJS
 layout: full-width-page
@@ -60,8 +60,8 @@ permalink: timelinejs.html
 Note that the title and permalink values don't have to be `TimelineJS` and `timelinejs.html`; you can call them whatever you want. 
 They just need to be anything other than `Timeline` and `timeline.html` (since those are used for the collection's built-in timeline page).
 Just make sure to include the title and permalink you create in your `config-nav.csv` file, as described below.
-7. Locate the `## Collection Timeline` line of text, below the yaml frontmatter. 
-8. Replace `## Collection Timeline` with the following "include" command:  
+7. Locate the `## Collection Timeline` line of text, below the yaml front matter. 
+8. Replace `## Collection Timeline` with the following _include command:  
 `{% raw %}{% include feature/timelinejs.html %}{% endraw %}`
 9. Save the file.
 10. Navigate to the `_data` directory, and open the `config-nav.csv` file.

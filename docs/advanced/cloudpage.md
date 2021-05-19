@@ -1,17 +1,17 @@
 ---
 title: New Cloud Pages
 parent: Advanced
-nav_order: 3
+nav_order: 2
 ---
 
 # Create Cloud Visualizations
 
 ## Built-in clouds
 
-For simplicity, the default CB theme has two pre-configured cloud visualizations pre-configured named "subjects" and "locations". 
-These can be easily controlled using variables in the `theme.yml` to generate clouds from any field(s) (not necessarily just a "subject" or "location" field). 
+For simplicity, the default CollectionBuilder theme has two pre-configured cloud visualizations named "subjects" and "locations." 
+These can be easily edited and controlled using variables in the `theme.yml` to generate clouds from any field(s) (not necessarily just a "subject" or "location" field). 
 
-```
+```yaml
 # Subject page
 subjects-fields: subject;creator # set of fields separated by ; to be featured in the cloud
 subjects-min: 1 # min size for subject cloud, too many terms = slow load time!
@@ -28,23 +28,24 @@ Modifying the config settings can easily transform these two pages into clouds b
 These settings also create matching data outputs in the `/assets/data/` folder.
 
 If `subjects-fields` or `locations-fields` is blank or commented out, the template will not build out the related cloud page or data, which saves build time. 
-If you are developing a particularly large collection, you can comment out these options to make rebuild much quicker. 
+If you are developing a particularly large collection, you can comment out these options in the `theme.yml` to make rebuild much quicker. 
 
-Keep in mind these page stubs (`/subjects.html`, `/locations.html`) will also have to be present in "config-nav.csv" to show up in your navigation. 
+Keep in mind these page stubs (`/subjects.html`, `/locations.html`) will also have to be present in `_data/config-nav.csv` to show up in your navigation. 
 
 ## Cloud Layout and Front matter
 
 Custom cloud pages can be easily created using the cloud layout and page front matter.
+Locate the yaml front matter at the top of the file (the `key: value` pairs between two lines of dashes (`---`)).
 To the page front matter add: 
 
 - `cloud-fields:`, with a value of a set of fields separated by `;` to be featured in the cloud.
 - `cloud-min:` (optional), with a integer value such as `2`.
 - `cloud-stopwords:` (optional), with a set of subjects separated by `;` that will be removed from display
 
-For example, to create an Authors cloud page, create a file named `authors.md` in the "pages" folder. 
-Edit the `authors.md` with this content:
+For example, to create an Authors cloud page, create a file named `authors.md` in the `pages` directory. 
+Edit the `authors.md` by adding this content at the start of the file:
 
-```
+```yaml
 ---
 title: Authors
 layout: cloud
@@ -64,9 +65,11 @@ Example custom cloud page.
 Clouds can also be added to any page using the `_include/js/cloud-js.html` include in the page stub content, with the variable `fields`, and optional variables `min` and `stopwords`. 
 Cloud-js include assumes a div with `id="cloud"` exists on the page for the cloud to fill.
 So putting them together, you can add a cloud anywhere in a page.
+
 For example:
 
-```{% raw %}
+```
+{% raw %}
 <div id="cloud" class="text-center my-4 bg-light border rounded p-2"></div>
 {% include js/cloud-js.html fields="creator;publisher" min="2" stopwords="example;another" %}
 {% endraw %}

@@ -1,25 +1,29 @@
 ---
 title: Repurposing the Timeline
 parent: Advanced
-nav_order: 2
+nav_order: 3
 ---
 
-## Change timeline visualization to feature other data
+# Change Timeline visualization to feature other data
 
-In order to change what the timeline maps, you'll need to change a variable in the liquid code in the **timeline.html** file contained in the _layouts folder. 
+In some instances, you may have other data that is a natural fit for the Timeline visualization (for instance, we once used it to visualize [depth](https://www.lib.uidaho.edu/digital/watkins/depth.html)!)
+
+In order to change the type of information the Timeline displays, you'll need to change a variable in the liquid code in the `timeline.html` file, contained in the `_layouts` folder. 
 
 ### Change the Field Generating the Timeline
 
-Change the "map" option at the top of the timeline.html layout file from "date" to another variable that you'd like to represent. The line you should change looks like this: 
+Change the "map" option at the top of the `timeline.html` file from "date" to another metadata field that you'd like to represent. 
+The line you should change looks like this: 
 
-{% raw %}`{%- assign raw-dates = site.data[site.metadata] | map: 'date' | compact | uniq -%}`{% endraw%}
+{% raw %}`{%- assign raw-dates = site.data[site.metadata] | map: 'date' | compact | uniq -%}`{% endraw %}
 
 If we were changing it to map the field `depth`, it would then look this: 
 
-{% raw %}`{%- assign raw-dates = site.data[site.metadata] | map: 'depth' | compact | uniq -%}`{% endraw%}
+{% raw %}`{%- assign raw-dates = site.data[site.metadata] | map: 'depth' | compact | uniq -%}`{% endraw %}
 
 {:.alert}
-We'll use this as our example for the rest. If you'd like, you can [look at the example page](https://www.lib.uidaho.edu/digital/watkins/depth.html) these changes can generate, or look at the [revised timeline.html layout](https://github.com/uidaholib/collectionbuilder-cdm-template/blob/watkins/_layouts/timeline.html) we used to make that page in the uidaholib digital collections GitHub repository. 
+We'll use `depth` as our example for the rest. 
+If you'd like, you can [look at the example page](https://www.lib.uidaho.edu/digital/watkins/depth.html) these changes can generate, or look at the [revised timeline.html layout](https://github.com/uidaholib/collectionbuilder-cdm-template/blob/watkins/_layouts/timeline.html) we used to make that page in the uidaholib digital collections GitHub repository. 
 
 ### Connect Your New Field to the Output
 
