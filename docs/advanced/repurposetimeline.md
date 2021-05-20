@@ -4,16 +4,17 @@ parent: Advanced
 nav_order: 3
 ---
 
-# Change Timeline visualization to feature other data
+# Change Timeline Visualization to Feature Other Data
 
 In some instances, you may have other data that is a natural fit for the Timeline visualization (for instance, we once used it to visualize [depth](https://www.lib.uidaho.edu/digital/watkins/depth.html)!)
 
-In order to change the type of information the Timeline displays, you'll need to change a variable in the liquid code in the `timeline.html` file, contained in the `_layouts` folder. 
+In order to change the type of information the Timeline displays, you'll need to change a variable in the liquid code in the "timeline.html" file, contained in the "_layouts" folder. 
 
 ### Change the Field Generating the Timeline
 
-Change the "map" option at the top of the `timeline.html` file from "date" to another metadata field that you'd like to represent. 
-The line you should change looks like this: 
+1. Navigate to the "_layouts" directory, and open the "timeline.html" file.
+2. On the second line of code in the "timeline.html" file, change the value for "map" from "date" to another metadata field that you'd like to represent. **You can choose any field to add to this visualization, but if the field's datatype is "text" (instead of "integer"), you'll need to also follow the [instructions below](#change-timeline-visualization-to-include-text-values-rather-than-integers) to include a text field in addition to following the steps in this section.** 
+3. The line you should change looks like this: 
 
 {% raw %}`{%- assign raw-dates = site.data[site.metadata] | map: 'date' | compact | uniq -%}`{% endraw %}
 
@@ -22,36 +23,33 @@ If we were changing it to map the field `depth`, it would then look this:
 {% raw %}`{%- assign raw-dates = site.data[site.metadata] | map: 'depth' | compact | uniq -%}`{% endraw %}
 
 {:.alert}
-We'll use `depth` as our example for the rest. 
-If you'd like, you can [look at the example page](https://www.lib.uidaho.edu/digital/watkins/depth.html) these changes can generate, or look at the [revised timeline.html layout](https://github.com/uidaholib/collectionbuilder-cdm-template/blob/watkins/_layouts/timeline.html) we used to make that page in the uidaholib digital collections GitHub repository. 
+We'll use `depth` as our example for the steps below. 
+Take a look back at the example [visualization](https://www.lib.uidaho.edu/digital/watkins/depth.html) that these changes can generate, and check out the code in the revised "timeline.html" [layout](https://github.com/uidaholib/collectionbuilder-cdm-template/blob/watkins/_layouts/timeline.html) that we used to create the visualization. 
 
 ### Connect Your New Field to the Output
 
-You'll need to make sure that your new field connects to the visualization below. Find where the items are defined for each row in the HTML below. You can search for the only "where_exp" on the page. 
+You'll need to make one more change to ensure that your new field (in our case, `depth`) can generate the visualization. 
 
-If we continue with our `depth` example, change the part after the "where_exp" so `item.date contains year` becomes `item.depth contains year`
+1. To do this, you'll need to search the "timeline.html" file for the Liquid filter "where_exp". Use `Ctrl + F` (PC) or `Command + F` (Mac) to open a find and replace textbox in Visual Studio Code. The line you're looking for should look like this:
 
-*Note that we leave the variable "year" in the above code to refer to the unique values generated from mapping your new field.* 
+`{%- assign inYear = items | where_exp: 'item', 'item.date contains year' -%}`
 
-The end result will be: 
+2. Once you've found "where_exp", change the part after "where_exp" so "item.date contains year" becomes "item.depth contains year". The end result will be: 
 
-{% raw %}
-`{%- assign inYear = items | where_exp: 'item', 'item.depth contains year' -%}`{% endraw%}
+{% raw %}`{%- assign inYear = items | where_exp: 'item', 'item.depth contains year' -%}`{% endraw %}
 
 *Note: We are keeping the `year` variable constant here so as not to have to edit all the code and risk messing it up somewhere. You can, however, go through and edit all the `year` variables on the page to become `depth` if you like to keep things readable.*
 
-### Change the page title and navigation to rename the timeline feature
+### Change the Page Title and Navigation to Rename the Timeline Feature
 
-So now that we are looking at another field (in our case, `depth`) rather than `date`, we'll likely want to change the way that the page is named and linked. 
+Now that we are looking at another field (in our case, `depth`) rather than `date`, we'll likely want to change the way that the Timeline page is named and linked. 
 
-- Change **_data/config-nav.csv** so that instead of the line `Timeline,/timeline.html` it should read `Depth,/depth.html` or whatever matches up to your new page. 
+1. Edit "_data/config-nav.csv" by removing the line `Timeline,/timeline.html` and replacing it with `Depth,/depth.html` (or whatever matches up to your new page). 
+2. Then navigate to the "pages" directory and open the "timeline.md" markdown file.
+3. Locate the yaml front matter at the top of the file (the front matter is the `key: value` pairs between two lines of dashes (`---`)).
+4. You'll want to edit the front matter values to look like this (replacing `depth` with whichever field you're using): 
 
-- Then change the timeline.md markdown file, found at **/pages/timeline.md**, so that the page is titled differently and that the page creates a different url, using the powerful [permalink option](https://jekyllrb.com/docs/permalinks/). You can still keep the file named timeline.md, or you can change that as well. 
-
-Using depth again, you'll want the page to look like this: 
-
-{% raw %}
-```
+```yaml
 ---
 title: Depth
 layout: timeline
@@ -59,28 +57,20 @@ permalink: /depth.html
 # a timeline visualization will be added below the content in this file
 ---
 
-{:.mt-5}
 ## Collection Depth
 ```
-{% endraw %}
 
+### Change Timeline Visualization to Include Text Values Rather Than Integers
 
-### Change Timeline Visualization to Include Words Rather than Numbers
+You can also visualize a metadata field with a "text" datatype, instead of an "integer" datatype.
+You'll need to follow the [instructions above](#change-the-field-generating-the-timeline) to switch out `date` for your chosen field, then follow the steps below.
 
-What if you don't want to do depth, or you have something else ... 
+1. Find the following line of code in the "timeline.html" file:
 
-For instance, if you wanted to change `depth` to `mine`
+{% raw %} `{%- assign uniqueYears = clean-years | remove: " " | split: ";" | uniq | sort -%}` {% endraw %}
 
-Nothing's showing up, and you can see why -- the former processing code got rid of the space between the words. Let's find that part and remove it. 
+2. Remove this portion of the code: `| remove: " "`, so that the line now looks like this:
 
-This
+{% raw %}`{%- assign uniqueYears = clean-years | split: ";" | uniq | sort -%}`{% endraw %}
 
-{% raw %}
-`{%- assign uniqueYears = clean-years | remove: " " | split: ";" | uniq | sort -%}`{% endraw %}
-
-becomes
-
-{% raw %}
-`{%- assign uniqueYears = clean-years | split: ";" | uniq | sort -%}`{% endraw%}
-
-And it should work!
+Your Timeline visualization will now be based on the text values in your chosen field.
