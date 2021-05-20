@@ -59,7 +59,7 @@ permalink: timelinejs.html
 ```
 Note that the title and permalink values don't have to be `TimelineJS` and `timelinejs.html`; you can call them whatever you want. 
 They just need to be anything other than `Timeline` and `timeline.html` (since those are used for the collection's built-in timeline page).
-Just make sure to include the title and permalink you create in your "config-nav.csv" file, as described below.
+Just make sure to include the title and permalink you create in your "_data/config-nav.csv" file, as described below.
 
 7. Locate the `## Collection Timeline` line of text, below the yaml front matter. 
 8. Replace `## Collection Timeline` with the following _include command:  
