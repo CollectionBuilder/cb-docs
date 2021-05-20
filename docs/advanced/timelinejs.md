@@ -25,17 +25,17 @@ The instructions below detail each of these options.
 
 ### Inserting TimelineJS into the Home Page
 
-1. Open the `home-infographic.html` file in the `_layouts` directory. 
-2. You may want to edit the column sizes or arrangement of the `home-infographic.html` file (follow the instructions in the [Home Page](../../home/) documentation to rearrange the Home page layout). The TimelineJS feature will work decently in a smaller section, but it looks best in a wider format (for example, consider replacing the carousel with TimelineJS). 
-3. Add the following code to the section of the `home-infographic.html` file in which you'd like the feature to appear:  
+1. Open the "home-infographic.html" file in the "_layouts" directory. 
+2. You may want to edit the column sizes or arrangement of the "home-infographic.html" file (follow the instructions in the [Home Page](../../home/) documentation to rearrange the Home page layout). The TimelineJS feature will work decently in a smaller section, but it looks best in a wider format (for example, consider replacing the carousel with TimelineJS). 
+3. Add the following code to the section of the "home-infographic.html" file in which you'd like the feature to appear:  
 `{% raw %}{% include feature/timelinejs.html %}{% endraw %}`  
 4. Save the file.
 
 ### Replacing the Current Timeline Page
 
-1. Navigate to the `pages` directory, and open the `timeline.md` file.
+1. Navigate to the "pages" directory, and open the "timeline.md" file.
 2. Locate the yaml front matter at the top of the file (the front matter is the `key: value` pairs between two lines of dashes (`---`)).
-3. Edit the value for `layout` to look like this:
+3. Edit the value for "layout" to look like this:
 ```yaml
 layout: full-width-page
 ```
@@ -46,10 +46,10 @@ layout: full-width-page
 
 ### Creating a New Timeline Page & nav dropdown
 
-1. Navigate to the `pages` directory, and open the `timeline.md` file.
-2. Copy the contents of `timeline.md`.
-3. Create a new markdown file in the `pages` directory called `timelinejs.md`.
-4. Paste the contents copied from `timeline.md` into `timelinejs.md`.
+1. Navigate to the "pages" directory, and open the "timeline.md" file.
+2. Copy the contents of "timeline.md".
+3. Create a new markdown file in the "pages" directory called "timelinejs.md".
+4. Paste the contents copied from "timeline.md" into "timelinejs.md".
 5. Locate the yaml front matter at the top of the file (the front matter is the `key: value` pairs between two lines of dashes (`---`)).
 6. Edit the front matter to look like this:
 ```yaml
@@ -59,13 +59,14 @@ permalink: timelinejs.html
 ```
 Note that the title and permalink values don't have to be `TimelineJS` and `timelinejs.html`; you can call them whatever you want. 
 They just need to be anything other than `Timeline` and `timeline.html` (since those are used for the collection's built-in timeline page).
-Just make sure to include the title and permalink you create in your `config-nav.csv` file, as described below.
+Just make sure to include the title and permalink you create in your "config-nav.csv" file, as described below.
+
 7. Locate the `## Collection Timeline` line of text, below the yaml front matter. 
 8. Replace `## Collection Timeline` with the following _include command:  
 `{% raw %}{% include feature/timelinejs.html %}{% endraw %}`
 9. Save the file.
-10. Navigate to the `_data` directory, and open the `config-nav.csv` file.
-11. Edit the `config-nav.csv` file so that it includes the following three rows: 
+10. Navigate to the "_data" directory, and open the "config-nav.csv" file.
+11. Edit the "config-nav.csv" file so that it includes the following three rows: 
 ```
 Timelines,,
 Full Timeline,/timeline.html,Timelines
@@ -83,7 +84,7 @@ Below we detail ways to further customize and curate your timeline.
 
 ### Limiting the Items Included
 
-1. Navigate to the `/assets/data/` directory, and open the `timelinejs.json` file.
+1. Navigate to the "/assets/data/" directory, and open the "timelinejs.json" file.
 2. You will need to edit the first line of the document so that it limits the collection:
     - limit the timeline to only include those items that are images:  
     `{% raw %}{%- assign items = site.data[site.metadata] | where_exp: "item","item.format contains 'image'" -%}{% endraw %}`
@@ -98,9 +99,9 @@ This method will use a new CSV to create a curated timeline by only listing thos
 1. Make a copy of your current metadata file using a spreadsheet software application like Google Sheets.
 2. Add a column called "headline" right before the "title" column.
 3. Add new headline values to those items you'd like included on a timeline (or simply copy and paste the current title into the new cell).
-4. Save the file as a CSV and rename it `timelinejs.csv`.
-5. Add this CSV to your `_data` directory.
-6. Navigate to the `/assets/data/` directory, and open the `timelinejs.json` file.
+4. Save the file as a CSV and rename it "timelinejs.csv".
+5. Add this CSV to your "_data" directory.
+6. Navigate to the "/assets/data/" directory, and open the "timelinejs.json" file.
 7. Edit the first line so that it reads:  
 `{% raw %}{%- assign items = site.data.timelinejs | where_exp: "item","item.headline" -%}{% endraw %}`
 
