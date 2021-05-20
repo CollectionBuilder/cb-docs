@@ -6,12 +6,12 @@ nav_order: 1
 
 # Building a TimelineJS Feature
 
-[TimelineJS](http://timeline.knightlab.com/) is an open source timeline builder that creates an interactive timeline based on underlying data. 
-We've incorporated the TimelineJS code into CollectionBuilder in order to offer this feature generated from your collection metadata and objects. 
+Knight Lab [TimelineJS](http://timeline.knightlab.com/) is a popular open source tool to create interactive timelines based on spreadsheet data. 
+CollectionBuilder can use your collection metadata to generate JSON for TimelineJS, making it easy to add the feature integrated directly to your site.
 
 {:.alert .alert-yellow}
-Currently, the CollectionBuilder TimelineJS feature will create a timeline based on your entire collection metadata file by default, but can be edited to only show items you've curated.. 
-Below you'll find instructions split into two steps: [Step 1](#step-1-including-timelinejs-on-a-page) shows how to add TimelinJS to your site, while [Step 2](#step-2-curating-your-timeline) has instructions on how to edit your TimelineJS instance after it's been added. 
+The default CollectionBuilder TimelineJS feature will create a timeline based on your entire collection metadata, but can be edited to only show items you've curated. 
+Below you'll find instructions split into two steps: [Step 1](#step-1-including-timelinejs-on-a-page) shows how to add TimelineJS to your site, while [Step 2](#step-2-curating-your-timeline) has instructions on how to edit your TimelineJS instance after it's been added. 
 
 ## Step 1: Including TimelineJS on a page
 

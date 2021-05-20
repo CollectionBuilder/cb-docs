@@ -7,7 +7,7 @@ nav_order: 2
 # Collection Objects Using CONTENTdm
 
 CollectionBuilder-CONTENTdm is designed as a "skin" over the top of one or more existing CONTENTdm digital collections. 
-Collection objects are managed and stored in the CONTENTdm repository as normal--you don't need change anything with your CONTENTdm set up or workflow!
+Collection objects are managed and stored in the CONTENTdm repository as normal--you don't need to change anything with your CONTENTdm set up or workflow!
 
 This also means you don't have to do any special "objects" prep for CollectionBuilder! 
 CB-CDM work is focused on getting the metadata correct after exporting from CONTENTdm--which is covered in the Metadata section.
@@ -22,5 +22,5 @@ These items do not have to be part of your CONTENTdm repository.
 {:.alert .alert-red}
 **Note:** CONTENTdm's "compound object" type can be tricky to work with! 
 There are solutions to working with and displaying "compound objects" in CB-CDM, however, they may not immediately work out of the box in all cases.
-*If you have choice, avoid compound objects!*
+*If you have a choice, avoid compound objects!*
 If not, take care with your metadata transformations and reach out to the CollectionBuilder team for help.
