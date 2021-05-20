@@ -32,7 +32,7 @@ If you are developing a particularly large collection, you can comment out these
 
 Keep in mind these page stubs (`/subjects.html`, `/locations.html`) will also have to be present in `_data/config-nav.csv` to show up in your navigation. 
 
-## Cloud Layout and Front matter
+## Create a New Cloud Page Using Cloud Layout and Front matter
 
 Custom cloud pages can be easily created using the cloud layout and page front matter.
 Locate the yaml front matter at the top of the file (the `key: value` pairs between two lines of dashes (`---`)).
@@ -43,7 +43,7 @@ To the page front matter add:
 - `cloud-stopwords:` (optional), with a set of subjects separated by `;` that will be removed from display
 
 For example, to create an Authors cloud page, create a file named `authors.md` in the `pages` directory. 
-Edit the `authors.md` by adding this content at the start of the file:
+Edit the `authors.md` by adding this content at the start of the file (**note all the fields below are editable *except* layout, which must have a value of `cloud` for the cloud page to generate**):
 
 ```yaml
 ---

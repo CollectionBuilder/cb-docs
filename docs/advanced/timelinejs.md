@@ -6,7 +6,7 @@ nav_order: 1
 
 # Building a TimelineJS Feature
 
-Knight Lab [TimelineJS](http://timeline.knightlab.com/) is a popular open source tool to create interactive timelines based on spreadsheet data. 
+Knight Lab's [TimelineJS](http://timeline.knightlab.com/) is a popular open source tool to create interactive timelines based on spreadsheet data. 
 CollectionBuilder can use your collection metadata to generate JSON for TimelineJS, making it easy to add the feature integrated directly to your site.
 
 {:.alert .alert-yellow}
