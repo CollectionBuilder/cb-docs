@@ -4,32 +4,55 @@ parent: Advanced
 nav_order: 4
 ---
 
-The below is excerpted from [our article on CollectionBuilder CONTENTdm](https://journal.code4lib.org/articles/15326) that was in Code4Lib. 
+# Developing a Workflow for Updating Multiple CollectionBuilder Collections
+
+The below is excerpted from [our 2020 article on CollectionBuilder-CONTENTdm](https://journal.code4lib.org/articles/15326) in *Code4Lib Journal*. 
 
 ## How We Use CollectionBuilder
 
-We started using CollectionBuilder in earnest to develop our digital collections at the end of 2018, using an agile ‘sprint’ in the Data and Digital Services Department at the University of Idaho Library to jump start the creation of the necessary data and design files. Although this early version of CollectionBuilder was not fully developed, our team was able to prepare the metadata, configuration files, and textual content. Since this data (literally the collection as data) is independent of the CollectionBuilder template, the implementation of visualizations and infrastructure could continue to develop and evolve separately, much like a WordPress theme. Due to staffing issues, we did not return to applying CollectionBuilder to our own collections in earnest again until the summer of 2019, during which we solidified our workflow for building and updating all of our digital collections.
+We started using CollectionBuilder in earnest to develop our digital collections at the end of 2018, using an agile ‘sprint’ in the Data and Digital Services Department at the University of Idaho Library to jump start the creation of the necessary data and design files.
+Although this early version of CollectionBuilder was not fully developed, our team was able to prepare the metadata, configuration files, and textual content.
+Since this data (literally the collection as data) is independent of the CollectionBuilder template, the implementation of visualizations and infrastructure could continue to develop and evolve separately, much like a WordPress theme.
+Due to staffing issues, we did not return to applying CollectionBuilder to our own collections in earnest again until the summer of 2019, during which we solidified our workflow for building and updating all of our digital collections.
 
-Currently, we use CollectionBuilder via a Git/GitHub focused workflow to develop our digital collections in an open, collaborative way with librarians and staff at the University of Idaho Library. The code for all collections is contained in a single <a href="https://github.com/uidaholib/collectionbuilder-cdm-template">GitHub repository</a> with the master branch representing the generic template. Each individual collection is developed in a new branch within the repository, allowing us to create unique sites while maintaining a central codebase. This approach helps us to keep the underlying code up-to-date with improvements we often make while retaining each collection&#8217;s individual customizations and commit history that details the changes that were made.
+Currently, we use CollectionBuilder via a Git/GitHub focused workflow to develop our digital collections in an open, collaborative way with librarians and staff at the University of Idaho Library.
+The code for all collections is contained in a single [GitHub repository](https://github.com/uidaholib/collectionbuilder-cdm-template) with the master branch representing the generic template.
+Each individual collection is developed in a new branch within the repository, allowing us to create unique sites while maintaining a central codebase.
+This approach helps us to keep the underlying code up-to-date with improvements we often make while retaining each collection's individual customizations and commit history that details the changes that were made.
 
 The basic workflow moves through seven areas of activity:
-<ol>
-<li><strong>Repository Branch Creation (GitHub)</strong><br />
-In our CollectionBuilder GitHub repository, we create a branch for the collection, using a branch name that corresponds to that collection’s short URL name. For example, the collection <a href="https://www.lib.uidaho.edu/digital/barstock/">https://www.lib.uidaho.edu/digital/barstock/</a> is developed on a branch named ‘barstock.’</li>
-<li><strong>Metadata Extraction/Preparation/Revision</strong><br />
-We extract a TSV file of the collection’s metadata from CONTENTdm using the export feature on CONTENTdm’s Project Manager tool. We upload this data into Google Sheets, where we check the metadata for errors, correct any field names that need to change (subjects becomes subject, etc.), and add a unique objectid field. Finally, we download the CSV of the document and add it to the _data folder of our branch.</li>
-<li><strong>Config File Editing</strong><br />
-We configure the various files that drive the generation of the site. These include: /_config.yml, where we record which collection and URL we’re building; /_data/theme.yml, which controls the basic configurations for all of our visualizations (map, timeline, word clouds, etc.), data files, and our front page; and a series of “config-(&#8230;).csv” files (config-map.csv, config-browse.csv, config-metadata.csv, etc.) that further configure what information shows up on which pages.</li>
-<li><strong>Development Server Review</strong><br />
-We serve up the newly configured site on our computer with the Jekyll serve command (‘jekyll s’). We then examine the website generated for obvious errors and additional visualization or browsing feature possibilities. We often look at the facets.json data file generated by the system (and configured by the theme.yml file) to see if there might be other fields to visualize in <a href="https://www.lib.uidaho.edu/digital/archivalidaho/photographers.html">a word cloud format</a>, or even <a href="https://www.lib.uidaho.edu/digital/watkins/depth.html">a modified timeline</a>.</li>
-<li><strong>Build Static Web Files</strong><br />
-We’ve added a rake command to build our website for production. The command ‘rake deploy’ builds the site for production by running the Jekyll command `JEKYLL_ENV=production jekyll build.` The production environment triggers the addition of features left out during development, such as full meta markup and Analytics snippets. This keeps our analytics account clean from server hits, while allowing us to have the code pre-built with an analytics variable in our _config.yml file.</li>
-<li><strong>Deploy Web Files to Production Server</strong><br />
-We then copy the files and folders contained in the _site folder and add those files to the correct directory on our production web server.</li>
-<li><strong>Push Changes to Git Branch of the Repository</strong><br />
-If more complicated revisions or additions are being made, we try to push changes several times as we revise the site running on the development server. If the changes are small, however, we just push these changes at the end of the process.</li>
-</ol>
-<p>When substantial development changes are made to the master branch code, these are pulled into all of the collection branches. These collections are then rebuilt, deployed, and their updated code is pushed to the repository (Steps 5 through 7). This framework facilitates the rapid development of custom visualizations and features, enabling us to generate unique interfaces for more collections. Low priority collections use the standard template, reaping the benefits of the skin interface without a large investment of time. Meanwhile, higher priority collections can be more quickly developed into unique sites, while still maintaining elements of a common theme and branding. For collections requiring extensive customization, the templates act as recipes that can be quickly adapted to new purposes, without getting too far from the original code base, making maintenance easier.</p>
-<p class="caption" style="text-align: center;"><img class="aligncenter" src="https://journal.code4lib.org/media/issue49/becker/Becker9.png" width="600" /><br />
-<strong>Figure 9.</strong> Detail of the branches for our digital collections, as seen listed in a GitHub desktop platform.</p>
-<p>Besides being an excellent way to keep our collections’ code up to date, creating and managing our collections on GitHub has also expanded collaborative opportunities, allowing more staff to participate in creating collections and giving them an opportunity to learn from the updates and alterations their colleagues make. More people working on collections makes it easier for us to keep our collections up to date, and any mistakes that might be made by those relatively new to working with our digital collections can be easily reverted by CollectionBuilder’s developers using Git.</p>
+
+1. Repository Branch Creation (GitHub)  
+In our CollectionBuilder GitHub repository, we create a branch for the collection, using a branch name that corresponds to that collection’s short URL name. For example, the collection <https://www.lib.uidaho.edu/digital/barstock/> is developed on a branch named ‘barstock.’
+
+2. Metadata Extraction/Preparation/Revision  
+We extract a TSV file of the collection’s metadata from CONTENTdm using the export feature on CONTENTdm’s Project Manager tool. We upload this data into Google Sheets, where we check the metadata for errors, correct any field names that need to change (subjects becomes subject, etc.), and add a unique objectid field. Finally, we download the CSV of the document and add it to the _data folder of our branch.
+
+3. Config File Editing  
+We configure the various files that drive the generation of the site. These include: /_config.yml, where we record which collection and URL we’re building; /_data/theme.yml, which controls the basic configurations for all of our visualizations (map, timeline, word clouds, etc.), data files, and our front page; and a series of “config-(...).csv” files (config-map.csv, config-browse.csv, config-metadata.csv, etc.) that further configure what information shows up on which pages.
+
+4. Development Server Review  
+We serve up the newly configured site on our computer with the Jekyll serve command (‘jekyll s’). We then examine the website generated for obvious errors and additional visualization or browsing feature possibilities. We often look at the facets.json data file generated by the system (and configured by the theme.yml file) to see if there might be other fields to visualize in [a word cloud format](https://www.lib.uidaho.edu/digital/archivalidaho/photographers.html), or even [a modified timeline](https://www.lib.uidaho.edu/digital/watkins/depth.html).
+
+5. Build Static Web Files  
+We’ve added a rake command to build our website for production. The command `rake deploy` builds the site for production by running the Jekyll command `JEKYLL_ENV=production jekyll build.` The production environment triggers the addition of features left out during development, such as full meta markup and Analytics snippets. This keeps our analytics account clean from server hits, while allowing us to have the code pre-built with an analytics variable in our _config.yml file.
+
+6. Deploy Web Files to Production Server  
+We then copy the files and folders contained in the _site folder and add those files to the correct directory on our production web server.
+
+7. Push Changes to Git Branch of the Repository  
+If more complicated revisions or additions are being made, we try to push changes several times as we revise the site running on the development server. If the changes are small, however, we just push these changes at the end of the process.
+
+When substantial development changes are made to the master branch code, these are pulled into all of the collection branches.
+These collections are then rebuilt, deployed, and their updated code is pushed to the repository (Steps 5 through 7).
+This framework facilitates the rapid development of custom visualizations and features, enabling us to generate unique interfaces for more collections.
+Low priority collections use the standard template, reaping the benefits of the skin interface without a large investment of time.
+Meanwhile, higher priority collections can be more quickly developed into unique sites, while still maintaining elements of a common theme and branding.
+For collections requiring extensive customization, the templates act as recipes that can be quickly adapted to new purposes, without getting too far from the original code base, making maintenance easier.
+
+{% include feature/image.html img="becker9.png" alt="list of GitHub repository branches" width="600" %}
+
+Figure 9. Detail of the branches for our digital collections, as seen listed in a GitHub desktop platform.
+
+Besides being an excellent way to keep our collections’ code up to date, creating and managing our collections on GitHub has also expanded collaborative opportunities, allowing more staff to participate in creating collections and giving them an opportunity to learn from the updates and alterations their colleagues make.
+More people working on collections makes it easier for us to keep our collections up to date, and any mistakes that might be made by those relatively new to working with our digital collections can be easily reverted by CollectionBuilder’s developers using Git.
