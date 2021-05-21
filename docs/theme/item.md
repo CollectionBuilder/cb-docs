@@ -6,7 +6,7 @@ nav_order: 4
 
 # Item Page 
 
-This section of "theme.yml" lets you add or remove "previous" and "next" buttons to your item pages for use when browsing the collection.
+This section of "_data/theme.yml" lets you add or remove "previous" and "next" buttons to your item pages for use when browsing the collection.
 
 ### browse-buttons: 
 - Adds previous/next arrows to items, but doubles build time. 

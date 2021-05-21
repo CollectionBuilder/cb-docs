@@ -6,7 +6,7 @@ nav_order: 2
 
 # About Page
 
-This section of "theme.yml" allows you to identify a featured image for your collection's About page.
+This section of "_data/theme.yml" allows you to identify a featured image for your collection's About page.
 
 ## about-featured-image: 
 

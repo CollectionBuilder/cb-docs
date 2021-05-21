@@ -6,7 +6,7 @@ nav_order: 1
 
 # Building a TimelineJS Feature
 
-Knight Lab's [TimelineJS](http://timeline.knightlab.com/) is a popular open source tool to create interactive timelines based on spreadsheet data. 
+Knight Lab's [TimelineJS](http://timeline.knightlab.com/){:target="_blank" rel="noopener"} is a popular open source tool to create interactive timelines based on spreadsheet data. 
 CollectionBuilder can use your collection metadata to generate JSON for TimelineJS, making it easy to add the feature integrated directly to your site.
 
 {:.alert .alert-yellow}
@@ -26,7 +26,7 @@ The instructions below detail each of these options.
 ### Inserting TimelineJS Into the Home Page
 
 1. Open the "home-infographic.html" file in the "_layouts" directory. 
-2. You may want to edit the column sizes or arrangement of the "home-infographic.html" file (follow the instructions in the [Home Page](../../home/) documentation to rearrange the Home page layout). The TimelineJS feature will work decently in a smaller section, but it looks best in a wider format (for example, consider replacing the carousel with TimelineJS). 
+2. You may want to edit the column sizes or arrangement of the "home-infographic.html" file (follow the instructions in the [Home Page]({{ '/home/' | relative_url }}) documentation to rearrange the Home page layout). The TimelineJS feature will work decently in a smaller section, but it looks best in a wider format (for example, consider replacing the carousel with TimelineJS). 
 3. Add the following code to the section of the "home-infographic.html" file in which you'd like the feature to appear:  
 `{% raw %}{% include feature/timelinejs.html %}{% endraw %}`  
 4. Save the file.

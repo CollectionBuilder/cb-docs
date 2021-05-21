@@ -6,10 +6,10 @@ nav_order: 1
 
 # Home Page
 
-This section of "theme.yml" configures many of your collection's Home page features.
+This section of "_data/theme.yml" configures many of your collection's Home page features.
 
 {:.alert}
-**Note:** The features that display on the home page can be customized via the 'home-infographic.html' file in the layouts folder. More on customizing that file can be found in our [finishing section]({{ '/docs/finish/home/' | relative_url }})
+**Note:** The features that display on the home page can be customized via the "home-infographic.html" file in the layouts folder. More on customizing that file can be found in our [finishing section]({{ '/docs/finish/home/' | relative_url }})
 
 ## Home Page Banner:
 
@@ -28,10 +28,10 @@ featured-image: /images/palouse.jpg
 ```yaml
 featured-image: https://ctrl-shift.org/images/splash/armantrout.jpg
 ```
-	- if you leave `featured-image` blank or comment it out, the home page of your collection will have the standard page banner with no image background.
+	- if you leave "featured-image" blank or comment it out, the home page of your collection will have the standard page banner with no image background.
 
 {:.alert}
-**Pro Tip**: It's best to choose a large image for the featured image, one that is more 'landscape' than 'portrait,' i.e. more horizontal than vertical.
+**Pro Tip**: It's best to choose a large image for the featured image, one that is more "landscape" than "portrait," i.e. more horizontal than vertical.
 
 ### home-title-y-padding: 
 
@@ -81,7 +81,7 @@ featured-subjects: corn;soy;basketball
 
 ### featured-subjects-max: 
 
-- Sets number of top subjects to display if **featured-subjects** is auto-generated
+- Sets number of top subjects to display if "featured-subjects" is auto-generated
 	- Default: `5`
 ```yaml
 featured-subjects-max: 6
@@ -98,7 +98,7 @@ featured-locations: University of Idaho; Sacramento, California;
 
 ### featured-locations-max: 
 
-- Sets number of top locations to display if **featured-locations** is auto-generated
+- Sets number of top locations to display if "featured-locations" is auto-generated
 	- Default: `5`
 ```yaml
 featured-locations-max: 4

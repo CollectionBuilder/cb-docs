@@ -6,7 +6,7 @@ nav_order: 5
 
 # Subjects Page
 
-This section of "theme.yml" configures the content of the collection's subject word cloud page.
+This section of "_data/theme.yml" configures the content of the collection's subject word cloud page.
 
 ### subjects-fields: 
 - Choose metadata fields from your collection metadata CSV to be included in the Subjects page tag cloud.

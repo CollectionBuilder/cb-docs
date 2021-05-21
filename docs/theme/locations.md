@@ -6,7 +6,7 @@ nav_order: 6
 
 # Locations Page
 
-This section of "theme.yml" configures the content of the collection's location word cloud page. It functions exactly as the Subjects page does. 
+This section of "_data/theme.yml" configures the content of the collection's location word cloud page. It functions exactly as the Subjects page does. 
 
 ### locations-fields: 
 - Choose metadata fields from your collection metadata CSV to be included in the Locations page tag cloud.

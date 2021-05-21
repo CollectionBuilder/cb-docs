@@ -6,7 +6,7 @@ nav_order: 7
 
 # Map Page
 
-This section of "theme.yml" configures the collection's Map page.
+This section of "_data/theme.yml" configures the collection's Map page.
 
 ### latitude: 
 - Determines the center of map.
@@ -34,7 +34,7 @@ zoom-level: 5
 map-base: Esri_WorldImagery
 ```
 
-**The fields below determine *map search* and *map cluster* features. For larger collections with many items at one spot, we recommend turning on the map-cluster option and turning off the map-search feature.**
+**The fields below determine "map search" and "map cluster" features. For larger collections with many items at one spot, we recommend turning on the map-cluster option and turning off the map-search feature.**
 
 ### map-search: 
 - Enables a user to search the map via the large magnifying glass on the top right. 

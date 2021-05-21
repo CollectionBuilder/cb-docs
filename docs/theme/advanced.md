@@ -6,7 +6,7 @@ nav_order: 10
 
 # Advanced Theme Options
 
-This section of "theme.yml" configures advanced options such as image and font size, and Bootstrap themes. 
+This section of "_data/theme.yml" configures advanced options such as image and font size, and Bootstrap themes. 
 This is an optional section—-your site will work just fine without adjusting these variables, but they're available if you'd like the extra options for customization.
 
 ## CDM image % for IIIF:
