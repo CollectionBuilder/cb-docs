@@ -11,9 +11,9 @@ CollectionBuilder can use your collection metadata to generate JSON for Timeline
 
 {:.alert .alert-yellow}
 The default CollectionBuilder TimelineJS feature will create a timeline based on your entire collection metadata, but can be edited to only show items you've curated. 
-Below you'll find instructions split into two steps: [Step 1](#step-1-including-timelinejs-on-a-page) shows how to add TimelineJS to your site, while [Step 2](#step-2-curating-your-timeline) has instructions on how to edit your TimelineJS instance after it's been added. 
+Below you'll find instructions split into two steps: [Step 1](#step-1-including-timelinejs-on-a-page) shows how to add TimelineJS to your site, while [Step 2](#step-2-curating-your-timeline) has instructions on how to edit the content of your TimelineJS instance after it's been added. 
 
-## Step 1: Including TimelineJS on a page
+## Step 1: Including TimelineJS on a Page
 
 There are three basic options for including a TimelineJS feature in your CollectionBuilder site. They are:
 
@@ -23,7 +23,7 @@ There are three basic options for including a TimelineJS feature in your Collect
 
 The instructions below detail each of these options. 
 
-### Inserting TimelineJS into the Home Page
+### Inserting TimelineJS Into the Home Page
 
 1. Open the "home-infographic.html" file in the "_layouts" directory. 
 2. You may want to edit the column sizes or arrangement of the "home-infographic.html" file (follow the instructions in the [Home Page](../../home/) documentation to rearrange the Home page layout). The TimelineJS feature will work decently in a smaller section, but it looks best in a wider format (for example, consider replacing the carousel with TimelineJS). 
@@ -44,7 +44,7 @@ layout: full-width-page
 `{% raw %}{% include feature/timelinejs.html %}{% endraw %}`
 6. Save the file.
 
-### Creating a New Timeline Page & nav dropdown
+### Creating a New Timeline Page & Nav Dropdown
 
 1. Navigate to the "pages" directory, and open the "timeline.md" file.
 2. Copy the contents of "timeline.md".
@@ -92,7 +92,7 @@ Below we detail ways to further customize and curate your timeline.
     `{% raw %}{%- assign items = site.data[site.metadata] | where_exp: "item","item.date contains '1935'" -%}{% endraw %}` 
 3. There are other ways to limit the timeline as well. See below for limiting it through the creation of a curated spreadsheet.
 
-### Creating a New Data Spreadsheet (with new headlines)
+### Creating a New Data Spreadsheet (With New TimelineJS Headlines)
 
 This method will use a new CSV to create a curated timeline by only listing those items that contain information in a newly created field ("headline").
 

@@ -12,8 +12,11 @@ In order to change the type of information the Timeline displays, you'll need to
 
 ### Change the Field Generating the Timeline
 
+{:.alert .alert-yellow .mt-4}
+Note: You can choose any field to add to this visualization, but if the field's datatype is "text" (rather than "integer"), you'll need to start with the steps in this section, and then move on to the [instructions below](#change-timeline-visualization-to-include-text-values-rather-than-integers) to include a text field.
+
 1. Navigate to the "_layouts" directory, and open the "timeline.html" file.
-2. On the second line of code in the "timeline.html" file, change the value for "map" from "date" to another metadata field that you'd like to represent. **You can choose any field to add to this visualization, but if the field's datatype is "text" (instead of "integer"), you'll need to also follow the [instructions below](#change-timeline-visualization-to-include-text-values-rather-than-integers) to include a text field in addition to following the steps in this section.** 
+2. On the second line of code in the "timeline.html" file, change the value for "map" from "date" to another metadata field that you'd like to represent.
 3. The line you should change looks like this: 
 
 {% raw %}`{%- assign raw-dates = site.data[site.metadata] | map: 'date' | compact | uniq -%}`{% endraw %}
@@ -24,7 +27,7 @@ If we were changing it to map the field `depth`, it would then look this:
 
 {:.alert}
 We'll use `depth` as our example for the steps below. 
-Take a look back at the example [visualization](https://www.lib.uidaho.edu/digital/watkins/depth.html) that these changes can generate, and check out the code in the revised "timeline.html" [layout](https://github.com/uidaholib/collectionbuilder-cdm-template/blob/watkins/_layouts/timeline.html) that we used to create the visualization. 
+You can refer to the depth [visualization](https://www.lib.uidaho.edu/digital/watkins/depth.html) as an example, and check out the code in the revised "timeline.html" [layout](https://github.com/uidaholib/collectionbuilder-cdm-template/blob/watkins/_layouts/timeline.html) that we used to create it. 
 
 ### Connect Your New Field to the Output
 
