@@ -30,7 +30,7 @@ tagline: Photographs of University of Idaho Boxers and Boxing Teams, 1934 - 1953
 - One or two sentences of explanatory text about the collection.
 - Appears on the home page under the featured image and in meta markup. Since this description may appear in search result lists, keep it around 160 characters max.
 ```yaml
-description: "A digital collection comprised of 52 photographs of boxers and boxing teams from the University of Idaho"
+description: "A digital collection composed of 52 photographs of boxers and boxing teams from the University of Idaho"
 ```
 
 ### author: 

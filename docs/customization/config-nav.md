@@ -6,7 +6,7 @@ nav_order: 1
 
 # Navigation Header Configuration (config-nav.csv)
 
-The `_data/config-nav.csv` CSV controls what and in what order the links appear in your collection's navigation bar. 
+The "_data/config-nav.csv" CSV controls what and in what order the links appear in your collection's navigation bar. 
 
 The columns are described below, and an [example](#example) is provided for your convenience:
 
