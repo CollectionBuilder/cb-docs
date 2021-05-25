@@ -6,50 +6,70 @@ nav_order: 2
 
 # Interpretive Pages
 
-- about page
-- markdown
-- feature includes
+The best way to tell your collection's story is to create an interpretive page that incorporates collection items with descriptive text.
+
+CollectionBuilder promotes an easy transition from curating your collection data to writing *with* it, allowing you to combine featured objects and text on exhibit pages in a format that engages your audience in analyzing and reflecting on the the wider, critical implications of your collection data.
+
+You can create as many interpretive pages as you'd like, and use them for a variety of purposes, but most often our collections' interpretive pages take the form of About pages.
+
+For this reason, an "about.md" file is included in the CollectionBuilder template for you to edit following the instructions below, but you can also add other interpretive pages following the instructions in the [Add Page]({{ '/docs/pages/add_page/' | relative_url }}) section.
 
 ## About Page
 
-To edit the About page, find and open the `about.md` file which is in the Pages directory (/pages/) of your repository. 
+To edit the About page, navigate to the "pages" directory and find and open the "about.md" file. 
 
 ### Markdown
 
-The about page is written in Markdown, thus the ".md" extension. Jekyll has Markdown support built in, so it's a good skill to learn as you get further into this type of development. 
-[Markdown](https://daringfireball.net/projects/markdown/syntax){:target="_blank" rel="noopener"} is a quick and easy standard to write documents that can be converted into HTML for the web. 
+The about page is written in Markdown (thus the ".md" extension). 
+Jekyll has Markdown support built in, so it's a good skill to learn as you get further into this type of development. 
+[Markdown](https://daringfireball.net/projects/markdown/syntax){:target="_blank" rel="noopener"} is a quick and easy standard to write documents that can be converted into HTML for the web.  
 
-Because of it's simplicity, Markdown is used by many websites for creating content or allowing users to format comments.
-In fact all of the CollectionBuilder docs are written in Markdown. 
+{:.alert}
+- **Markdown Resources**:
+    - [Tutorial](https://commonmark.org/help/tutorial/)
+    - [On GitHub](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
+    - [Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-**Markdown Resources**
-- [Tutorial](https://commonmark.org/help/tutorial/)
-- [On GitHub](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
-- [Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+### Includes
 
+To add exciting features to your About page in addition to Markdown text, you can choose from a variety of include commands.
+
+Jekyll's include command is a really powerful feature that allows specific elements or content to be drawn into your site's pages from one central location.
+
+Let's look at the beginning of the "about.md" file for an example of an include:
+
+When you open the "about.md" file, you'll see that there is an include command at the beginning of the file which is pulling in the page's jumbotron image:  
+`{% raw %}{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %}{% endraw %}`. 
+
+In this example, you can locate the included file ("jumbotron.html") within the "_includes/feature" directory.
+
+Note that in addition to calling the "jumbotron.html" file, this include also contains a variable, "objectid", with a URL value.
+The value of "objectid" specifies the image that should appear in the jumbotron at the top of the About page.
+Instead of including a URL path to an external image, you could include an objectid of an item from your collection, or a path to the image stored somewhere else within your repository.
+
+If you don't want the jumbotron on your About page, delete this line of code.
+
+{:.alert}
+**Include Files:** For more on includes and other Jekyll features, check out the [Jekyll docs](https://jekyllrb.com/docs/).
 
 ## Include Options for the About Page
 
-{:.alert}
-**Include Files:** Jekyll's include command is a really powerful feature that allows specific elements or content to be drawn into pages from one central location. For more on includes and other Jekyll features, check out the [Jekyll docs](https://jekyllrb.com/docs/).
-
-When you open the `about.md` file, you'll see that there is already one "include" command at the beginning of the file which is pulling in the page's jumbotron image: `{% raw %}{% include about/jumbotron.html %}{% endraw %}` (remember, you chose this image in the [theme.yml](theme.html#about) file). If you don't want the jumbotron on your About page, just delete this line of code.
-
-Alternately, if you'd like to add *more* visual features to the page we've made it easy to do this too, by including templated files.
+If you'd like to add *more* visual features to the page we've made it easy to do this too, by including templated files.
 You'll find the files below in the `_includes/feature/` directory:
 
-- [`alert.md`](#include-an-alert)
-- [`button.md`(#include-a-button)
-- [`card.md`](#include-a-card)
-- [`image`(#include-an-external-image)
-- [`item-figure.html`(#include-a-collection-image)
-- [`item-pdf-embed.html`(#include-a-pdf)
-- [`item-video-embed.html`(#include-a-video)
-- [`modal.md`(#include-a-modal)
-- [`nav-menu.html`(#adding-a-nav-menu)
-- [`timelinejs.html`(#include-a-timelinejs-feature)
+- [alert.md](#include-an-alert)
+- [button.md](#include-a-button)
+- [card.md](#include-a-card)
+- [image](#include-an-external-image)
+- [item-figure.html](#include-a-collection-image)
+- [item-pdf-embed.html](#include-a-pdf)
+- [item-video-embed.html](#include-a-video)
+- [modal.md](#include-a-modal)
+- [nav-menu.html](#adding-a-nav-menu)
+- [timelinejs.html](#include-a-timelinejs-feature)
+- [video.html](#include-an-external-video)
 
-We detail the nav-menu option and the image include option in detail below, and provide example example code for the other includes below. 
+We detail the nav-menu option and the image include option in detail below, and provide example code for the other includes below. 
 
 ### Adding a Nav Menu
 
@@ -60,7 +80,6 @@ Currently, this is included by default. The code looks like this:
 In order to edit it to fit tour material, you will need to edit the sections variables so that they feature any heading you use on the page. To do this, just copy and paste the full text of the heading -- e.g. "About the Collection" and About the About Page" are the headings we include on our default about page, so we use those here. 
 
 If you'd rather not include the menu, just delete it. 
-
 
 ### Adding an image to the About Page
 
@@ -155,3 +174,5 @@ This will include a [bootstrap modal](https://getbootstrap.com/docs/4.0/componen
 ### Include a TimelineJS Feature
 
 See information in our [TimelineJS Feature in the Advanced Section]({{ '/advanced/timelinejs/' | relative_url }}).
+
+#### Include an External Video

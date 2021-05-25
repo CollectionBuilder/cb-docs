@@ -10,4 +10,5 @@ With configuration options fleshed out, the next major step is to edit the conte
 
 CollectionBuilder templates come with a pre-configured "Home" page and skeleton "About" page which you will probably want to adjust to finish and polish your project.
 
-You can also add any type of additional pages you might want--this is great for building out interpretive content, using your collection data to tell stories.
+You can also add any type of additional pages you might want. 
+This is great for building out interpretive content, using your collection data to tell stories.

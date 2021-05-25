@@ -20,13 +20,15 @@ Some options:
 
 The Home page is composed of a number of include commands, arranged in three [Bootstrap columns](https://getbootstrap.com/docs/4.0/layout/grid/){:target="_blank" rel="noopener"}.
 
+Jekyll's include command is a really powerful feature that allows specific elements or content to be drawn into your site's pages from one central location.
+
 An example include command looks like:  
 `{% raw %}{% include index/carousel.html %}{% endraw %}`
 
-In the case of this example, you can locate the included file ("carousel.html") within the "_includes/index" directory.
+In this example, you can locate the included file ("carousel.html") within the "_includes/index" directory.
 
 {:.alert}
-**Include Files:** Jekyll's include command is a really powerful feature that allows specific elements or content to be drawn into pages from one central location. For more on includes and other Jekyll features, check out the [Jekyll docs](https://jekyllrb.com/docs/).
+**Include Files:** For more on includes and other Jekyll features, check out the [Jekyll docs](https://jekyllrb.com/docs/).
 
 This is what the default "home-infographic.html" layout looks like: 
 
