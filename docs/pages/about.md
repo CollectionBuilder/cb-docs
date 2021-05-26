@@ -24,11 +24,14 @@ The about page is written in Markdown (thus the ".md" extension).
 Jekyll has Markdown support built in, so it's a good skill to learn as you get further into this type of development. 
 [Markdown](https://daringfireball.net/projects/markdown/syntax){:target="_blank" rel="noopener"} is a quick and easy standard to write documents that can be converted into HTML for the web.  
 
-{:.alert}
-- **Markdown Resources**:
-    - [Tutorial](https://commonmark.org/help/tutorial/)
-    - [On GitHub](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
-    - [Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+<div class="alert alert-blue" markdown="1">
+
+#### Markdown Resources
+
+- CommonMark [Cheatsheet](https://commonmark.org/help/) and [10 Minute Tutorial](https://commonmark.org/help/tutorial/)
+- GitHub [Mastering Markdown tutorial](https://guides.github.com/features/mastering-markdown/) and [Markdown reference](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
+
+</div>
 
 ### Includes
 
@@ -38,8 +41,11 @@ Jekyll's include command is a really powerful feature that allows specific eleme
 
 Let's look at the beginning of the "about.md" file for an example of an include:
 
-When you open the "about.md" file, you'll see that there is an include command at the beginning of the file which is pulling in the page's jumbotron image:  
-`{% raw %}{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %}{% endraw %}`. 
+When you open the "about.md" file, you'll see that there is an include command at the beginning of the file which is pulling in the page's jumbotron image:
+
+```{% raw %}
+{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %}{% endraw %}
+```
 
 In this example, you can locate the included file ("jumbotron.html") within the "_includes/feature" directory.
 
