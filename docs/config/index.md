@@ -15,10 +15,14 @@ CB's configuration options are made up of key value pairs written in [YAML]({{ '
 For example, below is the option "title":
 
 ```yaml
+# title of site appears in banner
 title: Example Site Title
 ```
 
-CollectionBuilder's "_config.yml" template is divided into sections to help keep the values organized, and it contains comments (denoted by a hash `#`) to help explain how to fill it out.
+Notice the line proceeded by a `#` hash--everything following the hash is a comment in YAML.
+CollectionBuilder's "_config.yml" template uses a bunch of comments to divide the content into sections and to explain how to fill in the values. 
+
+To *uncomment* a line, delete the `# ` and space in front of the value.
 
 When you start fresh from the template, placeholder values fill all the options.
 So to begin configuring and customizing your site, open the **_config.yml** file in the base of your project repository. 
