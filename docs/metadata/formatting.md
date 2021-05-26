@@ -13,11 +13,13 @@ Make sure you're following the guidelines below, otherwise CollectionBuilder may
 - **Use a Semicolon When You Have Multiple Values**
     - Use a semicolon (`;`) to separate values in multi-valued fields.
 - **No Special Characters in ID values**
-    - When creating **objectids** and **filenames** do not use spaces (` `), slashes (`/`, `\`), and special characters (`&`). Since these values will be used in URLs, they should be web safe characters.
+    - When creating "objectids" and "filenames" do not use spaces (` `), slashes (`/`, `\`), and special characters (`&`). Since these values will be used in URLs, they should be web safe characters.
 
 
+<div class="alert alert-green" markdown="1">
 **Pro Tip:** In Visual Studio Code, there's **an easy way to make your fields lowercase**: 
 
 1. Highlight the first row of your CSV (the row containing field names) 
 2. Click the 'Command Palette' option in the View menu 
 3. Start typing 'Transform to lowercase'--the option will appear!"
+</div>

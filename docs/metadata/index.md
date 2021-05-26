@@ -17,7 +17,7 @@ CollectionBuilder is very flexible with metadata, but you will have to ensure yo
  
 {:.alert .alert-red}
 **Before You Start:** To prevent formatting and encoding errors that can result from using Microsoft Excel, we recommend editing your metadata in Google Sheets. 
-If your data will require a good amount of wrangling to get it into CollectionBuilder's format, we suggest you use [OpenRefine](http://openrefine.org/), a tool that facilitates data cleaning and transformation.
+If your data will require a good amount of wrangling to get it into CollectionBuilder's format, we suggest you use [OpenRefine](http://openrefine.org/){:target="_blank" rel="noopener"}, a tool that facilitates data cleaning and transformation.
 
 ## Data Dictionary
 

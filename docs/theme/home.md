@@ -30,7 +30,7 @@ featured-image: https://ctrl-shift.org/images/splash/armantrout.jpg
 ```
 	- if you leave "featured-image" blank or comment it out, the home page of your collection will have the standard page banner with no image background.
 
-{:.alert}
+{:.alert .alert-green}
 **Pro Tip**: It's best to choose a large image for the featured image, one that is more "landscape" than "portrait," i.e. more horizontal than vertical.
 
 ### home-title-y-padding: 

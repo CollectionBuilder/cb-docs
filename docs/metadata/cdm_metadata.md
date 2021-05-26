@@ -4,16 +4,11 @@ parent: Metadata
 nav_order: 2
 ---
 
-- how to export from CONTENTdm
-- fields to prep for CB
-- option to enhance metadata beyond what is in contentdm repository
-- option to curate only select items, or curate from multiple collections
-
 # CollectionBuilder-CONTENTdm Metadata
 
 ## Export Metadata from CONTENTdm
 
-1. Log in to the hosted CONTENTdm administration portal, click on the "collections" tab, and choose the collection you'd like to export from the "Current collection" dropdown menu.
+1. Log in to the hosted CONTENTdm administration portal, click on the "collections" tab, and choose the collection you'd like to export from the "Current collection" dropdown menu. Once you've selected a collection, click the button labeled "change" to the right of the dropdown menu.
 2. Further down the "Collection administration" page, locate the "Export" link, and click on it. This should lead you to an "Export metadata" page.
 3. Make sure the radio button next to "Tab-delimited" is checked, and then check the box immediately underneath to select the option "return field names in first record." Click the "next" button. This will lead to an "Export successful" page.
 4. Right click on the "export.txt" file and choose the option "Save Link As..."
@@ -22,13 +17,13 @@ nav_order: 2
 7. In the "Import file" popup, for "Import location" select "Replace spreadsheet," and for "Separator type" select "Tab." Click the "Import data" button.
 
 Now you're ready to begin adding to and editing your metadata to make sure it has the fields required for CollectionBuilder to work.
-Pull up the metadata template below to get started, and read through the rest of this page for field definitions and formating advice.
+Pull up the metadata template below to get started, and read through the rest of this page for field definitions and formatting advice.
 
 ## Metadata Template
 
 The button below will take you to the CollectionBuilder-CONTENTdm metadata template. It's stored in Google Sheets for easy re-use (just "Make a Copy" via the File menu to get started).
 
-[CONTENTdm CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing){:.btn .btn-purple }
+[CONTENTdm CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
 
 ---
 
@@ -112,7 +107,7 @@ Location | `location` |
 - See the [Subjects](theme.html#subjects-page) section for more information.
 - Example value: `Dogs; Cats; Zebras`
 
-{:.alert .alert-red}
+{:.alert .alert-green}
 *Note:* This field needs to be named **_'subject' (not 'subjects')_** for many default features in CollectionBuilder to work. Data in this field will create the word cloud that allows users to visualize the frequency of subjects used within the collection.
 
 ### location: 

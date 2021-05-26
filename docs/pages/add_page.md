@@ -61,4 +61,4 @@ For more detail on adding to and configuring the navigation bar, see the [Naviga
 ## Get Creative By Adding Collection Items
 
 To really convey your interpretive content to your site's users, we've made it easy to include and write about collection items as well as supplemental items. 
-See the [Interpretive Pages]({{ '/docs/pages/about/' | relative_url }}) section for instructions on how to include these features.
+See the [Interpretive Pages]({{ '/docs/pages/interpretive/' | relative_url }}) section for instructions on how to include these features.

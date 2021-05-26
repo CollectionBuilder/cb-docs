@@ -27,8 +27,10 @@ The instructions below detail each of these options.
 
 1. Open the "home-infographic.html" file in the "_layouts" directory. 
 2. You may want to edit the column sizes or arrangement of the "home-infographic.html" file (follow the instructions in the [Home Page]({{ '/home/' | relative_url }}) documentation to rearrange the Home page layout). The TimelineJS feature will work decently in a smaller section, but it looks best in a wider format (for example, consider replacing the carousel with TimelineJS). 
-3. Add the following code to the section of the "home-infographic.html" file in which you'd like the feature to appear:  
-`{% raw %}{% include feature/timelinejs.html %}{% endraw %}`  
+3. Add the following code to the section of the "home-infographic.html" file in which you'd like the feature to appear:
+``` 
+{% raw %}{% include feature/timelinejs.html %}{% endraw %}
+```
 4. Save the file.
 
 ### Replacing the Current Timeline Page
@@ -40,8 +42,10 @@ The instructions below detail each of these options.
 layout: full-width-page
 ```
 4. Locate the `## Collection Timeline` line of text, below the yaml front matter. 
-5. Replace `## Collection Timeline` with the following _include command:  
-`{% raw %}{% include feature/timelinejs.html %}{% endraw %}`
+5. Replace `## Collection Timeline` with the following _include command:
+``` 
+{% raw %}{% include feature/timelinejs.html %}{% endraw %}
+```
 6. Save the file.
 
 ### Creating a New Timeline Page & Nav Dropdown
@@ -62,8 +66,10 @@ They just need to be anything other than `Timeline` and `timeline.html` (since t
 Just make sure to include the title and permalink you create in your "_data/config-nav.csv" file, as described below.
 
 7. Locate the `## Collection Timeline` line of text, below the yaml front matter. 
-8. Replace `## Collection Timeline` with the following _include command:  
-`{% raw %}{% include feature/timelinejs.html %}{% endraw %}`
+8. Replace `## Collection Timeline` with the following _include command:
+```  
+{% raw %}{% include feature/timelinejs.html %}{% endraw %}
+```
 9. Save the file.
 10. Navigate to the "_data" directory, and open the "config-nav.csv" file.
 11. Edit the "config-nav.csv" file so that it includes the following three rows: 
@@ -86,10 +92,14 @@ Below we detail ways to further customize and curate your timeline.
 
 1. Navigate to the "/assets/data/" directory, and open the "timelinejs.json" file.
 2. You will need to edit the first line of the document so that it limits the collection:
-    - limit the timeline to only include those items that are images:  
-    `{% raw %}{%- assign items = site.data[site.metadata] | where_exp: "item","item.format contains 'image'" -%}{% endraw %}`
+    - limit the timeline to only include those items that are images: 
+``` 
+{% raw %}{%- assign items = site.data[site.metadata] | where_exp: "item","item.format contains 'image'" -%}{% endraw %}
+```
     - limit the timeline to only include those items that occur during a certain year:  
-    `{% raw %}{%- assign items = site.data[site.metadata] | where_exp: "item","item.date contains '1935'" -%}{% endraw %}` 
+```
+{% raw %}{%- assign items = site.data[site.metadata] | where_exp: "item","item.date contains '1935'" -%}{% endraw %}
+``` 
 3. There are other ways to limit the timeline as well. See below for limiting it through the creation of a curated spreadsheet.
 
 ### Creating a New Data Spreadsheet (With New TimelineJS Headlines)
@@ -102,7 +112,9 @@ This method will use a new CSV to create a curated timeline by only listing thos
 4. Save the file as a CSV and rename it "timelinejs.csv".
 5. Add this CSV to your "_data" directory.
 6. Navigate to the "/assets/data/" directory, and open the "timelinejs.json" file.
-7. Edit the first line so that it reads:  
-`{% raw %}{%- assign items = site.data.timelinejs | where_exp: "item","item.headline" -%}{% endraw %}`
+7. Edit the first line so that it reads:
+```
+{% raw %}{%- assign items = site.data.timelinejs | where_exp: "item","item.headline" -%}{% endraw %}
+```
 
 This will generate a timeline that only includes items that have a headline. 

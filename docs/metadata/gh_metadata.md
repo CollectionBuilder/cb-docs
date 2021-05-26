@@ -10,7 +10,7 @@ nav_order: 1
 
 You'll need to use the GitHub Pages/Stand Alone metadata template for your GH or SA collection. Find the template using the button below. It's stored in Google Sheets for easy re-use (just "Make a Copy" via the File menu to get started). Whether you're editing existing metadata or creating it from scratch, you'll want to be sure to follow the guidelines below to ensure you include the fields required for the site and visualizations to work.
 
-[GitHub Pages/Stand Alone CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit?usp=sharing){:.btn .btn-purple }
+[GitHub Pages/Stand Alone CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
 
 --- 
 
@@ -66,7 +66,7 @@ Location | `location` |
 - A geographic coordinate specifying the east-west position of an item. See the [Map](theme.html#map-page) section for more information.
 - Example value: `-117.165625`
 
-{:.alert .alert-red}
+{:.alert .alert-green}
 **Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. The first option you will see is to copy the coordinates. You can click to copy those and then paste the location into your metadata
 
 ### date: 
