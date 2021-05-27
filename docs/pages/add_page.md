@@ -56,7 +56,7 @@ Collection History,/history.html,About
 About the Collection,/about.html,About
 ```
 
-For more detail on adding to and configuring the navigation bar, see the [Navigation Page Config]({{ '/docs/customization/config-nav/' | relative_url }}) documentation
+For more detail on adding to and configuring the navigation bar, see the [Navigation Page Config]({{ '/docs/customization/config-nav/' | relative_url }}) documentation.
 
 ## Get Creative By Adding Collection Items
 

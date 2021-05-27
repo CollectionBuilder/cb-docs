@@ -54,4 +54,8 @@ The last two lines of this CSV will appear within the "About" dropdown menu.
 To enable this, "About" must have no value in `stub` or `dropdown_parent` cells--this will direct the code to make "About" a dropdown button and store any link that lists "About" as its `dropdown_parent` in its dropdown menu. 
 So in the above, when About is clicked the dropdown menu will appear with "About the Collection" and "CollectionBuilder" listed, both linking to their respective pages.
 
-Note: Dropdowns do NOT appear in the footer nav. The parent will appear, with a link to the top child. 
+**Note**: Dropdowns do NOT appear in the footer nav. The parent will appear, with a link to the top child. 
+
+### Creating a New Page
+If you're adding a brand new page to the nav or as a drop down, don't forget that you'll actually need to *create* the page too.
+For instructions on how to create a new page for your site, see the [Add Page]({{ '/docs/pages/add_page/' | relative_url }}) documentation.
