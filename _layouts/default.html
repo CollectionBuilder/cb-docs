@@ -58,11 +58,11 @@ layout: table_wrappers
   </svg>
   <div class="side-bar">
     <div class="site-header" style="background: black;">
-      <a class="text-white" href="https://collectionbuilder.github.io/" style="color:white; width: 25%; text-align:right">
+      <a class="text-white" href="https://collectionbuilder.github.io/" style="color:white; width: 25%; text-align:right" alt="collectionbuilder home page" target="_blank">
         <img class="pt-2" src="https://collectionbuilder.github.io/images/logo/cb-logo-solid-vgold-transparent.png"
           style="height:53px">
       </a>
-      <h3 class="v-align-middle ml-2 pt-5" style="width:75%"><a class="text-white" href="https://collectionbuilder.github.io/" style="color:white">
+      <h3 class="v-align-middle ml-2 pt-5" style="width:75%"><a class="text-white" href="/" style="color:white" alt="CollectionBuilder docs home page">
         CollectionBuilder<br/>
         <span class="ml-2">docs</span>
       </a></h3>
@@ -72,6 +72,28 @@ layout: table_wrappers
         </svg>
       </a>
     </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      {% if site.just_the_docs.collections %}
+      {% assign collections_size = site.just_the_docs.collections | size %}
+      {% for collection_entry in site.just_the_docs.collections %}
+      {% assign collection_key = collection_entry[0] %}
+      {% assign collection_value = collection_entry[1] %}
+      {% assign collection = site[collection_key] %}
+      {% if collection_value.nav_exclude != true %}
+      {% if collections_size > 1 %}
+      <div class="nav-category">{{ collection_value.name }}</div>
+      {% endif %}
+      {% include nav.html pages=collection %}
+      {% endif %}
+      {% endfor %}
+      {% else %}
+      {% include nav.html pages=site.html_pages %}
+      {% endif %}
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for
+      Jekyll.
+    </footer>
   </div>
   <div class="main" id="top">
     <div id="main-header" class="main-header" >
@@ -103,32 +125,6 @@ layout: table_wrappers
       </nav>
       {% endif %}
     </div>
-  </div>
-  <div class="side-bar">
-    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
-      {% if site.just_the_docs.collections %}
-      {% assign collections_size = site.just_the_docs.collections | size %}
-      {% for collection_entry in site.just_the_docs.collections %}
-      {% assign collection_key = collection_entry[0] %}
-      {% assign collection_value = collection_entry[1] %}
-      {% assign collection = site[collection_key] %}
-      {% if collection_value.nav_exclude != true %}
-      {% if collections_size > 1 %}
-      <div class="nav-category">{{ collection_value.name }}</div>
-      {% endif %}
-      {% include nav.html pages=collection %}
-      {% endif %}
-      {% endfor %}
-      {% else %}
-      {% include nav.html pages=site.html_pages %}
-      {% endif %}
-    </nav>
-    <footer class="site-footer">
-      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for
-      Jekyll.
-    </footer>
-  </div>
-  <div class="main" id="top">
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
       {% if page.parent %}
