@@ -20,19 +20,26 @@ We have be very satisfied using self-hosted [Matomo](https://matomo.org/).
 ## Set up Google Analytics
 
 Use your Gmail account to log into [Analytics](analytics.google.com/).
-To start tracking, you will set up an "Analytics Account" with a "Property".
-Multiple web properties can be included and/or combined under the same account and id.
-For example, if you have an existing Analytics id used on your organizations websites, you can use the same one on your CollectionBuilder projects, no matter where they are deployed.
 
-Once your property is set up, click the cog icon in the lower left nav menu to go to your "Admin" panel. 
+To start tracking, you will set up an "Analytics Account" with a "Property".
+The property usually corresponds to your main web domain, but can be used to track multiple websites under the same id.
+
+For example, if you have an existing Analytics id used on your organization's websites, you can use the same one on your CollectionBuilder projects, no matter where they are deployed.
+Using a single id for all your organization's sites is usually the preferred method to keep your data unified.
+
+Once your property is set up, click the cog icon in the lower left nav menu to go to the "Admin" panel. 
 Under "Property Settings" > "Tracking info", click "Tracking Code".
 Your "Tracking ID" will be displayed.
 Copy the id (which will look something like `UA-76328753-1`).
 You do **not** need to copy the tracking code snippet.
 
 In your CollectionBuilder project's "_config.yml", paste the id after the `google-analytics-id` key.
-For example, `google-analytics-id: UA-76328753-1`.
-Be sure to *uncomment* the option!
+Be sure to *uncomment* the line!
+For example:
+
+```yaml
+google-analytics-id: UA-76328753-1
+```
 
 During "production" build, the tracking code with your id will be automatically added to every page.
-The template uses the "gtag.js" implementation, with the [Anonymize IP](https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization) option set to provide basic privacy enhancement to your users.
+The template uses the "gtag.js" implementation, with the [Anonymize IP](https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization) enabled to provide basic privacy enhancement to your users.
