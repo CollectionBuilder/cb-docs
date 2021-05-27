@@ -27,7 +27,7 @@ On Windows it may appear as if nothing is happening for a very very long time, s
 {:.alert .alert-yellow}
 
 **Debugging Note:** 
-if you have **Ruby version 3.0+** and **Jekyll version 4.2.0** or less, when using Jekyll you will encounter an error in your terminal including "cannot load such file -- webrick (LoadError)".
+if you have **Ruby version 3.0+** and **Jekyll version 4.2.0** or less, when using Jekyll you may encounter an error in your terminal including "cannot load such file -- webrick (LoadError)".
 Please try installing webrick globally using `gem install webrick` *or* adding it to your project Gemfile using `bundle add webrick` in the project directory.
 This issue will be resolved in future Jekyll versions.
 {:.alert .alert-red}
