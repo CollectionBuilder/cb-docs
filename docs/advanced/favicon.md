@@ -1,7 +1,7 @@
 ---
 title: Site Icon
 parent: Advanced
-nav_order: 4
+nav_order: 5
 ---
 
 # Create a site icon
