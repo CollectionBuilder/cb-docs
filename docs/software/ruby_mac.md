@@ -13,7 +13,7 @@ To do this, follow the instructions below, which outline the steps to install Ru
 
 ## Install Xcode Command Line Tools
 - Ensure you have Xcode Command Line Tools, so that you can work with Ruby (and Git, etc.).
-- To do this, open your terminal by pressing `Command (⌘) + Spacebar`, typing `terminal` into the spotlight box that appears, and pressing "Enter".
+- To do this, open your terminal by pressing "Command (⌘) + Spacebar", typing `terminal` into the spotlight box that appears, and pressing "Enter".
 - To check if Xcode is already installed, type `xcode-select -v`. If Xcode is installed, you should see the version number output in the terminal and you can move on to the [Install Homebrew](#homebrew) section below. If no version is output, follow the next step in this section.
 - Type `xcode-select --install` into the terminal window and press "Enter" to start the installer. Note: this may take some time to install.
 
@@ -21,7 +21,7 @@ To do this, follow the instructions below, which outline the steps to install Ru
 ## Install Homebrew
 You'll need to use Homebrew to install rbenv. To install Homebrew, follow these steps:
 - Open the [Homebrew](https://brew.sh/){:target="_blank" rel="noopener"} webpage in your browser.
-- Open your terminal by clicking `Command (⌘) + Spacebar`, typing `terminal` into the spotlight box that appears, and pressing "Enter".
+- Open your terminal by clicking "Command (⌘) + Spacebar", typing `terminal` into the spotlight box that appears, and pressing "Enter".
 - Locate and copy the script in the box underneath the text "Install Homebrew" on the [Homebrew](https://brew.sh/){:target="_blank" rel="noopener"} webpage. Paste this script you just copied into the terminal prompt and press "Enter".
 - The terminal will then prompt you to press "Enter" once more to continue the install.
 
@@ -68,8 +68,8 @@ Note: Ruby 3.0.1 is the latest stable version as of this writing; if you are rea
 - Now let's set that version as your global Ruby version by entering `rbenv global 3.0.1` into the terminal prompt and pressing "Enter".
 - Finally, we're going to rehash, just to be safe: copy and paste the command `rbenv rehash` into your prompt and pressing "Enter".
 - Now let's see if that worked:
-    - Quit your terminal by right clicking (`Control (^) + click`) the terminal's icon in your applications menu, and selecting `Quit` from the options that appear.
-    - Then reopen your terminal by clicking `Command (⌘) + Spacebar`, typing `terminal` into the spotlight box that appears, and pressing "Enter".
+    - Quit your terminal by right clicking ("Control (^) + click") the terminal's icon in your applications menu, and selecting `Quit` from the options that appear.
+    - Then reopen your terminal by clicking "Command (⌘) + Spacebar", typing `terminal` into the spotlight box that appears, and pressing "Enter".
     - Type `ruby -v` into the terminal prompt, and press "Enter".
     - If your terminal indicates that you have Ruby 2.7.0 or higher installed, you've done it!
 
