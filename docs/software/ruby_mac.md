@@ -51,23 +51,13 @@ At the end of this line of text, you should either see `~/.zshrc` or `~/.bash_pr
 
 If you see `~/.zshrc`, copy and paste the following into the terminal and press "Enter":
 ```
-nano ~/.zshrc 
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc 
 ```
 
 If you see `~/.bash_profile`, copy and paste the following into the terminal and press "Enter":
 ```
-nano ~/.bash_profile 
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 ```
-
-You have now opened your shell environment's configuration file with the terminal's text editor, nano. 
-Next, follow these instructions:
-
-- Your terminal should switch to a nano text editor screen that includes a path to `.zshrc` or `~/.bash_profile` at the top. 
-- Use the down arrow on your keyboard to move to the end of the text file.
-- Paste `eval "$(rbenv init -)"` at the end of the file.
-- Press `Control (^)` + `x` to exit and save the file. You'll see a message at the bottom of your screen asking whether you want to save the file.
-- Press the `y` key on your keyboard to specify yes, you want to save.
-- Press "Enter" to finish saving the file and exit nano.
 
 ## Install Ruby
 
