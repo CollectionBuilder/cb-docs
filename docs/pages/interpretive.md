@@ -64,13 +64,13 @@ If you don't want the jumbotron on your About page, delete this line of code.
 ## Include Options for the About Page
 
 If you'd like to add *more* visual features to the page we've made it easy to do this too, by including templated files.
-You'll find the files below in the "_includes/feature/" directory:
+You'll find all of the files listed below in the "_includes/feature/" directory:
 
 - [alert.html](#include-an-alert)
 - [button.html](#include-a-button)
 - [card.html](#include-a-card)
 - [image.html](#include-an-external-image)
-- [item-figure.html](#include-a-collection-image)
+- [item-figure.html](#adding-a-collection-image-to-the-about-page)
 - [item-pdf-embed.html](#include-a-pdf)
 - [item-video-embed.html](#include-a-video)
 - [modal.html](#include-a-modal)
@@ -150,7 +150,7 @@ Examples are also included below for your convenience:
 
 ### Include Command Examples
 
-Copy and paste the examples below and replace the required variables with variables that pertain to your collections. 
+Copy and paste the examples below and replace the required variables with variables that pertain to your collections (remember, variable options are defined within each include file, located in the "_includes/feature/" directory in your project repository). 
 
 #### Include a Collection Image
 

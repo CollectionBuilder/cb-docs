@@ -57,5 +57,5 @@ So in the above, when About is clicked the dropdown menu will appear with "About
 **Note**: Dropdowns do NOT appear in the footer nav. The parent will appear, with a link to the top child. 
 
 ### Creating a New Page
-If you're adding a brand new page to the nav or as a drop down, don't forget that you'll actually need to *create* the page too.
+If you're adding a brand new page to the nav or as a drop down feature, don't forget that you'll actually need to *create* that page too.
 For instructions on how to create a new page for your site, see the [Add Page]({{ '/docs/pages/add_page/' | relative_url }}) documentation.
