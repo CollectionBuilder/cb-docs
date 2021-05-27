@@ -77,10 +77,10 @@ By default, the CONTENTdm collection ID ("alias") is set in "_config.yml", as th
 If all your items are from a single CDM collection, only this value in "_config.yml" is necessary and `collectionid` column is not necessary in your metadata file.
 The nav links to CDM search and database will be derived from unique values in the `collectionid` column plus `cdm-collection-id` in "_config.yml".
 
+### youtubeid (only required for YouTube video items):
 
-### youtubeid (Only required if your collection contains YouTube videos):
-
-- This is the unique string assigned to a video when it is uploaded to YouTube. An easy way to find this is to look at the url for your YouTube video. The ID will be the string attached to the end of this url: https://www.youtube.com/watch?v=
+- This is the unique string assigned to a video when it is uploaded to YouTube. An easy way to find this is to look at the url for your YouTube video. The ID will be the string attached to the end of the url. For example, in "https://www.youtube.com/watch?v=sHhk1eAgopU" the youtubeid is `sHhk1eAgopU`.
+- Fill in `youtubeid` for **only** for YouTube items--leave it blank for all other items! If your collection does not contain YouTube videos, you can delete the column.
 - Example value: `sHhk1eAgopU`
 
 ---
@@ -96,17 +96,22 @@ Subjects | `subject` |
 Location | `location` |
 
 ### latitude:
+
 - A geographic coordinate specifying the north-south position of an item. See the [Map](theme.html#map-page) section for more information.
 - Example value: `46.731643`
 
 ### longitude:
+
 - A geographic coordinate specifying the east-west position of an item. See the [Map](theme.html#map-page) section for more information.
 - Example value: `-117.165625`
 
 {:.alert .alert-red}
-**Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. The first option you will see is to copy the coordinates. You can click to copy those and then paste the location into your metadata
+**Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. 
+The first option you will see is to copy the coordinates. 
+You can click to copy those and then paste the location into your metadata
 
 ### date: 
+
 - This field indicates a point in time associated with the item. This `date` field will be used for sorting and displaying on a timeline, so may often be an estimated / approximate date, rather than one more precisely formatted to archival description standards. We suggest adding more complex descriptions of date (date ranges, uncertainties, etc) in a separate field such as "date_created".
 - Dates should be represented in the format `yyyy-mm-dd`, which will enable our various timeline visualizations. See the [Timeline](theme.html#timeline-page) section for more details. 
 - For less exact dates, `yyyy-mm` or `yyyy` may be used.
@@ -114,22 +119,25 @@ Location | `location` |
 - (Dates in a `mm/dd/yyyy` format will also work)
 
 ### subject:
+
 - The subject field contains topic(s) related to the item. 
 - This field allows for multiple subjects to be input for a single record. Each should be separated with a semicolon (`;`). 
 - See the [Subjects](theme.html#subjects-page) section for more information.
 - Example value: `Dogs; Cats; Zebras`
 
 {:.alert .alert-green}
-*Note:* This field needs to be named **_'subject' (not 'subjects')_** for many default features in CollectionBuilder to work. Data in this field will create the word cloud that allows users to visualize the frequency of subjects used within the collection.
+*Note:* This field needs to be named **_'subject' (not 'subjects')_** for many default features in CollectionBuilder to work. 
+Data in this field will create the word cloud that allows users to visualize the frequency of subjects used within the collection.
 
 ### location: 
+
 - This field designates a geographic location(s) to which the item is tied. Much like the subject field, this field will build a tag cloud of the most used locations in your collection. See the [Locations](theme.html#locations-page) section for more information. Be sure to separate multiple location entries for a single record with a semicolon (`;`).
 - Example value: `Pullman, Washington; Moscow, Idaho`
 
 {:.alert .alert-green}
-**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice."
+**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
 
----
+-----
 
 ## Optional Fields
 
@@ -139,33 +147,41 @@ The rest of the fields in the CollectionBuilder metadata template are not requir
 CollectionBuilder can accommodate any field you include in your metadata once you customize your site. For example, you can display any field on item pages or on the Browse page. See the [Metadata](customize.html#config-metadata) and [Browse](customize.html#config-browse) customization sections for more information. "
 
 ### creator:
+
 - The creator property designates an entity primarily responsible for making the resource. Multiple creators may be input, as long as each is separated by a semicolon (`;`).
 - Example value: `Smith, John` or `Smith, John; Doe, Jane`
 
 ### description:
+
 - The description should be a brief account of the object. Each object should only have one description.
 - Example value: `Postcard of the Memorial Gymnasium on the University of Idaho campus in Moscow, Idaho.`
 
 ### source:
+
 - The source field designates a related source collection or resource from which the object is derived. This field is especially relevant for digitized archival collections. In such a situation, the name of the physical archival collection would be the input for this field. The input should be expressed as the collection name followed by a comma, then followed by the holding library.
 - Example value: `PG 5, University of Idaho Library Special Collections and Archives`
 
 ### identifier:
+
 - The identifier field is used to preserve the unique identifier assigned to the object by the object's (usually physical) source collection.
 - Example value: `ARG-02-16-1993`
 
 ### type:
+
 - An object's type distinguishes between types of image, sound, text, etc. using a one- or two-value input. At minimum, the input should contain a value chosen from the [DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2003-02-12/){:target="_blank" rel="noopener"}. If using a second value, the second value does not need to relate to a controlled vocabulary, but should give further specification of the object type. The two values in a pair should be separated by a semicolon (`;`). See examples below.
 - Example value: `Image;StillImage`, `Image;MovingImage`, `Text`, `Sound`
 
 ### language: 
+
 - This field indicates the language associated with the object. Recommended best practice is to use a controlled vocabulary such as the [ISO 639-2 Codes for the Representation of Names and Languages](http://www.loc.gov/standards/iso639-2/php/code_list.php){:target="_blank" rel="noopener"} to designate language tags.
 - Example value: `en`, `fr`, `de`
 
 ### rights:
+
 - The rights field should include a free-text rights statement describing information about rights held in and over the object.
 - Example value: `Educational use includes non-commercial use of text and images in materials for teaching and research purposes. Digital reproduction rights granted by the University of Idaho Library. For other uses beyond free use, please contact University of Idaho Library Special Collections and Archives Department.`
 
 ### rightsstatement:
+
 - This field is a standardized rights statement, designated in the form of a URI. It should be presented as a [creativecommons.org](https://creativecommons.org/){:target="_blank" rel="noopener"} URI or a [rightsstatements.org](https://rightsstatements.org/en/){:target="_blank" rel="noopener"} URI.
 - Example value: `http://rightsstatements.org/vocab/NoC-US/1.0/`
