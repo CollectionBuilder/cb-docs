@@ -1,7 +1,7 @@
 ---
 title: Workflow for Multiple Collections 
 parent: Advanced
-nav_order: 6
+nav_order: 7
 ---
 
 # Developing a Workflow for Updating Multiple CollectionBuilder Collections
