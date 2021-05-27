@@ -6,9 +6,12 @@ nav_order: 2
 
 # CollectionBuilder-CONTENTdm Metadata
 
+CollectionBuilder-CONTENTdm supports creating collections of items from single or multiple CONTENTdm collections. 
+In most cases the first step will be to export metadata from CONTENTdm which will then be transformed to work with CollectionBuilder by adding a few required fields.
+
 ## Export Metadata from CONTENTdm
 
-1. Log in to the hosted CONTENTdm administration portal, click on the "collections" tab, and choose the collection you'd like to export from the "Current collection" dropdown menu. Once you've selected a collection, click the button labeled "change" to the right of the dropdown menu.
+1. Log in to the CONTENTdm administration portal, click on the "collections" tab, and choose the collection you'd like to export from the "Current collection" dropdown menu. Once you've selected a collection, click the button labeled "change" to the right of the dropdown menu.
 2. Further down the "Collection administration" page, locate the "Export" link, and click on it. This should lead you to an "Export metadata" page.
 3. Make sure the radio button next to "Tab-delimited" is checked, and then check the box immediately underneath to select the option "return field names in first record." Click the "next" button. This will lead to an "Export successful" page.
 4. Right click on the "export.txt" file and choose the option "Save Link As..."
@@ -21,53 +24,62 @@ Pull up the metadata template below to get started, and read through the rest of
 
 ## Metadata Template
 
-The button below will take you to the CollectionBuilder-CONTENTdm metadata template. It's stored in Google Sheets for easy re-use (just "Make a Copy" via the File menu to get started).
+We provide a metadata template on Google Sheets as an example or starting point for your collection (click the File menu and "Make a Copy" to get started).
+Also, check the demo metadata CSVs in the "_data" folder in your repository for more examples. 
 
 [CONTENTdm CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
 
----
+You do **not** need to exactly match the CollectionBuilder template. 
+Just ensure that you create the required fields following the conventions described below. 
+
+-----
 
 ## Required Fields for CollectionBuilder-CONTENTdm
 
 Without values in the fields below, CollectionBuilder will not work properly.
 
 ### objectid:
+
 - This is the field that CollectionBuilder uses to identify each object. This should be a unique string, all **lowercase** with no spaces or special characters as it will be used to form the item's URL. Underscores (`_`) and dashes (`-`) are okay; **slashes (`/`) should NOT be used in this field**.
 - Example value: `coll002`
 
 ### cdmid:
+
 - This is the unique identification number assigned to the item by CONTENTdm (the field titled "CONTENTdm number" in your exported metadata). For convenience, we generally make this correspond with the number in the item's objectid (ex. objectid: `coll002`, cdmid: `2`), but this correspondence is not necessary for CollectionBuilder to work.
 - Example value: `142`
 
 ### title: 
+
 - The title field is used to indicate the name of an item. This should be a short, descriptive set of words that identify the item. Each item may only have one title.
 - Example value: `Haystack Rock`
 
 ### format: 
-- This field indicates the item's media type. Since CollectionBuilder uses logic based on `format` to display objects, this is the most important field to ensure the interactive visualizations function correctly. If there are errors or anomalies, some pages will not work. The input for this field should be structured according to [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml){:target="_blank" rel="noopener"} standards, consisting of a type and a subtype concatenated with a slash (`/`) between them.
+
+- This field indicates the item's media type. Since CollectionBuilder uses logic based on `format` to display objects, this is the most important field to ensure the interactive visualizations function correctly. If there are errors or anomalies, some pages will not work as expected. The input for this field should be structured according to [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml){:target="_blank" rel="noopener"} standards, consisting of a type and a subtype concatenated with a slash (`/`) between them.
+- Example values:
     - Image: `image/jpeg`
     - Document: `application/pdf`
     - Audio: `audio/mp3`
     - Video: `video/mp4`
 
-If curating a collection of items from multiple CONTENTdm collections, the following field is required:
+### collectionid (only required for multiple CDM collections):
 
-### collectionid:
-- CB-CONTENTdm supports creating collections of items from single or multiple CONTENTdm collections. 
-Knowing the correct CONTENTdm collection name for every item is necessary to retrieve the correct objects from the API and to set up the search.
-- By default, the CONTENTdm collection ID (sometimes called "alias") is set in "_config.yml", as the value of `cdm-collection-id`. 
-If all your items are from a single CDM collection, only this value is necessary. 
-- If you have items from multiple CDM collections, add a column named `collectionid` to your metadata file.
-Each item will have it's collection alias in this column, which will be used in all API calls.
-If there is no `collectionid` value, the item will default to the value of `site.cdm-collection-id` (set in _config.yml).
-The nav links to CDM search and database will be derived from unique values in `collectionid` column plus `site.cdm-collection-id`.
+- *This column is only required if including items from multiple CONTENTdm collections!*
+- `collectionid` matches the "collection alias" of the CONTENTdm collection that contains the item.
+- The alias is a path assigned by CONTENTdm and can be found in CONTENTdm Admin on the Collections > Profile page, or by looking at the URL of the collection on the web. For example "https://cdm17254.contentdm.oclc.org/digital/collection/ui_ep/search" the collection alias is given after "/collection/", so would be `ui_ep`.
+- If this field is blank, it will default to the value of `cdm-collection-id` set in "_config.yml".
 - Example value: `barstock`
 
-### collectionid *(Only required if you are pulling in multiple CONTENTdm collections using the CollectionBuilder-CONTENTdm version)*:
-- This is the collection alias assigned by a collection creator in CONTENTdm.
-- Example Input: `archivalidaho`
+*More Info:* 
+CB-CONTENTdm supports creating collections of items from single or multiple CONTENTdm collections. 
+Knowing the correct CONTENTdm collection name for every item is necessary to retrieve the correct objects from the API and to set up the search.
+By default, the CONTENTdm collection ID ("alias") is set in "_config.yml", as the value of `cdm-collection-id`. 
+If all your items are from a single CDM collection, only this value in "_config.yml" is necessary and `collectionid` column is not necessary in your metadata file.
+The nav links to CDM search and database will be derived from unique values in the `collectionid` column plus `cdm-collection-id` in "_config.yml".
+
 
 ### youtubeid (Only required if your collection contains YouTube videos):
+
 - This is the unique string assigned to a video when it is uploaded to YouTube. An easy way to find this is to look at the url for your YouTube video. The ID will be the string attached to the end of this url: https://www.youtube.com/watch?v=
 - Example value: `sHhk1eAgopU`
 
