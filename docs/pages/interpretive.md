@@ -6,11 +6,11 @@ nav_order: 2
 
 # Interpretive Pages
 
-The best way to tell your collection's story is to create an interpretive page that incorporates collection items with descriptive text.
+The best way to tell your collection's story is to create an interpretive page that combines collection items with descriptive text.
 
-CollectionBuilder promotes an easy transition from curating your collection data to writing *with* it, allowing you to combine featured objects and text on exhibit pages in a format that engages your audience in analyzing and reflecting on the the wider, critical implications of your collection data.
+CollectionBuilder promotes an easy transition between curating your collection data to writing *with* it, allowing you to combine featured objects and text on interpretive exhibit pages in a format that engages your audience and encourages them to analyze and reflect on the the wider, critical implications of your collection data.
 
-You can create as many interpretive pages as you'd like, and use them for a variety of purposes, but most often our collections' interpretive pages take the form of About pages.
+You can create as many interpretive pages as you'd like, and use them for a variety of purposes, but most often our collections' interpretive pages take the form of an About page.
 
 For this reason, an "about.md" file is included in the CollectionBuilder template for you to edit following the instructions below, but you can also add other interpretive pages following the instructions in the [Add Page]({{ '/docs/pages/add_page/' | relative_url }}) section.
 
@@ -37,9 +37,9 @@ Jekyll has Markdown support built in, so it's a good skill to learn as you get f
 
 To add exciting visual features to your About page in addition to Markdown text, you can choose from a variety of include commands.
 
-Jekyll's include command is a really powerful feature that allows specific elements or content to be drawn into your site's pages from one central location.
+Jekyll's include command is a powerful feature that allows specific elements or content to be drawn into your site's pages from one central location.
 
-Let's look at the beginning of the "about.md" file for an example of an include:
+Let's look at the beginning of the "about.md" file for an example of an include.
 
 When you open the "about.md" file, you'll notice an include command at the top of the file that is pulling in the page's jumbotron image:
 
@@ -48,6 +48,9 @@ When you open the "about.md" file, you'll notice an include command at the top o
 ```
 
 In this example, you can locate the included file ("jumbotron.html") within the "_includes/feature" directory.
+
+A jumbotron is a [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/jumbotron/){:target="_blank" rel="noopener"} feature that consists of a large image with text on top of it.
+The featured image at the top of the CollectionBuilder About page template is a jumbotron.
 
 Note that in addition to calling the "jumbotron.html" file, this include also contains a variable, "objectid", with a URL value.
 The value of "objectid" specifies the image that should appear in the jumbotron at the top of the About page.
