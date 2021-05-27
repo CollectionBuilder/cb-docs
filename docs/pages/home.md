@@ -20,7 +20,7 @@ Some options:
 
 The Home page is composed of a number of include commands, arranged in three [Bootstrap columns](https://getbootstrap.com/docs/4.0/layout/grid/){:target="_blank" rel="noopener"}.
 
-Jekyll's include command is a really powerful feature that allows specific elements or content to be drawn into your site's pages from one central location.
+Jekyll's include command is a powerful feature that allows specific elements or content to be drawn into your site's pages from one central location.
 
 An example include command looks like:  
 `{% raw %}{% include index/carousel.html %}{% endraw %}`
