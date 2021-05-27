@@ -21,5 +21,5 @@ Make sure you're following the guidelines below, otherwise CollectionBuilder may
 
 1. Highlight the first row of your CSV (the row containing field names) 
 2. Click the 'Command Palette' option in the View menu 
-3. Start typing 'Transform to lowercase'--the option will appear!"
+3. Start typing 'Transform to lowercase'--the option will appear!
 </div>

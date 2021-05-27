@@ -22,3 +22,4 @@ If your data will require a good amount of wrangling to get it into CollectionBu
 ## Data Dictionary
 
 For a more detailed description of how each CollectionBuilder metadata field is defined and mapped, see the [CollectionBuilder Data Dictionary](/images/data_dictionary.pdf){:target="_blank" rel="noopener"}.
+Our basic template is based on best practices for interoperable Dublin Core metadata.
