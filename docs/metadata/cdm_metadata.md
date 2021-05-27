@@ -15,12 +15,11 @@ In most cases the first step will be to export metadata from CONTENTdm which wil
 2. Further down the "Collection administration" page, locate the "Export" link, and click on it. This should lead you to an "Export metadata" page.
 3. Make sure the radio button next to "Tab-delimited" is checked, and then check the box immediately underneath to select the option "return field names in first record." Click the "next" button. This will lead to an "Export successful" page.
 4. Right click on the "export.txt" file and choose the option "Save Link As..."
-5. Name the file and save it to your computer.
-6. Create a new, blank Sheet in Google Sheets. Click on File > Import. Click on the "Upload" tab. Drag and drop the export.txt file to upload it to Google Sheets.
+5. Name the file and save it to your computer. (Do not directly open with Excel as this will jumble the UTF-8 encoding!)
+6. Create a new, blank Sheet in Google Sheets. Click on File > Import. Click on the "Upload" tab. Select or drag and drop the exported metadata file to upload it to Google Sheets.
 7. In the "Import file" popup, for "Import location" select "Replace spreadsheet," and for "Separator type" select "Tab." Click the "Import data" button.
 
 Now you're ready to begin adding to and editing your metadata to make sure it has the fields required for CollectionBuilder to work.
-Pull up the metadata template below to get started, and read through the rest of this page for field definitions and formatting advice.
 
 ## Metadata Template
 
