@@ -75,4 +75,4 @@ Note: Ruby 3.0.1 is the latest stable version as of this writing; if you are rea
 
 ## Having trouble?
 
-If this installation did not work, see our more detailed guide, [How to Install Ruby on a Mac](https://lib-static.github.io/howto/howtos/installrubymac.html){:target="_blank" rel="noopener"}, check out the [Jekyll install on mac docs](https://jekyllrb.com/docs/installation/macos/), or try Googling any error message or other hindrance you encountered.
+If this installation did not work, check out the [Jekyll install on mac docs](https://jekyllrb.com/docs/installation/macos/), or try Googling any error message or other hindrance you encountered.
