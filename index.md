@@ -11,11 +11,7 @@ Everything you ever wanted to know about how to use CollectionBuilder-GH, Collec
 
 ## Introduction
 
-CollectionBuilder was designed with learning in mind--creating a CollectionBuilder project is a scaffolded process building web and data literacy skills with the outcome of generating awesome digital collections!
-Learning something new is never easy, but we've tried our best to make the documentation and CollectionBuilder templates comprehensible to novice users.
-
-Some initial setup is required to develop on your personal computer. 
-However, once your environment is complete, you will be able to agilely generate CollectionBuilder digital collections, exhibits, and scholarship projects--or any type of static web site!
+CollectionBuilder was designed with learning in mind. The project's workflow is scaffolded in order to help users  build web and data literacy skills as they progress towards building and deploying new digital exhibits. To that end, we've worked hard to make this documentation comprehensible for the novice user moving through the sections step-by step and useful for more advanced users searching for specific content.
 
 ## Types
 
