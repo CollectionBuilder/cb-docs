@@ -21,17 +21,11 @@ To edit the About page, navigate to the "pages" directory and find and open the 
 ### Markdown
 
 The about page is written in Markdown (thus the ".md" extension). 
-Jekyll has Markdown support built in, so it's a good skill to learn as you get further into this type of development. 
-[Markdown](https://daringfireball.net/projects/markdown/syntax){:target="_blank" rel="noopener"} is a quick and easy standard to write documents that can be converted into HTML for the web.  
+[Markdown](https://daringfireball.net/projects/markdown/syntax){:target="_blank" rel="noopener"} is a standard to simplify writing content for the web.
+When Jekyll builds the site, the Markdown is converted into HTML for the web.
+Markdown is used for writing content in many blogging platforms, static generators, and everywhere on GitHub, so it's a good skill to learn as you get further into this type of development. 
 
-<div class="alert alert-blue" markdown="1">
-
-#### Markdown Resources
-
-- CommonMark [Cheatsheet](https://commonmark.org/help/) and [10 Minute Tutorial](https://commonmark.org/help/tutorial/)
-- GitHub [Mastering Markdown tutorial](https://guides.github.com/features/mastering-markdown/) and [Markdown reference](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
-
-</div>
+Check our [Markdown glossary entry]({{ '/docs/glossary/#markdown' | relative_url }}) for resources and tutorials!
 
 ### Includes
 
