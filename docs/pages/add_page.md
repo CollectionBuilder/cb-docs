@@ -54,19 +54,19 @@ Navigate to the "_data" directory and open the "config-nav.csv" file.
 To add your page as a new nav bar entry:
 
 - create a new row in the CSV with info for your new page. 
-- Fill in a value for `display_text` (the label that will show up in the nav bar) and `link` (matching the permalink of your page). Leave `dropdown_parent` blank.
+- Fill in a value for `display_text` (the label that will show up in the nav bar) and `stub` (matching the permalink of your page). Leave `dropdown_parent` blank.
 ```
-display_text,link,dropdown_parent
+display_text,stub,dropdown_parent
 Collection History,/history.html,
 About,/about.html,
 ```
 
 To add your page as a dropdown nav item:
 
-- create a new row for the parent, i.e. the nav option that you will click to open the dropdown. This row will have `display_text` filled, and nothing else. Alternatively, you may want to use an existing row, such as "About", by deleting the `link` value.
-- Fill in a value for `display_text` (the label that will show up in the dropdown), `link` (matching the permalink of your page), and `dropdown_parent` (matching the `display_text` of the parent you set up).
+- create a new row for the parent, i.e. the nav option that you will click to open the dropdown. This row will have `display_text` filled, and nothing else. Alternatively, you may want to use an existing row, such as "About", by deleting the `stub` value.
+- Fill in a value for `display_text` (the label that will show up in the dropdown), `stub` (matching the permalink of your page), and `dropdown_parent` (matching the `display_text` of the parent you set up).
 ```
-display_text,link,dropdown_parent
+display_text,stub,dropdown_parent
 About,,
 Collection History,/history.html,About
 About the Collection,/about.html,About
