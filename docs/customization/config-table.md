@@ -7,7 +7,7 @@ nav_order: 6
 # Table Configuration (config-table.csv)
 
 CollectionBuilder uses [DataTables](https://datatables.net/) to generate a table that can be searched, sorted, and downloaded as a whole or in a filtered version.
-The table appears on the collection's "Data" page, and the `_data/config-table.csv` allows you to add or remove data from the table and adjust its display name.
+The table appears on the collection's "Data" page, and the "_data/config-table.csv" allows you to add or remove data from the table and adjust its display name.
 
 We recommend not using more than 5 or 6 fields here, as the table can become overcrowded. 
 

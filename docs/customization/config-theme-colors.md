@@ -12,7 +12,7 @@ The custom classes can override existing Bootstrap theme colors or create new co
 
 By default, these options are not used.
 
-To add custom colors, edit the two columns in the `_data/config-theme-colors.csv`.
+To add custom colors, edit the two columns in the "_data/config-theme-colors.csv".
 The columns are described below, and an [example](#example) is provided for your convenience:
 
 ### color_class: 

@@ -13,7 +13,7 @@ We also use subject links throughout the site that link back into the browse pag
 So, for instance, if on the Subjects page, you clicked a button for "Forests," you would actually be clicking a link whose url ended as "browse.html#forests." 
 The Browse page would take anything after the hashtag (`#`) and filter the collection's cards by it. 
 
-The `_data/config-browse.csv` allows you to control which metadata appears on a card for each item. 
+The "_data/config-browse.csv" allows you to control which metadata appears on a card for each item. 
 Title appears on the card automatically. 
 After that, you can add whatever metadata you'd like to the CSV, as well as determine how that metadata will be displayed. 
 

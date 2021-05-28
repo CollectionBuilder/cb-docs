@@ -6,7 +6,7 @@ nav_order: 2
 
 # Metadata / Item Page Configuration (config-metadata.csv)
 
-The most important CSV (if you're measuring by the number of pages it creates!), the `_data/config-metadata.csv` controls how an item's metadata is displayed on its web page. 
+The most important CSV (if you're measuring by the number of pages it creates!), the "_data/config-metadata.csv" controls how an item's metadata is displayed on its web page. 
 It also configures the machine-readable meta markup in the underlying code. 
 
 The columns are described below, and an [example](#example) is provided for your convenience: 
@@ -19,7 +19,7 @@ The columns are described below, and an [example](#example) is provided for your
 
 ### browse_link: 
 - *Options*: `true` or leave blank. 
-- This option controls if the element will be represented as a link from the item page back to the Browse page. It is most useful for those fields, like "subject", that often contain multiple values (separated by a semicolon). So, for instance, if you wanted to make the subjects in your "subject" field separate out into individual links, you'd enter `true` in the third column of the `config-metadata.csv`
+- This option controls if the element will be represented as a link from the item page back to the Browse page. It is most useful for those fields, like "subject", that often contain multiple values (separated by a semicolon). So, for instance, if you wanted to make the subjects in your "subject" field separate out into individual links, you'd enter `true` in the third column of the "config-metadata.csv".
 
 ---
 
