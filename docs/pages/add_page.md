@@ -29,28 +29,44 @@ layout: about
 permalink: /history.html
 ---
 ```
+
 Jekyll will use these front matter variables to generate your new page, so you'll need to replace the values in the example above with your own:
+
 - **title**: the title of the page.
 - **layout**: this specifies an HTML layout for the page, chosen from a layout in the "_layouts" directory. For interpretive pages, we recommend using the `about` layout because it allows for easy reading. But if you're creating another type of page (say, another map visualization) you'll want to select from one of the other existing layouts or create your own. Check out the front matter in the other files in the "pages" directory for examples.
-- **permalink**: this variable sets the page's URL (it will usually begin with a forward slash (`/`) and end with `.html`).
+- **permalink**: sets the page's URL, i.e. where it is located when the site is generated.
+    - CollectionBuilder templates gather all pages in the "page" folder to keep things organized. The `permalink` value allows us to control where the page's final ".html" file will be located in the site output. 
+    - The permalink value: 
+        - will start with a `/` forward slash (meaning its location starts after the site's `url` + `baseurl`)
+        - have a base filename for the page (usually matching the Markdown file's base name, e.g. "history.md" --> "history")
+        - will usually end in `.html` extension (since it will be an HTML page!). If you want to use "pretty links" style, the permalink can end in a slash instead, e.g. `permalink: /history/`.
+        - this is a URL and sets the filename so no spaces or weird characters! 
+    - For example, the file "pages/about-cats.md" might have `permalink: /about-cats.html`
 - You may need to add additional front matter variables, depending on the page you're creating. For instance, [three more variables]({{ '/docs/advanced/cloudpage/#create-a-new-cloud-page-using-cloud-layout-and-front-matter' | relative_url }}) are needed to create a new cloud page.
 
 ### Add a New Page to the Nav
 
 Your users will need a way to access the page you just created.
 In most cases, you'll want to add a path to it in the site's navigation menu, either directly to the nav bar itself, or as a dropdown option under a current nav element.
-The following demonstrates both options:
 
-1. Navigate to the "_data" directory and open the "config-nav.csv" file.
-2. To add a new nav bar entry, create a new row in the CSV with your new page data:
+Navigate to the "_data" directory and open the "config-nav.csv" file.
+
+To add your page as a new nav bar entry:
+
+- create a new row in the CSV with info for your new page. 
+- Fill in a value for `display_text` (the label that will show up in the nav bar) and `link` (matching the permalink of your page). Leave `dropdown_parent` blank.
 ```
-display_text,stub,dropdown_parent
+display_text,link,dropdown_parent
 Collection History,/history.html,
-About the Collection,/about.html,
+About,/about.html,
 ```
-3. To add your page as a dropdown, remove the `stub` value for a current page, add your page data as a new row, and include the parent page's `display_text` value as the value for your new page's `dropdown_parent`:
+
+To add your page as a dropdown nav item:
+
+- create a new row for the parent, i.e. the nav option that you will click to open the dropdown. This row will have `display_text` filled, and nothing else. Alternatively, you may want to use an existing row, such as "About", by deleting the `link` value.
+- Fill in a value for `display_text` (the label that will show up in the dropdown), `link` (matching the permalink of your page), and `dropdown_parent` (matching the `display_text` of the parent you set up).
 ```
-display_text,stub,dropdown_parent
+display_text,link,dropdown_parent
 About,,
 Collection History,/history.html,About
 About the Collection,/about.html,About
