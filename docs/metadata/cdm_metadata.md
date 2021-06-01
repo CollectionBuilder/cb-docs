@@ -23,7 +23,7 @@ Now you're ready to begin adding to and editing your metadata to make sure it ha
 
 ## Metadata Template
 
-We provide a metadata template on Google Sheets as an example or starting point for your collection (click the File menu and "Make a Copy" to get started).
+We provide a metadata template on Google Sheets as an example or starting point for your collection (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy" to get started).
 Also, check the demo metadata CSVs in the "_data" folder in your repository for more examples. 
 
 [CONTENTdm CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}

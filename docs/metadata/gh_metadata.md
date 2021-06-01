@@ -9,7 +9,7 @@ nav_order: 1
 ## Metadata Template
 
 If you are starting your collection from scratch, the easiest way to ensure you have the required fields is to use the CollectionBuilder metadata template. 
-The template is available on Google Sheets via the link below (click the File menu and "Make a Copy" to get started), or in your project repository as "_data/metadata-template.csv".
+The template is available on Google Sheets via the link below (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy" to get started), or in your project repository as "_data/metadata-template.csv".
 This template is a starting point--fill in only what is relevant for your content and feel free to add more columns!
 
 If transforming existing metadata, you do **not** need to exactly match the CollectionBuilder template. 
