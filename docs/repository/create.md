@@ -40,6 +40,21 @@ Using GitHub's "fork" option should be reserved for situations where you would l
 
 ------------
 
+## Add a GitHub Collaborator
+
+Most digital collection projects are collaborative, so you will probably want to add your collaborators to your GitHub project repository.
+
+1. On the repository home page, click "Settings" tab
+2. On left side nav, click "Manage access"
+3. Click the green "invite teams or people" button
+4. Type in a GitHub user name to add. The search bar will show suggestions based on what you type, select the correct account to add.
+5. Select their level of access to the repository. Generally if you want people to be able to edit code in the repository, give them "Write" access. Then click the green "Add" button.
+
+Once added your collaborator will receive an email with the invitation to join your repository.
+They will have to confirm the invitation before being added!
+
+------------
+
 ## Delete a Repository
 
 Sometimes you will want to delete a GitHub repository. 
