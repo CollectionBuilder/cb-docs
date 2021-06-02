@@ -15,11 +15,11 @@ The columns are described below, and an [example](#example) is provided for your
 - This variable corresponds to the field listed in the metadata for the collection. For instance, if you have a metadata field called "original-collection", you would put `original-collection` here. 
 
 ### display_name: 
-- This variable is how you'd like the field to be described on the item page. So, using the example above, if you'd like the field "original-collection" to appear as "Original Archival Collection" on the item page, you'd enter "Original Archival Collection" in the second column.
+- This variable is how you'd like the field to be described on the item page. So, using the example above, if you'd like the field "original-collection" to appear as "Original Archival Collection" on the item page, you'd enter `Original Archival Collection` in the second column.
 
 ### browse_link: 
 - *Options*: `true` or leave blank. 
-- This option controls if the element will be represented as a link from the item page back to the Browse page. It is most useful for those fields, like "subject", that often contain multiple values (separated by a semicolon). So, for instance, if you wanted to make the subjects in your "subject" field separate out into individual links, you'd enter `true` in the third column of the "config-metadata.csv".
+- This option controls if the element will be represented as a link from the item page back to the Browse page. It is most useful for those fields, like "subject", that often contain multiple values (separated by a semicolon). So, for instance, if you wanted to make the subjects in your "subject" field separate out into individual links, you'd enter `true` in the third column of the "_data/config-metadata.csv".
 
 ---
 
@@ -27,7 +27,7 @@ The following two options are used by **CDM and SA only**, and are not necessary
 However, configuring these options adds rich machine readable markup to each item page, making your objects more discoverable by search engines.
 
 ### dc_map: 
-- *Options:* the prefix `DCTERMS` plus a property name from the [DC Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/){:target='_blank' rel='noopener'} namespace, written like: `DCTERMS.term_from_terms_namespace`
+- *Options:* the prefix `DCTERMS`, plus a property name from the [DC Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/){:target='_blank' rel='noopener'} namespace, written like: `DCTERMS.term_from_terms_namespace`
 - This option allows you to map your metadata field to a Dublin Core property to be added in machine readable meta markup. So, continuing with our example, if you'd like to map the "original-collection" field to be read as a [Dublin Core Source](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source){:target='_blank' rel='noopener'}, you'd enter `DCTERMS.source` in the third column.
 - Recommended fields to map include: 
     - `DCTERMS.title`
