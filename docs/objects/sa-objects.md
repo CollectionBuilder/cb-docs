@@ -59,10 +59,7 @@ It is a standard part of all Ruby installs, so if you are using Jekyll, you have
 CB-SA's `generate_derivatives` task, automates creating a small and thumb image from all images and PDFs contained within the "objects/" directory in your project repository. 
 It outputs the derivatives to "objects/small" and "objects/thumbs" following the naming convention.
 
-Before using the command, you will need to install ImageMagick and Ghostscript on your local machine:
-
-- **ImageMagick** is a popular open source tool for processing images. Visit the [ImageMagick download page](https://imagemagick.org/script/download.php) to get the installer for your OS, choosing the suggested version. Install following the default options.
-- **Ghostscript** is a popular open source tool for working with PDFs. Visit the [Ghostscript download page](https://www.ghostscript.com/download/gsdnld.html) and choose the AGPL release for your OS. Install following the default options.
+Before using the command, you will need to [install ImageMagick and Ghostscript]({{ '/docs/software/optional.html' | relative_url }}) on your local machine.
 
 Once the required software is installed, follow these steps to generate derivative images:
 
