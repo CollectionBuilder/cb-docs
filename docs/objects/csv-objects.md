@@ -8,21 +8,60 @@ nav_order: 4
 
 Since CollectionBuilder-CSV adds object information into the metadata CSV, how you prepare objects is very flexible. 
 You can follow the workflows described for any of the other templates, or combine multiple approaches to curate items from diverse sources.
-Ultimately, the important step is to get the information about where your objects and object derivatives are located written into your [metadata fields]({{ '/docs/metadata/csv_metadata/' | relative_url }}).
+
+The important step is to get the information about where your objects and object derivatives are located written into your [metadata fields]({{ '/docs/metadata/csv_metadata/' | relative_url }}).
+In general, CB-CSV supports three files associated with each record via links added to these metadata columns:
+
+- `object_download` - the full sized digital object of any format, 
+    - this could be any format and size you would like to provide to your users, or a link to external resource such as YouTube videos or an article page.
+- `image_small` - a web quality image used to represent objects on Item pages, or in visualizations where a larger than thumb image would be useful.
+    - for all Item types should be JPGs approximately 800x800 px max.
+- `image_thumb` - a web quality image used to represent the object on visualization pages (i.e. Home, Browse, Map, and Timeline), in a fast, user friendly file size.
+    - for all Item types should be JPGs approximately 400x400 px max.
+
+Items are not required to have any objects (in which case they are metadata only records)!
+Items without `image_small` or `image_thumb` will be represented by icons based on their `object_template` or `format` field in visualization pages.
+
+Generally, the best approach for filling in the `object_download`, `image_small`, and `image_thumb` columns will be to use "recipes" for each group of object type in your collection.
+You will likely want to gather the values necessary for each recipe in their own columns and use formulas in Sheets or OpenRefine to create the final links.
+
+For example, if a collection project is using objects processed using the `generate_derivatives` Rake task similar to SA, you would set up a column containing the filename of all objects.
+Based on that column you could add the URL pattern for your hosting location to fill in `object_download`, and use the base filename to fill in `image_small` and `image_thumb`.
+
+------------------
 
 ## Stand Alone Objects
 
 See [SA objects docs]({{ '/docs/objects/sa-objects/' | relative_url }}) for details of preparing a folder of image and PDF objects, and creating derivatives using our Rake task.
 
-Once you have prepped your objects and deployed them, you will add their location to your metadata fields.
+Once you have prepped your objects and decided where to deploy them, you will add their location to your metadata fields.
+This is generally done by starting from a `filename` column in the metadata listing the full filename for each record.
+From the `filename` column use formulas in Sheets or OpenRefine to create URLs pointing to the files.
+
+For example:
+
+- `object_download` 
+    - for object in project: `/objects/demo_002.pdf`
+    - for object externally hosted: `https://example-host.org/collection/demo_002.pdf`
+    - Recipe: `https://example-host.org/collection/` + "filename"
+- `image_small`
+    - for object in project: `/objects/small/demo_002_sm.jpg`
+    - for object externally hosted: `https://example-host.org/collection/small/demo_002_sm.jpg`
+    - Recipe: `https://example-host.org/collection/small/` + "filename" - "extension" + `_sm.jpg`
+- `image_thumb`
+    - for object in project: `/objects/thumbs/demo_002_th.jpg`
+    - for object externally hosted: `https://example-host.org/collection/thumbs/demo_002_th.jpg`
+    - Recipe: `https://example-host.org/collection/thumbs/` + "filename" - "extension" + `_th.jpg`
 
 ------------------
 
 ## CONTENTdm Objects
 
 The CONTENTdm API can be used to retrieve display images and file downloads from any CONTENTdm repository. 
-In general, it best to use IIIF for image objects and CDM "utils" API for non-image items.
 To use the API you will need to know the "Collection Alias" and "CONTENTdm number" of each object, see our [CDM metadata docs]({{ '/docs/metadata/cdm_metadata/' | relative_url }}) for more info on finding that information.
+
+Once you have columns in your metadata for "Collection Alias" and "CONTENTdm number" you can use formulas in Sheets or OpenRefine based on the CDM APIs to fill in `object_download`, `image_small`, and `image_thumb` columns for different item types.
+In general, it best to use IIIF for image objects and CDM "utils" API for non-image items.
 
 - [CONTENTdm API reference](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/API_Reference/CONTENTdm_API)
 - [CONTENTdm IIIF API reference](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/API_Reference/IIIF_API_reference)

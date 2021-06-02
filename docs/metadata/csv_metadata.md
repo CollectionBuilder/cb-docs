@@ -59,7 +59,7 @@ CollectionBuilder-CSV aims to provide API recipes to generate the links for a va
 ### object_download: 
 
 - a full URL to download the full quality digital object *or* relative path if items are contained with in the project.
-- Most objects will have an `object_download value`, the link where the digital file can be downloaded or accessed in a different platform.
+- Most objects will have an `object_download` value, the link where the digital file can be downloaded or accessed in a different platform.
 - If this field is blank, the item will become a metadata only record.
 - Example value for object in project: `/objects/demo_002.pdf`
 - Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/max/0/default.jpg`
