@@ -10,7 +10,7 @@ CollectionBuilder-SA is designed for large, stand alone collections self-hosted 
 The approach is similar to CollectionBuilder-GH, but is more robust and goes beyond the limitations of hosting on GitHub Pages.
 
 CB-SA requires that you generate a thumb and small image derivative or representation for each object in your collection (for all item formats), in additional to providing the full sized object for download.
-This can be automated using the included Rake tasks (see below) or manually created using other software.
+This can be automated using the included Rake tasks ([see below](#generate-derivatives-rake-task)) or manually created using other software.
 
 It is important to note that collection object files will **not** be committed into your project (thus not stored on GitHub). 
 Once your objects are prepared you will deploy them to the web along side your static site or on an external platform.
@@ -31,7 +31,7 @@ The first step is to gather your collection's full sized digital objects in one 
 ### Object Derivatives
 
 Once your full sized digital objects are organized, you will need to prepare display derivatives for every item.
-This process can be automated for TIF, JPG, PNG, and PDF files using the Rake task.
+This process can be automated for TIF, JPG, PNG, and PDF files using the [Rake task](#generate-derivatives-rake-task).
 
 Each collection object will have a "small" and "thumbs" JPG image for display on the collection web pages. 
 The full sized and derivative files will be organized inside your "objects" folder:
@@ -59,7 +59,7 @@ It is a standard part of all Ruby installs, so if you are using Jekyll, you have
 CB-SA's `generate_derivatives` task, automates creating a small and thumb image from all images and PDFs contained within the "objects/" directory in your project repository. 
 It outputs the derivatives to "objects/small" and "objects/thumbs" following the naming convention.
 
-Before using the command, you will need to [install ImageMagick and Ghostscript]({{ '/docs/software/optional.html' | relative_url }}) on your local machine.
+Before using the command, you will need to [install ImageMagick and Ghostscript]({{ '/docs/software/optional/' | relative_url }}) on your local machine.
 
 Once the required software is installed, follow these steps to generate derivative images:
 
