@@ -12,12 +12,15 @@ You can follow the workflows described for any of the other templates, or combin
 The important step is to get the information about where your objects and object derivatives are located written into your [metadata fields]({{ '/docs/metadata/csv_metadata/' | relative_url }}).
 In general, CB-CSV supports three files associated with each record via links added to these metadata columns:
 
-- `object_download` - the full sized digital object of any format, 
-    - this could be any format and size you would like to provide to your users, or a link to external resource such as YouTube videos or an article page.
+- `object_download` - the full sized digital object of any format.
+    - this could be any format and size you would like to provide to your users, or a link to external resource such as YouTube videos or a link to an article.
+    - the object may be hosted with the project, in an external location, or retrieved from an API.
 - `image_small` - a web quality image used to represent objects on Item pages, or in visualizations where a larger than thumb image would be useful.
     - for all Item types should be JPGs approximately 800x800 px max.
+    - the image may be hosted with the project, in an external location, or retrieved from an API.
 - `image_thumb` - a web quality image used to represent the object on visualization pages (i.e. Home, Browse, Map, and Timeline), in a fast, user friendly file size.
     - for all Item types should be JPGs approximately 400x400 px max.
+    - the image may be hosted with the project, in an external location, or retrieved from an API.
 
 Items are not required to have any objects (in which case they are metadata only records)!
 Items without `image_small` or `image_thumb` will be represented by icons based on their `object_template` or `format` field in visualization pages.
@@ -25,8 +28,7 @@ Items without `image_small` or `image_thumb` will be represented by icons based 
 Generally, the best approach for filling in the `object_download`, `image_small`, and `image_thumb` columns will be to use "recipes" for each group of object type in your collection.
 You will likely want to gather the values necessary for each recipe in their own columns and use formulas in Sheets or OpenRefine to create the final links.
 
-For example, if a collection project is using objects processed using the `generate_derivatives` Rake task similar to SA, you would set up a column containing the filename of all objects.
-Based on that column you could add the URL pattern for your hosting location to fill in `object_download`, and use the base filename to fill in `image_small` and `image_thumb`.
+Examples are given for a variety of object types below.
 
 ------------------
 
