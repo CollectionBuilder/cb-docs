@@ -4,6 +4,10 @@ parent: Objects
 nav_order: 4
 ---
 
+{:.alert .alert-yellow }
+CollectionBuilder-CSV is under active development!
+This doc content related to CSV is a draft.
+
 # Collection Objects for CollectionBuilder-CSV
 
 Since CollectionBuilder-CSV adds object information into the metadata CSV, how you prepare objects is very flexible. 

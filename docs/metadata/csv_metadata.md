@@ -4,6 +4,10 @@ parent: Metadata
 nav_order: 3
 ---
 
+{:.alert .alert-yellow }
+CollectionBuilder-CSV is under active development!
+This doc content related to CSV is a draft.
+
 # CollectionBuilder-CSV Metadata
 
 CollectionBuilder-CSV starts from the same basic metadata template of other CB types, but adds a few technical fields to increase the flexibility of the template.
