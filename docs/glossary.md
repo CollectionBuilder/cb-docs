@@ -8,7 +8,7 @@ nav_order: 10
 Below are some important concepts, software, standards, and other things you might encounter in these Docs and working with CollectionBuilder. 
 
 {% assign terms = site.glossary %}
-{% for t in terms %}- [{{ t.title }}]({{ t.title | slugify }})
+{% for t in terms %}- [{{ t.title }}](#{{ t.title | slugify }})
 {% endfor %}
 
 {% for t in terms %}
