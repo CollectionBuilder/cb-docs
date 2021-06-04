@@ -50,12 +50,11 @@ CollectionBuilder-CSV aims to provide API recipes to generate the links for a va
 - A template type used for the Item page *and* used in logic to choose representations in other pages. 
 - If blank the object will default to a generic item page. 
 - Supported values in `display_template` match files found in "_layouts".
-- Default supported options: `item_image`,`item_pdf`, `item_video`, `item_audio`, `item_video_embed`, `item_record`, `item`. 
+- Default supported options: `item_image`,`item_pdf`, `item_video`, `item_audio`, `item_record`, `item`. 
     - `item_image`: Displays image_small if available, with fall back to object_download. Adds LightGallery view to open images full screen using object_download, with fall back to image_small.
     - `item_pdf`: Displays image_small if available, with fall back to image_thumb, or a pdf icon.
-    - `item_video`: Uses `<video>` element to embed video file from object_download as src.
+    - `item_video`: Displays a video embedded on the page with default support for video files (using `<video>` element with object_download as src), YouTube (from link in object_download), or Vimeo videos (from link in object_download).
     - `item_audio`: Uses `<audio>` element to embed audio file from object_download as src.
-    - `item_video_embed`: default support for YouTube or Vimeo videos.
     - `item_record`: metadata only record.
     - `item`: generic fallback item page, displays image or icon depending on "image_thumb"
 - See "docs/item-pages.md" in your repository for more details.

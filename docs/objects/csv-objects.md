@@ -113,7 +113,7 @@ With collections that have multiple scan qualities, this may still result in inc
 
 ## YouTube Objects
 
-YouTube video items are supported in Item pages via the `item_video_embed` "display_template". 
+YouTube video items are supported in Item pages via the `item_video` "display_template". 
 Provide the full YouTube video link in "object_download" field. 
 Use the API recipes below to fill in the "image_small" and "image_thumb" fields if desired.
 
@@ -144,5 +144,5 @@ For more control, you can use [YouTube Data API](https://developers.google.com/y
 
 ## Vimeo Objects
 
-Vimeo video items are supported in Item pages via the `item_video_embed` "display_template".
+Vimeo video items are supported in Item pages via the `item_video` "display_template".
 Provide the full Vimeo video link in "object_download" field. 
