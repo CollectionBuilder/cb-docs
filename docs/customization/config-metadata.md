@@ -48,7 +48,7 @@ However, configuring these options adds rich machine readable markup to each ite
     - `description`
     - `keywords`
     - `contentLocation`
-    - `encodingFormat` (This corresponds to the [format](metadata#required) field of CollectionBuilder items)
+    - `encodingFormat` (This corresponds to the [format]({{ '/docs/metadata/gh_metadata/#format' | relative_url }}) field of CollectionBuilder items)
     - `license` (Should only be used with a standardized rights URL)
 
 ---
