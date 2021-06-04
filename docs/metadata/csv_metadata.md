@@ -45,11 +45,11 @@ These fields should be filed out in your spreadsheet using formulas / recipes de
 This provides flexibility to include objects from multiple sources and to generate the URLs using a variety of approaches without needing to modify the template code.
 CollectionBuilder-CSV aims to provide API recipes to generate the links for a variety of hosting solutions--but this work is done on the metadata, not embedded in the template code logic.
 
-### object_template:
+### display_template:
 
 - A template type used for the Item page *and* used in logic to choose representations in other pages. 
 - If blank the object will default to a generic item page. 
-- Supported values in `object_template` match files found in "_layouts".
+- Supported values in `display_template` match files found in "_layouts".
 - Default supported options: `item_image`,`item_pdf`, `item_video`, `item_audio`, `item_video_embed`, `item_record`, `item`. 
     - `item_image`: Displays image_small if available, with fall back to object_download. Adds LightGallery view to open images full screen using object_download, with fall back to image_small.
     - `item_pdf`: Displays image_small if available, with fall back to image_thumb, or a pdf icon.
@@ -80,7 +80,7 @@ Do not include the `baseurl` value that you set in "_config.yml", since this wil
 - a full URL to a small image representation of the object *or* relative path if items are contained with in the project.
 - The small image is used to represent objects on Item pages, or in visualizations where a larger than thumb image would be useable.
 - For non-image items having a small image can useful to provide users a visual representation for the object (i.e. an audio cover).
-- If this field is blank, the item will be represented by a icon based on it's `object_template` or `format` field.
+- If this field is blank, the item will be represented by a icon based on it's `display_template` or `format` field.
 - As a general guideline, small images should be JPGs approximately 800x800 px max.
 - Example value for object in project: `/objects/small/demo_002_sm.jpg`
 - Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/pct:20/0/default.jpg`
@@ -90,7 +90,7 @@ Do not include the `baseurl` value that you set in "_config.yml", since this wil
 
 - a full URL to a thumb image representation of the object *or* relative path if items are contained with in the project.
 - The thumb image is used to represent the object on visualization pages (i.e. Home, Browse, Map, and Timeline), in a fast, user friendly file size.
-- If this field is blank, the template will use a icon to represent the object based on it's `object_template` or `format` field.
+- If this field is blank, the template will use a icon to represent the object based on it's `display_template` or `format` field.
 - As a general guideline, thumb images should be JPGs approximately 400x400 px max.
 - Example value for object in project: `/objects/thumbs/demo_002_th.jpg`
 - Example value for external object: `https://digital.lib.uidaho.edu/utils/getthumbnail/collection/expforsav/id/390`
@@ -99,7 +99,7 @@ Do not include the `baseurl` value that you set in "_config.yml", since this wil
 ### format: 
 
 - This field indicates the object's media type.
-- Format is used as a fall back to determine representations if an item does not have a `object_template` or `image_thumb`.
+- Format is used as a fall back to determine representations if an item does not have a `display_template` or `image_thumb`.
 - The input for this field should be structured according to [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml){:target="_blank" rel="noopener"} standards, consisting of a type and a subtype concatenated with a slash (`/`) between them.
 - Common values:
     - Image: `image/jpeg`

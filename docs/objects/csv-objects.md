@@ -27,7 +27,7 @@ In general, CB-CSV supports three files associated with each record via links ad
     - the image may be hosted with the project, in an external location, or retrieved from an API.
 
 Items are not required to have any objects (in which case they are metadata only records)!
-Items without `image_small` or `image_thumb` will be represented by icons based on their `object_template` or `format` field in visualization pages.
+Items without `image_small` or `image_thumb` will be represented by icons based on their `display_template` or `format` field in visualization pages.
 
 Generally, the best approach for filling in the `object_download`, `image_small`, and `image_thumb` columns will be to use "recipes" for each group of object type in your collection.
 You will likely want to gather the values necessary for each recipe in their own columns and use formulas in Sheets or OpenRefine to create the final links.
@@ -113,7 +113,7 @@ With collections that have multiple scan qualities, this may still result in inc
 
 ## YouTube Objects
 
-YouTube video items are supported in Item pages via the `item_video_embed` "object_template". 
+YouTube video items are supported in Item pages via the `item_video_embed` "display_template". 
 Provide the full YouTube video link in "object_download" field. 
 Use the API recipes below to fill in the "image_small" and "image_thumb" fields if desired.
 
@@ -144,5 +144,5 @@ For more control, you can use [YouTube Data API](https://developers.google.com/y
 
 ## Vimeo Objects
 
-Vimeo video items are supported in Item pages via the `item_video_embed` "object_template".
+Vimeo video items are supported in Item pages via the `item_video_embed` "display_template".
 Provide the full Vimeo video link in "object_download" field. 
