@@ -1,6 +1,9 @@
 ---
 title: Too Quick Start
+nav_order: 12
 ---
+
+# Too Quick Start
 
 If you are familiar with Jekyll and GitHub, the basic concepts and set up of CollectionBuilder will be pretty straightforward to understand.
 Instructions below provide the *way too fast* steps to creating a collection.

@@ -1,5 +1,6 @@
 ---
 title: Glossary
+nav_order: 10
 ---
 
 # Glossary of Terms
@@ -7,6 +8,9 @@ title: Glossary
 Below are some important concepts, software, standards, and other things you might encounter in these Docs and working with CollectionBuilder. 
 
 {% assign terms = site.glossary %}
+{% for t in terms %}- [{{ t.title }}]({{ t.title | slugify }})
+{% endfor %}
+
 {% for t in terms %}
 --------
 
