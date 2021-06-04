@@ -20,7 +20,7 @@ Prep your items in a folder together on your local machine, doing any object edi
 - **Supported formats:** jpg, png, pdf, mp3 -- plus YouTube, Vimeo, and external links, but you won't have objects for those!
 - **File size:** since there are no thumbnails generated, keep your object files at a reasonable size for access on the web. This means you will usually not be using your full resolution versions! For example, jpeg images of about 1200px wide and PDFs less than 1 MB will work well. Larger objects (especially images) will slow load times and make your users download unnecessarily large data--so keep them to a web friendly size!
 - **Total size:** GitHub repositories have soft limits on total size, some where around 1 GB. A good rule of thumb is to keep your "objects" folder less than 500 MB. 
-- **Filenaming:** to avoid issues, please pay close attention to filenaming conventions! The filename should be an all lowercase unique string with no spaces or special characters. Underscores (`_`) are okay. You will use the exact filenames to populate the "filename" field of your collection metadata.
+- **Filenaming:** to avoid issues, please pay close attention to filenaming conventions! The filename should be an all lowercase unique string with no spaces or special characters. Underscores (`_`) are okay. You will use the **exact filenames** (including extension and same case) to populate the "filename" field of your collection metadata.
 
 *Tip:* Your File Explorer / Finder might hide file extensions by default. 
 Check your view settings to show extensions!

@@ -23,7 +23,7 @@ The first step is to gather your collection's full sized digital objects in one 
 
 - **Supported formats:** tif, jpg, png, pdf, mp3, mp4 -- plus YouTube, but you won't have objects for those!
 - **File size:** the full size object can be any size you think your users might want to download. This might not be your full sized preservation file--generally, we try to provide very high quality objects to users, but balance that against the practicality of huge file sizes--most users don't want a 1GB TIF or PDF!
-- **Filenaming:** to avoid issues, please pay close attention to filenaming conventions! You will use the exact filenames to populate the "filename" field of your collection metadata. For ease of use, the base filename (i.e. with out extension) should match the "objectid" used in the metadata. The filename should be:
+- **Filenaming:** to avoid issues, please pay close attention to filenaming conventions! You will use the **exact filenames** (including extension and same case) to populate the "filename" field of your collection metadata. For ease of use, the base filename (i.e. with out extension) should match the "objectid" used in the metadata. The filename should be:
     - all lowercase
     - no spaces
     - no special characters (underscores (`_`) are okay.
