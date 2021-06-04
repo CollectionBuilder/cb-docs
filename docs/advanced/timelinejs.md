@@ -17,16 +17,16 @@ Below you'll find instructions split into two steps: [Step 1](#step-1-including-
 
 There are three basic options for including a TimelineJS feature in your CollectionBuilder site. They are:
 
-1. insert the TimelineJS into the Home Page; 
-2. replace the current timeline page with a TimelineJS page; or 
-3. create a new TimelineJS page. 
+1. [Insert the TimelineJS feature into the Home Page](#inserting-timelinejs-into-the-home-page); 
+2. [replace the current timeline page with a TimelineJS page](#replacing-the-current-timeline-page); or 
+3. [create a new TimelineJS page](#creating-a-new-timeline-page--nav-dropdown). 
 
 The instructions below detail each of these options. 
 
 ### Inserting TimelineJS Into the Home Page
 
 1. Open the "home-infographic.html" file in the "_layouts" directory. 
-2. You may want to edit the column sizes or arrangement of the "home-infographic.html" file (follow the instructions in the [Home Page]({{ '/home/' | relative_url }}) documentation to rearrange the Home page layout). The TimelineJS feature will work decently in a smaller section, but it looks best in a wider format (for example, consider replacing the carousel with TimelineJS). 
+2. You may want to edit the column sizes or arrangement of the "home-infographic.html" file (follow the instructions in the [Home Page]({{ '/docs/pages/home/' | relative_url }}) documentation to rearrange the Home page layout). The TimelineJS feature will work decently in a smaller section, but it looks best in a wider format (for example, consider replacing the carousel with TimelineJS). 
 3. Add the following code to the section of the "home-infographic.html" file in which you'd like the feature to appear:
 ``` 
 {% raw %}{% include feature/timelinejs.html %}{% endraw %}
