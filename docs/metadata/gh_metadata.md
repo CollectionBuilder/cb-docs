@@ -32,11 +32,12 @@ Without values in the fields below, CollectionBuilder will not work properly.
 
 ### filename: 
 
-- This is the digital object's filename, including the name itself as well as the object's file extension. Each filename property should have a single value and end with a file extension. 
-- The filename should be a **lowercase unique string with no spaces or special characters**. Underscores (`_`) are okay; **slashes (`/`) and hyphens (`-`) should NOT be used in this field**. 
-- Records for YouTube objects will not usually have a value in this field. 
-- *Common Extension Options*: `.jpg`, `.pdf`, `.mp3`
-- Example value: `letter001.pdf`
+- The digital object's filename including the file extension, *or* a full URL to a file hosted external to your project.
+- The value **must exactly match the actual filename** of the file in your "objects" directory. Most web servers are case sensitive, so make sure everything matches!
+- Records for YouTube or Vimeo objects will leave this field blank.
+- Example value for item in your project's "objects" folder: `letter001.pdf`
+- Example value for external item: `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg`
+- *Note for SA Users:* For SA collections the "objects" folder location is set in "_config.yml", so may be a location external to the project. If your file is inside the configured "objects" folder, `filename` is just the objects filename, do not include a URL.
 
 ### title: 
 
