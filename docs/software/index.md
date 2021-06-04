@@ -14,8 +14,10 @@ However, some GH users might enjoy working on their local desktop instead--if so
 To get started editing code, managing your project, and building websites with CollectionBuilder on your computer you will need: 
 a text editor, Git (version control system), Ruby (programming language), and Jekyll (static web site generator). 
 
-Installing software on your computer can be the biggest hurdle to getting started with CollectionBuilder. 
-Our advice is to stick with it. Having your local "development environment" for a Jekyll-based project set up will be rewarding, allowing you to edit code and see how the website changes right on your laptop.
+These are all free, open source, and cross platform software, so you should be able to get set up on any computer.
+We know installing software can be the biggest hurdle to getting started with CollectionBuilder. 
+Our advice is to stick with it. 
+Having your local "development environment" for a Jekyll-based project set up will be rewarding, allowing you to edit code and see how the website changes right on your laptop.
 
 ***Troubleshooting:*** 
 We've tried to anticipate problems you might have in the documentation and the Lib-STATIC [How-To files](https://lib-static.github.io/howto/) we link to. 

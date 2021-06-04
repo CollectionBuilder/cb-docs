@@ -17,6 +17,7 @@ To work with a copy of your project on your local machine, you'll need to instal
 
 GitHub is the most popular platform for developing and sharing code online, hosting projects from giant enterprise software, to OER learning, to personal portfolios. 
 It is great to become familiar with the platform so that you can take part in this community and its resources.
+Normal use with CollectionBuilder projects falls within the "free" tier on the platform (you do not need a paid account!).
 
 Code for your CollectionBuilder project will be stored on GitHub in a Git "repository". 
 So the first step is to sign up for a GitHub account if you do not have one already.
@@ -37,7 +38,7 @@ GitHub can provide a no-reply email address that can be found via your email set
 [Git]({{ '/docs/glossary/#git' | relative_url }}) version control system is a piece of software you install on your computer. 
 This is necessary to sync with your GitHub project.
 
-Installing it is pretty straightforward:
+Installing this free and open source software is pretty straightforward:
 
 **Windows:** 
 

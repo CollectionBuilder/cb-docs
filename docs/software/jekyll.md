@@ -8,7 +8,7 @@ nav_order: 7
 
 Finally, we get to [Jekyll](https://jekyllrb.com/){:target="_blank" rel="noopener"}!
 Jekyll is a static site generator that uses templates, data, and modular components to build out a website. 
-It is a very popular tool used by tiny and giant web site projects. 
+It is a very popular open source tool used by tiny and giant web site projects. 
 
 Jekyll is a Gem, a software package installed via Ruby's management system called RubyGems (similar to Python's Pip). 
 Gem is a command line application, so again we will open a terminal to give it commands.
