@@ -27,7 +27,7 @@ This is where you can start writing about your collection!
 The template file contains some placeholder CollectionBuilder information and content.
 Delete anything that you don't want to appear on your About page!
 
-However, notice that the first content line you will see starts with `{% include`, a [Liquid Include](https://jekyllrb.com/docs/includes/) command that is adding a large image with text at the top of the default page.
+However, notice that the first content line you will see starts with `{% raw %}{% include{% endraw %}`, a [Liquid Include](https://jekyllrb.com/docs/includes/) command that is adding a large image with text at the top of the default page.
 Includes are a powerful feature of Jekyll that allow modular elements or content to be drawn into your site's pages from a central location.
 
 ## Feature Includes
@@ -47,10 +47,10 @@ The include looks like:
 
 All include commands:
 
-- start with the opening Liquid tag, `{%`
+- start with the opening Liquid tag, `{% raw %}{% {% endraw %}`
 - specify the include file, e.g. `feature/jumbotron.html`
 - *may* provide option values that are used by the include, e.g. `objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg"`
-- end with the closing Liquid tag, `%}`
+- end with the closing Liquid tag, `{% raw %}%}{% endraw %}`
 
 ### Feature Include Options
 
