@@ -1,11 +1,10 @@
 # CollectionBuilder Documentation
 
-> work in progress! 
-> Please see current docs <https://collectionbuilder.github.io/docs/introduction.html>
+<https://collectionbuilder.github.io/cb-docs/>
 
-Draft documentation for CollectionBuilder, migrating docs from collectionbuilder.github.io.
+Documentation for CollectionBuilder, an open source tool for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
 
-This documentation covers details for CollectionBuilder-GH, CollectionBuilder-CONTENTdm, and CollectionBuilder-SA.
+This documentation covers details for CollectionBuilder-GH, CollectionBuilder-CONTENTdm, CollectionBuilder-SA, and CollectionBuilder-CSV.
 
 ## Contributing 
 
