@@ -12,7 +12,7 @@ Collection objects are managed and stored in the CONTENTdm repository as normal-
 This also means you don't have to do any special "objects" prep for CollectionBuilder! 
 CB-CDM work is focused on getting the metadata correct after exporting from CONTENTdm--which is covered in the Metadata section.
 
-CB-CDM sites use standard [CONTENTdm APIs](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/API_Reference/CONTENTdm_API) to retrieve display images and file downloads from your existing collection using each items "CONTENTdm number" (`cdmid` in CB) and the "Collection Alias" (`cdm-collection-id` or `collectionid` in CB). 
+CB-CDM sites use standard [CONTENTdm APIs](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/API_Reference/CONTENTdm_API) to retrieve display images and file downloads from your existing collection using each item's "CONTENTdm number" (`cdmid` in CB) and the "Collection Alias" (`cdm-collection-id` or `collectionid` in CB). 
 The [CDM "utils" API](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/API_Reference/CONTENTdm_API/CONTENTdm_Website_API_Reference_-_utils) provides a thumbnail and download for any object format.
 The [CDM IIIF API](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/API_Reference/IIIF_API_reference) provides higher quality images for objects with an image format.
 
