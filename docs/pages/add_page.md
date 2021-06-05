@@ -1,7 +1,7 @@
 ---
 title: Add Page
 parent: Edit Pages
-nav_order: 3
+nav_order: 4
 ---
 
 # Add a Page to Your Site
