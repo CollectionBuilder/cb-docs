@@ -62,6 +62,9 @@ If you encounter an error, try the older `tr` version, like: `for f in *.*; do c
 ON ZSH (on Mac OS, and some Linux):
 follow the same steps, but use the command `for f in *.*; do cp "$f" "renamed/${file:l}"; done`.
 
+*Tip:* If you want to use a GUI try [Advanced Renamer](https://www.advancedrenamer.com/) or [FileRenamer](https://www.sttmedia.com/filerenamer-download). 
+And the Linux Files app has GUI renaming support built in. 
+
 -----------------
 
 ## Extract Embedded Metadata with ExifTool
