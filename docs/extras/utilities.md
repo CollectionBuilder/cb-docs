@@ -32,7 +32,7 @@ There are a couple ways to do this depending on your operating system.
 1. Open the folder contain all your objects in Finder (in GH this is likely the "objects" directory in your project repository).
 2. Select all the files (you can use `Command + A`)
 3. Copy the files (use `Command + C`, or Edit > Copy)
-4. Paste into the column of a spreadsheet or a text file. Using`Command + V` (or Edit > Paste) should work to paste filenames into any plain text file, but might try to add the actual files if pasted into a application that supports them. So if this doesn't work try `Command + Shift + V` instead.
+4. Paste into the column of a spreadsheet or a text file. Using `Command + V` (or Edit > Paste) should work to paste filenames into any plain text file, but might try to add the actual files if pasted into a application that supports them. So if this doesn't work try `Command + Shift + V` instead.
 
 **Using command line:**
 
