@@ -24,7 +24,7 @@ To download your metadata from Google Sheets:
 
 - Click "File" and select "Download as Comma-separated values"
 - Locate the metadata CSV you've just downloaded on your computer (probably in "Downloads" folder!) -- but **don't open it!**
-- Without opening it (to avoid issues with Excel scrambling your UTF-8 encoding), rename this file using all lowercase letters, no spaces, and no hyphens. For example: "psychiana_demo.csv", "idaho_waters.csv", "hjccc_dev.csv"
+- Without opening it (to avoid issues with Excel scrambling your UTF-8 encoding), rename this file using all lowercase letters, no spaces, and no special characters. For example: "psychiana-demo.csv", "idaho-waters.csv", "hjccc-dev.csv"
 
 ## Add Metadata to Project
 
