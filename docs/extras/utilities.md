@@ -21,7 +21,7 @@ There are a couple ways to do this depending on your operating system.
 
 **Windows Explorer:**
 
-1. Open the folder contain all your objects in Windows Explorer (in GH this is likely the "objects" directory in your project repository).
+1. Open the folder containing all your objects in Windows Explorer (in GH this is likely the "objects" directory in your project repository).
 2. Select all the files (you can use `Ctrl + A`). 
 3. Hold `Shift` and right click in the selected files, then select the "Copy as path" option (alternatively, click Home tab at top of Explore and select the "Copy as path" option).
 4. Paste (`Ctrl + V`) into a column in a spreadsheet or a text file.
@@ -29,10 +29,10 @@ There are a couple ways to do this depending on your operating system.
 
 **Mac Finder:**
 
-1. Open the folder contain all your objects in Finder (in GH this is likely the "objects" directory in your project repository).
+1. Open the folder containing all your objects in Finder (in GH this is likely the "objects" directory in your project repository).
 2. Select all the files (you can use `Command + A`)
-3. Copy the files (use `Command + C`, or Edit > Copy)
-4. Paste into the column of a spreadsheet or a text file. Using `Command + V` (or Edit > Paste) should work to paste filenames into any plain text file, but might try to add the actual files if pasted into a application that supports them. So if this doesn't work try `Command + Shift + V` instead.
+3. Copy the files (use `Command + C`, or right click > Copy)
+4. Paste into the column of a spreadsheet using `Command + Shift + V` or into a text file using `Command + V` (or right click > Paste). (Note: if you use `Command + V` when pasting into the spreadsheet, you'll find that you'll paste in the actual files themselves instead of the filenames. If this happens, try `Command + Shift + V` instead.)
 
 **Using command line:**
 
