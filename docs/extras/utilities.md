@@ -17,6 +17,24 @@ This section outlines some helpful command line utilities to solve these issues.
 ## Get List of Filenames
 
 It is often helpful to have a list of filenames for all your objects as a starting point for your metadata CSV for GH and SA projects.
+There are a couple ways to do this depending on your operating system.
+
+**Windows Explorer:**
+
+1. Open the folder contain all your objects in Windows Explorer (in GH this is likely the "objects" directory in your project repository).
+2. Select all the files (you can use `Ctrl + A`). 
+3. Hold `Shift` and right click in the selected files, then select the "Copy as path" option (alternatively, click Home tab at top of Explore and select the "Copy as path" option).
+4. Paste (`Ctrl + V`) into a column in a spreadsheet or a text file.
+5. This provides Windows style file paths for all select files, e.g. "C:\Users\username\Documents\collectionbuilder-demo\objects\demo_004.jpg". You will next want to use Find & Replace or split column to remove the Windows path, cleaning the value to just the filename with extension, e.g. "demo_004.jpg". 
+
+**Mac Finder:**
+
+1. Open the folder contain all your objects in Finder (in GH this is likely the "objects" directory in your project repository).
+2. Select all the files (you can use `Command + A`)
+3. Copy the files (use `Command + C`, or Edit > Copy)
+4. Paste into the column of a spreadsheet or a text file. Using`Command + V` (or Edit > Paste) should work to paste filenames into any plain text file, but might try to add the actual files if pasted into a application that supports them. So if this doesn't work try `Command + Shift + V` instead.
+
+**Using command line:**
 
 1. Open a terminal in the folder containing all your objects (likely the "objects" directory in your project repository)
 2. Type the command `ls > list.txt` ("ls" lists all files, ">" directs the output into a text file)
