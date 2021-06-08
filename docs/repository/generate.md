@@ -1,13 +1,13 @@
 ---
 title: Generate Site
 parent: Repository
-nav_order: 3
+nav_order: 4
 ---
 
 # Generate Your Site
 
 With your project repository copied to your local machine, you can use [Jekyll]({{ '/docs/glossary/#jekyll' | relative_url }}) to generate and serve your site on a local development server.
-The complete website will be available to use in your browser *as if* it was on the live web--but it is only on your local computer.
+The complete website will be available to use in your browser *as if* it is on the live web--but it is only on your local computer.
 
 This is great for iterative development, allowing you to test changes and see what happens!
 
@@ -18,7 +18,7 @@ Once you start adding your own content, configuring, and customizing, you will f
 ## Open Terminal
 
 To give commands to Jekyll, you will need to have a terminal open in the root of your project folder. 
-Editors like VS Code can open a full folder and provides an integrated terminal to make working on a Jekyll project easier.
+Editors like VS Code can open a full folder and provide an integrated terminal to make working on a Jekyll project easier.
 
 If you are using VS Code, open your project repository folder with the editor.
 Use the keyboard shortcut ``Ctrl + ` `` (control + backtick " **\`** ", the key left of "1" shared with "~") to open and close the integrated terminal, or click the "View" menu and select "Terminal".

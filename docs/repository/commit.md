@@ -1,7 +1,7 @@
 ---
 title: Commit Changes
 parent: Repository
-nav_order: 5
+nav_order: 6
 ---
 
 # Commit Changes with Git

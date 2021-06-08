@@ -1,7 +1,7 @@
 ---
 title: Working With Git
 parent: Repository
-nav_order: 4
+nav_order: 5
 ---
 
 # Working With Git
