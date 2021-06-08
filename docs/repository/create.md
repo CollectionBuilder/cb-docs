@@ -25,6 +25,7 @@ The best/fastest way to do this is to visit a CollectionBuilder repository on Gi
     
 With that final click, you will be redirected to your new repository!
 
+{:.alert .alert-blue}
 *Tip: the "Use This Template" button only shows up if you are logged into GitHub! Make sure you are logged in.*
 
 ------------
