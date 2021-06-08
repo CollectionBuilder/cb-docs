@@ -17,6 +17,24 @@ This section outlines some helpful command line utilities to solve these issues.
 ## Get List of Filenames
 
 It is often helpful to have a list of filenames for all your objects as a starting point for your metadata CSV for GH and SA projects.
+There are a couple ways to do this depending on your operating system.
+
+**Windows Explorer:**
+
+1. Open the folder containing all your objects in Windows Explorer (in GH this is likely the "objects" directory in your project repository).
+2. Select all the files (you can use `Ctrl + A`). 
+3. Hold `Shift` and right click in the selected files, then select the "Copy as path" option (alternatively, click Home tab at top of Explore and select the "Copy as path" option).
+4. Paste (`Ctrl + V`) into a column in a spreadsheet or a text file.
+5. This provides Windows style file paths for all select files, e.g. "C:\Users\username\Documents\collectionbuilder-demo\objects\demo_004.jpg". You will next want to use Find & Replace or split column to remove the Windows path, cleaning the value to just the filename with extension, e.g. "demo_004.jpg". 
+
+**Mac Finder:**
+
+1. Open the folder containing all your objects in Finder (in GH this is likely the "objects" directory in your project repository).
+2. Select all the files (you can use `Command + A`)
+3. Copy the files (use `Command + C`, or right click > Copy)
+4. Paste into the column of a spreadsheet using `Command + Shift + V` or into a text file using `Command + V` (or right click > Paste). (Note: if you use `Command + V` when pasting into the spreadsheet, you'll find that you'll paste in the actual files themselves instead of the filenames. If this happens, try `Command + Shift + V` instead.)
+
+**Using command line:**
 
 1. Open a terminal in the folder containing all your objects (likely the "objects" directory in your project repository)
 2. Type the command `ls > list.txt` ("ls" lists all files, ">" directs the output into a text file)
@@ -43,6 +61,9 @@ If you encounter an error, try the older `tr` version, like: `for f in *.*; do c
 
 ON ZSH (on Mac OS, and some Linux):
 follow the same steps, but use the command `for f in *.*; do cp "$f" "renamed/${file:l}"; done`.
+
+*Tip:* If you want to use a GUI try [Advanced Renamer](https://www.advancedrenamer.com/) or [FileRenamer](https://www.sttmedia.com/filerenamer-download). 
+And the Linux Files app has GUI renaming support built in. 
 
 -----------------
 

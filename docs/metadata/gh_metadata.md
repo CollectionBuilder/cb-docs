@@ -37,6 +37,7 @@ Without values in the fields below, CollectionBuilder will not work properly.
 - Records for YouTube or Vimeo objects will leave this field blank.
 - Example value for item in your project's "objects" folder: `letter001.pdf`
 - Example value for external item: `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg`
+- *Tip:* check [Get List of Filenames]({{ '/docs/extras/utilities/#get-list-of-filenames' | relative_url }}) for quick methods to fill in the filename field!
 - *Note for SA Users:* For SA collections the "objects" folder location is set in "_config.yml", so may be a location external to the project. If your file is inside the configured "objects" folder, `filename` is just the objects filename, do not include a URL.
 
 ### title: 

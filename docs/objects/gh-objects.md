@@ -23,7 +23,7 @@ Prep your items in a folder together on your local machine, doing any object edi
 - **Filenaming:** to avoid issues, please pay close attention to filenaming conventions! The filename should be an all lowercase unique string with no spaces or special characters. Underscores (`_`) are okay. You will use the **exact filenames** (including extension and same case) to populate the "filename" field of your collection metadata.
 
 *Tip:* Your File Explorer / Finder might hide file extensions by default. 
-Check your view settings to show extensions!
+Check your View settings to show extensions!
 
 {:.alert .alert-purple }
 **Note:** 

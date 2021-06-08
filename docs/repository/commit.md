@@ -34,6 +34,7 @@ This is called a **Commit**.
 When you make a commit, Git takes a snapshot of the changes you made and permanently stores it in your repository's history.
 Every commit records a user name, email, and message along side the exact details of the changed files. 
 Your "commit message" is a short description of what the changes do or why you made them--this is your note to the future to help everyone understand the code and history.
+(see ["The Art of the Commit"](https://alistapart.com/article/the-art-of-the-commit/) if interested in the craft of creating good messages!)
 
 Once you have made a commit(s) locally, the GitHub version of your repository does NOT automatically know about it.
 

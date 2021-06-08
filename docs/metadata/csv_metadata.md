@@ -43,7 +43,8 @@ These fields are not *required*, but are used to add downloads, display images, 
 {:.alert .alert-green}
 These fields should be filed out in your spreadsheet using formulas / recipes depending on where your objects are hosted. 
 This provides flexibility to include objects from multiple sources and to generate the URLs using a variety of approaches without needing to modify the template code.
-CollectionBuilder-CSV aims to provide API recipes to generate the links for a variety of hosting solutions--but this work is done on the metadata, not embedded in the template code logic.
+CollectionBuilder-CSV aims to provide API recipes to generate the links for a variety of hosting solutions--but this work is done on the metadata, not embedded in the template code logic.<br>
+*Tip:* if you use the Rake generate_derivatives task for processing local items, it will automatically output a "object_list.csv" containing the object_download, image_small, and image_thumb for all files processed.
 
 ### display_template:
 
