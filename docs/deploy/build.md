@@ -59,8 +59,9 @@ When you're generating a test site using `bundle exec jekyll s`, Jekyll automati
 
 For deployment, the command `bundle exec jekyll build` builds the site using links based on the production URLs configured in "_config.yml".
 
-However, CollectionBuilder only adds some features when the site is built using the Jekyll ["production" environment](https://jekyllrb.com/docs/configuration/environments/){:target="_blank" rel="noopener"} (which is the default when generated on GitHub Pages). 
-These features add considerable time to the build process, so are skipped when using the development server.
+However, to build out *EVERYTHING* you need to add one more option--the Jekyll ["production" environment](https://jekyllrb.com/docs/configuration/environments/){:target="_blank" rel="noopener"}.
+Some features (meta tags and analytics) are *only* added to your CollectionBuilder site when built in the "production" environment.
+This saves time during development and avoids false analytics data.
 
 The production ENV adds:
 
@@ -69,6 +70,7 @@ The production ENV adds:
 
 The environment can be added before the Jekyll command, like `JEKYLL_ENV=production bundle exec jekyll build`. 
 To make it easier, CollectionBuilder provides the `rake deploy` command as an alternative.
+It is also the environment used by automatic build on GitHub Pages!
 
 {:.alert}
 **A Note on Google Analytics**: We don't necessarily recommend adding Google Analytics to your website. 
