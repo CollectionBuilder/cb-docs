@@ -34,7 +34,7 @@ Now, in the top bar of GitHub Desktop you should see three buttons.
 On the left, the "Current repository" button lists the repository you just cloned. 
 In the middle, you can check your current branch (it should say *main*), and on the right there is a button that allows you to "**Fetch origin**," "**Pull origin**," or "**Push origin**."
 
-As you work, these button allows you to sync the local version of your repository with the version on GitHub, using Git to push and pull changes between them.
+As you work, this button allows you to sync the local version of your repository with the version on GitHub, using Git to push and pull changes between them.
 
 ## Clone on Command Line
 
@@ -46,5 +46,5 @@ As you work, these button allows you to sync the local version of your repositor
 5. With your terminal in the desired folder, type in the command `git clone `, then paste in the URL you copied from GitHub. Then click Enter.
     - *Tip:* paste into the terminal by using `Ctrl + Shift + V` or by right clicking and selecting paste.
 
-Once you click Enter, Git (running in your terminal) will create a new folder matching your repository name and download the repository from GitHub.
-If you want to keep using Git on the command line, `cd` into the new folder.
+Once you press "Enter", Git (running in your terminal) will create a new folder on your computer matching your repository name and download the repository from GitHub.
+If you want to keep using Git on the command line, `cd` into the new repository folder that Git just created.
