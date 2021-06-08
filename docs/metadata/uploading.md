@@ -58,7 +58,7 @@ The following steps demonstrate how to edit your metadata in Google Sheets and a
     - In your web browser, open Google Drive. On the left side of the screen, locate the "+ New" button. Click this button. From the drop-down, select Google Sheets. This will open a new Google Sheets document. 
     - In your new Google Sheet, click File > Import. A white box with four tabs will appear. Select the tab labeled "Upload". This brings up a large box with the words "Drag a file here" above a blue button labeled "Select a file from your device".
     - Click the blue "Select a file from your device" button. This will open File Explorer (Windows) or Finder (Mac). 
-    - In File Explorer / Finder, navigate to your project's repository on your computer (it will likely be in Documents/GitHub/, since this is where Git stores your GitHub repositories by default). 
+    - In File Explorer / Finder, navigate to your project's repository on your computer (it will likely be in "Documents/GitHub", since this is where Git stores your GitHub repositories by default). 
     - Once you find your collection's repository folder, look for the _data subfolder. In the _data subfolder, locate your metadata CSV (example: "demo_metadata.csv"). Select your metadata CSV and click "Open".
     - The CSV will now upload to Google Sheets. At this point, a new box will appear on your Google Sheets screen titled "Import file". Make sure that the correct file is listed under "File". Leave the "import location" and "separator type" dropdowns as they are. Uncheck the box next to "Convert text to numbers, dates, and formulas". Click the "Import data" button. 
     - Your data will now populate your new spreadsheet. Make your edits.
