@@ -59,10 +59,10 @@ layout: full-width-page
 ```yaml
 title: TimelineJS
 layout: full-width-page
-permalink: timelinejs.html
+permalink: /timelinejs.html
 ```
 Note that the title and permalink values don't have to be `TimelineJS` and `timelinejs.html`; you can call them whatever you want. 
-They just need to be anything other than `Timeline` and `timeline.html` (since those are used for the collection's built-in timeline page).
+They just need to be anything other than `Timeline` and `/timeline.html` (since those are used for the collection's built-in timeline page).
 Just make sure to include the title and permalink you create in your "_data/config-nav.csv" file, as described below.
 
 7. Locate the `## Collection Timeline` line of text, below the yaml front matter. 
@@ -91,7 +91,7 @@ Below we detail ways to further customize and curate your timeline.
 ### Limiting the Items Included
 
 1. Navigate to the "/assets/data/" directory, and open the "timelinejs.json" file.
-2. You will need to edit the first line of the document so that it limits the collection:
+2. You will need to edit the first line of code (below the front matter) so that it limits the collection:
     - limit the timeline to only include those items that are images: 
 ``` 
 {% raw %}{%- assign items = site.data[site.metadata] | where_exp: "item","item.format contains 'image'" -%}{% endraw %}
