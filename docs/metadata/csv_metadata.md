@@ -31,12 +31,12 @@ Just ensure that you create the required fields following the conventions descri
 ### title:
 
 - The title field is used to indicate the name of an item. This should be a short, descriptive set of words that identify the item. Each item may only have one title.
-- *A title is not technically required, but will leave blanks areas in the template.*
+- *A title is not technically required, but will leave blank areas in the template.*
 - Example value: `Haystack Rock`
 
 ------------
 
-## Object Details (suggested)
+## Object Detail Fields (suggested):
 
 These fields are not *required*, but are used to add downloads, display images, or representative icons for the objects on your collection site. 
 
@@ -44,26 +44,26 @@ These fields are not *required*, but are used to add downloads, display images, 
 These fields should be filed out in your spreadsheet using formulas / recipes depending on where your objects are hosted. 
 This provides flexibility to include objects from multiple sources and to generate the URLs using a variety of approaches without needing to modify the template code.
 CollectionBuilder-CSV aims to provide API recipes to generate the links for a variety of hosting solutions--but this work is done on the metadata, not embedded in the template code logic.<br>
-*Tip:* if you use the Rake generate_derivatives task for processing local items, it will automatically output a "object_list.csv" containing the object_download, image_small, and image_thumb for all files processed.
+*Tip:* if you use the Rake generate_derivatives task for processing local items, it will automatically output a "object_list.csv" containing the object_location, image_small, and image_thumb for all files processed.
 
 ### display_template:
 
 - A template type used for the Item page *and* used in logic to choose representations in other pages. 
 - If blank the object will default to a generic item page. 
 - Supported values in `display_template` match files found in "_layouts".
-- Default supported options: `item_image`,`item_pdf`, `item_video`, `item_audio`, `item_record`, `item`. 
-    - `item_image`: Displays image_small if available, with fall back to object_download. Adds LightGallery view to open images full screen using object_download, with fall back to image_small.
-    - `item_pdf`: Displays image_small if available, with fall back to image_thumb, or a pdf icon.
-    - `item_video`: Displays a video embedded on the page with default support for video files (using `<video>` element with object_download as src), YouTube (from link in object_download), or Vimeo videos (from link in object_download).
-    - `item_audio`: Uses `<audio>` element to embed audio file from object_download as src.
-    - `item_record`: metadata only record.
+- Default supported options: `image`,`pdf`, `video`, `audio`, `record`, `item`. 
+    - `image`: Displays image_small if available, with fall back to object_location. Adds LightGallery view to open images full screen using object_location, with fall back to image_small.
+    - `pdf`: Displays image_small if available, with fall back to image_thumb, or a pdf icon.
+    - `video`: Displays a video embedded on the page with default support for video files (using `<video>` element with object_location as src), YouTube (from link in object_location), or Vimeo videos (from link in object_location).
+    - `audio`: Uses `<audio>` element to embed audio file from object_location as src.
+    - `record`: metadata only record.
     - `item`: generic fallback item page, displays image or icon depending on "image_thumb"
 - See "docs/item-pages.md" in your repository for more details.
 
-### object_download: 
+### object_location: 
 
 - a full URL to download the full quality digital object *or* relative path if items are contained with in the project.
-- Most objects will have an `object_download` value, the link where the digital file can be downloaded or accessed in a different platform.
+- Most objects will have an `object_location` value, the link where the digital file can be downloaded or accessed in a different platform.
 - If this field is blank, the item will become a metadata only record.
 - Example value for object in project: `/objects/demo_002.pdf`
 - Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/max/0/default.jpg`
@@ -83,8 +83,8 @@ Do not include the `baseurl` value that you set in "_config.yml", since this wil
 - If this field is blank, the item will be represented by a icon based on it's `display_template` or `format` field.
 - As a general guideline, small images should be JPGs approximately 800x800 px max.
 - Example value for object in project: `/objects/small/demo_002_sm.jpg`
-- Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/pct:20/0/default.jpg`
-- Example value for YouTube object: `https://img.youtube.com/vi/CVXQ3X6Q8oU/mqdefault.jpg`
+- Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/pct:40/0/default.jpg`
+- Example value for YouTube object: `https://img.youtube.com/vi/CVXQ3X6Q8oU/hqdefault.jpg`
 
 ### image_thumb: 
 
@@ -93,8 +93,8 @@ Do not include the `baseurl` value that you set in "_config.yml", since this wil
 - If this field is blank, the template will use a icon to represent the object based on it's `display_template` or `format` field.
 - As a general guideline, thumb images should be JPGs approximately 400x400 px max.
 - Example value for object in project: `/objects/thumbs/demo_002_th.jpg`
-- Example value for external object: `https://digital.lib.uidaho.edu/utils/getthumbnail/collection/expforsav/id/390`
-- Example value for YouTube object: `https://img.youtube.com/vi/CVXQ3X6Q8oU/default.jpg`
+- Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/pct:20/0/default.jpg`
+- Example value for YouTube object: `https://img.youtube.com/vi/CVXQ3X6Q8oU/mqdefault.jpg`
 
 ### format: 
 
