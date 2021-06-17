@@ -21,6 +21,11 @@ The columns are described below, and an [example](#example) is provided for your
 - *Options*: `true` or leave blank. 
 - This option controls if the element will be represented as a link from the item page back to the Browse page. It is most useful for those fields, like "subject", that often contain multiple values (separated by a semicolon). So, for instance, if you wanted to make the subjects in your "subject" field separate out into individual links, you'd enter `true` in the third column of the "_data/config-metadata.csv".
 
+### external_link: 
+- *Options*: `true` or leave blank. 
+- This option controls if the element will be represented as an external link from the item page to another page elsewhere (or within the collection itself). It is most useful for those fields, like "rightsstatement", that are just links. The metadata value must only be a link -- any additional text or spacing will break the link on the page. 
+
+
 ---
 
 The following two options are used by **CDM and SA only**, and are not necessary to make the collection itself work and will not affect the display.

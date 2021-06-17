@@ -72,12 +72,11 @@ Each are listed below with some examples and notes, but be sure to check the fil
 **Add collection items and media:**
 
 - [audio.html](#audio)
+- [cloud.html](#cloud)
 - [image.html](#image)
-- [image-external.html](#image-external)
 - [pdf.html](#pdf)
 - [timelinejs.html](#timelinejs)
 - [video.html](#video)
-- [video-external.html](#video-external)
 
 **Add Bootstrap components:**
 
@@ -118,6 +117,12 @@ This will include a [bootstrap card](https://getbootstrap.com/docs/4.0/component
 {% raw %}{% include feature/card.html header="This is a Card" text="The card features an image from the collection as a cap" objectid="demo004" width="25" centered=true %}{% endraw %}
 ```
 
+### Cloud
+
+This will include a [word cloud](https://getbootstrap.com/docs/4.0/components/card/){:target="_blank" rel="noopener"} with the features you define in the variables: 
+```
+{% raw %}{% include feature/cloud.html fields="subject" min="" background="dark" button="outline-warning"  %}{% endraw %}`
+```
 ### Image-external
 
 This command will include an image that is not a collection item. 
@@ -125,7 +130,6 @@ Provide an `src` value with a full url to the image or relative path to image in
 ```
 {% raw %}{% include feature/image-external.html src="https://www.lib.uidaho.edu/media/collections/fatmen.jpg" width="75" %}{% endraw %}
 ```
-
 ### Image
 
 The "image.html" include adds an image from your collection to the page in a [Bootstrap-styled figure](https://getbootstrap.com/docs/4.4/content/figures/){:target="_blank" rel="noopener"}.
