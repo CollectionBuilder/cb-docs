@@ -10,33 +10,34 @@ This doc content related to CSV is a draft.
 
 # Collection Objects for CollectionBuilder-CSV
 
-Since CollectionBuilder-CSV adds object information into the metadata CSV, how you prepare objects is very flexible. 
+Since CollectionBuilder-CSV adds object information into the metadata CSV, the process for preparing objects is very flexible. 
 You can follow the workflows described for any of the other templates, or combine multiple approaches to curate items from diverse sources.
 
 The important step is to get the information about where your objects and object derivatives are located written into your [metadata fields]({{ '/docs/metadata/csv_metadata/' | relative_url }}).
-In general, CB-CSV supports three files associated with each record via links added to these metadata columns:
+In general, CB-CSV supports three files associated with each record via links added to the following metadata columns:
 
-- `object_location` - the full sized digital object of any format.
+- `object_location`: path to the full sized digital object of any format.
     - this could be any format and size you would like to provide to your users, or a link to external resource such as YouTube videos or a link to an article.
     - the object may be hosted with the project, in an external location, or retrieved from an API.
-- `image_small` - a web quality image used to represent objects on Item pages, or in visualizations where a larger than thumb image would be useful.
+- `image_small`: path to a web-quality image used to represent objects on Item pages or in visualizations where a larger than thumb image would be useful.
     - for all Item types should be JPGs approximately 800x800 px max.
     - the image may be hosted with the project, in an external location, or retrieved from an API.
-- `image_thumb` - a web quality image used to represent the object on visualization pages (i.e. Home, Browse, Map, and Timeline), in a fast, user friendly file size.
+- `image_thumb`: path to a web quality image used to represent the object on visualization pages (i.e. Home, Browse, Map, and Timeline), in a fast, user friendly file size.
     - for all Item types should be JPGs approximately 400x400 px max.
     - the image may be hosted with the project, in an external location, or retrieved from an API.
 
-Items are not required to have any objects (in which case they are metadata only records)!
-Items without `image_small` or `image_thumb` will be represented by icons based on their `display_template` or `format` field in visualization pages.
+Items are not required to have any corresponding objects (in which case they are metadata only records)!
+Items without `image_small` or `image_thumb` values will be represented by icons based on their `display_template` or `format` field in visualization pages.
 
-Generally, the best approach for filling in the `object_location`, `image_small`, and `image_thumb` columns will be to use "recipes" for each group of object type in your collection.
+Generally, the best approach for filling in the `object_location`, `image_small`, and `image_thumb` columns will be to use "recipes" to document the paths / locations for each group of object type in your collection.
 You will likely want to gather the values necessary for each recipe in their own columns and use formulas in Sheets or OpenRefine to create the final links.
 
-Examples are given for a variety of object types below.
+{:.alert .alert-yellow}
+Example paths / locations are given for a variety of object types below.
 
 ------------------
 
-## Stand Alone Objects
+## Path for Stand Alone Objects
 
 See [SA objects docs]({{ '/docs/objects/sa-objects/' | relative_url }}) for details of preparing a folder of image and PDF objects, and creating derivatives using our Rake task.
 
@@ -61,7 +62,7 @@ For example:
 
 ------------------
 
-## CONTENTdm Objects
+## Path for CONTENTdm Objects
 
 The CONTENTdm API can be used to retrieve display images and file downloads from any CONTENTdm repository. 
 To use the API you will need to know the "Collection Alias" and "CONTENTdm number" of each object, see our [CDM metadata docs]({{ '/docs/metadata/cdm_metadata/' | relative_url }}) for more info on finding that information.
@@ -111,7 +112,7 @@ With collections that have multiple scan qualities, this may still result in inc
 
 ---------------
 
-## YouTube Objects
+## Path for YouTube Objects
 
 YouTube video items are supported in Item pages via the `video` "display_template". 
 Provide the full YouTube video link in "object_location" field. 
@@ -142,7 +143,7 @@ For more control, you can use [YouTube Data API](https://developers.google.com/y
 
 ----------------
 
-## Vimeo Objects
+## Path for Vimeo Objects
 
 Vimeo video items are supported in Item pages via the `video` "display_template".
 Provide the full Vimeo video link in "object_location" field. 
