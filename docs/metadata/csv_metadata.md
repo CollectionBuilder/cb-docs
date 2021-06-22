@@ -12,6 +12,7 @@ This doc content related to CSV is a draft.
 
 CollectionBuilder-CSV starts from the same basic metadata template of other CB types, but adds a few technical fields to increase the flexibility of the template.
 You can find the base metadata template in your project repository ["docs/metadata-template.csv"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/metadata-template.csv) or the example ["_data/demo-metadata.csv"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/_data/demo-metadata.csv).
+You can also copy the [Google Sheets version](https://docs.google.com/spreadsheets/d/1nN_k4JQB4LJraIzns7WcM3OXK-xxGMQhW1shMssflNM/edit?usp=sharing) of the metadata template, which is complete with example records for each possible item type.
 
 This template is a starting point--fill in only what is relevant for your content and feel free to add more columns!
 If transforming existing metadata, you do **not** need to exactly match the CollectionBuilder template. 
