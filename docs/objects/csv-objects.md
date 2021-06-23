@@ -54,11 +54,11 @@ For example:
 - `image_small`
     - for object in project: `/objects/small/demo_002_sm.jpg`
     - for object externally hosted: `https://example-host.org/collection/small/demo_002_sm.jpg`
-    - Recipe: `https://example-host.org/collection/small/` + "filename" - "extension" + `_sm.jpg`
+    - Recipe: `https://example-host.org/collection/small/` + "filename without extension" + `_sm.jpg`
 - `image_thumb`
     - for object in project: `/objects/thumbs/demo_002_th.jpg`
     - for object externally hosted: `https://example-host.org/collection/thumbs/demo_002_th.jpg`
-    - Recipe: `https://example-host.org/collection/thumbs/` + "filename" - "extension" + `_th.jpg`
+    - Recipe: `https://example-host.org/collection/thumbs/` + "filename without extension" + `_th.jpg`
 
 ------------------
 
@@ -126,18 +126,18 @@ You can use the domain "img.youtube.com" or "i3.ytimg.com"
 
 Default images:
 
-- thumb 120x90, https://img.youtube.com/vi/{{ youtubeid }}/default.jpg
-- medium quality 320x180, https://img.youtube.com/vi/{{ youtubeid }}/mqdefault.jpg
-- high quality 480x360, https://img.youtube.com/vi/{{ youtubeid }}/hqdefault.jpg 
-- SD 640x480 (not available for all videos), https://img.youtube.com/vi/{{ youtubeid }}/sddefault.jpg
-- max quality 1280×720 (or 1920x1080?, not available for all videos), https://img.youtube.com/vi/{{ youtubeid }}/maxresdefault.jpg 
+- thumb 120x90, https://img.youtube.com/vi/`[youtubeid]`/default.jpg
+- medium quality 320x180, https://img.youtube.com/vi/`[youtubeid]`/mqdefault.jpg
+- high quality 480x360, https://img.youtube.com/vi/`[youtubeid]`/hqdefault.jpg 
+- SD 640x480 (not available for all videos), https://img.youtube.com/vi/`[youtubeid]`/sddefault.jpg
+- max quality 1280×720 (or 1920x1080?, not available for all videos), https://img.youtube.com/vi/`[youtubeid]`/maxresdefault.jpg 
 
 Auto thumbs:
 
-- default thumb, 480x360, https://img.youtube.com/vi/{{ youtubeid }}/0.jpg 
-- alternate 120x90, https://img.youtube.com/vi/{{ page.youtubeid }}/1.jpg 
-- alternate 120x90, https://img.youtube.com/vi/{{ page.youtubeid }}/2.jpg 
-- alternate 120x90, https://img.youtube.com/vi/{{ page.youtubeid }}/3.jpg
+- default thumb, 480x360, https://img.youtube.com/vi/`[youtubeid]`/0.jpg 
+- alternate 120x90, https://img.youtube.com/vi/`[youtubeid]`/1.jpg 
+- alternate 120x90, https://img.youtube.com/vi/`[youtubeid]`/2.jpg 
+- alternate 120x90, https://img.youtube.com/vi/`[youtubeid]`/3.jpg
 
 For more control, you can use [YouTube Data API](https://developers.google.com/youtube/v3/), but it requires a key to access.
 
