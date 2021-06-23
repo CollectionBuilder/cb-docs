@@ -24,8 +24,9 @@ You'll need to use Homebrew to install rbenv. To install Homebrew, follow these 
 
 - Open the [Homebrew](https://brew.sh/){:target="_blank" rel="noopener"} webpage in your browser.
 - Open your terminal by clicking "Command (⌘) + Spacebar", typing `terminal` into the spotlight box that appears, and pressing "Enter".
-- Locate and copy the script in the box underneath the text "Install Homebrew" on the [Homebrew](https://brew.sh/){:target="_blank" rel="noopener"} webpage. Paste this script you just copied into the terminal prompt and press "Enter".
+- Locate and copy the script in the box underneath the text Install Homebrew on the [Homebrew](https://brew.sh/){:target="_blank" rel="noopener"} webpage. Paste this script you just copied into the terminal prompt and press "Enter".
 - The terminal will then prompt you to press "Enter" once more to continue the install.
+- *Note: you may be prompted to enter your password. When you do so in the command line, you won't see anything happen. Just enter your password for your computer then press enter. That should complete the step.* 
 
 ## Install rbenv
 
