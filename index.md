@@ -24,3 +24,9 @@ The types are currently:
 - **GH** - for [CollectionBuilder-GH](https://github.com/CollectionBuilder/collectionbuilder-gh), a lightweight learning-focused template designed for free hosting on GitHub Pages.
 - **CDM** - for [CollectionBuilder-CONTENTdm](https://github.com/CollectionBuilder/collectionbuilder-contentdm), a template for generating a "skin" over an existing CONTENTdm repository.
 - **SA** - for [CollectionBuilder-StandAlone](https://github.com/CollectionBuilder/collectionbuilder-sa), a robust, stand-alone template for developing exhibits on your local computer (and serving them from anywhere!).
+
+## Other Resources
+
+- [CollectionBuilder Discussion Forum](https://github.com/CollectionBuilder/collectionbuilder.github.io/discussions) (informal space to ask questions, provide feedback, debug, share and connect!)
+- [Contributing](https://github.com/CollectionBuilder/collectionbuilder.github.io/blob/main/CONTRIBUTING.md) (tips and conventions)
+- [Project Code of Conduct](https://github.com/CollectionBuilder/collectionbuilder.github.io/blob/main/CODE_OF_CONDUCT.md)
