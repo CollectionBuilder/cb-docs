@@ -125,7 +125,7 @@ The rest of the fields in the CollectionBuilder metadata template are not requir
 These remaining fields are listed below, along with their respective definitions and examples.
 
 {:.alert .alert-green}
-CollectionBuilder can accommodate any field you include in your metadata once you customize your site. For example, you can display any field on item pages or on the Browse page. See the [Metadata](customize.html#config-metadata) and [Browse](customize.html#config-browse) customization sections for more information.
+CollectionBuilder can accommodate any field you include in your metadata once you customize your site. For example, you can display any field on item pages or on the Browse page. See the [Page config]({{ '/docs/customization/' | relative_url }}) sections for more information.
 
 ### creator:
 
