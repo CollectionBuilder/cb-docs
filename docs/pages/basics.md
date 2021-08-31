@@ -10,6 +10,7 @@ The pages that appear on your collection site start as [Markdown]({{ '/docs/glos
 We usually call these "stubs", because Jekyll will process their content and wrap it in template elements to create the final HTML pages.
 
 Most of the page stubs are placeholders for the CollectionBuilder visualization features, such as "Browse" or "Subjects", so **you will rarely have to edit any of the default page stubs.**
+
 However, we hope you *will* [edit the "about.md"]({{ '/docs/pages/interpretive/' | relative_url }}) and perhaps [add more interpretive pages]({{ '/docs/pages/add_page/' | relative_url }}).
 
 The sections below outline important basics of page files.
@@ -29,7 +30,7 @@ permalink: /browse.html
 ```
 
 The front matter block starts with `---` and ends with `---`.
-In between those lines, the content is read by Jekyll as YAML.
+In between those lines, the content is read by Jekyll as [YAML]({{ '/docs/glossary/#yaml' | relative_url }}) data.
 Similar to editing "_config.yml" or "theme.yml", this section will be key value pairs, with some special keys that Jekyll is looking for:
 
 - `title` is used for meta tags on the page.
@@ -60,4 +61,4 @@ Keep in mind that a page will not appear in the navigation bar unless it appears
 
 Not all page stubs need to appear in the nav (especially if you aren't using it)!
 If a page stub exists, Jekyll will still generate the page whether it is in nav or not.
-You can add a link to the page in your content.
+You can add a link to a page in other content pages, even if the page is not in the main nav.

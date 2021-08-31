@@ -4,17 +4,17 @@ parent: Edit Pages
 nav_order: 5
 ---
 
-*You can add visual and interactive features to any of your pages by using a [Liquid includes](https://jekyllrb.com/docs/includes/) command. For more on the general use of these features for "about" and other interpretive pages, see our [Interpretive Pages](interpretive/) section.* 
-
 # Feature Includes
 
-To add *exciting* visual features to your "About" page CollectionBuilder provides a variety of feature includes.
-Each of these includes can add collection items, external media, or Bootstrap components.
-Take a look at our demo collection's [About page](https://collectionbuilder.github.io/collectionbuilder-gh/about.html){:target="_blank" rel="noopener"} to see them in action. You can also check out the [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"} on our CollectionBuilder-gh demo site; the examples on that page will work in any type of CollectionBuilder
+To add *exciting* visual features to your ["About" and other interpretive pages]({{ '/docs/pages/interpretive/' | relative_url }}) CollectionBuilder provides a variety of feature includes.
+Each of these [Liquid includes](https://jekyllrb.com/docs/includes/) provide a simplified method to add collection items, external media, or Bootstrap components into your Markdown content.
+
+Take a look at our demo collection's [About page](https://collectionbuilder.github.io/collectionbuilder-gh/about.html){:target="_blank" rel="noopener"} to see them in action. 
+You can also check out the [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"} on our CollectionBuilder-gh demo site; the examples on that page will work in any type of CollectionBuilder template.
 
 All feature includes can be found in the "_includes/feature" folder in your project repository.
-Each include file has an extensive comment section at the top with details about how to use it and an example use of the code (Liquid comments are between the tags `{% raw %}{% comment %} {% endcomment %}{% endraw %}`.
-The file itself is the best source of information, and it is easy to copy the line of code directly from the comment section and paste into your Markdown file!
+Each include file has an extensive comment section at the top with details about how to use it and an example use of the code (Liquid comments are between the tags `{% raw %}{% comment %} {% endcomment %}{% endraw %}`).
+The file itself is the best source of information, and it is handy to copy the line of code directly from the comment section and paste into your Markdown file!
 
 All include commands:
 
