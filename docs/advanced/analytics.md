@@ -12,10 +12,10 @@ Any analytics platform can be added by pasting the tracking snippet they provide
 During "production" build *only*, the include is added to every page.
 By default, Jekyll is in the "development" environment, so analytics will not be added while you are testing your site locally.
 
-Since most people will opt to use Google Analytics, we provide a pre-configured tracking code snippet that can be added simply by pasting your Google Analytics ID as the `google-analytics-id` value in "_config.yml".
+Since many people will opt to use Google Analytics, we provide a pre-configured tracking code snippet that can be added simply by pasting your Google Analytics ID as the `google-analytics-id` value in "_config.yml".
 However, there are many alternatives emerging, so you may want to explore the options in your context to avoid concerns over data privacy.
 
-We have be very satisfied using self-hosted [Matomo](https://matomo.org/).
+We have been very satisfied using self-hosted [Matomo](https://matomo.org/).
 
 ## Set up Google Analytics
 
