@@ -17,4 +17,4 @@ Depending on your operating system (i.e. Mac), this might be the most complicate
 - [Ruby on Mac]({{ '/docs/software/ruby_mac/' | relative_url }})
 - [Ruby on Linux]({{ '/docs/software/ruby_linux/' | relative_url }})
 
-These present approaches that have worked for us, but you may want to refer to Jekyll's official [installation guides](https://jekyllrb.com/docs/installation/) for more tips!
+These approaches that have worked for us, but you may want to refer to Jekyll's official [installation guides](https://jekyllrb.com/docs/installation/) for more tips!

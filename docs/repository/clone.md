@@ -8,7 +8,7 @@ nav_order: 2
 **Attention GH users:** The rest of the instructions in this Repository section are optional for you!
 You can move on to the [Metadata]({{ '/docs/metadata/' | relative_url }}) section. 
 GH was designed so that all the edits can be made through the GitHub web interface. <br>
-If you'd like to work on your repository on your local computer, and you've installed all the software required, you can follow the steps below and work in the same method as the other types.
+If you'd like to work on your repository on your local computer, and you've installed all the software required, you can follow the steps below and work in the same method as the other templates.
 
 # Clone Your New Repository
 

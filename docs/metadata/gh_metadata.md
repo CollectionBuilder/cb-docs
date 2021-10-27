@@ -1,27 +1,27 @@
 ---
-title: GH and SA Metadata
+title: GH Metadata
 parent: Metadata
 nav_order: 1
 ---
 
-# GitHub Pages and Stand Alone Metadata
+# CollectionBuilder-GH Metadata
 
 ## Metadata Template
 
-If you are starting your collection from scratch, the easiest way to ensure you have the required fields is to use the CollectionBuilder metadata template. 
-The template is available on Google Sheets via the link below (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy" to get started), or in your project repository as "_data/metadata-template.csv".
+If you are starting your collection from scratch, the easiest way to ensure you have the required fields is to create your metadata using the CollectionBuilder-GH metadata template. 
+The template is available on Google Sheets via the link below (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy" to get started), or in your CollectionBuilder-GH project repository as "_data/metadata-template.csv".
 This template is a starting point--fill in only what is relevant for your content and feel free to add more columns!
 
 If transforming existing metadata, you do **not** need to exactly match the CollectionBuilder template. 
 Just ensure that you create the required fields following the conventions described below. 
 
-[GitHub Pages/Stand Alone CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
+[CollectionBuilder-GH Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
 
 The guidelines below provide details about each field.
 
 -----
 
-## Required Fields for CollectionBuilder-GH and SA
+## Required Fields for CollectionBuilder-GH
 
 Without values in the fields below, CollectionBuilder will not work properly.
 
@@ -38,7 +38,6 @@ Without values in the fields below, CollectionBuilder will not work properly.
 - Example value for item in your project's "objects" folder: `letter001.pdf`
 - Example value for external item: `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg`
 - *Tip:* check [Get List of Filenames]({{ '/docs/extras/utilities/#get-list-of-filenames' | relative_url }}) for quick methods to fill in the filename field!
-- *Note for SA Users:* For SA collections the "objects" folder location is set in "_config.yml", so may be a location external to the project. If your file is inside the configured "objects" folder, `filename` is just the objects filename, do not include a URL.
 
 ### title: 
 
