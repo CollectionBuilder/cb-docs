@@ -33,7 +33,7 @@ Without values in the fields below, CollectionBuilder will not work properly.
 ### filename: 
 
 - The digital object's filename including the file extension, *or* a full URL to a file hosted external to your project.
-- The value **must exactly match the actual filename** of the file in your "objects" directory. Most web servers are case sensitive, so make sure everything matches!
+- The value **must exactly match the actual filename** of the file in your "objects" directory, including the case of the filename and file extension. Most web servers are case sensitive, so make sure everything matches!
 - Records for YouTube or Vimeo objects will leave this field blank.
 - Example value for item in your project's "objects" folder: `letter001.pdf`
 - Example value for external item: `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg`
@@ -88,7 +88,8 @@ Location | `location` |
 - Example value: `-117.165625`
 
 {:.alert .alert-green}
-**Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. The first option you will see is to copy the coordinates. You can click to copy those and then paste the location into your metadata
+**Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. The first option you will see is to copy the coordinates. You can click to copy those and then paste the location into your metadata.<br><br>
+**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
 
 ### date: 
 
@@ -106,15 +107,12 @@ Location | `location` |
 - Example value: `Dogs; Cats; Zebras`
 
 {:.alert .alert-red}
-*Note:* This field needs to be named **_'subject' (not 'subjects')_** for many default features in CollectionBuilder to work. Data in this field will create the word cloud that allows users to visualize the frequency of subjects used within the collection.
+*Note:* This field needs to be named ***'subject' (not 'subjects')*** for many default features in CollectionBuilder to work. Data in this field will create the word cloud that allows users to visualize the frequency of subjects used within the collection.
 
 ### location: 
 
 - This field designates a geographic location(s) to which the item is tied. Much like the subject field, this field will build a tag cloud of the most used locations in your collection. See the [Locations]({{ '/docs/theme/locations/' | relative_url }}) section for more information. Be sure to separate multiple location entries for a single record with a semicolon (`;`).
 - Example value: `Pullman, Washington; Moscow, Idaho`
-
-{:.alert .alert-green}
-**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
 
 -----
 

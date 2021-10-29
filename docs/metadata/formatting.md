@@ -17,7 +17,7 @@ Make sure you're following the guidelines below, otherwise CollectionBuilder may
 
 
 <div class="alert alert-green" markdown="1">
-**Pro Tip:** In Visual Studio Code, there's **an easy way to make your fields lowercase**: 
+**Pro Tip:** In Visual Studio Code, there's **an easy way to make your metadata fields lowercase**: 
 
 1. Highlight the first row of your CSV (the row containing field names) 
 2. Click the 'Command Palette' option in the View menu 
