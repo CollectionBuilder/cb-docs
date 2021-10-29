@@ -1,22 +1,20 @@
 ---
 title: Objects for CSV
 parent: Objects
-nav_order: 4
+nav_order: 2
 ---
-
-{:.alert .alert-yellow }
-CollectionBuilder-CSV is under active development!
-This doc content related to CSV is a draft.
 
 # Collection Objects for CollectionBuilder-CSV
 
-Since CollectionBuilder-CSV adds object information into the metadata CSV, the process for preparing objects is very flexible. 
+CollectionBuilder-CSV is designed for large, stand alone collections self-hosted on any basic static web server or platform.
+
+Since CollectionBuilder-CSV adds object location information into the metadata CSV, the process for preparing objects is very flexible. 
 You can follow the workflows described for any of the other templates, or combine multiple approaches to curate items from diverse sources.
 
-The important step is to get the information about where your objects and object derivatives are located written into your [metadata fields]({{ '/docs/metadata/csv_metadata/' | relative_url }}).
+The important step is to write the information about where your objects and object derivatives are located into your [metadata fields]({{ '/docs/metadata/csv_metadata/' | relative_url }}).
 In general, CB-CSV supports three files associated with each record via links added to the following metadata columns:
 
-- `object_location`: path to the full sized digital object of any format.
+- `object_location`: path to the full-sized digital object of any format.
     - this could be any format and size you would like to provide to your users, or a link to external resource such as YouTube videos or a link to an article.
     - the object may be hosted with the project, in an external location, or retrieved from an API.
 - `image_small`: path to a web-quality image used to represent objects on Item pages or in visualizations where a larger than thumb image would be useful.
@@ -26,16 +24,16 @@ In general, CB-CSV supports three files associated with each record via links ad
     - for all Item types should be JPGs approximately 400x400 px max.
     - the image may be hosted with the project, in an external location, or retrieved from an API.
 
-Items are not required to have any corresponding objects (in which case they are metadata only records)!
+Items are not required to have any corresponding objects (in which case they are metadata-only records)!
 Items without `image_small` or `image_thumb` values will be represented by icons based on their `display_template` or `format` field in visualization pages.
 
 Generally, the best approach for filling in the `object_location`, `image_small`, and `image_thumb` columns will be to use "recipes" to document the paths / locations for each group of object type in your collection.
-You will likely want to gather the values necessary for each recipe in their own columns and use formulas in Sheets or OpenRefine to create the final links.
+You will likely want to gather the values necessary for each recipe in their own columns and use formulas in Google Sheets or OpenRefine to create the final links.
 
 {:.alert .alert-yellow}
 Example paths / locations are given for a variety of object types below.
 
-------------------
+-----
 
 ## Path for Stand Alone Objects
 
