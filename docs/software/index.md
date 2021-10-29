@@ -21,6 +21,6 @@ Our advice is to stick with it.
 Having your local "development environment" for a Jekyll-based project set up will be rewarding, allowing you to edit code and see how the website changes right on your laptop.
 
 ***Troubleshooting:*** 
-We've tried to anticipate problems you might have in the documentation and the Lib-STATIC [How-To files](https://lib-static.github.io/howto/) we link to. 
-If those options fail, try Google using very specific search. 
+We've tried to anticipate problems you might have. 
+If these options fail, try Googling your problem using very specific search. 
 If Google doesn't help, email [Evan](mailto:ewilliamson@uidaho.edu) (he's probably not doing anything). 

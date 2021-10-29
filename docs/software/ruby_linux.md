@@ -10,7 +10,6 @@ Although many distros come with a system Ruby installed or a repository version,
 This will ensure you have an up to date Ruby version and a clean environment separated from your system Ruby.
 
 The instructions for installing via rbenv on Ubuntu are provided below (since that is what we generally use).
-Check [lib-static howto](https://lib-static.github.io/howto/howtos/installrubylinux.html) for more options.
 
 ## Install Ruby via rbenv
 
