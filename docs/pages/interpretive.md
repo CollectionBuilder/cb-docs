@@ -35,7 +35,7 @@ This a [Liquid Include](https://jekyllrb.com/docs/includes/) command that is add
 Includes are a powerful feature of Jekyll that allow modular elements or content to be drawn into your site's pages from a central location.
 
 In this case the include is calling the file `feature/jumbotron.html`, and providing the option `objectid` with a URL to an external image.
-You should update the value of `objectid` replacing the URL with either an objectid of an image item from your collection or a URL for your own external image (or [see Jumbotron](#jumbotron) below for more options).
+You should update the value of `objectid` replacing the URL with either an objectid of an image item from your collection or a URL for your own external image (or [see Jumbotron]({{ '/docs/pages/features/#jumbotron' | relative_url }}) on the Feature Includes page).
 If you don't want the "jumbotron" feature, just delete the full line of the include.
 
 The template file contains some placeholder CollectionBuilder information and content.
@@ -43,6 +43,6 @@ Towards the bottom of the template "about.md" you will notice a comment and "abo
 Be sure to delete this and anything else you don't want to appear on your "About" page.
 But first, check out the generated "About" page, since this content demonstrates using feature includes!
 
-You can learn more about the includes feature as well as the variety of options offered at the [Feature Includes Options](features/) page.
+You can learn more about the includes and how to use them on the [Feature Includes Options]({{ '/docs/pages/features/' | relative_url }}) page.
 
-{% include feature/button.html link="features/" text="See a List of Features"%}
+{% include feature/button.html link="https://collectionbuilder.github.io/collectionbuilder-gh/about.html#about-the-about-page" text="View About the About Demo Page"%}

@@ -80,12 +80,12 @@ Location | `location` |
 
 ### latitude:
 
-- A geographic coordinate specifying the north-south position of an item. See the [Map](theme.html#map-page) section for more information.
+- A geographic coordinate specifying the north-south position of an item. See the [Map]({{ '/docs/theme/map/' | relative_url }}) section for more information.
 - Example value: `46.731643`
 
 ### longitude:
 
-- A geographic coordinate specifying the east-west position of an item. See the [Map](theme.html#map-page) section for more information.
+- A geographic coordinate specifying the east-west position of an item. See the [Map]({{ '/docs/theme/map/' | relative_url }}) section for more information.
 - Example value: `-117.165625`
 
 {:.alert .alert-green}
@@ -94,7 +94,7 @@ Location | `location` |
 ### date: 
 
 - This field indicates a point in time associated with the item. This `date` field will be used for sorting and displaying on a timeline, so may often be an estimated / approximate date, rather than one more precisely formatted to archival description standards. We suggest adding more complex descriptions of date (date ranges, uncertainties, etc) in a separate field such as "date_created".
-- Dates should be represented in the format `yyyy-mm-dd`, which will enable our various timeline visualizations. See the [Timeline](theme.html#timeline-page) section for more details. 
+- Dates should be represented in the format `yyyy-mm-dd`, which will enable our various timeline visualizations. See the [Timeline]({{ '/docs/theme/timeline/' | relative_url }}) section for more details. 
 - For less exact dates, `yyyy-mm` or `yyyy` may be used.
 - Example value: `1997-07-16`, `1997-07`, `1997`
 - (Dates in a `mm/dd/yyyy` format will also work)
@@ -103,7 +103,7 @@ Location | `location` |
 
 - The subject field contains topic(s) related to the item. 
 - This field allows for multiple subjects to be input for a single record. Each should be separated with a semicolon (`;`). 
-- See the [Subjects](theme.html#subjects-page) section for more information.
+- See the [Subjects]({{ '/docs/theme/subjects/' | relative_url }}) section for more information.
 - Example value: `Dogs; Cats; Zebras`
 
 {:.alert .alert-red}
@@ -111,7 +111,7 @@ Location | `location` |
 
 ### location: 
 
-- This field designates a geographic location(s) to which the item is tied. Much like the subject field, this field will build a tag cloud of the most used locations in your collection. See the [Locations](theme.html#locations-page) section for more information. Be sure to separate multiple location entries for a single record with a semicolon (`;`).
+- This field designates a geographic location(s) to which the item is tied. Much like the subject field, this field will build a tag cloud of the most used locations in your collection. See the [Locations]({{ '/docs/theme/locations/' | relative_url }}) section for more information. Be sure to separate multiple location entries for a single record with a semicolon (`;`).
 - Example value: `Pullman, Washington; Moscow, Idaho`
 
 {:.alert .alert-green}
@@ -125,7 +125,7 @@ The rest of the fields in the CollectionBuilder metadata template are not requir
 These remaining fields are listed below, along with their respective definitions and examples.
 
 {:.alert .alert-green}
-CollectionBuilder can accommodate any field you include in your metadata once you customize your site. For example, you can display any field on item pages or on the Browse page. See the [Metadata](customize.html#config-metadata) and [Browse](customize.html#config-browse) customization sections for more information.
+CollectionBuilder can accommodate any field you include in your metadata once you customize your site. For example, you can display any field on item pages or on the Browse page. See the [Page config]({{ '/docs/customization/' | relative_url }}) sections for more information.
 
 ### creator:
 
