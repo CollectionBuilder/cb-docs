@@ -26,7 +26,7 @@ These *very* popular open source utilities are used in numerous applications and
 
 - Visit the [ImageMagick download page](https://imagemagick.org/script/download.php) and download the suggested version (the one at the top of the list). 
 - This file will be a self contained installer, once downloaded double click to install on your computer following the default options.
-- Visit [Ghostscript download page](https://www.ghostscript.com/download/gsdnld.html) and choose the "AGPL release".
+- Visit [Ghostscript download page](https://ghostscript.com/releases/gsdnld.html) and choose the "AGPL release".
 - This file will be a self contained installer, once downloaded double click to install on your computer following the default options.
 
 ### Install on Mac
