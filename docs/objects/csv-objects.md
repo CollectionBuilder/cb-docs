@@ -8,20 +8,33 @@ nav_order: 2
 
 CollectionBuilder-CSV is designed for large, stand alone collections self-hosted on any basic static web server or platform.
 
-Since CollectionBuilder-CSV adds object location information into the metadata CSV, the process for preparing objects is very flexible. 
-You can follow the workflows described for any of the other templates, or combine multiple approaches to curate items from diverse sources.
+CB-CSV's flexible style gives you the option to include a small and thumb image derivative or representation for each of your objects (and comes complete with a Rake task to automate creating those derivatives!), in addition to providing full-sized objects for download.
 
-The important step is to write the information about where your objects and object derivatives are located into your [metadata fields]({{ '/docs/metadata/csv_metadata/' | relative_url }}).
-In general, CB-CSV supports three files associated with each record via links added to the following metadata columns:
+Don't want to include derivatives/representations? 
+No problem! 
+A CB-CSV record works just fine with a single full-sized object as well, just like CB-GH.
+
+Curate objects from multiple sources: Besides, jpg, png, pdf, and mp3, your objects can also be external links, YouTube, or Vimeo content, just like in CB-GH.
+
+Before we get into the process for gathering your objects and creating derivatives, it's important to understand how the CB-CSV template works with your objects:
+
+## Object Location is Key
+
+The CB-CSV metadata CSV contains location information for each object, which means the process for preparing objects for CB-CSV is very flexible, allowing you to combine and curate items from diverse sources.
+
+Note that the collection object files will typically **not** be committed into your project repository on GitHub--rather, they'll be hosted with the project on a server of your choosing, hosted in an external location, or retrieved from an API. 
+
+Write the information about where your objects and object derivatives are located into your [metadata fields]({{ '/docs/metadata/csv_metadata/' | relative_url }}).
+In general, CB-CSV supports three files (full size, small, and thumb) associated with each record, via links added to the following metadata columns:
 
 - `object_location`: path to the full-sized digital object of any format.
     - this could be any format and size you would like to provide to your users, or a link to external resource such as YouTube videos or a link to an article.
     - the object may be hosted with the project, in an external location, or retrieved from an API.
-- `image_small`: path to a web-quality image used to represent objects on Item pages or in visualizations where a larger than thumb image would be useful.
-    - for all Item types should be JPGs approximately 800x800 px max.
+- `image_small`: path to a web-quality image used to represent objects on Item pages.
+    - for all Item types should be JPEGs approximately 800x800 px max.
     - the image may be hosted with the project, in an external location, or retrieved from an API.
 - `image_thumb`: path to a web quality image used to represent the object on visualization pages (i.e. Home, Browse, Map, and Timeline), in a fast, user friendly file size.
-    - for all Item types should be JPGs approximately 400x400 px max.
+    - for all Item types should be JPEGs approximately 400x400 px max.
     - the image may be hosted with the project, in an external location, or retrieved from an API.
 
 Items are not required to have any corresponding objects (in which case they are metadata-only records)!
@@ -34,6 +47,8 @@ You will likely want to gather the values necessary for each recipe in their own
 Example paths / locations are given for a variety of object types below.
 
 -----
+
+This can be automated using the included Rake tasks ([see below](#generate-derivatives-rake-task)) or manually created using other software.
 
 ## Path for Stand Alone Objects
 

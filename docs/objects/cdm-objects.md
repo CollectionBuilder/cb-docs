@@ -1,5 +1,5 @@
 ---
-title: Objects Using CONTENTdm
+title: Objects using CONTENTdm
 parent: Objects
 nav_order: 3
 ---
