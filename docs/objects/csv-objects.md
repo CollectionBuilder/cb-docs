@@ -6,41 +6,63 @@ nav_order: 2
 
 # Collection Objects for CollectionBuilder-CSV
 
-CollectionBuilder-CSV is designed for large, stand alone collections self-hosted on any basic static web server or platform.
+CollectionBuilder-CSV is designed for large, stand alone collections, hosted on any basic static web server or platform.
 
-CB-CSV's flexible style gives you the option to include a small and thumb image derivative or representation for each of your objects (and comes complete with a Rake task to automate creating those derivatives!), in addition to providing full-sized objects for download.
+CB-CSV's flexible style gives you the option to include a small and thumb image derivative or representation for each of your objects (and comes complete with a [Rake task]({{ '/objects/derivatives/#generate-derivatives-rake-task' | relative_url }}) to automate creating those derivatives!), in addition to providing full-sized objects for download.
 
 Don't want to include derivatives/representations? 
 No problem! 
-A CB-CSV record works just fine with a single full-sized object as well, just like CB-GH.
+A CB-CSV record works just fine with a single full-sized object as well (just like CB-GH).
 
-Curate objects from multiple sources: Besides, jpg, png, pdf, and mp3, your objects can also be external links, YouTube, or Vimeo content, just like in CB-GH.
+## Object Guidelines for CSV
 
-Before we get into the process for gathering your objects and creating derivatives, it's important to understand how the CB-CSV template works with your objects:
+- **Supported formats:** jpg, png, pdf, mp3 -- plus YouTube, Vimeo, and external links, but you won't have objects for those!
+- **File size:** the full size object can be any size you think your users might want to download. This might not be your full sized preservation file--generally, we try to provide very high quality objects to users, but balance that against the practicality of huge file sizes--most users don't want a 1GB TIF or PDF!
+- **Filenaming:** to avoid issues, please pay close attention to filenaming conventions! The filename should be:
+    - all lowercase
+    - no spaces
+    - no special characters (underscores (`_`) are okay.
+
+*Tip:* Your File Explorer / Finder might hide file extensions by default. 
+Check your View settings to show extensions!
+
+Before we get into the process for gathering your objects and creating derivatives, it's important that you understand how the CB-CSV template works with your objects:
 
 ## Object Location is Key
 
-The CB-CSV metadata CSV contains location information for each object, which means the process for preparing objects for CB-CSV is very flexible, allowing you to combine and curate items from diverse sources.
+**The CB-CSV metadata CSV contains location information for each object**, which means the process for preparing objects for CB-CSV is very flexible, allowing you to combine and curate items from diverse sources.
 
-Note that the collection object files will typically **not** be committed into your project repository on GitHub--rather, they'll be hosted with the project on a server of your choosing, hosted in an external location, or retrieved from an API. 
+In general, CB-CSV supports three files (full size, small, and thumb) associated with each record, via links added to the following metadata columns (see [CSV Metadata]({{ '/docs/metadata/csv_metadata/' | relative_url }}) for more information):
 
-Write the information about where your objects and object derivatives are located into your [metadata fields]({{ '/docs/metadata/csv_metadata/' | relative_url }}).
-In general, CB-CSV supports three files (full size, small, and thumb) associated with each record, via links added to the following metadata columns:
+### object_location: 
+    - A path to a full-sized digital object of any format (will be used by users as a full-sized file download, or a link to an external resource).
+    - This could be any format and size you would like to provide to your users, or a link to external resource such as YouTube videos or a link to an article.
+    - The full-sized object may be hosted with the project, in an external location, or retrieved from an API.
 
-- `object_location`: path to the full-sized digital object of any format.
-    - this could be any format and size you would like to provide to your users, or a link to external resource such as YouTube videos or a link to an article.
-    - the object may be hosted with the project, in an external location, or retrieved from an API.
-- `image_small`: path to a web-quality image used to represent objects on Item pages.
-    - for all Item types should be JPEGs approximately 800x800 px max.
-    - the image may be hosted with the project, in an external location, or retrieved from an API.
-- `image_thumb`: path to a web quality image used to represent the object on visualization pages (i.e. Home, Browse, Map, and Timeline), in a fast, user friendly file size.
-    - for all Item types should be JPEGs approximately 400x400 px max.
-    - the image may be hosted with the project, in an external location, or retrieved from an API.
+### image_small: 
+    - A path to a web-quality image (will be used to represent the objects on its Item page).
+    - For all Item types, the "image_small" value should be a JPEG approximately 800x800 px max.
+    - The small image may be hosted with the project, in an external location, or retrieved from an API.
 
-Items are not required to have any corresponding objects (in which case they are metadata-only records)!
-Items without `image_small` or `image_thumb` values will be represented by icons based on their `display_template` or `format` field in visualization pages.
+### image_thumb: 
+    - A path to a web quality image in a fast, user friendly file size (will be used to represent the object on visualization pages--i.e. Home, Browse, Map, and Timeline).
+    - For all Item types, the "image_thumb" value should be a JPEG approximately 400x400 px max.
+    - The thumb image may be hosted with the project, in an external location, or retrieved from an API.
 
-Generally, the best approach for filling in the `object_location`, `image_small`, and `image_thumb` columns will be to use "recipes" to document the paths / locations for each group of object type in your collection.
+{% capture note %}
+**Note:**
+Items are not *required* to have any corresponding objects--in other words, you can leave "object_location", "image_small", and "image_thumb" blank, and your record will be a metadata-only record.
+
+It's also okay to include a value for "object_location" but leave the "image_small" and "image_thumb" fields blank: objects without "image_small" or "image_thumb" values will be represented by icons based on their "display_template" or "format" field in visualization pages.
+{% endcapture %}
+
+{% include feature/alert.html color="purple" text=note %}
+
+## Creating Object Paths
+
+Generally, the best approach for filling in the "object_location", "image_small", and "image_thumb" columns will be to document the paths / locations for each group of object type in your collection.
+
+Think of the values that make up these paths as "recipes".
 You will likely want to gather the values necessary for each recipe in their own columns and use formulas in Google Sheets or OpenRefine to create the final links.
 
 {:.alert .alert-yellow}

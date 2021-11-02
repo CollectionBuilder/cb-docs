@@ -59,7 +59,7 @@ This approach provides flexibility to include objects from multiple sources with
 
 ### object_location: 
 
-- a full URL to download the full quality digital object *or* relative path if items are contained with in the project.
+- A full URL to download the full quality digital object *or* relative path if items are contained with in the project.
 - Most objects will have an `object_location` value, the link where the digital file can be downloaded or accessed in a different platform.
 - If this field is blank, the item will become a metadata-only record.
 - Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/max/0/default.jpg`
@@ -74,7 +74,7 @@ Do not include the `baseurl` value that you set in "_config.yml", since this wil
 
 ### image_small: 
 
-- a full URL to a small image representation of the object *or* relative path if items are contained with in the project.
+- A full URL to a small image representation of the object *or* relative path if items are contained with in the project.
 - The small image is used to represent objects on Item pages, or in visualizations where a larger-than-thumb image would be useable.
 - For non-image items having a small image can useful to provide users a visual representation for the object (i.e. an audio cover).
 - If this field is blank, the item will be represented by an icon based on its `display_template` or `format` field.
@@ -85,7 +85,7 @@ Do not include the `baseurl` value that you set in "_config.yml", since this wil
 
 ### image_thumb: 
 
-- a full URL to a thumb image representation of the object *or* relative path if items are contained with in the project.
+- A full URL to a thumb image representation of the object *or* relative path if items are contained with in the project.
 - The thumb image is used to represent the object on visualization pages (i.e. Home, Browse, Map, and Timeline), in a fast, user friendly file size.
 - If this field is blank, the template will use a icon to represent the object based on its `display_template` or `format` field.
 - As a general guideline, thumb images should be JPGs approximately 400x400 px max.
