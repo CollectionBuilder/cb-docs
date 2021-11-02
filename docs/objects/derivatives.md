@@ -7,7 +7,7 @@ nav_order: 5
 {:.alert .alert-yellow}
 **Note**: This section defines display derivative specifications for CollectionBuilder-CSV and CollectionBuilder-SA users and provides instructions for generating thumb and small derivatives using CollectionBuilder's built-in rake tasks.
 
-## Object Derivatives
+## Creating Small and Thumb Derivatives
 
 Once your full-sized digital objects are organized, you will need to prepare display derivatives for every item.
 This process can be automated for TIF, JPG, PNG, and PDF files using the "Generate Derivatives" [Rake task](#generate-derivatives-rake-task).
