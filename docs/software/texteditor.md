@@ -17,7 +17,7 @@ We mostly use Visual Studio Code, so if you don't know which one to pick, go ahe
 
 ## Configuring Visual Studio Code
 
-Visual Studio Code (VS Code) has a tremendous number of extensions that can be added to enhance it's functionality. 
+Visual Studio Code (VS Code) has a tremendous number of extensions that can be added to enhance its functionality. 
 We recommend: 
 
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker){:target="_blank" rel="noopener"}, which will check your spelling.
