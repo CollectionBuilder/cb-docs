@@ -5,7 +5,7 @@ nav_order: 4
 ---
 
 {:.alert .alert-red}
-**Note: CollectionBuilder-SA is now deprecated! We strongly recommend using CollectionBuilder-CSV instead.**
+**Note: CollectionBuilder-SA is now deprecated! We *strongly* recommend using CollectionBuilder-CSV instead.**
 
 # Collection Objects for CollectionBuilder-SA
 

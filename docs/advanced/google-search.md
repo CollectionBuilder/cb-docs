@@ -6,7 +6,7 @@ nav_order: 4
 
 # Add Google Custom Search Page
 
-*for CollectionBuilder-GH, -SA, and -CSV*
+*for CollectionBuilder-GH and -CSV*
 
 After your site has been up for awhile, [Google Custom Search Engine](https://cse.google.com/cse/) (or "Programmable Search") can provide a quality search of your content.
 To add one to your collection site, visit CSE, set up the search, then copy the ID into your project's "_config.yml".
