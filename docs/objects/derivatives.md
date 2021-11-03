@@ -4,39 +4,48 @@ parent: Objects
 nav_order: 5
 ---
 
-{:.alert .alert-yellow}
-**Note**: This section defines display derivative specifications for CollectionBuilder-CSV users and provides instructions for generating thumb and small derivatives using CollectionBuilder's built-in rake tasks.
+# Generating Thumb and Small Object Derivatives
 
-## Creating Small and Thumb Derivatives
+This section defines display specifications for derivative objects in CollectionBuilder-CSV, and provides instructions for generating thumb and small derivatives using CollectionBuilder-CSV's built-in rake tasks.
 
-Once your full-sized digital objects are organized, you will need to prepare display derivatives for every item.
-This process can be automated for tif, jpg, png, and pdf files using the "Generate Derivatives" [Rake task](#generate-derivatives-rake-task).
+## Thumb and Small Derivative Specifications
 
-This rake task will produce a "small" and "thumb" jpg image for display on the collection web pages. 
-The full sized and derivative files will be organized inside your project's "objects" folder:
+Once your full-sized digital objects are organized, you can prepare their display derivatives.
+This process can be automated for tif, jpg, png, and pdf files using the ["Generate Derivatives" Rake task](#generate-derivatives-rake-task).
+
+This Rake task will produce a "thumb" and "small" jpg image for each object, for display on the collection web pages.
+
+To start, the full-sized files should be organized inside your project's "objects" folder:
 
 ### "objects/"
-- Put your full-sized object files within your project's root "objects/" folder. These files will be available for users to download. 
+- Put your full-sized object files in your project's "objects/" folder.
 
-CollectionBuilder-CSV requires two subfolders within the "objects/" folder: "objects/small/" and "objects/thumbs/".
-**If you choose to create small and thumb derivatives on your own without using the Rake task**, you'll need to create these subfolders manually and add the respective objects to each folder. 
-**If you choose to use the Rake task to generate the derivatives**, these subfolders will automatically be created as part of the Rake task.
+If you're using the Rake task to generate derivatives, two new subfolders, "objects/small/" and "objects/thumbs/", will automatically be created as part of the Rake task:
 
 ### "objects/small/" 
-- The "small/" subfolder contains a web-friendly small sized .jpg image representation of every object. This image is used on Item pages to provide a quality preview of the full sized object.
-    - use the naming convention [base filename] + `_sm.jpg`.
-    - should be approximately 800x800 px max.
+- The "small/" subfolder will contain a web-friendly small-sized .jpg image representation of every object. This image is used on Item pages to provide a quality preview of the full sized object.
+    - **Naming convention**: [base filename] + `_sm.jpg`.
+    - **Size**: approximately 800x800 px max.
 
 ### "objects/thumbs/" 
-- The "thumbs/" subfolder contains a thumb sized .jpg image representation of every object. This image is used throughout the CollectionBuilder visualization pages to provide a small preview of the object.
-    - use the naming convention [base filename] + `_th.jpg`. 
-    - should be approximately 400x400 px max.
+- The "thumbs/" subfolder will contain a thumb-sized .jpg image representation of every object. This image is used throughout the CollectionBuilder visualization pages to provide a small preview of the object.
+    - **Naming convention**: [base filename] + `_th.jpg`. 
+    - **Size**: approximately 400x400 px max.
 
-For example, if you have a collection object, "example_document1.pdf", these will be the files in your objects folder/subfolders:
+For example, if you have a collection object, "example_document1.pdf", after running the Rake task these will be the files in your objects folder/subfolders:
 
 - "objects/example_document1.pdf"
 - "objects/small/example_document1_sm.jpg"
 - "objects/thumbs/example_document1_th.jpg"
+
+{:.alert .alert-purple}
+**Note**: You do not need to create the "objects/small/" and "objects/thumbs/" folders manually.
+The Rake task will do this for you!
+
+{:.alert .alert-yellow}
+Are you creating your derivatives manually instead of using the Rake task?
+We recommend using "small/" and "thumbs/" directories for organization purposes, but it's not required.
+Just remember to put the [correct path]({{ '/docs/metadata/csv_metadata/#object-detail-fields-strongly-suggested' | relative_url }}) to your derivatives in each object's metadata record.
 
 ---
 
@@ -72,10 +81,13 @@ The "generate_derivatives" command can be further customized with several option
 To avoid errors, you will need to give an additional configuration option to change the ImageMagick command:
 `rake generate_derivatives[,,,,convert]`
 
+{:.alert .alert-blue}
+Questions about hosting your objects? See [Object Deployment]({{ '/docs/objects/csv-objects/#object-deployment' | relative_url }}) for CollectionBuilder-CSV.
+
 ---
 
 ## Derivatives for Other Object Types
 
 See the [Object Paths]({{ '/docs/objects/object-paths/' | relative_url }}) page for information on [YouTube]({{ '/docs/objects/object-paths/#path-for-youtube-objects' | relative_url }}) derivatives.
 
-For other item types you may want to manually generate "small" and "thumbs" images following the conventions documented in the [Creating Derivatives](#creating-small-and-thumb-derivatives) section above.
+For other item types you may want to manually generate "small" and "thumbs" images following the conventions documented in the [Creating Derivatives](#create-small-and-thumb-derivatives) section above.

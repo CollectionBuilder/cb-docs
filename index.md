@@ -22,8 +22,17 @@ There are steps where the documentation does vary between templates, however, so
 The templates are currently: 
 
 - **GH** - for [CollectionBuilder-GH](https://github.com/CollectionBuilder/collectionbuilder-gh), a lightweight learning-focused template designed for free hosting on GitHub Pages.
-- **CSV** - for [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-sa), a robust, stand-alone template for developing exhibits on your local computer (and serving them from anywhere!)
+- **CSV** - for [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv), a robust template for developing exhibits on your local computer (and serving them from anywhere!)
 - **CDM** - for [CollectionBuilder-CONTENTdm](https://github.com/CollectionBuilder/collectionbuilder-contentdm), a template for generating a "skin" over an existing CONTENTdm repository.
+
+## How To Get in Touch
+
+Have questions, comments, or concerns for CollectionBuilder developers?
+You're welcome to contact any or all of us:
+
+- Evan Williamson (<mailto:ewilliamson@uidaho.edu>)
+- Devin Becker (<mailto:dbecker@uidaho.edu>)
+- Olivia Wikle (<mailto:omwikle@uidaho.edu>)
 
 ## Other Resources
 

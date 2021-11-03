@@ -12,12 +12,12 @@ CB-CSV's flexible style gives you the option to include a small and thumb image 
 
 Don't want to include derivatives/representations? 
 No problem! 
-A CB-CSV record works just fine with a single full-sized object as well (just like CB-GH).
+A CB-CSV record works just fine with a single full-sized object (just like CB-GH).
 
 ## Object Guidelines for CollectionBuilder-CSV
 
 - **Supported formats:** jpg, png, pdf, mp3 -- plus YouTube, Vimeo, and external links
-- **File size:** the full size object can be any size you think your users might want to download. This might not be your full sized preservation file--generally, we try to provide very high quality objects to users, but balance that against the practicality of huge file sizes--most users don't want a 1GB TIF or PDF!
+- **File size:** the full size object can be any size you think your users might want to download. This might not be your full sized preservation file--generally, we try to provide very high quality objects to users, but balance that against the practicality of huge file sizes--most users don't want a 1GB tif or pdf!
 - **Filenaming:** to avoid issues, please pay close attention to filenaming conventions! The filename should be:
     - all lowercase
     - no spaces
@@ -35,12 +35,12 @@ Before we get into the process for gathering your objects and creating derivativ
 In general, CB-CSV supports three files (full size, small, and thumb) associated with each record, via links added to the following metadata columns (see the [CSV Metadata]({{ '/docs/metadata/csv_metadata/' | relative_url }}) documentation for more information):
 
 ### object_location: 
-- A path to a full-sized digital object of any format (will be used by users as a full-sized file download, or a link to an external resource).
+- A path to a full-sized digital object of any format, or a link to an external resource (will be used by users as a full-sized file download).
 - This could be any format and size you would like to provide to your users, or a link to external resource such as YouTube videos or a link to an article.
 - The full-sized object may be hosted with the project, in an external location, or retrieved from an API.
 
 ### image_small: 
-- A path to a web-quality image (will be used to represent the objects on its Item page).
+- A path to a web-quality image (will be used to represent the object on its Item page).
 - For all Item types, the "image_small" value should be a jpeg approximately 800x800 px max.
 - The small image may be hosted with the project, in an external location, or retrieved from an API.
 
@@ -59,15 +59,15 @@ It's also okay to include a value for "object_location" but leave the "image_sma
 
 {% include feature/alert.html color="purple" text=note %}
 
-## Creating Small and Thumb Derivatives
+## Create Small and Thumb Derivatives
 
 Small and thumb derivatives are not required for your collection to work, but they do make your collection's visualizations a lot more engaging. 
 
 To create derivatives for your objects, first make sure that you've given all of your image and pdf objects appropriate [file names](#object-guidelines-for-collectionbuilder-csv), and then gather them in one folder on your computer.
-Then, head over to our [Object Derivatives]({{ '/docs/objects/derivatives/' | relative_url }}) page to follow step-by-step instructions for creating derivatives using CB-CSV's built in "[generate_derivatives]({{ '/docs/objects/derivatives/#generate-derivatives-rake-task' | relative_url }})" Rake task.
+Then, head over to the [Object Derivatives]({{ '/docs/objects/derivatives/' | relative_url }}) page to follow step-by-step instructions for creating derivatives using CB-CSV's built in ["generate_derivatives" Rake task]({{ '/docs/objects/derivatives/#generate-derivatives-rake-task' | relative_url }}).
 
 Note that instead of using the Rake task, you can manually create your derivatives elsewhere using an image editing software of your choosing.
-Be sure to follow the file specifications described in the [Derivatives]({{ '/docs/objects/derivatives/#creating-small-and-thumb-derivatives' | relative_url }})(#object-location-metadata-fields) section of this site.
+Be sure to follow the file specifications described in the [Derivatives]({{ '/docs/objects/derivatives/#create-small-and-thumb-derivatives' | relative_url }}) section of this site.
 
 ## Object Deployment
 
@@ -78,18 +78,19 @@ Instead, the object files can be deployed in any web accessible location: you ca
 
 For example, here are some options for object file locations depending on your setup and stage of development:
 
-- **Just Testing:** keep the collection files in the "objects" folder in the project repository on your local machine. The files will *not* be committed to the repository, so they won't be available on GitHub. However, you will still be able to generate and test the site on your local machine.
-- **Objects Deployed with Site:** keep the collection files in the "objects" folder in the project repository on your local machine. When generating the site for deployment, Jekyll will copy the objects into the "_site" folder along with the rest of the site assets. Everything in the "_site" folder is copied to a static web server (via SFTP or file share method) for your live deployment.
-- **Objects in External Location:** prep your collection files, then move the objects to a static file hosting service (often provided by universities or purchased via a platform such as Digital Ocean or Reclaim Host). The objects are available at that location, e.g. 'https://www.example.com/objects/newproject/'. For the collection website, you can deploy the site assets in a totally separate location with out any objects, e.g. you set up a [GitHub Action]({{ '/docs/deploy/actions/' | relative_url }}) to build the CB-CSV project resulting in the website hosted at 'https://exampleuser.github.io/newproject/'. This has advantage of being able to manage objects and html separately on platforms optimized for delivering each.
+- **Just Testing:** Keep the collection files in the "objects" folder in the project repository on your local machine. The files will *not* be committed to the repository, so they won't be available on GitHub. However, you will still be able to generate and test the site on your local machine.
+- **Objects Deployed with Site:** Keep the collection files in the "objects" folder in the project repository on your local machine. When generating the site for deployment, Jekyll will copy the objects into the "_site" folder along with the rest of the site assets. Everything in the "_site" folder is copied to a static web server (via SFTP or file share method) for your live deployment.
+- **Objects in External Location:** Prep your collection files, then move the objects to a static file hosting service (often provided by universities or purchased via a platform such as [Digital Ocean](https://www.digitalocean.com/) or [Reclaim Hosting](https://reclaimhosting.com/)). The objects are available at that location, e.g. `https://www.example.com/objects/newproject/`. For the collection website, you can deploy the site assets in a totally separate location without any objects, e.g. you set up a [GitHub Action]({{ '/docs/deploy/actions/' | relative_url }}) to build the CB-CSV project resulting in the website hosted at `https://exampleuser.github.io/newproject/'`. This has the advantage of being able to manage objects and html separately on platforms optimized for delivering each.
 
-## Creating Object Paths
+## Add Object Paths To Your Metadata
+
+Now that you've located or created your objects and their derivatives, you'll need to add their locations (or "paths") to your [object_location]({{ '/docs/metadata/csv_metadata/#object_location' | relative_url }}), [image_small]({{ '/docs/metadata/csv_metadata/#image_small' | relative_url }}), and [image_thumb]({{ '/docs/metadata/csv_metadata/#image_thumb' | relative_url }}) metadata fields.
+See the [CollectionBuilder-CSV Metadata]({{ '/docs/metadata/csv_metadata/#object-detail-fields-strongly-suggested' | relative_url }}) page for more details on each field, and view the [demo-metadata.csv](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/_data/demo-metadata.csv) (located in the "_data" folder in the CB-CSV project repository) for example paths for various object types.
 
 When your collection contains multiple instances of the same object type hosted in the same location (say, five pdfs hosted on Digital Ocean, or 20 jpegs from a CONTENTdm collection), you can use "recipes" to pull together the values of the URL you will need to construct for the "object_location", "image_small", and "image_thumb" metadata fields for each object and its derivatives.
-
-See the [demo-metadata.csv](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/_data/demo-metadata.csv) (located in the "_data" folder in the CB-CSV project repository) for example paths for various object types.
 
 You will likely want to gather the values necessary for each recipe and use formulas in Google Sheets or OpenRefine to create the final links.
 
 {:.alert .alert-red}
 Need help figuring out paths for externally-hosted objects such as items from CONTENTdm, YouTube videos, etc.? 
-View example paths on the [Constructing Object Paths]({{ '/docs/objects/object-paths/' | relative_url }}) page.
+View example paths and recipes on the [Constructing Object Paths]({{ '/docs/objects/object-paths/' | relative_url }}) page.

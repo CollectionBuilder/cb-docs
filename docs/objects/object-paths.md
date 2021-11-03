@@ -19,7 +19,7 @@ Example paths are given below for the following object types/locations:
 
 See the [Object Derivatives]({{ '/objects/derivatives/' | relative_url }}) section for details of preparing a folder of image and PDF objects and generating derivatives using a Rake task.
 
-Example values for the CB-CSV [metadata fields]({{ '/docs/objects/csv-objects/#object-location-metadata-fields' | relative_url }}) "object_location", "image_small", and "image_thumb" metadata fields might look like this:
+Example values for the CB-CSV [metadata fields]({{ '/docs/metadata/csv_metadata/#object-detail-fields-strongly-suggested' | relative_url }}) "object_location", "image_small", and "image_thumb" metadata fields might look like this:
 
 - `object_location` 
     - for object in project: `/objects/demo_002.pdf`
