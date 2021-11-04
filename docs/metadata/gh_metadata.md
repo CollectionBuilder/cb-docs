@@ -1,27 +1,27 @@
 ---
-title: GH and SA Metadata
+title: GH Metadata
 parent: Metadata
 nav_order: 1
 ---
 
-# GitHub Pages and Stand Alone Metadata
+# CollectionBuilder-GH Metadata
 
 ## Metadata Template
 
-If you are starting your collection from scratch, the easiest way to ensure you have the required fields is to use the CollectionBuilder metadata template. 
-The template is available on Google Sheets via the link below (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy" to get started), or in your project repository as "_data/metadata-template.csv".
+If you are starting your collection from scratch, the easiest way to ensure you have the required fields is to create your metadata using the CollectionBuilder-GH metadata template. 
+The template is available on Google Sheets via the link below (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy" to get started), or in your CollectionBuilder-GH project repository as "_data/metadata-template.csv".
 This template is a starting point--fill in only what is relevant for your content and feel free to add more columns!
 
 If transforming existing metadata, you do **not** need to exactly match the CollectionBuilder template. 
 Just ensure that you create the required fields following the conventions described below. 
 
-[GitHub Pages/Stand Alone CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
+[CollectionBuilder-GH Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
 
 The guidelines below provide details about each field.
 
 -----
 
-## Required Fields for CollectionBuilder-GH and SA
+## Required Fields for CollectionBuilder-GH
 
 Without values in the fields below, CollectionBuilder will not work properly.
 
@@ -33,12 +33,11 @@ Without values in the fields below, CollectionBuilder will not work properly.
 ### filename: 
 
 - The digital object's filename including the file extension, *or* a full URL to a file hosted external to your project.
-- The value **must exactly match the actual filename** of the file in your "objects" directory. Most web servers are case sensitive, so make sure everything matches!
+- The value **must exactly match the actual filename** of the file in your "objects" directory, including the case of the filename and file extension. Most web servers are case sensitive, so make sure everything matches!
 - Records for YouTube or Vimeo objects will leave this field blank.
 - Example value for item in your project's "objects" folder: `letter001.pdf`
 - Example value for external item: `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg`
 - *Tip:* check [Get List of Filenames]({{ '/docs/extras/utilities/#get-list-of-filenames' | relative_url }}) for quick methods to fill in the filename field!
-- *Note for SA Users:* For SA collections the "objects" folder location is set in "_config.yml", so may be a location external to the project. If your file is inside the configured "objects" folder, `filename` is just the objects filename, do not include a URL.
 
 ### title: 
 
@@ -89,7 +88,8 @@ Location | `location` |
 - Example value: `-117.165625`
 
 {:.alert .alert-green}
-**Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. The first option you will see is to copy the coordinates. You can click to copy those and then paste the location into your metadata
+**Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. The first option you will see is to copy the coordinates. You can click to copy those and then paste the location into your metadata.<br><br>
+**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
 
 ### date: 
 
@@ -107,15 +107,12 @@ Location | `location` |
 - Example value: `Dogs; Cats; Zebras`
 
 {:.alert .alert-red}
-*Note:* This field needs to be named **_'subject' (not 'subjects')_** for many default features in CollectionBuilder to work. Data in this field will create the word cloud that allows users to visualize the frequency of subjects used within the collection.
+*Note:* This field needs to be named ***'subject' (not 'subjects')*** for many default features in CollectionBuilder to work. Data in this field will create the word cloud that allows users to visualize the frequency of subjects used within the collection.
 
 ### location: 
 
 - This field designates a geographic location(s) to which the item is tied. Much like the subject field, this field will build a tag cloud of the most used locations in your collection. See the [Locations]({{ '/docs/theme/locations/' | relative_url }}) section for more information. Be sure to separate multiple location entries for a single record with a semicolon (`;`).
 - Example value: `Pullman, Washington; Moscow, Idaho`
-
-{:.alert .alert-green}
-**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
 
 -----
 

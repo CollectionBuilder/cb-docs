@@ -28,7 +28,7 @@ The columns are described below, and an [example](#example) is provided for your
 
 ---
 
-The following two options are used by **CDM and SA only**, and are not necessary to make the collection itself work and will not affect the display.
+The following two options are used by **CDM and CSV only**, and are not necessary to make the collection itself work and will not affect the display.
 However, configuring these options adds rich machine readable markup to each item page, making your objects more discoverable by search engines.
 
 ### dc_map: 

@@ -1,7 +1,7 @@
 ---
-title: Objects Using CONTENTdm
+title: Objects using CONTENTdm
 parent: Objects
-nav_order: 2
+nav_order: 3
 ---
 
 # Collection Objects Using CONTENTdm

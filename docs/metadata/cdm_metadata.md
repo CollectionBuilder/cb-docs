@@ -1,7 +1,7 @@
 ---
 title: CONTENTdm Metadata
 parent: Metadata
-nav_order: 2
+nav_order: 3
 ---
 
 # CollectionBuilder-CONTENTdm Metadata
@@ -26,7 +26,7 @@ Now you're ready to begin adding to and editing your metadata to make sure it ha
 We provide a metadata template on Google Sheets as an example or starting point for your collection (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy" to get started).
 Also, check the demo metadata CSVs in the "_data" folder in your repository for more examples. 
 
-[CONTENTdm CollectionBuilder Metadata Template](https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
+[CollectionBuilder-CONTENTdm Metadata Template](https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
 
 You do **not** need to exactly match the CollectionBuilder template. 
 Just ensure that you create the required fields following the conventions described below. 

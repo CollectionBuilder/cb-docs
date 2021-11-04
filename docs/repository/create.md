@@ -12,10 +12,10 @@ The best/fastest way to do this is to visit a CollectionBuilder repository on Gi
 ## Generate from Template
 
 1. Login to your account on [GitHub](https://github.com)
-2. Visit the repository corresponding to the type you are using: 
+2. Visit the repository corresponding to the template you are using: 
     - **GH (GitHub Pages):** <https://github.com/CollectionBuilder/collectionbuilder-gh>{:target="_blank"}
-    - **CONTENTdm (CDM):** <https://github.com/CollectionBuilder/collectionbuilder-contentdm>{:target="_blank"} 
-    - **SA (Stand Alone):** <https://github.com/CollectionBuilder/collectionbuilder-sa>{:target="_blank"} 
+    - **CSV:** <https://github.com/CollectionBuilder/collectionbuilder-csv>{:target="_blank"} 
+    - **CONTENTdm:** <https://github.com/CollectionBuilder/collectionbuilder-contentdm>{:target="_blank"} 
 3. On the repository home page, click the green "Use This Template" button (appears on right side above the code area).
 4. This brings you to a "Create a new repository" page. Fill out using these options:
     1. **Repository name**: Use a lowercase name without spaces or odd characters. We often append `_source` or `_draft` to our projects to keep track of the status. If you are using GH, this name will become part of your site URL, so think through how it will look as a link!
