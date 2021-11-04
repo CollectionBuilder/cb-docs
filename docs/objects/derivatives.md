@@ -71,7 +71,7 @@ Once the required software is installed, follow these steps to generate derivati
 6. You should be able to see your newly-generated derivatives in your repository's "objects/small/" and "objects/thumbs/" folders.
 7. Test your site with `bundle exec jekyll s`.
 
-Once the "generate_derivatives Rake task has processed your files, you can optionally deploy your "objects" directory to an external location, i.e. copy the complete folder contents over to a file server or platform.
+Once the "generate_derivatives" Rake task has processed your files, you can optionally deploy your "objects" directory to an external location, i.e. copy the complete folder contents over to a file server or platform.
 If you do, update your [object location metadata fields]({{ '/docs/objects/csv-objects/#object-location-metadata-fields' | relative_url }}) to point at the external location!
 
 The "generate_derivatives" command can be further customized with several options if desired--check "docs/rake-tasks.md" in your CB-CSV repository for details.
