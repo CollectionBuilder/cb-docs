@@ -8,7 +8,7 @@ nav_order: 2
 
 CollectionBuilder-CSV is designed for large, stand alone collections, and can be hosted on any basic static web server or platform.
 
-CB-CSV's flexible style gives you the option to include a small and thumb image derivative or representation for each of your objects (and comes complete with a [Rake task]({{ '/objects/derivatives/' | relative_url }}) to automate creating those derivatives!), in addition to providing full-sized objects for download.
+CB-CSV's flexible style gives you the option to include a small and thumb image derivative or representation for each of your objects (and comes complete with a [Rake task]({{ '/docs/objects/derivatives/' | relative_url }}) to automate creating those derivatives!), in addition to providing full-sized objects for download.
 
 Don't want to include derivatives/representations? 
 No problem! 
