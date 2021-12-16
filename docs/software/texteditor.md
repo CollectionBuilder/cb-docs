@@ -13,12 +13,11 @@ The CollectionBuilder team suggests these open-source, cross platform options fo
 
 If you don't have a text editor installed, download one of the above and use their wizard to install with the default options on your computer.
 
-We mostly use Visual Studio Code, so if you don't know which one to pick, go ahead and get that one. 
-For additional assistance, see our guides for [How to Install and Set Up Visual Studio Code](https://lib-static.github.io/howto/howtos/visualstudiocode.html){:target="_blank" rel="noopener"} and [How to Install and Set Up Atom](https://lib-static.github.io/howto/howtos/installatom.html){:target="_blank" rel="noopener"}
+We mostly use Visual Studio Code, so if you don't know which one to pick, go ahead and get that one.
 
 ## Configuring Visual Studio Code
 
-Visual Studio Code (VS Code) has a tremendous number of extensions that can be added to enhance it's functionality. 
+Visual Studio Code (VS Code) has a tremendous number of extensions that can be added to enhance its functionality. 
 We recommend: 
 
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker){:target="_blank" rel="noopener"}, which will check your spelling.

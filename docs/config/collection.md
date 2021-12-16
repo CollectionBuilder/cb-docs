@@ -60,10 +60,10 @@ objects: https://www.lib.uidaho.edu/digital/objects/hjccc
 
 ## Optional Page Generation Settings
 
-CollectionBuilder-CONTENTdm and -SA use a custom Jekyll plugin to generate individual HTML pages for each item (row) in your metadata CSV.
+CollectionBuilder-CONTENTdm and -CSV use a custom Jekyll plugin to generate individual HTML pages for each item (row) in your metadata CSV.
 By default, the "CollectionBuilder Page Generator" plugin needs no additional configuration--it will automatically use the value set in `metadata` to generate pages.
 
 In advanced use cases, you may want to tweak the CB defaults or generate pages from more than one data file. 
 The values under the `page_gen` key can be used to customize page generation. 
 
-For details, please see "docs/plugins.md" in the template you are using.
+For details, please see "docs/plugins.md" in the project template you are using.

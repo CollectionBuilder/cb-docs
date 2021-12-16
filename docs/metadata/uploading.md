@@ -7,7 +7,7 @@ nav_order: 7
 # Add Your Metadata
 
 Once your metadata is ready, you'll want to add it to your project repository so CollectionBuilder can put it to use.
-This can be done either by uploading via the GitHub web interface (most **GH** users) or by adding it to your local repository folder (most **CDM/SA** users).
+This can be done either by uploading via the GitHub web interface (most **GH** users) or by adding it to your local repository folder (most **CSV/CDM** users).
 This section provides the steps to do it!
 
 ## Prepare Metadata File
@@ -16,9 +16,9 @@ Once you have finished preparing your metadata spreadsheet using Google Sheets o
 
 {:.alert .alert-yellow}
 CSV metadata should be in **UTF-8 encoding**.
-It is important to note that you can create your metadata using Excel, however Excel **can not** correctly export a CSV for use with CollectionBuilder or Jekyll (the encoding "UTF-8 with BOM" will cause errors!).
-Google Sheets, OpenRefine, and LibreOffice Calc *will* correctly create the CSV, so we suggest working with those software. 
-If you use Excel, save the spreadsheet in ".xlsx" format, then use Sheets or OpenRefine to open the file and export a correctly formatted CSV.
+It is important to note that you can create your metadata using Excel, however Excel **cannot** correctly export a CSV for use with CollectionBuilder or Jekyll (the encoding "UTF-8 with BOM" will cause errors!).
+Google Sheets, OpenRefine, and LibreOffice Calc *will* correctly create the CSV, so we suggest working with those software options. 
+If you do use Excel, save the spreadsheet in ".xlsx" format, then use Sheets or OpenRefine to open the file and export a correctly formatted CSV.
 
 To download your metadata from Google Sheets:
 
@@ -29,7 +29,7 @@ To download your metadata from Google Sheets:
 ## Add Metadata to Project
 
 With a properly formatted and named CSV in hand, you are ready to add your metadata to your CollectionBuilder project.
-This can be done either by uploading via the GitHub web interface (most **GH** users) or by adding it to your local repository folder (most **CDM/SA** users).
+This can be done either by uploading via the GitHub web interface (most **GH** users) or by adding it to your local repository folder (most **CSV/CDM** users).
 
 ### Upload via GitHub Web interface
 

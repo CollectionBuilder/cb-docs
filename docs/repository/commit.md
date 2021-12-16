@@ -17,7 +17,7 @@ By default, GitHub displays the README on the repository home page, so it is oft
 The first line at the top of the template file will look something like:
 
 ```
-# CollectionBuilder-SA
+# CollectionBuilder-CSV
 
 ```
 

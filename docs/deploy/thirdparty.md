@@ -7,7 +7,7 @@ nav_order: 4
 # Deploy via Third Party Services
 
 A variety of third party cloud hosting companies can integrate with GitHub to build and host your static site, often free of charge.
-This option is most useful for SA and CDM users looking for an automated build process as an alternative to GitHub Pages.
+This option is most useful for CSV and CDM users looking for an automated build process as an alternative to GitHub Pages.
 The biggest players are Cloudflare, Netlify, and Render. 
 
 This tutorial covers using [Render](https://render.com/), since we've found it to be free and easy to use.

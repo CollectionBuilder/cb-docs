@@ -8,25 +8,25 @@ nav_order: 8
 
 {:.alert .alert-blue }
 Software in this section is optional and **will not be used by CollectionBuilder-GH or -CONTENTdm projects**. 
-If you want to use Rake tasks to batch process PDF and image files for **CollectionBuilder-SA** and **-CSV**, this software is required!
+If you want to use Rake tasks to batch process PDF and image files for **CollectionBuilder-CSV**, this software is required! (Note: You can use these Rake tasks in CollectionBuilder-SA, too, but please note that ***CollectionBuilder-SA is now deprecated!*** We *strongly* recommend using CollectionBuilder-CSV instead.)
 
 Most (*but not all!*) CollectionBuilder projects will involve working with a collection of digital objects, i.e. JPEGs, PDFs, MP3s, etc.
-We use the software listed below to batch process digital files for use in CollectionBuilder-SA and -CSV projects. 
+We use the software listed below to batch process digital files for use in CollectionBuilder-CSV projects. 
 This approach is **optional**--you may already have suitable images available or a different workflow to process the objects (for example using PhotoShop or [GIMP](https://www.gimp.org/)).
 
 ## ImageMagick and Ghostscript
 
-SA and CSV templates include a [Rake](https://github.com/ruby/rake) task that automates creating derivative images for PDF and image items.
+The CB-CSV template includes a [Rake](https://github.com/ruby/rake) task that automates creating derivative images for PDF and image items.
 Rake is a standard part of all Ruby installs, so if you are using Jekyll, you have it installed already!
 
-However, to use CollectionBuilder's `generate_derivatives` task you will need the command line tools [ImageMagick](https://imagemagick.org) and [Ghostscript](https://www.ghostscript.com/) installed on your computer.
+However, to use [CollectionBuilder's Rake task]({{ '/docs/objects/derivatives/#generate-derivatives-rake-task' | relative_url }}) `generate_derivatives` you will need the command line tools [ImageMagick](https://imagemagick.org) and [Ghostscript](https://www.ghostscript.com/) installed on your computer.
 These *very* popular open source utilities are used in numerous applications and web platforms to provide digital object processing pipelines--and can also be useful for batch processing on your personal computer.
 
 ### Install on Windows
 
 - Visit the [ImageMagick download page](https://imagemagick.org/script/download.php) and download the suggested version (the one at the top of the list). 
 - This file will be a self contained installer, once downloaded double click to install on your computer following the default options.
-- Visit [Ghostscript download page](https://www.ghostscript.com/download/gsdnld.html) and choose the "AGPL release".
+- Visit [Ghostscript download page](https://ghostscript.com/releases/gsdnld.html) and choose the "AGPL release".
 - This file will be a self contained installer, once downloaded double click to install on your computer following the default options.
 
 ### Install on Mac
@@ -45,7 +45,7 @@ On Linux, use your distro's repositories to install imagemagick and ghostscript 
 
 *Tip:* on Linux if you install ImageMagick from a repository, you will probably have "legacy" ImageMagick 6.
 Version 7+ use the command `magick`, "legacy" version 6 uses `convert`.
-To avoid errors using the CollectionBuilder Rake task `generate_derivatives`, you will need to give an additional configuration option to change the ImageMagick command:
+To avoid errors using the CollectionBuilder Rake task "generate_derivatives", you will need to give an additional configuration option to change the ImageMagick command:
 `rake generate_derivatives[,,,,convert]`
 
 If you want to avoid this (but then have to manually set up and maintain your installation), you can get a binary release from [ImageMagick download page](https://imagemagick.org/script/download.php).

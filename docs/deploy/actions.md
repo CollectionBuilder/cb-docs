@@ -7,7 +7,7 @@ nav_order: 5
 # GitHub Actions
 
 GitHub Pages' default build process runs an older version of Jekyll and does not support plugins.
-Since CB-CDM and CB-SA use custom CollectionBuilder plugins to generate item pages and process data, they can not be built using the default GitHub Pages process. 
+Since CB-CDM and CB-CSV use custom CollectionBuilder plugins to generate item pages and process data, they can not be built using the default GitHub Pages process. 
 
 However, you *can* still host your site on GitHub Pages by setting up an alternative build using the [GitHub Actions](https://docs.github.com/en/actions) feature.
 

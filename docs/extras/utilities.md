@@ -16,7 +16,7 @@ This section outlines some helpful command line utilities to solve these issues.
 
 ## Get List of Filenames
 
-It is often helpful to have a list of filenames for all your objects as a starting point for your metadata CSV for GH and SA projects.
+It is often helpful to have a list of filenames for all your objects as a starting point for your metadata CSV for CB-GH and CB-CSV projects.
 There are a couple ways to do this depending on your operating system.
 
 **Windows Explorer:**
