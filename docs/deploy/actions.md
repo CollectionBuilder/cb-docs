@@ -20,6 +20,11 @@ Setting up the Action takes a few extra steps, detailed below.
 3. Make sure your project has a "Gemfile". CollectionBuilder templates should have one by default.
 4. Optional: Commit your "Gemfile.lock" to ensure the build uses the same setup as you have been using to develop the project. By default "Gemfile.lock" is usually listed in the ".gitignore" file, thus Git will not track it. Edit the ".gitignore" file to remove "Gemfile.lock" then commit the changes.
 
+*Note:* some accounts may have GitHub Actions disabled by default. 
+If you do not see the "Actions" tab in your repository's navigation (in between "Discussions" and "Projects"), it will need to be turned on first.
+Visit the repository's "Settings", click on "Actions" in the left side nav menu, select "Allow all actions", and click "Save".
+{:.alert .alert-yellow }
+
 ## Setup Action YML
 
 To setup a GitHub Action you will be creating a file in your project repository named ".github/workflows/jekyll.yml".
@@ -79,8 +84,9 @@ Adding the file will automatically set up a `GITHUB_TOKEN` secret which will all
 
 Once committed, the action will run immediately and will repeat each time you push a new commit or merge a pull request.
 
-However, you may have to manually activate GitHub Pages the first time.
+However, the first time you may have to manually activate GitHub Pages.
 Go to the repository Settings, click "Pages" in the side nav, select "gh-pages" branch in the "Source" drop down, and save.
+After Pages is activated, you may need to create another new commit to finally get the web site live.
 
 ### Action Details 
 
