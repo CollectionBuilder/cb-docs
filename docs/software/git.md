@@ -6,40 +6,12 @@ nav_order: 1
 
 # Git Setup
 
-To manage the code and collaborate on developing your CollectionBuilder project, you will need a version control platform to keep everything organized.
-We use [Git]({{ '/docs/glossary/#git' | relative_url }}) and [GitHub]({{ '/docs/glossary/#github' | relative_url }}).
-Although there are alternatives (such as [GitLab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/product)), these docs assume you will do the same!
-
-If you are working on a CollectionBuilder-GH project, it is possible to work entirely in the GitHub web interface--all you need is a GitHub account.
 To work with a copy of your project on your local machine, you'll need to install Git (the version control software that powers GitHub) and, *optionally*, GitHub Desktop (a handy visual way to use Git) on your computer.
-
-## GitHub Account
-
-GitHub is the most popular platform for developing and sharing code online, hosting projects from giant enterprise software, to OER learning, to personal portfolios. 
-It is great to become familiar with the platform so that you can take part in this community and its resources.
-Normal use with CollectionBuilder projects falls within the "free" tier on the platform (*you do not need a paid account!*).
-
-Code for your CollectionBuilder project will be stored on GitHub in a Git "repository". 
-So the first step is to sign up for a GitHub account if you do not have one already.
-
-Visit <https://github.com> and sign up for a free account. 
-Be sure to verify your email to get all features activated!
-Check our [GitHub glossary entry]({{ '/docs/glossary/#github' | relative_url }}) for introduction resources.
-
-If you are collaborating with others, you may also want to set up a GitHub Organization to own your projects.
-See our [GitHub Orgs entry]({{ '/docs/glossary/#github-orgs' | relative_url }}) for info.
-
-{:.alert .alert-blue}
-Your email and user name is recorded with every commit.
-This helps ensure integrity and authenticity of the history.
-Most people keep their email public. 
-Alternatively, check GitHub's tips on how to [set up email privacy](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#about-commit-email-addresses){:target="_blank" rel="noopener"}. 
-GitHub can provide a no-reply email address that can be found via your email settings on your profile.
 
 ## Install Git
 
 [Git]({{ '/docs/glossary/#git' | relative_url }}) version control system is a piece of software you install on your computer. 
-This is necessary to sync with your GitHub project.
+This is necessary to sync with your GitHub project and record the history of your work.
 
 Installing this free and open source software is pretty straightforward:
 
@@ -57,8 +29,8 @@ Installing this free and open source software is pretty straightforward:
 
 ## Configure Git
 
-Once Git is installed, we need to configure your information, so that it can connect with your GitHub account.
-Since Git is a command line application, we will need to open a terminal to give it commands. 
+Once Git is installed, we need to configure your information, so that it can connect with your GitHub account--this only has to be done once!
+Since Git is a command line application, we will need to open a terminal to give it commands: 
 
 - On Windows, search for "Git Bash."
 - On Mac and Linux, search for "terminal."

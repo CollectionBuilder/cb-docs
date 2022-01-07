@@ -19,5 +19,4 @@ Check out these resources:
 - [Set up email privacy](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#about-commit-email-addresses){:target="_blank" rel="noopener"}
 - [GitHub Education](https://education.github.com/){:target="_blank" rel="noopener"} provides resources and benefits for educational use of GitHub, including free account upgrades.
 
-*Note:* these docs assume you are using GitHub--however, it is not in any way a requirement to use CollectionBuilder. 
-Alternative platforms, such as [GitLab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/product), are available--or you could use no version control at all (we don't suggest this)!
+*Please note* that there are other version control systems (Subversion, mercurial, etc) and repository hosts ([Bitbucket](https://bitbucket.org/product), [GitLab](https://about.gitlab.com/), etc) out there... However, Git and GitHub are by far the most popular.
