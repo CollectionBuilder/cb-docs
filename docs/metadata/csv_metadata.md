@@ -109,7 +109,7 @@ For example, `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6
     - Audio: `audio/mp3`
     - Video: `video/mp4`
 
-----
+------
 
 ## Fields Required for Visualizations
 

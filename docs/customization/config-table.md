@@ -19,7 +19,7 @@ The columns are described below, and an [example](#example) is provided for your
 ### display_name: 
 - Determines the label that is displayed for that field.
 
----
+------
 
 ### Example 
 

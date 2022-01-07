@@ -45,4 +45,4 @@ But first, check out the generated "About" page, since this content demonstrates
 
 You can learn more about the includes and how to use them on the [Feature Includes Options]({{ '/docs/pages/features/' | relative_url }}) page.
 
-{% include feature/button.html link="https://collectionbuilder.github.io/collectionbuilder-gh/about.html#about-the-about-page" text="View About the About Demo Page"%}
+[View About the About Demo Page](https://collectionbuilder.github.io/collectionbuilder-gh/about.html#about-the-about-page){:.btn .btn-purple target="_blank" rel="noopener"}

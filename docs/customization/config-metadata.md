@@ -26,7 +26,7 @@ The columns are described below, and an [example](#example) is provided for your
 - This option controls if the element will be represented as an external link from the item page to another page elsewhere (or within the collection itself). It is most useful for those fields, like "rightsstatement", that are just links. The metadata value must only be a link -- any additional text or spacing will break the link on the page. 
 
 
----
+------
 
 The following two options are used by **CDM and CSV only**, and are not necessary to make the collection itself work and will not affect the display.
 However, configuring these options adds rich machine readable markup to each item page, making your objects more discoverable by search engines.
@@ -56,7 +56,7 @@ However, configuring these options adds rich machine readable markup to each ite
     - `encodingFormat` (This corresponds to the [format]({{ '/docs/metadata/gh_metadata/#format' | relative_url }}) field of CollectionBuilder items)
     - `license` (Should only be used with a standardized rights URL)
 
----
+------
 
 ## Example 
 

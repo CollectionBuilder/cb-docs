@@ -13,7 +13,7 @@ Example paths are given below for the following object types/locations:
 - [Vimeo Objects](#path-for-vimeo-objects)
 - [CONTENTdm Objects](#path-for-contentdm-objects)
 
----
+------
 
 ## Example Paths for External or Self-Hosted Objects
 
@@ -34,7 +34,7 @@ Example values for the CB-CSV [metadata fields]({{ '/docs/metadata/csv_metadata/
     - for object externally hosted: `https://example-host.org/collection/thumbs/demo_002_th.jpg`
     - Recipe: `https://example-host.org/collection/thumbs/` + "filename without extension" + `_th.jpg`
 
----
+------
 
 ## Path for YouTube Objects
 
@@ -65,14 +65,14 @@ Auto thumbs:
 
 For more control, you can use [YouTube Data API](https://developers.google.com/youtube/v3/), but it requires a key to access.
 
----
+------
 
 ## Path for Vimeo Objects
 
 Vimeo video items are supported in Item pages via the `video` value for the "[display_template]({{ '/docs/metadata/csv_metadata/#display_template' | relative_url }})" metadata field.
 Provide the full Vimeo video link in the "object_location" metadata field.
 
----
+------
 
 ## Path for CONTENTdm Objects
 
@@ -120,4 +120,4 @@ CONTENTdm implementation of IIIF has some limitations:
 
 Given these limits, we have used `pct:` in most API calls, since it is the least likely to break. 
 However, this means that if the originals in CDM are abnormally large or small, you will want to adjust the % used in the theme.yml. 
-With collections that have multiple scan qualities, this may still result in inconsistent image sizes in the visualizations and many require experimentation with the API to resolve.  
+With collections that have multiple scan qualities, this may still result in inconsistent image sizes in the visualizations and many require experimentation with the API to resolve.

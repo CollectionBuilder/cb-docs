@@ -36,7 +36,7 @@ image-percentage-small: 10
 {:.alert .alert-green}
 **Pro Tip:** If your images are appearing blurry or take too long to load, try adjusting the image-sizing settings. The appropriate percentage depends on the full size of images contained in your CDM repository and may require some experimentation.
 
----
+------
 
 ## Navbar Options:
 

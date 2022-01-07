@@ -20,7 +20,7 @@ The columns are described below, and an [example](#example) is provided for your
 - Determines whether the field is searchable. 
     - *Options*: `true` or leave blank
 
----
+------
 
 ## Example 
 

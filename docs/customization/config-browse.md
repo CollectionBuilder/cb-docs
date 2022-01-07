@@ -37,7 +37,7 @@ The columns are described below, and an [example](#example) is provided for your
 ### sort_name: 
 - Determines if the field will be used as an option to sort cards on the browse page via the dropdown menu to the right of the search box. This option also determines the label used in that dropdown menu for the field. 
 
----
+------
 
 ### Example 
 
