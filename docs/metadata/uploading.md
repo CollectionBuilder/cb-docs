@@ -16,7 +16,7 @@ Once you have finished preparing your metadata spreadsheet using Google Sheets o
 
 {:.alert .alert-yellow}
 CSV metadata should be in **UTF-8 encoding**.
-It is important to note that you can create your metadata using Excel, however Excel **cannot** correctly export a CSV for use with CollectionBuilder or Jekyll (the encoding "UTF-8 with BOM" will cause errors!).
+It is important to note that you can create your metadata using Excel, however **Excel cannot correctly export a CSV** for use with CollectionBuilder or Jekyll (the encoding "UTF-8 with BOM" will cause errors!).
 Google Sheets, OpenRefine, and LibreOffice Calc *will* correctly create the CSV, so we suggest working with those software options. 
 If you do use Excel, save the spreadsheet in ".xlsx" format, then use Sheets or OpenRefine to open the file and export a correctly formatted CSV.
 
