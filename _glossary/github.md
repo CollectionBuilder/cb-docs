@@ -17,6 +17,7 @@ Check out these resources:
 - [GitHub Guides](https://guides.github.com/){:target="_blank" rel="noopener"}, see [Hello World](https://guides.github.com/activities/hello-world/){:target="_blank" rel="noopener"} for an introduction.
 - [GitHub Learning Lab](https://lab.github.com/){:target="_blank" rel="noopener"} for in depth lessons.
 - [Set up email privacy](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#about-commit-email-addresses){:target="_blank" rel="noopener"}
+- [GitHub Education](https://education.github.com/){:target="_blank" rel="noopener"} provides resources and benefits for educational use of GitHub, including free account upgrades.
 
 *Note:* these docs assume you are using GitHub--however, it is not in any way a requirement to use CollectionBuilder. 
 Alternative platforms, such as [GitLab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/product), are available--or you could use no version control at all (we don't suggest this)!

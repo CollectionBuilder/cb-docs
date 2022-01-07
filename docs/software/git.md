@@ -17,14 +17,17 @@ To work with a copy of your project on your local machine, you'll need to instal
 
 GitHub is the most popular platform for developing and sharing code online, hosting projects from giant enterprise software, to OER learning, to personal portfolios. 
 It is great to become familiar with the platform so that you can take part in this community and its resources.
-Normal use with CollectionBuilder projects falls within the "free" tier on the platform (you do not need a paid account!).
+Normal use with CollectionBuilder projects falls within the "free" tier on the platform (*you do not need a paid account!*).
 
 Code for your CollectionBuilder project will be stored on GitHub in a Git "repository". 
 So the first step is to sign up for a GitHub account if you do not have one already.
 
 Visit <https://github.com> and sign up for a free account. 
 Be sure to verify your email to get all features activated!
-(check our [GitHub glossary entry]({{ '/docs/glossary/#github' | relative_url }}) for more resources)
+Check our [GitHub glossary entry]({{ '/docs/glossary/#github' | relative_url }}) for introduction resources.
+
+If you are collaborating with others, you may also want to set up a GitHub Organization to own your projects.
+See our [GitHub Orgs entry]({{ '/docs/glossary/#github-orgs' | relative_url }}) for info.
 
 {:.alert .alert-blue}
 Your email and user name is recorded with every commit.
