@@ -7,11 +7,15 @@ description: "CollectionBuilder is an open source tool for creating digital coll
 
 # CollectionBuilder Docs
 
-Everything you ever wanted to know about how to use CollectionBuilder-GH, CollectionBuilder-CSV, and CollectionBuilder-CONTENTdm!
+Everything you ever wanted to know about how to use CollectionBuilder-GH, CollectionBuilder-CSV, and CollectionBuilder-CONTENTdm (and the technologies that power them)!
 
 ## Introduction
 
-CollectionBuilder was designed with learning in mind. The project's workflow is scaffolded in order to help users build web and data literacy skills as they progress towards building and deploying new digital exhibits. To that end, we've worked hard to make this documentation comprehensible for the novice user moving through the sections step-by step, and useful for more advanced users searching for specific content.
+CollectionBuilder was designed with learning in mind. 
+The project's workflow is scaffolded in order to help users build web and data literacy skills as they progress towards building and deploying new digital exhibits. 
+To that end, we've worked hard to make this documentation comprehensible for the novice user moving through the sections step-by step, as well as, useful for more advanced users searching for specific content.
+
+We hope you will find everything needed to create a CollectionBuilder project--but also learn the techniques of a static web approach that can power many other types of projects!
 
 ## Templates
 
@@ -33,9 +37,9 @@ You're welcome to contact any or all of us:
 - Evan Williamson (<mailto:ewilliamson@uidaho.edu>)
 - Devin Becker (<mailto:dbecker@uidaho.edu>)
 - Olivia Wikle (<mailto:omwikle@uidaho.edu>)
+- [CollectionBuilder Discussion Forum](https://github.com/CollectionBuilder/collectionbuilder.github.io/discussions) (informal space to ask questions, provide feedback, debug, share and connect!)
 
 ## Other Resources
 
-- [CollectionBuilder Discussion Forum](https://github.com/CollectionBuilder/collectionbuilder.github.io/discussions) (informal space to ask questions, provide feedback, debug, share and connect!)
 - [Contributing](https://github.com/CollectionBuilder/collectionbuilder.github.io/blob/main/CONTRIBUTING.md) (tips and conventions)
 - [Project Code of Conduct](https://github.com/CollectionBuilder/collectionbuilder.github.io/blob/main/CODE_OF_CONDUCT.md)
