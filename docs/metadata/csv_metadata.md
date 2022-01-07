@@ -72,6 +72,11 @@ For example, if some images are in the repository's "objects" folder, use `/obje
 The relative path will be converted into a full URL during build.
 Do not include the `baseurl` value that you set in "_config.yml", since this will be added by the template.
 
+{:.alert .alert-red }
+**URLs to external media should always be secure HTTPS links.**
+Media at HTTP links are likely to be blocked by browser security defaults as [mixed content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content), meaning HTTP "image_small" and "image_thumb" images will not appear in your site's pages.
+For example, `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg` will work, but `http://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg` will be blocked.
+
 ### image_small: 
 
 - A full URL to a small image representation of the object *or* relative path if items are contained with in the project.
