@@ -12,7 +12,7 @@ CB-CSV's flexible style gives you the option to include a small and thumb image 
 
 Don't want to include derivatives/representations? 
 No problem! 
-A CB-CSV record works just fine with a single full-sized object (just like CB-GH).
+A CB-CSV record works just fine with a single full-sized object (just like CB-GH) or no object at all.
 
 ## Object Guidelines for CollectionBuilder-CSV
 
@@ -32,32 +32,35 @@ Before we get into the process for gathering your objects and creating derivativ
 
 **The CB-CSV metadata CSV contains location information for each object**, which means the process for preparing objects for CB-CSV is very flexible, allowing you to combine and curate items from diverse sources.
 
-In general, CB-CSV supports three files (full size, small, and thumb) associated with each record, via links added to the following metadata columns (see the [CSV Metadata]({{ '/docs/metadata/csv_metadata/' | relative_url }}) documentation for more information):
+In general, CB-CSV supports three files (full size, small, and thumb) associated with each record, via links added to the following metadata columns:
 
 ### object_location: 
-- A path to a full-sized digital object of any format, or a link to an external resource (will be used by users as a full-sized file download).
+
+- A path to a full-sized digital object of any format, or a link to an external resource that will be used by users as the full-sized file download.
 - This could be any format and size you would like to provide to your users, or a link to external resource such as YouTube videos or a link to an article.
 - The full-sized object may be hosted with the project, in an external location, or retrieved from an API.
 
 ### image_small: 
-- A path to a web-quality image (will be used to represent the object on its Item page).
+
+- A path to a web-quality image that will be used to represent the object on its Item page.
 - For all Item types, the "image_small" value should be a jpeg approximately 800x800 px max.
 - The small image may be hosted with the project, in an external location, or retrieved from an API.
 
 ### image_thumb: 
-- A path to a web quality image in a fast, user friendly file size (will be used to represent the object on visualization pages--i.e. Home, Browse, Map, and Timeline).
+
+- A path to a web quality image in a fast, user friendly file size that will be used to represent the object on visualization pages--i.e. Home, Browse, Map, and Timeline.
 - For all Item types, the "image_thumb" value should be a jpeg approximately 400x400 px max.
 - The thumb image may be hosted with the project, in an external location, or retrieved from an API.
 
-{% capture note %}
+Check the [CSV Metadata]({{ '/docs/metadata/csv_metadata/' | relative_url }}) documentation for more information.
+
+<div class="alert alert-purple" markdown="1">
 **Note:**
 Items are not *required* to have any corresponding objects.
 In other words, you can leave "object_location", "image_small", and "image_thumb" blank, and your record will be a metadata-only record.
 
 It's also okay to include a value for "object_location" but leave the "image_small" and "image_thumb" fields blank: objects without "image_small" or "image_thumb" values will be represented by icons in visualization pages based on their value for the "display_template" or "format" metadata field.
-{% endcapture %}
-
-{% include feature/alert.html color="purple" text=note %}
+</div>
 
 ## Create Small and Thumb Derivatives
 
@@ -81,6 +84,9 @@ For example, here are some options for object file locations depending on your s
 - **Just Testing:** Keep the collection files in the "objects" folder in the project repository on your local machine. The files will *not* be committed to the repository, so they won't be available on GitHub. However, you will still be able to generate and test the site on your local machine.
 - **Objects Deployed with Site:** Keep the collection files in the "objects" folder in the project repository on your local machine. When generating the site for deployment, Jekyll will copy the objects into the "_site" folder along with the rest of the site assets. Everything in the "_site" folder is copied to a static web server (via SFTP or file share method) for your live deployment.
 - **Objects in External Location:** Prep your collection files, then move the objects to a static file hosting service (often provided by universities or purchased via a platform such as [Digital Ocean](https://www.digitalocean.com/) or [Reclaim Hosting](https://reclaimhosting.com/)). The objects are available at that location, e.g. `https://www.example.com/objects/newproject/`. For the collection website, you can deploy the site assets in a totally separate location without any objects, e.g. you set up a [GitHub Action]({{ '/docs/deploy/actions/' | relative_url }}) to build the CB-CSV project resulting in the website hosted at `https://exampleuser.github.io/newproject/'`. This has the advantage of being able to manage objects and html separately on platforms optimized for delivering each.
+
+Please note that objects should be hosted at a secure HTTPS location for your final deployment.
+Media at HTTP links are likely to be blocked by browser security defaults as [mixed content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content).
 
 ## Add Object Paths To Your Metadata
 

@@ -28,7 +28,7 @@ These options can add pre-configured Google services if desired.
 - Uncomment `google-cse-id` (by removing the hash `#` in front), and add your Google Custom Search Engine ID to add a embedded Google search page.
 - See "docs/google.md" in your CollectionBuilder repository for details of implementing the CSE.
 
----
+------
 
 ## Robots Exclude 
 
@@ -40,7 +40,7 @@ This can be useful when developing prototype sites that you don't want to be fou
 
 - Uncomment `noindex: true` (by removing the hash `#` in front) if you do NOT want Google to index your site.
 
----
+------
 
 ## Build Settings
 

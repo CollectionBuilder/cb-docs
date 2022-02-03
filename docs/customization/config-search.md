@@ -24,7 +24,7 @@ The columns are described below, and an [example](#example) is provided for your
 - Determines whether the value of that metadata field is displayed in the search results.
     - *Options:* `true`, `false`
 
----
+------
 
 ## Example 
 

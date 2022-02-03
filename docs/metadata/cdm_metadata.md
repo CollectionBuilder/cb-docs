@@ -31,7 +31,7 @@ Also, check the demo metadata CSVs in the "_data" folder in your repository for 
 You do **not** need to exactly match the CollectionBuilder template. 
 Just ensure that you create the required fields following the conventions described below. 
 
------
+------
 
 ## Required Fields for CollectionBuilder-CONTENTdm
 
@@ -136,7 +136,7 @@ Data in this field will create the word cloud that allows users to visualize the
 {:.alert .alert-green}
 **If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
 
------
+------
 
 ## Optional Fields
 

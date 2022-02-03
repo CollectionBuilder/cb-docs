@@ -22,7 +22,7 @@ The Home page is composed of a number of include commands, arranged in three [Bo
 
 Jekyll's [include command](https://jekyllrb.com/docs/includes/) is a powerful feature that allows modular elements or content to be drawn into your site's pages from a central location.
 
-An example include command looks like:  
+An example include command looks like: 
 `{% raw %}{% include index/carousel.html title="Sample Items" %}{% endraw %}`
 
 In this example, you can locate the included file ("carousel.html") within the "_includes/index" directory.
@@ -71,7 +71,7 @@ In this case, you could remove the "Time Span" feature box from the Home page by
 
 ```
 {% raw %}{% include index/time.html %}{% endraw %}
-```  
+```
 
 from the "home-infographic.html" file. 
 

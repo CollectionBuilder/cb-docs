@@ -42,4 +42,4 @@ Follow these steps:
 1. On the home page of your project repository on GitHub, click on the "objects" folder that appears in the code area of the page.
 2. On the "objects" folder page, click the "Add file" button and select "Upload files" (appears to right side of page).
 3. Click "choose your files" and navigate to the location of your object files on your local machine, and select all the collection items. Or drag and drop all the files from your File Explorer / Finder into the GitHub page. Once the files are uploaded, they will appear listed on the web page.
-4.  Scroll down to the "Commit changes" box, write a short commit message in the form (an appropriate message might be "add collection objects to project"), then click the green "Commit changes" button to add them to your repository. (this is a Git Commit!)
+4. Scroll down to the "Commit changes" box, write a short commit message in the form (an appropriate message might be "add collection objects to project"), then click the green "Commit changes" button to add them to your repository. 

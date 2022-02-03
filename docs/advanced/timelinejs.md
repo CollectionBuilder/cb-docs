@@ -67,7 +67,7 @@ Just make sure to include the title and permalink you create in your "_data/conf
 
 7. Locate the `## Collection Timeline` line of text, below the yaml front matter. 
 8. Replace `## Collection Timeline` with the following _include command:
-```  
+``` 
 {% raw %}{% include feature/timelinejs.html %}{% endraw %}
 ```
 9. Save the file.

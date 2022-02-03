@@ -37,6 +37,7 @@ Without values in the fields below, CollectionBuilder will not work properly.
 - Records for YouTube or Vimeo objects will leave this field blank.
 - Example value for item in your project's "objects" folder: `letter001.pdf`
 - Example value for external item: `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg`
+- **Important note on external items:** URLs to external media should always be secure HTTPS links. Media at HTTP links are likely to be blocked by browser security defaults as [mixed content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content), thus will not appear on your pages!
 - *Tip:* check [Get List of Filenames]({{ '/docs/extras/utilities/#get-list-of-filenames' | relative_url }}) for quick methods to fill in the filename field!
 
 ### title: 

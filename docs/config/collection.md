@@ -19,7 +19,7 @@ metadata: boxing
 {:.alert .alert-blue}
 **GH users**: At this point you can skip to the [Additional Variables]({{ '/docs/config/additional/' | relative_url }}) section.
 
----
+------
 
 ## Required Settings for CONTENTdm
 
@@ -39,7 +39,7 @@ cdm-collection-id: boxing
 cdm-url: https://cdm12345.contentdm.oclc.org
 ```
 
----
+------
 
 ## Required Settings for StandAlone
 
@@ -56,7 +56,7 @@ objects: /objects
 objects: https://www.lib.uidaho.edu/digital/objects/hjccc
 ```
 
----
+------
 
 ## Optional Page Generation Settings
 
