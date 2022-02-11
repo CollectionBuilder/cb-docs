@@ -19,7 +19,7 @@ title: Donald R. Theophilus Boxing Photograph Collection
 
 ### tagline: 
 
-- A *optional* descriptive subtitle for the digital collection.
+- An *optional* descriptive subtitle for the digital collection.
 - This will appear underneath the title on the home page and on every other page's header.
 ```yaml
 tagline: Photographs of University of Idaho Boxers and Boxing Teams, 1934 - 1953
