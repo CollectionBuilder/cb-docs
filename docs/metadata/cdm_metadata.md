@@ -26,7 +26,7 @@ Now you're ready to begin adding to and editing your metadata to make sure it ha
 We provide a metadata template on Google Sheets as an example or starting point for your collection (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy" to get started).
 Also, check the demo metadata CSVs in the "_data" folder in your repository for more examples. 
 
-[CollectionBuilder-CONTENTdm Metadata Template](https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
+[CollectionBuilder-CONTENTdm Metadata Template](https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/copy?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
 
 You do **not** need to exactly match the CollectionBuilder template. 
 Just ensure that you create the required fields following the conventions described below. 
@@ -134,7 +134,7 @@ Data in this field will create the word cloud that allows users to visualize the
 - Example value: `Pullman, Washington; Moscow, Idaho`
 
 {:.alert .alert-green}
-**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
+**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/copy?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
 
 ------
 

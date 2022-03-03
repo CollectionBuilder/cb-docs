@@ -11,7 +11,7 @@ Instructions below provide the *way too fast* steps to creating a collection.
 ## CollectionBuilder-GH
 
 1. Create a new project repository using the [CollectionBuilder-GH](https://github.com/CollectionBuilder/collectionbuilder-gh) template by clicking the "Use this template" button.
-2. Copy the [Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit#gid=0).
+2. Copy the [Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/copy?usp=sharing).
 3. Follow the formatting of the example record in the template to fill in metadata for your own collection objects.
 4. Upload your collection files into the "objects" folder in your repository (.jpg, .png, .pdf, or .mp3).
 5. Upload your collection metadata as CSV to the "_data" folder in your repository.
@@ -24,7 +24,7 @@ Instructions below provide the *way too fast* steps to creating a collection.
 1. Make sure you have Git, Ruby, Jekyll, and a text editor installed on your computer.
 2. Create a new project repository using the [CollectionBuilder-CONTENTdm](https://github.com/CollectionBuilder/collectionbuilder-contentdm) template by clicking the "Use this template" button.
 3. Clone your repository to your local computer.
-4. Check the [Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit#gid=0).
+4. Check the [Metadata Template](https://docs.google.com/spreadsheets/d/14iWUEoAJ6T9WDqlPnIHRN7M8-YgmMV4_bjFPVuSZ0yk/copy?usp=sharing).
 5. Export your collection metadata from CONTENTdm (CDM Admin > Collections > Export), using the "Tab-delimited" option with the "Return field names in first record" option checked.
 6. Transform your CDM metadata using OpenRefine or Google Sheets to include the fields required by CollectionBuilder.
 7. Save/export your metadata as a CSV and copy into the "_data" folder of your repository.

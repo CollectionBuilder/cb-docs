@@ -15,7 +15,7 @@ This template is a starting point--fill in only what is relevant for your conten
 If transforming existing metadata, you do **not** need to exactly match the CollectionBuilder template. 
 Just ensure that you create the required fields following the conventions described below. 
 
-[CollectionBuilder-GH Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
+[CollectionBuilder-GH Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/copy?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
 
 The guidelines below provide details about each field.
 
@@ -90,7 +90,7 @@ Location | `location` |
 
 {:.alert .alert-green}
 **Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. The first option you will see is to copy the coordinates. You can click to copy those and then paste the location into your metadata.<br><br>
-**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
+**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/copy?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
 
 ### date: 
 

@@ -10,7 +10,7 @@ CollectionBuilder-CSV starts from the same basic metadata template of other CB t
 
 To get started, copy the Google Sheets metadata template below (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy").
 
-[CollectionBuilder-CSV Metadata Template](https://docs.google.com/spreadsheets/d/1nN_k4JQB4LJraIzns7WcM3OXK-xxGMQhW1shMssflNM/edit?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
+[CollectionBuilder-CSV Metadata Template](https://docs.google.com/spreadsheets/d/1nN_k4JQB4LJraIzns7WcM3OXK-xxGMQhW1shMssflNM/copy?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
 
 This template is a starting point--fill in only what is relevant for your content and feel free to add more columns!
 If transforming existing metadata, you do **not** need to exactly match the CollectionBuilder template. 
@@ -135,7 +135,7 @@ Location | `location` |
 
 {:.alert .alert-green}
 **Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. The first option you will see is to copy the coordinates. You can click to copy those and then paste the location into your metadata.<br><br>
-**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/edit?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
+**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/copy?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
 
 ### date: 
 
