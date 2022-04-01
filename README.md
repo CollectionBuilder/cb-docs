@@ -27,7 +27,7 @@ Documentation follows these conventions:
     - The index does NOT need a TOC of section contents, as that will be added automatically by the template.
 - Individual doc topics should be their own Markdown file. 
     - Each should have front matter variables `parent` (matching the title of section index) and `nav_order` (setting order within the section). 
-    - Content can be styled using [Just the Docs classes and utilities](https://pmarsceill.github.io/just-the-docs/) and CB specific features documented below.
+    - Content can be styled using [Just the Docs classes and utilities](https://just-the-docs.github.io/just-the-docs/) and CB specific features documented below.
 - For pages that shouldn't appear in nav, add front matter `nav_exclude: true`.
 
 Example section index front matter:
@@ -53,7 +53,7 @@ nav_order: 1
 ## Content Features
 
 Basic styling components can be added to content pages using Kramdown ["Attribute List syntax"](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions).
-See [Just the Docs docs](https://pmarsceill.github.io/just-the-docs/docs/ui-components) for built in theme UI components.
+See [Just the Docs docs](https://just-the-docs.github.io/just-the-docs/docs/ui-components) for built in theme UI components.
 This project adds a bit of custom styles:
 
 **Buttons**
@@ -96,5 +96,5 @@ As a div around Markdown content:
 
 ## About the Theme
 
-This repository is built on "Just the Docs" theme (<https://github.com/pmarsceill/just-the-docs>).
+This repository is built on "Just the Docs" theme (<https://github.com/just-the-docs/just-the-docs>).
 The theme was forked in 2021-04 and all files are included in this repository (rather than as a gem theme). 
