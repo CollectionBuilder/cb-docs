@@ -1,5 +1,17 @@
 // add custom sass here to override any styles
-
+.site-header {
+    background: black;
+    .cb-logo {
+        text-align: right;
+        width: 25%;
+    }
+    .cb-title {
+        width: 75%;
+    }
+}
+.text-white {
+    color: white;
+}
 /*
 // change code block color
 .highlighter-rouge {
