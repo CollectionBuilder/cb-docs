@@ -21,12 +21,12 @@ These options can add pre-configured Google services if desired.
 - Uncomment `google-analytics-id` (by removing the hash `#` in front), and add your Google Analytics ID if you would like to add a pre-configured tracking code snippet.
 - The template uses "gtag" implementation, with "anonymize_ip" set to true for privacy.
 - example --> `google-analytics-id: "UA-76328753-1"`
-- *Note:* Any analytics service can be added to your site by pasting the tracking snippet they provide into "_includes/head/analytics.html". Analytics will only be added during final production build.
+- *Note:* Any analytics service can be added to your site by pasting the tracking snippet they provide into "_includes/head/analytics.html". Analytics will only be added during final production build. See [Add Analytics to your Site]({{ '/docs/advanced/analytics/' | relative_url }}) for details.
 
 ### google-cse-id:
 
 - Uncomment `google-cse-id` (by removing the hash `#` in front), and add your Google Custom Search Engine ID to add a embedded Google search page.
-- See "docs/google.md" in your CollectionBuilder repository for details of implementing the CSE.
+- See [Google CSE]({{ '/docs/advanced/google-search/' | relative_url }}) for details of implementing.
 
 ------
 

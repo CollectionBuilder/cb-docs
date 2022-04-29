@@ -42,4 +42,4 @@ google-analytics-id: UA-76328753-1
 ```
 
 During "production" build, the tracking code with your id will be automatically added to every page.
-The template uses the "gtag.js" implementation, with the [Anonymize IP](https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization) enabled to provide basic privacy enhancement to your users.
+The template uses the ["gtag.js"](https://developers.google.com/analytics/devguides/collection/gtagjs/) implementation, with the [Anonymize IP](https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization) enabled to provide basic privacy enhancement to your users.
