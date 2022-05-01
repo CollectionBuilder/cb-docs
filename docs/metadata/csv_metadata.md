@@ -49,7 +49,7 @@ This approach provides flexibility to include objects from multiple sources with
 - If blank the object will default to a generic item page. 
 - Supported values in `display_template` match files found in "_layouts".
 - Default supported options: `image`,`pdf`, `video`, `audio`, `record`, `item`. 
-    - `image`: Displays image_small if available, with fall back to object_location. Adds LightGallery view to open images full screen using object_location, with fall back to image_small.
+    - `image`: Displays image_small if available, with fall back to object_location. Adds gallery view to open images full screen using object_location, with fall back to image_small.
     - `pdf`: Displays image_small if available, with fall back to image_thumb, or a pdf icon.
     - `video`: Displays a video embedded on the page with default support for video files (using `<video>` element with object_location as src), YouTube (from link in object_location), or Vimeo videos (from link in object_location).
     - `audio`: Uses `<audio>` element to embed audio file from object_location as src.
