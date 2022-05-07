@@ -56,7 +56,8 @@ There are two general types of Feature Includes, ones that add collection media 
 
 ### Alert
 
-This will include a [bootstrap alert](https://getbootstrap.com/docs/4.0/components/alerts/){:target="_blank" rel="noopener"} with the features you define in the variables: 
+This will include a [bootstrap alert](https://getbootstrap.com/docs/5.1/components/alerts/){:target="_blank" rel="noopener"} with the features you define in the variables: 
+
 ```
 {% raw %}{% include feature/alert.html text="this is an *alert* that 'warns' a user" color="warning" align="center" %}{% endraw %}
 ```
@@ -64,27 +65,31 @@ This will include a [bootstrap alert](https://getbootstrap.com/docs/4.0/componen
 ### Audio
 
 This in add an audio player from an item in your collection from the objectid:
+
 ```
 {% raw %}{% include feature/audio.html objectid="demo_003" %}{% endraw %}
 ```
 
 ### Button
 
-This will include a [bootstrap button](https://getbootstrap.com/docs/4.0/components/buttons/){:target="_blank" rel="noopener"} with the features you define in the variables: 
+This will include a [bootstrap button](https://getbootstrap.com/docs/5.1/components/buttons/){:target="_blank" rel="noopener"} with the features you define in the variables: 
+
 ```
 {% raw %}{% include feature/button.html text="Button Link to Somewhere" link="https://collectionbuilder.github.io/" color="success" %}{% endraw %}
 ```
 
 ### Card
 
-This will include a [bootstrap card](https://getbootstrap.com/docs/4.0/components/card/){:target="_blank" rel="noopener"} with the features you define in the variables: 
+This will include a [bootstrap card](https://getbootstrap.com/docs/5.1/components/card/){:target="_blank" rel="noopener"} with the features you define in the variables: 
+
 ```
 {% raw %}{% include feature/card.html header="This is a Card" text="The card features an image from the collection as a cap" objectid="demo004" width="25" centered=true %}{% endraw %}
 ```
 
 ### Cloud
 
-This will include a [word cloud](https://getbootstrap.com/docs/4.0/components/card/){:target="_blank" rel="noopener"} with the features you define in the variables: 
+This will include a word cloud with the features you define in the variables: 
+
 ```
 {% raw %}{% include feature/cloud.html fields="subject" min="" background="dark" button="outline-warning"  %}{% endraw %}`
 ```
@@ -92,6 +97,7 @@ This will include a [word cloud](https://getbootstrap.com/docs/4.0/components/ca
 
 This command will include an image that is not a collection item. 
 Provide an `src` value with a full url to the image or relative path to image inside the project repository:
+
 ```
 {% raw %}{% include feature/image-external.html src="https://www.lib.uidaho.edu/media/collections/fatmen.jpg" width="75" %}{% endraw %}
 ```
@@ -117,7 +123,6 @@ These are defined below.
     - Single external image --> `objectid="https://www.lib.uidaho.edu/digital/images/fluffyclouds.jpg"`
     - Multiple images (one external and one relative) --> --> `objectid="https://www.lib.uidaho.edu/digital/images/fluffyclouds.jpg;assets/images/grayclouds.jpg"`
 
-
 *Optional*:
 
 - **width**: Uses Bootstrap sizing to set the image's percentage size.
@@ -127,21 +132,23 @@ These are defined below.
     - If you'd like to turn the caption off use `caption=false`
 
 For example, adding a figure with only required variables:
+
 ```
 {% raw %}{% include feature/image.html objectid="demo_001" %}{% endraw %}
 ```
 
 With additional optional variables:
+
 ```
 {% raw %}{% include feature/image.html objectid="demo_001" width="50" caption=false %}{% endraw %}
 ```
 
 ### Jumbotron
 
-A jumbotron is a [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/jumbotron/){:target="_blank" rel="noopener"} component that consists of a large image with text overlay.
+A jumbotron is a Bootstrap-based component that consists of a large image with text overlay.
 This include is present as the first content line of the template "about.md".
 The option `objectid` can be an objectid of an image item in your collection, the URL to an external image, or the relative path to an image in the project repository.
-By default overlay is your site's title and tagline, but these can be changed by passing `title` and `text` options
+By default overlay is your site's title and tagline, but these can be changed by passing `title` and `text` options.
 
 ```
 {% raw %}{% include feature/jumbotron.html objectid="demo_002" %}{% endraw %}
@@ -149,7 +156,8 @@ By default overlay is your site's title and tagline, but these can be changed by
 
 ### Modal
 
-This will include a [bootstrap modal](https://getbootstrap.com/docs/4.0/components/modal/){:target="_blank" rel="noopener"} with the features you define in the variables: 
+This will include a [bootstrap modal](https://getbootstrap.com/docs/5.1/components/modal/){:target="_blank" rel="noopener"} with the features you define in the variables: 
+
 ```
 {% raw %}{% include feature/modal.html button="Click Here" title="Modal Title" text="A Modal will pop out a box with some more information" color="primary" %}{% endraw %}
 ```
@@ -158,6 +166,7 @@ This will include a [bootstrap modal](https://getbootstrap.com/docs/4.0/componen
 
 Currently, this is incorporated into the "pages/about.md" file by default. 
 The code looks like this: 
+
 ```
 {% raw %}{% include feature/nav-menu.html sections="About the Collection;About the About Page" %}{% endraw %}
 ```
@@ -171,6 +180,7 @@ If you'd rather not include the nav menu, just delete this line of code.
 ### Pdf
 
 This will embed a pdf onto the page using the browser's built in pdf reader: 
+
 ```
 {% raw %}{% include feature/pdf.html objectid="demo_002" width="50" %}{% endraw %}
 ```
@@ -179,14 +189,13 @@ This will embed a pdf onto the page using the browser's built in pdf reader:
 
 See information in our [TimelineJS Feature in the Advanced Section]({{ '/advanced/timelinejs/' | relative_url }}).
 
-
 ### Video
 
 This will embed a video item into the page by providing an objectid that refers to the video, which can be within the collection or external to it: 
 
 *Required*:
-- "objectid" = several options below (required)
 
+- "objectid" = several options below (required)
     1. an objectid of a video item in this collection (usually that has an youtubeid or vimeoid), e.g. "demo_003"
     2. a full URL to a video hosted on YouTube, e.g. https://youtu.be/dbKNr3wuiuQ
     3. a full URL to a video hosted on Vimeo, e.g. https://vimeo.com/464555587 
@@ -195,11 +204,12 @@ This will embed a video item into the page by providing an objectid that refers 
 
 *Optional*:
 
-    - "caption" = by default the figure include automatically adds the title of the item from your metadata. The caption option allows you to manually add a different caption, or give the value false for none. (optional)
-    - "width" = will use responsive sizing to set the % size on desktop (will be 100% on mobile), choose from "25", "50", "75", or "100" (optional)
-    - "ratio" = use Bootstrap embed ratio options "21by9", "16by9", "4by3", or "1by1" to customize the responsive aspect ratio. 16by9 is default. (optional)
+- "caption" = by default the figure include automatically adds the title of the item from your metadata. The caption option allows you to manually add a different caption, or give the value false for none. (optional)
+- "width" = will use responsive sizing to set the % size on desktop (will be 100% on mobile), choose from "25", "50", "75", or "100" (optional)
+- "ratio" = use Bootstrap ratio options "21x9", "16x9", "4x3", or "1x1" to customize the responsive aspect ratio. 16by9 is default. (optional)
 
 Examples:
+
 - Video in collection (with 50% width)
 
 `{% raw %}{% include feature/video.html objectid="demo_003" width="50" %}{% endraw %}"`

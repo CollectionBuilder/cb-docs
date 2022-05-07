@@ -29,6 +29,11 @@ The templates are currently:
 - **CSV** - for [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv), a robust template for developing exhibits on your local computer (and serving them from anywhere!)
 - **CDM** - for [CollectionBuilder-CONTENTdm](https://github.com/CollectionBuilder/collectionbuilder-contentdm), a template for generating a "skin" over an existing CONTENTdm repository.
 
+{:.alert .alert-green}
+CollectionBuilder recently updated from Bootstrap 4 to the current version, Bootstrap 5!
+The migration should not impact most projects.
+If you did previous customizations with Bootstrap, keep in mind there are a few [differences between the versions](https://getbootstrap.com/docs/5.1/migration/), and the template no longer includes jQuery.
+
 ## How To Get in Touch
 
 Have questions, comments, or concerns for CollectionBuilder developers?
