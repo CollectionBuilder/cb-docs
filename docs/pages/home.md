@@ -18,7 +18,7 @@ Some options:
 
 ## Home Page Overview
 
-The Home page is composed of a number of include commands, arranged in three [Bootstrap columns](https://getbootstrap.com/docs/4.0/layout/grid/){:target="_blank" rel="noopener"}.
+The Home page is composed of a number of include commands, arranged in three [Bootstrap columns](https://getbootstrap.com/docs/5.1/layout/grid/){:target="_blank" rel="noopener"}.
 
 Jekyll's [include command](https://jekyllrb.com/docs/includes/) is a powerful feature that allows modular elements or content to be drawn into your site's pages from a central location.
 
@@ -134,7 +134,7 @@ It might look like:
 ### Adjust the Size and Number of Columns
 
 The above edits move content around or delete it, but the home page's column sizing and layout can also be adjusted. 
-Columns follow the Bootstrap Grid, so if you're diving deeper into customizing the layout, refer to the [Bootstrap Documentation](https://getbootstrap.com/docs/4.6/layout/grid/){:target="_blank" rel="noopener"}.
+Columns follow the Bootstrap Grid, so if you're diving deeper into customizing the layout, refer to the [Bootstrap Documentation](https://getbootstrap.com/docs/5.1/layout/grid/){:target="_blank" rel="noopener"}.
 
 There are a lot of possibilities for customization here! 
 CollectionBuilder is designed as a flexible template that can be adapted to the needs of a collection.

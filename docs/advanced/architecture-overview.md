@@ -72,7 +72,6 @@ The contents are organized into folders to stay organized:
     - [Bootstrap Icons](https://icons.getbootstrap.com/)
     - [DataTables](https://datatables.net/)
     - [Leaflet](https://leafletjs.com/)
-    - [lightgallery](https://www.lightgalleryjs.com/)
-    - [jQuery](https://jquery.com/)
+    - [spotlight gallery](https://github.com/nextapps-de/spotlight)
     - [lazysizes](https://github.com/aFarkas/lazysizes)
     - [Lunr](https://lunrjs.com/)
