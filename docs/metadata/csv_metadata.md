@@ -133,8 +133,12 @@ Location | `location` |
 - A geographic coordinate specifying the east-west position of an item. See the [Map]({{ '/docs/theme/map/' | relative_url }}) section for more information.
 - Example value: `-117.165625`
 
+- **Pro Tip:** Latitude and longitude for your items can be found using online mapping platforms:
+    - On [Google Maps](https://www.google.com/maps/) right click on a point and select the lat/long displayed at the top of the menu. This will copy the lat/long values to your clipboard, allowing you to paste them into your metadata spreadsheet. Alternatively, if you left click on the map, the lat/long will display in a box towards the bottom. Double clicking on a spot will center the map on that location, and the lat/long will be added to the URL where you can copy it from the address bar.
+    - On [Open Street Map](https://www.openstreetmap.org/) right click on a point and select "Show address" from the menu. The lat/long will display on the left side panel, where you can copy and paste to your metadata.
+    - On [iTouch Maps](https://itouchmap.com/?r=latlong) search or move the map to approximate location, then hold Shift and click on the spot. The lat/long will display below.
+
 {:.alert .alert-green}
-**Pro Tip:** If you'd like to get the latitude/longitude of a location, right click on that spot on a Google Map. The first option you will see is to copy the coordinates. You can click to copy those and then paste the location into your metadata.<br><br>
 **If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/copy?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
 
 ### date: 
