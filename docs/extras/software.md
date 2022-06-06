@@ -43,3 +43,13 @@ Calc can correctly import and create UTF-8 CSVs (unlike Excel).
 
 GIMP is a free and open source image editing application (similar to PhotoShop).
 It is a powerful, fully featured, and high quality editor that can edit any image format and do batch processing.
+
+--------
+
+## Squoosh (image optimizing)
+
+<https://squoosh.app/>
+
+Squoosh is a browser-based app that can efficiently optimize images.
+If you have images that are too big for displaying on the web, you can use it to optimize the format to significantly reduce file size while still retaining image quality.
+All processing is done on your local computer--this is not a cloud service and does not send your data out!
