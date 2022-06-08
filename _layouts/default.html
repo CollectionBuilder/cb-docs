@@ -74,10 +74,6 @@ layout: table_wrappers
       {% include nav.html pages=site.html_pages %}
       
     </nav>
-    <footer class="site-footer">
-      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for
-      Jekyll.
-    </footer>
   </div>
   <div class="main" id="top">
     <div id="main-header" class="main-header" >
@@ -176,7 +172,7 @@ layout: table_wrappers
           {{ footer_custom }}
 
           {% if site.last_edit_timestamp or site.gh_edit_link %}
-          <div class="d-flex mt-2">
+          <div class="mt-2">
             {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
             <p class="text-small text-grey-dk-000 mb-0 mr-2">
               Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date:
@@ -195,6 +191,7 @@ layout: table_wrappers
                 id="edit-this-page">{{ site.gh_edit_link_text }}</a>
             </p>
             {% endif %}
+            <p class="text-small text-grey-dk-100 mb-0">This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
           </div>
           {% endif %}
         </footer>
