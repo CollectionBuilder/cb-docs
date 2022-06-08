@@ -94,11 +94,11 @@ Below we detail ways to further customize and curate your timeline.
 2. You will need to edit the first line of code (below the front matter) so that it limits the collection:
     - limit the timeline to only include those items that are images: 
 ``` 
-{% raw %}{%- assign items = site.data[site.metadata] | where_exp: "item","item.format contains 'image'" -%}{% endraw %}
+{% raw %}{%- assign items = site.data[site.metadata] | where_exp: 'item','item.format contains "image"' -%}{% endraw %}
 ```
     - limit the timeline to only include those items that occur during a certain year:  
 ```
-{% raw %}{%- assign items = site.data[site.metadata] | where_exp: "item","item.date contains '1935'" -%}{% endraw %}
+{% raw %}{%- assign items = site.data[site.metadata] | where_exp: 'item','item.date contains "1935"' -%}{% endraw %}
 ``` 
 3. There are other ways to limit the timeline as well. See below for limiting it through the creation of a curated spreadsheet.
 
