@@ -4,7 +4,7 @@
 
 Documentation for CollectionBuilder, an open source tool for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
 
-This documentation covers details for CollectionBuilder-GH, CollectionBuilder-CONTENTdm, CollectionBuilder-SA, and CollectionBuilder-CSV.
+This documentation covers details for CollectionBuilder-GH, CollectionBuilder-CONTENTdm, and CollectionBuilder-CSV.
 
 ## Contributing 
 
@@ -53,8 +53,8 @@ nav_order: 1
 ## Content Features
 
 Basic styling components can be added to content pages using Kramdown ["Attribute List syntax"](https://kramdown.gettalong.org/syntax.html#attribute-list-definitions).
-See [Just the Docs docs](https://just-the-docs.github.io/just-the-docs/docs/ui-components) for built in theme UI components.
-This project adds a bit of custom styles:
+The theme started with [Just the Docs docs](https://just-the-docs.github.io/just-the-docs/docs/ui-components), so contains JTD's built in UI components and helpers (however, it does not match the most recent version of JTD!).
+This project adds some additional component styles:
 
 **Buttons**
 
@@ -98,3 +98,4 @@ As a div around Markdown content:
 
 This repository is built on "Just the Docs" theme (<https://github.com/just-the-docs/just-the-docs>).
 The theme was forked in 2021-04 and all files are included in this repository (rather than as a gem theme). 
+Some aspects of the theme are customized, some additional component styles are added, and it does not track JTD's updates (it isn't compatible with current JTD versions!).
