@@ -64,4 +64,4 @@ If you are new to using Git and GitHub, we also recommend you install [GitHub De
 This will help you visualize and implement some of the git processes that can seem non-intuitive.
 
 GitHub Desktop is available on Windows and Mac only, however, there are a variety of [other GUI app for working with Git](https://git-scm.com/downloads/guis){:target="_blank" rel="noopener"} available, including "git-gui" that is built in to every default Git install.
-However, many users will find they complete most Git commands using integrations built into their text editors such as VS Code or Atom instead.
+However, many users will find they complete most Git commands using integrations built into their text editors such as VS Code instead.

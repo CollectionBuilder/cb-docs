@@ -8,14 +8,10 @@ nav_order: 2
 
 Static web projects like CollectionBuilder are really just a folder of plain text files.
 To edit them you will need a good text editor.
-The CollectionBuilder team suggests these open-source options:
+Code editors will allow you to work on whole folders of files at once (i.e. your Jekyll project repository) and have built in helpers for syntax highlighting, version control, terminals, search, and even spell check.
 
-- [Visual Studio Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} (VS Code)
-- [Atom](https://atom.io/){:target="_blank" rel="noopener"}
-
-These editors will allow you to work on whole folders of files at once (i.e. your Jekyll project repository) and have built in helpers for syntax highlighting, version control, terminals, search, and even spell check.
-If you don't have a text editor installed, download one of the above and use their wizard to install with the default options on your computer.
-We mostly use Visual Studio Code, so if you don't know which one to pick, go ahead and get that one.
+If you don't already have a favorite editor, the CollectionBuilder team suggests the very popular, open-source [Visual Studio Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} (VS Code).
+Download VS Code and use their wizard to install with the default options on your computer.
 
 ## Configuring Visual Studio Code
 
