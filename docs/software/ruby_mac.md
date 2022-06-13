@@ -66,16 +66,16 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 ## Install Ruby
 
 {:.alert .alert-purple .my-3}
-Note: Ruby 3.0.1 is the latest stable version as of this writing; if you are reading this past Spring 2021, you may want to check the "Stable Releases" section on [the download Ruby page](https://www.ruby-lang.org/en/downloads/){:target="_blank" rel="noopener"} and install the latest stable version.
+Note: Ruby 3.1.2 is the latest stable version as of this writing; if you are reading this past Spring 2022, check the "Stable Releases" section on [the download Ruby page](https://www.ruby-lang.org/en/downloads/){:target="_blank" rel="noopener"} and install the latest stable version.
 
 - Back in your terminal, install the latest version of ruby by copy/pasting or writing, 
 ```
-rbenv install 3.0.1
+rbenv install 3.1.2
 ```
 and pressing "Enter".
 - Now let's set that version as your global Ruby version by entering 
 ```
-rbenv global 3.0.1
+rbenv global 3.1.2
 ```
 into the terminal prompt and pressing "Enter".
 - Finally, we're going to rehash, just to be safe: copy and paste the command 

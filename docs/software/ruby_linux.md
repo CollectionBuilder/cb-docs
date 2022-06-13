@@ -66,7 +66,7 @@ Check `rbenv install -l` to get a list of available stable versions.
 Use `rbenv install` + version number, e.g.:
 
 ```
-rbenv install 2.7.3
+rbenv install 3.1.2
 ```
 
 This can take awhile since ruby-build will download and build from source. 
@@ -74,12 +74,24 @@ This can take awhile since ruby-build will download and build from source.
 Once complete, set the version you want to use:
 
 ```
-rbenv global 2.7.0
+rbenv global 3.1.2
 ```
 
 Now, `ruby -v` should report what you just set.
 
+## Update rbenv and ruby-build
+
+Since you installed the tools using git, to update rbenv and ruby-build you simply `git pull` the most recent master branch code.
+
+```
+cd ~/.rbenv && git pull
+cd "$(rbenv root)"/plugins/ruby-build && git pull
+```
+
+**Note:** the list of available Ruby versions (`rbenv install -l`) is **NOT automatically updated**.
+So you should periodically update ruby-build following the git pull method above (i.e. `cd ~/.rbenv/plugins/ruby-build && git pull`).
+
 {:.alert .alert-yellow}
-*Note:* there is a new Ubuntu package to install, so you can use `sudo apt install rbenv ruby-build`.
+*Note:* there is an Ubuntu package to install, so you can use `sudo apt install rbenv ruby-build`.
 Unfortunately `ruby-build` is *super* out of date, so it will only list very out-of-date versions of Ruby to install.
 As far as I can tell, this is not a good install method.
