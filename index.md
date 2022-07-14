@@ -7,12 +7,9 @@ description: "CollectionBuilder is an open source tool for creating digital coll
 
 # CollectionBuilder Docs
 
-Everything you ever wanted to know about how to use CollectionBuilder-GH, CollectionBuilder-CSV, and CollectionBuilder-CONTENTdm (and the technologies that power them)!
+CollectionBuilder was designed with learning in mind--and so are these docs!
 
-## Introduction
-
-CollectionBuilder was designed with learning in mind. 
-The project's workflow is scaffolded in order to help users build web and data literacy skills as they progress towards building and deploying new digital exhibits. 
+CollectionBuilder's workflow is scaffolded in order to help users build web and data literacy skills as they progress towards building and deploying new digital exhibits. 
 To that end, we've worked hard to make this documentation comprehensible for the novice user moving through the sections step-by step, as well as, useful for more advanced users searching for specific content.
 
 We hope you will find everything needed to create a CollectionBuilder project--but also learn the techniques of a static web approach that can power many other types of projects!
@@ -33,6 +30,15 @@ The templates are currently:
 CollectionBuilder recently updated from Bootstrap 4 to the current version, Bootstrap 5!
 The migration should not impact most projects.
 If you did previous customizations with Bootstrap, keep in mind there are a few [differences between the versions](https://getbootstrap.com/docs/5.1/migration/), and the template no longer includes jQuery.
+
+## Get Help
+
+We want your questions! 
+
+CollectionBuilder is building a learning community, so one of the best ways to get help, and help others in the process, is to ask questions on the [CollectionBuilder Discussion Forum](https://github.com/CollectionBuilder/collectionbuilder.github.io/discussions).
+Always provide a link to your repository as it makes understanding and debugging the issue *much* easier!
+
+You also might want to check our [Tutorials page](https://collectionbuilder.github.io/tutorials.html) for the latest videos!
 
 ## How To Get in Touch
 
