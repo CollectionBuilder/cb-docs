@@ -18,3 +18,8 @@ Depending on your operating system (i.e. Mac), this might be the most complicate
 - [Ruby on Linux]({{ '/docs/software/ruby_linux/' | relative_url }})
 
 These approaches that have worked for us, but you may want to refer to Jekyll's official [installation guides](https://jekyllrb.com/docs/installation/) for more tips!
+
+{:.alert .alert-yellow}
+Did you install Ruby and Jekyll a long time ago, but never updated it?
+Issues and conflicts with old versions of Ruby and Jekyll are common stumbling blocks we encounter when teaching.
+Although uninstalling your existing versions can be confusing and frustrating process if you don't remember how you installed it in the first place, it is a good idea to get a fresh start to ensure you have working and up to date versions.
