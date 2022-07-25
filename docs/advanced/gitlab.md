@@ -115,7 +115,7 @@ url: https://examplename.gitlab.io
 # on GitHub Pages it is your github repository's name prefixed with a /
 baseurl: /cb-gh-example
 # location of code, the full url to your github repository
-source-code: https://github.com/examplename/cb-gh-example
+source-code: https://gitlab.com/examplename/cb-gh-example
 
 ```
 
@@ -125,7 +125,7 @@ Unlike GitHub Pages, GitLab does not have a default Jekyll build automatically s
 To build and host your CollectionBuilder site using GitLab Pages, you will add a "CI/CD file", named ".gitlab-ci.yml".
 This YAML file contains instructions to GitLab about how to set up an environment, build your site, and deploy it.
 
-- In the root of your project repository, click the "+" icon, select "New file" under "This directory". This will open a blank web editor page.
+- In the root of your project repository, click the "+" icon and select "New file" under "This directory". This will open a blank web editor page.
 - In the filename box, type `.gitlab-ci.yml` (be sure to include the leading `.`).
 - In the editor box, carefully paste in the following YAML (or copy from the [snippet file](https://gitlab.com/-/snippets/2368507)):
 
@@ -163,9 +163,9 @@ pages:
 
 Once committed, the new file will show up in your repository and the "pipeline" will start running immediately.
 You can check the status by clicking on "Jobs" under "CI/CD" in the left side menu.
-When the build completes, GitLab Pages will be automatically activated and your website will be live at the URL "https://username.gitlab.io/repositoryname".
+When the build completes, GitLab Pages will be automatically activated and your website will be live at the URL "https://username.gitlab.io/repositoryname/".
 
-By default, private repositories will be on "Access Control", only your collaborators will be able to access the live website while logged into GitLab.
+By default, private repositories will be on "Access Control", only collaborators you have added to the project will be able to access the live website while *logged into GitLab*.
 Check the option in Settings > Pages on the left side menu.
 
 Notes: 
