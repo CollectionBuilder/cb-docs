@@ -85,7 +85,7 @@ As a div around Markdown content:
 ## Use Locally
 
 - clone repository, `git clone https://github.com/collectionbuilder/cb-docs.git`
-- in repository folder, `bundle install` (this project uses "github-pages" gem to keep in sync with GH Pages)
+- in repository folder, `bundle install` (this project uses "github-pages" gem to keep in sync with GH Pages. this necessary **first time** you use the repository only!)
 - in repository folder, `bundle exec jekyll s` to serve the site locally
 
 ## Customize Template

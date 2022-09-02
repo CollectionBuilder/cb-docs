@@ -124,3 +124,7 @@ compress_html:
 collections: 
   glossary:
     sort_by: title
+
+# compress CSS output
+sass:
+  style: compressed
