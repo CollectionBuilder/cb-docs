@@ -17,18 +17,20 @@ Your repository must be public to use GitHub Pages unless you have a paid accoun
 If your project is *not* already public:
 
 1. On your project repository's home page, click the "Settings" button (appears on the right along the tabs above the code area).
-2. Scroll down to the red box at the bottom and click the "Change repository visibility" option.
+2. Scroll down to the red box at the bottom and click the "Change visibility" option.
 
 ## Activate GitHub Pages
 
 1. On your project repository's home page, click the "Settings" button (appears on the right along the tabs above the code area).
 2. On "Settings" page: click "Pages" in the left side menu.
-3. On the "Pages" page: in the "Source" section, change the dropdown button from "none" to "main" (leave the folder option as "/root"), then click the "Save" button. 
+3. On the "Pages" page: under "Source" leave the dropdown button as "Deploy from a branch". Under "Branch" use the dropdown to change from "none" to "main" (leave the folder option as "/root"), then click the "Save" button. 
+ 
+It will take a few minutes for the build to happen and your site to go live--so wait it out!
+After a few minutes, refresh the "Pages" page. 
+If the build is successful, an alert will appear near the top providing the URL to your live site.
+The URL will follow the pattern: "https://username.github.io/repository-name"
 
-Once saved, the page will refresh with an alert providing the URL where your site will appear. 
-It will take a few minutes for the build to happen and your site to go live--so wait it out! 
-
-Meanwhile, you might want to copy the URL to display on your home page:
+For convenience, you might want to copy the URL to display on your home page:
 
 1. Copy the provided URL.
 2. Go to repository's home page.
@@ -49,7 +51,7 @@ GitHub Pages is just as easy to turn off as it is to activate:
 
 1. On your project repository's home page, click the "Settings" button (appears on the right along the tabs above the code area).
 2. On "Settings" page: click "Pages" in the left side menu.
-3. On the "Pages" page: in the "Source" section, change the dropdown button to "none", then click the "Save" button. 
+3. On the "Pages" page: under "Branch" section, change the dropdown button to "none", then click the "Save" button. 
 
 After deactivating GitHub Pages, visiting the old URL will result in an 404 page.
 Keep in mind that the repository still contains all the code--so you can always turn it back on!
