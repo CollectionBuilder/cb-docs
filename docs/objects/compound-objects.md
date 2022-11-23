@@ -1,14 +1,14 @@
 ---
-title: Compound Objects and Multiples
+title: Compound Objects
 parent: Objects
 nav_order: 6
 ---
-# Compound Objects
+# Compound Objects and Multiples
 
 {:.alert .alert-red }
 **Currently Compound Objects can only be used in CollectionBuilder-CSV.**
 
-Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how compound objects are represented in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site]() to see how this looks in operation. 
+Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how compound objects are represented in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site](https://www.lib.uidaho.edu/collectionbuilder/collectionbuilder-csv-demo/) to see how this looks in operation. 
 
 ## Context
 
