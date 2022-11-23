@@ -55,7 +55,7 @@ This approach provides flexibility to include objects from multiple sources with
     - `audio`: Uses `<audio>` element to embed audio file from object_location as src.
     - `record`: metadata only record.
     - `item`: generic fallback item page, displays image or icon depending on "image_thumb"
-- See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item-pages.md) in your CollectionBuilder-CSV project repository for more details.
+- See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item_pages.md) in your CollectionBuilder-CSV project repository for more details.
 
 ### object_location: 
 
