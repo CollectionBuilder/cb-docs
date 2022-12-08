@@ -36,7 +36,7 @@ You'll need to use Homebrew to install rbenv. To install Homebrew, follow these 
 ```
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile 
 ```
-- Check to make sure Homebrew is installed properly by typing `brew doctor` into the terminal and pressing "Enter". If the installation was successful, you should see the message: "Your system is ready to brew." You're now ready to move on to the next section.
+- Check to make sure Homebrew is installed properly by typing `brew -v` again into the terminal and pressing "Enter". If the installation was successful, your terminal will return your Homebrew version. You're now ready to move on to the next section.
 
 ## Install rbenv
 
