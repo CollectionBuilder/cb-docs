@@ -26,7 +26,17 @@ You'll need to use Homebrew to install rbenv. To install Homebrew, follow these 
 - Open your terminal by clicking "Command (⌘) + Spacebar", typing `terminal` into the spotlight box that appears, and pressing "Enter".
 - Locate and copy the script in the box underneath the text Install Homebrew on the [Homebrew](https://brew.sh/){:target="_blank" rel="noopener"} webpage. Paste this script you just copied into the terminal prompt and press "Enter".
 - The terminal will then prompt you to press "Enter" once more to continue the install.
-- *Note: you may be prompted to enter your password. When you do so in the command line, you won't see anything happen. Just enter your password for your computer then press enter. That should complete the step.* 
+
+{:.alert .alert-purple .my-3}
+*Note: you may be prompted to enter your password. When you do so in the command line, you won't see anything happen. Just enter your password for your computer then press enter. That should complete the step.* 
+
+- When the installation is complete, type `brew -v` into the terminal and press "Enter". This will either return your current Homebrew version or a message telling you the brew command cannot be found.
+- If your terminal returns a version of Homebrew (an example might be "Homebrew 3.1.5", but keep in mind you may have a different version number, and that's okay!), you are ready to move on to the next section, [Install rbenv](#install-rbenv), below.
+- However, if your terminal returns a "command not found: brew" message, you'll need to complete one more step before moving on (this will be true for most Apple silicon computers, produced after late 2020). Copy and paste the following into the terminal and press "Enter":
+```
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile 
+```
+- Check to make sure Homebrew is installed properly by typing `brew doctor` into the terminal and pressing "Enter". If the installation was successful, you should see the message: "Your system is ready to brew." You're now ready to move on to the next section.
 
 ## Install rbenv
 
