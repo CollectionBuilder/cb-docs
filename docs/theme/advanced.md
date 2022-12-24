@@ -46,7 +46,7 @@ image-percentage-small: 10
 
 ## Navbar Options:
 
-These options will adjust the basic colors of your site's navigation bar (see [Bootstrap navbar docs](https://getbootstrap.com/docs/5.1/components/navbar/){:target="_blank" rel="noopener"} for details).
+These options will adjust the basic colors of your site's navigation bar using Bootstrap's built in options (see [Bootstrap navbar docs](https://getbootstrap.com/docs/5.1/components/navbar/){:target="_blank" rel="noopener"} for details).
 
 ### navbar-color: 
 
@@ -121,7 +121,7 @@ link-color: "#17a2b8"
 	- If you use this option, you will generally also need to use the font-cdn option below to add the font style sheet link to the head. This ensures the user actually have the font you configured!
 
 ```yaml
-base-font-family: Georgia; serif;
+base-font-family: 'Roboto', sans-serif;
 ```
 
 ### font-cdn: 
