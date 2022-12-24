@@ -65,3 +65,7 @@ dark,#080812
 
 The above example would really change the look of your site! 
 We've kind of randomly generated these, but you could use more color coordinated attempts, or your organization brand colors (for instance), to redo just a few of these and see some real changes to the look and feel of the site. 
+
+Keep in mind it is easy to create theme colors that negatively impact useability! 
+If your page elements such as links and buttons do not have enough contrast, users will have difficulty navigating and reading the content. 
+Always use contrast checkers and accessibility testing tools built into your browser to test your designs.
