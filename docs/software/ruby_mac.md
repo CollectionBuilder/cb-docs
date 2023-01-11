@@ -76,16 +76,16 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 ## Install Ruby
 
 {:.alert .alert-purple .my-3}
-Note: Ruby 3.1.2 is the latest stable version as of this writing; if you are reading this past Spring 2022, check the "Stable Releases" section on [the download Ruby page](https://www.ruby-lang.org/en/downloads/){:target="_blank" rel="noopener"} and install the latest stable version.
+Note: Ruby 3.2.0 is the latest stable version as of this writing **BUT** it is not installing cleanly right now, so **we are recommending you install version 3.1.3**; if you are reading this past January 2023, check the "Stable Releases" section on [the download Ruby page](https://www.ruby-lang.org/en/downloads/){:target="_blank" rel="noopener"} and install the latest stable version.
 
 - Back in your terminal, install the latest version of ruby by copy/pasting or writing, 
 ```
-rbenv install 3.1.2
+rbenv install 3.1.3
 ```
 and pressing "Enter".
 - Now let's set that version as your global Ruby version by entering 
 ```
-rbenv global 3.1.2
+rbenv global 3.1.3
 ```
 into the terminal prompt and pressing "Enter".
 - Finally, we're going to rehash, just to be safe: copy and paste the command 
@@ -98,6 +98,9 @@ into your terminal prompt and press "Enter".
     - Then reopen your terminal by clicking "Command (⌘) + Spacebar", typing `terminal` into the spotlight box that appears, and pressing "Enter".
     - Type `ruby -v` into the terminal prompt, and press "Enter".
     - If your terminal indicates that you have Ruby 2.7.0 or higher installed, you've done it!
+
+{:.alert .alert-purple .my-3}
+Note: If you want to install the Ruby 3.2.0 is the latest stable version as of this writing **BUT** it is not installing cleanly right now, so we are recommending you install version 3.1.3; if you are reading this past January 2023, check the "Stable Releases" section on [the download Ruby page](https://www.ruby-lang.org/en/downloads/){:target="_blank" rel="noopener"} and install the latest stable version.
 
 ## Having trouble?
 
