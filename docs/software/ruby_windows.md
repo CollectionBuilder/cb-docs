@@ -9,7 +9,7 @@ nav_order: 4
 Use [RubyInstaller for Windows](https://rubyinstaller.org/){:target="_blank" rel="noopener"}.
 
 {:.alert .alert-purple .my-3}
-January 2023 Note: Ruby 3.2.0 is the latest stable version as of this writing **BUT** it is not working cleanly right now with Ruby, so **we are recommending you install version 3.1.3**.
+January 2023 Note: Ruby 3.2.0 is the latest stable version as of this writing **BUT** it is not working cleanly right now with Jekyll, so **we are recommending you install version 3.1.3**.
 
 
 - First, [download](https://rubyinstaller.org/downloads/){:target="_blank" rel="noopener"} the suggested stable version "WITH DEVKIT" (as of this writing, Ruby+Devkit 3.1.X (x64))
