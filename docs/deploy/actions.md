@@ -49,6 +49,10 @@ The green checkmark will appear next to the most recent commit that triggered a 
 If a red "X" appears next to your commit, the build failed and your updates will not be deployed--the last working version of the site will still be live.
 Visit the Actions tab to see detailed information about the error to help debug the issue.
 
+You're all set, enjoy your site! 
+
+*The information below provides more details about Actions in case you end up wanting to customize the workflow... if you used the Starter workflow, you don't need to read it!*
+
 ### Manually Add Action YAML
 
 Rather than using "Settings" > "Pages" to add the starter workflow, you can manually create the file. 
