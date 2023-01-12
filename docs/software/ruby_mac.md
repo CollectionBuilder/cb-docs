@@ -76,7 +76,7 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 ## Install Ruby
 
 {:.alert .alert-purple .my-3}
-Note: Ruby 3.2.0 is the latest stable version as of this writing **BUT** it is not installing cleanly right now, so **we are recommending you install version 3.1.3**; if you are reading this past January 2023, check the "Stable Releases" section on [the download Ruby page](https://www.ruby-lang.org/en/downloads/){:target="_blank" rel="noopener"} and install the latest stable version.
+January 2023 Note: Ruby 3.2.0 is the latest stable version as of this writing **BUT** it is not working cleanly right now with Ruby, so **we are recommending you install version 3.1.3**.
 
 - Back in your terminal, install the latest version of ruby by copy/pasting or writing, 
 ```

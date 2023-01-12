@@ -61,6 +61,10 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 ### 4. Install a Ruby Version
 
 Check the [Ruby download page](https://www.ruby-lang.org/en/downloads/) to find the latest stable version or your project requirements to find your desired Ruby version number.
+
+{:.alert .alert-purple .my-3}
+January 2023 Note: Ruby 3.2.0 is the latest stable version as of this writing **BUT** it is not working cleanly right now with Ruby, so **we are recommending you install version 3.1.3**.
+
 Check `rbenv install -l` to get a list of available stable versions.
 
 Use `rbenv install` + version number, e.g.:
