@@ -35,7 +35,7 @@ If you did previous customizations with Bootstrap, keep in mind there are a few 
 
 We want your questions! 
 
-CollectionBuilder is building a learning community, so one of the best ways to get help, and help others in the process, is to ask questions on the [CollectionBuilder Discussion Forum](https://github.com/CollectionBuilder/collectionbuilder.github.io/discussions).
+CollectionBuilder is building a learning community, so one of the best ways to get help, and help others in the process, is to ask questions on the [CollectionBuilder Discussion Forum](https://github.com/orgs/CollectionBuilder/discussions).
 Always provide a link to your repository as it makes understanding and debugging the issue *much* easier!
 
 You also might want to check our [Tutorials page](https://collectionbuilder.github.io/tutorials.html) for the latest videos!
@@ -48,7 +48,7 @@ You're welcome to contact any or all of us:
 - Evan Williamson (<mailto:ewilliamson@uidaho.edu>)
 - Devin Becker (<mailto:dbecker@uidaho.edu>)
 - Olivia Wikle (<mailto:omwikle@uidaho.edu>)
-- [CollectionBuilder Discussion Forum](https://github.com/CollectionBuilder/collectionbuilder.github.io/discussions) (informal space to ask questions, provide feedback, debug, share and connect!)
+- [CollectionBuilder Discussion Forum](https://github.com/orgs/CollectionBuilder/discussions) (informal space to ask questions, provide feedback, debug, share and connect!)
 
 ## Other Resources
 
