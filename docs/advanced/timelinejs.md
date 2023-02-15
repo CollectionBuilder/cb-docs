@@ -39,7 +39,7 @@ The instructions below detail each of these options.
 2. Locate the yaml front matter at the top of the file (the front matter is the `key: value` pairs between two lines of dashes (`---`)).
 3. Edit the value for "layout" to look like this:
 ```yaml
-layout: full-width-page
+layout: page-full-width
 ```
 4. Locate the `## Collection Timeline` line of text, below the yaml front matter. 
 5. Replace `## Collection Timeline` with the following _include command:
@@ -58,7 +58,7 @@ layout: full-width-page
 6. Edit the front matter to look like this:
 ```yaml
 title: TimelineJS
-layout: full-width-page
+layout: page-full-width
 permalink: /timelinejs.html
 ```
 Note that the title and permalink values don't have to be `TimelineJS` and `timelinejs.html`; you can call them whatever you want. 
