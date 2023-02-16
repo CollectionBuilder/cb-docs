@@ -82,6 +82,16 @@ As a div around Markdown content:
 - on a line above the content you want in the alert, add `<div class="alert alert-red" markdown="1">` (modifying the color class as desired)
 - on a line below the markdown content you want in the alert, close the div `</div>`
 
+## Collections
+
+CB-docs uses two Jekyll "collections" to generate special content pages, "_glossary" and "_change-log". 
+
+The "glossary" collection contains short descriptions of various technical components used by CB along with links to further resources. 
+The glossary items are pulled into a single page in the file "docs/glossary.md".
+
+The "change-log" collection contains short descriptions of major and breaking changes to the templates and docs to help people debug issues between versions. 
+The change items are pulled into a single page in the file "docs/changes.md".
+
 ## Use Locally
 
 - clone repository, `git clone https://github.com/collectionbuilder/cb-docs.git`
