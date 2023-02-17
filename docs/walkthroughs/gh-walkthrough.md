@@ -39,7 +39,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 - Click **Choose your files**, navigate to the location of your metadata CSV (probably in your Downloads folder), and select the file.
 
-- Scroll down to the **Commit changes** box, write a short commit message describing what you did (Ex: "Add demo metadata”), and then click the green **Commit changes** button.
+- Scroll down to the **Commit changes** box, write a short commit message describing what you did (Ex: Add demo metadata), and then click the green **Commit changes** button.
 
 {:.alert .alert-blue}
 If you want to learn about creating, updating, and uploading your own metadata, visit our **Metadata Walkthrough** _(link to Metadata Walkthrough here)_.
@@ -50,15 +50,15 @@ If you want to learn about creating, updating, and uploading your own metadata, 
 
 - On your repository homepage, click on the `objects` folder and upload the **demo-objects.zip** file to this folder. 
 
-- Write your commit message (Ex: “Add collection objects”) and commit your changes.
+- Write your commit message (Ex: Add collection objects) and commit your changes.
 
 ## 6. Configure your site settings.
 
-- On your repository homepage, click on the `_config.yml` file.
+- On your repository homepage, click on the "_config.yml" file.
 
 - Click on the edit button (the pencil icon) to edit the file. 
 
-- Under the **SITE SETTINGS** section, replace the “CollectionBuilder-GH” placeholder text with a title of your choice. 
+- Under the **SITE SETTINGS** section, replace the "CollectionBuilder-GH" placeholder text with a title of your choice. 
 
 For example:
 
@@ -66,9 +66,9 @@ For example:
 title: Psychiana Demo Collection
 ``` 
 
-- **Optional:** Write a new tagline, description, and author.
+- **Optional:** Write a new `tagline`, `description`, and `author`.
 
-- Under the **COLLECTION SETTINGS** section, replace the “demo-metadata” placeholder text with the filename of your uploaded metadata file **_without the CSV extension_**. 
+- Under the **COLLECTION SETTINGS** section, replace the "demo-metadata" placeholder text with the filename of your uploaded metadata file **_without the CSV extension_**. 
 
 For example:
 
@@ -76,7 +76,7 @@ For example:
 metadata: psychiana-demo
 ``` 
 
-- Write your commit message (Ex: “Update site settings”) and commit your changes.
+- Write your commit message (Ex: Update site settings) and commit your changes.
 
 ## 7. Generate your site.
 
@@ -94,7 +94,7 @@ You can visit this URL to see changes to your live site. To ensure any changes y
 
 ## 8. Add a header image.
 
-- On your repository homepage, click on the `_data` folder and then click on the `theme.yml` file. 
+- On your repository homepage, click on the `_data` folder and then click on the "theme.yml" file. 
 
 - Under the HOME PAGE section, replace the “demo_001” placeholder text with the `objectid` of another image in the collection. 
 
@@ -108,17 +108,17 @@ To view potential header images and their `objectids`, open the [**Google Sheet*
 
 **Tip:** It is best to choose a large horizontal image if possible. 
 
-- After you have updated the featured image, write your commit message (Ex: “Add header image”) and commit your changes. View your changes by visiting your site’s URL.
+- After you have updated the featured image, write your commit message (Ex: Add header image) and commit your changes. View your changes by visiting your site’s URL.
 
 ## 9. Edit the About Page
 
-- On your repository homepage, click on the **pages** folder and then on the `about.md` file. 
+- On your repository homepage, click on the `pages` folder and then on the "about.md" file. 
 
 - Write some text on this page using [Markdown](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown). 
 
 - **Optional:** Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html). 
 
-- After you are done editing the About page, write your commit message (Ex: “Edit About page”) and commit your changes. View your changes by visiting your site’s URL.
+- After you are done editing the About page, write your commit message (Ex: Edit About page) and commit your changes. View your changes by visiting your site’s URL.
 
 ## 10. Implement other customization options.
 
