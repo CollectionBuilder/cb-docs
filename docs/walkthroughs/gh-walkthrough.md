@@ -33,7 +33,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 ## 4. Upload your metadata file.
 
-- On the homepage of your repository on GitHub.com, click on the `_data` folder. 
+- On the homepage of your repository on GitHub.com, click on the "_data" folder. 
 
 - Then click the **Add file** button and select **Upload files**. 
 
@@ -50,7 +50,7 @@ If you want to learn about creating, updating, and uploading your own metadata, 
 
 - Double click on this file to unzip it since you cannot upload the zipped file as is.
 
-- On your repository homepage, click on the `objects` folder, find the unzipped demo-objects folder, and drag your mouse down the list to select all the objects to add. 
+- On your repository homepage, click on the "objects" folder, find the unzipped demo-objects folder, and drag your mouse down the list to select all the objects to add. 
 
 {:.alert .alert-red}
 **Warning:** Make sure to select all the object files in the demo-objects folder instead of just uploading the demo-objects.zip file.
@@ -63,7 +63,7 @@ If you want to learn about creating, updating, and uploading your own metadata, 
 
 - Click on the edit button (the pencil icon) to edit the file. 
 
-- Under the **SITE SETTINGS** section, replace the "CollectionBuilder-GH" placeholder text with a title of your choice. 
+- Under the **SITE SETTINGS** section, replace the `title` placeholder text with a title of your choice. 
 
 For example:
 
@@ -73,7 +73,7 @@ title: Psychiana Demo Collection
 
 - **Optional:** Write a new `tagline`, `description`, and `author`.
 
-- Under the **COLLECTION SETTINGS** section, replace the "demo-metadata" placeholder text with the filename of your uploaded metadata file **_without the CSV extension_**. 
+- Under the **COLLECTION SETTINGS** section, replace the `metadata` placeholder text with the filename of your uploaded metadata file **_without the CSV extension_**. 
 
 For example:
 
@@ -99,7 +99,7 @@ You can visit this URL to see changes to your live site. To ensure any changes y
 
 ## 8. Add a header image.
 
-- On your repository homepage, click on the `_data` folder and then click on the "theme.yml" file. 
+- On your repository homepage, click on the "_data" folder and then click on the "theme.yml" file. 
 
 - Under the HOME PAGE section, replace the “demo_001” placeholder text with the `objectid` of another image in the collection. 
 
@@ -117,7 +117,7 @@ To view potential header images and their `objectids`, open the [**Google Sheet*
 
 ## 9. Edit the About Page
 
-- On your repository homepage, click on the `pages` folder and then on the "about.md" file. 
+- On your repository homepage, click on the "pages" folder and then on the "about.md" file. 
 
 - Write some text on this page using [Markdown](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown). 
 
