@@ -48,7 +48,12 @@ If you want to learn about creating, updating, and uploading your own metadata, 
 
 - Download the [**demo-objects.zip**](https://www.lib.uidaho.edu/collectionbuilder/demo-objects.zip) file (includes image files, PDFs, and mp3s). 
 
-- On your repository homepage, click on the `objects` folder and upload the **demo-objects.zip** file to this folder. 
+- Double click on this file to unzip it since you cannot upload the zipped file as is.
+
+- On your repository homepage, click on the `objects` folder, find the unzipped demo-objects folder, and drag your mouse down the list to select all the objects to add. 
+
+{:.alert .alert-red}
+**Warning:** Make sure to select all the object files in the demo-objects folder instead of just uploading the demo-objects.zip file.
 
 - Write your commit message (Ex: Add collection objects) and commit your changes.
 
