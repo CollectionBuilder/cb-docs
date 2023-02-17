@@ -8,7 +8,7 @@ nav_order: 1
 
 This walkthrough provides steps for creating an example digital collection using demo metadata from the University of Idaho's [Psychiana Digital Collection](https://www.lib.uidaho.edu/digital/psychiana/), the **CollectionBuilder-GH Template**, and **GitHub Pages**.
 
-{:.alert .alert-red}
+{:.alert .alert-yellow}
 **Note:** You will not need to install any software on your computer for this walkthrough, but you will need to create a free GitHub account.
 
 ## 1. Create a GitHub account.  
