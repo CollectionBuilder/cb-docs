@@ -1,7 +1,7 @@
 ---
 title: Object Derivatives
 parent: Objects
-nav_order: 5
+nav_order: 4
 ---
 
 # Generating Thumb and Small Object Derivatives

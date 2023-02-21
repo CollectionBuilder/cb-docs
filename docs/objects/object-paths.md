@@ -1,7 +1,7 @@
 ---
 title: Constructing Object Paths
 parent: Objects
-nav_order: 6
+nav_order: 5
 ---
 
 # Example Paths/Locations for CollectionBuilder-CSV

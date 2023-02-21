@@ -8,7 +8,7 @@ nav_order: 8
 
 {:.alert .alert-blue }
 Software in this section is optional and **will not be used by CollectionBuilder-GH or -CONTENTdm projects**. 
-If you want to use Rake tasks to batch process PDF and image files for **CollectionBuilder-CSV**, this software is required! (Note: You can use these Rake tasks in CollectionBuilder-SA, too, but please note that ***CollectionBuilder-SA is now deprecated!*** We *strongly* recommend using CollectionBuilder-CSV instead.)
+If you want to use Rake tasks to batch process PDF and image files for **CollectionBuilder-CSV**, this software is required!
 
 Most (*but not all!*) CollectionBuilder projects will involve working with a collection of digital objects, i.e. JPEGs, PDFs, MP3s, etc.
 We use the software listed below to batch process digital files for use in CollectionBuilder-CSV projects. 
