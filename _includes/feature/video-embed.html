@@ -1,0 +1,23 @@
+{% comment %}
+    Add iframe video embed from a YouTube or Vimeo link.
+    Options: 
+    - "video" = required, the full URL to a video on YouTube or Vimeo. e.g. https://youtu.be/dbKNr3wuiuQ , https://vimeo.com/464555587 
+    - "title" = suggested, title of the video 
+
+    e.g. 
+    {% include feature/video-embed.html video="https://www.youtube.com/watch?v=ZPOKRpxGJqg" title="A quick history of CollectionBuilder" %}
+
+{% endcomment %}
+{% if include.video contains 'vimeo' %}
+    {% capture video_src %}https://player.vimeo.com/video/{{ include.video | split: '/' | last }}{% endcapture %}
+{% elsif include.video contains 'youtu' %}
+    {% assign youtube_id = include.video | split: '/' | last %}
+    {% if youtube_id contains 'v=' %}{% assign youtube_id = youtube_id | split: 'v=' | last | split: '&' | first %}
+    {% elsif youtube_id contains '?' %}{% assign youtube_id = youtube_id | split: '?' | first %}{% endif %}
+    {% capture video_src %}https://www.youtube-nocookie.com/embed/{{ youtube_id }}?rel=0&modestbranding=1{% endcapture %}
+{% endif %}
+<div class="w-100 text-center">
+    <div class="video-embed">
+        <iframe title="video embed {{ include.title | escape }}" src="{{ video_src | default: include.video }}" allowfullscreen></iframe>
+    </div>
+</div>
