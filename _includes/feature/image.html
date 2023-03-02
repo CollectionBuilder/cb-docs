@@ -1,1 +1,15 @@
-<img class="img-fluid" src="{{ include.img | prepend: '/assets/images/' | absolute_url }}" alt="{{ include.alt | default: 'demo image' }}" width="{{ include.width }}">
+{% comment %}
+    Adds image to content page. If "lazyload: true" is added to the page front matter, the image will lazy load.
+    Options: 
+    - "img" = required, the filename of an image contained in the "assets/images/" folder of this project, or a relative link or full url to an image on the web.
+    - "alt" = required, a description of the content of the image
+    - "width" = optional, a width value to add to the img tag, e.g. "50%"
+    e.g. 
+    {% include feature/image.html img="filename.jpg" alt="description of the image content" %}
+
+{% endcomment %}
+{% capture img_src %}{% if include.img contains "/" %}{{ include.img | relative_url }}{% else %}{{ '/assets/images/' | append: include.img | relative_url }}{% endif %}{% endcapture %}
+{% if page.lazyload == true %}
+<img class="lazyload" alt="{{ include.alt | default: 'demo image' | escape }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" data-src="{{ img_src }}" {% if include.width %}width="{{ include.width }}"{% endif %}>
+{% else %}
+<img class="img-fluid" src="{{ img_src }}" alt="{{ include.alt | default: 'demo image' | escape }}" {% if include.width %}width="{{ include.width }}"{% endif %}>{% endif %}
