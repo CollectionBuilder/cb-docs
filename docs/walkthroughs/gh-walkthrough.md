@@ -21,13 +21,19 @@ This walkthrough provides steps for creating an example digital collection using
 
 - Click the green **Use this template** button and then the **Create a new repository** dropdown option. 
 
+{% include feature/image.html img="use-template.gif" alt="User clicking on use template button and then create a new repository option" %}
+
 - Leave the repository as **Public**. Enter a repository name (Ex: **psychiana-demo**) and click **Create repository from template**.
+
+{% include feature/image.html img="create-repository.gif" alt="User entering a repository name and clicking create repository from template button" %}
 
 ## 3. Prepare your metadata for upload.
 
 - Make a copy of this [**Google Sheet**](https://docs.google.com/spreadsheets/d/1x48Te3duPAxh53foEihQVKTfCKUjaCCbH7TrMMd_yU4/copy) of demo metadata. 
 
 - Download the spreadsheet as a .csv file by clicking **File** → **Download** → **Comma Separated Values (.csv)**
+
+{% include feature/image.html img="download-metadata.gif" alt="User downloading the Google Sheet as a CSV file" %}
 
 - Locate the file on your computer (probably in the Downloads folder). Without opening the file, rename it using all lowercase letters, no spaces, and no special characters (Ex: **psychiana-demo.csv**)
 
@@ -36,6 +42,8 @@ This walkthrough provides steps for creating an example digital collection using
 - On the homepage of your repository on GitHub.com, click on the **"_data"** folder. 
 
 - Then click the **Add file** button and select **Upload files**. 
+
+{% include feature/image.html img="upload-metadata.gif" alt="User clicking on add file button and then upload files" %}
 
 - Click **Choose your files**, navigate to the location of your metadata CSV (probably in your Downloads folder), and select the file. Press Enter to begin the upload.
 
@@ -63,6 +71,8 @@ If you want to learn about creating, updating, and uploading your own metadata, 
 
 - Click on the edit button (the pencil icon) to edit the file. 
 
+{% include feature/image.html img="edit-file.gif" alt="User clicking on pencil icon to edit the file" %}
+
 - Under the **SITE SETTINGS** section, replace the `title` placeholder text with a title of your choice. 
 
 For example:
@@ -87,11 +97,21 @@ metadata: psychiana-demo
 
 - On your repository homepage, click the **Settings** tab in the top right and then click **Pages** in the left side menu. 
 
+{% include feature/image.html img="GHpages.gif" alt="User clicking on Settings and then Pages" %}
+
 - Under **Source** leave the dropdown option as **Deploy from a branch**. 
 
 - Use the dropdown to change from **“none”** to **“main”** (leave the folder option as **“/root”**). Then click the **Save** button.
 
-It will take a few minutes for your site to go live. After waiting a bit, refresh the page. If the build is successful, an alert will appear providing the URL to your live site. The URL will follow the pattern: **https://username.github.io/repository-name**
+{% include feature/image.html img="generate-site.gif" alt="User generating the GitHub pages site" %}
+
+It will take a few minutes for your site to go live. You will see a message that your site is currently being built.
+
+{% include feature/image.html img="site-build.png" alt="Screenshot text reads 'Your GitHub pages site is currently being built from the main branch.'" %}
+
+After waiting a bit, refresh the page. If the build is successful, an alert will appear providing the URL to your live site. The URL will follow the pattern: **https://username.github.io/repository-name**
+
+{% include feature/image.html img="live-site.png" alt="Screenshot text reads 'Your site is live at https://juliastone0729.github.io/psychiana-demo/.'" %}
 
 You can visit this URL to see changes to your live site. To ensure any changes you commit are complete, look for a _green check mark_ instead of an _orange dot_ in the Code section of your repository’s homepage.
 
