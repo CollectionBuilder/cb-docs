@@ -89,3 +89,13 @@ div.highlighter-rouge {
     height: 100%;
 }
 iframe { border: 0; }
+
+/* img border */ 
+img { 
+    margin: $sp-6 auto;
+}
+.img-border {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    box-shadow: 3px 3px 5px darkgrey;
+}
