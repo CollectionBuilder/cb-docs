@@ -32,7 +32,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 - Make a copy of this [**Google Sheet**](https://docs.google.com/spreadsheets/d/1x48Te3duPAxh53foEihQVKTfCKUjaCCbH7TrMMd_yU4/copy) of demo metadata. 
 
-- Download the spreadsheet as a .csv file by clicking **File** → **Download** → **Comma Separated Values (.csv)**
+- Download the spreadsheet as a CSV file by clicking **File** → **Download** → **Comma Separated Values (.csv)**
 
 {% include feature/image.html img="download-metadata.gif" alt="User downloading the Google Sheet as a CSV file" border=true width="80%" %}
 
@@ -56,7 +56,7 @@ This walkthrough provides steps for creating an example digital collection using
 - Scroll down to the **Commit changes** box, write a short commit message describing what you did (Ex: Add demo metadata), and then click the green **Commit changes** button.
 
 {:.alert .alert-blue}
-If you want to learn about creating, updating, and uploading your own metadata, visit our **Metadata Walkthrough** _(link to Metadata Walkthrough here)_.
+If you want to learn about creating, updating, and uploading your own metadata, visit our [**CollectionBuilder-GH Metadata Documentation**](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/).
 
 ## 5. Upload your objects.
 
