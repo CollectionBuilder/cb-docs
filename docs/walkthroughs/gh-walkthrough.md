@@ -39,7 +39,7 @@ This walkthrough provides steps for creating an example digital collection using
 - Locate the CSV file on your computer (probably in the Downloads folder). 
 
 {:.alert .alert-red}
-**Warning:** Do not open the CSV file to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. Excel cannot correctly export a CSV for use with CollectionBuilder. To learn more, visit our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/uploading/).
+**Warning:** Do not open the CSV file to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. **Excel cannot correctly export a CSV** for use with CollectionBuilder. To learn more, visit our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/uploading/).
 
 - **Without opening the CSV file**, rename it using all lowercase letters, no spaces, and no special characters (Ex: **psychiana-demo.csv**)
 
@@ -135,7 +135,17 @@ For example:
 featured-image: psychiana005
 ```
 
-To view potential featured images and their `objectids`, open the [**Google Sheet**](https://docs.google.com/spreadsheets/d/1x48Te3duPAxh53foEihQVKTfCKUjaCCbH7TrMMd_yU4/copy) again. You can click on the link in the filename column to view the images. 
+- Visit your live site and use the Browse page to view potential featured images. 
+
+{% include feature/image.html img="browse-items.gif" alt="User clicking on browse option in the website navigation bar" border=true width="80%" %}
+
+To find the `objectid` for an image, click on the image and then check the end of the URL of the item page. The URL will include the `objectid` after id=. 
+
+{% include feature/image.html img="find-objectid.gif" alt="User clicking on an item and then highlighting the object ID in the URL" border=true width="80%" %}
+
+For example:
+
+For the URL, https://juliastone0729.github.io/psychiana-demo/item.html?id=**psychiana005**, the `objectid` is **psychiana0005**.
 
 **Tip:** It is best to choose a large horizontal image if possible. 
 
