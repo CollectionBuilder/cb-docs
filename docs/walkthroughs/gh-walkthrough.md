@@ -36,7 +36,12 @@ This walkthrough provides steps for creating an example digital collection using
 
 {% include feature/image.html img="download-metadata.gif" alt="User downloading the Google Sheet as a CSV file" border=true width="80%" %}
 
-- Locate the file on your computer (probably in the Downloads folder). Without opening the file, rename it using all lowercase letters, no spaces, and no special characters (Ex: **psychiana-demo.csv**)
+- Locate the file on your computer (probably in the Downloads folder). 
+
+{:.alert .alert-red}
+**PLEASE NOTE:** Your metadata must be in UTF-8 encoding. **Microsoft Excel cannot correctly export a CSV** for use with CollectionBuilder. Make sure to not open the CSV file to avoid issues with Excel scrambling your UTF-8 encoding.
+
+- **Without opening the CSV file**, rename it using all lowercase letters, no spaces, and no special characters (Ex: **psychiana-demo.csv**)
 
 ## 4. Upload your metadata file.
 
