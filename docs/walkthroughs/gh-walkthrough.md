@@ -39,7 +39,7 @@ This walkthrough provides steps for creating an example digital collection using
 - Locate the file on your computer (probably in the Downloads folder). 
 
 {:.alert .alert-red}
-**PLEASE NOTE:** Your metadata must be in UTF-8 encoding. **Microsoft Excel cannot correctly export a CSV** for use with CollectionBuilder. Make sure to not open the CSV file to avoid issues with Excel scrambling your UTF-8 encoding.
+**Do not open the CSV file** to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. **Excel cannot correctly export a CSV** for use with CollectionBuilder. To learn more, visit our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/uploading/).
 
 - **Without opening the CSV file**, rename it using all lowercase letters, no spaces, and no special characters (Ex: **psychiana-demo.csv**)
 
