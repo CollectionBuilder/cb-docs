@@ -39,7 +39,7 @@ This walkthrough provides steps for creating an example digital collection using
 - Locate the CSV file on your computer (probably in the Downloads folder). 
 
 {:.alert .alert-red}
-**Warning:** Do not open the CSV file to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. **Excel cannot correctly export a CSV** for use with CollectionBuilder. To learn more, visit our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/uploading/).
+**Warning:** Do not open the CSV file to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. **Excel cannot correctly export a CSV** for use with CollectionBuilder.
 
 - **Without opening the CSV file**, rename it using all lowercase letters, no spaces, and no special characters (Ex: **psychiana-demo.csv**)
 
@@ -139,13 +139,13 @@ Visit your live site and use the Browse page to view potential featured images.
 
 {% include feature/image.html img="browse-items.gif" alt="User clicking on browse option in the website navigation bar" border=true width="80%" %}
 
-To find the `objectid` for an image, click on the image and then check the end of the URL of the item page. The URL will include the `objectid` after id=. 
+To find the `objectid` for an image, click on the image title and then check the end of the URL of the item page. The URL will include the `objectid` after **id=**. 
 
 {% include feature/image.html img="find-objectid.gif" alt="User clicking on an item and then highlighting the object ID in the URL" border=true width="80%" %}
 
 For example:
 
-For the URL, [https://juliastone0729.github.io/psychiana-demo/item.html?id=**psychiana005**](https://juliastone0729.github.io/psychiana-demo/item.html?id=psychiana005), the `objectid` is **psychiana0005**.
+For the URL, https://juliastone0729.github.io/psychiana-demo/item.html?id=**psychiana005**, the `objectid` is **psychiana005**.
 
 **Tip:** It is best to choose a large horizontal image if possible. 
 
@@ -161,16 +161,21 @@ For the URL, [https://juliastone0729.github.io/psychiana-demo/item.html?id=**psy
 
 - After you are done editing the About page, write your commit message (Ex: Edit About page) and commit your changes. View your changes by visiting your site’s URL.
 
-## 10. Implement other customization options.
+## 10. Explore potential next steps.
 
-Your collection website is complete! If you want to practice more skills, try exploring other customization options like:
+Your collection website is complete! To implement additional **Customization Options**, your next steps could be:
 
+- [Customizing your theme options](https://collectionbuilder.github.io/cb-docs/docs/theme/)
+- [Configuring your pages](https://collectionbuilder.github.io/cb-docs/docs/customization/)
 - [Adding more pages](https://collectionbuilder.github.io/cb-docs/docs/pages/add_page/)
-- [Including a TimelineJS feature](https://collectionbuilder.github.io/cb-docs/docs/advanced/timelinejs/)
-- [Configuring your theme colors](https://collectionbuilder.github.io/cb-docs/docs/customization/config-theme-colors/)
-- And more!
 
-To build your own custom digital collection website, you can follow these steps again after creating your own metadata file _(link to Metadata Walkthrough here)_.
+If you want to get into more **Advanced Options**, you could explore:
+- [Including a TimelineJS feature](https://collectionbuilder.github.io/cb-docs/docs/advanced/timelinejs/)
+- [Creating new cloud pages](https://collectionbuilder.github.io/cb-docs/docs/advanced/cloudpage/)
+- [And more advanced options!](https://collectionbuilder.github.io/cb-docs/docs/advanced/)
 
 {:.alert .alert-blue}
-Want to create a collection using our CollectionBuilder-CSV Template? Check out our **CB-CSV Walkthrough** _(link to CSV Walkthrough here)_.
+To build your own custom digital collection website, you can follow these steps again after [creating your own metadata file](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/).
+
+<!---{:.alert .alert-blue}
+Want to create a collection using our CollectionBuilder-CSV Template? Check out our **CB-CSV Walkthrough** _(link to CSV Walkthrough here)_.-->
