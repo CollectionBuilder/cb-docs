@@ -135,7 +135,7 @@ For example:
 featured-image: psychiana005
 ```
 
-- Visit your live site and use the Browse page to view potential featured images. 
+Visit your live site and use the Browse page to view potential featured images. 
 
 {% include feature/image.html img="browse-items.gif" alt="User clicking on browse option in the website navigation bar" border=true width="80%" %}
 
@@ -145,7 +145,7 @@ To find the `objectid` for an image, click on the image and then check the end o
 
 For example:
 
-For the URL, https://juliastone0729.github.io/psychiana-demo/item.html?id=**psychiana005**, the `objectid` is **psychiana0005**.
+For the URL, [https://juliastone0729.github.io/psychiana-demo/item.html?id=**psychiana005**](https://juliastone0729.github.io/psychiana-demo/item.html?id=psychiana005), the `objectid` is **psychiana0005**.
 
 **Tip:** It is best to choose a large horizontal image if possible. 
 
