@@ -36,7 +36,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 {% include feature/image.html img="download-metadata.gif" alt="User downloading the Google Sheet as a CSV file" border=true width="80%" %}
 
-- Locate the file on your computer (probably in the Downloads folder). 
+- Locate the CSV file on your computer (probably in the Downloads folder). 
 
 {:.alert .alert-red}
 **Do not open the CSV file** to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. **Excel cannot correctly export a CSV** for use with CollectionBuilder. To learn more, visit our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/uploading/).
@@ -123,7 +123,7 @@ You can visit this URL to see changes to your live site. To ensure any changes y
 
 **Tip:** You may need to refresh the collection website for the changes to display.
 
-## 8. Add a header image.
+## 8. Add a featured image.
 
 - On your repository homepage, click on the **"_data"** folder and then click on the **"theme.yml"** file. 
 
@@ -135,11 +135,11 @@ For example:
 featured-image: psychiana005
 ```
 
-To view potential header images and their `objectids`, open the [**Google Sheet**](https://docs.google.com/spreadsheets/d/1x48Te3duPAxh53foEihQVKTfCKUjaCCbH7TrMMd_yU4/copy) again. You can click on the link in the filename column to view the images. 
+To view potential featured images and their `objectids`, open the [**Google Sheet**](https://docs.google.com/spreadsheets/d/1x48Te3duPAxh53foEihQVKTfCKUjaCCbH7TrMMd_yU4/copy) again. You can click on the link in the filename column to view the images. 
 
 **Tip:** It is best to choose a large horizontal image if possible. 
 
-- After you have updated the featured image, write your commit message (Ex: Add header image) and commit your changes. View your changes by visiting your site’s URL.
+- After you have updated the featured image, write your commit message (Ex: Add featured image) and commit your changes. View your changes by visiting your site’s URL.
 
 ## 9. Edit the About Page
 
