@@ -14,7 +14,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 ## 1. Create a GitHub account.  
 
-- Visit [GitHub](https://www.github.com) and click the **Sign up** button. You do not need a paid account for using CollectionBuilder. After signing up, check your email to verify your account.
+- If you don't have an account, visit [GitHub](https://www.github.com) and click the **Sign up** button. You do not need a paid account for using CollectionBuilder. After signing up, check your email to verify your account.
 
 ## 2. Create a new repository.
 
@@ -24,7 +24,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 {% include feature/image.html img="use-template.gif" alt="User clicking on use template button and then create a new repository option" border=true width="80%" %}
 
-- Leave the repository as **Public**. Enter a repository name (Ex: **psychiana-demo**) and click **Create repository from template**.
+- Leave the repository as **Public**. Enter a repository name (use a lowercase name without spaces or odd characters, e.g. **psychiana-demo**) and click **Create repository from template**.
 
 {% include feature/image.html img="create-repository.gif" alt="User entering a repository name and clicking create repository from template button" border=true width="80%" %}
 
@@ -41,7 +41,7 @@ This walkthrough provides steps for creating an example digital collection using
 {:.alert .alert-red}
 **Warning:** Do not open the CSV file to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. **Excel cannot correctly export a CSV** for use with CollectionBuilder.
 
-- **Without opening the CSV file**, rename it using all lowercase letters, no spaces, and no special characters (Ex: **psychiana-demo.csv**)
+- **Without opening the CSV file**, rename it using all lowercase letters, no spaces, and no special characters (e.g. **psychiana-demo.csv**)
 
 ## 4. Upload your metadata file.
 
@@ -53,7 +53,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 - Click **Choose your files**, navigate to the location of your metadata CSV (probably in your Downloads folder), and select the file. Press Enter to begin the upload.
 
-- Scroll down to the **Commit changes** box, write a short commit message describing what you did (Ex: Add demo metadata), and then click the green **Commit changes** button.
+- Scroll down to the **Commit changes** box, write a short commit message describing what you did (e.g. Add demo metadata), and then click the green **Commit changes** button.
 
 {:.alert .alert-blue}
 If you want to learn about creating, updating, and uploading your own metadata, visit our [**CollectionBuilder-GH Metadata Documentation**](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/).
@@ -69,7 +69,7 @@ If you want to learn about creating, updating, and uploading your own metadata, 
 {:.alert .alert-red}
 **Warning:** Make sure to select all the object files in the demo-objects folder instead of just uploading the demo-objects.zip file.
 
-- Write your commit message (Ex: Add collection objects) and commit your changes.
+- Write your commit message (e.g. Add collection objects) and commit your changes.
 
 ## 6. Configure your site settings.
 
@@ -97,7 +97,7 @@ For example:
 metadata: psychiana-demo
 ``` 
 
-- Write your commit message (Ex: Update site settings) and commit your changes.
+- Write your commit message (e.g. Update site settings) and commit your changes.
 
 ## 7. Generate your site.
 
@@ -149,7 +149,7 @@ For the URL, https://juliastone0729.github.io/psychiana-demo/item.html?id=**psyc
 
 **Tip:** It is best to choose a large horizontal image if possible. 
 
-- After you have updated the featured image, write your commit message (Ex: Add featured image) and commit your changes. View your changes by visiting your site’s URL.
+- After you have updated the featured image, write your commit message (e.g. Add featured image) and commit your changes. View your changes by visiting your site’s URL.
 
 ## 9. Edit the About Page
 
@@ -159,7 +159,7 @@ For the URL, https://juliastone0729.github.io/psychiana-demo/item.html?id=**psyc
 
 - **Optional:** Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html). 
 
-- After you are done editing the About page, write your commit message (Ex: Edit About page) and commit your changes. View your changes by visiting your site’s URL.
+- After you are done editing the About page, write your commit message (e.g. Edit About page) and commit your changes. View your changes by visiting your site’s URL.
 
 ## 10. Explore potential next steps.
 
