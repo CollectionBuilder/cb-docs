@@ -1,7 +1,7 @@
 ---
 title: Repository
 has_children: true
-nav_order: 2
+nav_order: 3
 ---
 
 # Set Up Project Repository

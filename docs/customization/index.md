@@ -1,7 +1,7 @@
 ---
 title: Page Config
 has_children: true
-nav_order: 6
+nav_order: 8
 ---
 
 # Configure and Customize Pages
