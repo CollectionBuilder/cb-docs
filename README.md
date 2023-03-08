@@ -82,6 +82,20 @@ As a div around Markdown content:
 - on a line above the content you want in the alert, add `<div class="alert alert-red" markdown="1">` (modifying the color class as desired)
 - on a line below the markdown content you want in the alert, close the div `</div>`
 
+## Adding Images 
+
+Most content in cb-docs does not include images to keep it simple and sustainable. 
+When we do need to add images, here are some guidelines: 
+
+- ensure the image files are optimized for the web (use [Squoosh app](https://squoosh.app/) to optimize)
+- add image files to the "assets/images/" folder
+- img tags have `max-width: 100%` applied by default, so you can include the images directly using markdown if desired, e.g. `![good alt text]({{ '/assets/images/example.jpg' | relative_url }})`
+- alternatively, if necessary use the include feature/image.html, e.g. `{% include feature/image.html img="filename.jpg" alt="description of the image content" width="50%" %}`
+- if the page includes multiple images, you can lazy load by adding `lazyload: true` to the front matter of the page and using the feature/image.html include to add the images
+- the `img-border` class can be used to add styling similar to Alerts (or add the option `border=true` to the feature/image.html include).
+
+To add a video embed from YouTube or Vimeo, use the include feature/video-embed.html e.g. `{% include feature/video-embed.html video="https://www.youtube.com/watch?v=ZPOKRpxGJqg" title="A quick history of CollectionBuilder" %}`.
+
 ## Collections
 
 CB-docs uses two Jekyll "collections" to generate special content pages, "_glossary" and "_change-log". 
