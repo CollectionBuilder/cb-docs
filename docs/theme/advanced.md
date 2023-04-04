@@ -140,7 +140,7 @@ font-cdn: <link href="https://fonts.googleapis.com/css?family=Roboto&display=swa
 
 ## Theme Icons
 
-CB uses [Boostrap Icons](https://icons.getbootstrap.com/) SVGs to represent some items and nav elements. 
+CB uses [Bootstrap Icons](https://icons.getbootstrap.com/){:target="_blank" rel="noopener"} SVGs to represent some items and nav elements. 
 The default icons used can be configured in the Theme Icons section. 
 
 The templates' default visualizations use "icon-image", "icon-audio", "icon-video", "icon-pdf", and "icon-default" as thumbnails for items that don't have an image available and as representations of the general item type / format. 
