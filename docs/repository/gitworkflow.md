@@ -34,7 +34,7 @@ These are the basic Git terms you will be using:
 
 **Learning Git concepts can be challenging.**
 We know that.
-All we can say it is gets easier with repetition (even if it still stumps you sometimes)!
+All we can say is that it gets easier with repetition (even if it still stumps you sometimes)!
 
 These docs don't provide a full Git and GitHub tutorial, but we do try to cover enough to make sense of getting started with a CollectionBuilder project.
 The next page of the docs provides an example walk through for creating your first commits--you will be repeating this process over and over when setting up your site, hopefully reinforcing the basics.

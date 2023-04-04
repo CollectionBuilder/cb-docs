@@ -16,6 +16,7 @@ There are also a couple ways to open your repository using GitHub Desktop and Vi
 1. Open the GitHub Desktop application. 
 2. In the top left of the application, locate and click the "Current Repository" dropdown, and select the repository you'd like to open.
 3. In the top menu, locate and click on "Repository," and select the option, "Open in Visual Studio Code".
+    - Alternatively, in the box that says "Open the repository in your external editor," you can click the button that says "Open in Visual Studio Code."
 
 ## Use Visual Studio Code to Open Your Repository
 1. Open the Visual Studio Code application.
