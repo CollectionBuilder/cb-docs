@@ -43,4 +43,4 @@ We encourage you to learn more!
 Check out these resources: 
 
 - [GitHub Guides](https://guides.github.com/){:target="_blank" rel="noopener"}, see [Hello World](https://guides.github.com/activities/hello-world/){:target="_blank" rel="noopener"} for an introduction.
-- [GitHub Learning Lab](https://lab.github.com/){:target="_blank" rel="noopener"} for in depth lessons.
+- [GitHub Learning Lab](https://skills.github.com/){:target="_blank" rel="noopener"} for in depth lessons.
