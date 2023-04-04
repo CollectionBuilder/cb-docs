@@ -7,7 +7,7 @@ nav_order: 7
 # Theme Color Configuration (config-theme-colors.csv)
 
 For simplicity, CollectionBuilder uses pre-compiled Bootstrap CSS.
-However, to make basic theming possible, we have added some code in "_sass/_theme-colors.scss" based on Bootstrap Sass to generate custom color CCS for btn-, btn-outline-, text-, and bg- classes. 
+However, to make basic theming possible, we have added some code in "_sass/_theme-colors.scss" based on [Bootstrap Sass](https://getbootstrap.com/docs/5.0/customize/sass/#colors) to generate custom color CSS for btn-, btn-outline-, text-, and bg- classes. 
 The custom classes can override existing Bootstrap theme colors or create new color classes. 
 
 By default, these options are not used.

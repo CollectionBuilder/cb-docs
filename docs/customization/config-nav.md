@@ -38,7 +38,7 @@ Each row in the CSV will become one element in the nav bar, either a direct link
 **Important notes:**
 
 - If a page isn't listed in config-nav, it won't be directly discoverable! This is the fastest way to remove a page from your collection (rather than deleting the stub file in "pages"). 
-- The same is true if you create a new page--don't forget to add it to the nav! See see the [Add Page]({{ '/docs/pages/add_page/' | relative_url }}) for more details.
+- The same is true if you create a new page--don't forget to add it to the nav! See the [Add Page]({{ '/docs/pages/add_page/' | relative_url }}) for more details.
 - The data downloads displayed on the "Data" page, on the home page "Collections as Data" box, and in the data markup schemas is based on which pages are present in "config-nav.csv" `stub` field. If `stub` contains "subject", "location", "map", and/or "timeline" the corresponding data formats will be displayed for download and included in the markup. See "docs/data.md" in your repository for more details.
 
 </div>
