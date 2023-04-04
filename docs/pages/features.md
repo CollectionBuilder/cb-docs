@@ -12,7 +12,7 @@ Each of these [Liquid includes](https://jekyllrb.com/docs/includes/) provide a s
 You can take a look at our demo collection's [About page](https://collectionbuilder.github.io/collectionbuilder-gh/about.html){:target="_blank" rel="noopener"} to see them in action. 
 
 {:.alert .alert-green}
-Want some example code? Check out the [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"} on our CollectionBuilder-gh demo site. The examples on this page will work in any type of CollectionBuilder template.
+**Want some example code?** Check out the [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"} on our CollectionBuilder-gh demo site. The examples on this page will work in any type of CollectionBuilder template.
 
 All feature includes can be found in the "_includes/feature" folder in your project repository.
 Each include file has an extensive comment section at the top with details about how to use it and an example use of the code (Liquid comments are between the tags `{% raw %}{% comment %} {% endcomment %}{% endraw %}`).
@@ -25,13 +25,14 @@ All include commands:
 - *may* provide option values that are used by the include, e.g. `objectid="demo_001"`
 - end with the closing Liquid tag, `{% raw %}%}{% endraw %}`
 
+{:.alert .alert-red}
+**Note:** Make sure to use the objectid and not the filename for include commands.
+
 For example, you can use the "feature/image.html" include to add an collection image to the page like:
 
 ```
 {% raw %}{% include feature/image.html objectid="demo_001" %}{% endraw %}
 ```
-{:.alert .alert-red}
-**Note:** Make sure to use the objectid and not the filename for include commands.
 
 There are two general types of Feature Includes, ones that add collection media and ones that add Bootstrap components. Feature includes options are listed below with some examples and notes, but be sure to check the files in your "_includes/feature/" folder for full details.
 
