@@ -46,12 +46,12 @@ We can commit and push via GitHub Desktop, VS Code Source Control pane, or Git o
 
 ### Commit & Push with GitHub Desktop
 
-1. Switch over to GitHub Desktop app.
+1. Switch over to the GitHub Desktop app.
 2. The left hand column of the interface will list the "Changes", including any files that you edited. 
-3. Select the checkboxes next to the files you would like to commit (this is "git add").
-4. Below the column that lists your changes, you'll see a text-entry box labeled "Summary (required)." Click in the box.
+3. Select the checkboxes next to the files you would like to commit (this is "Git Add").
+4. Below the column that lists your changes, you'll see a text-entry box labeled "Update README.md." Click in the box.
 5. Type your "commit message" into the box (in this case something like "Updated README title for new project").
-6. When you've finished your commit message, click on the blue button toward the bottom of the column that says "Commit to main."
+6. When you've finished your commit message, click on the blue button that says "Commit to main."
 
 The "Changes" disappear, and you've just made a Git Commit!
 
