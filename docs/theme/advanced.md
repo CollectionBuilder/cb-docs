@@ -116,7 +116,7 @@ link-color: "#17a2b8"
 ```
 
 {:.alert .alert-green}
-**Pro Tip:** To choose a link or text color, use a valid HTML color code, usually given in hex code notation (For example, check out this [color picker](https://www.w3schools.com/colors/colors_picker.asp)).
+**Pro Tip:** To choose a link or text color, use a valid HTML color code, usually given in hex code notation (For example, check out this [color picker](https://www.w3schools.com/colors/colors_picker.asp){:target="_blank" rel="noopener"}).
 
 ### base-font-family: 
 
@@ -149,7 +149,7 @@ The "icon-back-to-top" is used for the scroll to top button that appears in the 
 ### icons: 
 
 - The `icons` key has a series of keys nested under it (`icon-image`, `icon-audio`, `icon-video`, `icon-pdf`, `icon-default`, and `icon-back-to-top`). Each of these sub-keys represents an icon used in the default template. The values must match an icons SVG name in "assets/lib/icons/". 
-- The icons in "assets/lib/icons/" are a copy of [Boostrap Icons](https://icons.getbootstrap.com/), so you can use their site to visually search and browse the icons. 
+- The icons in "assets/lib/icons/" are a copy of [Bootstrap Icons](https://icons.getbootstrap.com/){:target="_blank" rel="noopener"}, so you can use their site to visually search and browse the icons. 
 - If you set an icon value to something that doesn't exist, it will be skipped. Nothing will be displayed in the locations where it is used in the template. You *might* not get any error indicating this!
 - To customize the icons, uncomment the entire `icons` object in "_theme.yml", including all the default icons. You should include values for *all* the default icons, even if you are only customizing one. 
 - Example:

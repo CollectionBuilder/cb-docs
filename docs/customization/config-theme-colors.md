@@ -7,7 +7,7 @@ nav_order: 7
 # Theme Color Configuration (config-theme-colors.csv)
 
 For simplicity, CollectionBuilder uses pre-compiled Bootstrap CSS.
-However, to make basic theming possible, we have added some code in "_sass/_theme-colors.scss" based on [Bootstrap Sass](https://getbootstrap.com/docs/5.0/customize/sass/#colors) to generate custom color CSS for btn-, btn-outline-, text-, and bg- classes. 
+However, to make basic theming possible, we have added some code in "_sass/_theme-colors.scss" based on [Bootstrap Sass](https://getbootstrap.com/docs/5.0/customize/sass/#colors){:target="_blank" rel="noopener"} to generate custom color CSS for btn-, btn-outline-, text-, and bg- classes. 
 The custom classes can override existing Bootstrap theme colors or create new color classes. 
 
 By default, these options are not used.
@@ -17,7 +17,7 @@ The columns values are described below, or see an [example](#example).
 
 {:.alert .alert-red}
 *Warning:* If you provide invalid values in the "color" column, you will may end up with SASS errors when building the site!
-It is best to use HTML [hex color notation](https://www.w3schools.com/colors/colors_picker.asp).
+It is best to use HTML [hex color notation](https://www.w3schools.com/colors/colors_picker.asp){:target="_blank" rel="noopener"}.
 
 ## color_class: 
 
@@ -31,7 +31,7 @@ It is best to use HTML [hex color notation](https://www.w3schools.com/colors/col
 
 ## color:
 
-- A valid HTML color code, usually given in hex code notation (for example, check this [color picker](https://www.w3schools.com/colors/colors_picker.asp)).
+- A valid HTML color code, usually given in hex code notation (for example, check this [color picker](https://www.w3schools.com/colors/colors_picker.asp){:target="_blank" rel="noopener"}).
 - Should never contain characters like `; ! @ $ % ^ * { }` as values that are invalid CSS may cause SASS errors that prevent Jekyll building!
 - Example --> `#4232a8`
 
