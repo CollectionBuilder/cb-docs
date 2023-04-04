@@ -115,6 +115,9 @@ text-color: "#191919"
 link-color: "#17a2b8"
 ```
 
+{:.alert .alert-green}
+**Pro Tip:** To choose a link or text color, use a valid HTML color code, usually given in hex code notation (For example, check out this [color picker](https://www.w3schools.com/colors/colors_picker.asp)).
+
 ### base-font-family: 
 
 - Changes the font family
