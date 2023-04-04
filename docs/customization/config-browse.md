@@ -32,10 +32,12 @@ The columns are described below, and an [example](#example) is provided for your
 
 ### hidden: 
 - Determines whether this field is hidden.
+    - *Options*: `true` or leave blank
     - Useful when you don't want a metadata field to be visibly present on Browse page cards, but still want to filter for that field.
 
 ### sort_name: 
 - Determines if the field will be used as an option to sort cards on the browse page via the dropdown menu to the right of the search box. This option also determines the label used in that dropdown menu for the field. 
+    - *Options*: `true` or leave blank
 
 ------
 
