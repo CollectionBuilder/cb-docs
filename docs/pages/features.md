@@ -26,7 +26,7 @@ All include commands:
 - end with the closing Liquid tag, `{% raw %}%}{% endraw %}`
 
 {:.alert .alert-red}
-**Note:** Make sure to use the objectid and not the filename for include commands.
+**Note:** Make sure to use the `objectid` and not the `filename` for include commands.
 
 For example, you can use the "feature/image.html" include to add an collection image to the page like:
 
