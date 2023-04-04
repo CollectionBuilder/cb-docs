@@ -7,18 +7,18 @@ lazyload: true
 
 # CollectionBuilder-GH Walkthrough
 
-This walkthrough provides steps for creating an example digital collection using demo metadata from the University of Idaho's [Psychiana Digital Collection](https://www.lib.uidaho.edu/digital/psychiana/), the **CollectionBuilder-GH Template**, and **GitHub Pages**.
+This walkthrough provides steps for creating an example digital collection using demo metadata from the University of Idaho's [Psychiana Digital Collection](https://www.lib.uidaho.edu/digital/psychiana/){:target="_blank" rel="noopener"}, the **CollectionBuilder-GH Template**, and **GitHub Pages**.
 
 {:.alert .alert-yellow}
 **Note:** You will not need to install any software on your computer for this walkthrough, but you will need to create a free GitHub account.
 
 ## 1. Create a GitHub account.  
 
-- If you don't have an account, visit [GitHub](https://www.github.com) and click the **Sign up** button. You do not need a paid account for using CollectionBuilder. After signing up, check your email to verify your account.
+- If you don't have an account, visit [GitHub](https://www.github.com){:target="_blank" rel="noopener"} and click the **Sign up** button. You do not need a paid account for using CollectionBuilder. After signing up, check your email to verify your account.
 
 ## 2. Create a new repository.
 
-- Log in to your GitHub account and visit the [**collectionbuilder-gh repository page**](https://github.com/CollectionBuilder/collectionbuilder-gh). 
+- Log in to your GitHub account and visit the [**collectionbuilder-gh repository page**](https://github.com/CollectionBuilder/collectionbuilder-gh){:target="_blank" rel="noopener"}. 
 
 - Click the green **Use this template** button and then the **Create a new repository** dropdown option. 
 
@@ -60,7 +60,7 @@ If you want to learn about creating, updating, and uploading your own metadata, 
 
 ## 5. Upload your objects.
 
-- Download the [**demo-objects.zip**](https://www.lib.uidaho.edu/collectionbuilder/demo-objects.zip) file (includes image files, PDFs, and mp3s). 
+- Download the [**demo-objects.zip**](https://www.lib.uidaho.edu/collectionbuilder/demo-objects.zip){:target="_blank" rel="noopener"} file (includes image files, PDFs, and mp3s). 
 
 - Double click on this file to unzip it.
 
@@ -155,9 +155,9 @@ For the URL, https://juliastone0729.github.io/psychiana-demo/item.html?id=**psyc
 
 - On your repository homepage, click on the **"pages"** folder and then on the **"about.md"** file. 
 
-- Write some text on this page using [Markdown](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown). 
+- Write some text on this page using [Markdown](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown){:target="_blank" rel="noopener"}. 
 
-- **Optional:** Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html). 
+- **Optional:** Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"}. 
 
 - After you are done editing the About page, write your commit message (e.g. Edit About page) and commit your changes. View your changes by visiting your site’s URL.
 
