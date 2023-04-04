@@ -23,10 +23,10 @@ It is best to use HTML [hex color notation](https://www.w3schools.com/colors/col
 
 - The name you'll use to designate the color (i.e. the part after the `-` in `btn-primary`).
 - This must be a string with no spaces or weird characters. Typically we use only letters and `-` in class names.
-- If it matches an existing Bootstrap color class name, your `color` value will over ride the Bootstrap version. 
+- If it matches an existing Bootstrap color class name, your `color` value will override the Bootstrap version. 
 - If your `color_class` is unique, you will be creating a new set of color utility classes available to use on your site.
 - Your `color_class` will be appended to the Bootstrap prefixes btn-, btn-outline-, text-, and bg- to generate new classes.
-- Example over riding Bootstrap color --> `primary` 
+- Example overriding Bootstrap color --> `primary` 
 - Example new class --> `special-gold`
 
 ## color:
