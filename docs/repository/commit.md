@@ -90,7 +90,7 @@ When you are working on multiple computers or collaborating with others, be sure
 
 ### Commit & Push on Command Line
 
-Using Git on the command line can be fairly straight forward, or can be mixed with using the GUI tools integrated in your text editor to form an efficient workflow. 
+Using Git on the command line can be fairly straightforward, or can be mixed with using the GUI tools integrated in your text editor to form an efficient workflow. 
 Type the commands into a terminal window opened in the root of your repository folder and press "Enter" to execute them.
 
 To make a commit: 
@@ -104,7 +104,7 @@ Once you have made one or more commits, use the command `git push` to upload you
 Using the command `git status` at any time will give you useful information about the state of the repository along with tips about what to do next (messages provided by Git on the command line are usually quite helpful!). 
 
 When you are working on multiple computers or collaborating with others, be sure to Pull changes from GitHub before you start working and before you push, using the command `git pull`.
-Git will output detailed information about any changes and update your local history and files.
+Git will output detailed information about any changes and update your local history and files. If there are no changes to pull, the terminal will say "Already up to date."
 This feedback can be helpful for understanding recent updates, providing more reference information than the GUI methods of Pull.
 
-*Tip:* while typing Git commands and filenames, you can use "tab complete"--start typing the first few letters of the name then hit `Tab`, if something matches it will automatically finish typing the command or filename.
+*Tip:* While typing Git commands and filenames, you can use "tab complete"--start typing the first few letters of the name then hit `Tab`, if something matches it will automatically finish typing the command or filename.
