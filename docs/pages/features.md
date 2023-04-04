@@ -30,6 +30,8 @@ For example, you can use the "feature/image.html" include to add an collection i
 ```
 {% raw %}{% include feature/image.html objectid="demo_001" %}{% endraw %}
 ```
+{:.alert .alert-red}
+**Note:** Make sure to use the objectid and not the filename for include commands.
 
 There are two general types of Feature Includes, ones that add collection media and ones that add Bootstrap components. Feature includes options are listed below with some examples and notes, but be sure to check the files in your "_includes/feature/" folder for full details.
 
