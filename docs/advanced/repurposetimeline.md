@@ -35,7 +35,7 @@ You'll need to make one more change to ensure that your new field (in our case, 
 
 1. To do this, you'll need to search the "timeline.html" file for the Liquid filter "where_exp". Use `Ctrl + F` (PC) or `Command + F` (Mac) to open a find and replace textbox in Visual Studio Code. The line you're looking for should look like this:
 
-`{%- assign inYear = items | where_exp: 'item', 'item.date contains year' -%}`
+{% raw %}`{%- assign inYear = items | where_exp: 'item', 'item.date contains year' -%}`{% endraw %}
 
 2. Once you've found "where_exp", change the part after "where_exp" so "item.date contains year" becomes "item.depth contains year". The end result will be: 
 
