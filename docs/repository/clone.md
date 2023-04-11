@@ -26,7 +26,7 @@ Each of these options is briefly described below--you only need to choose one!
 ## Clone with GitHub Desktop
 
 1. On your new repository's home page, click on the green button labeled "Code" (appears on right above the code area).
-2. In the box that pops up, click on the button labeled "Open in Desktop." This action will automatically open GitHub Desktop on your computer.
+2. In the box that pops up, click on the button labeled "Open with GitHub Desktop." This action will automatically open GitHub Desktop on your computer.
 3. GitHub Desktop will ask you to confirm the path of the repository you are cloning to your computer. In most cases, the suggested path is fine to use so you can just click on the blue "Clone" button.
 
 Once you click the "Clone" button, GitHub Desktop will create a new folder matching your repository name and download the repository from GitHub.
