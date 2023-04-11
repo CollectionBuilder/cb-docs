@@ -33,11 +33,11 @@ You can refer to the depth [visualization](https://www.lib.uidaho.edu/digital/wa
 
 You'll need to make one more change to ensure that your new field (in our case, `depth`) can generate the visualization. 
 
-1. To do this, you'll need to search the "timeline.html" file for the Liquid filter "where_exp". Use `Ctrl + F` (PC) or `Command + F` (Mac) to open a find and replace textbox in Visual Studio Code. The line you're looking for should look like this:
+- To do this, you'll need to search the "timeline.html" file for the Liquid filter "where_exp". Use `Ctrl + F` (PC) or `Command + F` (Mac) to open a find and replace textbox in Visual Studio Code. The line you're looking for should look like this:
 
 {% raw %}`{%- assign inYear = items | where_exp: 'item', 'item.date contains year' -%}`{% endraw %}
 
-2. Once you've found "where_exp", change the part after "where_exp" so "item.date contains year" becomes "item.depth contains year". The end result will be: 
+- Once you've found "where_exp", change the part after "where_exp" so "item.date contains year" becomes "item.depth contains year". The end result will be: 
 
 {% raw %}`{%- assign inYear = items | where_exp: 'item', 'item.depth contains year' -%}`{% endraw %}
 
@@ -68,11 +68,11 @@ permalink: /depth.html
 You can also visualize a metadata field with a "text" datatype, instead of an "integer" datatype.
 You'll need to follow the [instructions above](#change-the-field-generating-the-timeline) to switch out `date` for your chosen field, then follow the steps below.
 
-1. Find the following line of code in the "timeline.html" file:
+- Find the following line of code in the "timeline.html" file:
 
 {% raw %} `{%- assign uniqueYears = clean-years | remove: " " | split: ";" | uniq | sort -%}` {% endraw %}
 
-2. Remove this portion of the code: `| remove: " "`, so that the line now looks like this:
+- Remove this portion of the code: `| remove: " "`, so that the line now looks like this:
 
 {% raw %}`{%- assign uniqueYears = clean-years | split: ";" | uniq | sort -%}`{% endraw %}
 
