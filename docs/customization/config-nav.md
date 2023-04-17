@@ -60,6 +60,8 @@ About the Collection,/about.html,About
 CollectionBuilder,/tech.html,About
 ```
 
+{% include feature/image.html img="example-nav-bar.png" alt="Example navigation bar including Home, Browse, Subjects, Map, Timeline, Data, and About with two drop down options for About the Collection and CollectionBuilder" border=true width="80%" %}
+
 ### Some Explaining
 
 The above CSV will create 7 links in the nav bar for the referenced pages. 
