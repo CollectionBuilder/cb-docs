@@ -48,7 +48,7 @@ Each row in the CSV will become one element in the nav bar, either a direct link
 ## Example
 
 ```
-display_text,stub,dropdown_parent
+display_name,stub,dropdown_parent
 Home,/,
 Browse,/browse.html,
 Subjects,/subjects.html,
