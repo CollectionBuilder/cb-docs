@@ -60,12 +60,13 @@ About the Collection,/about.html,About
 CollectionBuilder,/tech.html,About
 ```
 
-{% include feature/image.html img="example-nav-bar.png" alt="Example navigation bar including Home, Browse, Subjects, Map, Timeline, Data, and About with two drop down options for About the Collection and CollectionBuilder" border=true width="80%" %}
-
 ### Some Explaining
 
-The above CSV will create 7 links in the nav bar for the referenced pages. 
-These same nav items will also automatically appear in the footer. 
+The above CSV will create seven links in the top nav bar for the referenced pages. These same nav items will also automatically appear in the footer. 
+
+See a screenshot of this example nav bar below:
+
+{% include feature/image.html img="example-nav-bar.png" alt="Example navigation bar including Home, Browse, Subjects, Map, Timeline, Data, and About with two drop down options for About the Collection and CollectionBuilder" border=true width="80%" %}
 
 You might have noticed that the Locations Page has been deleted from this example, so it won't show up in the nav bar. 
 If you want to add it back in, you'll just need to add a line after the `Subjects,/subjects.html,` line that reads: `Locations,/locations.html,`
