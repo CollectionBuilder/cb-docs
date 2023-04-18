@@ -69,6 +69,8 @@ In GitHub Desktop, click on the button in the top right labeled "Fetch origin."
 After the Fetch, if there are new changes available, the button will change to "Pull origin."
 Click on the button to Push the changes, which will update the files in your local repository.
 
+{% include feature/image.html img="fetch-pull-gh-desktop.gif" alt="GitHub Desktop user clicking on fetch origin button and then pull origin button" border=true width="80%" %}
+
 ### Commit & Push on VS Code
 
 VS Code has basic GUI support for Git commands built in, which is convenient so you don't have to switch out of your editor.
