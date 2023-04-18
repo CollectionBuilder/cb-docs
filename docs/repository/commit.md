@@ -53,10 +53,14 @@ We can commit and push via GitHub Desktop, VS Code Source Control pane, or Git o
 5. Type your "commit message" into the box (in this case something like "Updated README title for new project").
 6. When you've finished your commit message, click on the blue button that says "Commit to main."
 
+{% include feature/image.html img="commit-gh-desktop.gif" alt="GitHub Desktop user entering a commit message and clicking on the Commit to main button" border=true width="80%" %}
+
 The "Changes" disappear, and you've just made a Git Commit!
 
 Once you have made one or more commits, the button on the top right side of the GitHub Desktop window will say "Push origin."
 Click the button to push, sending your changes up to GitHub.
+
+{% include feature/image.html img="push-origin-gh-desktop.gif" alt="GitHub Desktop user clicking on the push origin option" border=true width="80%" %}
 
 If you want to check if your commit went through, click GitHub Desktop's "Repository" menu and select "View on GitHub" to open the repository in your web browser. The commit should show up at the top section of the Code tab.
 
