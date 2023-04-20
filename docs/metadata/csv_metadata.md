@@ -55,17 +55,14 @@ The `display_template` field enables a great deal of flexibility and customizati
     - `panorama`: a 360 degree image. Item pages will use the Javascript based panorama viewer, [Panellum](https://pannellum.org/) to display the image in a 360 degree view.
     - `record`: metadata only record.
     - `item`: generic fallback item page, displays image or icon depending on "image_thumb"
-    - `compound_object`: a record for a object that includes multiple file instances that are described/managed separately in the metadata. Compound objects use their own set of conventions, see [below for more details](#compound-objects-requirements). 
-    - `multiple`: a record for a object that includes multiple images (such as a postcard) that are listed separately in the metadata. Multiples use their own set of conventions, see [below for more details](#compound-objects-requirements). 
+    - `compound_object`: a record for a object that includes multiple file instances that are described/managed separately in the metadata. Compound objects use their own set of conventions, see [below for more details](#compound-objects-quick-overview). 
+    - `multiple`: a record for a object that includes multiple images (such as a postcard) that are listed separately in the metadata. Multiples use their own set of conventions, see [below for more details](#compound-objects-quick-overview). 
 
 - See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item_pages.md) in your CollectionBuilder-CSV project repository for more details.
 
 ####  Compound Objects Quick Overview
 
-{:.alert .alert-blue }
-For more on compound objects, check out [our section on Compound Objects]({{ '/docs/objects/compound-objects/' | relative_url }}) for extensive details.  
-
-To enable compound objects in CollectionBuilder, the following conventions must be followed:
+To enable the "compound_object" or "multiple" display template in CollectionBuilder, the following conventions must be followed:
 
 - A `parentid` field must be present in your metadata spreadsheet/csv. 
 - A parent metadata record must be created for each compund object that has a display template of either `compound_object` or `multiple`. 
@@ -74,9 +71,12 @@ To enable compound objects in CollectionBuilder, the following conventions must 
 - The parent metadata record **should have an objectid but no parentid**
 - Each child record **must have an objectid AND a parentid**
 - Each child record's `parentid` value must match the parent metadata record's `objectid` 
-    - e.g. If the parent's objectid is example002, then all children for have "example002" in their parentid field
+    - e.g. If the parent's objectid is example002, then all children should have "example002" in their parentid field
 
-Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how this might look in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site](https://www.lib.uidaho.edu/collectionbuilder/collectionbuilder-csv-demo/) to see how this looks in operation. 
+Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how this might look in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site](https://compound-1lqv.onrender.com/) to see how this looks in operation. 
+
+{:.alert .alert-blue }
+For more on compound objects, check out [our section on Compound Objects]({{ '/docs/objects/compound-objects/' | relative_url }}) for extensive details.  
 
 
 ### Object Location Fields: 
