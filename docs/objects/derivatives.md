@@ -42,11 +42,6 @@ For example, if you have a collection object, "example_document1.pdf", after run
 **Note**: You do not need to create the "objects/small/" and "objects/thumbs/" folders manually.
 The Rake task will do this for you!
 
-{:.alert .alert-yellow}
-Are you creating your derivatives manually instead of using the Rake task?
-We recommend using "small/" and "thumbs/" directories for organization purposes, but it's not required.
-Just remember to put the [correct path]({{ '/docs/metadata/csv_metadata/#object-detail-fields-strongly-suggested' | relative_url }}) to your derivatives in each object's metadata record.
-
 ---
 
 ## Generate Derivatives Rake Task
@@ -55,11 +50,12 @@ All these details sound pretty overwhelming--luckily this prep work can be autom
 [Rake](https://github.com/ruby/rake) is a automation tool written in Ruby. 
 It is a standard part of all Ruby installs, so if you are using Jekyll, you have it installed already.
 
-CB-CSV's "generate_derivatives" Rake task automates creating a small and thumb image from all images and PDFs contained within the "objects/" directory in your project repository. 
+CB-CSV's "generate_derivatives" Rake task automates creating a small and thumb image from all images and PDFs contained within the "objects/" directory in your project repository.
+On Mac and Linux it will also optimize the image files.
 It outputs the derivatives to "objects/small/" and "objects/thumbs/" following the naming convention defined above.
 
 {:.alert .alert-yellow}
-**Important!** Before using the `Rake generate_derivatives` command, you will need to [install ImageMagick and Ghostscript]({{ '/docs/software/optional/#imagemagick-and-ghostscript' | relative_url }}) on your local machine.
+**Important!** Before using the `rake generate_derivatives` command, you will need to [install ImageMagick and Ghostscript]({{ '/docs/software/optional/#imagemagick-and-ghostscript' | relative_url }}) on your local machine.
 
 Once the required software is installed, follow these steps to generate derivative images:
 
@@ -75,11 +71,6 @@ Once the "generate_derivatives" Rake task has processed your files, you can opti
 If you do, update your [object location metadata fields]({{ '/docs/objects/csv-objects/#object-location-metadata-fields' | relative_url }}) to point at the external location!
 
 The "generate_derivatives" command can be further customized with several options if desired--check "docs/rake-tasks.md" in your CB-CSV repository for details.
-
-{:.alert .alert-info}
-*Tip:* on Linux if you install ImageMagick from a repository, you will probably have "legacy" ImageMagick 6.
-To avoid errors, you will need to give an additional configuration option to change the ImageMagick command:
-`rake generate_derivatives[,,,,convert]`
 
 {:.alert .alert-blue}
 Questions about hosting your objects? See [Object Deployment]({{ '/docs/objects/csv-objects/#object-deployment' | relative_url }}) for CollectionBuilder-CSV.

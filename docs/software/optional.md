@@ -43,9 +43,6 @@ On Linux, use your distro's repositories to install imagemagick and ghostscript 
 
 - On Ubuntu: `sudo apt install imagemagick ghostscript`
 
-*Tip:* on Linux if you install ImageMagick from a repository, you will probably have "legacy" ImageMagick 6.
-Version 7+ use the command `magick`, "legacy" version 6 uses `convert`.
-To avoid errors using the CollectionBuilder Rake task "generate_derivatives", you will need to give an additional configuration option to change the ImageMagick command:
-`rake generate_derivatives[,,,,convert]`
-
-If you want to avoid this (but then have to manually set up and maintain your installation), you can get a binary release from [ImageMagick download page](https://imagemagick.org/script/download.php).
+*Tip:* on Linux if you install ImageMagick from a repository, you will probably have "legacy" ImageMagick 6 which has slightly different commands then the current version 7.
+Our Rake task will automatically handle the different versions.
+Alternatively, if you want to run the most up to date Magick (but then have to manually set up and maintain your installation), you can get a binary release from [ImageMagick download page](https://imagemagick.org/script/download.php).
