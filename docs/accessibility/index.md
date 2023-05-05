@@ -16,6 +16,10 @@ The relative simplicity of CollectionBuilder's static web approach and semantic 
 
 If you encounter any issues, please don't hesitate to [contact us]({{ '/#how-to-get-in-touch' | relative_url }})!
 
+*This section is a work in progress.*
+We hope to learn from others and welcome contributions of all kinds, from an email to a pull request.
+{:.alert .alert-blue}
+
 ## Software and Platforms
 
 A variety of platforms and tools are part of the typical process of creating a CollectionBuilder project.
