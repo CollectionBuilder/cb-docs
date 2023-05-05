@@ -34,6 +34,17 @@ Please keep in mind that none of these platforms are requirements for using Coll
 The templates and projects themselves are plain text files that could be edited with a variety of tools suited to your needs and workflows.
 If you have tips and suggestions, please share with the community!
 
+## Third-party Libraries 
+
+CollectionBuilder templates use several libraries for adding features, functionality, and styles (found in "assets/lib" folder). 
+Issues and limitations in these projects may also impact CollectionBuilder sites.
+We strive to follow best practices and guidelines using these libraries.
+Here are some resources related to those components:
+
+- [Bootstrap Accessibility](https://getbootstrap.com/docs/5.3/getting-started/accessibility/)
+- [Bootstrap Icons Accessibility](https://icons.getbootstrap.com/#accessibility)
+- [Leaflet accessible maps](https://leafletjs.com/examples/accessibility/)
+
 ## Creating Accessible Collections
 
 The content, objects, metadata, and configuration you add to CollectionBuilder templates will impact the accessibility of the resulting website.
