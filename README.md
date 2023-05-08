@@ -6,6 +6,8 @@ Documentation for CollectionBuilder, an open source tool for creating digital co
 
 This documentation covers details for CollectionBuilder-GH, CollectionBuilder-CONTENTdm, and CollectionBuilder-CSV.
 
+If you need to get in touch, feel free to email the CollectionBuilder Team (<mailto:collectionbuilder.team@gmail.com>) or use the [CollectionBuilder Discussion Forum](https://github.com/orgs/CollectionBuilder/discussions).
+
 ## Contributing 
 
 Outside contributors are welcome and encouraged to help make these docs better!
