@@ -34,28 +34,62 @@ Just ensure that you create the required fields following the conventions descri
 
 -----
 
-## Object Detail Fields (strongly suggested):
+## Strongly suggested fields
 
-These fields are not *required*, but are used to add downloads, display images, or representative icons for the objects on your collection site. 
+This fields described in this section are not *required*, but they come highly recommended! 
 
-{:.alert .alert-green}
-These fields should be filled out in your metadata spreadsheet using formulas / recipes depending on where your objects are hosted.
-This approach provides flexibility to include objects from multiple sources without needing to modify the template code.<br><br>
-*Tip:* if you use the [Rake generate_derivatives]({{ '/objects/derivatives/#generate-derivatives-rake-task' | relative_url }}) task for processing local items, it will automatically output an "object_list.csv" containing the object_location, image_small, and image_thumb values for all files processed.
+### Display Template (& Compound Objects)
+
+The `display_template` field enables a great deal of flexibility and customization for your collection, and combined with the object location fields listed below, represents the biggest difference from other CollectionBuilder versions such as GH. 
 
 ### display_template:
 
 - A template type used for the Item page *and* used in logic to choose representations in other pages. 
 - If blank the object will default to a generic item page. 
 - Supported values in `display_template` match files found in "_layouts".
-- Default supported options: `image`,`pdf`, `video`, `audio`, `record`, `item`. 
+- Default supported options: `image`,`pdf`, `video`, `audio`, `record`, `item`, `panorama`, `compound_object`,`multiple`. 
     - `image`: Displays image_small if available, with fall back to object_location. Adds gallery view to open images full screen using object_location, with fall back to image_small.
     - `pdf`: Displays image_small if available, with fall back to image_thumb, or a pdf icon.
     - `video`: Displays a video embedded on the page with default support for video files (using `<video>` element with object_location as src), YouTube (from link in object_location), or Vimeo videos (from link in object_location).
     - `audio`: Uses `<audio>` element to embed audio file from object_location as src.
+    - `panorama`: a 360 degree image. Item pages will use the Javascript based panorama viewer, [Panellum](https://pannellum.org/) to display the image in a 360 degree view.
     - `record`: metadata only record.
     - `item`: generic fallback item page, displays image or icon depending on "image_thumb"
+    - `compound_object`: a record for a object that includes multiple file instances that are described/managed separately in the metadata. Compound objects use their own set of conventions, see [below for more details](#compound-objects-quick-overview). 
+    - `multiple`: a record for a object that includes multiple images (such as a postcard) that are listed separately in the metadata. Multiples use their own set of conventions, see [below for more details](#compound-objects-quick-overview). 
+
 - See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item_pages.md) in your CollectionBuilder-CSV project repository for more details.
+
+####  Compound Objects Quick Overview
+
+To enable the "compound_object" or "multiple" display template in CollectionBuilder, the following conventions must be followed:
+
+- A `parentid` field must be present in your metadata spreadsheet/csv. 
+- A parent metadata record must be created for each compund object that has a display template of either `compound_object` or `multiple`. 
+    - a `compound_object` will display a grid of collected items (of any accepted CB type) whose metadata and media can be viewed in a series of browsable modals
+    - a `multiple` is image based and will display a vertical series of larger images that scroll down the page
+- The parent metadata record **should have an objectid but no parentid**
+- Each child record **must have an objectid AND a parentid**
+- Each child record's `parentid` value must match the parent metadata record's `objectid` 
+    - e.g. If the parent's objectid is example002, then all children should have "example002" in their parentid field
+
+Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how this might look in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site](https://compound-1lqv.onrender.com/) to see how this looks in operation. 
+
+{:.alert .alert-blue }
+For more on compound objects, check out [our section on Compound Objects]({{ '/docs/metadata/compound-objects/' | relative_url }}) for extensive details.  
+
+
+### Object Location Fields: 
+
+Object location fields are used to add downloads, display images, and representative icons of the various object types in your collection.
+
+{:.alert .alert-green }
+The fields below can be filled out in your metadata spreadsheet using formulas / recipes depending on where your objects are hosted.
+This approach provides flexibility to include objects from multiple sources without needing to modify the template code.<br><br>
+*Tip:* if you use the [Rake generate_derivatives]({{ '/docs/objects/derivatives/#generate-derivatives-rake-task' | relative_url }}) task for processing local items, it will automatically output an "object_list.csv" containing the object_location, image_small, and image_thumb values for all files processed.
+
+- See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item_pages.md) in your CollectionBuilder-CSV project repository for more details.
+
 
 ### object_location: 
 
