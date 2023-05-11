@@ -36,17 +36,18 @@ Just ensure that you create the required fields following the conventions descri
 
 ## Strongly suggested fields
 
-This fields described in this section are not *required*, but they come highly recommended! 
+The fields described in this section are not *required*, but they come highly recommended! 
 
-### Display Template (& Compound Objects)
+### Display Template
 
-The `display_template` field enables a great deal of flexibility and customization for your collection, and combined with the object location fields listed below, represents the biggest difference from other CollectionBuilder versions such as GH. 
+The `display_template` field is used to choose the Item page type and the correct item representations on other pages.
+Setting the template enables a great deal of flexibility and simplifies customization of your collection, and combined with the object location fields listed below, represents the biggest difference from other CollectionBuilder versions such as GH. 
 
 ### display_template:
 
-- A template type used for the Item page *and* used in logic to choose representations in other pages. 
+- Sets the template type used for the Item page *and* is used in logic to choose representations in other pages. 
 - If blank the object will default to a generic item page. 
-- Supported values in `display_template` match files found in "_layouts".
+- Supported values in `display_template` match the files found in "_layouts/item/".
 - Default supported options: `image`,`pdf`, `video`, `audio`, `record`, `item`, `panorama`, `compound_object`,`multiple`. 
     - `image`: Displays image_small if available, with fall back to object_location. Adds gallery view to open images full screen using object_location, with fall back to image_small.
     - `pdf`: Displays image_small if available, with fall back to image_thumb, or a pdf icon.
@@ -55,41 +56,48 @@ The `display_template` field enables a great deal of flexibility and customizati
     - `panorama`: a 360 degree image. Item pages will use the Javascript based panorama viewer, [Panellum](https://pannellum.org/) to display the image in a 360 degree view.
     - `record`: metadata only record.
     - `item`: generic fallback item page, displays image or icon depending on "image_thumb"
-    - `compound_object`: a record for a object that includes multiple file instances that are described/managed separately in the metadata. Compound objects use their own set of conventions, see [below for more details](#compound-objects-quick-overview). 
-    - `multiple`: a record for a object that includes multiple images (such as a postcard) that are listed separately in the metadata. Multiples use their own set of conventions, see [below for more details](#compound-objects-quick-overview). 
-
+    - `compound_object`: a record for a object that includes multiple file instances that are described/managed separately in the metadata. The item page will display a grid of collected items (of any accepted CB type) whose metadata and media can be viewed in a series of browsable modals. Compound objects use an additional set of conventions, see [below for more details](#compound-objects-templates). 
+    - `multiple`: a record for a object that includes multiple images (such as a postcard) that are listed separately in the metadata. The item page will feature a vertical series of large images that scroll down the page and a popup gallery function. Multiples use an additional set of conventions, see [below for more details](#compound-objects-templates).
 - See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item_pages.md) in your CollectionBuilder-CSV project repository for more details.
 
-####  Compound Objects Quick Overview
+<div class="alert alert-blue" markdown="1"> 
 
-To enable the "compound_object" or "multiple" display template in CollectionBuilder, the following conventions must be followed:
+#### Compound Object Templates
 
-- A `parentid` field must be present in your metadata spreadsheet/csv. 
-- A parent metadata record must be created for each compund object that has a display template of either `compound_object` or `multiple`. 
-    - a `compound_object` will display a grid of collected items (of any accepted CB type) whose metadata and media can be viewed in a series of browsable modals
-    - a `multiple` is image based and will display a vertical series of larger images that scroll down the page
-- The parent metadata record **should have an objectid but no parentid**
+For normal items, each object is represented by one row in your metadata spreadsheet. 
+Compound objects on the other hand are represented by multiple rows: a parent row plus one or more child rows.
+The parent record describes the object overall, while each child describes the individual component parts/files.
+
+To include compound objects using the "compound_object" or "multiple" display template, the following additional conventions are used in your metadata spreadsheet:
+
+- A "parentid" field must be added to your metadata spreadsheet/csv. For normal items and parent items this field will left be blank.
+- The parent metadata record for each compound object will have an objectid but **no parentid**, and use the "display_template" value of either `compound_object` or `multiple`.  
 - Each child record **must have an objectid AND a parentid**
 - Each child record's `parentid` value must match the parent metadata record's `objectid` 
     - e.g. If the parent's objectid is example002, then all children should have "example002" in their parentid field
 
 Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how this might look in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site](https://compound-1lqv.onrender.com/) to see how this looks in operation. 
 
-{:.alert .alert-blue }
-For more on compound objects, check out [our section on Compound Objects]({{ '/docs/metadata/compound-objects/' | relative_url }}) for extensive details.  
+For more details on compound objects, check out [our section on Compound Objects]({{ '/docs/metadata/compound-objects/' | relative_url }}).  
 
+</div>
 
-### Object Location Fields: 
+### Object Location Fields 
 
 Object location fields are used to add downloads, display images, and representative icons of the various object types in your collection.
 
-{:.alert .alert-green }
-The fields below can be filled out in your metadata spreadsheet using formulas / recipes depending on where your objects are hosted.
-This approach provides flexibility to include objects from multiple sources without needing to modify the template code.<br><br>
-*Tip:* if you use the [Rake generate_derivatives]({{ '/docs/objects/derivatives/#generate-derivatives-rake-task' | relative_url }}) task for processing local items, it will automatically output an "object_list.csv" containing the object_location, image_small, and image_thumb values for all files processed.
+<div class="alert alert-green" markdown="1">
 
-- See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item_pages.md) in your CollectionBuilder-CSV project repository for more details.
+The fields below can be filled out in your metadata spreadsheet using [formulas and recipes]({{ '/docs/objects/object-paths/' | relative_url }}) depending on where your objects are hosted.
+This approach provides flexibility to include objects from multiple sources or APIs without needing to modify the template code--this allows you to work on your metadata, rather than customizing the website!
 
+You will need to use the correct file paths or URLs for your objects. Here are some important tips:
+
+- If the objects are included within the project repository use the relative path starting with `/` from the root of the folder. For example, if some images are in the repository's "objects" folder, use `/objects/example_object.jpg`. The relative path will be converted into a full URL during build. Do not include the `baseurl` value that you set in "_config.yml", since this will be added by the template.
+- **URLs to external media should always be secure HTTPS links.** Media at HTTP links are likely to be blocked by browser security defaults as [mixed content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content), meaning HTTP "image_small" and "image_thumb" images will not appear in your site's pages. For example, `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg` will work, but `http://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg` will be blocked.
+- If you use the [Rake generate_derivatives]({{ '/docs/objects/derivatives/#generate-derivatives-rake-task' | relative_url }}) task for processing local items, it will automatically output an "object_list.csv" containing the object_location, image_small, and image_thumb values for all files processed.
+
+</div>
 
 ### object_location: 
 
@@ -99,17 +107,6 @@ This approach provides flexibility to include objects from multiple sources with
 - Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/max/0/default.jpg`
 - Example value for object in project: `/objects/demo_002.pdf`
 - Example value for YouTube object: `https://youtu.be/CVXQ3X6Q8oU`
-
-{:.alert .alert-blue }
-If the objects are included within the project repository use the relative path starting with `/` from the root of the folder. 
-For example, if some images are in the repository's "objects" folder, use `/objects/example_object.jpg`.
-The relative path will be converted into a full URL during build.
-Do not include the `baseurl` value that you set in "_config.yml", since this will be added by the template.
-
-{:.alert .alert-red }
-**URLs to external media should always be secure HTTPS links.**
-Media at HTTP links are likely to be blocked by browser security defaults as [mixed content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content), meaning HTTP "image_small" and "image_thumb" images will not appear in your site's pages.
-For example, `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg` will work, but `http://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg` will be blocked.
 
 ### image_small: 
 
