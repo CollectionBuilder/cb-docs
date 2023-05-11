@@ -9,8 +9,10 @@ nav_order: 5
 To add *exciting* visual features to your ["About" and other interpretive pages]({{ '/docs/pages/interpretive/' | relative_url }}) CollectionBuilder provides a variety of feature includes.
 Each of these [Liquid includes](https://jekyllrb.com/docs/includes/) provide a simplified method to add collection items, external media, or Bootstrap components into your Markdown content.
 
-Take a look at our demo collection's [About page](https://collectionbuilder.github.io/collectionbuilder-gh/about.html){:target="_blank" rel="noopener"} to see them in action. 
-You can also check out the [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"} on our CollectionBuilder-gh demo site; the examples on that page will work in any type of CollectionBuilder template.
+You can take a look at our demo collection's [About page](https://collectionbuilder.github.io/collectionbuilder-gh/about.html){:target="_blank" rel="noopener"} to see them in action. 
+
+{:.alert .alert-green}
+**Want some example code?** Check out the [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"} on our CollectionBuilder-gh demo site. The examples on this page will work in any type of CollectionBuilder template.
 
 All feature includes can be found in the "_includes/feature" folder in your project repository.
 Each include file has an extensive comment section at the top with details about how to use it and an example use of the code (Liquid comments are between the tags `{% raw %}{% comment %} {% endcomment %}{% endraw %}`).
@@ -22,6 +24,9 @@ All include commands:
 - specify the include file, e.g. `feature/jumbotron.html`
 - *may* provide option values that are used by the include, e.g. `objectid="demo_001"`
 - end with the closing Liquid tag, `{% raw %}%}{% endraw %}`
+
+{:.alert .alert-red}
+**Note:** Make sure to use the `objectid` and not the `filename` for include commands.
 
 For example, you can use the "feature/image.html" include to add an collection image to the page like:
 

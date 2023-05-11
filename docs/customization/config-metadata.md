@@ -37,7 +37,7 @@ However, configuring these options adds rich machine readable markup to each ite
 - Recommended fields to map include: 
     - `DCTERMS.title`
     - `DCTERMS.creator`
-    - `DCTERMS.created`
+    - `DCTERMS.date`
     - `DCTERMS.description`
     - `DCTERMS.subject`
     - `DCTERMS.type`
@@ -64,7 +64,7 @@ However, configuring these options adds rich machine readable markup to each ite
 field,display_name,browse_link,dc_map,schema_map
 title,Title,,DCTERMS.title,headline
 creator,Creator,,DCTERMS.creator,creator
-date,Date Created,,DCTERMS.created,dateCreated
+date,Date Created,,DCTERMS.date,dateCreated
 date-is-approximate,Approximated Date
 description,Description,,DCTERMS.description,description
 subject,Subjects,true,DCTERMS.subject,keywords

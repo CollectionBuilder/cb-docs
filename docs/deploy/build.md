@@ -8,7 +8,7 @@ nav_order: 2
 
 The most common way to build your CB-CDM or CB-CSV site is to use Jekyll on your local computer (which can also be done with CB-GH if desired!).
 
-Jekyll build is a bit different than [using the development server]({{ '/docs/repository/generate/' | relative_url }}) because it outputs all the assets and URLs to match your final deployment location based on your [configuration options]({{ '/docs/config/url/' | relative_url }}).
+Jekyll build is a bit different than [using the development server]({{ '/docs/repository/generate/' | relative_url }}) because it outputs all the URLs used in the site to match your final deployment location based on your [configuration options]({{ '/docs/config/url/' | relative_url }}).
 The build version will include real URLs, swapping out the development links starting with `http://localhost:4000/` used by `jekyll s` with the production url value you have configured, e.g. `https://example.org`.
 
 ## Build with Rake Deploy

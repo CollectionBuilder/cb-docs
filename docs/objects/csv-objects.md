@@ -21,7 +21,7 @@ A CB-CSV record works just fine with a single full-sized object (just like CB-GH
 - **Filenaming:** to avoid issues, please pay close attention to filenaming conventions! The filename should be:
     - all lowercase
     - no spaces
-    - no special characters (underscores (`_`) are okay.
+    - no special characters (underscores `_` are okay).
 
 *Tip:* Your File Explorer / Finder might hide file extensions by default. 
 Check your View settings to show extensions!
@@ -72,11 +72,15 @@ Then, head over to the [Object Derivatives]({{ '/docs/objects/derivatives/' | re
 Note that instead of using the Rake task, you can manually create your derivatives elsewhere using an image editing software of your choosing.
 Be sure to follow the file specifications described in the [Derivatives]({{ '/docs/objects/derivatives/#create-small-and-thumb-derivatives' | relative_url }}) section of this site.
 
+Items that are not images or PDFs may also have small and thumb images that you manually create. 
+For example, an audio file might have an object_download of an MP3, but use an album cover to represent the item in image_small and image_thumb.
+
 ## Object Deployment
 
 If there are objects and derivatives that you've prepared for your collection that aren't hosted externally, you'll need to find a place to host them.
 
-Don't store these objects in your project's GitHub repository (i.e. don't commit your objects!) Git is not optimized for binary file storage and GitHub has size limits.
+Don't store these objects in your project's GitHub repository (i.e. don't commit your objects!). 
+Git is not optimized for binary file storage and GitHub has size limits.
 Instead, the object files can be deployed in any web accessible location: you can either put them in the "objects" folder within the generated website code, or anywhere else that you care to implement!
 
 For example, here are some options for object file locations depending on your setup and stage of development:

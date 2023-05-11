@@ -66,3 +66,36 @@ div.highlighter-rouge {
 .alert-red {
     border-color: $red-300;
 }
+
+/* width classes */
+.w-100 { width: 100% !important; }
+
+/* video embed */
+.video-embed {
+    position: relative;
+    width: 100%;
+
+}
+.video-embed::before {
+    display: block;
+    padding-top: 56.25%;
+    content: "";
+}
+.video-embed > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+iframe { border: 0; }
+
+/* img border */ 
+img { 
+    margin: $sp-6 auto;
+}
+.img-border {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    box-shadow: 3px 3px 5px darkgrey;
+}

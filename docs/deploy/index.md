@@ -1,14 +1,14 @@
 ---
 title: Deploy
 has_children: true
-nav_order: 8
+nav_order: 10
 ---
 
 # Deploy Your Site
 
 Depending on the version of CollectionBuilder you're using and where you would like to host the site, there are a few ways to generate and deploy your digital collection site: 
 
-- Most **GH** users: deploy using the free [GitHub Pages]({{ '/docs/deploy/gh-pages/' | relative_url }}) service.
-- Most **CDM** and **CSV** users: [build the site with Jekyll]({{ '/docs/deploy/build/' | relative_url }}), then move the files to a web server. 
-
-Alternatively, explore options such as [GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }}) and [third party build services]({{ '/docs/deploy/thirdparty/' | relative_url }}) documented in this section that provide other flexible deployment solutions.
+- **Deploy using the free [GitHub Pages]({{ '/docs/deploy/gh-pages/' | relative_url }})** - this is how most **GH** and **Sheets** users deploy their sites.
+- **[Build the site with Jekyll]({{ '/docs/deploy/build/' | relative_url }})**, then move the files to a web server: This allows for the publishing of CollectionBuilder sites on your own or your organizations web servers.
+- **[Enable GitHub Pages publishing via GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }})** -  These features now make publishing  **CDM** and **CSV** sites freely on GitHub a fairly easy possibility
+- **[Use Third-Party Build Services]({{ '/docs/deploy/thirdparty/' | relative_url }})** documented in this section that provide other flexible deployment solutions.

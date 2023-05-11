@@ -88,6 +88,9 @@ The fields below can be filled out in your metadata spreadsheet using formulas /
 This approach provides flexibility to include objects from multiple sources without needing to modify the template code.<br><br>
 *Tip:* if you use the [Rake generate_derivatives]({{ '/docs/objects/derivatives/#generate-derivatives-rake-task' | relative_url }}) task for processing local items, it will automatically output an "object_list.csv" containing the object_location, image_small, and image_thumb values for all files processed.
 
+- See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item_pages.md) in your CollectionBuilder-CSV project repository for more details.
+
+
 ### object_location: 
 
 - A full URL to download the full quality digital object *or* relative path if items are contained with in the project.

@@ -124,6 +124,8 @@ compress_html:
 collections: 
   glossary:
     sort_by: title
+  change-log:
+    sort_by: release
 
 # compress CSS output
 sass:

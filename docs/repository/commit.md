@@ -46,24 +46,30 @@ We can commit and push via GitHub Desktop, VS Code Source Control pane, or Git o
 
 ### Commit & Push with GitHub Desktop
 
-1. Switch over to GitHub Desktop app.
+1. Switch over to the GitHub Desktop app.
 2. The left hand column of the interface will list the "Changes", including any files that you edited. 
-3. Select the checkboxes next to the files you would like to commit (this is "git add").
-4. Below the column that lists your changes, you'll see a text-entry box labeled "Summary (required)." Click in the box.
+3. Select the checkboxes next to the files you would like to commit (this is "Git Add").
+4. Below the column that lists your changes, you'll see a text-entry box labeled "Update README.md." Click in the box.
 5. Type your "commit message" into the box (in this case something like "Updated README title for new project").
-6. When you've finished your commit message, click on the blue button toward the bottom of the column that says "Commit to main."
+6. When you've finished your commit message, click on the blue button that says "Commit to main."
+
+{% include feature/image.html img="commit-gh-desktop.gif" alt="GitHub Desktop user entering a commit message and clicking on the Commit to main button" border=true width="80%" %}
 
 The "Changes" disappear, and you've just made a Git Commit!
 
-Once you have made one or more commits, the button on the top right side of the GitHub Desktop window will say "Push changes."
+Once you have made one or more commits, the button on the top right side of the GitHub Desktop window will say "Push origin."
 Click the button to push, sending your changes up to GitHub.
 
-If you want to check--click GitHub Desktop's "Repository" menu and select "View on GitHub" to open the repository in your web browser.
+{% include feature/image.html img="push-origin-gh-desktop.gif" alt="GitHub Desktop user clicking on the push origin option" border=true width="80%" %}
 
-When you are working on multiple computers or collaborating with others, be sure to Fetch and Pull changes from GitHub before you start working, and before you push.
-Click on the button in the top right labeled "Fetch origin".
-After the fetch, if there is new changes available, the button change to "Pull origin".
+If you want to check if your commit went through, click GitHub Desktop's "Repository" menu and select "View on GitHub" to open the repository in your web browser. The commit should show up at the top section of the Code tab.
+
+When you are working on multiple computers or collaborating with others, be sure to Fetch and Pull changes from GitHub before you start working and before you Push changes.
+In GitHub Desktop, click on the button in the top right labeled "Fetch origin."
+After the Fetch, if there are new changes available, the button will change to "Pull origin."
 Click on the button to Push the changes, which will update the files in your local repository.
+
+{% include feature/image.html img="fetch-pull-gh-desktop.gif" alt="GitHub Desktop user clicking on fetch origin button and then pull origin button" border=true width="80%" %}
 
 ### Commit & Push on VS Code
 
@@ -71,26 +77,26 @@ VS Code has basic GUI support for Git commands built in, which is convenient so 
 The main controls are available on the ["Source Control" pane](https://code.visualstudio.com/docs/editor/versioncontrol), i.e. the network icon on the left side nav, or `Ctrl + Shift + G`.
 
 1. Click on the Source Control pane (or `Ctrl + Shift + G`).
-2. Changed files will be listed under "Changes". Hover over the file name and click on the plus icon to add individual files, or hover next to "Changes" and click on the plus icon to add all (the pop up label when hovering above the plus icon will be "Stage Changes", which is the same as "git add"). Once added, the files will move to a new list "Staged Changes" which are ready to commit.
-3. Click in the text box at the top labeled "Message".
+2. Changed files will be listed under "Changes." Hover over the file name and click on the plus icon to add individual files, or hover next to "Changes" and click on the plus icon to add all (the pop up label when hovering above the plus icon will be "Staged Changes," which is the same as "Git Add"). Once added, the files will move to a new list "Staged Changes" which are ready to commit.
+3. Click in the text box at the top labeled "Message."
 4. Type your "commit message" into the box (in this case something like "Updated README title for new project").
-5. Click the check-mark icon above the message box to Commit. 
+5. Click the blue button below the message box to Commit. 
 
 Next, look in the lower left of the blue bottom bar of the editor window which provides Git status information. 
-First is the branch you are on (currently "main"), then a sync icon with counts representing commits on GitHub to pull and commits on your local to push. 
+First is the branch you are on (currently "main"), then a sync icon with counts representing commits on GitHub to Pull and commits on your local to Push. 
 
 To Push your local changes up to GitHub, either: 
 
-- click the three-dot menu button at the top of the "Source Control" pane and select "Push".
-- click the sync icon in the lower left bottom bar.
+- Click the blue Sync Changes button at the top of the "Source Control" pane.
+- Or click the sync icon in the lower left bottom bar that looks like two arrows in a circle.
 
 When you are working on multiple computers or collaborating with others, be sure to Fetch and Pull changes from GitHub before you start working--Pull can be accessed by the same methods as Push in VS Code.
 
-*Tip:* hovering over icons on VS Code will pop up more information about what they represent.
+*Tip:* Hovering over icons on VS Code will pop up more information about what they represent.
 
 ### Commit & Push on Command Line
 
-Using Git on the command line can be fairly straight forward, or can be mixed with using the GUI tools integrated in your text editor to form an efficient workflow. 
+Using Git on the command line can be fairly straightforward, or can be mixed with using the GUI tools integrated in your text editor to form an efficient workflow. 
 Type the commands into a terminal window opened in the root of your repository folder and press "Enter" to execute them.
 
 To make a commit: 
@@ -104,7 +110,7 @@ Once you have made one or more commits, use the command `git push` to upload you
 Using the command `git status` at any time will give you useful information about the state of the repository along with tips about what to do next (messages provided by Git on the command line are usually quite helpful!). 
 
 When you are working on multiple computers or collaborating with others, be sure to Pull changes from GitHub before you start working and before you push, using the command `git pull`.
-Git will output detailed information about any changes and update your local history and files.
+Git will output detailed information about any changes and update your local history and files. If there are no changes to pull, the terminal will say "Already up to date."
 This feedback can be helpful for understanding recent updates, providing more reference information than the GUI methods of Pull.
 
-*Tip:* while typing Git commands and filenames, you can use "tab complete"--start typing the first few letters of the name then hit `Tab`, if something matches it will automatically finish typing the command or filename.
+*Tip:* While typing Git commands and filenames, you can use "tab complete"--start typing the first few letters of the name then hit `Tab`, if something matches it will automatically finish typing the command or filename.

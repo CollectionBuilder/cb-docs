@@ -1,6 +1,6 @@
 ---
 title: Too Quick Start
-nav_order: 12
+nav_order: 16
 ---
 
 # Too Quick Start

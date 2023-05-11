@@ -42,5 +42,5 @@ baseurl: /digital/boxing
 
 - `source-code` is the full URL for the GitHub repository containing your CollectionBuilder project code. It is used to add a link back to your project repository.
 ```yaml
-source-code: https://github.com/CollectionBuilder/collectionbuilder-sa
+source-code: https://github.com/CollectionBuilder/collectionbuilder-gh
 ```

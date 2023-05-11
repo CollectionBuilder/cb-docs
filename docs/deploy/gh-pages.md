@@ -8,7 +8,7 @@ nav_order: 1
 
 {:.alert .alert-blue}
 **These instructions are for GH Users.**
-Other CollectionBuilder types rely on Jekyll plugins, thus will not build properly using GitHub Pages--see [GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }}) for an alternative.
+Other CollectionBuilder types rely on Jekyll plugins, thus will not build properly using default GitHub Pages--see [GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }}) for an alternative.
 Also note that GH users *can* use any deployment method--you are not limited to using GitHub Pages to host your site!
 
 ## Make Repository Public

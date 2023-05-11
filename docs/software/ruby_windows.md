@@ -8,6 +8,10 @@ nav_order: 4
 
 Use [RubyInstaller for Windows](https://rubyinstaller.org/){:target="_blank" rel="noopener"}.
 
+{:.alert .alert-purple .my-3}
+January 2023 Note: Ruby 3.2.0 is the latest stable version as of this writing **BUT** it is not working cleanly right now with Jekyll, so **we are recommending you install version 3.1.3**.
+
+
 - First, [download](https://rubyinstaller.org/downloads/){:target="_blank" rel="noopener"} the suggested stable version "WITH DEVKIT" (as of this writing, Ruby+Devkit 3.1.X (x64))
     - Double click the installer package you downloaded to start the install wizard. 
     - Use the install defaults, but make sure "Add Ruby executables to your PATH" is checked. On the final step, ensure the box to start the MSYS2 DevKit is checked.

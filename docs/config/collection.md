@@ -41,23 +41,6 @@ cdm-url: https://cdm12345.contentdm.oclc.org
 
 ------
 
-## Required Settings for StandAlone
-
-### objects:
-
-- Provide the location of the digital objects folder
-- If using local folder, use the directory name with proceeding slash. If using an external web location, provide full URL to the folder containing the objects.
-- example using local folder --> 
-```yaml
-objects: /objects
-```
-- example using external location --> 
-```yaml
-objects: https://www.lib.uidaho.edu/digital/objects/hjccc
-```
-
-------
-
 ## Optional Page Generation Settings
 
 CollectionBuilder-CONTENTdm and -CSV use a custom Jekyll plugin to generate individual HTML pages for each item (row) in your metadata CSV.

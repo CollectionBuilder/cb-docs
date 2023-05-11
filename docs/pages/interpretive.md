@@ -19,7 +19,7 @@ You can always add other interpretive pages using the same features by following
 
 To edit the About page, navigate to the "pages" directory and open the "about.md" file. 
 
-First, you will notice the front matter block which configures some page options (see [page basics]({{ '/docs/pages/basics/' | relative_url }}).
+First, you will notice the front matter block which configures some page options (see [page basics]({{ '/docs/pages/basics/' | relative_url }})).
 In most cases you will leave this unedited.
 
 Below the front matter block is content written in [Markdown]({{ '/docs/glossary/#markdown' | relative_url }}).
@@ -31,7 +31,7 @@ However, notice that the first content line you will see looks like:
 {% raw %}{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %}{% endraw %}
 ```
 
-This a [Liquid Include](https://jekyllrb.com/docs/includes/) command that is adding a large image with text at the top of the default page.
+This is a [Liquid Include](https://jekyllrb.com/docs/includes/) command that is adding a large image with text at the top of the default page.
 Includes are a powerful feature of Jekyll that allow modular elements or content to be drawn into your site's pages from a central location.
 
 In this case the include is calling the file `feature/jumbotron.html`, and providing the option `objectid` with a URL to an external image.
