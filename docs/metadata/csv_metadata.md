@@ -56,13 +56,13 @@ Setting the template enables a great deal of flexibility and simplifies customiz
     - `panorama`: a 360 degree image. Item pages will use the Javascript based panorama viewer, [Panellum](https://pannellum.org/) to display the image in a 360 degree view.
     - `record`: metadata only record.
     - `item`: generic fallback item page, displays image or icon depending on "image_thumb"
-    - `compound_object`: a record for a object that includes multiple file instances that are described/managed separately in the metadata. The item page will display a grid of collected items (of any accepted CB type) whose metadata and media can be viewed in a series of browsable modals. Compound objects use an additional set of conventions, see [below for more details](#compound-objects-templates). 
-    - `multiple`: a record for a object that includes multiple images (such as a postcard) that are listed separately in the metadata. The item page will feature a vertical series of large images that scroll down the page and a popup gallery function. Multiples use an additional set of conventions, see [below for more details](#compound-objects-templates).
+    - `compound_object`: a record for a object that includes multiple file instances that are described/managed separately in the metadata. The item page will display a grid of collected items (of any accepted CB type) whose metadata and media can be viewed in a series of browsable modals. Compound objects use an additional set of conventions, see [below for more details](#compound-object-display-templates). 
+    - `multiple`: a record for a object that includes multiple images (such as a postcard) that are listed separately in the metadata. The item page will feature a vertical series of large images that scroll down the page and a popup gallery function. Multiples use an additional set of conventions, see [below for more details](#compound-object-display-templates).
 - See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item_pages.md) in your CollectionBuilder-CSV project repository for more details.
 
 <div class="alert alert-blue" markdown="1"> 
 
-#### Compound Object Templates
+#### Compound Object Display Templates
 
 For normal items, each object is represented by one row in your metadata spreadsheet. 
 Compound objects on the other hand are represented by multiple rows: a parent row plus one or more child rows.
