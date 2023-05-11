@@ -76,7 +76,7 @@ To enable the "compound_object" or "multiple" display template in CollectionBuil
 Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how this might look in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site](https://compound-1lqv.onrender.com/) to see how this looks in operation. 
 
 {:.alert .alert-blue }
-For more on compound objects, check out [our section on Compound Objects]({{ '/docs/objects/compound-objects/' | relative_url }}) for extensive details.  
+For more on compound objects, check out [our section on Compound Objects]({{ '/docs/metadata/compound-objects/' | relative_url }}) for extensive details.  
 
 
 ### Object Location Fields: 
