@@ -66,19 +66,19 @@ Setting the template enables a great deal of flexibility and simplifies customiz
 
 For normal items, each object is represented by one row in your metadata spreadsheet. 
 Compound objects on the other hand are represented by multiple rows: a parent row plus one or more child rows.
-The parent record describes the object overall, while each child describes the individual component parts/files.
+The parent record describes the object overall, while each child describes the individual component parts/files--all of them will be displayed together on a single Item page.
 
 To include compound objects using the "compound_object" or "multiple" display template, the following additional conventions are used in your metadata spreadsheet:
 
 - A "parentid" field must be added to your metadata spreadsheet/csv. For normal items and parent items this field will left be blank.
-- The parent metadata record for each compound object will have an objectid but **no parentid**, and use the "display_template" value of either `compound_object` or `multiple`.  
+- The parent metadata record for each compound object will have an objectid (but no parentid), and use the "display_template" value of either `compound_object` or `multiple`.  
 - Each child record **must have an objectid AND a parentid**
-- Each child record's `parentid` value must match the parent metadata record's `objectid` 
-    - e.g. If the parent's objectid is example002, then all children should have "example002" in their parentid field
+    - Each child record's `parentid` value must match the parent metadata record's `objectid`. e.g. If the parent's "objectid" is `example002`, then all children should have `example002` in their "parentid" field.
+    - Each child record can use any standard `display_template` corresponding to the object type. e.g. a parent using the `multiple` template will have several children using the `image` template; a parent using the `compound_object` template could have children using all different display template options.
 
 Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how this might look in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site](https://compound-1lqv.onrender.com/) to see how this looks in operation. 
 
-For more details on compound objects, check out [our section on Compound Objects]({{ '/docs/metadata/compound-objects/' | relative_url }}).  
+For full details on compound objects, check out [our section on Compound Objects]({{ '/docs/metadata/compound-objects/' | relative_url }}).  
 
 </div>
 
