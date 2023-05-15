@@ -84,11 +84,11 @@ For full details on compound objects, check out [our section on Compound Objects
 
 ### Object Location Fields 
 
-Object location fields are used to add downloads, display images, and representative icons of the various object types in your collection.
+Object location fields are used to add file downloads and display images for your collection items on the Item page and other visualization pages.
 
 <div class="alert alert-green" markdown="1">
 
-The fields below can be filled out in your metadata spreadsheet using [formulas and recipes]({{ '/docs/objects/object-paths/' | relative_url }}) depending on where your objects are hosted.
+The fields below can be filled out in your metadata spreadsheet using [formulas and recipes]({{ '/docs/metadata/object-paths/' | relative_url }}) depending on where your objects are hosted.
 This approach provides flexibility to include objects from multiple sources or APIs without needing to modify the template code--this allows you to work on your metadata, rather than customizing the website!
 
 You will need to use the correct file paths or URLs for your objects. Here are some important tips:
@@ -103,6 +103,7 @@ You will need to use the correct file paths or URLs for your objects. Here are s
 
 - A full URL to download the full quality digital object *or* relative path if items are contained with in the project.
 - Most objects will have an `object_location` value, the link where the digital file can be downloaded or accessed in a different platform.
+- For some items (such as the `record` display template), this may be a link to different website (*not necessarily to a download of a file*).
 - If this field is blank, the item will become a metadata-only record.
 - Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/max/0/default.jpg`
 - Example value for object in project: `/objects/demo_002.pdf`

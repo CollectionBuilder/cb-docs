@@ -1,35 +1,42 @@
 ---
-title: Constructing Object Paths
-parent: Objects
-nav_order: 5
+title: Recipes for CSV Object Locations 
+# Constructing Object Paths
+parent: Metadata
+nav_order: 9
 ---
 
-# Example Paths/Locations for CollectionBuilder-CSV
+# Recipes for Generating CollectionBuilder-CSV Object Location Fields
 
-Example paths are given below for the following object types/locations:
+The metadata CSV for CollectionBuild-CSV projects contains three [Object Location Fields]({{ '/docs/metadata/csv_metadata/#object-location-fields' | relative_url }}) ("object_location", "image_small", and "image_thumb") that are used to add downloads and display images of the items.
+These fields can often be filled using formulas while working on your metadata spreadsheet, taking advantage of external APIs or internal patterns. 
 
-- [External or Self-Hosted Objects](#example-paths-for-external-or-self-hosted-objects)
+This section presents example recipes for figuring out the fields for a few common items types / locations:
+
+- [Self-Hosted Objects](#example-paths-for-external-or-self-hosted-objects)
 - [YouTube Objects](#path-for-youtube-objects)
 - [Vimeo Objects](#path-for-vimeo-objects)
 - [CONTENTdm Objects](#path-for-contentdm-objects)
 
 ------
 
-## Example Paths for External or Self-Hosted Objects
+## Example Paths for Self-Hosted Objects
 
 See the [Object Derivatives]({{ '/objects/derivatives/' | relative_url }}) section for details of preparing a folder of image and PDF objects and generating derivatives using a Rake task.
+Following the conventions outlined will allow you to figure out where objects and derivatives should be located. 
 
-Example values for the CB-CSV [metadata fields]({{ '/docs/metadata/csv_metadata/#object-detail-fields-strongly-suggested' | relative_url }}) "object_location", "image_small", and "image_thumb" metadata fields might look like this:
+If your are hosting your objects inside your project repository (i.e. in the "objects" folder), you can use the relative path. 
+If you are hosting your objects in an external folder (i.e. in separate server location), you will use the full URL to that location. 
+For example:
 
-- `object_location` 
+- "object_location"
     - for object in project: `/objects/demo_002.pdf`
     - for object externally hosted: `https://example-host.org/collection/demo_002.pdf`
     - Recipe: `https://example-host.org/collection/` + "filename"
-- `image_small`
+- "image_small"
     - for object in project: `/objects/small/demo_002_sm.jpg`
     - for object externally hosted: `https://example-host.org/collection/small/demo_002_sm.jpg`
     - Recipe: `https://example-host.org/collection/small/` + "filename without extension" + `_sm.jpg`
-- `image_thumb`
+- "image_thumb"
     - for object in project: `/objects/thumbs/demo_002_th.jpg`
     - for object externally hosted: `https://example-host.org/collection/thumbs/demo_002_th.jpg`
     - Recipe: `https://example-host.org/collection/thumbs/` + "filename without extension" + `_th.jpg`
@@ -71,6 +78,9 @@ For more control, you can use [YouTube Data API](https://developers.google.com/y
 
 Vimeo video items are supported in Item pages via the `video` value for the "[display_template]({{ '/docs/metadata/csv_metadata/#display_template' | relative_url }})" metadata field.
 Provide the full Vimeo video link in the "object_location" metadata field.
+
+Vimeo does not have a documented thumbnail API. 
+One option is to create screenshots to use as derivative images--if image_thumb is left blank, the item will be represented by an video icon.
 
 ------
 
