@@ -10,13 +10,15 @@ Each template is a complete, self-contained folder of source code ready to creat
 
 CollectionBuilder templates come in a couple different *flavors* designed to facilitate different use cases.
 This documentation applies to all the current "templates" of the CollectionBuilder framework--the basics are the same for each type!
-There are a few steps where the documentation does vary between templates, however, so be on the lookout for bolded font and colored alerts that indicate when the documentation diverges. 
+There are a few steps where the documentation does vary between templates, however, so be on the lookout for bolded font and colored alerts that indicate when the details diverge. 
 
 The templates are currently: 
 
 - **GH** - for [CollectionBuilder-GH](https://github.com/CollectionBuilder/collectionbuilder-gh), a lightweight learning-focused template designed for free hosting on GitHub Pages. This is a great option for learning, teaching, quick prototyping, or just testing! A complete collection can be built without installing anything using the GitHub web interface.
 - **CSV** - for [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv), a robust template for developing exhibits on your local computer (and serving them from anywhere!). CSV is flexible and highly customizable, able to accommodate a wide variety of project types.
 - **CDM** - for [CollectionBuilder-CONTENTdm](https://github.com/CollectionBuilder/collectionbuilder-contentdm), a template for generating a "skin" over an existing CONTENTdm repository - this is a *legacy* template, in general it will be better to use CB-CSV for starting new projects!
+
+For technical details about what is inside a template, check [Overview of Template Structure]({{ '/docs/advanced/architecture-overview/' | relative_url }}).
 
 ## What is a template anyway?
 
