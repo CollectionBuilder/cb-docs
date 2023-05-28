@@ -23,3 +23,6 @@ These approaches that have worked for us, but you may want to refer to Jekyll's 
 Did you install Ruby and Jekyll a long time ago, but never updated it?
 Issues and conflicts with old versions of Ruby and Jekyll are common stumbling blocks we encounter when teaching.
 Although uninstalling your existing versions can be confusing and frustrating process if you don't remember how you installed it in the first place, it is a good idea to get a fresh start to ensure you have working and up to date versions.
+
+{:.alert .alert-purple}
+If you change or update Ruby versions and end up with bundler errors when you try to use Jekyll--deleting the old "Gemfile.lock" in your repository is usually a quick fix.
