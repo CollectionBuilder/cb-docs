@@ -5,12 +5,11 @@ nav_order: 8
 ---
 # Compound Objects and Multiples
 
-{:.alert .alert-red }
-**Currently Compound Objects can only be used in CollectionBuilder-CSV.**
-
 _Note: While "object" is in the title of this section, a "compound object" is better categorized as an issue related to metadata than to objects (i.e. digital files) proper._
 
-Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how compound objects are represented in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site](https://www.lib.uidaho.edu/collectionbuilder/collectionbuilder-csv-demo/) to see how this looks in operation. 
+Compound objects and multiples can be used in both CollectionBuilder-CSV and CollectionBuilder-GH, but the implementation process is slightly different between the two templates. 
+
+Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how compound objects are represented in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site](https://compound-1lqv.onrender.com/) to see how this looks in operation. 
 
 ## Context
 
@@ -31,7 +30,7 @@ A `compound_object` can include a set of objects from any type of media that Col
 
 ### multiple
 
-A `multiple` is image based, and is best used for items such as postcards or multi-view records of a 3-dimensional object. 
+A `multiple` is image-based, and is best used for items such as postcards or multi-view records of a 3-dimensional object. 
 
 - Parent items with the display_template value of `multiple` will generate an Item page featuring the child items displayed as larger images. The children *do not* have child object pages / modals. Instead, clicking the child images will open a zoomable spotlight gallery of the images.
 - `multiple` Examples: 

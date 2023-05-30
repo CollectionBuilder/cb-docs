@@ -53,6 +53,29 @@ Without values in the fields below, CollectionBuilder will not work properly.
     - Audio: `audio/mp3`
     - Video: `video/mp4`
 
+<div class="alert alert-blue" markdown="1"> 
+
+#### Compound Object Formats
+
+For regular items, each object is represented by one row in your metadata spreadsheet. 
+Compound objects on the other hand are represented by multiple rows: a parent row plus one or more child rows.
+The parent record describes the object overall, while each child describes the individual component parts/files--all of them will be displayed together on a single Item page.
+
+To include compound objects using the "compound_object" or "multiple" format, the following additional conventions are used in your metadata spreadsheet:
+
+- A "parentid" field must be added to your metadata spreadsheet/csv. For regular items and parent items this field will left be blank.
+- The parent metadata record for each compound object will have an objectid (but no parentid), and use the "format" value of either `compound_object` or `multiple`.  
+- Each child record **must have an objectid AND a parentid**
+    - Each child record's `parentid` value must match the parent metadata record's `objectid`. e.g. If the parent's "objectid" is `example002`, then all children should have `example002` in their "parentid" field.
+    - Each child record can use any standard "format" corresponding to the object format. e.g. a parent using the `multiple` format will have several children using the `image` format; a parent using the `compound_object` format could have children using all different format options.
+
+Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1C1ZV3VrawKRLYUtemUdi8hLbhJw2yhn6kv-xv6_HaNk/copy?usp=sharing) for an example of how this might look in a metadata spreadsheet, and visit the [demo CollectionBuilder-GH site](https://collectionbuilder.github.io/collectionbuilder-gh/) to see how this looks in operation. 
+
+For full details on compound objects, check out [our section on Compound Objects]({{ '/docs/metadata/compound-objects/' | relative_url }}).  
+
+</div>
+
+
 ### youtubeid (only required for YouTube video items):
 
 - This is the unique string assigned to a video when it is uploaded to YouTube. An easy way to find this is to look at the url for your YouTube video. The ID will be the string attached to the end of the url. For example, in "https://www.youtube.com/watch?v=sHhk1eAgopU" the youtubeid is `sHhk1eAgopU`.
