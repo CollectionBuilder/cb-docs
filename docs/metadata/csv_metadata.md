@@ -47,7 +47,7 @@ Setting the template enables a great deal of flexibility and simplifies customiz
 
 - Sets the template type used for the Item page *and* is used in logic to choose representations in other pages. 
 - If blank the object will default to a generic item page. 
-- Supported values in `display_template` match the files found in "_layouts/item/".
+- Supported values in `display_template` match the files found in "_layouts/item/". You can create new custom templates by adding the layout file in this folder!
 - Default supported options: `image`,`pdf`, `video`, `audio`, `record`, `item`, `panorama`, `compound_object`,`multiple`. 
     - `image`: Displays image_small if available, with fall back to object_location. Adds gallery view to open images full screen using object_location, with fall back to image_small.
     - `pdf`: Displays image_small if available, with fall back to image_thumb, or a pdf icon.
@@ -129,6 +129,34 @@ You will need to use the correct file paths or URLs for your objects. Here are s
 - Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/pct:20/0/default.jpg`
 - Example value for object in project: `/objects/thumbs/demo_002_th.jpg`
 - Example value for YouTube object: `https://img.youtube.com/vi/CVXQ3X6Q8oU/mqdefault.jpg`
+
+### image_alt_text 
+
+- An appropriate textual description of the image_small representation of the item. The alt text corresponds to the `image_small` (not necessarily the file at `object_location`).
+- This value will be used as the "alt" value of the image element, which is important for accessibility (and required!). If no `image_alt_text` is provided, the template will fall back to using the item's `description` or `title` value (which in many cases is not ideal for your users). 
+- Using the `image_alt_text` field allows you to provide more carefully crafted alt text depending on the item contents, type, and purpose. See [WAI Images Tutorial](https://www.w3.org/WAI/tutorials/images/) for more tips.
+- Example value: `Man standing with pump machinery next to a river with trees and mountains in the distance`
+
+### object_transcript 
+
+- A text transcript of the item's content. This is most commonly used with video and audio items, but can be for any item type.
+- The transcript content can be added in two ways: 
+    1. Add the full text as the value directly in the field. This is a straight forward way to keep transcript data directly in your metadata. Keep in mind that spreadsheet software typically has limits on the number of characters per cell, so this won't work well with larger transcripts. 
+    2. Add the transcript as a text file (.txt or .md) in your project's "objects" folder and put the filename and relative path as the value of `object_transcript`. For example, `objects/transcript1.txt`. See below for more information on preparing a transcript file.
+- The contents of the field or the transcript file will be rendered as Markdown on the Item page.
+- Example value in cell: `Temperatures 85 to 90 in valleys, 70 to 75 ridges. Minimum humidity 15 to 25 percent valleys and 22 to 32 percent ridges. 20 foot winds at lower elevations Northwest, 5 to 15 miles per hour. Ridge top, Northwest, 5 to 15 miles per hour.`
+- Example value in transcript text file: `objects/demo_003.md`
+
+Preparing transcripts:
+
+- Providing a transcript for audio and video items is an essential accessibility and useability feature to ensure all users can access the information contained in the media. We strongly recommend video items *also* include in video captioning, which can be automatically provided by YouTube or Vimeo.
+- When creating transcripts, consider the information they convey to users. Basic transcripts record the audio information only. Descriptive transcripts also record visual information beyond the speakers. Basic transcripts can be started using automated services or downloading captions from YouTube, and are then often cleaned up and edited. See [WAI transcripts tips](https://www.w3.org/WAI/media/av/transcripts/) for more information.
+- To prepare a transcript text file:
+    - Create a ".txt" or ".md" file following the general [filenaming conventions]({{ '/docs/objects/csv-objects/#object-guidelines-for-collectionbuilder-csv' | relative_url }}). It is often desireable to follow a naming convention that links the transcript to the main item, such as using it's objectid.
+    - Add the file to your project's "objects" folder. These can be grouped in a folder inside the "objects" folder if desired, such as "objects/transcripts/".
+    - Ensure that the file has YAML front matter at the top of the file so that it will be processed by Jekyll (the front matter can be empty, i.e. `---` line break `---`).
+    - Add the relative path (`objects/`) and filename to the `object_transcript` field, e.g. `objects/demo_003.md`.
+    - During site build, the transcript text will be retrieved from the file and rendered as Markdown.
 
 ### format: 
 
