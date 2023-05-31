@@ -52,26 +52,18 @@ Without values in the fields below, CollectionBuilder will not work properly.
     - Document: `application/pdf`
     - Audio: `audio/mp3`
     - Video: `video/mp4`
+    - Compound Object: `compound_object`
+    - Multiple: `multiple`
 
 <div class="alert alert-blue" markdown="1"> 
 
 #### Compound Object Formats
 
-For regular items, each object is represented by one row in your metadata spreadsheet. 
-Compound objects on the other hand are represented by multiple rows: a parent row plus one or more child rows.
-The parent record describes the object overall, while each child describes the individual component parts/files--all of them will be displayed together on a single Item page.
+CollectionBuilder-GH supports Compound Objects!
+A "Compound Object" describes an item that is made up of a set of digital files intended to be treated as one connected item in the collection site and displayed on a single Item page. 
 
-To include compound objects using the "compound_object" or "multiple" format, the following additional conventions are used in your metadata spreadsheet:
-
-- A "parentid" field must be added to your metadata spreadsheet/csv. For regular items and parent items this field will left be blank.
-- The parent metadata record for each compound object will have an objectid (but no parentid), and use the "format" value of either `compound_object` or `multiple`.  
-- Each child record **must have an objectid AND a parentid**
-    - Each child record's `parentid` value must match the parent metadata record's `objectid`. e.g. If the parent's "objectid" is `example002`, then all children should have `example002` in their "parentid" field.
-    - Each child record can use any standard "format" corresponding to the object format. e.g. a parent using the `multiple` format will have several children using the `image` format; a parent using the `compound_object` format could have children using all different format options.
-
-Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1C1ZV3VrawKRLYUtemUdi8hLbhJw2yhn6kv-xv6_HaNk/copy?usp=sharing) for an example of how this might look in a metadata spreadsheet, and visit the [demo CollectionBuilder-GH site](https://collectionbuilder.github.io/collectionbuilder-gh/) to see how this looks in operation. 
-
-For full details on compound objects, check out [our section on Compound Objects]({{ '/docs/metadata/compound-objects/' | relative_url }}).  
+Incorporating compound objects requires some additional conventions in your metadata spreadsheet.
+For full details on how to add compound objects to your site, check out the [Compound Objects section]({{ '/docs/metadata/compound-objects/' | relative_url }}) of the docs. 
 
 </div>
 
