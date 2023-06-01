@@ -47,12 +47,14 @@ Without values in the fields below, CollectionBuilder will not work properly.
 
 ### format: 
 
-- This field indicates the item's media type. Since CollectionBuilder uses logic based on `format` to display objects, this is the most important field to ensure the interactive visualizations function correctly. If there are errors or anomalies, some pages will not work. The input for this field should be structured according to [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml){:target="_blank" rel="noopener"} standards, consisting of a type and a subtype concatenated with a slash (`/`) between them.
-    - Image: `image/jpeg`
+- This field indicates the item's media type. Since CollectionBuilder uses logic based on `format` to display objects, this is the most important field to ensure the interactive visualizations function correctly. If there are errors or anomalies, some pages will not work. The input for this field should be structured according to [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml){:target="_blank" rel="noopener"} standards, consisting of a type and a subtype concatenated with a slash (`/`) between them. Use the actual MIME type corresponding to your item's file, which can generally be inferred by looking at the file extension (e.g. ".jpg", ".pdf", etc).
+- Below are the common format values supported by CB-GH:
+    - Image: `image/jpeg`, `image/png`
     - Document: `application/pdf`
     - Audio: `audio/mp3`
     - Video: `video/mp4`
-    - Compound Object: `compound_object`
+- Two special format values are used to support "compound object" Item types:
+    - Compound Object: `compound_object` 
     - Multiple: `multiple`
 
 <div class="alert alert-blue" markdown="1"> 

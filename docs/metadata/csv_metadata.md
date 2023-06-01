@@ -68,7 +68,7 @@ CollectionBuilder-CSV supports Compound Objects!
 A "Compound Object" describes an item that is made up of a set of digital files intended to be treated as one connected item in the collection site and displayed on a single Item page. 
 
 Incorporating compound objects requires some additional conventions in your metadata spreadsheet.
-For full details on how to add compound objects to your site, check out the [Compound Objects section]({{ '/docs/metadata/compound-objects/' | relative_url }}) of the docs. 
+For full details on how to use the compound_object and multiple display templates, check out the [Compound Objects section]({{ '/docs/metadata/compound-objects/' | relative_url }}) of the docs. 
 
 </div>
 
