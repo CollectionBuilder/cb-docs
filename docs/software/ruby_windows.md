@@ -17,6 +17,10 @@ Use [RubyInstaller for Windows](https://rubyinstaller.org/){:target="_blank" rel
     - If the window doesn't close, press `Enter` again or manually close it. 
     - *Note:* The installer can be restarted if necessary by typing `ridk install` into a command prompt.
 
+Once the installation completes, you should have Ruby available on the command line!
+Open a terminal (Git Bash), and type `ruby -v`. 
+This should provide a response like "ruby 3.2.2" which lets you know that your Ruby is correctly installed. 
+
 *Note: Ruby 3.2.0 was not working with some Jekyll versions--if you have 3.2.0, please update your ruby and jekyll to avoid issues!*
 
 ## Update RubyInstaller
