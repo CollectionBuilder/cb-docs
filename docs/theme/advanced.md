@@ -1,7 +1,7 @@
 ---
 title: Advanced Options
 parent: Theme Options
-nav_order: 10
+nav_order: 11
 ---
 
 # Advanced Theme Options
