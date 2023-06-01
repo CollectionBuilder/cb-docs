@@ -56,29 +56,19 @@ Setting the template enables a great deal of flexibility and simplifies customiz
     - `panorama`: a 360 degree image. Item pages will use the Javascript based panorama viewer, [Panellum](https://pannellum.org/) to display the image in a 360 degree view.
     - `record`: metadata only record.
     - `item`: generic fallback item page, displays image or icon depending on "image_thumb"
-    - `compound_object`: a record for a object that includes multiple file instances that are described/managed separately in the metadata. The item page will display a grid of collected items (of any accepted CB type) whose metadata and media can be viewed in a series of browsable modals. Compound objects use an additional set of conventions, see [below for more details](#compound-object-display-templates). 
-    - `multiple`: a record for a object that includes multiple images (such as a postcard) that are listed separately in the metadata. The item page will feature a vertical series of large images that scroll down the page and a popup gallery function. Multiples use an additional set of conventions, see [below for more details](#compound-object-display-templates).
+    - `compound_object`: a record for an item that includes multiple file instances that are described/managed separately in the metadata. The item page will display a grid of collected items (of any accepted CB type) whose metadata and media can be viewed in a series of browsable modals. Compound objects use an additional set of conventions, see [below for more details](#compound-object-display-templates). 
+    - `multiple`: a record for an item that includes multiple images (such as a postcard) that are listed separately in the metadata. The item page will feature a vertical series of large images that scroll down the page and a popup gallery function. Multiples use an additional set of conventions, see [below for more details](#compound-object-display-templates).
 - See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item_pages.md) in your CollectionBuilder-CSV project repository for more details.
 
 <div class="alert alert-blue" markdown="1"> 
 
 #### Compound Object Display Templates
 
-For normal items, each object is represented by one row in your metadata spreadsheet. 
-Compound objects on the other hand are represented by multiple rows: a parent row plus one or more child rows.
-The parent record describes the object overall, while each child describes the individual component parts/files--all of them will be displayed together on a single Item page.
+CollectionBuilder-CSV supports Compound Objects!
+A "Compound Object" describes an item that is made up of a set of digital files intended to be treated as one connected item in the collection site and displayed on a single Item page. 
 
-To include compound objects using the "compound_object" or "multiple" display template, the following additional conventions are used in your metadata spreadsheet:
-
-- A "parentid" field must be added to your metadata spreadsheet/csv. For normal items and parent items this field will left be blank.
-- The parent metadata record for each compound object will have an objectid (but no parentid), and use the "display_template" value of either `compound_object` or `multiple`.  
-- Each child record **must have an objectid AND a parentid**
-    - Each child record's `parentid` value must match the parent metadata record's `objectid`. e.g. If the parent's "objectid" is `example002`, then all children should have `example002` in their "parentid" field.
-    - Each child record can use any standard `display_template` corresponding to the object type. e.g. a parent using the `multiple` template will have several children using the `image` template; a parent using the `compound_object` template could have children using all different display template options.
-
-Please see the [demo compound object metadata sheet](https://docs.google.com/spreadsheets/d/1UNwl02r3fB-ybiKqb3SY4K30Tf4_rY_NOv5_o5WtVoY/edit?usp=sharing) for an example of how this might look in a metadata spreadsheet, and visit the [demo CollectionBuilder-CSV site](https://compound-1lqv.onrender.com/) to see how this looks in operation. 
-
-For full details on compound objects, check out [our section on Compound Objects]({{ '/docs/metadata/compound-objects/' | relative_url }}).  
+Incorporating compound objects requires some additional conventions in your metadata spreadsheet.
+For full details on how to use the compound_object and multiple display templates, check out the [Compound Objects section]({{ '/docs/metadata/compound-objects/' | relative_url }}) of the docs. 
 
 </div>
 

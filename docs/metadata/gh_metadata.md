@@ -47,11 +47,28 @@ Without values in the fields below, CollectionBuilder will not work properly.
 
 ### format: 
 
-- This field indicates the item's media type. Since CollectionBuilder uses logic based on `format` to display objects, this is the most important field to ensure the interactive visualizations function correctly. If there are errors or anomalies, some pages will not work. The input for this field should be structured according to [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml){:target="_blank" rel="noopener"} standards, consisting of a type and a subtype concatenated with a slash (`/`) between them.
-    - Image: `image/jpeg`
+- This field indicates the item's media type. Since CollectionBuilder uses logic based on `format` to display objects, this is the most important field to ensure the interactive visualizations function correctly. If there are errors or anomalies, some pages will not work. The input for this field should be structured according to [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml){:target="_blank" rel="noopener"} standards, consisting of a type and a subtype concatenated with a slash (`/`) between them. Use the actual MIME type corresponding to your item's file, which can generally be inferred by looking at the file extension (e.g. ".jpg", ".pdf", etc).
+- Below are the common format values supported by CB-GH:
+    - Image: `image/jpeg`, `image/png`
     - Document: `application/pdf`
     - Audio: `audio/mp3`
     - Video: `video/mp4`
+- Two special format values are used to support "compound object" Item types:
+    - Compound Object: `compound_object` 
+    - Multiple: `multiple`
+
+<div class="alert alert-blue" markdown="1"> 
+
+#### Compound Object Formats
+
+CollectionBuilder-GH supports Compound Objects!
+A "Compound Object" describes an item that is made up of a set of digital files intended to be treated as one connected item in the collection site and displayed on a single Item page. 
+
+Incorporating compound objects requires some additional conventions in your metadata spreadsheet.
+For full details on how to add compound objects to your site, check out the [Compound Objects section]({{ '/docs/metadata/compound-objects/' | relative_url }}) of the docs. 
+
+</div>
+
 
 ### youtubeid (only required for YouTube video items):
 
