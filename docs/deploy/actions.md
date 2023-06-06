@@ -51,6 +51,7 @@ Visit the Actions tab to see detailed information about the error to help debug 
 
 You're all set, enjoy your site! 
 
+{:.alert .alert-danger}
 *The information below provides more details about Actions in case you end up wanting to customize the workflow... if you used the Starter workflow, you don't need to read it!*
 
 ### Manually Add Action YAML
