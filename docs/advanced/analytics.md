@@ -28,9 +28,9 @@ For example, if you have an existing Analytics id used on your organization's we
 Using a single id for all your organization's sites is usually the preferred method to keep your data unified.
 
 Once your property is set up, click the cog icon in the lower left nav menu to go to the "Admin" panel. 
-Under "Property Settings" > "Tracking info", click "Tracking Code".
-Your "Tracking ID" will be displayed.
-Copy the id (which will look something like `UA-76328753-1`).
+Under "Data Streams" > "Web", click on the stream.
+Your "Measurement ID" will be displayed.
+Copy the id (which will look something like `G-1X23X1XXXX`).
 You do **not** need to copy the tracking code snippet.
 
 In your CollectionBuilder project's "_config.yml", paste the id after the `google-analytics-id` key.
@@ -38,8 +38,8 @@ Be sure to *uncomment* the line!
 For example:
 
 ```yaml
-google-analytics-id: UA-76328753-1
+google-analytics-id: G-1X23X1XXXX
 ```
 
 During "production" build, the tracking code with your id will be automatically added to every page.
-The template uses the ["gtag.js"](https://developers.google.com/analytics/devguides/collection/gtagjs/) implementation, with the [Anonymize IP](https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization) enabled to provide basic privacy enhancement to your users.
+The template uses the ["gtag.js"](https://developers.google.com/analytics/devguides/collection/gtagjs/) implementation.
