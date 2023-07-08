@@ -30,6 +30,21 @@ These are the basic Git terms you will be using:
 - `commit` - record a snapshot of the staged changes in your local repository history.
 - `push` - upload your local history to update GitHub.
 
+## gitignore 
+
+In the root of your CB project repository you will see a file ".gitignore".
+This text file contains a list of files and folders you want Git to **not** track (yes, ignore!).
+It lists things that are not necessary to commit into your repository, since they are temporary files or artifacts of the Jekyll build process. 
+The ignored files will appear in the folder on your computer, but will not be added to your history or pushed up to GitHub.
+
+Most users will not need to adjust this file, but you might want to be aware of [how gitignore works](https://git-scm.com/docs/gitignore) if you ever want to ignore (or stop ignoring) any additional items.
+
+Note, the "." dot / period in front of the filename ".gitignore" tells your computer it is a hidden file.
+By default File Explorer / Finder will not show the hidden files when you view a folder--check your settings to "display hidden files". 
+
+Hidden files *will* be displayed in the VS Code explorer side bar. 
+Files that are gitignored will appear grey.
+
 ## Git Resources
 
 **Learning Git concepts can be challenging.**
