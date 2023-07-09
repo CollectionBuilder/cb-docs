@@ -23,11 +23,16 @@ You can open, move, or edit the files inside just like any other folder on your 
 Cloning can be done visually using GitHub Desktop or Visual Studio Code, or on the command line using Git.
 Each of these options is briefly described below--you only need to choose one!
 
+{:.alert .alert-purple}
+When selecting a location on your computer to clone your repositories, **avoid folders that are synced with Dropbox, OneDrive, or similar cloud services!**
+Building your site with Jekyll generates tons of temporary files over and over again which tends to cause issues with your syncing, bogging down your computer and wasting bandwidth.
+Your source code files will be synced with GitHub, so there is no need to sync your local folder to another service. 
+
 ## Clone with GitHub Desktop
 
 1. On your new repository's home page, click on the green button labeled "Code" (appears on right above the code area).
 2. In the box that pops up, click on the button labeled "Open with GitHub Desktop." This action will automatically open GitHub Desktop on your computer.
-3. GitHub Desktop will ask you to confirm the path of the repository you are cloning to your computer. In most cases, the suggested path is fine to use so you can just click on the blue "Clone" button.
+3. GitHub Desktop will ask you to confirm the path of the repository you are cloning to your computer. In most cases, the suggested path is fine to use so you can just click on the blue "Clone" button (be sure that the default location is not a cloud sync-ed folder such as Dropbox or OneDrive!).
 
 Once you click the "Clone" button, GitHub Desktop will create a new folder matching your repository name and download the repository from GitHub.
 
