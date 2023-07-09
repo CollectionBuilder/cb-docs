@@ -12,11 +12,11 @@ To review, Git is used to track the history of changes in a folder of files, i.e
 You can use Git via a variety of interfaces: 
 
 - GitHub web interface (or other Git-based hosting platform)
-- GitHub Desktop (or other GUI software on your computer)
-- Git integrations built into your text editor (such as the "source control" panel on VS Code)
+- [GitHub Desktop](https://desktop.github.com/) (or other [GUI git software](https://git-scm.com/downloads/guis) on your computer)
+- Git integrations built into your text editor (such as the ["source control" panel on VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview))
 - Git commands entered in your terminal
 
-*Under the hood all these methods are interacting with the same version control software and the same history for each repository!*
+**_Under the hood all these methods are interacting with the same version control software and the same history for each repository!_**
 
 Always keep in mind that with all methods of using Git, the repository is just a folder of files on your computer. 
 You can go into the folder to edit, delete, add, and rearrange just like you would with any other folder on you computer. 
