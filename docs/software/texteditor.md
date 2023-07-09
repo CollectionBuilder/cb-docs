@@ -13,6 +13,8 @@ Code editors will allow you to work on whole folders of files at once (i.e. your
 If you don't already have a favorite editor, the CollectionBuilder team suggests the very popular, open-source [Visual Studio Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} (VS Code).
 Download VS Code and use their wizard to install with the default options on your computer.
 
+If you are unfamiliar with editors, there is pretty good [VS Code documentation](https://code.visualstudio.com/docs) including videos and reference, but you will learn a lot just working through you CB project!
+
 ## Configuring Visual Studio Code
 
 Visual Studio Code (VS Code) has a tremendous number of extensions that can be added to enhance its functionality. 
