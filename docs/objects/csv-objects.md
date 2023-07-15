@@ -6,17 +6,11 @@ nav_order: 2
 
 # Collection Objects for CollectionBuilder-CSV
 
-CollectionBuilder-CSV is designed for large, stand alone collections, and can be hosted on any basic static web server or platform.
+CollectionBuilder-CSV is a highly customizable base designed for large, stand alone collections, ready for a wide variety of item types.
+Each item in the collection can optionally have a full sized object, plus a small and thumb image derivative to represent the item in visualizations.
+The template comes with a [Rake task]({{ '/docs/objects/derivatives/' | relative_url }}) to automate creating derivatives for PDF and image items.
 
-CB-CSV's flexible design gives you the option to include a small and thumb image derivative or representation for each of your objects (and comes complete with a [Rake task]({{ '/docs/objects/derivatives/' | relative_url }}) to automate creating those derivatives!), in addition to providing full-sized objects for download.
-
-Don't want to include derivatives/representations? 
-No problem! 
-A CB-CSV record works just fine with a single full-sized object (just like CB-GH) or no object at all.
-
-## Object Logistics 
-
-Unlike CB-GH, the objects for CB-CSV collections are not usually committed directly into the project repository (to avoid size limitations on GitHub and some drawbacks of tracking binary files in Git).
+The object files for CB-CSV collections are generally **not** committed directly into the project repository--the files are usually managed separately to avoid the drawbacks of tracking binary files in Git and the size limitations on GitHub.
 Instead, the **CB-CSV metadata contains location information for each object and derivative** allowing you to flexibly combine and curate items from diverse sources.
 The files may be hosted with the collection site, in an external location, or retrieved from an API.
 
@@ -108,7 +102,7 @@ Media at HTTP links are likely to be blocked by browser security defaults as [mi
 <div class="alert alert-purple" markdown="1">
 ### Un-Ignoring the "objects" Folder 
 
-By default the "objects" folder is gitignored in the CB-CSV template. 
+By default the "objects" folder is [gitignored]({{ '/docs/repository/gitworkflow/#gitignore' | relative_url }}) in the CB-CSV template (since objects are usually managed separately to avoid the drawbacks of tracking binary files in Git and the size limitations on GitHub). 
 To commit your object files directly into your GitHub repository you will need to edit your project's ".gitignore" file. 
 
 In your project repository, open ".gitignore" in your editor (VS Code), and look for the last line which reads `objects/`. 
