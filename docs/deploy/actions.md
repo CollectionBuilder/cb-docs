@@ -51,13 +51,16 @@ Visit the Actions tab to see detailed information about the error to help debug 
 
 You're all set, enjoy your site! 
 
-{:.alert .alert-red}
-*The information below provides more details about Actions in case you end up wanting to customize the workflow... if you used the Starter workflow, you don't need to read it!*
+----------------------------
 
 ### Manually Add Action YAML
 
+{:.alert .alert-red}
+*The information below provides more details about Actions in case you end up wanting to customize the workflow... if you used the Starter workflow, you don't need to read it!*
+
 Rather than using "Settings" > "Pages" to add the starter workflow, you can manually create the file. 
 This process was the default method, however when GitHub made the starter workflow easier, it unfortunately made this option harder!
+You may want to do this process if you would like the customize the Action in some way.
 
 To setup the GitHub Action you will be creating a file in your project repository named ".github/workflows/jekyll.yml".
 To add this action you will need full "owner" administrative privileges for the repository (permission to create a "workflow" level token).
@@ -80,6 +83,8 @@ on:
   pull_request:
     branches: 
       - main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
