@@ -107,6 +107,8 @@ This walkthrough provides steps for creating an example digital collection using
 
 - In VS Code, click on the **"_data"** folder.
 
+{% include feature/image.html img="open-data-folder-vscode.gif" alt="Visual Studio Code user clicks on the Data folder to expand it" border=true width="80%" %}
+
 - Navigate to the location of your saved metadata CSV (probably in your Downloads folder or on the Desktop), and select the file.
 
 - Drag the file into the **"_data"** folder on VS Code.
@@ -181,18 +183,18 @@ title: Demo Repository
 
 ## 13. Run the "bundle exec jekyll serve" command to generate your site
 
-{:.alert .alert-blue}
-**What does 'bundle exec jekyll s' do?** This command starts a development server on your local computer and "serves" (i.e. makes available) the HTML, CSS, and JavaScript files that comprise your website. These files are built (and rebuilt) in the "_site" folder. After the server is started, Jekyll will rebuild the website each time you save a change to a file in the project folder. Learn more in our [Generate Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/repository/generate/){:target="_blank" rel="noopener"}
-
 - In the terminal in VS Code, type the command **bundle exec jekyll s** and press enter.
 
 - You'll see some text appear (messages from Jekyll), including a URL that appears after the title **Server address:**. The server address will typically start with: **http://127.0.0.1:4000/**.
 
 {% include feature/image.html img="bundle-exec-jekyll-s.gif" alt="Visual Studio Code user runs the bundle exec jekyll serve command in the terminal" border=true width="80%" %}
 
+{:.alert .alert-blue}
+**What does 'bundle exec jekyll s' do?** This command starts a development server on your local computer and "serves" (i.e. makes available) the HTML, CSS, and JavaScript files that comprise your website. These files are built (and rebuilt) in the "_site" folder. After the server is started, Jekyll will rebuild the website each time you save a change to a file in the project folder. Learn more in our [Generate Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/repository/generate/){:target="_blank" rel="noopener"}.
+
 - Hold down **Ctrl / Command** and click the server address link to open the site in your browser, or copy the URL and paste it into a browser.'
 
-{% include feature/image.html img="open-server.gif" alt="Visual Studio Code clicks on the server address link to open the site in their browser" border=true width="80%" %}
+{% include feature/image.html img="open-csv-site.gif" alt="Visual Studio Code clicks on the server address link to open the site in their browser" border=true width="80%" %}
 
 - After you start the server, note that whenever you make a change to a file and save it, the terminal will note that it rebuilt the site in a certain amount of seconds. 
 
@@ -204,4 +206,140 @@ title: Demo Repository
 
 ## 14. Add a featured homepage image
 
+- Visit your site and use the Browse page to view potential featured images.
 
+{% include feature/image.html img="browse-images-csv.gif" alt="User clicks the Browse button to look through collection images" border=true width="80%" %}
+
+- To find the `objectid` for an image, click on the image title and then check the end of the URL of the item page. The URL will include the `objectid` after **/items/**. 
+
+For example:
+
+For the URL, http://127.0.0.1:4000/items/**psychiana005**.html, the `objectid` is **psychiana005**.
+
+{% include feature/image.html img="find-objectid-csv.gif" alt="User highlights the objectid at the end of the item page URL" border=true width="80%" %}
+
+{:.alert .alert-blue}
+**Tip:** It is best to choose a large horizontal image if possible.
+
+- In VS Code, click on the **"_data"** folder. Then click on the **"theme.yml"** file.
+
+- Under the **HOME PAGE** section, replace the `objectid` placeholder text with the `objectid` of an image in the collection that you want to be the top image on the homepage. 
+
+For example:
+
+```yaml
+featured-image: psychiana005
+```
+
+{% include feature/image.html img="featured-image-csv.gif" alt="Visual Studio code user updates the featured image in the theme.yml file" border=true width="80%" %}
+
+- Press Ctrl / Command + S to save your changes.
+
+- After you have updated the featured image, write your commit message (e.g. Add featured image) and follow the instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit and sync your changes. 
+
+- View your changes by refreshing your site in your browser window. 
+
+{% include feature/image.html img="refresh-site.gif" alt="User refreshes the site to see the new featured home page image" border=true width="80%" %}
+
+{:.alert .alert-yellow}
+**Want to learn more about customization options?** Check out our [Theme Configuration documentation](https://collectionbuilder.github.io/cb-docs/docs/theme/){:target="_blank" rel="noopener"} to find out how to customize other site display options by editing the **theme.yml** file. For further info on customizations, see: [Configuring and Customizing Pages](https://collectionbuilder.github.io/cb-docs/docs/customization/){:target="_blank" rel="noopener"}, [Theme Color Configuration](https://collectionbuilder.github.io/cb-docs/docs/customization/config-theme-colors/){:target="_blank" rel="noopener"}, and [Adding Custom CSS](https://collectionbuilder.github.io/cb-docs/docs/advanced/custom-css/){:target="_blank" rel="noopener"}.
+
+## 15. Optional: Edit the About Page
+
+- In VS Code, click on the **"pages"** folder. Then click on the **"about.md"** file.
+
+- Try writing some text in this file using Markdown. 
+
+{:.alert .alert-blue}
+**New to Markdown?** Learn about what Markdown is and check out some learning resources on our [Markdown glossary page](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown){:target="_blank" rel="noopener"}.
+
+- Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"}.
+
+- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code and push them up to GitHub. Your commit message might be something like, "Update the About page."
+
+- View your changes by refreshing your site in your browser window. 
+
+## 16. Prep your repository for publishing with GitHub Actions
+
+- In this walkthrough, you will be hosting your site on **GitHub Pages** by setting up an alternative build using the **GitHub Actions** feature. Before using GitHub Actions, you have to prepare your repository for this build process.
+
+- In VS Code, open your **"_config.yml"** file. In the **URL VARIABLES** section, update the `url` and `baseurl` values following this pattern: 
+
+```yaml
+URL: https://username.github.io
+baseurl: /repository-name
+```
+
+For example:
+
+```yaml
+URL: https://juliastone0729.github.io
+baseurl: /demo-repository
+``` 
+
+{% include feature/image.html img="change-url-variables.gif" alt="Visual Studio Code user types in new URL variables in the config.yml file" border=true width="80%" %}
+
+- Save your changes with Ctrl + S.
+
+- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in Visual Studio Code and push them up to GitHub. Your commit message might be something like, "Update the URL variables."
+
+{:.alert .alert-green}
+**Another option for deploying your site:** If you have your own server for hosting your site, you can build the site with Jekyll and then move the files to your web server. This allows for the publishing of CollectionBuilder sites on your own or your organization's web servers. Read our [Building Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/deploy/build/){:target="_blank" rel="noopener"} for more info. 
+
+## 17. Publish your site using GitHub Actions
+
+- Visit [github.com](https://github.com/){:target="_blank" rel="noopener"} and log into your account.
+
+- Navigate to your repository. Click the **Settings** tab in the top right and then click **Pages** in the left side menu.
+
+{% include feature/image.html img="settings-then-pages-csv.gif" alt="GitHub user clicks on Settings and then Pages in the left side menu" border=true width="80%" %}
+
+- On the **Pages** page, under **Source**, click the dropdown and select **GitHub Actions**.
+
+{% include feature/image.html img="github-actions.gif" alt="GitHub user clicks on Source dropdown and then selects GitHub Actions" border=true width="80%" %}
+
+{:.alert .alert-red}
+**Warning:** Some accounts may have GitHub Actions disabled by default. If you do not see the **Actions** tab in your repository's navigation (in between **Discussions** and **Projects**), it will need to be turned on first. Visit the repository's **Settings**, click on **Actions** in the left side nav menu, select **Allow all actions**, and click **Save**.
+
+- Below the **Source** dropdown, a box will appear under **Use a suggested workflow** titled **Jekyll**. Click the **Configure** button.
+
+{% include feature/image.html img="configure-button.gif" alt="GitHub user clicks on the Configure button below the Source dropdown" border=true width="80%" %}
+
+- This will open an editor page creating a new file named **".github/workflows/jekyll.yml"** populated with GitHub's starter Jekyll workflow. 
+
+- You can ignore the file and other options displayed on the right side, and just click the green **Commit changes...** button.
+
+- Write a commit message (e.g., Deploy site) and click the green **Commit changes** button.
+
+{% include feature/image.html img="deploy.gif" alt="GitHub user clicks on the Commit changes button and deploys the site" border=true width="80%" %}
+
+- Committing the action file to your repository will start the build process. It may take a few minutes for it to complete. 
+
+{:.alert .alert-red}
+**Troubleshooting:** If a red "X" appears next to your commit, the build failed, and your updates will not be deployed -- the last working version of the site will still be live. Visit the **Actions** tab to see detailed information about the error to help debug the issue. If the site was building fine on your local computer, this will be unlikely to occur!
+
+- Once the action successfully completes, your site will be live. To find the URL you can visit **Settings** and then **Pages**. 
+
+{% include feature/image.html img="find-live-url.gif" alt="GitHub user clicks on Settings and then Pages to find the live URL" border=true width="80%" %}
+
+- Click on the link to see your published site. 
+
+- Going forward, each time you push or directly commit to the repository, **GitHub Actions** will rebuild the live site.
+
+## 18. Explore potential next steps
+
+Your collection website is complete! To implement additional customization options, your next steps could be:
+
+- [Customizing your theme options](https://collectionbuilder.github.io/cb-docs/docs/theme/){:target="_blank" rel="noopener"}
+
+- [Configuring your pages](https://collectionbuilder.github.io/cb-docs/docs/customization/){:target="_blank" rel="noopener"}
+
+- [Adding more pages](https://collectionbuilder.github.io/cb-docs/docs/pages/add_page/){:target="_blank" rel="noopener"}
+
+If you want to get into more Advanced Options, you could explore:
+
+- [Including a TimelineJS feature](https://collectionbuilder.github.io/cb-docs/docs/advanced/timelinejs/){:target="_blank" rel="noopener"}
+
+- [Creating new cloud pages](https://collectionbuilder.github.io/cb-docs/docs/advanced/cloudpage/){:target="_blank" rel="noopener"}
+
+- [And more advanced options!](https://collectionbuilder.github.io/cb-docs/docs/advanced/){:target="_blank" rel="noopener"}
