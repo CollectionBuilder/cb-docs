@@ -55,7 +55,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 - **Note:** The repository is a folder of files and you can store it anywhere, but we recommend using the default storage location on your computer: documents/GitHub.
 
-{:.alert .alert-blue}
+{:.alert .alert-green}
 **A quick explanation of Fetch, Pull, and Push:** On the top right of GitHub Desktop, you can Fetch origin, Pull origin, or Push origin. Clicking these commands allows you to sync the local version of your repository with the version on GitHub, using Git to push and pull changes between them. 
 
 - **Reminder:** When you are working on multiple computers or collaborating with others, be sure to fetch and pull changes from GitHub before you start working on your project.
@@ -189,7 +189,7 @@ title: Demo Repository
 
 {% include feature/image.html img="bundle-exec-jekyll-s.gif" alt="Visual Studio Code user runs the bundle exec jekyll serve command in the terminal" border=true width="80%" %}
 
-{:.alert .alert-blue}
+{:.alert .alert-green}
 **What does 'bundle exec jekyll s' do?** This command starts a development server on your local computer and "serves" (i.e. makes available) the HTML, CSS, and JavaScript files that comprise your website. These files are built (and rebuilt) in the "_site" folder. After the server is started, Jekyll will rebuild the website each time you save a change to a file in the project folder. Learn more in our [Generate Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/repository/generate/){:target="_blank" rel="noopener"}.
 
 - Hold down **Ctrl / Command** and click the server address link to open the site in your browser, or copy the URL and paste it into a browser.'
@@ -241,7 +241,7 @@ featured-image: psychiana005
 
 {% include feature/image.html img="refresh-site.gif" alt="User refreshes the site to see the new featured home page image" border=true width="80%" %}
 
-{:.alert .alert-yellow}
+{:.alert .alert-green}
 **Want to learn more about customization options?** Check out our [Theme Configuration documentation](https://collectionbuilder.github.io/cb-docs/docs/theme/){:target="_blank" rel="noopener"} to find out how to customize other site display options by editing the **theme.yml** file. For further info on customizations, see: [Configuring and Customizing Pages](https://collectionbuilder.github.io/cb-docs/docs/customization/){:target="_blank" rel="noopener"}, [Theme Color Configuration](https://collectionbuilder.github.io/cb-docs/docs/customization/config-theme-colors/){:target="_blank" rel="noopener"}, and [Adding Custom CSS](https://collectionbuilder.github.io/cb-docs/docs/advanced/custom-css/){:target="_blank" rel="noopener"}.
 
 ## 15. Optional: Edit the About Page
@@ -283,7 +283,7 @@ baseurl: /demo-repository
 
 - Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in Visual Studio Code and push them up to GitHub. Your commit message might be something like, "Update the URL variables."
 
-{:.alert .alert-green}
+{:.alert .alert-yellow}
 **Another option for deploying your site:** If you have your own server for hosting your site, you can build the site with Jekyll and then move the files to your web server. This allows for the publishing of CollectionBuilder sites on your own or your organization's web servers. Read our [Building Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/deploy/build/){:target="_blank" rel="noopener"} for more info. 
 
 ## 17. Publish your site using GitHub Actions
@@ -315,7 +315,7 @@ baseurl: /demo-repository
 
 - Committing the action file to your repository will start the build process. It may take a few minutes for it to complete. 
 
-{:.alert .alert-red}
+{:.alert .alert-yellow}
 **Troubleshooting:** If a red "X" appears next to your commit, the build failed, and your updates will not be deployed -- the last working version of the site will still be live. Visit the **Actions** tab to see detailed information about the error to help debug the issue. If the site was building fine on your local computer, this will be unlikely to occur!
 
 - Once the action successfully completes, your site will be live. To find the URL you can visit **Settings** and then **Pages**. 
