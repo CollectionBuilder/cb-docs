@@ -183,14 +183,16 @@ title: Demo Repository
 
 ## 13. Run the "bundle exec jekyll serve" command to generate your site
 
+- The **bundle exec jekyll serve** command starts a development server on your local computer and "serves" (i.e. makes available) the HTML, CSS, and JavaScript files that comprise your website. These files are built (and rebuilt) in the **"_site"** folder. 
+
+{:.alert .alert-blue}
+**Note:** After the development server is started, Jekyll will rebuild the website each time you save a change to a file in the project folder. Learn more about the jekyll serve command in our [Generate Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/repository/generate/){:target="_blank" rel="noopener"}.
+
 - In the terminal in VS Code, type the command **bundle exec jekyll s** and press enter.
 
 - You'll see some text appear (messages from Jekyll), including a URL that appears after the title **Server address:**. The server address will typically start with: **http://127.0.0.1:4000/**.
 
 {% include feature/image.html img="bundle-exec-jekyll-s.gif" alt="Visual Studio Code user runs the bundle exec jekyll serve command in the terminal" border=true width="80%" %}
-
-{:.alert .alert-green}
-**What does 'bundle exec jekyll s' do?** This command starts a development server on your local computer and "serves" (i.e. makes available) the HTML, CSS, and JavaScript files that comprise your website. These files are built (and rebuilt) in the "_site" folder. After the server is started, Jekyll will rebuild the website each time you save a change to a file in the project folder. Learn more in our [Generate Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/repository/generate/){:target="_blank" rel="noopener"}.
 
 - Hold down **Ctrl / Command** and click the server address link to open the site in your browser, or copy the URL and paste it into a browser.'
 
