@@ -76,14 +76,12 @@ This walkthrough provides steps for creating an example digital collection using
 
 ## 6. Upload your objects to your repository directly (if necessary)
 
-- In this demo collection, the object_location, image_small, and image_thumb columns in the metadata CSV include URLs to external objects (e.g., image files, PDFs, mp3s, etc.), so you do not need to add any object files directly to the repository in VS Code. 
+- In this demo collection, the **object_location**, **image_small**, and **image_thumb** columns in the metadata CSV include URLs to external objects (e.g., image files, PDFs, mp3s, etc.), so you do not need to add any object files directly to the repository in VS Code. 
 
 {:.alert .alert-blue}
 **Want to learn more about object location fields?** Check out documentation on how to use the correct file paths or URLs for your objects: [https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/#object-location-fields](https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/#object-location-fields){:target="_blank" rel="noopener"} 
 
-- If you were not using links to external objects, then you would add objects to the "objects" folder by dragging all the files into the folder and then committing your changes.
-
-- Note about .gitignore?
+- If you were not using links to external objects, then you would add objects to the **"objects"** folder by dragging all the files into the folder and then committing your changes.
 
 {:.alert .alert-yellow}
 **Important!** Check out our [Object Derivatives Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/){:target="_blank" rel="noopener"} to learn how to add objects directly to your repository, generate thumb and small object derivatives using CollectionBuilder-CSV's built-in rake tasks, and update your metadata spreadsheet to include these derivatives.
