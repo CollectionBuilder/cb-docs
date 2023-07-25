@@ -35,7 +35,11 @@ Keep in mind that the page stub values `/subjects.html` and `/locations.html` wi
 ## Create a New Cloud Page Using Cloud Layout and Front Matter
 
 Custom cloud pages can be easily created using the cloud layout and page front matter. 
-Follow these steps:
+
+{:.alert .alert-yellow}
+**Important note:** When you create a new cloud page, you will need to add this new page to the config-nav.csv file so it is accessible from the top navigation menu. See our [Add a New Page documentation](https://collectionbuilder.github.io/cb-docs/docs/pages/add_page/#add-a-new-page-to-the-nav){:target="_blank" rel="noopener"} for more info.
+
+To create a new cloud page, follow these steps:
 
 1. First, navigate to the "pages" directory and create a new markdown file. (For example, to create an Authors cloud page, create a file named "authors.md").
 2. Edit your new markdown file by adding the following content at the start of the file:
@@ -58,9 +62,9 @@ Example custom cloud page.
 4. Leave `cloud` as the value for "layout" (this value is necessary for the cloud page to generate).
 5. Add your values for the remaining three variables according to the following parameters:
 
-- `cloud-fields:` (required), a metadata field, or a set of metadata fields separated by `;`, to be featured in the cloud.
-- `cloud-min:` (optional), an integer value such as `2`.
-- `cloud-stopwords:` (optional), a value or set of values separated by `;` that will be removed from display
+    - `cloud-fields:` (required), a metadata field, or a set of metadata fields separated by `;`, to be featured in the cloud.
+    - `cloud-min:` (optional), an integer value such as `2`.
+    - `cloud-stopwords:` (optional), a value or set of values separated by `;` that will be removed from display
 
 ## Cloud _include 
 
