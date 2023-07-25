@@ -98,14 +98,6 @@ This will include a word cloud with the features you define in the variables:
 ```
 {% raw %}{% include feature/cloud.html fields="subject" min="" background="dark" button="outline-warning"  %}{% endraw %}`
 ```
-### Image-external
-
-This command will include an image that is not a collection item. 
-Provide an `src` value with a full url to the image or relative path to image inside the project repository:
-
-```
-{% raw %}{% include feature/image-external.html src="https://www.lib.uidaho.edu/media/collections/fatmen.jpg" width="75" %}{% endraw %}
-```
 ### Image
 
 The "image.html" include adds an image or images either from your collection or from an external source to the page in a [Bootstrap-styled figure](https://getbootstrap.com/docs/4.4/content/figures/){:target="_blank" rel="noopener"}.
@@ -113,25 +105,31 @@ The "image.html" include adds an image or images either from your collection or 
 It requires that you give a value for one variable, "objectid", and contains two optional variables. 
 These are defined below.
 
-*Required*:
+*Required:*
 
-- **objectid**: several options below (required)
+- **objectid**: several options below
 
     1. one or more objectids from your collection, separated by semicolon, e.g. "demo_001" or "demo_001;demo_005"
     2. a full URL to an external image file, e.g. "https://www.lib.uidaho.edu/digital/images/fluffyclouds.jpg"
     3. a relative link to an image file stored in this repository (that is not included in the collection), i.e. "/assets/img/evan.jpg"  
-    IMPORTANT NOTE: Options 2 and 3 require you to add an "alt" option (or "alt" options for multiple images) in order to allow for the accessibility enabled by the "alt" tag
-    
-    Examples:
-    - Single collection image --> `objectid="demo_psychiana548"`
-    - Multiple collection images --> `objectid="demo_psychiana548;demo_psychiana550"`
-    - Single external image --> `objectid="https://www.lib.uidaho.edu/digital/images/fluffyclouds.jpg"`
-    - Multiple images (one external and one relative) --> --> `objectid="https://www.lib.uidaho.edu/digital/images/fluffyclouds.jpg;assets/images/grayclouds.jpg"`
 
-*Optional*:
+{:.alert .alert-yellow}
+**Important note:** Options 2 and 3 require you to add an "alt" option (or "alt" options for multiple images) in order to allow for the accessibility enabled by the "alt" tag.
+    
+Examples:
+
+- **Single collection image** --> `objectid="demo_psychiana548"`
+
+- **Multiple collection images** --> `objectid="demo_psychiana548;demo_psychiana550"`
+
+- **Single external image** --> `objectid="https://www.lib.uidaho.edu/digital/images/fluffyclouds.jpg"`
+
+- **Multiple images** (one external and one relative) --> `objectid="https://www.lib.uidaho.edu/digital/images/fluffyclouds.jpg;assets/images/grayclouds.jpg"`
+
+*Optional:*
 
 - **width**: Uses Bootstrap sizing to set the image's percentage size.
-    - *Options*: `25`, `50`, `75`, or `100`
+    - *Options:* `25`, `50`, `75`, or `100`
 - **caption**: By default the figure include automatically adds the title of the item from your metadata. The caption option is used *only* if you would like to override the default title. To replace the title, you can either add the text (in quotation marks) for an alternative caption *or* give the value `false` (with no quotation marks) to not include any caption.
     - To manually set the caption, provide the text, e.g. `caption="Example caption"`
     - If you'd like to turn the caption off use `caption=false`
@@ -198,39 +196,39 @@ See information in our [TimelineJS Feature in the Advanced Section]({{ '/advance
 
 This will embed a video item into the page by providing an objectid that refers to the video, which can be within the collection or external to it: 
 
-*Required*:
+*Required:*
 
-- "objectid" = several options below (required)
+- "objectid" = several options below
     1. an objectid of a video item in this collection (usually that has an youtubeid or vimeoid), e.g. "demo_003"
     2. a full URL to a video hosted on YouTube, e.g. https://youtu.be/dbKNr3wuiuQ
     3. a full URL to a video hosted on Vimeo, e.g. https://vimeo.com/464555587 
     4. a full URL to an external video file, e.g. "https://www.lib.uidaho.edu/digital/videos/fluffyclouds.mp4"
     5. a relative link to a video file stored in this repository (that is not included in the collection), i.e. "/assets/videos/cloudyskies.mp4"
 
-*Optional*:
+*Optional:*
 
-- "caption" = by default the figure include automatically adds the title of the item from your metadata. The caption option allows you to manually add a different caption, or give the value false for none. (optional)
-- "width" = will use responsive sizing to set the % size on desktop (will be 100% on mobile), choose from "25", "50", "75", or "100" (optional)
-- "ratio" = use Bootstrap ratio options "21x9", "16x9", "4x3", or "1x1" to customize the responsive aspect ratio. 16by9 is default. (optional)
+- "caption" = by default the figure include automatically adds the title of the item from your metadata. The caption option allows you to manually add a different caption, or give the value false for none.
+- "width" = will use responsive sizing to set the % size on desktop (will be 100% on mobile), choose from "25", "50", "75", or "100"
+- "ratio" = use Bootstrap ratio options "21x9", "16x9", "4x3", or "1x1" to customize the responsive aspect ratio. 16by9 is default.
 
 Examples:
 
-- Video in collection (with 50% width)
+- **Video in collection** (with 50% width)
 
-`{% raw %}{% include feature/video.html objectid="demo_003" width="50" %}{% endraw %}"`
+`{% raw %}{% include feature/video.html objectid="demo_003" width="50" %}{% endraw %}`
 
-- YouTube Video external to collection
+- **YouTube video external to collection**
 
  `{% raw %}{% include feature/video.html objectid="https://youtu.be/dbKNr3wuiuQ" %}{% endraw %}`
 
-- Vimeo Video external to collection (with a caption)
+- **Vimeo video external to collection** (with a caption)
 
 `{% raw %}{% include feature/video.html objectid="https://vimeo.com/464555587" caption="K. Silem Mohammad Interview"%}{% endraw %}`
 
-- External video
+- **External video**
 
 `{% raw %}{% include feature/video.html objectid="https://www.lib.uidaho.edu/digital/videos/fluffyclouds.mp4" %}{% endraw %}`
 
-- Video stored in repository (not recommended) 
+- **Video stored in repository** (not recommended due to file size) 
 
 `{% raw %}{% include feature/video.html objectid="/assets/videos/cloudyskies.mp4" %}{% endraw %}`
