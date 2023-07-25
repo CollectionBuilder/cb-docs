@@ -13,7 +13,7 @@ In order to change the type of information the Timeline displays, you'll need to
 ### Change the Field Generating the Timeline
 
 {:.alert .alert-yellow .mt-4}
-Note: You can choose any field to add to this visualization, but if the field's datatype is "text" (rather than "integer"), you'll need to start with the steps in this section, and then move on to the [instructions below](#change-timeline-visualization-to-include-text-values-rather-than-integers) to include a text field.
+**Note:** You can choose any field to add to this visualization, but if the field's datatype is "text" (rather than "integer"), you'll need to start with the steps in this section, and then move on to the [instructions below](#change-timeline-visualization-to-include-text-values-rather-than-integers) to include a text field.
 
 1. Navigate to the "_layouts" directory, and open the "timeline.html" file.
 2. On the second line of code in the "timeline.html" file, change the value for "map" from "date" to another metadata field that you'd like to represent.
@@ -77,3 +77,11 @@ You'll need to follow the [instructions above](#change-the-field-generating-the-
 {% raw %}`{%- assign uniqueYears = clean-years | split: ";" | uniq | sort -%}`{% endraw %}
 
 Your Timeline visualization will now be based on the text values in your chosen field.
+
+### Change Timeline Button Value
+
+After you follow these instructions, you will still see a blue button that says "Year" on your new timeline page. 
+
+To update this, you will need to navigate to the "timeline.html" file in the "_layouts" folder and then change the button value from "Year" to your custom field name (see line 22 of the code).
+
+{% include feature/image.html img="change-button-value.gif" alt="Visual Studio Code user changes the button value from year to depth in the timeline.html file" border=true width="80%" %}
