@@ -90,9 +90,12 @@ To Push your local changes up to GitHub, either:
 - Click the blue Sync Changes button at the top of the "Source Control" pane.
 - Or click the sync icon in the lower left bottom bar that looks like two arrows in a circle.
 
-When you are working on multiple computers or collaborating with others, be sure to Fetch and Pull changes from GitHub before you start working--Pull can be accessed by the same methods as Push in VS Code.
+When you are working on multiple computers or collaborating with others, be sure to Fetch and Pull changes from GitHub before you start working -- Pull can be accessed by the same methods as Push in VS Code.
 
-*Tip:* Hovering over icons on VS Code will pop up more information about what they represent.
+**Tip:** Hovering over icons on VS Code will pop up more information about what they represent.
+
+{:.alert .alert-red}
+**Important Note:** Your computer may prompt you to authorize Visual Studio Code to make changes and then ask you to sign in to GitHub. For step-by-step instructions on the authentication process, check out this timestamped section of the [Using Git with VS Code video](https://www.youtube.com/watch?v=i_23KUAEtUM&t=300s){:target="_blank" rel="noopener"} from the [Visual Studio Code website](https://code.visualstudio.com/docs/sourcecontrol/overview){:target="_blank" rel="noopener"}.
 
 ### Commit & Push on Command Line
 
@@ -113,4 +116,4 @@ When you are working on multiple computers or collaborating with others, be sure
 Git will output detailed information about any changes and update your local history and files. If there are no changes to pull, the terminal will say "Already up to date."
 This feedback can be helpful for understanding recent updates, providing more reference information than the GUI methods of Pull.
 
-*Tip:* While typing Git commands and filenames, you can use "tab complete"--start typing the first few letters of the name then hit `Tab`, if something matches it will automatically finish typing the command or filename.
+**Tip:** While typing Git commands and filenames, you can use "tab complete"--start typing the first few letters of the name then hit `Tab`, if something matches it will automatically finish typing the command or filename.
