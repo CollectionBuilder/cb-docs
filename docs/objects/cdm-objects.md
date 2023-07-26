@@ -24,6 +24,5 @@ These items do not have to be part of your CONTENTdm repository.
 
 {:.alert .alert-red}
 **Note:** CONTENTdm's "compound object" type can be tricky to work with! 
-There are solutions to working with and displaying "compound objects" in CB-CDM, however, they may not immediately work out of the box in all cases.
-*If you have a choice, avoid compound objects!*
-If not, take care with your metadata transformations and reach out to the CollectionBuilder team for help.
+There are solutions to working with and displaying "compound objects" in CB-CDM, however, they don't work out of the box and require some metadata transformations.
+CollectionBuilder-CSV *does* support compound objects, so you may want to explore using it instead!
