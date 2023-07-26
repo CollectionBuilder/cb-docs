@@ -46,9 +46,7 @@ This walkthrough builds off the [CollectionBuilder-CSV Walkthrough](https://coll
 
 - Click the blue **Commit** button below the message box to commit the change.
 
-- To Push your local changes up to GitHub, click the blue **Sync Changes** button.
-
-## 4. Upload your object files to the "objects/" folder
+## 4. Add your object files to the "objects/" folder
 
 - Download the [demo-objects.zip](https://www.lib.uidaho.edu/collectionbuilder/demo-objects.zip){:target="_blank" rel="noopener"} file (includes image files, PDFs, and mp3s). Double click on this file to unzip it.
 
@@ -57,19 +55,22 @@ This walkthrough builds off the [CollectionBuilder-CSV Walkthrough](https://coll
 - Find the unzipped demo-objects folder (most likely in Downloads or on the Desktop) and open the folder.
 
 {:.alert .alert-red}
-**Warning:** Make sure to select all the object files in the demo-objects folder instead of just uploading the demo-objects.zip file or the demo-objects folder.
+**Warning:** Make sure to select all the object files in the demo-objects folder instead of just adding the demo-objects.zip file or the demo-objects folder.
 
 - Drag your mouse down the list of files to select all the objects to add to your repository. Then drag the selected objects into the **objects** folder, right underneath the folder called **"thumbs."**
 
 {% include feature/image.html img="objects-upload-csv.gif" alt="User selects all files from demo-objects folder and drags them into the objects folder on Visual Studio Code" border=true width="80%" %}
 
-- Follow the instructions [(from Step 3)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/#3-commit-your-changes-using-vs-code) to commit and sync your changes.
+- Follow the same instructions [(from Step 3)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/#3-commit-your-changes-using-vs-code) to commit your changes in VS Code. Your commit message might be something like, "Add objects."
 
 ## 5. Run the **rake derivatives** task
 
 - CB-CSV's **"generate_derivatives"** rake task automates creating a small and thumb image from all images and PDFs contained within the **"objects/"** directory in your project repository. It automatically  outputs the derivatives to **"objects/small/"** and **"objects/thumbs/"** folders. 
 
-- In VS Code, open a terminal in your project repository by clicking **Terminal** in the top menu bar and then **"New Terminal."** 
+{:.alert .alert-blue}
+**Want to learn more about the generate derivatives rake task?** Check out our documentation on [generating thumb and small object derivatives](https://collectionbuilder.github.io/cb-docs/docs/objects/derivatives/#create-small-and-thumb-derivatives){:target="_blank" rel="noopener"}.
+
+- To run the generate derivatives rake task, navigate to your project repository in VS Code and open a terminal by clicking **Terminal** in the top menu bar and then **"New Terminal."** 
 
 {% include feature/image.html img="newterminal.gif" alt="Visual Studio Code user opens a new terminal by clicking on Terminal and then New Terminal" border=true width="80%" %}
 
@@ -85,10 +86,15 @@ This walkthrough builds off the [CollectionBuilder-CSV Walkthrough](https://coll
 
 - You should be able to see your newly-generated derivatives in your repository's **"objects/small/"** and **"objects/thumbs/"** folders.
 
-{:.alert .alert-blue}
-**Want to learn more about the generate derivatives rake task?** Check out our documentation on [generating thumb and small object derivatives](https://collectionbuilder.github.io/cb-docs/docs/objects/derivatives/#create-small-and-thumb-derivatives){:target="_blank" rel="noopener"}.
+- Follow the same instructions [(from Step 3)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/#3-commit-your-changes-using-vs-code) to commit your changes in VS Code. Your commit message might be something like, "Add object derivatives."
 
-## 6. Add image_small metadata in Google Sheets 
+## 6. Push your changes to GitHub using VS Code
+
+- To Push all your committed local changes up to GitHub, click on the **Source Control** icon, i.e. the network icon on the left side, or press Ctrl + Shift + G.
+
+- Then click the blue **Sync Changes** button. This will sync your local changes with the GitHub repository.
+
+## 7. Add image_small metadata in Google Sheets 
 
 - Make a copy of this Google Sheet of premade demo metadata: [Object Derivatives Example Metadata](https://docs.google.com/spreadsheets/d/11M4SWG5ipL1Axm2-rJICTU_hFys1KU67TXHCSz5uqqY/copy){:target="_blank" rel="noopener"}
 
@@ -115,7 +121,7 @@ This walkthrough builds off the [CollectionBuilder-CSV Walkthrough](https://coll
 
 {% include feature/image.html img="paste-values-only.gif" alt="Google Sheets user right clicks in the selected cells and clicks Paste Special and then Values only" border=true width="80%" %}
 
-## 7. Add image_thumb metadata in Google Sheets
+## 8. Add image_thumb metadata in Google Sheets
 
 - Click in the sixth row of the image_thumb column. In this cell, type `="/objects/"&` and then click on the cell in the sixth row of the identifier column. The cell contents should now be `="/objects/"&R6`.
 
@@ -126,7 +132,7 @@ This walkthrough builds off the [CollectionBuilder-CSV Walkthrough](https://coll
 {:.alert .alert-green}
 **Pro Tip:** To save yourself time, you can put both formulas in the **image_small** and **image_thumb** cells and then select both and drag them down at the same time. You can also select both columns, copy their contents, and paste them as values only at the same time.
 
-## 8. Use API recipes to create derivatives for YouTube video objects (if necessary)
+## 9. Use API recipes to create derivatives for YouTube video objects (if necessary)
 
 - If you have YouTube videos in your collection, the **"image_small"** and **"image_thumb"** fields can be filled in using YouTube's image API. 
 
@@ -146,7 +152,7 @@ https://img.youtube.com/vi/**[youtubeid]**/mqdefault.jpg
 {:.alert .alert-blue}
 **What about MP3s and MP4s?** MP3 and MP4 files will not have anything in the image_small and image_thumb cells. However, CollectionBuilder will generate icons for these files based on their format.
 
-## 9. Prepare your metadata for upload
+## 10. Prepare your metadata for upload
 
 - Download the metadata spreadsheet as a .csv file by clicking **File** → **Download** → **Comma Separated Values (.csv)**
 
@@ -157,7 +163,9 @@ https://img.youtube.com/vi/**[youtubeid]**/mqdefault.jpg
 
 - Without opening the file, rename it using all lowercase letters, no spaces, and no special characters. For example: **"demo-repository.csv"**
 
-## 10. Other ways for generating filenames for object derivatives:
+<div class="alert alert-blue" markdown="1">
+
+**Other Ways to Generate Filenames for Object Derivatives**
 
 - **Using the file listing option** found in our [Object Utilities documentation](https://collectionbuilder.github.io/cb-docs/docs/extras/utilities/){:target="_blank" rel="noopener"} to generate a list of filenames
 
@@ -167,6 +175,8 @@ https://img.youtube.com/vi/**[youtubeid]**/mqdefault.jpg
 
     - **Example:** This formula `="/small/"&index(SPLIT(Z15,"."), 1)&"_sm.jpg"` will generate the correct small object filename from the object_location field
 
+</div>
+
 ## 11. Complete steps 8 through 18 of the [CSV Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/){:target="_blank" rel="noopener"}.
 
-- If you are interested in finishing your collection site setup, return to the [CSV Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/){:target="_blank" rel="noopener"} and complete steps 8 through 18.
+- If you are interested in finishing your collection site setup with the custom metadata you created, return to the [CSV Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/){:target="_blank" rel="noopener"} and complete steps 8 through 18.
