@@ -25,7 +25,7 @@ This walkthrough provides steps for creating an example digital collection using
     - [Install Visual Studio Code (VS Code)](https://collectionbuilder.github.io/cb-docs/docs/software/texteditor/){:target="_blank" rel="noopener"}
     - [Install Ruby](https://collectionbuilder.github.io/cb-docs/docs/software/ruby/){:target="_blank" rel="noopener"}
     - [Install Jekyll](https://collectionbuilder.github.io/cb-docs/docs/software/jekyll/){:target="_blank" rel="noopener"}
-    - [Install ImageMagick and Ghostscript](https://collectionbuilder.github.io/cb-docs/docs/software/optional/#imagemagick-and-ghostscript){:target="_blank" rel="noopener"}
+    - [Install ImageMagick and Ghostscript](https://collectionbuilder.github.io/cb-docs/docs/software/optional/#imagemagick-and-ghostscript){:target="_blank" rel="noopener"} (*Optional:* You only need this software if you want to create object derivatives)
 
 - In our documentation we've tried to anticipate common issues to help with troubleshooting, but if these options do not work, try Googling your problem using a specific search (include the error message you are getting!). 
 
@@ -74,17 +74,16 @@ This walkthrough provides steps for creating an example digital collection using
 
 {% include feature/image.html img="open-vs-code.gif" alt="GitHub Desktop user clicking on Open in Visual Studio Code button to open VS Code application" border=true width="80%" %}
 
-## 6. Upload your objects to your repository directly (if necessary)
+## 6. Add your objects to your repository directly (if necessary)
 
-- In this demo collection, the **object_location**, **image_small**, and **image_thumb** columns in the metadata CSV include URLs to external objects (e.g., image files, PDFs, mp3s, etc.), so you do not need to add any object files directly to the repository in VS Code. 
+{:.alert .alert-red}
+**Important!** The demo metadata for this walkthrough already contains links to external objects (e.g., image files, PDFs, mp3s, etc.) in the object_location, image_small, and image_thumb fields, so **you do not need to add any object files directly to the repository in VS Code.**
 
-{:.alert .alert-blue}
-**Want to learn more about object location fields?** Check out documentation on how to use the correct file paths or URLs for your objects: [https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/#object-location-fields](https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/#object-location-fields){:target="_blank" rel="noopener"} 
+- If you want to get started right away with building a collection site using the demo metadata, [continue to Step 7](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#7-prepare-your-metadata-for-upload) of this walkthrough.
 
-- If you were not using links to external objects, then you would add objects to the **"objects"** folder by dragging all the files into the folder and then committing your changes.
+- **Interested in learning how to add object files directly to your repository?** If so, you can check out our [Object Derivatives Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/){:target="_blank" rel="noopener"}. This walkthrough also reviews how to generate thumb and small object derivatives using CollectionBuilder-CSV's built-in rake tasks and how to update your metadata spreadsheet to include these derivatives.
 
-{:.alert .alert-yellow}
-**Important!** Check out our [Object Derivatives Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/){:target="_blank" rel="noopener"} to learn how to add objects directly to your repository, generate thumb and small object derivatives using CollectionBuilder-CSV's built-in rake tasks, and update your metadata spreadsheet to include these derivatives.
+- For more information on the **object_location** field, visit our [Object Location Fields documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/#object-location-fields){:target="_blank" rel="noopener"} which covers how to use the correct file paths or URLs for your objects.
 
 ## 7. Prepare your metadata for upload
 
@@ -130,9 +129,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 - Click the blue **Commit** button below the message box to commit the change.
 
-- To Push your local changes up to GitHub, click the blue **Sync Changes** button.
-
-{% include feature/image.html img="commit-changes.gif" alt="Visual Studio Code user stages a change by clicking the plus sign, types in a commit message, and then presses the commit button and sync changes button" border=true width="80%" %}
+{% include feature/image.html img="commit-csv.gif" alt="Visual Studio Code user stages a change by clicking the plus sign, types in a commit message, and then presses the commit button" border=true width="80%" %}
 
 ## 10. Configure your site settings in the _config.yml file
 
@@ -163,7 +160,7 @@ title: Demo Repository
 {:.alert .alert-blue}
 **Note:** To view more information about the **_config.yml** file and what it can change in your site, check out our [Site Config documentation](https://collectionbuilder.github.io/cb-docs/docs/config/){:target="_blank" rel="noopener"}.
 
-- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in Visual Studio Code and push the changes up to GitHub. Your commit message might be something like, "Update site settings."
+- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update site settings."
 
 ## 11. Open the terminal in VS Code
 
@@ -235,7 +232,7 @@ featured-image: psychiana005
 
 - Press Ctrl / Command + S to save your changes.
 
-- After you have updated the featured image, write your commit message (e.g. Add featured image) and follow the instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit and sync your changes. 
+- After you have updated the featured image, write your commit message (e.g. Add featured image) and follow the instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes. 
 
 - View your changes by refreshing your site in your browser window. 
 
@@ -255,7 +252,7 @@ featured-image: psychiana005
 
 - Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"}.
 
-- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code and push them up to GitHub. Your commit message might be something like, "Update the About page."
+- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update the About page."
 
 - View your changes by refreshing your site in your browser window. 
 
@@ -281,12 +278,20 @@ baseurl: /demo-repository
 
 - Save your changes with Ctrl + S.
 
-- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in Visual Studio Code and push them up to GitHub. Your commit message might be something like, "Update the URL variables."
+- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update URL variables."
 
 {:.alert .alert-yellow}
 **Another option for deploying your site:** If you have your own server for hosting your site, you can build the site with Jekyll and then move the files to your web server. This allows for the publishing of CollectionBuilder sites on your own or your organization's web servers. Read our [Building Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/deploy/build/){:target="_blank" rel="noopener"} for more info. 
 
-## 17. Publish your site using GitHub Actions
+## 17. Push your changes to GitHub using VS Code
+
+- To Push all your committed local changes up to GitHub, click on the **Source Control** icon, i.e. the network icon on the left side, or press Ctrl + Shift + G.
+
+- Then click the blue **Sync Changes** button. This will sync your local changes with the GitHub repository.
+
+{% include feature/image.html img="push-changes.gif" alt="Visual Studio Code user clicks the blue sync changes button to push changes to GitHub" border=true width="80%" %}
+
+## 18. Publish your site using GitHub Actions
 
 - Visit [github.com](https://github.com/){:target="_blank" rel="noopener"} and log into your account.
 
@@ -326,7 +331,7 @@ baseurl: /demo-repository
 
 - Going forward, each time you push or directly commit to the repository, **GitHub Actions** will rebuild the live site.
 
-## 18. Explore potential next steps
+## 19. Explore potential next steps
 
 Your collection website is complete! To implement additional customization options, your next steps could be:
 
