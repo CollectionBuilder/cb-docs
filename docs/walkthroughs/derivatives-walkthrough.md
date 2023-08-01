@@ -31,7 +31,7 @@ This walkthrough builds off the [CollectionBuilder-CSV Walkthrough](https://coll
 
 {% include feature/image.html img="gitignore.gif" alt="Visual Studio Code user types a # symbol in front of the objects/ line in the gitignore file" border=true width="80%" %}
 
-- Save your changes with Ctrl + C or by clicking File → Save.
+- Save your changes with Ctrl + S or by clicking File → Save.
 
 {:.alert .alert-yellow}
 **Note:** Any changes you make to your **"objects"** folder will now appear in your Source Control panel on VS Code where you can commit and sync your changes.
