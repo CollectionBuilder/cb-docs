@@ -160,6 +160,8 @@ title: Demo Repository
 {:.alert .alert-blue}
 **Note:** To view more information about the **_config.yml** file and what it can change in your site, check out our [Site Config documentation](https://collectionbuilder.github.io/cb-docs/docs/config/){:target="_blank" rel="noopener"}.
 
+- Save your changes with Ctrl + S or by clicking File → Save.
+
 - Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update site settings."
 
 ## 11. Open the terminal in VS Code
@@ -230,7 +232,7 @@ featured-image: psychiana005
 
 {% include feature/image.html img="featured-image-csv.gif" alt="Visual Studio code user updates the featured image in the theme.yml file" border=true width="80%" %}
 
-- Press Ctrl / Command + S to save your changes.
+- Save your changes with Ctrl + S or by clicking File → Save.
 
 - After you have updated the featured image, write your commit message (e.g. Add featured image) and follow the instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes. 
 
@@ -251,6 +253,8 @@ featured-image: psychiana005
 **New to Markdown?** Learn about what Markdown is and check out some learning resources on our [Markdown glossary page](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown){:target="_blank" rel="noopener"}.
 
 - Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"}.
+
+- Save your changes with Ctrl + S or by clicking File → Save.
 
 - Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update the About page."
 
@@ -276,7 +280,7 @@ baseurl: /demo-repository
 
 {% include feature/image.html img="change-url-variables.gif" alt="Visual Studio Code user types in new URL variables in the config.yml file" border=true width="80%" %}
 
-- Save your changes with Ctrl + S.
+- Save your changes with Ctrl + S or by clicking File → Save.
 
 - Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update URL variables."
 
