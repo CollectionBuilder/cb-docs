@@ -46,5 +46,5 @@ You're welcome to contact any or all of us:
 - CollectionBuilder Team (<mailto:collectionbuilder.team@gmail.com>)
 - Evan Williamson (<mailto:ewilliamson@uidaho.edu>)
 - Devin Becker (<mailto:dbecker@uidaho.edu>)
-- Olivia Wikle (<mailto:omwikle@uidaho.edu>)
+- Olivia Wikle (<mailto:omwikle@iastate.edu>)
 - Julia Stone (<mailto:juliastone@uidaho.edu>)
