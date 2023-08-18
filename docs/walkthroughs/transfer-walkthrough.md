@@ -24,39 +24,37 @@ This walkthrough reviews how to transfer a **CollectionBuilder-GH** (CB-GH) site
 
 - GitHub Desktop will ask you to confirm the path of the repository you are cloning. Once you click the blue **Clone** button, GitHub Desktop will create a new folder on your computer with the matching your repository name and clone the contents of the repository from GitHub.
 
-{% include feature/image.html img="clone-demo.gif" alt="User clicking on the clone button in GitHub Desktop to clone the repository from GitHub" border=true width="80%" %}
+{% include feature/image.html img="clone-gh.gif" alt="User clicking on Code dropdown and then the Open with GitHub Desktop button" border=true width="80%" %}
 
 - Once the repository is cloned to your local machine via GitHub Desktop, click the **Show in Finder** button _(on Mac)_ or the **Show in Explorer** button _(on Windows)_.
 
     - Alternatively, in the top menu, click **Repository** and then **Show in Finder** _(on Mac)_ or **Show in Explorer** _(on Windows)_
 
-[GIF OF PRESSING SHOW IN FINDER BUTTON HERE]
+{% include feature/image.html img="show-finder-gh.gif" alt="User clicking on Show in Finder button in GitHub Desktop" border=true width="80%" %}
 
 - This will show you the GH Repository as folders of files.
 
-## 2. Create a CSV Transfer Repository
+## 2. Download a CSV Transfer Repository as a ZIP file
 
-- On the [CollectionBuilder-CSV template](https://github.com/CollectionBuilder/collectionbuilder-csv){:target="_blank" rel="noopener"}, click the green **Use this template** button. Then click **Create a new repository**.
+- On the [CollectionBuilder-CSV template](https://github.com/CollectionBuilder/collectionbuilder-csv){:target="_blank" rel="noopener"}, click the green **Code** button and then **Download ZIP**.
 
-- Name your repository something like **csv-transfer-repository** and leave it as Public.
-
-- Click the green **Create repository** button.
-
-- Then click the green **Code** button and then **Download ZIP**.
-
-[GIF OF CLICKING ON CODE THEN DOWNLOAD ZIP HERE]
+{% include feature/image.html img="download-csv-zip.gif" alt="User clicking on the Code button and then Download ZIP on the GitHub web interface" border=true width="80%" %}
 
 - Expand the ZIP file by double clicking on it.
 
-- Now, you should have both the GH Repository and the CSV Transfer Repository open in Finder or Explorer.
+- Now, you should have both the CSV Transfer Repository and the GH Repository open in Finder or Explorer.
 
-SCREENSHOT HERE OF GH REPO AND CSV TRANSFER REPO OPEN IN FINDER
+{% include feature/image.html img="side-by-side.gif" alt="User showing the GH repository and the CSV transfer repository windows side by side" border=true width="80%" %}
 
 ## 3. Check your commit history to see which files have been changed
 
-- Before you begin transferring files, look in your **commit history** of your GH Repository to see which files you have changed. These will be the files that you keep in the repository. Do not replace these files with files from the CSV Transfer Repository.
+- Before you begin transferring files, look in your **commit history** of your GH Repository to see which files you have changed. 
 
-[GIF HERE OF LOOKING AT COMMIT HISTORY]
+- To view your commit history, click on **commits** (i.e., the clock icon) located in the <> Code section of your repository.
+
+- You can click on a commit message to see which file you changed. These will be the files that you keep in the repository. Do not replace these files with files from the CSV Transfer Repository.
+
+{% include feature/image.html img="check-commits.gif" alt="User checks commit history and clicks on a commit to see which file was changed" border=true width="80%" %}
 
 - **Files to Keep:** Usually files like **about.md** and **home-infographic.html** may have been changed. In addition to any files that you have changed, make sure to leave the **config.yml** file and all the files in the **_data folder** and **objects folder**. You may also want to leave some files from the **assets/img folder**, such as organization logos, etc.
 
@@ -68,13 +66,15 @@ SCREENSHOT HERE OF GH REPO AND CSV TRANSFER REPO OPEN IN FINDER
 
 - To select more than one file at a time, hold down **Shift**. You can select or unselect a single file by holding down **Command / Ctrl**.
 
-[GIF OF SELECTING FILES AND DRAGGING THEM GOES HERE]
+{% include feature/image.html img="drag.gif" alt="User selects files from the layouts folder of the CSV Transfer Repository and then drags them into the GH Repository layouts folder" border=true width="80%" %}
 
 - It is sometimes helpful to open the folders so you can be more precise about where you are dragging the files. If you are adding a file to the repository in general, and not to a specific folder, drag it to the very bottom of the window.
 
-- Once you have finished dragging over everything, the CSV Transfer Repository should be mostly empty, except for the files that you left in your GH Repository (e.g., **config.yml**, the **_data folder**, the **objects folder**, etc.)
+- When prompted, you can click **Apply to All** and then click the **Replace** button to replace the files in the GH Repository with the new files from the CSV Transfer Repository.
 
-[SCREENSHOT OF MOSTLY EMPTY CSV TRANSFER REPO]
+{% include feature/image.html img="replace.gif" alt="User selects Apply to All checkbox and then clicks the Replace button to replace the files" border=true width="80%" %}
+
+- Once you have finished dragging over everything, the CSV Transfer Repository should be mostly empty, except for the files that you left in your GH Repository (e.g., **config.yml**, the **_data folder**, the **objects folder**, etc.)
 
 ## 5. Delete a few files from the GH Repository
 
@@ -129,8 +129,6 @@ SCREENSHOT HERE OF GH REPO AND CSV TRANSFER REPO OPEN IN FINDER
 
 - For help on filling in the **image_small** and **image_thumb** columns, you can also complete [Steps 7-9](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/#7-add-image_small-metadata-in-google-sheets){:target="_blank" rel="noopener"} of our [Object Derivatives Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/){:target="_blank" rel="noopener"}.
 
-[INCLUDE EXAMPLE SPREADSHEET LINK?]
-
 ## 8. Replace your CB-GH metadata with your new CB-CSV metadata
 
 - Once you have finished filling in the new columns, download the metadata spreadsheet as a .csv file in Google Sheets by clicking **File** → **Download** → **Comma Separated Values (.csv)**.
@@ -144,17 +142,15 @@ SCREENSHOT HERE OF GH REPO AND CSV TRANSFER REPO OPEN IN FINDER
 
 - Right click the file, hover over **Open With...**, and then click Visual Studio Code. This will open the csv file in Visual Studio Code. 
 
-[GIF OF OPENING CSV FILE FROM DOWNLOADS FOLDER WITH VS CODE]
+{% include feature/image.html img="open-csv-vs-code.gif" alt="User opens csv file with Visual Studio Code." border=true width="80%" %}
 
 - Press **Ctrl + A** to select all the text in the CSV file. Then Press **Ctrl + C** to copy it.
-
-[GIF OF SELECTING THE TEXT AND THEN COPYING IT]
 
 - Navigate to your current metadata csv file by clicking on it in the **_data** folder.
 
 - Press **Ctrl + A** to select all the text in your current metadata csv file and then press **Ctrl + V** to paste the updated CB-CSV metadata over the outdated CB-GH metadata.
 
-[GIF OF SELECTING THE TEXT AND THEN PASTING NEW TEXT OVER IT]
+{% include feature/image.html img="replace-metadata.gif" alt="VS Code user copies the new metadata csv file over and pastes it over the old metadata csv file." border=true width="80%" %}
 
 - Save your changes with **Ctrl + S** or by clicking **File** → **Save**.
 
@@ -183,11 +179,9 @@ SCREENSHOT HERE OF GH REPO AND CSV TRANSFER REPO OPEN IN FINDER
 
 - Before you commit and push your changes, navigate to the **Settings** tab of your GH Repository on the GitHub web interface. Then click **Pages** in the left side menu.
 
-[GIF OF CLICKING SETTINGS AND THEN PAGES?]
+- Next to the **Visit Site** button, click the three dots and then **Unpublish site**. This will allow you to rebuild your new CB-CSV site.
 
-- Next to the **Visit Site** button, click the three dots and then **Unpublish**. This will allow you to rebuild your new CB-CSV site.
-
-[GIF OF UNPUBLISHING GH PAGES SITE]
+{% include feature/image.html img="unpublish-site.gif" alt="User clicks on unpublish site to unpublish their GitHub Pages site" border=true width="80%" %}
 
 ## 11. Prep your repository for publishing with GitHub Actions
 
