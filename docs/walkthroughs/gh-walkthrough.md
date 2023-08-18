@@ -9,6 +9,9 @@ lazyload: true
 
 This walkthrough provides steps for creating an example digital collection using demo metadata from the University of Idaho's [Psychiana Digital Collection](https://www.lib.uidaho.edu/digital/psychiana/){:target="_blank" rel="noopener"}, the **CollectionBuilder-GH Template**, and **GitHub Pages**.
 
+{:.alert .alert-blue}
+**Video Option:** If you would prefer to move through a video version of this walkthrough, check out our [CollectionBuilder-GH Walkthrough Videos page](../gh-walkthrough-videos/), or go directly to the [YouTube Playlist](https://www.youtube.com/playlist?list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H){:target="_blank" rel="noopener"}.
+
 {:.alert .alert-yellow}
 **Note:** You will not need to install any software on your computer for this walkthrough, but you will need to create a free GitHub account.
 
