@@ -32,12 +32,13 @@ Without values in the fields below, CollectionBuilder will not work properly.
 
 ### filename: 
 
-- The digital object's filename including the file extension, *or* a full URL to a file hosted external to your project.
-- The value **must exactly match the actual filename** of the file in your "objects" directory, including the case of the filename and file extension. Most web servers are case sensitive, so make sure everything matches!
-- Records for YouTube or Vimeo objects will leave this field blank.
-- Example value for item in your project's "objects" folder: `letter001.pdf`
-- Example value for external item: `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg`
-- **Important note on external items:** URLs to external media should always be secure HTTPS links. Media at HTTP links are likely to be blocked by browser security defaults as [mixed content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content), thus will not appear on your pages!
+- For normal items, this field will be the digital object's filename including the file extension, *or* a full URL to a file hosted external to your project. The value **must exactly match the actual filename** of the file in your "objects" directory, including the case of the filename and file extension. Most web servers are case sensitive, so make sure everything matches!
+    - Example value for item file in your project's "objects" folder: `letter001.pdf`
+    - Example value for external item file: `https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg`
+    - **Important note on external items:** URLs to external media should always be secure HTTPS links. Media at HTTP links are likely to be blocked by browser security defaults as [mixed content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content), thus will not appear on your pages!
+- YouTube or Vimeo items will leave this field blank.
+- Record items (metadata-only) can optionally add an external link that will appear as a clickable link on the item's page. 
+    - Example value for an external link for a "record" item type: `https://www.doi.org/10.1577/M02-113`
 - *Tip:* check [Get List of Filenames]({{ '/docs/extras/utilities/#get-list-of-filenames' | relative_url }}) for quick methods to fill in the filename field!
 
 ### title: 
@@ -47,15 +48,16 @@ Without values in the fields below, CollectionBuilder will not work properly.
 
 ### format: 
 
-- This field indicates the item's media type. Since CollectionBuilder uses logic based on `format` to display objects, this is the most important field to ensure the interactive visualizations function correctly. If there are errors or anomalies, some pages will not work. The input for this field should be structured according to [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml){:target="_blank" rel="noopener"} standards, consisting of a type and a subtype concatenated with a slash (`/`) between them. Use the actual MIME type corresponding to your item's file, which can generally be inferred by looking at the file extension (e.g. ".jpg", ".pdf", etc).
-- Below are the common format values supported by CB-GH:
+- This field indicates the item's media type. Since CollectionBuilder uses logic based on `format` to display objects, this is the most important field to ensure the interactive visualizations and item pages function correctly. If there are errors or anomalies, some pages will not work. 
+- For normal items the value of this field should match the standard [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml){:target="_blank" rel="noopener"} corresponding to your item's file, consisting of a type and a subtype concatenated with a slash (`/`) between them. This can can generally be inferred by looking at the file extension (e.g. ".jpg", ".pdf", etc). The common MIME type "format" values supported by CB-GH are:
     - Image: `image/jpeg`, `image/png`
     - Document: `application/pdf`
     - Audio: `audio/mp3`
     - Video: `video/mp4`
-- Two special format values are used to support "compound object" Item types:
-    - Compound Object: `compound_object` 
-    - Multiple: `multiple`
+- CB-GH also supports a few non-standard Item types by using special "format" values. These options are:
+    - Record: `record` (a metadata-only Item with no display file, optionally include an external link to the item using the "filename" field)
+    - Compound Object: `compound_object` (see Compound Object Formats below)
+    - Multiple: `multiple` (see Compound Object Formats below)
 
 <div class="alert alert-blue" markdown="1"> 
 
