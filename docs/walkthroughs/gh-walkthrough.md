@@ -15,11 +15,11 @@ This walkthrough provides steps for creating an example digital collection using
 {:.alert .alert-yellow}
 **Note:** You will not need to install any software on your computer for this walkthrough, but you will need to create a free GitHub account.
 
-## 1. Create a GitHub account.  
+## 1. Create a GitHub account. [(Video Version)](https://www.youtube.com/watch?v=M5rvu_3GtIQ&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=1&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
 
 - If you don't have an account, visit [GitHub](https://www.github.com){:target="_blank" rel="noopener"} and click the **Sign up** button. You do not need a paid account for using CollectionBuilder. After signing up, check your email to verify your account.
 
-## 2. Create a new repository.
+## 2. Create a new repository. [(Video Version)](https://www.youtube.com/watch?v=R0Z5Ed-xhj4&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=2&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
 
 - Log in to your GitHub account and visit the [**collectionbuilder-gh repository page**](https://github.com/CollectionBuilder/collectionbuilder-gh){:target="_blank" rel="noopener"}. 
 
@@ -31,7 +31,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 {% include feature/image.html img="create-repository.gif" alt="User entering a repository name and clicking create repository from template button" border=true width="80%" %}
 
-## 3. Prepare your metadata for upload.
+## 3. Prepare your metadata for upload. [(Video Version)](https://www.youtube.com/watch?v=5Iu_lods2Ts&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=3&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
 
 - Make a copy of this [**Google Sheet**](https://docs.google.com/spreadsheets/d/1x48Te3duPAxh53foEihQVKTfCKUjaCCbH7TrMMd_yU4/copy) of demo metadata. 
 
@@ -46,7 +46,9 @@ This walkthrough provides steps for creating an example digital collection using
 
 - **Without opening the CSV file**, rename it using all lowercase letters, no spaces, and no special characters (e.g. **psychiana-demo.csv**)
 
-## 4. Upload your metadata file.
+## 4. Upload your metadata file. [(Video Version)](https://www.youtube.com/watch?v=KVTnTJWzetA&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=5&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
+
+
 
 - On the homepage of your repository on GitHub.com, click on the **"_data"** folder. 
 
@@ -61,7 +63,7 @@ This walkthrough provides steps for creating an example digital collection using
 {:.alert .alert-blue}
 If you want to learn about creating, updating, and uploading your own metadata, visit our [**CollectionBuilder-GH Metadata Documentation**](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/).
 
-## 5. Upload your objects.
+## 5. Upload your objects. [(Video Version)](https://www.youtube.com/watch?v=Pzy0wOao0rg&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=6&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
 
 - Download the [**demo-objects.zip**](https://www.lib.uidaho.edu/collectionbuilder/demo-objects.zip){:target="_blank" rel="noopener"} file (includes image files, PDFs, and mp3s). 
 
@@ -74,7 +76,7 @@ If you want to learn about creating, updating, and uploading your own metadata, 
 
 - Write your commit message (e.g. Add collection objects) and commit your changes.
 
-## 6. Configure your site settings.
+## 6. Configure your site settings. [(Video Version)](https://www.youtube.com/watch?v=aO7wY-L0iQQ&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=7&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
 
 - On your repository homepage, click on the **"_config.yml"** file.
 
@@ -102,7 +104,7 @@ metadata: psychiana-demo
 
 - Write your commit message (e.g. Update site settings) and commit your changes.
 
-## 7. Generate your site.
+## 7. Generate your site. [(Video Version)](https://www.youtube.com/watch?v=t-OJa3KBfng&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=8&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
 
 - On your repository homepage, click the **Settings** tab in the top right and then click **Pages** in the left side menu. 
 
@@ -126,7 +128,7 @@ You can visit this URL to see changes to your live site. To ensure any changes y
 
 **Tip:** You may need to refresh the collection website for the changes to display.
 
-## 8. Add a featured image.
+## 8. Add a featured image. [(Video Version)](https://www.youtube.com/watch?v=8b8UxgOQoLk&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=9&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
 
 - On your repository homepage, click on the **"_data"** folder and then click on the **"theme.yml"** file. 
 
@@ -154,7 +156,7 @@ For the URL, https://juliastone0729.github.io/psychiana-demo/item.html?id=**psyc
 
 - After you have updated the featured image, write your commit message (e.g. Add featured image) and commit your changes. View your changes by visiting your site’s URL.
 
-## 9. Edit the About Page
+## 9. Edit the About Page. [(Video Version)](https://www.youtube.com/watch?v=tOOoSHIQ2RY&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=10&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
 
 - On your repository homepage, click on the **"pages"** folder and then on the **"about.md"** file. 
 
@@ -164,7 +166,7 @@ For the URL, https://juliastone0729.github.io/psychiana-demo/item.html?id=**psyc
 
 - After you are done editing the About page, write your commit message (e.g. Edit About page) and commit your changes. View your changes by visiting your site’s URL.
 
-## 10. Explore potential next steps.
+## 10. Explore potential next steps. [(Video Version)](https://www.youtube.com/watch?v=pBMB3HXE1ek&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=11&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
 
 Your collection website is complete! To implement additional **Customization Options**, your next steps could be:
 

@@ -1,7 +1,7 @@
 ---
 title: Object Derivatives Walkthrough
 parent: Walkthroughs
-nav_order: 4
+nav_order: 3
 lazyload: true
 ---
 
