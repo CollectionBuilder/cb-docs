@@ -90,12 +90,12 @@ This walkthrough reviews how to transfer a **CollectionBuilder-GH** (CB-GH) site
 
 ## 6. Generate image_small and image_thumb object derivatives
 
+{:.alert .alert-yellow}
+**Important!** In order to complete this step, you will need to install [ImageMagick and Ghostscript](https://collectionbuilder.github.io/cb-docs/docs/software/optional/#imagemagick-and-ghostscript){:target="_blank" rel="noopener"} on your computer. This software will enable you to use the rake generate_derivatives command.
+
 - Open your GH Repository in Visual Studio Code (VS Code) using GitHub Desktop. In the top menu, locate and click on **Repository**, and select the option, **Open in Visual Studio Code**.
 
     - Alternatively, in the box that says **Open the repository in your external editor**, you can click the button that says **Open in Visual Studio Code**.
-
-{:.alert .alert-blue}
-**Note:** In VS Code, you should notice many changes highlighted in the **Source Control** panel (i.e., the network icon on the left side) due to your recent transfer of folder and files from the CSV Transfer Repository to your GH Repository.
 
 - Open the terminal by clicking on **Terminal** in the top menu bar and then **New Terminal**.
 
