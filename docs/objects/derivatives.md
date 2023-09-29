@@ -79,6 +79,6 @@ Questions about hosting your objects? See [Object Deployment]({{ '/docs/objects/
 
 ## Derivatives for Other Object Types
 
-See the [Object Paths]({{ '/docs/objects/object-paths/' | relative_url }}) page for information on [YouTube]({{ '/docs/objects/object-paths/#path-for-youtube-objects' | relative_url }}) derivatives.
+See the [Object Paths]({{ '/docs/metadata/object-paths/' | relative_url }}) page for information on [YouTube]({{ '/docs/metadata/object-paths/#path-for-youtube-objects' | relative_url }}) derivatives.
 
 For other item types you may want to manually generate "small" and "thumbs" images following the conventions documented in the [Creating Derivatives](#create-small-and-thumb-derivatives) section above.

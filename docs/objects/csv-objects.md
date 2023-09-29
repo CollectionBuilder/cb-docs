@@ -124,4 +124,4 @@ You will likely want to gather the values necessary for each recipe and use form
 
 {:.alert .alert-red}
 Need help figuring out paths for externally-hosted objects such as items from CONTENTdm, YouTube videos, etc.? 
-View example paths and recipes on the [Constructing Object Paths]({{ '/docs/objects/object-paths/' | relative_url }}) page.
+View example paths and recipes on the [Constructing Object Paths]({{ '/docs/metadata/object-paths/' | relative_url }}) page.
