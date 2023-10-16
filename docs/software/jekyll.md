@@ -26,10 +26,10 @@ This process will take awhile as Gem installs all the dependencies and builds ex
 On Windows it may appear as if nothing is happening for a very very long time, since the terminal does not provide a progress bar, be patient!
 {:.alert .alert-yellow}
 
+Your dev environment is ready! Give yourself a hand!
+
 **Debugging Note:** 
 if you have **Ruby version 3.0+** and **Jekyll version 4.2.0** or less, when using Jekyll you may encounter an error in your terminal including "cannot load such file -- webrick (LoadError)".
 First, the CB template "Gemfile" includes `webrick`, so make sure you are using `bundle exec jekyll s`.
 If that doesn't help or you are using an older template, please try installing webrick globally using `gem install webrick` *or* adding it to your project Gemfile using `bundle add webrick` in the project directory.
 {:.alert .alert-red}
-
-Your dev environment is ready! Give yourself a hand!
