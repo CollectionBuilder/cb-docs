@@ -1,9 +1,9 @@
 ---
-title: CollectionBuilder-SA Depreciated, use CSV!
+title: CollectionBuilder-SA Deprecated, use CSV!
 release: 2021-11-04
 ---
 
-The CollectionBuilder-SA template has been depreciated. 
+The CollectionBuilder-SA template has been deprecated. 
 The concepts and use case it represents have been migrated into the more powerful and flexible [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv).
 Details specific to CB-SA will be removed from cb-docs.
 
