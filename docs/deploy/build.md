@@ -6,7 +6,7 @@ nav_order: 2
 
 # Building Your Site 
 
-The most common way to build your CB-CDM or CB-CSV site is to use Jekyll on your local computer (which can also be done with CB-GH if desired!).
+The most common way to build your CB-CSV site is to use Jekyll on your local computer (which can also be done with CB-GH if desired!).
 
 Jekyll build is a bit different than [using the development server]({{ '/docs/repository/generate/' | relative_url }}) because it outputs all the URLs used in the site to match your final deployment location based on your [configuration options]({{ '/docs/config/url/' | relative_url }}).
 The build version will include real URLs, swapping out the development links starting with `http://localhost:4000/` used by `jekyll s` with the production url value you have configured, e.g. `https://example.org`.
@@ -39,7 +39,7 @@ For static servers, some common options include:
 - **cPanel:** many hosts (such as Reclaim) provide cPanel as a web based interface to your server. Click on "File Manager" to upload files via the web interface. Your server will generally have a folder named something like "public_html" that represents the root of your website. 
 
 *Tip:* If you don't have a server, it is possible to build and host all CB projects via GitHub Pages. 
-This can work well for CB-CDM since there are no objects to host. 
+This works well if your objects are hosted elsewhere since you won't encounter size limits in your repository.
 Check [GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }}) and [Third party build services]({{ '/docs/deploy/thirdparty/' | relative_url }}) for more info.
 
 {:.alert .alert-yellow}

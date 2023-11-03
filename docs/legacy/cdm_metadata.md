@@ -1,7 +1,7 @@
 ---
 title: CONTENTdm Metadata
-parent: Metadata
-nav_order: 3
+parent: Legacy Docs
+nav_order: 1
 ---
 
 # CollectionBuilder-CONTENTdm Metadata
