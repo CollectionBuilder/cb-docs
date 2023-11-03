@@ -1,7 +1,7 @@
 ---
 title: Objects using CONTENTdm
-parent: Objects
-nav_order: 3
+parent: Legacy Docs
+nav_order: 2
 ---
 
 # Collection Objects Using CONTENTdm

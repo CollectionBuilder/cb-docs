@@ -9,39 +9,6 @@ nav_order: 11
 This section of "_data/theme.yml" configures advanced options such as image and font size, and Bootstrap themes. 
 This is an optional section—-your site will work just fine without adjusting these variables, but they're available if you'd like the extra options for customization.
 
-## CDM image % for IIIF:
-
-**CDM-Users only**: This is a *CONTENTdm-specific* variable section for adjusting size of images used throughout the site.
-CollectionBuilder uses the [IIIF Image API](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/API_Reference/IIIF_API_reference){:target="_blank" rel="noopener"} to retrieve images using a percentage size option. 
-The percentage must be 10% or greater.
-
-### image-percentage-large:
-
-- Default `70`
-
-```yaml
-image-percentage-large: 50
-```
-
-### image-percentage-medium: 
-
-- Default `40` 
-
-```yaml
-image-percentage-medium: 30
-```
-
-### image-percentage-small:
-
-- Default `20`
-
-```yaml
-image-percentage-small: 10
-```
-
-{:.alert .alert-green}
-**Pro Tip:** If your images are appearing blurry or take too long to load, try adjusting the image-sizing settings. The appropriate percentage depends on the full size of images contained in your CDM repository and may require some experimentation.
-
 ------
 
 ## Navbar Options:
