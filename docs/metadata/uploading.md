@@ -7,7 +7,7 @@ nav_order: 7
 # Add Your Metadata
 
 Once your metadata is ready, you'll want to add it to your project repository so CollectionBuilder can put it to use.
-This can be done either by uploading via the GitHub web interface (most **GH** users) or by adding it to your local repository folder (most **CSV/CDM** users).
+This can be done either by uploading via the GitHub web interface (most **GH** users) or by adding it to your local repository folder (most **CSV** users).
 This section provides the steps to do it!
 
 ## Prepare Metadata File
@@ -29,7 +29,7 @@ To download your metadata from Google Sheets:
 ## Add Metadata to Project
 
 With a properly formatted and named CSV in hand, you are ready to add your metadata to your CollectionBuilder project.
-This can be done either by uploading via the GitHub web interface (most **GH** users) or by adding it to your local repository folder (most **CSV/CDM** users).
+This can be done either by uploading via the GitHub web interface (most **GH** users) or by adding it to your local repository folder (most **CSV** users).
 
 ### Upload via GitHub Web interface
 

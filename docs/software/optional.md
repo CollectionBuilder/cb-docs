@@ -7,7 +7,7 @@ nav_order: 8
 # Optional Software
 
 {:.alert .alert-blue }
-Software in this section is optional and **will not be used by CollectionBuilder-GH or -CONTENTdm projects**. 
+Software in this section is optional and **will not be used by CollectionBuilder-GH or -Sheets projects**. 
 If you want to use Rake tasks to batch process PDF and image files for **CollectionBuilder-CSV**, this software is required!
 
 Most (*but not all!*) CollectionBuilder projects will involve working with a collection of digital objects, i.e. JPEGs, PDFs, MP3s, etc.

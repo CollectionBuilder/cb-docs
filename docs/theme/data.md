@@ -16,7 +16,7 @@ For instance, we often use the "facets.json" file to determine which fields shou
 	- This variable determines what metadata will be made available for download via the 'Download Data' options on the Home page and on the Data page.
 	- Format: Comma-delimited list contained between quotes
 ```yaml
-metadata-export-fields: "title,description,subject,date,date is approximate,source,latitude,longitude,subject (lcsh),format-original,donor,identifier,format,language,type,rights,rightsstatement,cdmid,objectid"
+metadata-export-fields: "title,description,subject,date,date is approximate,source,latitude,longitude,subject (lcsh),format-original,donor,identifier,format,language,type,rights,rightsstatement"
 ```
 
 {:.alert .alert-green}
