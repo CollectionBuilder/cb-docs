@@ -1,10 +1,10 @@
 ---
 title: Jekyll Build
 parent: Deploy
-nav_order: 2
+nav_order: 3
 ---
 
-# Building Your Site 
+# Build Locally and Self Host
 
 The most common way to build your CB-CSV site is to use Jekyll on your local computer (which can also be done with CB-GH if desired!).
 

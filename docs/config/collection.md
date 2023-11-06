@@ -31,7 +31,7 @@ The second most common error is spelling or case not **exactly** matching the CS
 
 ### metadata-csv: 
 
-- *Sheets only!* This value is generally used, but is not required--see [development mode](/docs/config/additional/#development-mode-sheets-only) for details.
+- *Sheets only!* This value is generally used, but is not required--see [development mode]({{ '/docs/config/additional/#development-mode-sheets-only' | relative_url }}) for details.
 - The full URL to your metadata CSV file or relative path + filename of CSV in your project repository 
 - If using a CSV contained with in the project, use a relative path starting with a slash `/`.
 ```yaml
