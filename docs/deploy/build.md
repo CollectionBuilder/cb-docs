@@ -71,9 +71,3 @@ The production ENV adds:
 The environment can be added before the Jekyll command, like `JEKYLL_ENV=production bundle exec jekyll build`. 
 To make it easier, CollectionBuilder provides the `rake deploy` command as an alternative.
 It is also the environment used by automatic build on GitHub Pages!
-
-{:.alert}
-**A Note on Google Analytics**: We don't necessarily recommend adding Google Analytics to your website. 
-We assume, however, that a large number of our eventual users might use the tool to collect web statistics (we do in many of our sites), so we provide a pre-configured method to automatically add the service's tracking code. <br>
-However, any analytics service can be added to your site by pasting the tracking snippet they provide into "_includes/head/analytics.html".
-If you're interested in an analytics platform that doesn't sell your users' data, we've enjoyed [Matomo](https://matomo.org/){:target='_blank' rel='noopener'} recently.

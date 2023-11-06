@@ -8,7 +8,7 @@ nav_order: 5
 
 CollectionBuilder templates have a builtin method to add analytics tracking snippets to your site.
 
-Any analytics platform can be added by pasting the tracking snippet they provide into "_includes/head/analytics.html".
+Any analytics platform can be added by pasting the tracking snippet they provide into the file "_includes/head/analytics.html".
 During "production" build *only*, the include is added to every page.
 By default, Jekyll is in the "development" environment, so analytics will not be added while you are testing your site locally.
 
