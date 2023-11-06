@@ -7,7 +7,7 @@ nav_order: 2
 # Site Settings
 
 This section of "_config.yml" is used to define the core information about your site. 
-The values will be pulled into pages throughout your collection, populating areas such as the banner, footer, and meta markup.
+The values will be pulled into pages throughout your collection, populating areas such as the banner, footer, meta markup, auto-citations, and data outputs.
 
 ### title: 
 
