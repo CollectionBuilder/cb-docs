@@ -49,6 +49,8 @@ Second, set your email so that it matches your GitHub account's email:
 git config --global user.email "myemail@gmail.com"
 ```
 
+If you set up your GitHub account to [keep your email private](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address#setting-your-commit-email-address-on-github), be sure to use the `noreply` email they provide!
+
 *Optionally*, set your default command line text editor for use with git (Windows users should have already done this when using the Git installer).
 This editor may pop up inside your terminal window during some command line git operations that require a message (it is not your normal code editor such as VS Code).
 By default it is set to Vim, which [can be very confusing](https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/){:target="_blank" rel="noopener"} if unexpected.

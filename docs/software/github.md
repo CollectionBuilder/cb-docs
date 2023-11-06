@@ -34,8 +34,8 @@ See our [GitHub Orgs entry]({{ '/docs/glossary/#github-organizations' | relative
 Your email and user name is recorded with every commit.
 This helps ensure integrity and authenticity of the history.
 Most people keep their email public. 
-Alternatively, check GitHub's tips on how to [set up email privacy](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#about-commit-email-addresses){:target="_blank" rel="noopener"}. 
-GitHub can provide a no-reply email address that can be found via your email settings on your profile.
+However, GitHub provides tools to set up a `noreply` address that enables you to keep your email private--check GitHub's tips on how to [set up email privacy](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#about-commit-email-addresses){:target="_blank" rel="noopener"} or look in your email settings on your profile.
+If you set up a private email, be sure to also use it when [configuring git on your computer](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address#setting-your-commit-email-address-on-github)!
 
 ## Using GitHub
 
