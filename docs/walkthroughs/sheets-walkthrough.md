@@ -7,12 +7,14 @@ lazyload: true
 
 # CollectionBuilder-Sheets Walkthrough: Part 1
 
+{:.alert .alert-blue}
+**Introduction to CB-Sheets:** Before starting this walkthrough, we recommend checking out this [blog post](https://collectionbuilder.github.io/){:target="_blank" rel="noopener"} to learn about the CB-Sheets template and how it can be used.
+
 The first part of this walkthrough provides steps for using CollectionBuilder-Sheet's built-in development mode to prototype, test, and share a draft of your digital collection site. 
 
 For this section of the walkthrough, you will use demo metadata from the University of Idaho's [Carleton Watkins Mine Interiors Collection](https://www.lib.uidaho.edu/digital/watkins/){:target="_blank" rel="noopener"} and the [CollectionBuilder-Sheets default template site](https://collectionbuilder.github.io/collectionbuilder-sheets/){:target="_blank" rel="noopener"}.
 
-{:.alert .alert-blue}
-**Introduction to CB-Sheets:** Before starting this walkthrough, we recommend checking out this [blog post](https://collectionbuilder.github.io/){:target="_blank" rel="noopener"} to learn about the CB-Sheets template and how it can be used.
+**Done prototyping already?** If you are ready to publish an ongoing collaborative site and/or a permanent collection site using CollectionBuilder-Sheets, please jump to [Part 2](#collectionbuilder-sheets-walkthrough-part-2) of this walkthrough.
 
 {:.alert .alert-yellow}
 **Note:** You will not need to install any software on your computer for this walkthrough, but you will need to create a free GitHub account.
@@ -27,13 +29,13 @@ For this section of the walkthrough, you will use demo metadata from the Univers
 
 - Publish the spreadsheet to the web by clicking **File** → **Share** → **Publish to web**
 
-GIF GOES HERE
+{% include feature/image.html img="publish-sheet-web.gif" alt="User clicks on File, Share, and then Publish to web to publish their Google Sheet online" border=true width="80%" %}
 
 - In the box that pops up, use the dropdowns in the **Link** tab to select the **Entire Document** and **Comma-separated values (.csv)** options, and then click the **Publish** button.
 
-GIF GOES HERE
-
 - You may receive a prompt that says: _"Are you sure you want to publish this selection?"_ If you receive this message, select OK.
+
+{% include feature/image.html img="publish-button-sheets.gif" alt="User clicks on Entire Document and Comma-separated values dropdown options and then clicks publish button" border=true width="80%" %}
 
 - This will generate a shareable link to your published CSV that looks something like this: https://docs.google.com/spreadsheets/d/e/2PACX-1vRJhe6UcNZXItEtHlxQFOaHBBD2SDU8nyNOAROtcLWLrl83sYaCNBNYHOvhM_xZ7SVnnOrjCzo6U5_o/pub?**output=csv**
 
@@ -50,20 +52,22 @@ GIF GOES HERE
 
 - Visit the [CollectionBuilder-Sheets default template site](https://collectionbuilder.github.io/collectionbuilder-sheets/){:target="_blank" rel="noopener"}. This configuration site is a great tool for testing to see what your metadata looks like as a digital collection website.
 
+{:.alert .alert-yellow}
+**Important:** To view your objects on the prototype site, the files will need to be available externally on the web (e.g., hosted on your organization's server or via a platform such as [Digital Ocean](https://www.digitalocean.com/){:target="_blank" rel="noopener"} or [Reclaim Hosting](https://reclaimhosting.com/){:target="_blank" rel="noopener"}). External links to your objects should be included in the filename column of your metadata spreadsheet. Please read our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/#filename){:target="_blank" rel="noopener"} to learn more about external item files.
+
 - Click the **Use Metadata CSV Link (e.g. Google Sheet)** option and paste the shareable link from the [Step 2](#2-publish-your-google-sheet-to-the-web), and then click **Submit**.
 
-GIF GOES HERE
+{% include feature/image.html img="submit-csv-sheets.gif" alt="User pastes the shareable Google Sheet link in the Use Metadata CSV Link box" border=true width="80%" %}
 
 - You should now see a prototype site featuring objects and metadata from the Watkins Digital Collection. **Please leave this site open in its own tab since you will need it for the next step.**
 
-{:.alert .alert-yellow}
-**Important:** To view your objects on the prototype site, the files will need to be available externally on the web (e.g., hosted on your organization's server or via a platform such as [Digital Ocean](https://www.digitalocean.com/){:target="_blank" rel="noopener"} or [Reclaim Hosting](https://reclaimhosting.com/){:target="_blank" rel="noopener"}. External links to your objects should be included in the filename column of your metadata spreadsheet. Please read our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/#filename){:target="_blank" rel="noopener"} to learn more about external item files.
+{% include feature/image.html img="sheets-site-populated.gif" alt="User scrolls down the home page of the prototype site populated by the Watkins metadata" border=true width="80%" %}
 
 ## 4. View live changes to your metadata.
 
 - In the metadata spreadsheet that you published to the web in [Step 2](#2-publish-your-google-sheet-to-the-web), for `objectid` "watkins0" add "This is a test change" to the description cell.
 
-GIF GOES HERE
+{% include feature/image.html img="edit-cell.gif" alt="User types 'This is a test change' into the description cell on Google Sheets" border=true width="80%" %}
 
 - The new description for this object should now be: "Anaconda Mine 1000 level East. Wealth of ore 45 ft. This is a test change."
 
@@ -73,11 +77,11 @@ GIF GOES HERE
 
 - Type "Anaconda Mine 1000 ft. level East [no. 1163]" in the empty box underneath **Browse Items** and click on the result that shows up.
 
-GIF GOES HERE
+{% include feature/image.html img="find-item-sheets.gif" alt="User searches for item and clicks on the search result" border=true width="80%" %}
 
 - Once you have navigated to the item page for "Anaconda Mine 1000 ft. level East [no. 1163]", click **Refresh metadata** in the top right corner of the screen. You should now see the sentence "This is a test change" appear in the description field.
 
-GIF GOES HERE
+{% include feature/image.html img="test-change-sheets.gif" alt="User clicks on Refresh metadata which then displays new text in the description field" border=true width="80%" %}
 
 - You can practice editing the metadata sheet and viewing changes live with the **Refresh metadata** option.
 
@@ -102,7 +106,7 @@ This prototype site is suitable for when you are still in the development and te
 
 # CollectionBuilder-Sheets Walkthrough: Part 2
 
-The second part of this walkthrough provides steps for publishing an ongoing collaborative site and/or a permanent collection site. You will see how to link your published Google Sheet in your collection settings to see changes live and you will also learn how to add your csv file to the assets folder in order to publish a permanent collection site. 
+The second part of this walkthrough provides steps for publishing an ongoing collaborative site and/or a permanent collection site. You will see how to link your published Google Sheet in your collection settings to see changes live. You will also learn how to add your csv file to the assets folder in order to publish a permanent collection site. 
 
 For this part of the walkthrough, you will use demo metadata from the University of Idaho's [Carleton Watkins Mine Interiors Collection](https://www.lib.uidaho.edu/digital/watkins/){:target="_blank" rel="noopener"}, the **CollectionBuilder-Sheets Template**, and **GitHub Pages**.
 
@@ -116,11 +120,11 @@ For this part of the walkthrough, you will use demo metadata from the University
 
 - Click the green **Use this template** button and then the **Create a new repository** dropdown option. 
 
-GIF GOES HERE
+{% include feature/image.html img="create-sheets-repo.gif" alt="User clicks on Use this template and then Create a new repository" border=true width="80%" %}
 
 - Leave the repository as **Public**. Enter a repository name (use a lowercase name without spaces or odd characters, e.g. **watkins-demo**) and click the **Create repository** button.
 
-GIF GOES HERE
+{% include feature/image.html img="generate-sheets-repo.gif" alt="User names the repository, clicks on Public, and then clicks Create repository button" border=true width="80%" %}
 
 ## 8. Add objects to your repository directly _(if necessary)_.
 
@@ -137,14 +141,10 @@ GIF GOES HERE
 
 - To select all the objects to add, click the first object file in the list and then hold down `Shift`, scroll down, and click the last file in the list. Press Enter to begin the upload.
 
-GIF GOES HERE
-
 {:.alert .alert-red}
 **Warning:** Make sure to select all the object files instead of just adding a zip file.
 
-- Scroll down to the **Commit changes** box, write a short commit message describing what you did (e.g., "Add objects"), and then click the green **Commit changes** button.
-
-GIF GOES HERE
+- Scroll down to the **Commit changes** box, write a short commit message describing what you did (e.g. Add objects), and then click the green **Commit changes** button.
 
 ## 9. Link to your Google Sheet in the _config.yml file.
 
@@ -154,6 +154,16 @@ GIF GOES HERE
 - On the homepage of your repository, click on the **"_config.yml"** file.
 
 - Click on the edit button (the pencil icon) to edit the file.
+
+{% include feature/image.html img="edit-file-sheets.gif" alt="User clicks on the pencil icon to edit the config.yml file" border=true width="80%" %}
+
+- Under the **COLLECTION SETTINGS** section, where it says `metadata-csv`, paste the full URL to your CSV file, such as a published Google Sheet. (If you need a reminder of how to publish a Google Sheet to the web, see [Step 2](#2-publish-your-google-sheet-to-the-web). 
+
+For example:
+
+```yaml
+metadata-csv: https://docs.google.com/spreadsheets/d/e/2PACX-1vRJhe6UcNZXItEtHlxQFOaHBBD2SDU8nyNOAROtcLWLrl83sYaCNBNYHOvhM_xZ7SVnnOrjCzo6U5_o/pub?output=csv
+``` 
 
 - Under the **SITE SETTINGS** section, replace the `title` placeholder text with a title of your choice. 
 
@@ -165,15 +175,7 @@ title: Watkins Demo Collection
 
 - **Optional:** Write a new `tagline`, `description`, and `author`.
 
-- Under the **COLLECTION SETTINGS** section, where it says `metadata-csv`, paste the full URL to your CSV file, such as a published Google Sheet. (If you need a reminder of how to publish a Google Sheet to the web, see [Step 2](#2-publish-your-google-sheet-to-the-web). 
-
-For example:
-
-```yaml
-metadata-csv: https://docs.google.com/spreadsheets/d/e/2PACX-1vRJhe6UcNZXItEtHlxQFOaHBBD2SDU8nyNOAROtcLWLrl83sYaCNBNYHOvhM_xZ7SVnnOrjCzo6U5_o/pub?output=csv
-``` 
-
-- Scroll down to the **Commit changes** box, write a short commit message describing what you did (e.g., "Update site settings"), and then click the green **Commit changes** button.
+- Scroll down to the **Commit changes** box, write a short commit message describing what you did (e.g. Update site settings), and then click the green **Commit changes** button.
 
 ## 10. See your live changes by editing the Google Sheet.
 
@@ -188,20 +190,24 @@ metadata-csv: https://docs.google.com/spreadsheets/d/e/2PACX-1vRJhe6UcNZXItEtHlx
 
 - Download your Google Sheet as a .csv file by clicking **File** → **Download** → **Comma Separated Values (.csv)**.
 
+{% include feature/image.html img="download-sheets-csv.gif" alt="User downloads metadata as a csv file by clicking File, Download, and Comma separated values" border=true width="80%" %}
+
 - Locate the CSV file on your computer (probably in the Downloads folder).
 
 {:.alert .alert-red}
 **Warning:** Do not open the CSV file to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. **Excel cannot correctly export a CSV** for use with CollectionBuilder.
 
-- **Without opening the CSV file**, rename it using all lowercase letters, no spaces, and no special characters (e.g. **watkinsa-demo.csv**)
+- **Without opening the CSV file**, rename it using all lowercase letters, no spaces, and no special characters (e.g. **watkins-demo.csv**)
 
 - On the homepage of your repository on GitHub.com, click on the **"assets"** folder.
 
 - Then click the **Add file** button and select **Upload files**.
 
+{% include feature/image.html img="add-file-sheets.gif" alt="User clicking on add file button and then upload files" border=true width="80%" %}
+
 - Click **Choose your files**, navigate to the location of your metadata CSV (probably in your Downloads folder), and select the file. Press Enter to begin the upload.
 
-- Scroll down to the **Commit changes** box, write a short commit message describing what you did (e.g., Add metadata file), and then click the green **Commit changes** button.
+- Scroll down to the **Commit changes** box, write a short commit message describing what you did (e.g. Add metadata file), and then click the green **Commit changes** button.
 
 ## 12. Configure site settings.
 
@@ -215,7 +221,7 @@ metadata-csv: /assets/watkins-demo.csv
 
 - Next, scroll down to the **BUILD SETTINGS** section. Find where it says `development-mode: true`. Replace `true` with `false`. This will turn off the ability to change the metadata on your live site.
 
-- Scroll down to the **Commit changes** box, write a short commit message describing what you did (e.g., "Update site settings"), and then click the green **Commit changes** button.
+- Scroll down to the **Commit changes** box, write a short commit message describing what you did (e.g. Update site settings), and then click the green **Commit changes** button.
 
 ## 13. Publish your site using GitHub Pages.
 
@@ -224,19 +230,21 @@ metadata-csv: /assets/watkins-demo.csv
 
 - On your repository homepage, click the **Settings** tab in the top right and then click **Pages** in the left side menu. 
 
-GIF GOES HERE
+{% include feature/image.html img="settings-pages-sheets.gif" alt="User clicks on Settings and then Pages" border=true width="80%" %}
 
 - Under **Source** leave the dropdown option as **Deploy from a branch**. 
 
 - Use the dropdown to change from **“none”** to **“main”** (leave the folder option as **“/root”**). Then click the **Save** button.
 
-GIF GOES HERE
+{% include feature/image.html img="generate-site.gif" alt="User generating the GitHub pages site" border=true width="80%" %}
 
 - It will take a few minutes for your site to go live. You will see a message that your site is currently being built.
 
-GIF GOES HERE
+{% include feature/image.html img="site-build.png" alt="Screenshot text reads 'Your GitHub pages site is currently being built from the main branch.'" border=true width="80%" %}
 
 - After waiting a bit, refresh the page. If the build is successful, an alert will appear providing the URL to your live site. The URL will follow the pattern: **https://username.github.io/repository-name**
+
+{% include feature/image.html img="sheets-site-live.png" alt="Screenshot text reads 'Your site is live at https://juliastone0729.github.io/watkins-demo/." border=true width="80%" %}
 
 - You can visit this URL to see changes to your live site. To ensure any changes you commit are complete, look for a _green check mark_ instead of an _orange dot_ in the Code section of your repository’s homepage.
 
@@ -256,19 +264,19 @@ featured-image: watkins37
 
 - Visit your live site and use the Browse page to view potential featured images. 
 
-GIF GOES HERE
+{% include feature/image.html img="browse-sheets-site.gif" alt="User browses through the items on the digital collection site" border=true width="80%" %}
 
 - To find the `objectid` for an image, click on the image title and then check the end of the URL of the item page. The URL will include the `objectid` after **id=**. 
 
-GIF GOES HERE
+{% include feature/image.html img="objectid-watkins.gif" alt="User clicking on an item and then highlighting the object ID in the URL" border=true width="80%" %}
 
 For example:
 
-For the URL, https://juliastone0729.github.io/psychiana-demo/item.html?id=**psychiana005**, the `objectid` is **psychiana005**.
+For the URL, https://juliastone0729.github.io/watkins-demo/item.html?id=**watkins37**, the `objectid` is **watkins37**.
 
 **Tip:** It is best to choose a large horizontal image if possible. 
 
-- After you have updated the featured image, write your commit message (e.g., "Add featured image") and commit your changes. View your changes by visiting your site’s URL.
+- After you have updated the featured image, write your commit message (e.g. Add featured image) and commit your changes. View your changes by visiting your site’s URL.
 
 ## 15. Edit the About Page.
 
@@ -278,7 +286,7 @@ For the URL, https://juliastone0729.github.io/psychiana-demo/item.html?id=**psyc
 
 - **Optional:** Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"}. 
 
-- After you are done editing the About page, write your commit message (e.g., "Edit About page") and commit your changes. View your changes by visiting your site’s URL.
+- After you are done editing the About page, write your commit message (e.g. Edit About page) and commit your changes. View your changes by visiting your site’s URL.
 
 ## 16. Explore potential next steps.
 
