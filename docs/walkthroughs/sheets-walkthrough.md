@@ -5,27 +5,24 @@ nav_order: 1
 lazyload: true
 ---
 
-# CollectionBuilder-Sheets Walkthrough: Part 1
-
-{:.alert .alert-blue .d-none}
-**Introduction to CB-Sheets:** Before starting this walkthrough, we recommend checking out this [blog post](https://collectionbuilder.github.io/){:target="_blank" rel="noopener"} to learn about the CB-Sheets template and how it can be used.
+# SHEETS Walkthrough: Part 1
 
 The first part of this walkthrough provides steps for using CollectionBuilder-Sheet's built-in development mode to prototype, test, and share a draft of your digital collection site. 
 
 For this section of the walkthrough, you will use demo metadata from the University of Idaho's [Carleton Watkins Mine Interiors Collection](https://www.lib.uidaho.edu/digital/watkins/){:target="_blank" rel="noopener"} and the [CollectionBuilder-Sheets default template site](https://collectionbuilder.github.io/collectionbuilder-sheets/){:target="_blank" rel="noopener"}.
 
-**Done prototyping already?** If you are ready to publish an ongoing collaborative site and/or a permanent collection site using CollectionBuilder-Sheets, please jump to [Part 2](#collectionbuilder-sheets-walkthrough-part-2) of this walkthrough.
+**Done prototyping already?** If you are ready to publish an ongoing collaborative site and/or a permanent collection site using CollectionBuilder-Sheets, please jump to [Part 2](#sheets-walkthrough-part-2) of this walkthrough.
 
 {:.alert .alert-yellow}
 **Note:** You will not need to install any software on your computer for this walkthrough, but you will need to create a free GitHub account.
 
 ## 1. Make a copy of demo metadata.
 
-- Make a copy of this Google Sheet of pre-made demo metadata: [Watkins Digital Collection Metadata](https://docs.google.com/spreadsheets/d/1_iEzXu07CUEWnwZWuOcHjw5Iw8bjYi2Gck8yRSPjBA0/copy){:target="_blank" rel="noopener"}
+- Make a copy of this Google Sheet of pre-made demo metadata: [Watkins Digital Collection Metadata](https://docs.google.com/spreadsheets/d/1uXM0_fV7fHm9UX2QAI4bP2VY7ThXdpC-UYqf_p9pNcY/copy){:target="_blank" rel="noopener"}
 
 ## 2. Publish your Google Sheet to the web.
 
-- In your Google Sheet, ensure that your metadata is the first sheet in the spreadsheet (by default named **Sheet1**). In the demo metadata, the sheet is called **watkins_cbdemo_gh**. The tabs can be dragged to reorder if necessary.
+- In your Google Sheet, ensure that your metadata is the first sheet in the spreadsheet (by default named **Sheet1**). In the demo metadata, the sheet is called **watkins_cbdemo**. The tabs can be dragged to reorder if necessary.
 
 - Publish the spreadsheet to the web by clicking **File** → **Share** → **Publish to web**
 
@@ -48,7 +45,7 @@ For this section of the walkthrough, you will use demo metadata from the Univers
 - Leave the check mark checked next to the **Automatically republish when changes are made** option.
 
 {:.alert .alert-blue}
-**Unpublishing a Google Sheet:** You can unpublish your sheet from the web at any time by clicking the **Stop publishing** button under **Published content & settings**.
+**Unpublishing a Google Sheet:** You can unpublish your sheet from the web at any time by clicking **Published content & settings** and then the **Stop publishing** button.
 
 ## 3. Set up your prototype site.
 
@@ -90,7 +87,7 @@ For this section of the walkthrough, you will use demo metadata from the Univers
 - You can practice editing the metadata sheet and viewing changes live with the **Refresh metadata** option.
 
 {:.alert .alert-yellow}
-Sometimes you will not see your metadata edits right away! It may take a minute or two for the servers storing the data to update. 
+**Note:** Sometimes you will not see your metadata edits right away! It may take a minute or two for the servers storing the data to update. 
 
 ## 5. Share your test site via URL.
 
@@ -111,7 +108,7 @@ This prototype site is suitable for when you are still in the development and te
 
 <hr>
 
-# CollectionBuilder-Sheets Walkthrough: Part 2
+# SHEETS Walkthrough: Part 2
 
 The second part of this walkthrough provides steps for publishing an ongoing collaborative site and/or a permanent collection site. You will see how to link your published Google Sheet in your collection settings to see changes live. You will also learn how to add your csv file to the assets folder in order to publish a permanent collection site. 
 
