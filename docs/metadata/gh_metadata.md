@@ -1,27 +1,31 @@
 ---
-title: GH Metadata
+title: GH and SHEETs Metadata
 parent: Metadata
 nav_order: 1
 ---
 
-# CollectionBuilder-GH Metadata
+# CollectionBuilder-GH and SHEETS Metadata
+
+{:.alert .alert-yellow}
+**Note**: CollectionBuilder-GH and CollectionBuilder-SHEETS use the same metadata template. SHEETS allows you to update collections directly from a Google Sheet (making it ideal for prototyping or collaborating and seeing changes in real time), while GH requires that you upload your metadata spreadsheet to your repository (making it ideal for teaching and learning GitHub, Git, and other web workflows).
 
 ## Metadata Template
 
-If you are starting your collection from scratch, the easiest way to ensure you have the required fields is to create your metadata using the CollectionBuilder-GH metadata template. 
-The template is available on Google Sheets via the link below (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy" to get started), or in your CollectionBuilder-GH project repository as "_data/metadata-template.csv".
+If you are starting your collection from scratch, the easiest way to ensure you have the required fields is to create your metadata using the CollectionBuilder-GH / CollectionBuilder-SHEETS metadata template (note that this metadata template will work for *both* GH and SHEETS). 
+The template is available on Google Sheets via the link below (make sure you're logged in to Google Drive, then open the template and click the File menu and select "Make a Copy" to get started)
+It is also available in your CollectionBuilder-GH project repository as "_data/metadata-template.csv".
 This template is a starting point--fill in only what is relevant for your content and feel free to add more columns!
 
 If transforming existing metadata, you do **not** need to exactly match the CollectionBuilder template. 
 Just ensure that you create the required fields following the conventions described below. 
 
-[CollectionBuilder-GH Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/copy?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
+[CollectionBuilder-GH / CollectionBuilder-SHEETS Metadata Template](https://docs.google.com/spreadsheets/d/1Uv9ytll0hysMOH1j-VL1lZx6PWvc1zf3L35sK_4IuzI/copy?usp=sharing){:.btn .btn-purple target="_blank" rel="noopener"}
 
 The guidelines below provide details about each field.
 
 -----
 
-## Required Fields for CollectionBuilder-GH
+## Required Fields for CollectionBuilder-GH and SHEETS
 
 Without values in the fields below, CollectionBuilder will not work properly.
 
@@ -40,6 +44,9 @@ Without values in the fields below, CollectionBuilder will not work properly.
 - Record items (metadata-only) can optionally add an external link that will appear as a clickable link on the item's page. 
     - Example value for an external link for a "record" item type: `https://www.doi.org/10.1577/M02-113`
 - *Tip:* check [Get List of Filenames]({{ '/docs/extras/utilities/#get-list-of-filenames' | relative_url }}) for quick methods to fill in the filename field!
+
+{:.alert .alert-red}
+**Note**: Are you using SHEETS to prototype a site? Your objects' filenames *must* be full URLs to files hosted externally to your project!
 
 ### title: 
 
