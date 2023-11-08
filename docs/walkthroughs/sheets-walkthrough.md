@@ -1,13 +1,13 @@
 ---
 title: Sheets Walkthrough
 parent: Walkthroughs
-nav_order: 3
+nav_order: 1
 lazyload: true
 ---
 
 # CollectionBuilder-Sheets Walkthrough: Part 1
 
-{:.alert .alert-blue}
+{:.alert .alert-blue .d-none}
 **Introduction to CB-Sheets:** Before starting this walkthrough, we recommend checking out this [blog post](https://collectionbuilder.github.io/){:target="_blank" rel="noopener"} to learn about the CB-Sheets template and how it can be used.
 
 The first part of this walkthrough provides steps for using CollectionBuilder-Sheet's built-in development mode to prototype, test, and share a draft of your digital collection site. 
@@ -37,7 +37,9 @@ For this section of the walkthrough, you will use demo metadata from the Univers
 
 {% include feature/image.html img="publish-button-sheets.gif" alt="User clicks on Entire Document and Comma-separated values dropdown options and then clicks publish button" border=true width="80%" %}
 
-- This will generate a shareable link to your published CSV that looks something like this: https://docs.google.com/spreadsheets/d/e/2PACX-1vRJhe6UcNZXItEtHlxQFOaHBBD2SDU8nyNOAROtcLWLrl83sYaCNBNYHOvhM_xZ7SVnnOrjCzo6U5_o/pub?**output=csv**
+- This will generate a shareable link to your published CSV that looks something like this: 
+
+`https://docs.google.com/spreadsheets/d/e/2PACX-1vRJhe6UcNZXItEtHlxQFOaHBBD2SDU8nyNOAROtcLWLrl83sYaCNBNYHOvhM_xZ7SVnnOrjCzo6U5_o/pub?output=csv`
 
 - The end of your link should have **output=csv** indicating that your metadata is being published to the web in a CSV format.
 
@@ -52,9 +54,6 @@ For this section of the walkthrough, you will use demo metadata from the Univers
 
 - Visit the [CollectionBuilder-Sheets default template site](https://collectionbuilder.github.io/collectionbuilder-sheets/){:target="_blank" rel="noopener"}. This configuration site is a great tool for testing to see what your metadata looks like as a digital collection website.
 
-{:.alert .alert-yellow}
-**Important:** To view your objects on the prototype site, the files will need to be available externally on the web (e.g., hosted on your organization's server or via a platform such as [Digital Ocean](https://www.digitalocean.com/){:target="_blank" rel="noopener"} or [Reclaim Hosting](https://reclaimhosting.com/){:target="_blank" rel="noopener"}). External links to your objects should be included in the filename column of your metadata spreadsheet. Please read our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/#filename){:target="_blank" rel="noopener"} to learn more about external item files.
-
 - Click the **Use Metadata CSV Link (e.g. Google Sheet)** option and paste the shareable link from the [Step 2](#2-publish-your-google-sheet-to-the-web), and then click **Submit**.
 
 {% include feature/image.html img="submit-csv-sheets.gif" alt="User pastes the shareable Google Sheet link in the Use Metadata CSV Link box" border=true width="80%" %}
@@ -62,6 +61,11 @@ For this section of the walkthrough, you will use demo metadata from the Univers
 - You should now see a prototype site featuring objects and metadata from the Watkins Digital Collection. **Please leave this site open in its own tab since you will need it for the next step.**
 
 {% include feature/image.html img="sheets-site-populated.gif" alt="User scrolls down the home page of the prototype site populated by the Watkins metadata" border=true width="80%" %}
+
+
+
+{:.alert .alert-yellow}
+**Important:** To view your objects on the prototype site, the files will need to be available externally on the web (e.g., hosted on your organization's server or via a platform such as [Digital Ocean](https://www.digitalocean.com/products/spaces){:target="_blank" rel="noopener"} or [Reclaim Hosting](https://reclaimhosting.com/){:target="_blank" rel="noopener"}). You can also [host files for free via GitHub pages](https://medium.com/@jeftachibiya360/how-to-host-images-for-your-website-on-github-a98d917284c5).<br><br>External links to your objects should be included in the filename column of your metadata spreadsheet. Please read our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/#filename){:target="_blank" rel="noopener"} to learn more about external item files.
 
 ## 4. View live changes to your metadata.
 
@@ -84,6 +88,9 @@ For this section of the walkthrough, you will use demo metadata from the Univers
 {% include feature/image.html img="test-change-sheets.gif" alt="User clicks on Refresh metadata which then displays new text in the description field" border=true width="80%" %}
 
 - You can practice editing the metadata sheet and viewing changes live with the **Refresh metadata** option.
+
+{:.alert .alert-yellow}
+Sometimes you will not see your metadata edits right away! It may take a minute or two for the servers storing the data to update. 
 
 ## 5. Share your test site via URL.
 

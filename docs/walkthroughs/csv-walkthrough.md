@@ -1,7 +1,7 @@
 ---
 title: CSV Walkthrough
 parent: Walkthroughs
-nav_order: 2
+nav_order: 3
 lazyload: true
 ---
 
