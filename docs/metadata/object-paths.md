@@ -89,8 +89,9 @@ One option is to create screenshots to use as derivative images--if image_thumb 
 The CONTENTdm API can be used to retrieve display images and file downloads from any CONTENTdm repository. 
 To use the API you will need to know the "Collection Alias" and "CONTENTdm number" of each object:
 
-- The "Collection Alias" is a path assigned by CONTENTdm and can be found in CONTENTdm Admin on the Collections > Profile page, or by looking at the URL of the collection on the web. For example "https://cdm17254.contentdm.oclc.org/digital/collection/ui_ep/search" the collection alias is given after "/collection/", so would be ui_ep.
-- The values for "CONTENTdm number" are included by default when you export your collection's metadata from CONTENTdm.
+- The **Collection Alias** is a path assigned by CONTENTdm and can be found in CONTENTdm Admin on the Collections > Profile page, or by looking at the URL of the collection on the web. For example "https://cdm17254.contentdm.oclc.org/digital/collection/ui_ep/search" the collection alias is given after "/collection/", so would be `ui_ep`.
+
+- The values for **CONTENTdm number** are included in your metadata by default when you export your collection's metadata from CONTENTdm.
 
 Once you have columns in your metadata for "Collection Alias" and "CONTENTdm number" you can use formulas in Sheets or OpenRefine based on the CDM APIs to fill in `object_location`, `image_small`, and `image_thumb` columns for different item types.
 In general, it is best to use IIIF for image objects and CDM "utils" API for non-image items.
