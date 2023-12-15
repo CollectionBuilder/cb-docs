@@ -102,7 +102,7 @@ defaults:
   - scope:
       path: "docs/*"
     values:
-      layout: "page"
+      layout: "all"
   
 
 kramdown:
