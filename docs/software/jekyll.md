@@ -15,7 +15,7 @@ Gem is a command line application, so again we will open a terminal to give it c
 Once you have a terminal open, type in the command:
 
 ```
-gem install jekyll bundler
+gem install bundler jekyll
 ```
 
 This will install the Gems "Jekyll" and [Bundler](https://bundler.io/).

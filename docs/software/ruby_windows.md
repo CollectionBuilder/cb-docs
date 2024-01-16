@@ -14,14 +14,21 @@ Use [RubyInstaller for Windows](https://rubyinstaller.org/){:target="_blank" rel
 - Second, the installer will automatically open a terminal window with options to install MSYS2 DevKit components. 
     - Choose option 3, "MSYS2 and MINGW development toolchain", or simply press `Enter` to install all the necessary dependencies. 
     - The installer will proceed through a bunch of steps outputting a bunch of text in the terminal window. *Eventually*, this will conclude and you should see a message with the word `success` or `succeeded` in it. 
-    - If the window doesn't close, press `Enter` again or manually close it. 
-    - *Note:* The installer can be restarted if necessary by typing `ridk install` into a command prompt.
+    - If the window doesn't close, press `Enter` again or manually close it.
 
 Once the installation completes, you should have Ruby available on the command line!
-Open a terminal (Git Bash), and type `ruby -v`. 
-This should provide a response like "ruby 3.2.2" which lets you know that your Ruby is correctly installed. 
+Open a Git Bash terminal and type `ruby -v`. 
+This should provide a response like "ruby 3.2.2" which lets you know that your Ruby is correctly installed.
 
-*Note: Ruby 3.2.0 was not working with some Jekyll versions--if you have 3.2.0, please update your ruby and jekyll to avoid issues!*
+To avoid possible issues, we suggest you update Ruby Gem at this time.
+Gem is a tool to install Ruby Gems packages on your system. 
+It comes with your Ruby, but may be out of date in the installer.
+To update, type the command: `gem update --system`
+
+*Notes:* 
+
+- The Ruby MSYS2 DevKit installer can be restarted if necessary by typing `ridk install` into a command prompt.
+- Ruby 3.2.0 was not working with some Jekyll versions--if you have 3.2.0, please update your Ruby and Jekyll to avoid issues!
 
 ## Update RubyInstaller
 
@@ -33,4 +40,5 @@ However, new stable branches (e.g. 3.1.x to 3.2.x) should be updated by first un
 - Open "Settings" app, click on "Apps & features"
 - In your list of "Apps & features", search for "ruby"
 - Click on your ruby installation, then click "Uninstall"
-- Once the uninstaller finishes, install your new version using RubyInstaller as normal. Keep in mind, your previous gems and configuration will no longer exist! You will have to `gem install bundler jekyll` again to get started.
+- Once the uninstaller finishes, look in your C: drive for the folder "Ruby32-x64" where Ruby was installed. Delete this folder to finish cleaning your system.
+- Install your new version using RubyInstaller as normal. Keep in mind, your previous gems and configuration will no longer exist! You will have to `gem install bundler jekyll` again to get started.
