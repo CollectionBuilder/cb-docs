@@ -7,16 +7,16 @@ lazyload: true
 
 # Updating Metadata Walkthrough
 
-This two-part walkthrough provides steps for updating your CollectionBuilder site's metadata using the GitHub web interface and Visual Studio Code (VS Code). 
+This two-part walkthrough provides steps for updating your CollectionBuilder site's metadata using the **GitHub web interface** and **Visual Studio Code** (VS Code). You can repeat these steps whenever you make a change to your metadata that you would like to see reflected in your live site.
 
-This walkthrough assumes you have already set up a CollectionBuilder site and need to update your metadata file. You can repeat these steps whenever you make a change to your metadata that you would like to see reflected in your live site.
+**This walkthrough assumes you have already set up a CollectionBuilder site and need to update your metadata file.** If you need help setting up a CollectionBuilder site, please visit our [CollectionBuilder-GH Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/gh-walkthrough/), [CollectionBuilder-SHEETS Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/sheets-walkthrough/), or [CollectionBuilder-CSV Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/) depending on which [CollectionBuilder template](https://collectionbuilder.github.io/cb-docs/docs/templates/) you are interested in using.
 
 {:.alert .alert-blue}
-**Note:** If you need help setting up a CollectionBuilder site, please visit our [CollectionBuilder-GH Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/gh-walkthrough/), [CollectionBuilder-SHEETS Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/sheets-walkthrough/), or [CollectionBuilder-CSV Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/) depending on which [CollectionBuilder template](https://collectionbuilder.github.io/cb-docs/docs/templates/) you are interested in using.
+**Are you a VS Code user?** If you are using VS Code for your CollectionBuilder project, feel free to jump to [Part 2](#part-2-updating-metadata-using-visual-studio-code) of this walkthrough.
 
 ## Part 1: Updating Metadata Using the GitHub Web Interface
 
-This part of the walkthrough is recommended for when you are using the GitHub web interface for editing your site, which is most often used for the CollectionBuilder-GH and CollectionBuilder-SHEETS templates.
+This part of the walkthrough is recommended for when you are using the GitHub web interface for editing your site, which is most often used for the **CollectionBuilder-GH** and **CollectionBuilder-SHEETS** templates.
 
 ### 1. Update your metadata spreadsheet
 
@@ -31,9 +31,9 @@ This part of the walkthrough is recommended for when you are using the GitHub we
 
 {% include feature/image.html img="download-metadata.gif" alt="User downloading the Google Sheet as a CSV file" border=true width="80%" %}
 
-### 3. Rename the CSV file as the exact same file name as the CSV file already in your repository
+### 3. Rename the CSV file as **the exact same file name** as the CSV file already in your repository
 
-- Locate the file in the Downloads folder on your computer. 
+- Locate the updated CSV file you just downloaded in the **Downloads** folder on your computer. 
 
 {:.alert .alert-red}
 **Warning:** Do not open the CSV file to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. Excel cannot correctly export a CSV for use with CollectionBuilder.
@@ -42,11 +42,23 @@ This part of the walkthrough is recommended for when you are using the GitHub we
 
 - If you forget what you named the file previously, you can check the **COLLECTION SETTINGS** section of your `_config.yml` file.
 
-- For CollectionBuilder-SHEETS, your metadata file name will be included after `metadata-csv:` and for CollectionBuilder-GH, your metadata file name will be included after `metadata:`
+- For CollectionBuilder-SHEETS, your metadata file name will be included after `metadata-csv:` and for CollectionBuilder-GH, your metadata file name will be included after `metadata:` without the .csv extension.
+
+For example, in CollectionBuilder-SHEETS:
+
+```yaml
+metadata-csv: /assets/watkins.csv
+```
+
+In CollectionBuilder-GH:
+
+```yaml
+metadata: psychiana-demo
+```
 
 ### 4. Reupload your new metadata file
 
-- Visit the homepage of your repository on GitHub.com.
+- Visit the homepage of your repository on [github.com](https://github.com/){:target="_blank" rel="noopener"}.
 
 - If you are using CollectionBuilder-GH, click on the **"_data"** folder. (If you are using CollectionBuilder-SHEETS, click on the **"assets"** folder).
 
@@ -58,7 +70,7 @@ This part of the walkthrough is recommended for when you are using the GitHub we
 
 - Ensure the file name is _exactly the same_ as your previous version of the metadata CSV and select the file.
 
-### 5. Commit your changes.
+### 5. Commit your changes
 
 - Scroll down to the **"Commit changes"** box, write a short commit message describing what you did (e.g., **"Update metadata"**), and then click the green "Commit changes" button
 
@@ -68,17 +80,13 @@ This part of the walkthrough is recommended for when you are using the GitHub we
 
 ## Part 2: Updating Metadata Using Visual Studio Code
 
-This part of the walkthrough is recommended for when you are using VS Code for editing your site, which is most often used for the CollectionBuilder-CSV template.
+This part of the walkthrough is recommended for when you are using VS Code for editing your site, which is most often used for the **CollectionBuilder-CSV** template.
 
 ### 1. Use GitHub Desktop to open your repository in VS Code
 
 - Check to make sure you are in the correct repository by viewing the top left section of GitHub Desktop. To switch between repositories, locate the **Current Repository** dropdown, and select the repository you'd like to open. 
 
-- In the top menu, locate and click on **Repository**, and select the option, **Open in Visual Studio Code**. 
-
-{% include feature/image.html img="open-repository-menu.gif" alt="GitHub Desktop user clicking on Repository and then Open in Visual Studio Code option" border=true width="80%" %}
-
-- Alternatively, in the box that says **Open the repository in your external editor**, you can click the button that says **Open in Visual Studio Code**.
+- In the box that says **Open the repository in your external editor**, click the button that says **Open in Visual Studio Code**.
 
 {% include feature/image.html img="open-vs-code.gif" alt="GitHub Desktop user clicking on Open in Visual Studio Code button to open VS Code application" border=true width="80%" %}
 
@@ -101,7 +109,7 @@ This part of the walkthrough is recommended for when you are using VS Code for e
 
 - Right click the file and then click **Open With...** → **Visual Studio Code**.
 
-[GIF GOES HERE]
+{% include feature/image.html img="open-vs-code-csv-metadata.gif" alt="User right clicking and opening CSV file with Visual Studio Code" border=true width="80%" %}
 
 {:.alert .alert-yellow}
 **Note:** If Visual Studio Code does not show up in your list of recommended applications, click **"Other..."** and then search for **"Visual Studio Code"** in your Finder or file explorer.
@@ -110,23 +118,25 @@ This part of the walkthrough is recommended for when you are using VS Code for e
 
 - Once you have the CSV file opened in Visual Studio Code, hit **Command+A** (on Mac) / **Ctrl+A** (on Windows) to select all the text.
 
-- Next, hit **Command+C** (on Mac) / **Ctrl+C** (on Windows) to copy all the text.
+- Next, hit **Command+C** (on Mac) / **Ctrl+C** (on Windows) to copy all the text. Or, right click the text and then click **"Copy"**.
+
+{% include feature/image.html img="copy-metadata-vs-code.gif" alt="User selecting all text in a CSV file in VS Code and then copying the text" border=true width="80%" %}
 
 ### 6. Paste the copied text over the old metadata CSV file and save
 
 - Click on the old version of your metadata file in your **"_data"** folder to open the file. 
 
-[GIF of selecting old metadata file in VS Code]
+{% include feature/image.html img="open-current-metadata-file.gif" alt="Visual Studio Code user expands the data folder and then clicks on the current metadata file to open it" border=true width="80%" %}
 
 - Press **Command+A** (on Mac) / **Ctrl+A** (on Windows) to select all the text.
 
-- Next, hit **Command+V** (on Mac) / **Ctrl+V** (on Windows) to paste over the text with the text from the updated metadata file.
+- Next, hit **Command+V** (on Mac) / **Ctrl+V** (on Windows), or right click the text and click **"Paste"**, to paste over the text with the text from the updated metadata file.
 
-[GIF of selecting all text in the old metadata file in VS Code and then pasting new text over the old text]
+{% include feature/image.html img="paste-metadata-vs-code.gif" alt="User selecting all text in a CSV file in VS Code and then pasting over the text" border=true width="80%" %}
 
 - Finally, press **Command+S** (on Mac) / **Ctrl+S** (on Windows) to save the file. This will update your old metadata file with the changes from the new metadata file.
 
-### 7. Commit and push your changes.
+### 7. Commit and push your changes
 
 - In VS Code, click on the **"Source Control"** icon, i.e. the network icon on the left side.
 
@@ -136,7 +146,9 @@ This part of the walkthrough is recommended for when you are using VS Code for e
 
 - Click the blue **"Commit"** button below the message box to commit the change.
 
+{% include feature/image.html img="commit-push-vs-code.gif" alt="Visual Studio Code user adds a changed file to the staged changes list, makes a commit, and then hits the blue sync changes button" border=true width="80%" %}
+
 - To Push your local changes up to GitHub, click the blue **"Sync Changes"** button. This will sync your local changes with the GitHub repository.
 
-
-
+{:.alert .alert-green}
+**Metadata Tips:** Need help with editing your metadata? Check out our guide to [formatting your metadata](https://collectionbuilder.github.io/cb-docs/docs/metadata/formatting/), as well as our documentation on [Metadata for CB-CSV](https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/) and [Metadata for CB-GH and CB-SHEETS](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/).
