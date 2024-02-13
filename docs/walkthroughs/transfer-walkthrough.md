@@ -1,7 +1,7 @@
 ---
 title: Transfer GH to CSV Walkthrough
 parent: Walkthroughs
-nav_order: 5
+nav_order: 6
 lazyload: true
 ---
 
