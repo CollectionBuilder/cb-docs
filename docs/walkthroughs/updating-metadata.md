@@ -36,7 +36,7 @@ This part of the walkthrough is recommended for when you are using the GitHub we
 - Locate the updated CSV file you just downloaded in the **Downloads** folder on your computer. 
 
 {:.alert .alert-red}
-**Warning:** Do not open the CSV file to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. Excel cannot correctly export a CSV for use with CollectionBuilder.
+**Warning: Do not open the CSV file in Microsoft Excel** If you do, Excel often scrambles your UTF-8 encoding and/or your data (if you see weird dates, Excel might be the culprit). Excel cannot correctly export a CSV for use with CollectionBuilder, which is why we recommend Google Sheets or Office Libre.
 
 - **Without opening the CSV file**, rename the file to be exactly the same file name as the CSV file already in your repository. 
 
@@ -105,7 +105,7 @@ This part of the walkthrough is recommended for when you are using VS Code for e
 - Locate the CSV file in the Downloads folder on your computer. 
 
 {:.alert .alert-red}
-**Warning:** Do not open the CSV file to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. Excel cannot correctly export a CSV for use with CollectionBuilder.
+**Warning: Do not open the CSV file in Microsoft Excel** If you do, Excel often scrambles your UTF-8 encoding and/or your data (if you see weird dates, Excel might be the culprit). Excel cannot correctly export a CSV for use with CollectionBuilder, which is why we recommend Google Sheets or Office Libre.
 
 - Right click the file and then click **Open With...** → **Visual Studio Code**.
 
