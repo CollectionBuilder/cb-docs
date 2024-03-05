@@ -12,24 +12,6 @@ This section of "_config.yml" provides additional configuration options and tech
 The following settings in "_config.yml" are optional. 
 Your site will work successfully without changing the variables below.
 
-## Google Services
-
-These options can add pre-configured Google services if desired.
-
-### google-analytics-id: 
-
-- Uncomment `google-analytics-id` (by removing the hash and space `# ` in front), and add your Google Analytics ID if you would like to add a pre-configured tracking code snippet.
-- The template uses "gtag" implementation.
-- example --> `google-analytics-id: "G-1X23X1XXXX"`
-- **Note:** *Any* analytics service can be added to your site by pasting the tracking snippet they provide into the file "_includes/head/analytics.html". Analytics will only be added during final production build. See [Add Analytics to your Site]({{ '/docs/advanced/analytics/' | relative_url }}) for details.
-
-### google-cse-id:
-
-- Uncomment `google-cse-id` (by removing the hash and space `# ` in front), and add your Google Custom Search Engine ID to automatically add a embedded Google search page.
-- See [Google CSE]({{ '/docs/advanced/google-search/' | relative_url }}) for details of implementing.
-
-------
-
 ## Robots Exclude 
 
 Robots exclude standards can tell indexers such as Google you do **NOT** want your site crawled and added to their search index.
