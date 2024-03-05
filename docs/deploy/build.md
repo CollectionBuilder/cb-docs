@@ -66,8 +66,8 @@ This saves time during development and avoids false analytics data.
 The production ENV adds:
 
 - **Meta markup:** adds rich machine readable markup to the `<head>` of every page, including [Open Graph](https://opengraphprotocol.org/){:target='_blank' rel='noopener'}, [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/){:target='_blank' rel='noopener'}, and [Schema](https://schema.org/){:target='_blank' rel='noopener'} as configured in ["config-metadata.csv"]({{ '/docs/customization/config-metadata/' | relative_url }}).
-- **Analytics:** adds the include "_includes/head/analytics.html" to every page. This adds your analytics snippet if configured (by adding `google-analytics-id` in the "_config.yml" or manually pasting your tracking code into the include). Waiting until final deployment to add analytics prevents false hits during testing.
+- **Analytics:** adds the include "_includes/head/analytics.html" to every page. This adds your [analytics snippet if configured]({{ '/cb-docs/docs/advanced/analytics/' | relative_url }}). Waiting until final deployment to add analytics prevents false hits during testing.
 
 The environment can be added before the Jekyll command, like `JEKYLL_ENV=production bundle exec jekyll build`. 
 To make it easier, CollectionBuilder provides the `rake deploy` command as an alternative.
-It is also the environment used by automatic build on GitHub Pages!
+It is also the environment used by the automatic build on GitHub Pages!
