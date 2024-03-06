@@ -183,9 +183,9 @@ title: Watkins Demo Collection
 
 ## 10. See your live changes by editing the Google Sheet.
 
-- You can make changes to the metadata spreadsheet that you published to the web and view the changes on your live site. 
+- You can make changes to the metadata spreadsheet that you published to the web and view the changes on your live site.
 
-- Need a reminder on how to do this? Visit [Step 4](#4-view-live-changes-to-your-metadata) to practice editing the metadata sheet and viewing changes live with the **Refresh metadata** option.
+- **Note**: Anytime you make edits to your metadata spreadsheet you'll need to open your site in a new browser window in order to see the new changes.
 
 {:.alert .alert-green}
 **Ready to publish:** The following steps are for when your collaborative metadata work is done and you are ready to publish the site in a more secure way.
