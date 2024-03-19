@@ -1,11 +1,11 @@
 ---
-title: Transfer GH to CSV Walkthrough
+title: Transfer GH to CSV
 parent: Walkthroughs
 nav_order: 6
 lazyload: true
 ---
 
-# Transfer GH to CSV Walkthrough
+# Transfer GH to CSV
 
 This walkthrough reviews how to transfer a **CollectionBuilder-GH** (CB-GH) site to a **CollectionBuilder-CSV** (CB-CSV) site by copying and pasting folders and files from the CSV Template into your GH Repository and then rebuilding the site using **GitHub Actions**. 
 

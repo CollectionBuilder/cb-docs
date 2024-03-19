@@ -1,11 +1,11 @@
 ---
-title: Object Derivatives Walkthrough
+title: Creating Object Derivatives
 parent: Walkthroughs
 nav_order: 4
 lazyload: true
 ---
 
-# Objects Derivatives Walkthrough
+# Creating Object Derivatives
 
 This walkthrough builds off the [CollectionBuilder-CSV Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/){:target="_blank" rel="noopener"} to provide steps for adding objects directly to your repository, generating thumb and small object derivatives using CollectionBuilder-CSV's built-in rake tasks, and updating your metadata spreadsheet to include these derivatives.
 
