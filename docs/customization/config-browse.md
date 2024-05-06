@@ -37,7 +37,8 @@ The columns are described below, and an [example](#example) is provided for your
 
 ### sort_name: 
 - Determines if the field will be used as an option to sort cards on the browse page via the dropdown menu to the right of the search box. This option also determines the label used in that dropdown menu for the field. 
-    - *Options*: `true` or leave blank
+    - *Options*: write whatever word/phrase you'd like to show up in the dropdown field. Once an option is entered, the sort function will work for that field.
+    - Typically, you just put the display_name here, but oftentimes it's helpful to give more context, such as in the example below for Date, where the sort function indicates that it will sort by "Date Created"
 
 ------
 
