@@ -183,7 +183,7 @@ CollectionBuilder can accommodate any field you include in your metadata once yo
 ### language: 
 
 - This field indicates the language associated with the object. Recommended best practice is to use a controlled vocabulary such as the [ISO 639-2 Codes for the Representation of Names and Languages](http://www.loc.gov/standards/iso639-2/php/code_list.php){:target="_blank" rel="noopener"} to designate language tags.
-- Example value: `en`, `fr`, `de`
+- Example value: `eng`, `fra`, `deu`
 
 ### rights:
 
