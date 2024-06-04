@@ -21,11 +21,11 @@ Installing this free and open source software is pretty straightforward:
 
 **Mac:** 
 
-- Mac systems will require the "Xcode Command Line Tools" installed, so open a terminal (to find your terminal search for "terminal" in your Spotlight), type in the command `xcode-select --install`, and follow the prompts. After the install finishes, try typing `git --version`. If you want a newer version of Git, download the official [Mac git installer](https://git-scm.com/downloads){:target="_blank" rel="noopener"}.
+- Mac systems will require the "Xcode Command Line Tools" installed, which includes Git. Open a terminal (to find your terminal search for "terminal" in your Spotlight), type in the command `xcode-select --install`, and follow the prompts. After the install finishes, try typing `git --version`. (*Optionally,* if you want a newer version of Git, check [alternative Mac install methods](https://git-scm.com/download/mac){:target="_blank" rel="noopener"})
 
 **Linux:** 
 
-- Install from your distribution's software center or package manager (for Ubuntu `sudo apt install git`).
+- Open a terminal and try typing `git --version`. If Git is not already available, install from your distribution's software center or package manager (for Ubuntu `sudo apt install git`), or check [alternative Linux install methods](https://git-scm.com/download/linux).
 
 ## Configure Git
 
