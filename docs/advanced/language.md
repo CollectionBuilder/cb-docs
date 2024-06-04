@@ -6,6 +6,9 @@ nav_order: 8
 
 # Customize Your Site's Default Language
 
+*Please check [cb-translate](https://github.com/CollectionBuilder/cb-translate) for a prototype template that has built in translations for several languages, and method to add additional translations!*
+*The instructions below related to manually translating the standard templates.*
+
 You can edit the button text and other default language on the website, but you'll have to do a little digging in the code to do it. The sections below identify where you can change this text, page by page, for the **CollectionBuilder-GH template**. If you happen to be using CollectionBuilder-CSV instead of GH, you'll find some of this content is located in other files. If you're having trouble locating something, remember that using the find and replace feature in your text editor or browser is always a good place to start!
 
 ## Home Page
