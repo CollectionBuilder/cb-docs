@@ -16,6 +16,7 @@ Download VS Code and use their wizard to install with the default options on you
 If you are unfamiliar with editors, there is pretty good [VS Code documentation](https://code.visualstudio.com/docs) including videos and reference, but you will learn a lot just working through you CB project!
 
 *These docs will often reference VS Code--however, any text editor will work!*
+Many good alternatives exist--if you are looking for a VS Code clone minus Microsoft, check out [VS Codium](https://vscodium.com/) or [Theia IDE](https://theia-ide.org/#theiaide).
 
 ## Configuring Visual Studio Code
 
