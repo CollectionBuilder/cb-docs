@@ -18,6 +18,11 @@ If you are unfamiliar with editors, there is pretty good [VS Code documentation]
 *These docs will often reference VS Code--however, any text editor will work!*
 Many good alternatives exist--if you are looking for a VS Code clone minus Microsoft, check out [VS Codium](https://vscodium.com/) or [Theia IDE](https://theia-ide.org/#theiaide).
 
+*Note to Mac users:*
+On macOS Sierra or later, VS Code automatically downloads to the Downloads directory, which can cause problems with updates down the road.
+If this applies to you, after installation we recommend moving the VS Code app from Downloads to your Applications directory.
+{:.alert .alert-blue}
+
 ## Configuring Visual Studio Code
 
 VS Code is incredibly customizable via its settings. 
