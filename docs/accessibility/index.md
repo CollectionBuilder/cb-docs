@@ -20,6 +20,14 @@ If you encounter any issues, please don't hesitate to [contact us]({{ '/#how-to-
 We hope to learn from others and welcome contributions of all kinds, from an email to a pull request.
 {:.alert .alert-blue}
 
+## Creating Accessible Collections
+
+The content, objects, metadata, and configuration you add to CollectionBuilder templates will impact the accessibility of the resulting website.
+The template provides unique options such as ["image_alt_text" and "object_transcript"]({{ '/docs/metadata/csv_metadata/#image_alt_text' | relative_url }}) to flexibily adapt collection metadata for maximum useability. 
+CollectionBuilder Docs aim to provide tips for creators in each relevant section to help make informed choices. 
+
+We are committed to ongoing improvement of this documentation and we hope to create tutorials and further resources for auditing your own site.
+
 ## Software and Platforms
 
 A variety of platforms and tools are part of the typical process of creating a CollectionBuilder project.
@@ -44,13 +52,6 @@ Here are some resources related to those components:
 - [Bootstrap Accessibility](https://getbootstrap.com/docs/5.3/getting-started/accessibility/)
 - [Bootstrap Icons Accessibility](https://icons.getbootstrap.com/#accessibility)
 - [Leaflet accessible maps](https://leafletjs.com/examples/accessibility/)
-
-## Creating Accessible Collections
-
-The content, objects, metadata, and configuration you add to CollectionBuilder templates will impact the accessibility of the resulting website.
-CollectionBuilder Docs aim to provide tips for creators in each relevant section to help make informed choices. 
-
-We are committed to ongoing improvement of this documentation and we hope to create tutorials and further resources for auditing your own site.
 
 ## Resources
 
