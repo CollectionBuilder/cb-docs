@@ -30,9 +30,16 @@ You'll need to use Homebrew to install rbenv. To install Homebrew, follow these 
 {:.alert .alert-purple .my-3}
 *Note: you may be prompted to enter your password. When you do so in the command line, you won't see anything happen. Just enter your password for your computer then press enter. That should complete the step.* 
 
-- When the installation is complete, type `brew -v` into the terminal and press "Enter". This will either return your current Homebrew version or a message telling you the brew command cannot be found.
-- If your terminal returns a version of Homebrew (an example might be "Homebrew 3.1.5", but keep in mind you may have a different version number, and that's okay!), you are ready to move on to the next section, [Install rbenv](#install-rbenv), below.
-- However, if your terminal returns a "command not found: brew" message, you'll need to complete one more step before moving on (this will be true for most Apple silicon computers, produced after late 2020). Copy and paste the following into the terminal and press "Enter":
+- Installation will proceed, printing out lots of text to the terminal window. It is complete when your command prompt returns (looks something like `username@computername ~ %`).
+- Look at the text about your command prompt, you should see a section "==> Next steps:" printed out in the terminal window. For most users, this will include several commands that need to be run in the terminal to finish setting up Homebrew (the exact commands are different depending on your MacOS version). Use your mouse to highlight and copy the commands one at a time. Paste each into the terminal prompt and press enter to run.
+- Quit the terminal.
+
+Check your installation: 
+
+- Open a terminal window.
+- Type `brew -v` into the terminal and press "Enter". This will either return your current Homebrew version or a message telling you the brew command cannot be found.
+- If your terminal returns a version of Homebrew (an example might be "Homebrew 4.4.3", but keep in mind you may have a different version number, and that's okay!), you are ready to move on to the next section, [Install rbenv](#install-rbenv), below.
+- However, if your terminal returns a "command not found: brew" message, you probably missed the final install commands from "Next steps". For most Apple silicon computers 2020+ the command you need is:
 ```
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile 
 ```
@@ -40,19 +47,21 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 
 ## Install rbenv
 
-Copy and paste the command 
+- Copy and paste the command below into your terminal prompt and press "Enter". This installation might take a while.
 ```
 brew install rbenv
 ```
-into your terminal prompt and press "Enter". This installation might take a while.
-
-Once this rbenv installation is complete, copy and paste
+- Once this rbenv installation is complete, run the command:
 ```
 rbenv init
 ``` 
-into the terminal prompt and press "Enter".
+- Check the messages printed out in the terminal window. In up to date version of rbenv and MacOS no further action is required. However, older version may print out additional command that need to be run to finish your installation. See note below.
+- To ensure everything refreshes, quit terminal.
+- Open a new terminal window, type `rbenv -v` to check that your installation was successful.
 
-After you run the command `rbenv init`, you will see a message that looks like this:
+*Older version notes:*
+
+- After running `rbenv init` with older versions of MacOS or rbenv you may see a message that looks like this:
 ```
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
@@ -60,42 +69,37 @@ After you run the command `rbenv init`, you will see a message that looks like t
 eval "$(rbenv init -)"
 ```
 
-Take a close look at the second line of text beginning with a pound sign (`#`).
-At the end of this line of text, you should either see `~/.zshrc` or `~/.bash_profile`.
-
-If you see `~/.zshrc`, copy and paste the following into the terminal and press "Enter":
+- Take a close look at the second line of text beginning with a pound sign (`#`). At the end of this line of text, you should either see `~/.zshrc` or `~/.bash_profile`.
+- If you see `~/.zshrc`, copy and paste the following into the terminal and press "Enter":
 ```
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc 
 ```
-
-If you see `~/.bash_profile`, copy and paste the following into the terminal and press "Enter":
+- If you see `~/.bash_profile`, copy and paste the following into the terminal and press "Enter":
 ```
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 ```
 
 ## Install Ruby
 
-- Check the [Ruby download page](https://www.ruby-lang.org/en/downloads/){:target="_blank" rel="noopener"} to find the latest stable version number. For example, in June 2023, the current stable version was "3.2.2". (You do not need to download anything, just check the version number!)
-- Back in your terminal, install the latest version of ruby by copy/pasting or writing, 
+- Check the [Ruby download page](https://www.ruby-lang.org/en/downloads/){:target="_blank" rel="noopener"} to find the latest stable version number. For example, in Oct 2024, the current stable version was "3.3.5". (You do not need to download anything, just check the version number!)
+- Back in your terminal, install the latest version of ruby by copy/pasting or typing: 
 ```
-rbenv install 3.2.2
+rbenv install 3.3.5
 ```
-and pressing "Enter".
-- Now let's set that version as your global Ruby version by entering 
+- Installation may take a long time!
+- Next, set that version as your global Ruby version by typing: 
 ```
-rbenv global 3.2.2
+rbenv global 3.3.5
 ```
-into the terminal prompt and pressing "Enter".
-- Finally, we're going to rehash, just to be safe: copy and paste the command 
+- Finally, refresh your terminal by running rehash:
 ```
 rbenv rehash
 ``` 
-into your terminal prompt and press "Enter".
 - Now let's see if that worked:
     - Quit your terminal by right clicking ("Control (^) + click") the terminal's icon in your applications menu, and selecting "Quit" from the options that appear.
     - Then reopen your terminal by clicking "Command (⌘) + Spacebar", typing `terminal` into the spotlight box that appears, and pressing "Enter".
     - Type `ruby -v` into the terminal prompt, and press "Enter".
-    - If your terminal indicates that you have Ruby 2.7.0 or higher installed, you've done it!
+    - Your terminal should print out the version of ruby that you just installed. (If your terminal indicates that you have Ruby 2.7.0 or higher installed, you've done it!)
 
 *Note: Ruby 3.2.0 was not working with some Jekyll versions--if you have 3.2.0, please update your ruby and jekyll to avoid issues!*
 
