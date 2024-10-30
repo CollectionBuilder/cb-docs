@@ -61,15 +61,8 @@ rbenv init
 
 *Older version notes:*
 
-- After running `rbenv init` with older versions of MacOS or rbenv you may see a message that looks like this:
-```
-# Load rbenv automatically by appending
-# the following to ~/.zshrc:
-
-eval "$(rbenv init -)"
-```
-
-- Take a close look at the second line of text beginning with a pound sign (`#`). At the end of this line of text, you should either see `~/.zshrc` or `~/.bash_profile`.
+- After running `rbenv init` with older versions of MacOS or rbenv you may see a message with the comment "Load rebenv automatically..."
+- Take a close look at the second line of message beginning with a pound sign (`#`). At the end of this line of text, you should either see `~/.zshrc` or `~/.bash_profile`.
 - If you see `~/.zshrc`, copy and paste the following into the terminal and press "Enter":
 ```
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc 
