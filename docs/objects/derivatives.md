@@ -49,6 +49,7 @@ The Rake task will do this for you!
 All these details sound pretty overwhelming--luckily this prep work can be automated!
 [Rake](https://github.com/ruby/rake) is a automation tool written in Ruby. 
 It is a standard part of all Ruby installs, so if you are using Jekyll, you have it installed already.
+CB-CSV has several Rake helper utilities to prep objects--look in the "docs/rake_tasks/" for documentation about the tasks.
 
 CB-CSV's "generate_derivatives" Rake task automates creating a small and thumb image from all images and PDFs contained within the "objects/" directory in your project repository.
 On Mac and Linux it will also optimize the image files.
