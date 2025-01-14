@@ -51,11 +51,12 @@ If a red "X" appears next to your commit, the build failed and your updates will
 
 ### Build Errors
 
-**As of January 2025:** *There is currently a bug in the default "jekyll.yml" starter workflow!*
-Due to [changes in the ubuntu-latest image](https://github.com/actions/runner-images/issues/10636), the GitHub Action will end up with errors in existing and new repositories. 
+*As of January 2025, the default "jekyll.yml" starter workflow is broken in projects set up before 2025-01-14!* 
+Due to [changes in the ubuntu-latest image](https://github.com/actions/runner-images/issues/10636), the GitHub Action will end up with errors in existing repositories. 
 To fix it, edit the file ".github/workflows/jekyll.yml" in your repository. 
 On line 37, replace `uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0` with `uses: ruby/setup-ruby@v1.207.0`.
 This should fix the error!
+New projects set up after 2025-01-14 are not impacted.
 {:.alert .alert-red}
 
 Some errors in your project can cause the Jekyll build fail, for example an extra space before keys in "_config.yml" or unclosed Liquid tags.
