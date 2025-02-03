@@ -101,11 +101,11 @@ This walkthrough builds off the [CollectionBuilder-CSV Walkthrough](https://coll
 {:.alert .alert-green}
 **Google Sheets tip:** An Ampersand operator is a synonym for the **CONCATENATE()** function which joins together two strings within one cell. We will use this function to populate the image_small and image_thumb fields.
 
-- Click in the sixth row of the **image_small** column. In this cell, type `="/objects/"&` and then click on the cell in the sixth row of the identifier column. The cell contents should now be `="/objects/"&R6`
+- Click in the sixth row of the **image_small** column. In this cell, type `="/objects/small/"&` and then click on the cell in the sixth row of the identifier column. The cell contents should now be `="/objects/small/"&R6`
 
-{% include feature/image.html img="formula-part1.gif" alt='Google Sheets user clicks the sixth row of the image_small column, types "=/objects/"&, and then clicks the sixth row of the identifier column' border=true width="80%" %}
+{% include feature/image.html img="formula-part1.gif" alt='Google Sheets user clicks the sixth row of the image_small column, types "=/objects/small/"&, and then clicks the sixth row of the identifier column' border=true width="80%" %}
 
-- Next type, `&"_sm.jpg"` and press Enter. The cell contents should now be `"/objects/mg101_b6_frank_robinson_negatives_009_sm.jpg"`
+- Next type, `&"_sm.jpg"` and press Enter. The cell contents should now be `"/objects/small/mg101_b6_frank_robinson_negatives_009_sm.jpg"`
 
 {% include feature/image.html img="formula2.gif" alt='Google Sheets user types &"=sm.jpg" in the cell' border=true width="80%" %}
 
@@ -123,9 +123,9 @@ This walkthrough builds off the [CollectionBuilder-CSV Walkthrough](https://coll
 
 ## 8. Add image_thumb metadata in Google Sheets
 
-- Click in the sixth row of the image_thumb column. In this cell, type `="/objects/"&` and then click on the cell in the sixth row of the identifier column. The cell contents should now be `="/objects/"&R6`.
+- Click in the sixth row of the image_thumb column. In this cell, type `="/objects/thumbs/"&` and then click on the cell in the sixth row of the identifier column. The cell contents should now be `="/objects/thumbs/"&R6`.
 
-- Next type, `&"_th.jpg"` and press Enter. You should now see `"/objects/mg101_b6_frank_robinson_negatives_009_th.jpg"` in the cell.
+- Next type, `&"_th.jpg"` and press Enter. You should now see `"/objects/thumbs/mg101_b6_frank_robinson_negatives_009_th.jpg"` in the cell.
 
 - Follow the same steps you did for adding the image_small metadata (hover over the blue dot and drag the formula down the column, copy the contents of the cells, and then paste the values only) 
 
