@@ -101,7 +101,7 @@ You will need to use the correct file paths or URLs for your objects. Here are s
 
 ### image_small: 
 
-- A full URL to a small image representation of the object *or* relative path if items are contained with in the project.
+- A full URL to a small sized image representation of the object *or* relative path if files are contained with in the project.
 - The small image is used to represent objects on Item pages, or in visualizations where a larger-than-thumb image would be useable.
 - For non-image items having a small image can useful to provide users a visual representation for the object (i.e. an audio cover).
 - If this field is blank, the item will be represented by an icon based on its `display_template` or `format` field.
@@ -112,7 +112,7 @@ You will need to use the correct file paths or URLs for your objects. Here are s
 
 ### image_thumb: 
 
-- A full URL to a thumb image representation of the object *or* relative path if items are contained with in the project.
+- A full URL to a thumb sized image representation of the object *or* relative path if files are contained with in the project.
 - The thumb image is used to represent the object on visualization pages (i.e. Home, Browse, Map, and Timeline), in a fast, user friendly file size.
 - If this field is blank, the template will use a icon to represent the object based on its `display_template` or `format` field.
 - As a general guideline, thumb images should be JPGs approximately 400x400 px max.
