@@ -1,7 +1,7 @@
 ---
 title: Locations Page
 parent: Theme Options
-nav_order: 6
+nav_order: 7
 ---
 
 # Locations Page
