@@ -75,6 +75,11 @@ rbenv global 3.4.1
 
 Now, `ruby -v` should report what you just set.
 
+To avoid possible issues, we suggest you update Ruby Gem at this time.
+Gem is a tool to install Ruby Gems packages on your system. 
+It comes with your Ruby, but may be out of date in the installer.
+To update, type the command: `gem update --system`
+
 ## Update rbenv and ruby-build
 
 Since you installed the tools using git, to update rbenv and ruby-build you simply `git pull` the most recent master branch code.
@@ -86,6 +91,10 @@ cd "$(rbenv root)"/plugins/ruby-build && git pull
 
 **Note:** the list of available Ruby versions (`rbenv install -l`) is **NOT automatically updated**.
 So you should periodically update ruby-build following the git pull method above (i.e. `cd ~/.rbenv/plugins/ruby-build && git pull`).
+
+Once rbenv is updated, you can install a new ruby version following the steps above. 
+
+In any existing projects, you will want to delete the "Gemfile.lock" file (since it is based on your old versions). 
 
 {:.alert .alert-yellow}
 *Note:* there is technically an Ubuntu package available so you can use `sudo apt install rbenv ruby-build`.

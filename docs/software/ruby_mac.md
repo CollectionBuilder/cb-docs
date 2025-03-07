@@ -61,7 +61,7 @@ rbenv init
 
 *Older version notes:*
 
-- After running `rbenv init` with older versions of MacOS or rbenv you may see a message with the comment "Load rebenv automatically..."
+- After running `rbenv init` with older versions of MacOS or rbenv you may see a message with the comment "Load rbenv automatically..."
 - Take a close look at the second line of message beginning with a pound sign (`#`). At the end of this line of text, you should either see `~/.zshrc` or `~/.bash_profile`.
 - If you see `~/.zshrc`, copy and paste the following into the terminal and press "Enter":
 ```
@@ -94,8 +94,23 @@ rbenv rehash
     - Type `ruby -v` into the terminal prompt, and press "Enter".
     - Your terminal should print out the version of ruby that you just installed. (If your terminal indicates that you have Ruby 2.7.0 or higher installed, you've done it!)
 
+Finally, to avoid possible issues, we suggest you update Ruby Gem at this time.
+Gem is a tool to install Ruby Gems packages on your system. 
+It comes with your Ruby, but may be out of date in the installer.
+To update, type the command: `gem update --system`
+
 *Note: Ruby 3.2.0 was not working with some Jekyll versions--if you have 3.2.0, please update your ruby and jekyll to avoid issues!*
 
 ## Having trouble?
 
 If this installation did not work, check out the [Jekyll install on mac docs](https://jekyllrb.com/docs/installation/macos/), or try Googling any error message or other hindrance you encountered.
+
+## Updating Ruby on Mac
+
+To update your Ruby version on Mac, you will want to start by updating rbenv using: `brew upgrade rbenv ruby-build`.
+
+Next, follow the [Install Ruby](#install-ruby) instructions above for your new version. 
+
+Then update Gems with `gem update --system`.
+
+In any existing projects, you will want to delete the "Gemfile.lock" file (since it is based on your old versions). 
