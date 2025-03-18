@@ -124,7 +124,7 @@ You will need to use the correct file paths or URLs for your objects. Here are s
 
 - An appropriate textual description of the image_small representation of the item. The alt text corresponds to the `image_small` (not necessarily the file at `object_location`).
 - This value will be used as the "alt" value of the image element, which is important for accessibility (and required!). If no `image_alt_text` is provided, the template will fall back to using the item's `description` or `title` value (which in many cases is not ideal for your users). 
-- Using the `image_alt_text` field allows you to provide more carefully crafted alt text depending on the item contents, type, and purpose. See [WAI Images Tutorial](https://www.w3.org/WAI/tutorials/images/) for more tips.
+- Using the `image_alt_text` field allows you to provide more carefully crafted alt text depending on the item contents, type, and purpose. It should succinctly describe the visual contents of the image (which is typically not the same as the "description" field). See [WAI Images Tutorial](https://www.w3.org/WAI/tutorials/images/) for more tips.
 - Example value: `Man standing with pump machinery next to a river with trees and mountains in the distance`
 
 ### object_transcript 
@@ -165,7 +165,7 @@ Preparing transcripts:
 
 By default CollectionBuilder uses these fields to generate contextual visualizations, including a map, timeline, and word clouds reflecting the frequency of subjects and locations in a collection.
 
-The template can be customized to use other fields, but it often is easiest to use these Dublin Core-based fields!
+The template can be customized to use other fields, but it often is easiest to use these [Dublin Core](https://www.dublincore.org/resources/userguide/creating_metadata/)-based fields!
 
 **Page** | **Required Fields** |
 Map | `latitude` & `longitude` |
