@@ -6,22 +6,30 @@ nav_order: 7
 
 # Map Page
 
-This section of "_data/theme.yml" configures the collection's Map page.
+This section of "_data/theme.yml" configures options for collection's Map page.
+Note, the contents of Item popups are configured by ["_data/map-config.csv"]({{ '/docs/customization/config-map/' | relative_url }}).
+
+### auto-center-map:
+- Sets the map to auto fit all features into view
+- If you would prefer to manually set the map center and zoom, set this value to `false` and configure the latitude, longitude, and zoom-level options. 
+```yaml
+auto-center-map: true
+```
 
 ### latitude: 
-- Determines the center of map.
+- Used to manually center map if not using auto-center-map option.
 ```yaml
 latitude: 46.727485
 ```
 
 ### longitude: 
-- Determines the center of map.
+- Used to manually center map if not using auto-center-map option.
 ```yaml
 longitude: -117.014185
 ```
 
 ### zoom-level: 
-- Determines the zoom level for your map. The higher the number, the more zoomed-in you'll be. 
+- Sets the zoom level for map if not using auto-center-map option. The higher the number, the more zoomed-in you'll be. 
 	- Range: any whole number between [`0` - `18`]
 ```yaml
 zoom-level: 5
@@ -62,7 +70,7 @@ map-cluster: true
 ```
 
 ### map-cluster-radius: 
-- Determines the size of clusters
+- Determines the size of clusters. A smaller radius will create more, smaller clusters, and increasing will create fewer, larger clusters on the map.
 	- Range: `10` to `80`
 ```yaml
 map-cluster-radius: 25
