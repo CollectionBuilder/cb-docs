@@ -52,6 +52,20 @@ Use the API recipes below to fill in the "image_small" and "image_thumb" fields 
 The "image_small" and "image_thumb" fields can be filled in using YouTube's image API.
 This API is not well documented by Google, but is used by many sites and JS libraries.
 
+For most CB collections the recipes will look like:
+
+- "object_location" = the full YouTube video link, https://youtu.be/`[youtubeid]`
+    - e.g. https://youtu.be/CVXQ3X6Q8oU
+- "image_small" = max quality youtube image api, https://img.youtube.com/vi/`[youtubeid]`/maxresdefault.jpg 
+    - e.g. https://img.youtube.com/vi/CVXQ3X6Q8oU/maxresdefault.jpg 
+- "image_thumb" = high quality youtube image api, https://img.youtube.com/vi/`[youtubeid]`/hqdefault.jpg 
+    - e.g. https://img.youtube.com/vi/CVXQ3X6Q8oU/hqdefault.jpg 
+
+### YouTube Image API 
+
+Below is more information about the YouTube image API incase the recipe suggestions above do not work for your collection.
+Keep in mind you can also manually create your own derivative images for the videos (using screenshots or exports) if the auto generated YouTube options don't meet your needs.
+
 Basically, you can get four sizes of the default thumbnail, or four smaller thumbnails from different points in the video.
 You can use the domain "img.youtube.com" or "i3.ytimg.com"
 
