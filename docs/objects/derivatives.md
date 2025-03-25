@@ -25,12 +25,12 @@ If you're using the Rake task to generate derivatives, two new subfolders, "obje
 ### "objects/small/" 
 - The "small/" subfolder will contain a web-friendly small-sized .jpg image representation of every object. This image is used on Item pages to provide a quality preview of the full sized object.
     - **Naming convention**: [base filename] + `_sm.jpg`.
-    - **Size**: approximately 800x800 px max.
+    - **Size**: approximately 800px wide.
 
 ### "objects/thumbs/" 
 - The "thumbs/" subfolder will contain a thumb-sized .jpg image representation of every object. This image is used throughout the CollectionBuilder visualization pages to provide a small preview of the object.
     - **Naming convention**: [base filename] + `_th.jpg`. 
-    - **Size**: approximately 400x400 px max.
+    - **Size**: approximately 450px wide.
 
 For example, if you have a collection object, "example_document1.pdf", after running the Rake task these will be the files in your objects folder/subfolders:
 

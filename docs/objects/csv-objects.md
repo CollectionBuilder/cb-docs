@@ -40,18 +40,20 @@ The CB-CSV metadata CSV contains three special fields recording the [location fo
 
 ### object_location: 
 
-- The full-sized digital object of any format and size you would like to provide to your users, or a link to an external resource such as YouTube videos or a link to an article.
+- The full-sized digital object of any format and size you would like to provide to your users. In some cases this may be a link to an external resource such as YouTube videos, a link to an article, or a IIIF manifest.
 - Depending on the Item's display_template, this file/link will populate the "Download" button, image gallery, video viewer, or other appropriate feature.
 
 ### image_small: 
 
-- Image used to represent the object on its Item page.
-- For all Item types, the "image_small" value should be a jpeg approximately 800x800 px max web-quality image.
+- Image used to represent the object on its Item page. It is also used in some feature includes.
+- For all Item types, the "image_small" value should be a jpeg approximately 800px wide web-quality image. 
+- The size guideline is based on the max natural width used in the default template--you may need larger or smaller size if you customize layouts. In some cases items with odd aspect ratios may need customized sizes or cropping (e.g. long skinny newspaper clippings or wide narrow panoramas).
 
 ### image_thumb: 
 
 - Image used to represent the object in cards on visualization pages--i.e. Home, Browse, Map, and Timeline.
-- For all Item types, the "image_thumb" value should be a jpeg approximately 400x400 px max, in a fast, user friendly file size.
+- For all Item types, the "image_thumb" value should be a jpeg approximately 450px wide, in a fast, user friendly file size.
+- The size guideline is based on the max natural width used in the default template--you may need larger or smaller size if you customize layouts. In some cases items with odd aspect ratios may need customized sizes or cropping (e.g. long skinny newspaper clippings or wide narrow panoramas).
 
 For each of these fields, the file may be hosted with the project, in an external location, or retrieved from an API (i.e. they don't all need to be in your project's "objects" folder!)--the value will be the full path, URL, or API recipe to retrieve the file.
 Check the [CSV Metadata]({{ '/docs/metadata/csv_metadata/' | relative_url }}) documentation for more information.

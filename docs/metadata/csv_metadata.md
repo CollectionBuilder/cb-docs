@@ -105,7 +105,7 @@ You will need to use the correct file paths or URLs for your objects. Here are s
 - The small image is used to represent objects on Item pages, or in visualizations where a larger-than-thumb image would be useable.
 - For non-image items having a small image can useful to provide users a visual representation for the object (i.e. an audio cover).
 - If this field is blank, the item will be represented by an icon based on its `display_template` or `format` field.
-- As a general guideline, small images should be JPGs approximately 800x800 px max.
+- As a general guideline, small images should be JPGs approximately 800px wide.
 - Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/pct:40/0/default.jpg`
 - Example value for object in project: `/objects/small/demo_002_sm.jpg`
 - Example value for YouTube object: `https://img.youtube.com/vi/CVXQ3X6Q8oU/hqdefault.jpg`
@@ -115,7 +115,7 @@ You will need to use the correct file paths or URLs for your objects. Here are s
 - A full URL to a thumb sized image representation of the object *or* relative path if files are contained with in the project.
 - The thumb image is used to represent the object on visualization pages (i.e. Home, Browse, Map, and Timeline), in a fast, user friendly file size.
 - If this field is blank, the template will use a icon to represent the object based on its `display_template` or `format` field.
-- As a general guideline, thumb images should be JPGs approximately 400x400 px max.
+- As a general guideline, thumb images should be JPGs approximately 450px wide.
 - Example value for external object: `https://digital.lib.uidaho.edu/digital/iiif/expforsav/390/full/pct:20/0/default.jpg`
 - Example value for object in project: `/objects/thumbs/demo_002_th.jpg`
 - Example value for YouTube object: `https://img.youtube.com/vi/CVXQ3X6Q8oU/mqdefault.jpg`
