@@ -146,9 +146,9 @@ You will still want to figure out appropriate derivatives for "image_small" and 
 With the manifest.json url in "object_location", you will then modify the "image" display_template or create a new display_template for the IIIF viewer items. 
 
 In "_layouts/item/image.html" (or a new file such as "_layouts/item/iiif_image.html") change
-`{% include item/image-gallery.html %}`
+`{% raw %}{% include item/image-gallery.html %}{% endraw %}`
 to
-`{% include item/iiif-manifest-universal-viewer.html %}`
+`{% raw %}{% include item/iiif-manifest-universal-viewer.html %}{% endraw %}`
 
 Note: Universal Viewer this will work with manifest.json loaded from IA.
 However, for many other servers, attempting to load a remote manifest this will trigger a CORS issue.
