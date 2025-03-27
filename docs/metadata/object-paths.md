@@ -46,21 +46,26 @@ For example:
 
 ## Path for YouTube Objects
 
-YouTube video items are supported in Item pages via the `video` value for the "[display_template]({{ '/docs/metadata/csv_metadata/#display_template' | relative_url }})" metadata field. 
+YouTube video items are supported in Item pages via the `video` value for the [display_template]({{ '/docs/metadata/csv_metadata/#display_template' | relative_url }}) metadata field. 
 Provide the full YouTube video link in the "object_location" metadata field. 
 Use the API recipes below to fill in the "image_small" and "image_thumb" fields if desired.
 
 The "image_small" and "image_thumb" fields can be filled in using YouTube's image API.
-This API is not well documented by Google, but is used by many sites and JS libraries.
+This API is not well documented by Google, but is used by many sites and JS libraries--check the details below.
 
 For most CB collections the recipes will look like:
 
-- "object_location" = the full YouTube video link, https://youtu.be/`[youtubeid]`
-    - e.g. https://youtu.be/CVXQ3X6Q8oU
-- "image_small" = max quality youtube image api, https://img.youtube.com/vi/`[youtubeid]`/maxresdefault.jpg 
-    - e.g. https://img.youtube.com/vi/CVXQ3X6Q8oU/maxresdefault.jpg 
-- "image_thumb" = high quality youtube image api, https://img.youtube.com/vi/`[youtubeid]`/hqdefault.jpg 
-    - e.g. https://img.youtube.com/vi/CVXQ3X6Q8oU/hqdefault.jpg 
+- "object_location"
+    - the full YouTube video link
+    - Recipe: `https://youtu.be/` + "youtubeid"
+    - Example: `https://youtu.be/CVXQ3X6Q8oU`
+- "image_small" 
+    - the max quality youtube image api
+    - Recipe: `https://img.youtube.com/vi/` + "youtubeid" + `/maxresdefault.jpg`
+    - Example: `https://img.youtube.com/vi/CVXQ3X6Q8oU/maxresdefault.jpg`
+- "image_thumb" = high quality youtube image api
+    - Recipe: `https://img.youtube.com/vi/` + "youtubeid" + `/hqdefault.jpg`
+    - Example: `https://img.youtube.com/vi/CVXQ3X6Q8oU/hqdefault.jpg `
 
 ### YouTube Image API 
 
@@ -68,22 +73,23 @@ Below is more information about the YouTube image API incase the recipe suggesti
 Keep in mind you can also manually create your own derivative images for the videos (using screenshots or exports) if the auto generated YouTube options don't meet your needs.
 
 Basically, you can get four sizes of the default thumbnail, or four smaller thumbnails from different points in the video.
-You can use the domain "img.youtube.com" or "i3.ytimg.com"
+You can use the domain "img.youtube.com" or "i3.ytimg.com".
+Replace `[youtubeid]` with the id of your video in these recipes.
 
 Default images:
 
-- thumb 120x90, https://img.youtube.com/vi/`[youtubeid]`/default.jpg
-- medium quality 320x180, https://img.youtube.com/vi/`[youtubeid]`/mqdefault.jpg
-- high quality 480x360, https://img.youtube.com/vi/`[youtubeid]`/hqdefault.jpg 
-- SD 640x480 (not available for all videos), https://img.youtube.com/vi/`[youtubeid]`/sddefault.jpg
-- max quality 1280×720 (or 1920x1080?, not available for all videos), https://img.youtube.com/vi/`[youtubeid]`/maxresdefault.jpg 
+- thumb 120x90, `https://img.youtube.com/vi/[youtubeid]/default.jpg`
+- medium quality 320x180, `https://img.youtube.com/vi/[youtubeid]/mqdefault.jpg`
+- high quality 480x360, `https://img.youtube.com/vi/[youtubeid]/hqdefault.jpg`
+- SD 640x480 (not available for all videos), `https://img.youtube.com/vi/[youtubeid]/sddefault.jpg`
+- max quality 1280×720 (or 1920x1080?, not available for all videos), `https://img.youtube.com/vi/[youtubeid]/maxresdefault.jpg`
 
 Auto thumbs:
 
-- default thumb, 480x360, https://img.youtube.com/vi/`[youtubeid]`/0.jpg 
-- alternate 120x90, https://img.youtube.com/vi/`[youtubeid]`/1.jpg 
-- alternate 120x90, https://img.youtube.com/vi/`[youtubeid]`/2.jpg 
-- alternate 120x90, https://img.youtube.com/vi/`[youtubeid]`/3.jpg
+- default thumb, 480x360, `https://img.youtube.com/vi/[youtubeid]/0.jpg`
+- alternate 120x90, `https://img.youtube.com/vi/[youtubeid]/1.jpg`
+- alternate 120x90, `https://img.youtube.com/vi/[youtubeid]/2.jpg`
+- alternate 120x90, `https://img.youtube.com/vi/[youtubeid]/3.jpg`
 
 For more control, you can use [YouTube Data API](https://developers.google.com/youtube/v3/), but it requires a key to access.
 
@@ -91,7 +97,7 @@ For more control, you can use [YouTube Data API](https://developers.google.com/y
 
 ## Path for Vimeo Objects
 
-Vimeo video items are supported in Item pages via the `video` value for the "[display_template]({{ '/docs/metadata/csv_metadata/#display_template' | relative_url }})" metadata field.
+Vimeo video items are supported in Item pages via the `video` value for the [display_template]({{ '/docs/metadata/csv_metadata/#display_template' | relative_url }}) metadata field.
 Provide the full Vimeo video link in the "object_location" metadata field.
 
 Vimeo does not have a documented thumbnail API. 
@@ -104,50 +110,67 @@ One option is to create screenshots to use as derivative images--if image_thumb 
 [Internet Archive](https://archive.org/) image items are accessible via standard IIIF api.
 Check the [IA IIIF documentation](https://iiif.archive.org/iiif/documentation) for full details.
 This works well for adding image and book items into a CB collection without needing to store any objects in your project.
-You can upload your items at IA or curate existing items in for your exhibit.
+You can upload your items at IA or curate existing IA items for your exhibit.
+Since IA's interface isn't great for browsing and you can not customize item pages, using CB to provide context for a curated collection is a great option.
 
 ### Single Image Items
 
 For single image items following the standard CB set up, you will use the IIIF recipes to create image URLs for your "object_location", "image_small", and "image_thumb" fields. 
 To use the recipes you will need the image identifier--this is a bit tricky because you will need the item id plus the individual filename to create the identifier for IIIF.
 
-- **ID:** IA item id is the last part of the item's URL. 
-    - e.g. https://archive.org/details/mma_wheat_field_with_cypresses_436535 the id is `mma_wheat_field_with_cypresses_436535`
-- **Filename:** The filename can be found by checking the "Download Options" box on the item's page. Click "Show all" option. This will list various files. Look for the main JPG, which might have a strange name. 
-    - e.g. https://archive.org/download/mma_wheat_field_with_cypresses_436535 the filename is "436535.jpg".
-    - You can use this method to reference individual images from a book / multiple image items. Looking at the download files, the images will be in a zip folder (generally look for the JP2 version). You will separate each level of folders shown in the downloads by an escaped slash `%2f`. E.g. to get the cover of this [book item](https://archive.org/details/aladoren00newbuoft), the filename is `%2faladoren00newbuoft_jp2.zip%2faladoren00newbuoft_jp2%2faladoren00newbuoft_0001.jp2` (a zip file, then a folder, then the filename). Generally, it will be easier to get this info from the manifest.json!
-    - *Alternatively,* you can find the IIIF identifier by checking the "info.json" for an item following the pattern `https://iiif.archive.org/iiif/` + item id + `/info.json`, e.g. https://iiif.archive.org/iiif/mma_wheat_field_with_cypresses_436535/info.json. This json will have a field "@id" listed, with the full identifier following the "https://iiif.archive.org/image/iiif/2/" url. Note, "info.json" is only available for single image items!
-- **Identifier:** The identifier for IIIF will be the ID and Filename separated by an escaped slash `%2f` 
-    - e.g. `mma_wheat_field_with_cypresses_436535%2f436535.jpg`
+- **ID:** 
+    - IA item id is the last part of the item's URL. 
+    - Example: for URL "https://archive.org/details/mma_wheat_field_with_cypresses_436535" the id is `mma_wheat_field_with_cypresses_436535`
+- **Filename:** 
+    - The filename can be found by checking the "Download Options" box on the item's page. Click "Show all" option. This will list various files. Look for the main JPG, which might have a strange name. You can look at the filename as listed in the downloads or copy the download link to get the name.
+    - Example: visiting the [example item's download page](https://archive.org/download/mma_wheat_field_with_cypresses_436535) we can see the filename is `436535.jpg`.
+    - You can use this method to reference individual images from a book / multiple image items. Looking at the download files, the images will be in a zip folder (generally look for the JP2 version). You will separate each level of folders shown in the downloads by an escaped slash `%2f`.
+    - Example: to get the cover of this [book item](https://archive.org/details/aladoren00newbuoft), the filename is `%2faladoren00newbuoft_jp2.zip%2faladoren00newbuoft_jp2%2faladoren00newbuoft_0001.jp2` (a zip file, then a folder, then the filename). Generally, it will be easier to get this info from the manifest.json!
+    - *Alternatively,* you can find the IIIF identifier by checking the "info.json" for an item following the pattern `https://iiif.archive.org/iiif/` + item id + `/info.json`. This json will have a field "@id" listed, with the full identifier following the "https://iiif.archive.org/image/iiif/2/" url. Note, "info.json" is only available for single image items!
+    - Example: `https://iiif.archive.org/iiif/mma_wheat_field_with_cypresses_436535/info.json` 
+- **Identifier:** 
+    - The identifier for IIIF will be the ID and Filename separated by an escaped slash `%2f`. You will use this value in the IIIF recipes.
+    - Example: `mma_wheat_field_with_cypresses_436535%2f436535.jpg`
 
 Once you have the identifier, you can use standard IIIF recipes to create urls that will retrieve appropriately sized images:
 
-- "object_location" = full sized, `https://iiif.archive.org/image/iiif/3/` + identifier + `/full/max/0/default.jpg`
-    - e.g. https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/max/0/default.jpg
-- "image_small" = 800px width, `https://iiif.archive.org/image/iiif/3/` + identifier + ``/full/,800/0/default.jpg`
-    - e.g. https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/,800/0/default.jpg
-- "image_thumb" = 450px width, `https://iiif.archive.org/image/iiif/3/` + identifier + `/full/,450/0/default.jpg`
-    - e.g. https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/,450/0/default.jpg
+- "object_location" 
+    - full sized image 
+    - Recipe: `https://iiif.archive.org/image/iiif/3/` + identifier + `/full/max/0/default.jpg`
+    - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/max/0/default.jpg`
+- "image_small"
+    - 800px width
+    - Recipe: `https://iiif.archive.org/image/iiif/3/` + identifier + ``/full/,800/0/default.jpg`
+    - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/,800/0/default.jpg`
+- "image_thumb"
+    - 450px width 
+    - Recipe: `https://iiif.archive.org/image/iiif/3/` + identifier + `/full/,450/0/default.jpg`
+    - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/,450/0/default.jpg`
 
-### Book, Multiple Image Items, or IIIF Viewer
+### IIIF Viewer for Books and Images
 
-To display an IA item with a IIIF viewer (instead of the default CB simple image style template), it is possible to use the "manifest.json".
+To display an IA item in a IIIF viewer (instead of CB's default simple image style template), it is possible to use the "manifest.json".
 The full url to the "manifest.json" file will be used in the "object_location" field. 
 The recipe follows the pattern: 
-`https://iiif.archive.org/iiif/3/` + item id + `/manifest.json`
 
-e.g. for book item page, https://archive.org/details/aladoren00newbuoft
-the IIIF manifest will be at 
-https://iiif.archive.org/iiif/3/aladoren00newbuoft/manifest.json
+- "object_location"
+    - URL to IIIF manifest.json
+    - Recipe: `https://iiif.archive.org/iiif/3/` + item id + `/manifest.json`
+    - Example: for book item page at "https://archive.org/details/aladoren00newbuoft", the IIIF manifest will be `https://iiif.archive.org/iiif/3/aladoren00newbuoft/manifest.json`
 
-The recipe for manifest url is the same for both book and single image items, and can be used for either in the universal IIIF viewer. 
-You will still want to figure out appropriate derivatives for "image_small" and "image_thumb" using the recipes above or manually created images.
+The recipe for manifest url is the same for both book and single image items, and can be used for either to display the item in a IIIF viewer. 
+You will still want to figure out appropriate derivatives for "image_small" and "image_thumb" using the IIIF recipes above or manually created images.
 
-With the manifest.json url in "object_location", you will then modify the "image" display_template or create a new display_template for the IIIF viewer items. 
+With the manifest.json url in "object_location", you will then modify the "image" display_template or create a new display_template that uses a IIIF viewer to display the items. 
+CB has an include with [Universal Viewer](https://github.com/UniversalViewer/universalviewer) set up to use in this context.
 
-In "_layouts/item/image.html" (or a new file such as "_layouts/item/iiif_image.html") change
+If all your "image" items are set up with a manifest.json, edit "_layouts/item/image.html"--or if you would like to create a new custom display_template, create a new file such as "_layouts/item/iiif_image.html" by copying "_layouts/item/image.html".
+In the file, change the line:
+
 `{% raw %}{% include item/image-gallery.html %}{% endraw %}`
-to
+
+to to use the iiif-manifest-universal-viewer include instead:
+
 `{% raw %}{% include item/iiif-manifest-universal-viewer.html %}{% endraw %}`
 
 Note: Universal Viewer this will work with manifest.json loaded from IA.
@@ -161,11 +184,14 @@ A potential work around is to download a the manifests and put them directly in 
 The CONTENTdm API can be used to retrieve display images and file downloads from any CONTENTdm repository. 
 To use the API you will need to know the "Collection Alias" and "CONTENTdm number" of each object:
 
-- The **Collection Alias** is a path assigned by CONTENTdm and can be found in CONTENTdm Admin on the Collections > Profile page, or by looking at the URL of the collection on the web. For example "https://cdm17254.contentdm.oclc.org/digital/collection/ui_ep/search" the collection alias is given after "/collection/", so would be `ui_ep`.
+- **Collection Alias**
+    - a path assigned by CONTENTdm and can be found in CONTENTdm Admin on the Collections > Profile page, or by looking at the URL of the collection on the web. 
+    - Example: "https://cdm17254.contentdm.oclc.org/digital/collection/ui_ep/search" the collection alias is given after "/collection/", so would be `ui_ep`.
+- **CONTENTdm number**
+    - Individual identifier for each item in a collection. The values for *CONTENTdm number* are included in your metadata by default when you export your collection's metadata from CONTENTdm.
+    - Example: `1`
 
-- The values for **CONTENTdm number** are included in your metadata by default when you export your collection's metadata from CONTENTdm.
-
-Once you have columns in your metadata for "Collection Alias" and "CONTENTdm number" you can use formulas in Sheets or OpenRefine based on the CDM APIs to fill in `object_location`, `image_small`, and `image_thumb` columns for different item types.
+Once you have columns in your metadata for "Collection Alias" and "CONTENTdm number" you can use formulas in Sheets or OpenRefine based on the CDM APIs to fill in "object_location", "image_small", and "image_thumb" columns for different item types.
 In general, it is best to use IIIF for image objects and CDM "utils" API for non-image items.
 
 - [CONTENTdm API reference](https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/API_Reference/CONTENTdm_API)
