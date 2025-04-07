@@ -14,6 +14,11 @@ This two-part walkthrough provides steps for updating your CollectionBuilder sit
 {:.alert .alert-blue}
 **Are you a VS Code user?** If you are using VS Code for your CollectionBuilder project, feel free to jump to [Part 2](#part-2-updating-metadata-using-visual-studio-code) of this walkthrough.
 
+{:.alert .alert-red}
+**Auto convert issues:** the method of opening a CSV file in Sheets described in this Walkthrough is quick, however, may result in issues for some metadata spreadsheets as Sheets will auto convert some value types. 
+If you have "true" / "false" they will be converted to "TRUE" / "FALSE", and some numbers may be rounded off. 
+Check the main docs for a slower, but more sure way to [import metadata CSVs into Sheets](https://collectionbuilder.github.io/cb-docs/docs/metadata/uploading/#update-metadata).
+
 ## Part 1: Updating Metadata Using the GitHub Web Interface
 
 This part of the walkthrough is recommended for when you are using the GitHub web interface for editing your site, which is most often used for the **CollectionBuilder-GH** and **CollectionBuilder-SHEETS** templates.
