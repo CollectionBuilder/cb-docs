@@ -56,6 +56,7 @@ Due to [changes in the ubuntu-latest image](https://github.com/actions/runner-im
 To fix it, edit the file ".github/workflows/jekyll.yml" in your repository. 
 On line 37, replace `uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0` with `uses: ruby/setup-ruby@v1.207.0`.
 This should fix the error!
+Alternatively, replace the whole file with a fresh copy of the default [jekyll.yml starter action](https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml).
 New projects set up after 2025-01-14 are not impacted.
 {:.alert .alert-red}
 
