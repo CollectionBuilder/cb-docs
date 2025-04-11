@@ -161,6 +161,9 @@ The recipe follows the pattern:
 The recipe for manifest url is the same for both book and single image items, and can be used for either to display the item in a IIIF viewer. 
 You will still want to figure out appropriate derivatives for "image_small" and "image_thumb" using the IIIF recipes above or manually created images.
 
+*Note:* for book, pdf, video, or audio items from Internet Archive it might be easier to use the direct embed option (rather than manifest.json + IIIF viewer).
+This is available in ["_includes/item/ia-embed.html"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/_includes/item/ia-embed.html).
+
 With the manifest.json url in "object_location", you will then modify the "image" display_template or create a new display_template that uses a IIIF viewer to display the items. 
 CB has an include with [Universal Viewer](https://github.com/UniversalViewer/universalviewer) set up to use in this context.
 
