@@ -140,7 +140,7 @@ Once you have the identifier, you can use standard IIIF recipes to create urls t
     - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/max/0/default.jpg`
 - "image_small"
     - 800px width
-    - Recipe: `https://iiif.archive.org/image/iiif/3/` + identifier + ``/full/,800/0/default.jpg`
+    - Recipe: `https://iiif.archive.org/image/iiif/3/` + identifier + `/full/,800/0/default.jpg`
     - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/,800/0/default.jpg`
 - "image_thumb"
     - 450px width 
