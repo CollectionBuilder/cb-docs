@@ -88,10 +88,10 @@ link-color: "#17a2b8"
 ### base-font-family: 
 
 - Changes the font family
-	- If you use this option, you will generally also need to use the font-cdn option below to add the font style sheet link to the head. This ensures the user actually have the font you configured!
+	- If you use this option, you will generally also need to use the font-cdn option below to add the font style sheet link to the head. This ensures the user actually have the font you configured! For more info, see [Custom Fonts](/cb-docs/docs/advanced/add-font/).
 
 ```yaml
-base-font-family: 'Roboto', sans-serif;
+base-font-family: "'Roboto', sans-serif"
 ```
 
 ### font-cdn: 
