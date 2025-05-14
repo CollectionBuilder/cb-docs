@@ -15,6 +15,7 @@ This section presents example recipes for figuring out the fields for a few comm
 - [Self-Hosted Objects](#example-paths-for-external-or-self-hosted-objects)
 - [YouTube Objects](#path-for-youtube-objects)
 - [Vimeo Objects](#path-for-vimeo-objects)
+- [IIIF Images](#path-for-iiif-images)
 - [Internet Archive Objects](#path-for-internet-archive-objects)
 - [CONTENTdm Objects](#path-for-contentdm-objects)
 
@@ -105,6 +106,75 @@ One option is to create screenshots to use as derivative images--if image_thumb 
 
 ------
 
+## Path for IIIF Images
+
+Many repositories and image servers support the [IIIF Image API](https://iiif.io/api/image/3.0/) which provides a standardized way to retrieve images of various sizes using URLs.
+You can use the IIIF recipes to fill in the "object_location", "image_small", and "image_thumb" for your collection Items.
+
+To use the IIIF API you will need to know the base url for your server and the image identifiers for your items.
+The base url often contains a domain and potentially some prefixes to denote the service point. 
+For example, the Internet Archive IIIF base url is `https://iiif.archive.org/image/iiif/3/`.
+Image identifiers are internal unique ids that you will need to figure out from the system.
+
+IIIF image requests follow the pattern:
+`https://{server}{/prefix}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}`.
+
+For the purposes of CB, in most cases the region = `full`, rotation = `0`, quality = `default`, and format = `.jpg`.
+Only the size option will change for "object_location", "image_small", and "image_thumb":
+
+- "object_location" 
+    - full sized image 
+    - Recipe: baseurl + identifier + `/full/max/0/default.jpg`
+    - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/max/0/default.jpg`
+- "image_small"
+    - 800px width
+    - Recipe: baseurl + identifier + `/full/800,/0/default.jpg`
+    - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/800,/0/default.jpg`
+- "image_thumb"
+    - 450px width 
+    - Recipe: baseurl + identifier + `/full/450,/0/default.jpg`
+    - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/450,/0/default.jpg`
+
+Issues can come up if the original full sized image is smaller than the requested size. 
+In cases where the image is smaller than 450 pixels wide, you will likely want to use the `max` size for all image options.
+Alternatively, most servers support adding `^` to the size to allow up scaling the image, e.g. `/^450,/`, but keep in mind the image will likely be blurry.
+
+Despite being a standard, a lot of IIIF servers have quirks!
+Two common options with slightly different details, Internet Archive and CONTENTdm, are described below.
+
+### IIIF Viewer
+
+In some cases you may want to display images in a IIIF viewer rather than the default "image" display_template.
+
+To use the viewer, you will need the full url to the "manifest.json" file for the item, which will fill the "object_location" field.
+The recipe usually follows the pattern: 
+
+- "object_location"
+    - URL to IIIF manifest.json
+    - Recipe: base url + identifier + `/manifest.json`
+    - Example: `https://iiif.archive.org/iiif/3/aladoren00newbuoft/manifest.json`
+
+You will still want to figure out appropriate derivatives for "image_small" and "image_thumb" using the IIIF recipes above or manually created images.
+
+With the manifest.json url in "object_location", you will then create a new display_template that uses a IIIF viewer to display the items (or modify the default "image" display_template).
+CB has an include with [Universal Viewer](https://github.com/UniversalViewer/universalviewer) set up to use in this context, "_includes/item/iiif-manifest-universal-viewer.html".
+
+To set up a custom display_template, create a new file such as "_layouts/item/iiif_image.html" by copying "_layouts/item/image.html" (or if all your "image" items are set up with a manifest.json, edit "_layouts/item/image.html").
+In the file, change the line:
+
+`{% raw %}{% include item/image-gallery.html %}{% endraw %}`
+
+to to use the iiif-manifest-universal-viewer include instead:
+
+`{% raw %}{% include item/iiif-manifest-universal-viewer.html %}{% endraw %}`
+
+Note: Universal Viewer will work with manifest.json loaded from IA and other sources set up for broad access.
+However, for many other servers, attempting to load a remote manifest this will trigger a CORS issue and nothing will load.
+A potential work around is to download the manifests, rename, and put them directly in your project to avoid CORS.
+You would then reference the local copy of the manifest in "object_location", e.g. `/objects/example.json`.
+
+------
+
 ## Path for Internet Archive Objects
 
 [Internet Archive](https://archive.org/) image items are accessible via standard IIIF api.
@@ -140,45 +210,31 @@ Once you have the identifier, you can use standard IIIF recipes to create urls t
     - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/max/0/default.jpg`
 - "image_small"
     - 800px width
-    - Recipe: `https://iiif.archive.org/image/iiif/3/` + identifier + `/full/,800/0/default.jpg`
-    - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/,800/0/default.jpg`
+    - Recipe: `https://iiif.archive.org/image/iiif/3/` + identifier + `/full/800,/0/default.jpg`
+    - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/800,/0/default.jpg`
 - "image_thumb"
     - 450px width 
-    - Recipe: `https://iiif.archive.org/image/iiif/3/` + identifier + `/full/,450/0/default.jpg`
-    - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/,450/0/default.jpg`
+    - Recipe: `https://iiif.archive.org/image/iiif/3/` + identifier + `/full/450,/0/default.jpg`
+    - Example: `https://iiif.archive.org/image/iiif/3/mma_wheat_field_with_cypresses_436535%2f436535.jpg/full/450,/0/default.jpg`
 
-### IIIF Viewer for Books and Images
+### IA Embed or IIIF Viewer for Books and Images
 
-To display an IA item in a IIIF viewer (instead of CB's default simple image style template), it is possible to use the "manifest.json".
-The full url to the "manifest.json" file will be used in the "object_location" field. 
-The recipe follows the pattern: 
+Rather than using CB's default "image" display_template for IA items, you can display items using a IA embed or IIIF viewer.
+
+For book, pdf, video, or audio items from Internet Archive it is easiest to use the embed option.
+This is available in ["_includes/item/ia-embed.html"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/_includes/item/ia-embed.html).
+For "object_location" you will use the IA item page url, then create a custom display_temple using the ia-embed include.
+
+Alternatively, for single image, multi-image, or book items, it is possible to use the IIIF "manifest.json" to display the item in a IIIF viewer.
+For "object_location" you will use the full url to the "manifest.json" file, then create a custom display_template using the iiif-manifest-universal-viewer include (see in IIIF section above).
+The recipe follows the same pattern for all item types:
 
 - "object_location"
     - URL to IIIF manifest.json
     - Recipe: `https://iiif.archive.org/iiif/3/` + item id + `/manifest.json`
     - Example: for book item page at "https://archive.org/details/aladoren00newbuoft", the IIIF manifest will be `https://iiif.archive.org/iiif/3/aladoren00newbuoft/manifest.json`
 
-The recipe for manifest url is the same for both book and single image items, and can be used for either to display the item in a IIIF viewer. 
 You will still want to figure out appropriate derivatives for "image_small" and "image_thumb" using the IIIF recipes above or manually created images.
-
-*Note:* for book, pdf, video, or audio items from Internet Archive it might be easier to use the direct embed option (rather than manifest.json + IIIF viewer).
-This is available in ["_includes/item/ia-embed.html"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/_includes/item/ia-embed.html).
-
-With the manifest.json url in "object_location", you will then modify the "image" display_template or create a new display_template that uses a IIIF viewer to display the items. 
-CB has an include with [Universal Viewer](https://github.com/UniversalViewer/universalviewer) set up to use in this context.
-
-If all your "image" items are set up with a manifest.json, edit "_layouts/item/image.html"--or if you would like to create a new custom display_template, create a new file such as "_layouts/item/iiif_image.html" by copying "_layouts/item/image.html".
-In the file, change the line:
-
-`{% raw %}{% include item/image-gallery.html %}{% endraw %}`
-
-to to use the iiif-manifest-universal-viewer include instead:
-
-`{% raw %}{% include item/iiif-manifest-universal-viewer.html %}{% endraw %}`
-
-Note: Universal Viewer this will work with manifest.json loaded from IA.
-However, for many other servers, attempting to load a remote manifest this will trigger a CORS issue.
-A potential work around is to download a the manifests and put them directly in your project to avoid CORS.
 
 ------
 
