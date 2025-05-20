@@ -11,6 +11,9 @@ nav_order: 1
 CollectionBuilder-CSV relies on Jekyll plugins, thus will not build properly using default GitHub Pages--see [GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }}) instead.
 Also note that GH and Sheets users *can* use any deployment method--you are not limited to using GitHub Pages to host your site!
 
+"Deploy from a branch" is the traditional and simplest way to activate GitHub Pages and build your website.
+Note, this process uses [older versions of Jekyll](https://pages.github.com/versions/) and does not support plugins, so CB-GH and CB-Sheets are designed to work around those limitations (compared to CB-CSV which is not compatible).
+
 ## Make Repository Public
 
 Your repository must be public to use GitHub Pages unless you have a paid account (most users make their projects public anyway!).

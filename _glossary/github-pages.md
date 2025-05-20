@@ -16,3 +16,4 @@ Resources:
 
 - [GitHub Pages docs](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages)
 - [Using Jekyll on GitHub Pages docs](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll)
+- [Dependency versions](https://pages.github.com/versions/) (traditional gh-pages build uses older version of Jekyll)
