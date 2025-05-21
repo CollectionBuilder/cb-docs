@@ -15,4 +15,4 @@ If you are unfamiliar with Git and GitHub here is the super quick overview:
 - a **Repository** is a folder of files for a project tracked by Git
 - **GitHub** is an online platform for collaborating on repositories
 
-*Note:* using other platforms such as [GitLab]({{ '/docs/advanced/gitlab/' | relative_url }}) or [BitBucket](https://bitbucket.org/) (or no version control at all) is definitely possible, but is not covered directly in these docs.
+*Note:* using other platforms such as [Codeberg](https://codeberg.org/), [GitLab]({{ '/docs/advanced/gitlab/' | relative_url }}), or [BitBucket](https://bitbucket.org/) (or no version control at all) is definitely possible, but is not covered directly in these docs.

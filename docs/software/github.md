@@ -16,7 +16,7 @@ Code for your CollectionBuilder project will be stored on GitHub in a Git "repos
 So the first step is to sign up for a GitHub account if you do not have one already.
 
 **Note:** these docs assume you are using GitHub--however, it is **not** in any way a requirement to use CollectionBuilder. 
-Alternative platforms, such as [GitLab]({{ '/docs/advanced/gitlab/' | relative_url }}) or [Bitbucket](https://bitbucket.org/product), are available--or you could use no version control at all (we don't suggest this)!
+Alternative platforms, such as [Codeberg](https://codeberg.org/), [GitLab]({{ '/docs/advanced/gitlab/' | relative_url }}), or [Bitbucket](https://bitbucket.org/product), are available--or you could use no version control at all (we don't suggest this)!
 {:.alert}
 
 ## GitHub Account
