@@ -45,6 +45,10 @@ The columns are described below, and an [example](#example) is provided for your
     - **Important:** To use a field as the default sort in theme.yml, you must include a sort_name for that field.
 
 ### facet_name: 
+
+{:.alert .alert-red}
+**NOTE:** This option only applies to **CSV**. **GH** and **SHEETS** do not have faceted/advanced search options. 
+
 - Determines the field name as it is displayed to users in the facet dropdown menus that appear both on the main page and via the advanced search modal.
 - The name will default to display_name if that is present so no need to define that twice if you already do it in that field.
     - Typically, the reason to use this column is when you're making one of your fields a button on the card but don't want to label it on the card, which means you don't enter a display_name -- in that case, you can still label how the field is displayed to a user in the faceted/advanced dropdowns by defining the label here

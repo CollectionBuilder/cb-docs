@@ -18,6 +18,9 @@ The Browse page supports dynamic filtering through URL parameters. For example:
 
 This filtering system works with any metadata field configured in your config-browse.csv file.
 
+{:.alert .alert-red}
+**Note:** These options are only available on **CollectionBuilder-CSV** at the moment. Our **GH** and **SHEETS** templates currently only offer simle searching.
+
 ## Browse Page Options:
 
 ### advanced-search:
