@@ -28,7 +28,7 @@ These features are controlled through new options in "_data/theme.yml":
 
 ## Home Page Content Update
 
-The home page feature formerly called "Objects" (`{% include index/objects.html %}`) has been renamed to "Content" (`{% include index/content.html %}`) for better clarity. The functionality remains unchanged.
+The home page feature formerly called "Objects"  has been renamed to "Content" for better clarity and it's include snippet is now at `_includes/index/content.html` rather than `_includes/index/objects.html`. The functionality remains unchanged.
 
 ## Backward Compatibility
 
