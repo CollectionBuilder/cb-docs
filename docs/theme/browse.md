@@ -47,12 +47,12 @@ faceted-search: false
 ### default-sort-field:
 
 - Determines which metadata field is used for the default sorting of browse results.
-- The value must match one of the field values (first column) in the browse-config.csv file.
+- The value must match one of the field values (first column) in the config-browse.csv file.
 - For example:
 ```yaml
 default-sort-field: date
 ```
-- If left blank or if the value doesn't match any field in browse-config.csv's first column, the default sort will be a random sort.
+- If left blank or if the value doesn't match any field in config-browse.csv's first column, the default sort will be a random sort.
 
 
 {:.alert .alert-blue}

@@ -8,7 +8,7 @@ CollectionBuilder-CSV now supports enhanced browse functionality with new advanc
 ## New Browse Features
 
 - **Advanced Search**: Users can now access detailed search options via a modal dialog by clicking the advanced search button above the search box. This allows for more complex search construction and filtering.
-- **Faceted Search**: A new field selection panel appears to the left of search results, enabling users to filter results by specific metadata fields configured in browse-config.csv.
+- **Faceted Search**: A new field selection panel appears to the left of search results, enabling users to filter results by specific metadata fields configured in config-browse.csv.
 - **Default Sorting**: Collections can now specify a default sort field that determines the initial order when users first visit the Browse page.
 
 These features are controlled through new options in "_data/theme.yml":
