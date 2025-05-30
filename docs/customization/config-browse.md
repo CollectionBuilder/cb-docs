@@ -46,9 +46,7 @@ The columns are described below, and an [example](#example) is provided for your
 
 ### facet_name: 
 
-{:.alert .alert-red}
-**NOTE:** This option only applies to **CSV**. **GH** and **SHEETS** do not have faceted/advanced search options. 
-
+- **NOTE:** This option only applies to **CSV**. **GH** and **SHEETS** do not have faceted/advanced search options (yet). 
 - Determines the field name as it is displayed to users in the facet dropdown menus that appear both on the main page and via the advanced search modal.
 - The name will default to display_name if that is present so no need to define that twice if you already do it in that field.
     - Typically, the reason to use this column is when you're making one of your fields a button on the card but don't want to label it on the card, which means you don't enter a display_name -- in that case, you can still label how the field is displayed to a user in the faceted/advanced dropdowns by defining the label here
@@ -93,24 +91,3 @@ If you want a specific sort order to be the default when users first visit the B
 
 {:.alert .alert-blue}
 **Note:** Even hidden fields are included in advanced search and faceted search filtering.
-
-
-## How the Browse Page Works
-
-The Browse page has two main components:
-
-1. **Item Display**: Each collection item appears as a card showing metadata you configure
-2. **Search & Filter**: Users can search terms or use enhanced filtering options
-
-## Enhanced Browse Features
-
-{:.alert .alert-blue}
-**Note:** Additional Browse page features can be enabled in the "_data/theme.yml" file:
-- **Advanced Search**: Adds detailed search options via a modal dialog
-- **Faceted Search**: Provides filter dropdowns based on metadata fields  
-- **Default Sorting**: Sets initial sort order when page loads
-
-These enhanced features require proper configuration of the "config-browse.csv" file to work effectively.
-
-{:.alert .alert-green}
-**Simple Search Option**: To use the basic search functionality instead, set both `advanced-search` and `faceted-search` to `false` in theme.yml.

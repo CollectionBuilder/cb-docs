@@ -8,18 +8,8 @@ nav_order: 2
 
 This section of "_data/theme.yml" configures your collection's Browse page features.
 
-## Browse Page Filtering
-
-The Browse page supports dynamic filtering through URL parameters. For example:
-- Clicking "Forests" on the Subjects page creates a link ending with `browse.html#subject:forests`
-- The Browse page reads this URL fragment (`#subject:forests`)
-- It splits this into field (`subject`) and value (`forests`)
-- Then filters the displayed cards to only show items with "forests" as a subject
-
-This filtering system works with any metadata field configured in your config-browse.csv file.
-
-{:.alert .alert-red}
-**Note:** These options are only available on **CollectionBuilder-CSV** at the moment. Our **GH** and **SHEETS** templates currently only offer simle searching.
+{:.alert .alert-blue}
+**NOTE:** The options described below only apply to **CSV**. **GH** and **SHEETS** do not have faceted/advanced search options or default sort (yet).
 
 ## Browse Page Options:
 
