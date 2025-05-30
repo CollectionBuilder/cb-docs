@@ -19,6 +19,11 @@ You can always add other interpretive pages using the same features by following
 
 To edit the About page, navigate to the "pages" directory and open the "about.md" file. 
 
+{:.alert .alert-yellow}
+This section is for CB-CSV.
+The new About page layout is not available in CB-GH or CB-Sheets yet!
+Please jump down to our legacy [CB-GH About Page](#cb-gh-about-page) section!
+
 ### About Front Matter Options 
 
 First, you will notice a *large* YAML front matter block.
@@ -62,3 +67,37 @@ You can learn more about the includes and how to use them on the [Feature Includ
 **Remember to DELETE all the placeholder content once you have your collection set up!**
 
 [View About the About Demo Page](https://collectionbuilder.github.io/collectionbuilder-gh/about.html)
+
+------------------
+
+*CB-CSV has a refreshed default About page layout described above. The information below is for the legacy About layout, which is currently used in CB-GH and CB-Sheets.*
+
+## CB-GH About Page
+
+To edit the About page, navigate to the "pages" directory and open the "about.md" file. 
+
+First, you will notice the front matter block which configures some page options (see [page basics]({{ '/docs/pages/basics/' | relative_url }})).
+In most cases you will leave this unedited.
+
+Below the front matter block is content written in [Markdown]({{ '/docs/glossary/#markdown' | relative_url }}).
+This is where you can start writing about your collection!
+
+However, notice that the first content line you will see looks like:
+
+```
+{% raw %}{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %}{% endraw %}
+```
+
+This is a [Liquid Include](https://jekyllrb.com/docs/includes/) command that is adding a large image with text at the top of the default page.
+Includes are a powerful feature of Jekyll that allow modular elements or content to be drawn into your site's pages from a central location.
+
+In this case the include is calling the file `feature/jumbotron.html`, and providing the option `objectid` with a URL to an external image.
+You should update the value of `objectid` replacing the URL with either an objectid of an image item from your collection or a URL for your own external image (or [see Jumbotron]({{ '/docs/pages/features/#jumbotron' | relative_url }}) on the Feature Includes page).
+If you don't want the "jumbotron" feature, just delete the full line of the include.
+
+The template file contains some placeholder CollectionBuilder information and content.
+Towards the bottom of the template "about.md" you will notice a comment and "about_the_about.md" include.
+Be sure to delete this and anything else you don't want to appear on your "About" page.
+But first, check out the generated "About" page, since this content demonstrates using feature includes!
+
+You can learn more about the includes and how to use them on the [Feature Includes Options]({{ '/docs/pages/features/' | relative_url }}) page.
