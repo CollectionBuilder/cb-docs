@@ -1,7 +1,7 @@
 ---
 title: Data
 parent: Theme Options
-nav_order: 9
+nav_order: 10
 ---
 
 # Data 

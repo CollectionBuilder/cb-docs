@@ -45,7 +45,7 @@ This is what the default "home-infographic.html" layout looks like:
 
 {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" %}
 
-{% include index/objects.html %}
+{% include index/content.html %}
 
 </div>
 <div class="col-md-12">
@@ -160,7 +160,7 @@ Here's an example where there is one big top carousel, then three separate secti
 </div>
 <div class="col-md-4">
 
-{% include index/objects.html %}
+{% include index/content.html %}
 
 </div>
 

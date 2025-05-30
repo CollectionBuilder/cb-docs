@@ -1,7 +1,7 @@
 ---
 title: Compound Objects
 parent: Theme Options
-nav_order: 10
+nav_order: 11
 ---
 
 # Compound Objects

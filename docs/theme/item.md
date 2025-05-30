@@ -1,7 +1,7 @@
 ---
 title: Item Page
 parent: Theme Options
-nav_order: 4
+nav_order: 5
 ---
 
 # Item Page 
