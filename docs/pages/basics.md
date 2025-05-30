@@ -7,7 +7,7 @@ nav_order: 1
 # Page Basics
 
 The pages that appear on your collection site start as [Markdown]({{ '/docs/glossary/#markdown' | relative_url }}) files in the "pages" folder of your project repository.
-We usually call these "stubs", because Jekyll will process their content and wrap it in template elements to create the final HTML pages.
+We usually call these "stubs", because Jekyll will process their content and wrap it in template elements to output the final HTML pages.
 
 Most of the page stubs are placeholders for the CollectionBuilder visualization features, such as "Browse" or "Subjects", so **you will rarely have to edit any of the default page stubs.**
 
@@ -30,7 +30,7 @@ permalink: /browse.html
 ```
 
 The front matter block starts with `---` and ends with `---`.
-In between those lines, the content is read by Jekyll as [YAML]({{ '/docs/glossary/#yaml' | relative_url }}) data.
+In between those lines, the content is read by Jekyll as [YAML]({{ '/docs/glossary/#yaml' | relative_url }}) data (importantly, it is not Markdown!).
 Similar to editing "_config.yml" or "theme.yml", this section will be key value pairs, with some special keys that Jekyll is looking for:
 
 - `title` is used for meta tags on the page.
@@ -39,12 +39,12 @@ Similar to editing "_config.yml" or "theme.yml", this section will be key value 
 
 You may also see comments (following `#`) with more information about the page or configuration options.
 
-The front matter block will not appear in the final page.
+The front matter block *will not appear* in the final page.
 Lines below the front matter block are interpreted by Jekyll as Markdown, and will be the content that appears in the rendered web page.
 
 ## Markdown (.md)
 
-The default CollectionBuilder page stubs are written in [Markdown](https://daringfireball.net/projects/markdown/syntax){:target="_blank" rel="noopener"}, thus the ".md" extension.
+The default CollectionBuilder page stubs are written in [Markdown](https://daringfireball.net/projects/markdown/syntax), thus the ".md" extension.
 Markdown is a standard to simplify writing content for the web.
 When Jekyll builds the site, the Markdown content is converted into HTML for the final page.
 
@@ -53,7 +53,12 @@ Markdown is used for in many blogging platforms, static generators, and everywhe
 
 Check our [Markdown glossary entry]({{ '/docs/glossary/#markdown' | relative_url }}) for resources and tutorials!
 
-Alternatively, you can create page stubs with the `.html` extension if you prefer writing HTML directly.
+Note that the Markdown content on most pages will start with a h2 heading (`##`). 
+This convention will match the standard layout in the output HTML. 
+Use h2 (`##`) for the main headings in your pages.
+
+Instead of ".md", you can create page stubs with the ".html" and write directly in HTML.
+This is often helpful if you have more complex layout than Markdown can handle gracefully (or you just prefer writing HTML with lots of pointy brackets!).
 
 ## Navigation
 
