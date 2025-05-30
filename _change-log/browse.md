@@ -18,7 +18,7 @@ These features are controlled through new options in "_data/theme.yml":
 
 
 {:.alert .alert-red}
-**Note:** These options are only available on **CollectionBuilder-CSV** at the moment. Our **GH** and **SHEETS** templates currently only offer simle searching.
+**Note:** Enhanced browse features are currently only available in **CollectionBuilder-CSV**. GH and SHEETS templates continue to use simple search functionality.
 
 ## Template Integration Updates
 
@@ -34,8 +34,7 @@ The home page feature formerly called "Objects" (`{% include index/objects.html 
 
 Users preferring the simpler search functionality can disable the enhanced features by setting both `advanced-search` and `faceted-search` to `false` in theme.yml. The template will revert to the previous search behavior.
 
-{:.alert .alert-red}
-**Note:** Enhanced browse features are currently only available in **CollectionBuilder-CSV**. GH and SHEETS templates continue to use simple search functionality.
+
 
 These enhancements are documented in the [Browse Page theme options]({{ '/docs/theme/browse/' | relative_url }}) and [Browse Configuration]({{ '/docs/customization/config-browse/' | relative_url }}) sections.
 
