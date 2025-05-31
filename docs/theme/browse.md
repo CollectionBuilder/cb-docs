@@ -56,7 +56,7 @@ default-sort-field: date
 
 
 {:.alert .alert-blue}
-**Note:** The Browse page's display fields are configured in "_data/browse-config.csv". This file defines which metadata fields will be displayed and how they'll appear in the browse view. [More Here]({{'/docs/customization/config-browse/' | relative_url }})
+**Note:** The Browse page's display fields are configured in "_data/config-browse.csv". This file defines which metadata fields will be displayed and how they'll appear in the browse view. [More Here]({{'/docs/customization/config-browse/' | relative_url }})
 
 {:.alert .alert-green}
 **Pro Tip**: When configuring your Browse page, consider what fields are most important for your users to search and filter by. Including too many facets can be overwhelming, while too few might limit discovery.
