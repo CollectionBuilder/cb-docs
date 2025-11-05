@@ -15,7 +15,7 @@ GitHub has recently made setting up Actions to build your site easier, so this i
 ## Prep Project Repository
 
 1. Ensure your repository is public. Your repository must be public to use GitHub Pages unless you have a paid account (most users make their projects public anyway!).
-2. Edit your "_config.yml" to ensure the `url` and `baseurl` values are set correctly for hosting on GitHub Pages following the pattern `url: https://username.github.io` and `baseurl: /repository-name`.
+2. Edit your "_config.yml" to ensure the `url` and `baseurl` values are set correctly for hosting on GitHub Pages following the pattern `url: https://username.github.io` and `baseurl: /repository-name`. Note, the default action will NOT build your site to a different location, the url and baseurl must match your actual repository details!
 3. Make sure your project has a "Gemfile". CollectionBuilder templates should have one by default!
 4. *Optional:* Commit your "Gemfile.lock" to ensure the build uses the same setup as you have been using to develop the project. By default "Gemfile.lock" is usually listed in the ".gitignore" file, thus Git will not track it. Edit the ".gitignore" file to remove "Gemfile.lock" then commit the changes.
 
@@ -30,8 +30,9 @@ Visit the repository's "Settings", click on "Actions" in the left side nav menu,
 2. On "Settings" page, click "Pages" in the left side menu.
 3. On the "Pages" page, under "Source", click the dropdown and select "GitHub Actions".
 4. Below the "Source" dropdown, a box will appear under "Use a suggested workflow" titled "Jekyll". Click the "Configure" button.
-5. This will open an editor page creating a new file named ".github/workflows/jekyll.yml" populated with GitHub's [starter Jekyll workflow](https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml). You can ignore the file and other options displayed on the right side, and just click the green "Start commit" button. 
-6. Fill in the commit message as usual and click the green "Commit new file" button. 
+5. This will open an editor page creating a new file named ".github/workflows/jekyll.yml" populated with GitHub's [starter Jekyll workflow](https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml). 
+6. **Important:** You will need to update the Ruby version set in the default "jekyll.yml". In the editor window, scroll down to the around line 40 where it says `ruby-version: '3.1'`. Update the value to `ruby-version: '3.4'` 
+7. Click the green "Start commit" button, fill in the commit message as usual, and click the green "Commit new file" button.
 
 Committing the action file to your repository will start the build process.
 It may take a few minutes for the action to complete building and deploying your site.
@@ -50,6 +51,10 @@ A green checkmark will appear next to the most recent commit that triggered a su
 If a red "X" appears next to your commit, the build failed and your updates will not be deployed--the last working version of the site will still be live.
 
 ### Build Errors
+
+*As of November 2025, the default "jekyll.yml" starter workflow fails and gives errors!*
+The default uses Ruby 3.1 which is incompatible with current versions of Sass.
+It is necessary to update the Ruby version to 3.4, which is documented above!
 
 *As of January 2025, the default "jekyll.yml" starter workflow is broken in projects set up before 2025-01-14!* 
 Due to [changes in the ubuntu-latest image](https://github.com/actions/runner-images/issues/10636), the GitHub Action will end up with errors in existing repositories. 
