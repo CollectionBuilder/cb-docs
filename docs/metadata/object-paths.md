@@ -23,7 +23,7 @@ This section presents example recipes for figuring out the fields for a few comm
 
 ## Example Paths for Self-Hosted Objects
 
-See the [Object Derivatives]({{ '/objects/derivatives/' | relative_url }}) section for details of preparing a folder of image and PDF objects and generating derivatives using a Rake task.
+See the [Object Derivatives]({{ '/docs/objects/derivatives/' | relative_url }}) section for details of preparing a folder of image and PDF objects and generating derivatives using a Rake task.
 Following the conventions outlined will allow you to figure out where objects and derivatives should be located. 
 
 If your are hosting your objects inside your project repository (i.e. in the "objects" folder), you can use the relative path. 
