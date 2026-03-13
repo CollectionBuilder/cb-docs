@@ -19,6 +19,6 @@ Depending on the purpose, size, and scope of your collection project, here are t
 
 - **Deploy on GitHub Pages** - [GH Pages](https://pages.github.com/) is free hosting service provided for any repository on GitHub. This is how most CollectionBuilder sites are deployed, especially when learning or prototyping. GitHub Pages has two options:
     - [GitHub Pages from a Branch]({{ '/docs/deploy/gh-pages/' | relative_url }}) - the easiest method, available for any **GH** or **Sheets** project.
-    - [GitHub Pages via GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }}) - enables **CSV** projects to build.
+    - [GitHub Pages via GitHub Actions]({{ '/docs/deploy/actions/' | relative_url }}) - enables **CSV** projects to build, and is also pretty easy!
 - **Build Locally and Self Host** - [build the site with Jekyll]({{ '/docs/deploy/build/' | relative_url }}), then move the files to a web server. This allows for the publishing of CollectionBuilder sites on your own or your organizations web servers. Many *final* production sites for formal organizations are deployed in this method.
 - **Use Third-Party Build Service** - similar to GH Pages, there are numerous other flexible platforms that can build and host your Jekyll site. These can generally connect directly to your GitHub repository (or other code hosts) to deploy your site. Check our [Use Third-Party Build Services]({{ '/docs/deploy/thirdparty/' | relative_url }}) section for an example using Render.

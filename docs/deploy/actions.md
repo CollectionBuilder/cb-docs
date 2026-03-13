@@ -10,19 +10,22 @@ GitHub Pages' default build process runs an older version of Jekyll and does not
 Since CB-CSV uses custom CollectionBuilder plugins to generate item pages and process data, they can not be built using the default GitHub Pages process. 
 
 However, you *can* still host your site on GitHub Pages by using the [GitHub Actions](https://docs.github.com/en/actions) feature.
-GitHub has recently made setting up Actions to build your site easier, so this is a great option available directly from the GitHub Pages settings.
+You can use a pre-made template file to set up Actions to build your site, so this is a great option available directly from the GitHub Pages settings.
 
 ## Prep Project Repository
 
 1. Ensure your repository is public. Your repository must be public to use GitHub Pages unless you have a paid account (most users make their projects public anyway!).
 2. Edit your "_config.yml" to ensure the `url` and `baseurl` values are set correctly for hosting on GitHub Pages following the pattern `url: https://username.github.io` and `baseurl: /repository-name`. Note, the default action will NOT build your site to a different location, the url and baseurl must match your actual repository details!
-3. Make sure your project has a "Gemfile". CollectionBuilder templates should have one by default!
-4. *Optional:* Commit your "Gemfile.lock" to ensure the build uses the same setup as you have been using to develop the project. By default "Gemfile.lock" is usually listed in the ".gitignore" file, thus Git will not track it. Edit the ".gitignore" file to remove "Gemfile.lock" then commit the changes.
 
-*Note:* some accounts may have GitHub Actions disabled by default. 
+Some accounts may have GitHub Actions disabled by default. 
 If you do not see the "Actions" tab in your repository's navigation (in between "Discussions" and "Projects"), it will need to be turned on first.
 Visit the repository's "Settings", click on "Actions" in the left side nav menu, select "Allow all actions", and click "Save".
-{:.alert .alert-yellow }
+
+*Notes about Gemfile:* 
+Make sure your project has a "Gemfile". CollectionBuilder templates have one by default so this generally should not be an issue!
+When developing a project on your local computer, bundler will read the Gemfile and generate a "Gemfile.lock" file recording the exact versions of all Gems used. 
+By default CB has this file listed in the ".gitignore", thus it is not committed to your repository and is only kept on your local machine.
+The lock file is specific to your OS, so unless you ensure the requirements for the container type used in the Action are added (i.e. usually Ubuntu 24.04) it will likely result in Action errors if committed to your repository.
 
 ## Activate GitHub Pages
 
@@ -31,8 +34,7 @@ Visit the repository's "Settings", click on "Actions" in the left side nav menu,
 3. On the "Pages" page, under "Source", click the dropdown and select "GitHub Actions".
 4. Below the "Source" dropdown, a box will appear under "Use a suggested workflow" titled "Jekyll". Click the "Configure" button.
 5. This will open an editor page creating a new file named ".github/workflows/jekyll.yml" populated with GitHub's [starter Jekyll workflow](https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml). 
-6. **Important:** You will need to update the Ruby version set in the default "jekyll.yml". In the editor window, scroll down to the around line 40 where it says `ruby-version: '3.1'`. Update the value to `ruby-version: '3.4'` 
-7. Click the green "Start commit" button, fill in the commit message as usual, and click the green "Commit new file" button.
+6. Click the green "Start commit" button, fill in the commit message as usual, and click the green "Commit new file" button.
 
 Committing the action file to your repository will start the build process.
 It may take a few minutes for the action to complete building and deploying your site.
@@ -52,9 +54,10 @@ If a red "X" appears next to your commit, the build failed and your updates will
 
 ### Build Errors
 
-*As of November 2025, the default "jekyll.yml" starter workflow fails and gives errors!*
-The default uses Ruby 3.1 which is incompatible with current versions of Sass.
-It is necessary to update the Ruby version to 3.4, which is documented above!
+*As of November 2025, the default "jekyll.yml" starter workflow failed and gave errors!*
+It was necessary to update the version of Ruby listed in the "jekyll.yml" action file. 
+In the editor window, scroll down to the around line 40 where it says `ruby-version: '3.1'`. Update the value to `ruby-version: '3.4'`.
+As of March 2026, this issue seems be resolved and the default action functions again...
 
 *As of January 2025, the default "jekyll.yml" starter workflow is broken in projects set up before 2025-01-14!* 
 Due to [changes in the ubuntu-latest image](https://github.com/actions/runner-images/issues/10636), the GitHub Action will end up with errors in existing repositories. 
