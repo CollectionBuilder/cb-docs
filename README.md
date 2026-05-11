@@ -64,9 +64,6 @@ This project adds some additional component styles:
 - add color using `.btn-primary`, `.btn-purple`, `.btn-blue`, or `.btn-green` 
 - make into outline only using `.btn-outline`
 - e.g. `[Example Link](https://example.com){:.btn .btn-purple}`
-- To make the link open in a new tab add `target="_blank" rel="noopener"` to the attribute list syntax.
-    - e.g. `[Example Link](https://example.com){:target="_blank" rel="noopener"}`
-    - e.g. `[Example Link](https://example.com){:.btn .btn-purple target="_blank" rel="noopener"}`
 
 **Alerts**
 

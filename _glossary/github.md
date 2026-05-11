@@ -14,9 +14,9 @@ To create a CollectionBuilder project you will need to set up a free account <ht
 
 Check out these resources: 
 
-- [GitHub Guides](https://guides.github.com/){:target="_blank" rel="noopener"}, see [Hello World](https://guides.github.com/activities/hello-world/){:target="_blank" rel="noopener"} for an introduction.
-- [GitHub Learning Lab](https://lab.github.com/){:target="_blank" rel="noopener"} for in depth lessons.
-- [Set up email privacy](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#about-commit-email-addresses){:target="_blank" rel="noopener"}
-- [GitHub Education](https://education.github.com/){:target="_blank" rel="noopener"} provides resources and benefits for educational use of GitHub, including free account upgrades.
+- [GitHub Guides](https://guides.github.com/), see [Hello World](https://guides.github.com/activities/hello-world/) for an introduction.
+- [GitHub Learning Lab](https://lab.github.com/) for in depth lessons.
+- [Set up email privacy](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#about-commit-email-addresses)
+- [GitHub Education](https://education.github.com/) provides resources and benefits for educational use of GitHub, including free account upgrades.
 
 *Please note* that there are other version control systems (Subversion, mercurial, etc) and repository hosts ([Codeberg](https://codeberg.org/), [Bitbucket](https://bitbucket.org/product), [GitLab](https://about.gitlab.com/), etc) out there... However, Git and GitHub are by far the most popular.

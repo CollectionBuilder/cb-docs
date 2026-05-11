@@ -60,5 +60,5 @@ The next page of the docs provides an example walk through for creating your fir
 We encourage you to learn more!
 Check out these resources: 
 
-- [GitHub Guides](https://guides.github.com/){:target="_blank" rel="noopener"}, see [Hello World](https://guides.github.com/activities/hello-world/){:target="_blank" rel="noopener"} for an introduction.
-- [GitHub Skills](https://skills.github.com/){:target="_blank" rel="noopener"} for in depth lessons.
+- [GitHub Guides](https://guides.github.com/), see [Hello World](https://guides.github.com/activities/hello-world/) for an introduction.
+- [GitHub Skills](https://skills.github.com/) for in depth lessons.

@@ -6,9 +6,9 @@ nav_order: 4
 
 # Ruby on Windows
 
-Use [RubyInstaller for Windows](https://rubyinstaller.org/){:target="_blank" rel="noopener"}.
+Use [RubyInstaller for Windows](https://rubyinstaller.org/).
 
-- First, [download](https://rubyinstaller.org/downloads/){:target="_blank" rel="noopener"} the suggested stable version "WITH DEVKIT" (as of this writing, Ruby+Devkit 3.2.4 (x64))
+- First, [download](https://rubyinstaller.org/downloads/) the suggested stable version "WITH DEVKIT" (as of this writing, Ruby+Devkit 3.2.4 (x64))
     - Double click the installer package you downloaded to start the install wizard. At this point, Windows may give you a "Microsoft Defender SmartScreen" warning pop up--click the "more info" to access the "Run anyway" option. On some systems, you may get an option to "install for current user" or "all users", choose the recommended "current user only".
     - Click through the installer using the default options (but make sure "Add Ruby executables to your PATH" is checked).
     - After extracting the components, the final step will display a "Finish" button--ensure the box to start the MSYS2 DevKit is checked, then click "Finish".

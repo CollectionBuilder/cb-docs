@@ -10,7 +10,7 @@ Static web projects like CollectionBuilder are just a folder of plain text files
 To edit them you will need a good text editor.
 Code editors will allow you to work on whole folders of files at once (i.e. your Jekyll project repository) and have built in helpers for syntax highlighting, version control, terminals, search, and even spell check.
 
-If you don't already have a favorite editor, the CollectionBuilder team suggests the very popular, open-source [Visual Studio Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} (VS Code).
+If you don't already have a favorite editor, the CollectionBuilder team suggests the very popular, open-source [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
 Download VS Code and [follow their instructions](https://code.visualstudio.com/docs/setup/setup-overview) to install with the default options on your computer.
 (*note to Mac users: be sure to drag the VS Code app from your Downloads to Applications directory to ensure correct installation!*)
 
@@ -40,5 +40,5 @@ We suggest **two important tweaks to your settings**:
 VS Code has a tremendous number of [extensions](https://marketplace.visualstudio.com/VSCode) that can be added to enhance its functionality. 
 For working on CollectionBuilder projects we recommend two extensions:
 
-- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker){:target="_blank" rel="noopener"}, which will check your spelling which is handy for content writing!
-- [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv){:target="_blank" rel="noopener"}, highlights CSVs to make them easier to read directly in the editor.
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker), which will check your spelling which is handy for content writing!
+- [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), highlights CSVs to make them easier to read directly in the editor.

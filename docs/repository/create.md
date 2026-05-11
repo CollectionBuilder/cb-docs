@@ -13,9 +13,9 @@ The best/fastest way to do this is to visit a CollectionBuilder repository on Gi
 
 1. Login to your account on [GitHub](https://github.com)
 2. Visit the repository corresponding to the template you are using: 
-    - **GH (GitHub Pages):** <https://github.com/CollectionBuilder/collectionbuilder-gh>{:target="_blank"}
-    - **CSV:** <https://github.com/CollectionBuilder/collectionbuilder-csv>{:target="_blank"} 
-    - **Sheets:** <https://github.com/CollectionBuilder/collectionbuilder-sheets>{:target="_blank"} 
+    - **GH (GitHub Pages):** <https://github.com/CollectionBuilder/collectionbuilder-gh>
+    - **CSV:** <https://github.com/CollectionBuilder/collectionbuilder-csv>
+    - **Sheets:** <https://github.com/CollectionBuilder/collectionbuilder-sheets>
 3. On the repository home page, click the green "Use This Template" button (appears on right side above the code area) and select "Create a new repository".
 4. This brings you to a "Create a new repository" page. Fill out using these options:
     1. **Repository name**: Use a lowercase name without spaces or odd characters. We often append `_source` or `_draft` to our projects to keep track of the status. If you are using GH, this name will become part of your site URL, so think through how it will look as a link!

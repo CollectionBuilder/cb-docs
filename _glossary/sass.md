@@ -3,7 +3,7 @@ title: SASS
 link: http://sass-lang.com/
 ---
 
-[Sass](http://sass-lang.com/){:target="_blank" rel="noopener"} is a CSS extension / preprocessor. 
+[Sass](http://sass-lang.com/) is a CSS extension / preprocessor. 
 All normal CSS is valid SCSS, but Sass adds many powerful functions and programmatic features. 
 
 Writing SCSS is often easier and more sensible, for example by supporting nesting, variables, and operators. 

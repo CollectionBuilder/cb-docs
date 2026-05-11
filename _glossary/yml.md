@@ -3,8 +3,8 @@ title: YAML
 link: http://www.yaml.org/
 ---
 
-[YAML](http://www.yaml.org/){:target="_blank" rel="noopener"} is a "human readable" plain text data format.
-It is used in Jekyll for [configuration](https://jekyllrb.com/docs/configuration/){:target="_blank" rel="noopener"}, [site data](https://jekyllrb.com/docs/datafiles/){:target="_blank" rel="noopener"}, and [Front matter](https://jekyllrb.com/docs/frontmatter/){:target="_blank" rel="noopener"}.
+[YAML](http://www.yaml.org/) is a "human readable" plain text data format.
+It is used in Jekyll for [configuration](https://jekyllrb.com/docs/configuration/), [site data](https://jekyllrb.com/docs/datafiles/), and [Front matter](https://jekyllrb.com/docs/frontmatter/).
 
 In CollectionBuilder, YAML is used for configuration in "_config.yml" and "_data/theme.yml".
 All options are basic key value pairs.

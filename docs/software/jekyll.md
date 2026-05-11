@@ -6,7 +6,7 @@ nav_order: 7
 
 # Install Jekyll
 
-Finally, we get to [Jekyll](https://jekyllrb.com/){:target="_blank" rel="noopener"}!
+Finally, we get to [Jekyll](https://jekyllrb.com/)!
 Jekyll is a static site generator that uses templates, data, and modular components to build out a website. 
 It is a very popular open source tool used by tiny and giant web site projects. 
 

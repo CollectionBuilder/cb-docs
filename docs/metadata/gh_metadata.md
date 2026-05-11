@@ -56,7 +56,7 @@ Without values in the fields below, CollectionBuilder will not work properly.
 ### format: 
 
 - This field indicates the item's media type. Since CollectionBuilder uses logic based on `format` to display objects, this is the most important field to ensure the interactive visualizations and item pages function correctly. If there are errors or anomalies, some pages will not work. 
-- For normal items the value of this field should match the standard [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml){:target="_blank" rel="noopener"} corresponding to your item's file, consisting of a type and a subtype concatenated with a slash (`/`) between them. This can can generally be inferred by looking at the file extension (e.g. ".jpg", ".pdf", etc). The common MIME type "format" values supported by CB-GH are:
+- For normal items the value of this field should match the standard [MIME type](https://www.iana.org/assignments/media-types/media-types.xhtml) corresponding to your item's file, consisting of a type and a subtype concatenated with a slash (`/`) between them. This can can generally be inferred by looking at the file extension (e.g. ".jpg", ".pdf", etc). The common MIME type "format" values supported by CB-GH are:
     - Image: `image/jpeg`, `image/png`
     - Document: `application/pdf`
     - Audio: `audio/mp3`
@@ -120,7 +120,7 @@ Location | `location` |
     - On [iTouch Maps](https://itouchmap.com/?r=latlong) search or move the map to approximate location, then hold Shift and click on the spot. The lat/long will display below.
 
 {:.alert .alert-green}
-**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/copy?usp=sharing){:target='_blank' rel='noopener'} that you can add to your data just for practice.
+**If your metadata does not have map coordinates**, but you would like to experience CollectionBuilder's map visualization, we've created a [demo list of latitudes and longitudes](https://docs.google.com/spreadsheets/d/1eSj7zfthuc7-ntdnZLqNYETxVa5Z55YK8BPPao53-6w/copy?usp=sharing) that you can add to your data just for practice.
 
 ### date: 
 
@@ -177,12 +177,12 @@ CollectionBuilder can accommodate any field you include in your metadata once yo
 
 ### type:
 
-- An object's type distinguishes between types of image, sound, text, etc. using a one- or two-value input. At minimum, the input should contain a value chosen from the [DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2003-02-12/){:target="_blank" rel="noopener"}. If using a second value, the second value does not need to relate to a controlled vocabulary, but should give further specification of the object type. The two values in a pair should be separated by a semicolon (`;`). See examples below.
+- An object's type distinguishes between types of image, sound, text, etc. using a one- or two-value input. At minimum, the input should contain a value chosen from the [DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2003-02-12/). If using a second value, the second value does not need to relate to a controlled vocabulary, but should give further specification of the object type. The two values in a pair should be separated by a semicolon (`;`). See examples below.
 - Example value: `Image;StillImage`, `Image;MovingImage`, `Text`, `Sound`
 
 ### language: 
 
-- This field indicates the language associated with the object. Recommended best practice is to use a controlled vocabulary such as the [ISO 639-2 Codes for the Representation of Names and Languages](http://www.loc.gov/standards/iso639-2/php/code_list.php){:target="_blank" rel="noopener"} to designate language tags.
+- This field indicates the language associated with the object. Recommended best practice is to use a controlled vocabulary such as the [ISO 639-2 Codes for the Representation of Names and Languages](http://www.loc.gov/standards/iso639-2/php/code_list.php) to designate language tags.
 - Example value: `eng`, `fra`, `deu`
 
 ### rights:
@@ -192,5 +192,5 @@ CollectionBuilder can accommodate any field you include in your metadata once yo
 
 ### rightsstatement:
 
-- This field is a standardized rights statement, designated in the form of a URI. It should be presented as a [creativecommons.org](https://creativecommons.org/){:target="_blank" rel="noopener"} URI or a [rightsstatements.org](https://rightsstatements.org/en/){:target="_blank" rel="noopener"} URI.
+- This field is a standardized rights statement, designated in the form of a URI. It should be presented as a [creativecommons.org](https://creativecommons.org/) URI or a [rightsstatements.org](https://rightsstatements.org/en/) URI.
 - Example value: `http://rightsstatements.org/vocab/NoC-US/1.0/`

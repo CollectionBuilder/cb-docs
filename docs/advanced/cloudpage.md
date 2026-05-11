@@ -21,7 +21,7 @@ however, you can also quickly create new custom Cloud pages or add term clouds a
 Custom cloud pages can be easily created using the cloud layout and page front matter. 
 
 {:.alert .alert-yellow}
-**Important note:** When you create a new cloud page, you will need to add this new page to the config-nav.csv file so it is accessible from the top navigation menu. See our [Add a New Page documentation](https://collectionbuilder.github.io/cb-docs/docs/pages/add_page/#add-a-new-page-to-the-nav){:target="_blank" rel="noopener"} for more info.
+**Important note:** When you create a new cloud page, you will need to add this new page to the config-nav.csv file so it is accessible from the top navigation menu. See our [Add a New Page documentation](https://collectionbuilder.github.io/cb-docs/docs/pages/add_page/#add-a-new-page-to-the-nav) for more info.
 
 To create a new cloud page, follow these steps:
 

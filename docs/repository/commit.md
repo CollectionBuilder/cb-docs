@@ -95,7 +95,7 @@ When you are working on multiple computers or collaborating with others, be sure
 **Tip:** Hovering over icons on VS Code will pop up more information about what they represent.
 
 {:.alert .alert-red}
-**Important Note:** Your computer may prompt you to authorize Visual Studio Code to make changes and then ask you to sign in to GitHub. For step-by-step instructions on the authentication process, check out this timestamped section of the [Using Git with VS Code video](https://www.youtube.com/watch?v=i_23KUAEtUM&t=300s){:target="_blank" rel="noopener"} from the [Visual Studio Code website](https://code.visualstudio.com/docs/sourcecontrol/overview){:target="_blank" rel="noopener"}.
+**Important Note:** Your computer may prompt you to authorize Visual Studio Code to make changes and then ask you to sign in to GitHub. For step-by-step instructions on the authentication process, check out this timestamped section of the [Using Git with VS Code video](https://www.youtube.com/watch?v=i_23KUAEtUM&t=300s) from the [Visual Studio Code website](https://code.visualstudio.com/docs/sourcecontrol/overview).
 
 ### Commit & Push on Command Line
 

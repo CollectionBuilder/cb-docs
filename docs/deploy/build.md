@@ -59,13 +59,13 @@ When you're generating a test site using `bundle exec jekyll s`, Jekyll automati
 
 For deployment, the command `bundle exec jekyll build` builds the site using links based on the production URLs configured in "_config.yml".
 
-However, to build out *EVERYTHING* you need to add one more option--the Jekyll ["production" environment](https://jekyllrb.com/docs/configuration/environments/){:target="_blank" rel="noopener"}.
+However, to build out *EVERYTHING* you need to add one more option--the Jekyll ["production" environment](https://jekyllrb.com/docs/configuration/environments/).
 Some features (meta tags and analytics) are *only* added to your CollectionBuilder site when built in the "production" environment.
 This saves time during development and avoids false analytics data.
 
 The production ENV adds:
 
-- **Meta markup:** adds rich machine readable markup to the `<head>` of every page, including [Open Graph](https://opengraphprotocol.org/){:target='_blank' rel='noopener'}, [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/){:target='_blank' rel='noopener'}, and [Schema](https://schema.org/){:target='_blank' rel='noopener'} as configured in ["config-metadata.csv"]({{ '/docs/customization/config-metadata/' | relative_url }}).
+- **Meta markup:** adds rich machine readable markup to the `<head>` of every page, including [Open Graph](https://opengraphprotocol.org/), [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), and [Schema](https://schema.org/) as configured in ["config-metadata.csv"]({{ '/docs/customization/config-metadata/' | relative_url }}).
 - **Analytics:** adds the include "_includes/head/analytics.html" to every page. This adds your [analytics snippet if configured]({{ '/cb-docs/docs/advanced/analytics/' | relative_url }}). Waiting until final deployment to add analytics prevents false hits during testing.
 
 The environment can be added before the Jekyll command, like `JEKYLL_ENV=production bundle exec jekyll build`. 

@@ -3,7 +3,7 @@ title: Ruby
 link: https://www.ruby-lang.org/
 ---
 
-[Ruby](https://www.ruby-lang.org/){:target="_blank" rel="noopener"} is a modern programming language popular with web applications.
+[Ruby](https://www.ruby-lang.org/) is a modern programming language popular with web applications.
 
 *You do not need to know anything about Ruby*, but you do need it to run Jekyll--and thus CollectionBuilder--on your system!
 

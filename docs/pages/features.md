@@ -9,10 +9,10 @@ nav_order: 5
 To add *exciting* visual features to your ["About" and other interpretive pages]({{ '/docs/pages/interpretive/' | relative_url }}) CollectionBuilder provides a variety of feature includes.
 Each of these [Liquid includes](https://jekyllrb.com/docs/includes/) provide a simplified method to add collection items, external media, or Bootstrap components into your Markdown content.
 
-You can take a look at our demo collection's [About page](https://collectionbuilder.github.io/collectionbuilder-gh/about.html){:target="_blank" rel="noopener"} to see them in action. 
+You can take a look at our demo collection's [About page](https://collectionbuilder.github.io/collectionbuilder-gh/about.html) to see them in action. 
 
 {:.alert .alert-green}
-**Want some example code?** Check out the [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"} on our CollectionBuilder-gh demo site. The examples on this page will work in any CollectionBuilder template.
+**Want some example code?** Check out the [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html) on our CollectionBuilder-gh demo site. The examples on this page will work in any CollectionBuilder template.
 
 All feature includes can be found in the "_includes/feature/" folder in your project repository.
 Each include file has an extensive comment section at the top with details about how to use it and an example use of the code (Liquid comments are between the tags `{% raw %}{% comment %} {% endcomment %}{% endraw %}`).
@@ -40,5 +40,5 @@ There are a few general types of Feature Includes:
 - Add features based on collection items: term cloud and Timeline JS.
 - Add Bootstrap components: accordion, alert, button, card, icon, jumbotron, and modal.
 
-Visit the [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"} for examples of what these look like and example code to adapt for your purposes.
+Visit the [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html) for examples of what these look like and example code to adapt for your purposes.
 Be sure the check the files in your "_includes/feature/" folder for full details, example code, and options!

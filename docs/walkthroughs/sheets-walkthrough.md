@@ -9,7 +9,7 @@ lazyload: true
 
 The first part of this walkthrough provides steps for using CollectionBuilder-Sheet's built-in development mode to prototype, test, and share a draft of your digital collection site. 
 
-For this section of the walkthrough, you will use demo metadata from the University of Idaho's [Carleton Watkins Mine Interiors Collection](https://www.lib.uidaho.edu/digital/watkins/){:target="_blank" rel="noopener"} and the [CollectionBuilder-Sheets default template site](https://collectionbuilder.github.io/collectionbuilder-sheets/){:target="_blank" rel="noopener"}.
+For this section of the walkthrough, you will use demo metadata from the University of Idaho's [Carleton Watkins Mine Interiors Collection](https://www.lib.uidaho.edu/digital/watkins/) and the [CollectionBuilder-Sheets default template site](https://collectionbuilder.github.io/collectionbuilder-sheets/).
 
 **Done prototyping already?** If you are ready to publish an ongoing collaborative site and/or a permanent collection site using CollectionBuilder-Sheets, please jump to [Part 2](#sheets-walkthrough-part-2) of this walkthrough.
 
@@ -18,7 +18,7 @@ For this section of the walkthrough, you will use demo metadata from the Univers
 
 ## 1. Make a copy of demo metadata.
 
-- Make a copy of this Google Sheet of pre-made demo metadata: [Watkins Digital Collection Metadata](https://docs.google.com/spreadsheets/d/1uXM0_fV7fHm9UX2QAI4bP2VY7ThXdpC-UYqf_p9pNcY/copy){:target="_blank" rel="noopener"}
+- Make a copy of this Google Sheet of pre-made demo metadata: [Watkins Digital Collection Metadata](https://docs.google.com/spreadsheets/d/1uXM0_fV7fHm9UX2QAI4bP2VY7ThXdpC-UYqf_p9pNcY/copy)
 
 ## 2. Publish your Google Sheet to the web.
 
@@ -49,7 +49,7 @@ For this section of the walkthrough, you will use demo metadata from the Univers
 
 ## 3. Set up your prototype site.
 
-- Visit the [CollectionBuilder-Sheets default template site](https://collectionbuilder.github.io/collectionbuilder-sheets/){:target="_blank" rel="noopener"}. This configuration site is a great tool for testing to see what your metadata looks like as a digital collection website.
+- Visit the [CollectionBuilder-Sheets default template site](https://collectionbuilder.github.io/collectionbuilder-sheets/). This configuration site is a great tool for testing to see what your metadata looks like as a digital collection website.
 
 - Click the **Use Metadata CSV Link (e.g. Google Sheet)** option and paste the shareable link from the [Step 2](#2-publish-your-google-sheet-to-the-web), and then click **Submit**.
 
@@ -62,7 +62,7 @@ For this section of the walkthrough, you will use demo metadata from the Univers
 
 
 {:.alert .alert-yellow}
-**Important:** To view your objects on the prototype site, the files will need to be available externally on the web (e.g., hosted on your organization's server or via a platform such as [Digital Ocean](https://www.digitalocean.com/products/spaces){:target="_blank" rel="noopener"} or [Reclaim Hosting](https://reclaimhosting.com/){:target="_blank" rel="noopener"}). You can also [host files for free via GitHub pages](https://medium.com/@jeftachibiya360/how-to-host-images-for-your-website-on-github-a98d917284c5).<br><br>External links to your objects should be included in the filename column of your metadata spreadsheet. Please read our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/#filename){:target="_blank" rel="noopener"} to learn more about external item files.
+**Important:** To view your objects on the prototype site, the files will need to be available externally on the web (e.g., hosted on your organization's server or via a platform such as [Digital Ocean](https://www.digitalocean.com/products/spaces) or [Reclaim Hosting](https://reclaimhosting.com/)). You can also [host files for free via GitHub pages](https://medium.com/@jeftachibiya360/how-to-host-images-for-your-website-on-github-a98d917284c5).<br><br>External links to your objects should be included in the filename column of your metadata spreadsheet. Please read our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/#filename) to learn more about external item files.
 
 ## 4. View live changes to your metadata.
 
@@ -96,7 +96,7 @@ https://collectionbuilder.github.io/collectionbuilder-sheets/?csv=**your metadat
 
 For example:
 
-[https://collectionbuilder.github.io/collectionbuilder-sheets/?csv=**https://docs.google.com/spreadsheets/d/e/2PACX-1vRJhe6UcNZXItEtHlxQFOaHBBD2SDU8nyNOAROtcLWLrl83sYaCNBNYHOvhM_xZ7SVnnOrjCzo6U5_o/pub?output=csv**](https://collectionbuilder.github.io/collectionbuilder-sheets/?csv=https://docs.google.com/spreadsheets/d/e/2PACX-1vRJhe6UcNZXItEtHlxQFOaHBBD2SDU8nyNOAROtcLWLrl83sYaCNBNYHOvhM_xZ7SVnnOrjCzo6U5_o/pub?output=csv){:target="_blank" rel="noopener"}
+[https://collectionbuilder.github.io/collectionbuilder-sheets/?csv=**https://docs.google.com/spreadsheets/d/e/2PACX-1vRJhe6UcNZXItEtHlxQFOaHBBD2SDU8nyNOAROtcLWLrl83sYaCNBNYHOvhM_xZ7SVnnOrjCzo6U5_o/pub?output=csv**](https://collectionbuilder.github.io/collectionbuilder-sheets/?csv=https://docs.google.com/spreadsheets/d/e/2PACX-1vRJhe6UcNZXItEtHlxQFOaHBBD2SDU8nyNOAROtcLWLrl83sYaCNBNYHOvhM_xZ7SVnnOrjCzo6U5_o/pub?output=csv)
 
 {:.alert .alert-red}
 **Warning:** The metadata URL cannot have any & symbols (i.e. additional query string parameters). Having an '&' symbol in the URL will cause the parsing to fail.
@@ -112,15 +112,15 @@ This prototype site is suitable for when you are still in the development and te
 
 The second part of this walkthrough provides steps for publishing an ongoing collaborative site and/or a permanent collection site. You will see how to link your published Google Sheet in your collection settings to see changes live. You will also learn how to add your csv file to the assets folder in order to publish a permanent collection site. 
 
-For this part of the walkthrough, you will use demo metadata from the University of Idaho's [Carleton Watkins Mine Interiors Collection](https://www.lib.uidaho.edu/digital/watkins/){:target="_blank" rel="noopener"}, the **CollectionBuilder-Sheets Template**, and **GitHub Pages**.
+For this part of the walkthrough, you will use demo metadata from the University of Idaho's [Carleton Watkins Mine Interiors Collection](https://www.lib.uidaho.edu/digital/watkins/), the **CollectionBuilder-Sheets Template**, and **GitHub Pages**.
 
-## 6. Create a GitHub account. [(Video Version)](https://www.youtube.com/watch?v=M5rvu_3GtIQ&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=1&ab_channel=CollectionBuilder){:target="_blank" rel="noopener" class="text-small"}
+## 6. Create a GitHub account. [(Video Version)](https://www.youtube.com/watch?v=M5rvu_3GtIQ&list=PLt9zT3xACQo7q72AfphJzH41OiPcZrF4H&index=1&ab_channel=CollectionBuilder){:.text-small}
 
-- If you don't have an account, visit [GitHub](https://www.github.com){:target="_blank" rel="noopener"} and click the **Sign up** button. You do not need a paid account for using CollectionBuilder. After signing up, check your email to verify your account.
+- If you don't have an account, visit [GitHub](https://www.github.com) and click the **Sign up** button. You do not need a paid account for using CollectionBuilder. After signing up, check your email to verify your account.
 
 ## 7. Create a new repository.
 
-- After ensuring you are logged in to your GitHub account, visit the [cb-sheets repository page](https://github.com/CollectionBuilder/collectionbuilder-sheets){:target="_blank" rel="noopener"}.
+- After ensuring you are logged in to your GitHub account, visit the [cb-sheets repository page](https://github.com/CollectionBuilder/collectionbuilder-sheets).
 
 - Click the green **Use this template** button and then the **Create a new repository** dropdown option. 
 
@@ -135,7 +135,7 @@ For this part of the walkthrough, you will use demo metadata from the University
 {:.alert .alert-yellow}
 **Important!** The demo metadata for this walkthrough already contains links to external objects in the filename field, so **you do not need to add any object files directly to the repository for this walkthrough.**
 
-- However, if your metadata spreadsheet does not link to external item files (e.g., objects hosted on your organization's server or via a platform such as [Digital Ocean](https://www.digitalocean.com/){:target="_blank" rel="noopener"} or [Reclaim Hosting](https://reclaimhosting.com/){:target="_blank" rel="noopener"}), then you will need to add your object files to the **"objects"** folder. 
+- However, if your metadata spreadsheet does not link to external item files (e.g., objects hosted on your organization's server or via a platform such as [Digital Ocean](https://www.digitalocean.com/) or [Reclaim Hosting](https://reclaimhosting.com/)), then you will need to add your object files to the **"objects"** folder. 
 
 - To add objects to your repository, visit the homepage of your repository and click on the **"objects"** folder.
 
@@ -230,7 +230,7 @@ metadata-csv: /assets/watkins-demo.csv
 ## 13. Publish your site using GitHub Pages.
 
 {:.alert .alert-green}
-**Note:** The following steps are the same as the steps in the [CB-GH Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/gh-walkthrough/){:target="_blank" rel="noopener"} for publishing a GitHub Pages site.
+**Note:** The following steps are the same as the steps in the [CB-GH Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/gh-walkthrough/) for publishing a GitHub Pages site.
 
 - On your repository homepage, click the **Settings** tab in the top right and then click **Pages** in the left side menu. 
 
@@ -286,9 +286,9 @@ For the URL, https://juliastone0729.github.io/watkins-demo/item.html?id=**watkin
 
 - On your repository homepage, click on the **"pages"** folder and then on the **"about.md"** file. 
 
-- Write some text on this page using [Markdown](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown){:target="_blank" rel="noopener"}. 
+- Write some text on this page using [Markdown](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown). 
 
-- **Optional:** Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"}. 
+- **Optional:** Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html). 
 
 - After you are done editing the About page, write your commit message (e.g. Edit About page) and commit your changes. View your changes by visiting your site’s URL.
 

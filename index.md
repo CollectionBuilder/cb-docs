@@ -15,7 +15,7 @@ To that end, we've worked hard to make this documentation comprehensible for the
 We hope you will find everything needed to create a CollectionBuilder project--but also learn the techniques of a static web approach that can power many other types of projects!
 And if you run into issues or have questions don't hesitate to ask!
 
-[CollectionBuilder Discussion Forum](https://github.com/orgs/CollectionBuilder/discussions){:.btn .btn-primary target="_blank" rel="noopener"}
+[CollectionBuilder Discussion Forum](https://github.com/orgs/CollectionBuilder/discussions){:.btn .btn-primary}
 
 ## Get Help
 

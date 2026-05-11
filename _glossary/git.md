@@ -3,7 +3,7 @@ title: Git
 link: https://git-scm.com/
 ---
 
-[Git](https://git-scm.com/){:target="_blank"} is a popular free, [distributed version control](https://en.wikipedia.org/wiki/Distributed_version_control) system originally developed for coordinating huge software development projects. 
+[Git](https://git-scm.com/) is a popular free, [distributed version control](https://en.wikipedia.org/wiki/Distributed_version_control) system originally developed for coordinating huge software development projects. 
 However, it is fast and flexible enough to be used on any scale project, from your personal notes to your research lab's code--and offers many benefits beyond "track changes".
 Git can be used on your personal computer, or by online services to track the development of a project
 
@@ -25,5 +25,5 @@ Resources:
 - Command: `git --help` (remember, lots of built in help at your finger tips!)
 - The [Git Book](https://git-scm.com/book/en/v2)
 - [GitHub Guides](https://guides.github.com/), check out Hello World to learn basic GitHub features, or for more in depth tutorials visit [GitHub Learning Lab](https://lab.github.com/)
-- Software Carpentry [Unix Shell](http://swcarpentry.github.io/shell-novice/01-intro/){:target="_blank"} and [Version Control with Git](http://swcarpentry.github.io/git-novice/){:target="_blank"} lessons
+- Software Carpentry [Unix Shell](http://swcarpentry.github.io/shell-novice/01-intro/) and [Version Control with Git](http://swcarpentry.github.io/git-novice/) lessons
 - Get Git [command quick ref]({{ '/cheatsheet.html' | absolute_url }})

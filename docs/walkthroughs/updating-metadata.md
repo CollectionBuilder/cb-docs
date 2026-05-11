@@ -94,7 +94,7 @@ metadata: psychiana-demo
 
 ### 6. Reupload your new metadata file
 
-- Visit the homepage of your repository on [github.com](https://github.com/){:target="_blank" rel="noopener"}.
+- Visit the homepage of your repository on [github.com](https://github.com/).
 
 - If you are using CollectionBuilder-GH, click on the **"_data"** folder. (If you are using CollectionBuilder-SHEETS, click on the **"assets"** folder).
 

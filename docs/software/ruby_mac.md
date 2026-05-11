@@ -9,7 +9,7 @@ nav_order: 5
 Installing Ruby on Mac involves many steps, but don't be deterred!
 
 OS X has a version of Ruby installed by default, but recommended practice is to set up a separate Ruby development environment.
-To do this, follow the instructions below, which outline the steps to install Ruby using [rbenv](https://github.com/rbenv/rbenv){:target="_blank" rel="noopener"}.
+To do this, follow the instructions below, which outline the steps to install Ruby using [rbenv](https://github.com/rbenv/rbenv).
 
 ## Install Xcode Command Line Tools
 
@@ -22,9 +22,9 @@ To do this, follow the instructions below, which outline the steps to install Ru
 
 You'll need to use Homebrew to install rbenv. To install Homebrew, follow these steps:
 
-- Open the [Homebrew](https://brew.sh/){:target="_blank" rel="noopener"} webpage in your browser.
+- Open the [Homebrew](https://brew.sh/) webpage in your browser.
 - Open your terminal by clicking "Command (⌘) + Spacebar", typing `terminal` into the spotlight box that appears, and pressing "Enter".
-- Locate and copy the script in the box underneath the text Install Homebrew on the [Homebrew](https://brew.sh/){:target="_blank" rel="noopener"} webpage. Paste this script you just copied into the terminal prompt and press "Enter".
+- Locate and copy the script in the box underneath the text Install Homebrew on the [Homebrew](https://brew.sh/) webpage. Paste this script you just copied into the terminal prompt and press "Enter".
 - The terminal will then prompt you to press "Enter" once more to continue the install.
 
 {:.alert .alert-purple .my-3}
@@ -74,7 +74,7 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 ## Install Ruby
 
-- Check the [Ruby download page](https://www.ruby-lang.org/en/downloads/){:target="_blank" rel="noopener"} to find the latest stable version number. For example, in Oct 2024, the current stable version was "3.3.5". (You do not need to download anything, just check the version number!)
+- Check the [Ruby download page](https://www.ruby-lang.org/en/downloads/) to find the latest stable version number. For example, in Oct 2024, the current stable version was "3.3.5". (You do not need to download anything, just check the version number!)
 - Back in your terminal, install the latest version of ruby by copy/pasting or typing: 
 ```
 rbenv install 3.3.5

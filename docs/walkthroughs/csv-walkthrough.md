@@ -7,36 +7,36 @@ lazyload: true
 
 # CollectionBuilder-CSV Walkthrough
 
-This walkthrough provides steps for creating an example digital collection using preexisting demo metadata from the University of Idaho's [Psychiana Digital Collection](https://www.lib.uidaho.edu/digital/psychiana/){:target="_blank" rel="noopener"}, the **CollectionBuilder-CSV Template**, and the **GitHub Actions** feature.
+This walkthrough provides steps for creating an example digital collection using preexisting demo metadata from the University of Idaho's [Psychiana Digital Collection](https://www.lib.uidaho.edu/digital/psychiana/), the **CollectionBuilder-CSV Template**, and the **GitHub Actions** feature.
 
 {:.alert .alert-red}
 **Important Note:** You will need to install free, open-source software on your computer and create a free GitHub account for this walkthrough.
 
 {:.alert .alert-blue}
-**Video Option:** If you would prefer to move through a video version of this walkthrough, check out our  [YouTube Playlist](https://www.youtube.com/playlist?list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ){:target="_blank" rel="noopener"} or click on the video version of each step linked below.
+**Video Option:** If you would prefer to move through a video version of this walkthrough, check out our  [YouTube Playlist](https://www.youtube.com/playlist?list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ) or click on the video version of each step linked below.
 
-## 1. Create a GitHub account. [(Video Version)](https://youtu.be/zNp6bqBDRr0?si=z_eiNcrUnvck668i){:target="_blank" rel="noopener" class="text-small"}  
+## 1. Create a GitHub account. [(Video Version)](https://youtu.be/zNp6bqBDRr0?si=z_eiNcrUnvck668i){:.text-small}  
 
-- If you don't have an account, visit [GitHub](https://www.github.com){:target="_blank" rel="noopener"} and click the **Sign up** button. You do not need a paid account for using CollectionBuilder. After signing up, check your email to verify your account.
+- If you don't have an account, visit [GitHub](https://www.github.com) and click the **Sign up** button. You do not need a paid account for using CollectionBuilder. After signing up, check your email to verify your account.
 
-## 2. Download and install software on your computer (Git, GitHub Desktop, Visual Studio Code, Ruby, Jekyll, ImageMagic and Ghostscript) [(Video Version)](https://www.youtube.com/watch?v=cvYQiJBHo3k&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=1){:target="_blank" rel="noopener" class="text-small"}
+## 2. Download and install software on your computer (Git, GitHub Desktop, Visual Studio Code, Ruby, Jekyll, ImageMagic and Ghostscript) [(Video Version)](https://www.youtube.com/watch?v=cvYQiJBHo3k&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=1){:.text-small}
 
 - Click on the links below to our documentation for detailed help with the installation process for each piece of free, open-source software:
 
-    - [Install Git](https://collectionbuilder.github.io/cb-docs/docs/software/git/){:target="_blank" rel="noopener"}
-    - [Install GitHub Desktop](https://collectionbuilder.github.io/cb-docs/docs/software/git/#install-github-desktop){:target="_blank" rel="noopener"}
-    - [Install Visual Studio Code (VS Code)](https://collectionbuilder.github.io/cb-docs/docs/software/texteditor/){:target="_blank" rel="noopener"}
-    - [Install Ruby](https://collectionbuilder.github.io/cb-docs/docs/software/ruby/){:target="_blank" rel="noopener"}
-    - [Install Jekyll](https://collectionbuilder.github.io/cb-docs/docs/software/jekyll/){:target="_blank" rel="noopener"}
-    - [Install ImageMagick and Ghostscript](https://collectionbuilder.github.io/cb-docs/docs/software/optional/#imagemagick-and-ghostscript){:target="_blank" rel="noopener"} (*Optional:* You only need this software if you want to create object derivatives)
+    - [Install Git](https://collectionbuilder.github.io/cb-docs/docs/software/git/)
+    - [Install GitHub Desktop](https://collectionbuilder.github.io/cb-docs/docs/software/git/#install-github-desktop)
+    - [Install Visual Studio Code (VS Code)](https://collectionbuilder.github.io/cb-docs/docs/software/texteditor/)
+    - [Install Ruby](https://collectionbuilder.github.io/cb-docs/docs/software/ruby/)
+    - [Install Jekyll](https://collectionbuilder.github.io/cb-docs/docs/software/jekyll/)
+    - [Install ImageMagick and Ghostscript](https://collectionbuilder.github.io/cb-docs/docs/software/optional/#imagemagick-and-ghostscript) (*Optional:* You only need this software if you want to create object derivatives)
 
 - In our documentation we've tried to anticipate common issues to help with troubleshooting, but if these options do not work, try Googling your problem using a specific search (include the error message you are getting!). 
 
-- If you are still having problems installing software, please feel free to reach out to the CollectionBuilder team at [collectionbuilder.team@gmail.com](mailto:collectionbuilder.team@gmail.com){:target="_blank" rel="noopener"}.
+- If you are still having problems installing software, please feel free to reach out to the CollectionBuilder team at [collectionbuilder.team@gmail.com](mailto:collectionbuilder.team@gmail.com).
 
-## 3. Create a new repository [(Video Version)](https://www.youtube.com/watch?v=sjwhM7wGNYs&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=2){:target="_blank" rel="noopener" class="text-small"}
+## 3. Create a new repository [(Video Version)](https://www.youtube.com/watch?v=sjwhM7wGNYs&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=2){:.text-small}
 
-- After ensuring you are logged in to your GitHub account, visit the [**collectionbuilder-csv repository page**](https://github.com/CollectionBuilder/collectionbuilder-csv){:target="_blank" rel="noopener"}. 
+- After ensuring you are logged in to your GitHub account, visit the [**collectionbuilder-csv repository page**](https://github.com/CollectionBuilder/collectionbuilder-csv). 
 
 - Click the green **Use this template** button and then the **Create a new repository** dropdown option. 
 
@@ -46,7 +46,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 {% include feature/image.html img="create-repo-csv.gif" alt="User entering a repository name and clicking create repository from template button" border=true width="80%" %}
 
-## 4. Clone your repository using GitHub Desktop [(Video Version)](https://www.youtube.com/watch?v=OdHfBF0doN4&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=3){:target="_blank" rel="noopener" class="text-small"}
+## 4. Clone your repository using GitHub Desktop [(Video Version)](https://www.youtube.com/watch?v=OdHfBF0doN4&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=3){:.text-small}
 
 - On your new repository's home page, click on the green button labeled **Code**. In the box that pops up, click on the button labeled **Open with GitHub Desktop**. This action will open GitHub Desktop on your computer.
 
@@ -65,7 +65,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 {% include feature/image.html img="fetch-pull-gh-desktop.gif" alt="GitHub Desktop user clicking on fetch origin button and then pull origin button" border=true width="80%" %}
 
-## 5. Use GitHub Desktop to open your repository in VS Code [(Video Version)](https://www.youtube.com/watch?v=q4VBBUcwZpY&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=4){:target="_blank" rel="noopener" class="text-small"}
+## 5. Use GitHub Desktop to open your repository in VS Code [(Video Version)](https://www.youtube.com/watch?v=q4VBBUcwZpY&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=4){:.text-small}
 
 - Check to make sure you are in the correct repository by viewing the top left section of GitHub Desktop. To switch between repositories, locate the **Current Repository** dropdown, and select the repository you'd like to open. 
 
@@ -77,20 +77,20 @@ This walkthrough provides steps for creating an example digital collection using
 
 {% include feature/image.html img="open-vs-code.gif" alt="GitHub Desktop user clicking on Open in Visual Studio Code button to open VS Code application" border=true width="80%" %}
 
-## 6. Add your objects to your repository directly (if necessary) [(Video Version)](https://www.youtube.com/watch?v=xgSnRN4aT9Q&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=5){:target="_blank" rel="noopener" class="text-small"}
+## 6. Add your objects to your repository directly (if necessary) [(Video Version)](https://www.youtube.com/watch?v=xgSnRN4aT9Q&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=5){:.text-small}
 
 {:.alert .alert-red}
 **Important!** The demo metadata for this walkthrough already contains links to external objects (e.g., image files, PDFs, mp3s, etc.) in the object_location, image_small, and image_thumb fields, so **you do not need to add any object files directly to the repository in VS Code.**
 
 - If you want to get started right away with building a collection site using the demo metadata, [continue to Step 7](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#7-prepare-your-metadata-for-upload) of this walkthrough.
 
-- **Interested in learning how to add object files directly to your repository?** If so, you can check out our [Object Derivatives Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/){:target="_blank" rel="noopener"}. This walkthrough also reviews how to generate thumb and small object derivatives using CollectionBuilder-CSV's built-in rake tasks and how to update your metadata spreadsheet to include these derivatives.
+- **Interested in learning how to add object files directly to your repository?** If so, you can check out our [Object Derivatives Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/). This walkthrough also reviews how to generate thumb and small object derivatives using CollectionBuilder-CSV's built-in rake tasks and how to update your metadata spreadsheet to include these derivatives.
 
-- For more information on the **object_location** field, visit our [Object Location Fields documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/#object-location-fields){:target="_blank" rel="noopener"} which covers how to use the correct file paths or URLs for your objects.
+- For more information on the **object_location** field, visit our [Object Location Fields documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/#object-location-fields) which covers how to use the correct file paths or URLs for your objects.
 
-## 7. Prepare your metadata for upload [(Video Version)](https://www.youtube.com/watch?v=qG-7WtUtR4A&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=6){:target="_blank" rel="noopener" class="text-small"}
+## 7. Prepare your metadata for upload [(Video Version)](https://www.youtube.com/watch?v=qG-7WtUtR4A&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=6){:.text-small}
 
-- Make a copy of this Google Sheet of pre-made demo metadata: [Psychiana Digital Collection Metadata](https://docs.google.com/spreadsheets/d/1U_DAC_YW_ryoJ2Ub6gEqxMXh3Y6xrDUIUbKjFqhBTsM/copy){:target="_blank" rel="noopener"}
+- Make a copy of this Google Sheet of pre-made demo metadata: [Psychiana Digital Collection Metadata](https://docs.google.com/spreadsheets/d/1U_DAC_YW_ryoJ2Ub6gEqxMXh3Y6xrDUIUbKjFqhBTsM/copy)
 
 - Download the spreadsheet as a .csv file by clicking **File** → **Download** → **Comma Separated Values (.csv)**
 
@@ -103,7 +103,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 - Without opening the file, rename it using all lowercase letters, no spaces, and no special characters. For example: **"demo-repository.csv"**
 
-## 8. Upload your metadata file [(Video Version)](https://www.youtube.com/watch?v=u9WEx_nOBtM&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=7){:target="_blank" rel="noopener" class="text-small"}
+## 8. Upload your metadata file [(Video Version)](https://www.youtube.com/watch?v=u9WEx_nOBtM&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=7){:.text-small}
 
 - In VS Code, click on the **"_data"** folder.
 
@@ -117,7 +117,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 - **Note:** The folders and files in the left side of the VS Code interface work like any other folder and file on your computer -- you can drag things in there as you'd like.
 
-## 9. Commit your changes using VS Code [(Video Version)](https://www.youtube.com/watch?v=h8mt9i6JoEI&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=8){:target="_blank" rel="noopener" class="text-small"}
+## 9. Commit your changes using VS Code [(Video Version)](https://www.youtube.com/watch?v=h8mt9i6JoEI&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=8){:.text-small}
 
 - In VS Code, click on the **Source Control** icon, i.e. the network icon on the left side, or press Ctrl + Shift + G.
 
@@ -134,7 +134,7 @@ This walkthrough provides steps for creating an example digital collection using
 
 {% include feature/image.html img="commit-csv.gif" alt="Visual Studio Code user stages a change by clicking the plus sign, types in a commit message, and then presses the commit button" border=true width="80%" %}
 
-## 10. Configure your site settings in the _config.yml file [(Video Version)](https://www.youtube.com/watch?v=9K52tsTQq0o&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=9){:target="_blank" rel="noopener" class="text-small"}
+## 10. Configure your site settings in the _config.yml file [(Video Version)](https://www.youtube.com/watch?v=9K52tsTQq0o&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=9){:.text-small}
 
 - In VS Code, click on the **"_config.yml"** file.
 
@@ -161,19 +161,19 @@ title: Demo Repository
 - **Optional:** Write a new `tagline`, `description`, and `author`.
 
 {:.alert .alert-blue}
-**Note:** To view more information about the **_config.yml** file and what it can change in your site, check out our [Site Config documentation](https://collectionbuilder.github.io/cb-docs/docs/config/){:target="_blank" rel="noopener"}.
+**Note:** To view more information about the **_config.yml** file and what it can change in your site, check out our [Site Config documentation](https://collectionbuilder.github.io/cb-docs/docs/config/).
 
 - Save your changes with Ctrl + S or by clicking File → Save.
 
 - Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update site settings."
 
-## 11. Open the terminal in VS Code [(Video Version)](https://www.youtube.com/watch?v=UH7JVpUZOoU&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=10){:target="_blank" rel="noopener" class="text-small"}
+## 11. Open the terminal in VS Code [(Video Version)](https://www.youtube.com/watch?v=UH7JVpUZOoU&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=10){:.text-small}
 
 - In VS Code, open the terminal by clicking on **Terminal** in the top menu bar and then **New Terminal**.
 
 {% include feature/image.html img="newterminal.gif" alt="Visual Studio Code user opens a new terminal by clicking on Terminal and then New Terminal" border=true width="80%" %}
 
-## 12. Run the "bundle install" command (only necessary for your first time working on a project) [(Video Version)](https://www.youtube.com/watch?v=iEsEy3Zf3Vo&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=11){:target="_blank" rel="noopener" class="text-small"}
+## 12. Run the "bundle install" command (only necessary for your first time working on a project) [(Video Version)](https://www.youtube.com/watch?v=iEsEy3Zf3Vo&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=11){:.text-small}
 
 - The first time you work on a project in VS Code on a computer, type the command **bundle install** into the terminal and then press enter. This will enable you to generate your site on your computer.
 
@@ -181,12 +181,12 @@ title: Demo Repository
 
 {% include feature/image.html img="bundle-install.gif" alt="Visual Studio Code user runs the bundle install command in the terminal" border=true width="80%" %}
 
-## 13. Run the "bundle exec jekyll serve" command to generate your site [(Video Version)](https://www.youtube.com/watch?v=Shqm2Uwk4K8&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=12){:target="_blank" rel="noopener" class="text-small"}
+## 13. Run the "bundle exec jekyll serve" command to generate your site [(Video Version)](https://www.youtube.com/watch?v=Shqm2Uwk4K8&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=12){:.text-small}
 
 - The **bundle exec jekyll serve** command starts a development server on your local computer and "serves" (i.e. makes available) the HTML, CSS, and JavaScript files that comprise your website. These files are built (and rebuilt) in the **"_site"** folder. 
 
 {:.alert .alert-blue}
-**Note:** After the development server is started, Jekyll will rebuild the website each time you save a change to a file in the project folder. Learn more about the jekyll serve command in our [Generate Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/repository/generate/){:target="_blank" rel="noopener"}.
+**Note:** After the development server is started, Jekyll will rebuild the website each time you save a change to a file in the project folder. Learn more about the jekyll serve command in our [Generate Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/repository/generate/).
 
 - In the terminal in VS Code, type the command **bundle exec jekyll s** and press enter.
 
@@ -206,7 +206,7 @@ title: Demo Repository
 
 - When you're ready to end your Jekyll session, type Ctrl + C into the terminal. This stops the server from running.
 
-## 14. Add a featured homepage image [(Video Version)](https://www.youtube.com/watch?v=nZcBduxKLTM&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=13){:target="_blank" rel="noopener" class="text-small"}
+## 14. Add a featured homepage image [(Video Version)](https://www.youtube.com/watch?v=nZcBduxKLTM&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=13){:.text-small}
 
 - Visit your site and use the Browse page to view potential featured images.
 
@@ -244,18 +244,18 @@ featured-image: psychiana005
 {% include feature/image.html img="refresh-site.gif" alt="User refreshes the site to see the new featured home page image" border=true width="80%" %}
 
 {:.alert .alert-green}
-**Want to learn more about customization options?** Check out our [Theme Configuration documentation](https://collectionbuilder.github.io/cb-docs/docs/theme/){:target="_blank" rel="noopener"} to find out how to customize other site display options by editing the **theme.yml** file. For further info on customizations, see: [Configuring and Customizing Pages](https://collectionbuilder.github.io/cb-docs/docs/customization/){:target="_blank" rel="noopener"}, [Theme Color Configuration](https://collectionbuilder.github.io/cb-docs/docs/customization/config-theme-colors/){:target="_blank" rel="noopener"}, and [Adding Custom CSS](https://collectionbuilder.github.io/cb-docs/docs/advanced/custom-css/){:target="_blank" rel="noopener"}.
+**Want to learn more about customization options?** Check out our [Theme Configuration documentation](https://collectionbuilder.github.io/cb-docs/docs/theme/) to find out how to customize other site display options by editing the **theme.yml** file. For further info on customizations, see: [Configuring and Customizing Pages](https://collectionbuilder.github.io/cb-docs/docs/customization/), [Theme Color Configuration](https://collectionbuilder.github.io/cb-docs/docs/customization/config-theme-colors/), and [Adding Custom CSS](https://collectionbuilder.github.io/cb-docs/docs/advanced/custom-css/).
 
-## 15. Optional: Edit the About Page [(Video Version)](https://www.youtube.com/watch?v=nCK_cuAz66U&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=14){:target="_blank" rel="noopener" class="text-small"}
+## 15. Optional: Edit the About Page [(Video Version)](https://www.youtube.com/watch?v=nCK_cuAz66U&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=14){:.text-small}
 
 - In VS Code, click on the **"pages"** folder. Then click on the **"about.md"** file.
 
 - Try writing some text in this file using Markdown. 
 
 {:.alert .alert-blue}
-**New to Markdown?** Learn about what Markdown is and check out some learning resources on our [Markdown glossary page](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown){:target="_blank" rel="noopener"}.
+**New to Markdown?** Learn about what Markdown is and check out some learning resources on our [Markdown glossary page](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown).
 
-- Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html){:target="_blank" rel="noopener"}.
+- Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html).
 
 - Save your changes with Ctrl + S or by clicking File → Save.
 
@@ -263,7 +263,7 @@ featured-image: psychiana005
 
 - View your changes by refreshing your site in your browser window. 
 
-## 16. Prep your repository for publishing with GitHub Actions [(Video Version)](https://www.youtube.com/watch?v=3LAtMRoTUx0&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=15){:target="_blank" rel="noopener" class="text-small"}
+## 16. Prep your repository for publishing with GitHub Actions [(Video Version)](https://www.youtube.com/watch?v=3LAtMRoTUx0&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=15){:.text-small}
 
 - In this walkthrough, you will be hosting your site on **GitHub Pages** by setting up an alternative build using the **GitHub Actions** feature. Before using GitHub Actions, you have to prepare your repository for this build process.
 
@@ -288,9 +288,9 @@ baseurl: /demo-repository
 - Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update URL variables."
 
 {:.alert .alert-yellow}
-**Another option for deploying your site:** If you have your own server for hosting your site, you can build the site with Jekyll and then move the files to your web server. This allows for the publishing of CollectionBuilder sites on your own or your organization's web servers. Read our [Building Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/deploy/build/){:target="_blank" rel="noopener"} for more info. 
+**Another option for deploying your site:** If you have your own server for hosting your site, you can build the site with Jekyll and then move the files to your web server. This allows for the publishing of CollectionBuilder sites on your own or your organization's web servers. Read our [Building Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/deploy/build/) for more info. 
 
-## 17. Push your changes to GitHub using VS Code [(Video Version)](https://www.youtube.com/watch?v=YXLju-mJX-E&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=16){:target="_blank" rel="noopener" class="text-small"}
+## 17. Push your changes to GitHub using VS Code [(Video Version)](https://www.youtube.com/watch?v=YXLju-mJX-E&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=16){:.text-small}
 
 - To Push all your committed local changes up to GitHub, click on the **Source Control** icon, i.e. the network icon on the left side, or press Ctrl + Shift + G.
 
@@ -298,9 +298,9 @@ baseurl: /demo-repository
 
 {% include feature/image.html img="push-changes.gif" alt="Visual Studio Code user clicks the blue sync changes button to push changes to GitHub" border=true width="80%" %}
 
-## 18. Publish your site using GitHub Actions [(Video Version)](https://www.youtube.com/watch?v=__iuI5-PBpc&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=17){:target="_blank" rel="noopener" class="text-small"}
+## 18. Publish your site using GitHub Actions [(Video Version)](https://www.youtube.com/watch?v=__iuI5-PBpc&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=17){:.text-small}
 
-- Visit [github.com](https://github.com/){:target="_blank" rel="noopener"} and log into your account.
+- Visit [github.com](https://github.com/) and log into your account.
 
 - Navigate to your repository. Click the **Settings** tab in the top right and then click **Pages** in the left side menu.
 
@@ -342,16 +342,16 @@ baseurl: /demo-repository
 
 Your collection website is complete! To implement additional customization options, your next steps could be:
 
-- [Customizing your theme options](https://collectionbuilder.github.io/cb-docs/docs/theme/){:target="_blank" rel="noopener"}
+- [Customizing your theme options](https://collectionbuilder.github.io/cb-docs/docs/theme/)
 
-- [Configuring your pages](https://collectionbuilder.github.io/cb-docs/docs/customization/){:target="_blank" rel="noopener"}
+- [Configuring your pages](https://collectionbuilder.github.io/cb-docs/docs/customization/)
 
-- [Adding more pages](https://collectionbuilder.github.io/cb-docs/docs/pages/add_page/){:target="_blank" rel="noopener"}
+- [Adding more pages](https://collectionbuilder.github.io/cb-docs/docs/pages/add_page/)
 
 If you want to get into more Advanced Options, you could explore:
 
-- [Including a TimelineJS feature](https://collectionbuilder.github.io/cb-docs/docs/advanced/timelinejs/){:target="_blank" rel="noopener"}
+- [Including a TimelineJS feature](https://collectionbuilder.github.io/cb-docs/docs/advanced/timelinejs/)
 
-- [Creating new cloud pages](https://collectionbuilder.github.io/cb-docs/docs/advanced/cloudpage/){:target="_blank" rel="noopener"}
+- [Creating new cloud pages](https://collectionbuilder.github.io/cb-docs/docs/advanced/cloudpage/)
 
-- [And more advanced options!](https://collectionbuilder.github.io/cb-docs/docs/advanced/){:target="_blank" rel="noopener"}
+- [And more advanced options!](https://collectionbuilder.github.io/cb-docs/docs/advanced/)

@@ -52,10 +52,10 @@ Follow these steps:
 Consider hosting your objects files externally on the web using one of these solutions:
 
 - Host objects on your organization's server
-- Host objects on a platform such as [Digital Ocean](https://www.digitalocean.com/products/spaces){:target="_blank" rel="noopener"} or [Reclaim Hosting](https://reclaimhosting.com/){:target="_blank" rel="noopener"} (may require a fee)
-- Host objects [via GitHub pages](https://medium.com/@jeftachibiya360/how-to-host-images-for-your-website-on-github-a98d917284c5){:target="_blank" rel="noopener"} (free)
+- Host objects on a platform such as [Digital Ocean](https://www.digitalocean.com/products/spaces) or [Reclaim Hosting](https://reclaimhosting.com/) (may require a fee)
+- Host objects [via GitHub pages](https://medium.com/@jeftachibiya360/how-to-host-images-for-your-website-on-github-a98d917284c5) (free)
 
 {:.alert .alert-red}
 **Note**: Are you using SHEETS to prototype a site? Your objects *must* be made available externally!
 
-External links to your objects should be included in the filename column of your metadata spreadsheet. Please read our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/#filename){:target="_blank" rel="noopener"} to learn more about external item files.
+External links to your objects should be included in the filename column of your metadata spreadsheet. Please read our [Metadata Documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/#filename) to learn more about external item files.
