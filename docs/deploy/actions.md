@@ -34,6 +34,8 @@ The lock file is specific to your OS, so unless you ensure the requirements for 
 3. On the "Pages" page, under "Source", click the dropdown and select "GitHub Actions".
 4. Below the "Source" dropdown, a box will appear under "Use a suggested workflow" titled "Jekyll". Click the "Configure" button.
 5. This will open an editor page creating a new file named ".github/workflows/jekyll.yml" populated with GitHub's [starter Jekyll workflow](https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml). 
+    - *As of May 2026, the default "jekyll.yml" starter workflow SOMETIMES fails and gives errors!* To fix, it is necessary to update the version of Ruby listed in the default action file:
+    - Scroll down to around line 40 where it says `ruby-version: '3.1'`. Update the value to `ruby-version: '3.4'`.
 6. Click the green "Start commit" button, fill in the commit message as usual, and click the green "Commit new file" button.
 
 Committing the action file to your repository will start the build process.
@@ -54,10 +56,10 @@ If a red "X" appears next to your commit, the build failed and your updates will
 
 ### Build Errors
 
-*As of November 2025, the default "jekyll.yml" starter workflow failed and gave errors!*
-It was necessary to update the version of Ruby listed in the "jekyll.yml" action file. 
+*As of May 2026, the default "jekyll.yml" starter workflow SOMETIMES fails and gives errors!*
+To fix, it is necessary to update the version of Ruby listed in the "jekyll.yml" action file. 
 In the editor window, scroll down to the around line 40 where it says `ruby-version: '3.1'`. Update the value to `ruby-version: '3.4'`.
-As of March 2026, this issue seems be resolved and the default action functions again...
+{:.alert .alert-red}
 
 *As of January 2025, the default "jekyll.yml" starter workflow is broken in projects set up before 2025-01-14!* 
 Due to [changes in the ubuntu-latest image](https://github.com/actions/runner-images/issues/10636), the GitHub Action will end up with errors in existing repositories. 
@@ -66,7 +68,6 @@ On line 37, replace `uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217
 This should fix the error!
 Alternatively, replace the whole file with a fresh copy of the default [jekyll.yml starter action](https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml).
 New projects set up after 2025-01-14 are not impacted.
-{:.alert .alert-red}
 
 Some errors in your project can cause the Jekyll build fail, for example an extra space before keys in "_config.yml" or unclosed Liquid tags.
 Visit the "Actions" tab of your repository to see detailed information about the error message to help debug the issue.
