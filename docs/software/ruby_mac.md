@@ -103,7 +103,18 @@ To update, type the command: `gem update --system`
 
 ## Having trouble?
 
-If this installation did not work, check out the [Jekyll install on mac docs](https://jekyllrb.com/docs/installation/macos/), or try Googling any error message or other hindrance you encountered.
+Before getting too far, be sure to fully quit Terminal and restart your system before debugging.
+Check out the [Jekyll install on mac docs](https://jekyllrb.com/docs/installation/macos/), or try Googling any error message or other hindrance you encountered.
+Please note, LLMs tend to end up with a lot of red herrings, so be careful following them down a rabbit hole installing lots of random things!
+It is usually better to uninstall old packages, clean up, and start fresh before getting into other debugging.
+
+The biggest problems tend to be having older / out of date installations of Brew, Xcode, or other Ruby managers such as RVM.
+The best solution is to uninstall and remove those old and out of date tools, restart your system, then complete a fresh install.
+
+Having your MacOS up to date will also help!
+
+*Note:* if you are getting a SASS error during `bundle exec jekyll s` or can't install Jekyll, *and* you have MacOS version older than 14, add this line to your "Gemfile":
+`gem 'sass-embedded', '1.93.2'`
 
 ## Updating Ruby on Mac
 
