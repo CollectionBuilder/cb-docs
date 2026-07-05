@@ -12,13 +12,20 @@ CollectionBuilder templates come in a couple different *flavors* designed to fac
 This documentation applies to all the current "templates" of the CollectionBuilder framework--the basics are the same for each type!
 There are a few steps where the documentation does vary between templates, however, so be on the lookout for bolded font and colored alerts that indicate when the details diverge. 
 
-The templates are currently: 
+The CollectionBuilder templates are currently: 
 
 - **CSV** - for [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv), a robust template for developing exhibits on your local computer (and serving them from anywhere!). CSV is flexible and highly customizable, able to accommodate a wide variety of project types.
-- **GH** - for [CollectionBuilder-GH](https://github.com/CollectionBuilder/collectionbuilder-gh), a lightweight learning-focused template designed for free hosting on GitHub Pages. This is a great option for learning, teaching, quick prototyping, or just testing! A complete collection can be built without installing anything using the GitHub web interface.
-- **Sheets** - for [CollectionBuilder-Sheets](https://github.com/CollectionBuilder/collectionbuilder-sheets), a minimal template designed for loading collection metadata directly from a CSV (such as a published Google Sheet!). This enables live collaboration to prototype collections with minimal set up and unique learning experiences.
+- **Sheets** - for [CollectionBuilder-Sheets](https://github.com/CollectionBuilder/collectionbuilder-sheets), a minimal template designed for loading collection metadata directly from a CSV (such as a published Google Sheet!). This enables live collaboration to prototype collections with minimal set up and unique learning experiences. *Sheets less fully featured and less customizable than CSV.*
+- **GH** - for [CollectionBuilder-GH](https://github.com/CollectionBuilder/collectionbuilder-gh), a lightweight learning-focused template designed for simple hosting on GitHub Pages. This is a good option for learning, teaching, quick prototyping, or just testing! A complete collection can be built without installing anything using the GitHub web interface. *GH is much less actively developed than CSV, so features and refinements lag behind.*
 
 For technical details about what is inside a template, check [Overview of Template Structure]({{ '/docs/advanced/architecture-overview/' | relative_url }}).
+
+There are also "Built Ons" which extend CB templates into new project types:
+
+- [CB-Essay](https://github.com/CollectionBuilder/cb-essay) - A long-form digital scholarship framework for writing multimodal essays and monographs with integrated collection items.
+- [Oral History as Data](https://oralhistoryasdata.github.io/docs/) - An oral history publishing and analysis framework for visualizing coded interview transcripts as interactive digital collections. 
+
+Each Built On has its own documentation, but generally refer back to these docs for the basics inherited from their CB base. 
 
 ## What is a template anyway?
 
