@@ -46,7 +46,7 @@ If a red "X" appears next to your commit, the build failed and your updates will
 {:.alert .alert-green}
 Congratulations! 
 Your site is now live. 
-You can now move on to the [Advanced Topics]({{ '/docs/advanced/' | relative_url }}) section.
+You can now move on to the [Advanced Customization Topics]({{ '/docs/add-more/' | relative_url }}) section.
 
 ### Build Errors
 

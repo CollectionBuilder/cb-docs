@@ -1,7 +1,7 @@
 ---
 title: Migrate CB-GH to CB-CSV
 parent: Advanced
-nav_order: 14
+nav_order: 5
 ---
 
 # Migrate CollectionBuilder-GH project into CollectionBuilder-CSV

@@ -1,7 +1,7 @@
 ---
 title: TimelineJS
-parent: Advanced
-nav_order: 1
+parent: Customize
+nav_order: 3
 ---
 
 # Building a TimelineJS Feature
