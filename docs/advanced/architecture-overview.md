@@ -1,7 +1,7 @@
 ---
 title: Overview of Template Structure
 parent: Advanced
-nav_order: 9
+nav_order: 2
 ---
 
 # Overview of CollectionBuilder Template Directory Structure and Conventions

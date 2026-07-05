@@ -244,7 +244,7 @@ featured-image: psychiana005
 {% include feature/image.html img="refresh-site.gif" alt="User refreshes the site to see the new featured home page image" border=true width="80%" %}
 
 {:.alert .alert-green}
-**Want to learn more about customization options?** Check out our [Theme Configuration documentation](https://collectionbuilder.github.io/cb-docs/docs/theme/) to find out how to customize other site display options by editing the **theme.yml** file. For further info on customizations, see: [Configuring and Customizing Pages](https://collectionbuilder.github.io/cb-docs/docs/customization/), [Theme Color Configuration](https://collectionbuilder.github.io/cb-docs/docs/customization/config-theme-colors/), and [Adding Custom CSS](https://collectionbuilder.github.io/cb-docs/docs/advanced/custom-css/).
+**Want to learn more about customization options?** Check out our [Theme Configuration documentation](https://collectionbuilder.github.io/cb-docs/docs/theme/) to find out how to customize other site display options by editing the **theme.yml** file. For further info on customizations, see: [Configuring and Customizing Pages](https://collectionbuilder.github.io/cb-docs/docs/customization/), [Theme Color Configuration](https://collectionbuilder.github.io/cb-docs/docs/customization/config-theme-colors/), and [Adding Custom CSS](https://collectionbuilder.github.io/cb-docs/docs/add-more/custom-css/).
 
 ## 15. Optional: Edit the About Page [(Video Version)](https://www.youtube.com/watch?v=nCK_cuAz66U&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=14){:.text-small}
 
@@ -350,8 +350,8 @@ Your collection website is complete! To implement additional customization optio
 
 If you want to get into more Advanced Options, you could explore:
 
-- [Including a TimelineJS feature](https://collectionbuilder.github.io/cb-docs/docs/advanced/timelinejs/)
+- [Including a TimelineJS feature](https://collectionbuilder.github.io/cb-docs/docs/add-more/timelinejs/)
 
-- [Creating new cloud pages](https://collectionbuilder.github.io/cb-docs/docs/advanced/cloudpage/)
+- [Creating new cloud pages](https://collectionbuilder.github.io/cb-docs/docs/add-more/cloudpage/)
 
-- [And more advanced options!](https://collectionbuilder.github.io/cb-docs/docs/advanced/)
+- [And more advanced customization options!](https://collectionbuilder.github.io/cb-docs/docs/add-more/)

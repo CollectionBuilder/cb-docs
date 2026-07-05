@@ -1,7 +1,7 @@
 ---
 title: Google Search
-parent: Advanced
-nav_order: 4
+parent: Customize
+nav_order: 7
 ---
 
 # Add Google Custom Search Page

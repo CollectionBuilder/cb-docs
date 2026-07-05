@@ -1,6 +1,6 @@
 ---
 title: New Cloud Pages
-parent: Advanced
+parent: Customize
 nav_order: 2
 ---
 

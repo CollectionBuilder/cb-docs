@@ -42,7 +42,7 @@ Jekyll will use these front matter variables to generate your new page, so you'l
         - will usually end in `.html` extension (since it will be an HTML page!). If you want to use "pretty links" style, the permalink can end in a slash instead, e.g. `permalink: /history/`.
         - this is a URL and sets the filename so no spaces or weird characters! 
     - For example, the file "pages/about-cats.md" might have `permalink: /about-cats.html`
-- You may need to add additional front matter variables, depending on the page you're creating. For instance, [three more variables]({{ '/docs/advanced/cloudpage/#create-a-new-cloud-page-using-cloud-layout-and-front-matter' | relative_url }}) are needed to create a new cloud page.
+- You may need to add additional front matter variables, depending on the page you're creating. For instance, [three more variables]({{ '/docs/add-more/cloudpage/#create-a-new-cloud-page-using-cloud-layout-and-front-matter' | relative_url }}) are needed to create a new cloud page.
 
 ### Add a New Page to the Nav
 

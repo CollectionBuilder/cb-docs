@@ -1,7 +1,7 @@
 ---
 title: Custom Fonts
-parent: Advanced
-nav_order: 13
+parent: Customize
+nav_order: 5
 ---
 
 # Add a Custom Font via CDN

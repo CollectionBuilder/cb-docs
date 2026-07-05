@@ -1,7 +1,7 @@
 ---
 title: Repurposing the Timeline
-parent: Advanced
-nav_order: 3
+parent: Customize
+nav_order: 8
 ---
 
 # Change Timeline Visualization to Feature Other Data

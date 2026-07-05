@@ -175,12 +175,9 @@ Your collection website is complete! To implement additional **Customization Opt
 - [Adding more pages](https://collectionbuilder.github.io/cb-docs/docs/pages/add_page/)
 
 If you want to get into more **Advanced Options**, you could explore:
-- [Including a TimelineJS feature](https://collectionbuilder.github.io/cb-docs/docs/advanced/timelinejs/)
-- [Creating new cloud pages](https://collectionbuilder.github.io/cb-docs/docs/advanced/cloudpage/)
-- [And more advanced options!](https://collectionbuilder.github.io/cb-docs/docs/advanced/)
+- [Including a TimelineJS feature](https://collectionbuilder.github.io/cb-docs/docs/add-more/timelinejs/)
+- [Creating new cloud pages](https://collectionbuilder.github.io/cb-docs/docs/add-more/cloudpage/)
+- [And more advanced customization options!](https://collectionbuilder.github.io/cb-docs/docs/add-more/)
 
 {:.alert .alert-blue}
 To build your own custom digital collection website, you can follow these steps again after [creating your own metadata file](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/).
-
-<!---{:.alert .alert-blue}
-Want to create a collection using our CollectionBuilder-CSV Template? Check out our **CB-CSV Walkthrough** _(link to CSV Walkthrough here)_.-->

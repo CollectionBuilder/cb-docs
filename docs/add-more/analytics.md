@@ -1,7 +1,7 @@
 ---
 title: Add Analytics
-parent: Advanced
-nav_order: 5
+parent: Customize
+nav_order: 6
 ---
 
 # Add Analytics to your Site

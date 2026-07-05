@@ -1,7 +1,7 @@
 ---
 title: Custom CSS
-parent: Advanced
-nav_order: 11
+parent: Customize
+nav_order: 4
 ---
 
 # Adding Custom CSS

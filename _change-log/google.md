@@ -9,4 +9,4 @@ Rather than support these specific Google products, we will focus on simple plat
 
 To add analytics to your site (Google or any other platform!), rather than using the "_config.yml" option `google-analytics-id`, paste the snippet provided by your platform into the file "_includes/head/analytics.html".
 
-If you would like to add Google Programmable Search (i.e. Custom Search / CSE), check the guide in CB-Docs to [add an alternative search page](https://collectionbuilder.github.io/cb-docs/docs/advanced/google-search/).
+If you would like to add Google Programmable Search (i.e. Custom Search / CSE), check the guide in CB-Docs to [add an alternative search page](https://collectionbuilder.github.io/cb-docs/docs/add-more/google-search/).

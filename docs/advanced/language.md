@@ -1,7 +1,7 @@
 ---
 title: Alter Default Site Language
 parent: Advanced
-nav_order: 8
+nav_order: 6
 ---
 
 # Customize Your Site's Default Language

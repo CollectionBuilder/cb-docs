@@ -1,7 +1,7 @@
 ---
 title: Advanced GitHub Actions
 parent: Advanced
-nav_order: 12
+nav_order: 8
 ---
 
 # Advanced GitHub Actions
