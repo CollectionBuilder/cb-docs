@@ -74,15 +74,15 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 ## Install Ruby
 
-- Check the [Ruby download page](https://www.ruby-lang.org/en/downloads/) to find the latest stable version number. For example, in Oct 2024, the current stable version was "3.3.5". (You do not need to download anything, just check the version number!)
+- Check the [Ruby download page](https://www.ruby-lang.org/en/downloads/) to find the latest stable version number. For example, in June 2026, the current stable version was "4.0.5". (You do not need to download anything, just check the version number!)
 - Back in your terminal, install the latest version of ruby by copy/pasting or typing: 
 ```
-rbenv install 3.3.5
+rbenv install 4.0.5
 ```
 - Installation may take a long time!
 - Next, set that version as your global Ruby version by typing: 
 ```
-rbenv global 3.3.5
+rbenv global 4.0.5
 ```
 - Finally, refresh your terminal by running rehash:
 ```

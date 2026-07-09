@@ -20,27 +20,13 @@ This local copy of the repository is automatically configured to be connected to
 It is important to realize that the repository really is just a folder of files!
 You can open, move, or edit the files inside just like any other folder on your computer.
 
-Cloning can be done visually using GitHub Desktop or Visual Studio Code, or on the command line using Git.
+Cloning can be done visually using Visual Studio Code or GitHub Desktop, or on the command line using Git.
 Each of these options is briefly described below--you only need to choose one!
 
 {:.alert .alert-purple}
 When selecting a location on your computer to clone your repositories, **avoid folders that are synced with Dropbox, OneDrive, or similar cloud services!**
 Building your site with Jekyll generates tons of temporary files over and over again which tends to cause issues with your syncing, bogging down your computer and wasting bandwidth.
 Your source code files will be synced with GitHub, so there is no need to sync your local folder to another service. 
-
-## Clone with GitHub Desktop
-
-1. On your new repository's home page, click on the green button labeled "Code" (appears on right above the code area).
-2. In the box that pops up, click on the button labeled "Open with GitHub Desktop." This action will automatically open GitHub Desktop on your computer.
-3. GitHub Desktop will ask you to confirm the path of the repository you are cloning to your computer. In most cases, the suggested path is fine to use so you can just click on the blue "Clone" button (be sure that the default location is not a cloud sync-ed folder such as Dropbox or OneDrive!).
-
-Once you click the "Clone" button, GitHub Desktop will create a new folder matching your repository name and download the repository from GitHub.
-
-Now, in the top bar of GitHub Desktop you should see three buttons. 
-On the left, the "Current repository" button lists the repository you just cloned. 
-In the middle, you can check your current branch (it should say *main*), and on the right there is a button that allows you to "**Fetch origin**," "**Pull origin**," or "**Push origin**."
-
-As you work, this button allows you to sync the local version of your repository with the version on GitHub, using Git to push and pull changes between them.
 
 ## Clone with Visual Studio Code
 
@@ -56,6 +42,20 @@ Once you select a location, Git (running in the background) will create a new fo
 When complete, VS Code will ask if you want to open the new repository to start working.
 
 Check the [VS Code docs about using source control](https://code.visualstudio.com/docs/sourcecontrol/overview) for more details. 
+
+## Clone with GitHub Desktop
+
+1. On your new repository's home page, click on the green button labeled "Code" (appears on right above the code area).
+2. In the box that pops up, click on the button labeled "Open with GitHub Desktop." This action will automatically open GitHub Desktop on your computer.
+3. GitHub Desktop will ask you to confirm the path of the repository you are cloning to your computer. In most cases, the suggested path is fine to use so you can just click on the blue "Clone" button (be sure that the default location is not a cloud sync-ed folder such as Dropbox or OneDrive!).
+
+Once you click the "Clone" button, GitHub Desktop will create a new folder matching your repository name and download the repository from GitHub.
+
+Now, in the top bar of GitHub Desktop you should see three buttons. 
+On the left, the "Current repository" button lists the repository you just cloned. 
+In the middle, you can check your current branch (it should say *main*), and on the right there is a button that allows you to "**Fetch origin**," "**Pull origin**," or "**Push origin**."
+
+As you work, this button allows you to sync the local version of your repository with the version on GitHub, using Git to push and pull changes between them.
 
 ## Clone on Command Line
 

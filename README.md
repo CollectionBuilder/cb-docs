@@ -46,7 +46,7 @@ Example doc file front matter:
 
 ```
 ---
-title: Install Git and GitHub Desktop
+title: Install Git
 parent: Software
 nav_order: 1
 ---

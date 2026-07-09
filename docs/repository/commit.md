@@ -42,7 +42,33 @@ The next step is to **Push** your changes.
 Git push uploads your local history to update the version on GitHub.
 This allows you to work on multiple computers, collaborate with others, and share your code.
 
-We can commit and push via GitHub Desktop, VS Code Source Control pane, or Git on the command line (choose only one!).
+We can commit and push via VS Code Source Control pane, GitHub Desktop, or Git on the command line (choose only one!).
+
+### Commit & Push on VS Code
+
+VS Code has basic GUI support for Git commands built in, which is convenient so you don't have to switch out of your editor.
+The main controls are available on the ["Source Control" pane](https://code.visualstudio.com/docs/editor/versioncontrol), i.e. the network icon on the left side nav, or `Ctrl + Shift + G`.
+
+1. Click on the Source Control pane (or `Ctrl + Shift + G`).
+2. Changed files will be listed under "Changes." Hover over the file name and click on the plus icon to add individual files, or hover next to "Changes" and click on the plus icon to add all (the pop up label when hovering above the plus icon will be "Staged Changes," which is the same as "Git Add"). Once added, the files will move to a new list "Staged Changes" which are ready to commit.
+3. Click in the text box at the top labeled "Message."
+4. Type your "commit message" into the box (in this case something like "Updated README title for new project").
+5. Click the blue button below the message box to Commit. 
+
+Next, look in the lower left of the blue bottom bar of the editor window which provides Git status information. 
+First is the branch you are on (currently "main"), then a sync icon with counts representing commits on GitHub to Pull and commits on your local to Push. 
+
+To Push your local changes up to GitHub, either: 
+
+- Click the blue Sync Changes button at the top of the "Source Control" pane.
+- Or click the sync icon in the lower left bottom bar that looks like two arrows in a circle.
+
+When you are working on multiple computers or collaborating with others, be sure to Fetch and Pull changes from GitHub before you start working -- Pull can be accessed by the same methods as Push in VS Code.
+
+**Tip:** Hovering over icons on VS Code will pop up more information about what they represent.
+
+{:.alert .alert-red}
+**Important Note:** Your computer may prompt you to authorize Visual Studio Code to make changes and then ask you to sign in to GitHub. For step-by-step instructions on the authentication process, check out this timestamped section of the [Using Git with VS Code video](https://www.youtube.com/watch?v=i_23KUAEtUM&t=300s) from the [Visual Studio Code website](https://code.visualstudio.com/docs/sourcecontrol/overview).
 
 ### Commit & Push with GitHub Desktop
 
@@ -70,32 +96,6 @@ After the Fetch, if there are new changes available, the button will change to "
 Click on the button to Push the changes, which will update the files in your local repository.
 
 {% include feature/image.html img="fetch-pull-gh-desktop.gif" alt="GitHub Desktop user clicking on fetch origin button and then pull origin button" border=true width="80%" %}
-
-### Commit & Push on VS Code
-
-VS Code has basic GUI support for Git commands built in, which is convenient so you don't have to switch out of your editor.
-The main controls are available on the ["Source Control" pane](https://code.visualstudio.com/docs/editor/versioncontrol), i.e. the network icon on the left side nav, or `Ctrl + Shift + G`.
-
-1. Click on the Source Control pane (or `Ctrl + Shift + G`).
-2. Changed files will be listed under "Changes." Hover over the file name and click on the plus icon to add individual files, or hover next to "Changes" and click on the plus icon to add all (the pop up label when hovering above the plus icon will be "Staged Changes," which is the same as "Git Add"). Once added, the files will move to a new list "Staged Changes" which are ready to commit.
-3. Click in the text box at the top labeled "Message."
-4. Type your "commit message" into the box (in this case something like "Updated README title for new project").
-5. Click the blue button below the message box to Commit. 
-
-Next, look in the lower left of the blue bottom bar of the editor window which provides Git status information. 
-First is the branch you are on (currently "main"), then a sync icon with counts representing commits on GitHub to Pull and commits on your local to Push. 
-
-To Push your local changes up to GitHub, either: 
-
-- Click the blue Sync Changes button at the top of the "Source Control" pane.
-- Or click the sync icon in the lower left bottom bar that looks like two arrows in a circle.
-
-When you are working on multiple computers or collaborating with others, be sure to Fetch and Pull changes from GitHub before you start working -- Pull can be accessed by the same methods as Push in VS Code.
-
-**Tip:** Hovering over icons on VS Code will pop up more information about what they represent.
-
-{:.alert .alert-red}
-**Important Note:** Your computer may prompt you to authorize Visual Studio Code to make changes and then ask you to sign in to GitHub. For step-by-step instructions on the authentication process, check out this timestamped section of the [Using Git with VS Code video](https://www.youtube.com/watch?v=i_23KUAEtUM&t=300s) from the [Visual Studio Code website](https://code.visualstudio.com/docs/sourcecontrol/overview).
 
 ### Commit & Push on Command Line
 

@@ -62,7 +62,7 @@ Check `rbenv install -l` to get a list of available stable versions.
 Use `rbenv install` + version number, e.g.:
 
 ```
-rbenv install 3.4.1
+rbenv install 4.0.5
 ```
 
 This can take awhile since ruby-build will download and build from source. 
@@ -70,7 +70,7 @@ This can take awhile since ruby-build will download and build from source.
 Once complete, set the version you want to use:
 
 ```
-rbenv global 3.4.1
+rbenv global 4.0.5
 ```
 
 Now, `ruby -v` should report what you just set.

@@ -68,10 +68,16 @@ For ease of use, we generally suggest using Nano command line editor:
 git config --global core.editor "nano -w"
 ```
 
-## Install GitHub Desktop
+## Using Git and GUIs
 
-If you are new to using Git and GitHub, we also recommend you install [GitHub Desktop](https://desktop.github.com/) using the default options. 
-This will help you visualize and implement some of the git processes that can seem non-intuitive.
+Git itself is a command line application (as you might have noticed in the config steps above!).
+You can interact with it by typing commands into your terminal. 
+However, there is a lot of visual tools to help you use it. 
 
-GitHub Desktop is available on Windows and Mac only, however, there are a variety of [other GUI app for working with Git](https://git-scm.com/downloads/guis) available, including "git-gui" that is built in to every default Git install.
-However, many users will find they complete most Git commands using integrations built into their text editors such as VS Code instead.
+VS Code text editor (the next Software install step) has built in visual tools to use Git--this is generally how we teach and use Git with CollectionBuilder. 
+
+If you want to have a separate, dedicated visual interface to use Git, you can install one from the list of [Git GUI Clients](https://git-scm.com/downloads/guis).
+The most commonly used is [GitHub Desktop](https://desktop.github.com/).
+
+These GUIs can help you visualize and implement some of the git processes that can seem non-intuitive.
+However, it can also be distracting to have yet one more piece of software to keep track of--which is why we teach using the tools built in to VS Code!
