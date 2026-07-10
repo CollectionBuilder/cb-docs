@@ -47,7 +47,7 @@ We can commit and push via VS Code Source Control pane, GitHub Desktop, or Git o
 ### Commit & Push on VS Code
 
 VS Code has basic GUI support for Git commands built in, which is convenient so you don't have to switch out of your editor.
-The main controls are available on the ["Source Control" pane](https://code.visualstudio.com/docs/editor/versioncontrol), i.e. the network icon on the left side nav, or `Ctrl + Shift + G`.
+The main controls are available on the ["Source Control" pane](https://code.visualstudio.com/docs/sourcecontrol/overview), i.e. the network icon on the left side nav, or `Ctrl + Shift + G`.
 
 1. Click on the Source Control pane (or `Ctrl + Shift + G`).
 2. Changed files will be listed under "Changes." Hover over the file name and click on the plus icon to add individual files, or hover next to "Changes" and click on the plus icon to add all (the pop up label when hovering above the plus icon will be "Staged Changes," which is the same as "Git Add"). Once added, the files will move to a new list "Staged Changes" which are ready to commit.
