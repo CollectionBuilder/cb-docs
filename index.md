@@ -35,7 +35,7 @@ If you would like to edit directly, please [Fork this repository and open a Pull
 This can be facilitated by following the "Edit this page on GitHub" link at the bottom of any content page.
 Details of the doc's markdown conventions can be found in the [README](https://github.com/CollectionBuilder/cb-docs#readme).
 
-Please keep in mind our [Project Code of Conduct](https://github.com/CollectionBuilder/collectionbuilder.github.io/blob/main/CODE_OF_CONDUCT.md) and check for tips and conventions in our [Contributing](https://github.com/CollectionBuilder/collectionbuilder.github.io/blob/main/CONTRIBUTING.md) doc.
+Please keep in mind our [Project Code of Conduct](https://github.com/CollectionBuilder/collectionbuilder.github.io/blob/main/CODE_OF_CONDUCT.md) and check for tips and conventions in our [Contributing page]({{ '/docs/advanced/contribute/' | relative_url }}).
 
 ## How To Get in Touch
 
