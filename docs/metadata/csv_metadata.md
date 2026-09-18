@@ -56,8 +56,9 @@ Setting the template enables a great deal of flexibility and simplifies customiz
     - `panorama`: a 360 degree image. Item pages will use the Javascript based panorama viewer, [Panellum](https://pannellum.org/) to display the image in a 360 degree view.
     - `record`: metadata only record.
     - `item`: generic fallback item page, displays image or icon depending on "image_thumb"
-    - `compound_object`: a record for an item that includes multiple file instances that are described/managed separately in the metadata. The item page will display a grid of collected items (of any accepted CB type) whose metadata and media can be viewed in a series of browsable modals. Compound objects use an additional set of conventions, see [below for more details](#compound-object-display-templates). 
-    - `multiple`: a record for an item that includes multiple images (such as a postcard) that are listed separately in the metadata. The item page will feature a vertical series of large images that scroll down the page and a popup gallery function. Multiples use an additional set of conventions, see [below for more details](#compound-object-display-templates).
+    - `compound_object`: a record for an item that includes multiple file instances that are described/managed separately in the metadata. The item page will display a grid of collected items (of any accepted CB type) whose full individual metadata and media can be viewed in a series of browsable modals. Uses CB's [compound object conventions](#compound-object-display-templates) to describe the parent and child items. 
+    - `multiple`: a record for an item that includes multiple images (such as a postcard) that are listed separately in the metadata. The item page will feature a vertical series of large images that scroll down the page and a popup gallery function. The images only display their "title", full metadata is displayed for the parent record only. Uses CB's [compound object conventions](#compound-object-display-templates) to describe the parent and child items.
+    - `image_comparison`: a record describing a comparison between two images that are displayed together by stacking them on top of each other and providing a slider to reveal one or the other. Uses CB's [compound object conventions](#compound-object-display-templates) to describe the parent and child items.
 - See ["docs/item-pages.md"](https://github.com/CollectionBuilder/collectionbuilder-csv/blob/main/docs/item_pages.md) in your CollectionBuilder-CSV project repository for more details.
 
 <div class="alert alert-blue" markdown="1"> 
@@ -68,7 +69,7 @@ CollectionBuilder-CSV supports Compound Objects!
 A "Compound Object" describes an item that is made up of a set of digital files intended to be treated as one connected item in the collection site and displayed on a single Item page. 
 
 Incorporating compound objects requires some additional conventions in your metadata spreadsheet.
-For full details on how to use the compound_object and multiple display templates, check out the [Compound Objects section]({{ '/docs/metadata/compound-objects/' | relative_url }}) of the docs. 
+For full details on how to use the "compound_object", "multiple", and "image_comparison" display templates, check out the [Compound Objects section]({{ '/docs/metadata/compound-objects/' | relative_url }}) of the docs. 
 
 </div>
 
