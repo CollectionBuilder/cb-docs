@@ -10,7 +10,9 @@ Walkthroughs are ordinary Markdown pages that use the `walkthrough` layout.
 A small script turns them into parts, steps, checkpoints and a media pane.
 If the script doesn't run, readers still get a complete, normal docs page, so you can always check your work in VS Code's Markdown preview or on GitHub.
 
-See [csv-walkthrough.md](https://github.com/CollectionBuilder/cb-docs/blob/main/docs/walkthroughs/csv-walkthrough.md) for a full example.
+See [csv-walkthrough.md](https://github.com/CollectionBuilder/cb-docs/blob/main/docs/walkthroughs/csv-walkthrough.md) for a full example, and [essay-walkthrough.md](https://github.com/CollectionBuilder/cb-docs/blob/main/docs/walkthroughs/essay-walkthrough.md) for a recipe-style one with ingredients and facts at the top.
+
+If a walkthrough shows CB-Essay or Jekyll include tags as examples, wrap the whole page body in <code>{&#37; raw &#37;}</code> … <code>{&#37; endraw &#37;}</code> so Jekyll prints them instead of running them.
 
 ## Front matter
 
@@ -26,6 +28,8 @@ personalize:                                  # optional
   your-repo: Repository name
 ---
 ```
+
+Add `commit_in: github` when readers commit in the GitHub.com editor instead of VS Code, so save points give the right instructions.
 
 `personalize` lists placeholder words and the label for the box where readers type their own value.
 Wherever a placeholder appears in the page, in text, code, or link addresses, it's swapped for the reader's value.
@@ -47,7 +51,8 @@ Placeholders written in lowercase also lowercase what the reader types.
 | `> **Save point:** commit message` | A reminder to commit, with the steps tucked inside |
 | `> **Note:** …` | A side note. Under a `##` heading, before the first step, it introduces the part. |
 | `#### Heading` | A collapsed section with everything below it, up to the next heading. Put these at the end of a step. |
-| A `##` with no steps under it | Left as ordinary content, which is useful for a "What next?" section at the end |
+| A `##` with no steps under it | Left as ordinary content where it is. Sections like this before the first step (such as "Ingredients") sit side by side at the top. |
+| A definition list in the introduction (`Time` on one line, `: About an hour` on the next) | A row of facts under the title |
 
 ### App names
 

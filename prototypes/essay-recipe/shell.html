@@ -1,0 +1,93 @@
+<title>CB-Essay Recipe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Literata:opsz,wght@7..72,500;7..72,650&display=swap">
+<style>
+/* Standalone shell for a walkthrough page: a slim brand bar, then the walkthrough at full width.
+   Deliberately light only, like a printed recipe card; every color is set explicitly. */
+:root {
+  color-scheme: light;
+  --paper: oklch(0.99 0.002 40);
+  --paper-2: oklch(0.965 0.006 35);
+  --paper-3: oklch(0.93 0.009 32);
+  --ink: oklch(0.24 0.012 30);
+  --ink-2: oklch(0.45 0.012 30);
+  --rule: oklch(0.89 0.008 30);
+  --red: oklch(0.5 0.19 25);
+  --red-ink: oklch(0.46 0.17 25);
+  --bar: oklch(0.15 0.006 30);
+  --bar-ink: oklch(0.97 0.004 40);
+  --font-display: "Literata", "Iowan Old Style", Georgia, serif;
+  --font-body: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--red-ink); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+
+.bar { background: var(--bar); color: var(--bar-ink); padding: 0.6rem 16px; }
+.bar-inner { max-width: 80rem; margin: 0 auto; display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem 1.5rem; flex-wrap: wrap; font-size: 0.85rem; }
+.bar b { font-family: var(--font-display); font-weight: 650; font-size: 1.02rem; letter-spacing: 0.01em; display: inline-flex; align-items: center; gap: 0.5rem; }
+.bar b::before { content: ""; width: 12px; height: 12px; border-radius: 2px; background: var(--red); }
+.bar a { color: var(--bar-ink); opacity: 0.85; }
+
+.main-content { max-width: 80rem; margin: 0 auto; padding-block: 2.5rem 5rem; padding-inline: 16px; }
+@media (min-width: 48rem) { .main-content { padding-inline: 2rem; } }
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4 { font-family: var(--font-display); font-weight: 650; line-height: 1.15; text-wrap: balance; color: var(--ink); }
+.main-content h1 { font-size: clamp(2.1rem, 1.6rem + 2vw, 3.1rem); margin: 0 0 1rem; letter-spacing: -0.01em; }
+.main-content h2 { font-size: 1.6rem; margin: 0 0 0.75rem; }
+.main-content h4 { font-family: var(--font-body); }
+.main-content p { margin: 0 0 0.75rem; }
+.wt-intro p { font-size: 1.12rem; max-width: 42rem; }
+.main-content ul { padding-left: 1.2rem; margin: 0; }
+.main-content ul > li + li { margin-top: 0.35rem; }
+.main-content code { font-family: var(--font-mono); font-size: 0.9em; background: var(--paper-3); padding: 0.05em 0.35em; border-radius: 4px; overflow-wrap: anywhere; }
+.main-content pre { margin: 0; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 6px; padding: 0.75rem 4.5rem 0.75rem 1rem; overflow-x: auto; font-size: 0.88rem; line-height: 1.5; }
+.main-content pre code { background: none; padding: 0; overflow-wrap: normal; white-space: pre; }
+.main-content .highlight .na { color: var(--ink-2); }
+.main-content .highlight .s, .main-content .highlight .s1, .main-content .highlight .s2 { color: var(--red-ink); }
+.main-content .highlight .pi, .main-content .highlight .nn { color: var(--ink-2); }
+.main-content strong { font-weight: 700; }
+.main-content blockquote { margin: 0; }
+.main-content .wt-section h2 { font-size: 1.35rem; }
+.main-content table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin: 0.25rem 0 0; }
+.main-content th, .main-content td { text-align: left; vertical-align: top; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--rule); }
+.main-content th { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); border-bottom-color: var(--ink); }
+.main-content td code { overflow-wrap: anywhere; }
+.table-scroll { overflow-x: auto; max-width: 100%; }
+
+.foot { max-width: 80rem; margin: 0 auto; padding: 1.5rem 16px 3rem; border-top: 1px solid var(--rule); color: var(--ink-2); font-size: 0.85rem; }
+@media (min-width: 48rem) { .foot { padding-inline: 2rem; } }
+
+/*WALKTHROUGH_CSS*/
+
+/* Standalone overrides: the walkthrough tokens already match this shell; headings use the display face. */
+.walkthrough .wt-num, .walkthrough .wt-video-title { font-family: var(--font-display); }
+</style>
+
+<header class="bar">
+  <div class="bar-inner">
+    <b>CollectionBuilder · CB-Essay</b>
+    <span><a href="https://collectionbuilder.github.io/cb-essay/">See a finished CB-Essay site ↗</a></span>
+  </div>
+</header>
+
+<div class="main-content">
+  <div class="walkthrough" id="walkthrough" data-playlist="" data-commit="DATA_COMMIT" data-personalize="DATA_PERSONALIZE">
+    <div class="wt-content">
+<!--CONTENT-->
+    </div>
+  </div>
+</div>
+
+<footer class="foot">
+  From the <a href="https://collectionbuilder.github.io/cb-docs/">CollectionBuilder documentation</a>. CB-Essay is made by the <a href="https://cdil.lib.uidaho.edu/">Center for Digital Inquiry and Learning</a> at the University of Idaho Library. Your progress and the names you enter stay in this browser.
+</footer>
+
+<script>
+/*WALKTHROUGH_JS*/
+</script>

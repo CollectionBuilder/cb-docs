@@ -11,6 +11,9 @@
     > **Save point:**   -> commit reminder
     > **Note:**         -> side note
     h4                  -> collapsed section, up to the next heading
+    h2 with no steps    -> an ordinary section, left where it is. Those before the first step
+                           (e.g. "Ingredients") sit side by side at the top.
+    dl in the intro     -> a row of facts (Makes, Time, Skill level...)
   Placeholder text listed in front matter "personalize" is replaced with the reader's own values.
   If anything here fails, the page stays a readable Markdown page.
 */
@@ -23,6 +26,10 @@
   if (!content) return;
 
   var PLAYLIST = root.getAttribute("data-playlist") || "";
+  // Where readers commit: "github" (the GitHub.com editor) or VS Code (default).
+  var COMMIT_HOWTO = root.getAttribute("data-commit") === "github"
+    ? "<li>Choose <strong>Commit changes…</strong> at the top right of the editor.</li><li>Type the message.</li><li>Choose <strong>Commit changes</strong>.</li>"
+    : "<li>Open <strong>Source Control</strong> (Ctrl + Shift + G).</li><li>Hover over <strong>Changes</strong> and choose <strong>+</strong>.</li><li>Type the message and choose <strong>Commit</strong>.</li>";
   var personalize = {};
   try { personalize = JSON.parse(root.getAttribute("data-personalize") || "{}") || {}; } catch (e) {}
 
@@ -126,9 +133,35 @@
     return clip;
   }
 
+  // A GFM task list ("- [ ] item") becomes a checklist whose ticks are remembered.
+  function makeChecklist(ul, prefix) {
+    ul.classList.add("wt-checklist");
+    Array.prototype.forEach.call(ul.children, function (li, i) {
+      var cb = li.querySelector("input[type=checkbox]");
+      if (!cb) return;
+      var cid = prefix + "-check-" + i;
+      cb.removeAttribute("disabled"); cb.id = cid; cb.setAttribute("data-check", cid);
+      var label = el("label", { "for": cid });
+      label.appendChild(cb);
+      var span = el("span");
+      while (li.firstChild) span.appendChild(li.firstChild);
+      label.appendChild(span); li.appendChild(label);
+    });
+  }
+  // A section with no steps keeps its heading and content as they are.
+  function sectionEl(p) {
+    var sec = el("section", { "class": "wt-section" });
+    if (p.head) sec.appendChild(p.head);
+    p.pre.forEach(function (n) {
+      if (n.tagName === "UL" && n.classList.contains("task-list")) makeChecklist(n, p.head && p.head.id || "section");
+      sec.appendChild(n);
+    });
+    return sec;
+  }
+
   // ---------- parse ----------
   var nodes = Array.prototype.slice.call(content.children);
-  var intro = [], parts = [], after = [], part = null, step = null;
+  var intro = [], parts = [], part = null, step = null;
   nodes.forEach(function (n) {
     if (n.tagName === "H2") { part = { head: n, pre: [], steps: [] }; parts.push(part); step = null; return; }
     if (n.tagName === "H3") {
@@ -137,10 +170,11 @@
     }
     if (step) step.els.push(n); else if (part) part.pre.push(n); else intro.push(n);
   });
-  // Parts with no steps (e.g. "What next?") stay as ordinary content.
   var stepParts = parts.filter(function (p) { return p.steps.length; });
   if (!stepParts.length) return;
-  parts.forEach(function (p) { if (!p.steps.length) { after.push(p.head); after = after.concat(p.pre); } });
+  // Sections before the first part with steps are preparation (e.g. "Ingredients").
+  var firstStepPart = parts.indexOf(stepParts[0]);
+  var prep = parts.slice(0, firstStepPart);
 
   // ---------- build ----------
   var layout = el("div", { "class": "wt-layout" });
@@ -149,8 +183,25 @@
   layout.appendChild(main); layout.appendChild(rail);
 
   var introEl = el("div", { "class": "wt-intro" });
-  intro.forEach(function (n) { introEl.appendChild(n); });
+  intro.forEach(function (n) {
+    if (n.tagName === "DL") {
+      // Wrap each dt + dd pair so the facts can wrap as a grid.
+      n.classList.add("wt-facts");
+      var pair = null;
+      Array.prototype.slice.call(n.children).forEach(function (c) {
+        if (c.tagName === "DT") { pair = el("div"); n.insertBefore(pair, c); }
+        if (pair) pair.appendChild(c);
+      });
+    }
+    introEl.appendChild(n);
+  });
   main.appendChild(introEl);
+
+  if (prep.length) {
+    var prepEl = el("div", { "class": "wt-prep" });
+    prep.forEach(function (p) { prepEl.appendChild(sectionEl(p)); });
+    main.appendChild(prepEl);
+  }
 
   var setup = el("section", { "class": "wt-setup", "aria-label": "Set up this walkthrough" });
   main.appendChild(setup);
@@ -159,7 +210,9 @@
   var stepNum = 0;
   var tocHtml = "";
 
-  stepParts.forEach(function (p, pi) {
+  parts.slice(firstStepPart).forEach(function (p) {
+    if (!p.steps.length) { main.appendChild(sectionEl(p)); return; }
+    var pi = stepParts.indexOf(p);
     var sec = el("section", { "class": "wt-part" });
     var head = el("header", { "class": "wt-part-head" });
     head.appendChild(el("span", { "class": "wt-eyebrow" }, "Part " + (pi + 1) + " of " + stepParts.length));
@@ -234,18 +287,7 @@
           return;
         }
         if (n.tagName === "UL" && n.classList.contains("task-list")) {
-          n.classList.add("wt-checklist");
-          Array.prototype.forEach.call(n.children, function (li, i) {
-            var cb = li.querySelector("input[type=checkbox]");
-            if (!cb) return;
-            var cid = id + "-check-" + i;
-            cb.removeAttribute("disabled"); cb.id = cid; cb.setAttribute("data-check", cid);
-            var label = el("label", { "for": cid });
-            label.appendChild(cb);
-            var span = el("span");
-            while (li.firstChild) span.appendChild(li.firstChild);
-            label.appendChild(span); li.appendChild(label);
-          });
+          makeChecklist(n, id);
           body.appendChild(n);
           return;
         }
@@ -267,7 +309,7 @@
             var msg = n.textContent.trim();
             body.appendChild(el("div", { "class": "wt-savepoint" },
               '<span class="wt-label">Save point</span><span>Commit your changes with the message <code>' + esc(msg) + "</code></span>" +
-              "<details><summary>How do I commit again?</summary><ol><li>Open <strong>Source Control</strong> (Ctrl + Shift + G).</li><li>Hover over <strong>Changes</strong> and choose <strong>+</strong>.</li><li>Type the message and choose <strong>Commit</strong>.</li></ol></details>"));
+              "<details><summary>How do I commit again?</summary><ol>" + COMMIT_HOWTO + "</ol></details>"));
             return;
           }
           if (kind) { var nt = el("aside", { "class": "wt-note" }); while (n.firstChild) nt.appendChild(n.firstChild); body.appendChild(nt); return; }
@@ -282,9 +324,13 @@
       }
 
       // copy buttons on code blocks
-      Array.prototype.forEach.call(body.querySelectorAll("div.highlighter-rouge"), function (cb) {
-        cb.classList.add("wt-snippet");
-        cb.appendChild(el("button", { type: "button", "class": "wt-copy" }, "Copy"));
+      Array.prototype.forEach.call(body.querySelectorAll("pre"), function (pre) {
+        if (pre.closest(".wt-more")) return;
+        var box = pre.closest("div.highlighter-rouge");
+        if (!box) { box = el("div"); pre.parentNode.insertBefore(box, pre); box.appendChild(pre); }
+        if (box.classList.contains("wt-snippet")) return;
+        box.classList.add("wt-snippet");
+        box.appendChild(el("button", { type: "button", "class": "wt-copy" }, "Copy"));
       });
 
       // media pane
@@ -297,6 +343,7 @@
         media.innerHTML = '<div class="wt-tabs" role="tablist" aria-label="Media for step ' + stepNum + '">' + tabs + '</div><div class="wt-stage"></div>';
       } else {
         media.remove();
+        grid.classList.add("no-media");
       }
       sec.appendChild(art);
     });
@@ -304,15 +351,10 @@
     main.appendChild(sec);
   });
 
-  if (after.length) {
-    var aft = el("section", { "class": "wt-after" });
-    after.forEach(function (n) { aft.appendChild(n); });
-    main.appendChild(aft);
-  }
-
   // ---------- setup panel ----------
   var placeholders = Object.keys(personalize);
-  var setupHtml =
+  var hasVideo = allSteps.some(function (s) { return s.video; });
+  var setupHtml = !hasVideo ? "" :
     '<div><h2>How do you like to learn?</h2><p class="wt-help">Every step has a short video and written steps with screen clips. Choose which one each step shows first. You can switch on any step.</p>' +
     '<div class="wt-mode" role="group" aria-label="Learning mode"><button type="button" data-mode="read">Read and look</button><button type="button" data-mode="watch">Watch videos</button></div>' +
     (PLAYLIST ? '<a class="wt-playlist" href="https://www.youtube.com/playlist?list=' + esc(PLAYLIST) + '">Or watch the whole series on YouTube ↗</a>' : "") + "</div>";
@@ -322,7 +364,8 @@
         return '<div class="wt-field"><label for="wt-field-' + i + '">' + esc(personalize[ph]) + '</label><input id="wt-field-' + i + '" data-ph="' + esc(ph) + '" type="text" autocomplete="off" spellcheck="false" placeholder="' + esc(ph) + '"></div>';
       }).join("") + "</div></div>";
   }
-  setup.innerHTML = setupHtml;
+  if (setupHtml) setup.innerHTML = setupHtml; else setup.remove();
+  if (setup.children.length === 1) setup.classList.add("is-single");
 
   rail.innerHTML = '<div class="wt-rail-inner"><div class="wt-progress"><span class="wt-progress-label"></span><div class="wt-meter" aria-hidden="true"><span></span></div></div>' +
     '<details class="wt-toc-details"><summary>All steps</summary><ol class="wt-toc">' + tocHtml + "</ol></details>" +
@@ -413,6 +456,7 @@
     if (play) player.click();
   }
   function applyMode() {
+    if (!hasVideo) mode = "read";
     Array.prototype.forEach.call(setup.querySelectorAll(".wt-mode button"), function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-mode") === mode ? "true" : "false"); });
     allSteps.forEach(function (s) { show(s, mode === "watch" ? "video" : "clip", 0, false); });
   }

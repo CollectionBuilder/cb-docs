@@ -79,9 +79,27 @@
 .wt-intro > * { max-width: 44rem; }
 .wt-intro p { color: var(--wt-ink-2); }
 
+/* facts row from a definition list in the intro (Makes, Time, Skill level...) */
+.main-content dl.wt-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 0 1rem; margin: 1.75rem 0 0; max-width: 52rem; border-top: 1px solid var(--wt-ink); border-bottom: 1px solid var(--wt-rule); padding: 0.7rem 0 0.8rem; }
+.main-content dl.wt-facts > div { display: grid; gap: 0.15rem; align-content: start; padding-block: 0.2rem; }
+.main-content dl.wt-facts dt, .main-content dl.wt-facts dd { grid-column: auto; margin: 0; padding: 0; text-align: left; }
+.main-content dl.wt-facts dt { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--wt-ink-3); }
+.main-content dl.wt-facts dt::after { content: none; }
+.main-content dl.wt-facts dd { font-size: 0.92rem; color: var(--wt-ink); }
+
+/* preparation sections before the method (e.g. Ingredients), side by side */
+.wt-prep { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+.wt-prep .wt-section { background: var(--wt-paper-2); border-radius: var(--wt-radius); padding: 1.25rem 1.5rem; max-width: none; }
+.main-content .wt-prep .wt-section h2 { font-size: 1.15rem !important; margin: 0 0 0.6rem !important; }
+.main-content .wt-section > * { margin-top: 0; }
+.main-content .wt-section > * + * { margin-top: 0.6rem; }
+.wt-section { max-width: 44rem; }
+.main > .wt-section, .wt-main > .wt-section { margin-bottom: 4rem; }
+.wt-prep .wt-checklist label:hover { background: var(--wt-paper-3); }
+
 /* ---------- setup panel ---------- */
 .wt-setup { display: grid; gap: 1.75rem; grid-template-columns: minmax(0, 1fr); padding: 1.5rem; margin: 2rem 0 3.5rem; background: var(--wt-paper-2); border-radius: var(--wt-radius); }
-@media (min-width: 52rem) { .wt-setup { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); } }
+@media (min-width: 52rem) { .wt-setup:not(.is-single) { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); } }
 .main-content .wt-setup h2 { font-size: 1.05rem !important; margin: 0 0 0.35rem; }
 .wt-setup .wt-help { font-size: 0.85rem; color: var(--wt-ink-2); margin: 0 0 1rem; }
 .wt-mode { display: inline-grid; grid-template-columns: 1fr 1fr; background: var(--wt-paper); border: 1px solid var(--wt-rule); border-radius: 999px; padding: 3px; gap: 2px; }
@@ -131,6 +149,9 @@
 .main-content .wt-note p + p { margin-top: 0.4rem; }
 
 /* ---------- steps ---------- */
+/* Single-column grids that must not grow to fit long code lines; code scrolls inside its own box. */
+.wt-body, .wt-act, .wt-more-body, .wt-check, .wt-media, .wt-savepoint, .wt-careful { grid-template-columns: minmax(0, 1fr); }
+.wt-snippet { min-width: 0; max-width: 100%; }
 .wt-step { container-type: inline-size; }
 .wt-step-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.35rem 0.9rem; align-items: start; margin-bottom: 1rem; }
 .wt-num { width: 2.3rem; height: 2.3rem; border-radius: 50%; border: 1.5px solid var(--wt-ink); display: grid; place-items: center; font-weight: 600; font-size: 1.05rem; font-variant-numeric: tabular-nums; transition: background-color 300ms var(--wt-ease), border-color 300ms var(--wt-ease), color 300ms; }
@@ -152,7 +173,7 @@
 
 .wt-grid { display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1fr); }
 @container (min-width: 48rem) {
-  .wt-grid { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 2rem; align-items: start; }
+  .wt-grid:not(.no-media) { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 2rem; align-items: start; }
   .wt-media { position: sticky; top: 1.5rem; }
 }
 .wt-body { display: grid; gap: 1rem; min-width: 0; }
@@ -244,8 +265,6 @@
 .wt-video:hover .wt-video-play i { transform: scale(1.08); }
 .wt-frame { aspect-ratio: 16 / 9; width: 100%; border: 0; border-radius: var(--wt-radius); background: var(--wt-screen); display: block; }
 
-/* trailing sections after the last step (e.g. "What next?") */
-.wt-after { max-width: 44rem; }
 
 .wt-toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translate(-50%, 200%); background: var(--wt-ink); color: var(--wt-paper); padding: 0.45rem 1rem; border-radius: 99px; font-size: 0.85rem; font-weight: 600; transition: transform 350ms var(--wt-ease); pointer-events: none; z-index: 100; }
 .wt-toast.is-shown { transform: translate(-50%, 0); }

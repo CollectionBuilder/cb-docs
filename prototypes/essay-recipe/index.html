@@ -1,0 +1,1554 @@
+<title>CB-Essay Recipe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Literata:opsz,wght@7..72,500;7..72,650&display=swap">
+<style>
+/* Standalone shell for a walkthrough page: a slim brand bar, then the walkthrough at full width.
+   Deliberately light only, like a printed recipe card; every color is set explicitly. */
+:root {
+  color-scheme: light;
+  --paper: oklch(0.99 0.002 40);
+  --paper-2: oklch(0.965 0.006 35);
+  --paper-3: oklch(0.93 0.009 32);
+  --ink: oklch(0.24 0.012 30);
+  --ink-2: oklch(0.45 0.012 30);
+  --rule: oklch(0.89 0.008 30);
+  --red: oklch(0.5 0.19 25);
+  --red-ink: oklch(0.46 0.17 25);
+  --bar: oklch(0.15 0.006 30);
+  --bar-ink: oklch(0.97 0.004 40);
+  --font-display: "Literata", "Iowan Old Style", Georgia, serif;
+  --font-body: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--red-ink); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+
+.bar { background: var(--bar); color: var(--bar-ink); padding: 0.6rem 16px; }
+.bar-inner { max-width: 80rem; margin: 0 auto; display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem 1.5rem; flex-wrap: wrap; font-size: 0.85rem; }
+.bar b { font-family: var(--font-display); font-weight: 650; font-size: 1.02rem; letter-spacing: 0.01em; display: inline-flex; align-items: center; gap: 0.5rem; }
+.bar b::before { content: ""; width: 12px; height: 12px; border-radius: 2px; background: var(--red); }
+.bar a { color: var(--bar-ink); opacity: 0.85; }
+
+.main-content { max-width: 80rem; margin: 0 auto; padding-block: 2.5rem 5rem; padding-inline: 16px; }
+@media (min-width: 48rem) { .main-content { padding-inline: 2rem; } }
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4 { font-family: var(--font-display); font-weight: 650; line-height: 1.15; text-wrap: balance; color: var(--ink); }
+.main-content h1 { font-size: clamp(2.1rem, 1.6rem + 2vw, 3.1rem); margin: 0 0 1rem; letter-spacing: -0.01em; }
+.main-content h2 { font-size: 1.6rem; margin: 0 0 0.75rem; }
+.main-content h4 { font-family: var(--font-body); }
+.main-content p { margin: 0 0 0.75rem; }
+.wt-intro p { font-size: 1.12rem; max-width: 42rem; }
+.main-content ul { padding-left: 1.2rem; margin: 0; }
+.main-content ul > li + li { margin-top: 0.35rem; }
+.main-content code { font-family: var(--font-mono); font-size: 0.9em; background: var(--paper-3); padding: 0.05em 0.35em; border-radius: 4px; overflow-wrap: anywhere; }
+.main-content pre { margin: 0; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 6px; padding: 0.75rem 4.5rem 0.75rem 1rem; overflow-x: auto; font-size: 0.88rem; line-height: 1.5; }
+.main-content pre code { background: none; padding: 0; overflow-wrap: normal; white-space: pre; }
+.main-content .highlight .na { color: var(--ink-2); }
+.main-content .highlight .s, .main-content .highlight .s1, .main-content .highlight .s2 { color: var(--red-ink); }
+.main-content .highlight .pi, .main-content .highlight .nn { color: var(--ink-2); }
+.main-content strong { font-weight: 700; }
+.main-content blockquote { margin: 0; }
+.main-content .wt-section h2 { font-size: 1.35rem; }
+.main-content table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin: 0.25rem 0 0; }
+.main-content th, .main-content td { text-align: left; vertical-align: top; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--rule); }
+.main-content th { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); border-bottom-color: var(--ink); }
+.main-content td code { overflow-wrap: anywhere; }
+.table-scroll { overflow-x: auto; max-width: 100%; }
+
+.foot { max-width: 80rem; margin: 0 auto; padding: 1.5rem 16px 3rem; border-top: 1px solid var(--rule); color: var(--ink-2); font-size: 0.85rem; }
+@media (min-width: 48rem) { .foot { padding-inline: 2rem; } }
+
+/*
+  Walkthrough layout styles. Loaded only by _layouts/walkthrough.html.
+  Everything is scoped to .walkthrough, except widening .main so steps
+  have room for media beside the instructions.
+*/
+
+.walkthrough {
+  --wt-paper: oklch(0.99 0.002 40);
+  --wt-paper-2: oklch(0.965 0.006 35);
+  --wt-paper-3: oklch(0.93 0.009 32);
+  --wt-ink: oklch(0.24 0.012 30);
+  --wt-ink-2: oklch(0.45 0.012 30);
+  --wt-ink-3: oklch(0.58 0.01 30);
+  --wt-rule: oklch(0.89 0.008 30);
+  --wt-red: oklch(0.5 0.19 25);          /* CollectionBuilder red, #BF1722 */
+  --wt-red-ink: oklch(0.46 0.17 25);
+  --wt-red-soft: oklch(0.955 0.025 25);
+  --wt-done: oklch(0.5 0.1 158);
+  --wt-done-soft: oklch(0.955 0.03 158);
+  --wt-caution-soft: oklch(0.96 0.045 85);
+  --wt-caution-ink: oklch(0.42 0.08 70);
+  --wt-screen: oklch(0.22 0.01 30);
+  --wt-screen-ink: oklch(0.96 0.004 40);
+  --wt-app-web: oklch(0.45 0.02 260);
+  --wt-app-desktop: oklch(0.5 0.15 300);
+  --wt-app-vscode: oklch(0.55 0.14 245);
+  --wt-app-term: oklch(0.42 0.05 150);
+  --wt-app-browser: oklch(0.6 0.13 55);
+  --wt-app-sheets: oklch(0.55 0.13 150);
+  --wt-app-files: oklch(0.55 0.03 30);
+  --wt-radius: 6px;
+  --wt-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  color: var(--wt-ink);
+}
+
+/*
+  Walkthrough pages drop the theme's sidebar nav. The sidebar's black logo header
+  becomes a full-width bar across the top, and the page uses the full width below it.
+  The breadcrumb ("Walkthroughs / ...") is the way back to the rest of the docs.
+*/
+.side-bar {
+  position: static !important;
+  width: 100% !important;
+  height: auto !important;
+  min-width: 0 !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  border-right: 0 !important;
+  background: black;
+}
+.side-bar .site-nav,
+.side-bar #menu-button { display: none !important; }
+.side-bar .site-header {
+  width: auto !important;
+  height: auto !important;
+  max-height: none !important;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 1rem;
+}
+.side-bar .site-header .cb-logo,
+.side-bar .site-header .cb-title { width: auto; }
+.side-bar .site-header .cb-logo { display: flex; align-items: center; }
+.side-bar .site-header .cb-logo img { display: block; height: 40px; margin: 0 !important; padding: 0 !important; }
+.side-bar .site-header .cb-title { margin: 0 !important; padding: 0 !important; font-size: 1rem !important; }
+.main {
+  max-width: 80rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ---------- page frame ---------- */
+.walkthrough.is-enhanced .wt-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+@media (min-width: 80rem) {
+  .walkthrough.is-enhanced .wt-layout { grid-template-columns: minmax(0, 1fr) 14rem; }
+}
+.wt-main { min-width: 0; }
+.wt-intro > * { max-width: 44rem; }
+.wt-intro p { color: var(--wt-ink-2); }
+
+/* facts row from a definition list in the intro (Makes, Time, Skill level...) */
+.main-content dl.wt-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 0 1rem; margin: 1.75rem 0 0; max-width: 52rem; border-top: 1px solid var(--wt-ink); border-bottom: 1px solid var(--wt-rule); padding: 0.7rem 0 0.8rem; }
+.main-content dl.wt-facts > div { display: grid; gap: 0.15rem; align-content: start; padding-block: 0.2rem; }
+.main-content dl.wt-facts dt, .main-content dl.wt-facts dd { grid-column: auto; margin: 0; padding: 0; text-align: left; }
+.main-content dl.wt-facts dt { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--wt-ink-3); }
+.main-content dl.wt-facts dt::after { content: none; }
+.main-content dl.wt-facts dd { font-size: 0.92rem; color: var(--wt-ink); }
+
+/* preparation sections before the method (e.g. Ingredients), side by side */
+.wt-prep { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+.wt-prep .wt-section { background: var(--wt-paper-2); border-radius: var(--wt-radius); padding: 1.25rem 1.5rem; max-width: none; }
+.main-content .wt-prep .wt-section h2 { font-size: 1.15rem !important; margin: 0 0 0.6rem !important; }
+.main-content .wt-section > * { margin-top: 0; }
+.main-content .wt-section > * + * { margin-top: 0.6rem; }
+.wt-section { max-width: 44rem; }
+.main > .wt-section, .wt-main > .wt-section { margin-bottom: 4rem; }
+.wt-prep .wt-checklist label:hover { background: var(--wt-paper-3); }
+
+/* ---------- setup panel ---------- */
+.wt-setup { display: grid; gap: 1.75rem; grid-template-columns: minmax(0, 1fr); padding: 1.5rem; margin: 2rem 0 3.5rem; background: var(--wt-paper-2); border-radius: var(--wt-radius); }
+@media (min-width: 52rem) { .wt-setup:not(.is-single) { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); } }
+.main-content .wt-setup h2 { font-size: 1.05rem !important; margin: 0 0 0.35rem; }
+.wt-setup .wt-help { font-size: 0.85rem; color: var(--wt-ink-2); margin: 0 0 1rem; }
+.wt-mode { display: inline-grid; grid-template-columns: 1fr 1fr; background: var(--wt-paper); border: 1px solid var(--wt-rule); border-radius: 999px; padding: 3px; gap: 2px; }
+.wt-mode button { border: 0; background: transparent; padding: 0.4rem 0.9rem; border-radius: 999px; font: inherit; font-size: 0.85rem; font-weight: 600; color: var(--wt-ink-2); cursor: pointer; transition: background-color 200ms var(--wt-ease), color 200ms var(--wt-ease); }
+.wt-mode button[aria-pressed="true"] { background: var(--wt-ink); color: var(--wt-paper); }
+.wt-playlist { display: block; margin-top: 0.9rem; font-size: 0.85rem; font-weight: 600; }
+.wt-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 0.85rem; }
+.wt-field { display: grid; gap: 0.2rem; }
+.wt-field label { font-weight: 600; font-size: 0.8rem; }
+.wt-field input { font: inherit; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 0.85rem; padding: 0.45rem 0.6rem; border: 1px solid var(--wt-rule); border-radius: var(--wt-radius); background: var(--wt-paper); color: var(--wt-ink); width: 100%; box-sizing: border-box; }
+.wt-field input:focus { outline: 2px solid var(--wt-red); outline-offset: 0; border-color: transparent; }
+
+/* ---------- rail ---------- */
+.wt-rail { min-width: 0; font-size: 0.85rem; }
+@media (min-width: 80rem) {
+  .wt-rail-inner { position: sticky; top: 1.5rem; max-height: calc(100vh - 3rem); overflow-y: auto; padding-right: 0.25rem; }
+}
+.wt-progress { display: grid; gap: 0.4rem; margin-bottom: 1rem; }
+.wt-progress-label { color: var(--wt-ink-2); font-variant-numeric: tabular-nums; }
+.wt-progress-label b { color: var(--wt-ink); }
+.wt-meter { height: 6px; background: var(--wt-paper-3); border-radius: 99px; overflow: hidden; }
+.wt-meter span { display: block; height: 100%; background: var(--wt-done); border-radius: inherit; transform-origin: left; transform: scaleX(0); transition: transform 500ms var(--wt-ease); }
+.wt-rail details > summary { cursor: pointer; font-weight: 600; padding: 0.5rem 0.75rem; border: 1px solid var(--wt-rule); border-radius: var(--wt-radius); list-style: none; }
+.wt-rail details > summary::-webkit-details-marker { display: none; }
+@media (min-width: 80rem) { .wt-rail details > summary { display: none; } }
+.main-content .wt-toc, .main-content .wt-toc ol { list-style: none; margin: 0; padding: 0; }
+.main-content .wt-toc { display: grid; gap: 1rem; margin-top: 0.75rem; }
+@media (min-width: 80rem) { .main-content .wt-toc { margin-top: 0; } }
+.main-content .wt-toc li::before { content: none !important; }
+.wt-toc-part { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--wt-ink-3); margin-bottom: 0.2rem; }
+.wt-toc a { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: 0.4rem; align-items: baseline; padding: 0.25rem 0.4rem; border-radius: 4px; color: var(--wt-ink-2); text-decoration: none; line-height: 1.35; }
+.wt-toc a:hover { background: var(--wt-paper-2); color: var(--wt-ink); }
+.wt-toc a[aria-current="step"] { background: var(--wt-red-soft); color: var(--wt-ink); font-weight: 600; }
+.wt-toc .wt-toc-num { text-align: right; color: var(--wt-ink-3); font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+.wt-toc a.is-done .wt-toc-num { color: var(--wt-done); font-weight: 700; }
+.wt-rail-foot { margin-top: 1.5rem; color: var(--wt-ink-3); font-size: 0.75rem; display: grid; gap: 0.4rem; }
+.wt-linklike { background: none; border: 0; padding: 0; font: inherit; color: var(--wt-ink-2); text-decoration: underline; text-underline-offset: 0.18em; cursor: pointer; justify-self: start; }
+
+/* ---------- parts ---------- */
+.wt-part { display: grid; gap: 3rem; margin-bottom: 5rem; }
+.wt-part-head { display: grid; gap: 0.35rem; padding-top: 1.25rem; border-top: 2px solid var(--wt-ink); max-width: 44rem; }
+.wt-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--wt-ink-3); }
+.main-content .wt-part-head h2 { margin: 0 !important; font-size: 1.6rem !important; }
+.main-content .wt-part-head p { margin: 0; color: var(--wt-ink-2); }
+.wt-note { max-width: 44rem; padding: 0.9rem 1.25rem; background: var(--wt-paper-2); border-radius: var(--wt-radius); font-size: 0.92rem; color: var(--wt-ink-2); }
+.main-content .wt-note p { margin: 0; }
+.main-content .wt-note p + p { margin-top: 0.4rem; }
+
+/* ---------- steps ---------- */
+/* Single-column grids that must not grow to fit long code lines; code scrolls inside its own box. */
+.wt-body, .wt-act, .wt-more-body, .wt-check, .wt-media, .wt-savepoint, .wt-careful { grid-template-columns: minmax(0, 1fr); }
+.wt-snippet { min-width: 0; max-width: 100%; }
+.wt-step { container-type: inline-size; }
+.wt-step-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.35rem 0.9rem; align-items: start; margin-bottom: 1rem; }
+.wt-num { width: 2.3rem; height: 2.3rem; border-radius: 50%; border: 1.5px solid var(--wt-ink); display: grid; place-items: center; font-weight: 600; font-size: 1.05rem; font-variant-numeric: tabular-nums; transition: background-color 300ms var(--wt-ease), border-color 300ms var(--wt-ease), color 300ms; }
+.wt-step.is-done .wt-num { background: var(--wt-done); border-color: var(--wt-done); color: var(--wt-paper); }
+.wt-step-title { display: grid; gap: 0.2rem; }
+.main-content .wt-step-title h3 { margin: 0 !important; padding-top: 0.3rem; font-size: 1.2rem !important; }
+.wt-where { display: flex; flex-wrap: wrap; gap: 0.2rem 0.45rem; align-items: center; font-size: 0.78rem; color: var(--wt-ink-2); }
+.wt-app { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 600; color: var(--wt-ink); white-space: nowrap; }
+.wt-app::before { content: ""; width: 9px; height: 9px; border-radius: 2px; background: var(--wt-app, var(--wt-ink-3)); }
+.wt-app[data-app="web"] { --wt-app: var(--wt-app-web); }
+.wt-app[data-app="desktop"] { --wt-app: var(--wt-app-desktop); }
+.wt-app[data-app="vscode"] { --wt-app: var(--wt-app-vscode); }
+.wt-app[data-app="term"] { --wt-app: var(--wt-app-term); }
+.wt-app[data-app="browser"] { --wt-app: var(--wt-app-browser); }
+.wt-app[data-app="sheets"] { --wt-app: var(--wt-app-sheets); }
+.wt-app[data-app="files"] { --wt-app: var(--wt-app-files); }
+.wt-arrow { color: var(--wt-ink-3); }
+.wt-badge { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 1px 7px; border-radius: 99px; background: var(--wt-paper-3); color: var(--wt-ink-2); }
+
+.wt-grid { display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 48rem) {
+  .wt-grid:not(.no-media) { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 2rem; align-items: start; }
+  .wt-media { position: sticky; top: 1.5rem; }
+}
+.wt-body { display: grid; gap: 1rem; min-width: 0; }
+.wt-body > * { max-width: 38rem; }
+.main-content .wt-body > * { margin-top: 0; margin-bottom: 0; }
+.main-content .wt-body > p { color: var(--wt-ink-2); }
+
+/* actions: the step's numbered list, lettered so it doesn't compete with step numbers */
+.main-content ol.wt-actions { list-style: none; counter-reset: wt-act; padding: 0; display: grid; gap: 0.75rem; }
+.main-content ol.wt-actions > li { counter-increment: wt-act; display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: 0.4rem; margin: 0; }
+.main-content ol.wt-actions > li::before { content: counter(wt-act, lower-alpha); position: static; font-weight: 700; color: var(--wt-ink-3); font-size: 0.85rem; padding-top: 0.15rem; }
+.wt-act { display: grid; gap: 0.5rem; min-width: 0; }
+.main-content .wt-act > * { margin: 0; }
+.wt-show { justify-self: start; background: none; border: 0; padding: 0; font: inherit; font-size: 0.82rem; font-weight: 600; color: var(--wt-red-ink); cursor: pointer; display: inline-flex; gap: 0.4rem; align-items: center; }
+.wt-show::before { content: ""; border-left: 7px solid currentColor; border-top: 4.5px solid transparent; border-bottom: 4.5px solid transparent; }
+.wt-show:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+.wt-show[aria-current="true"] { color: var(--wt-ink); }
+
+/* code blocks inside steps get a copy button */
+.wt-snippet { position: relative; }
+.main-content .wt-snippet .highlight, .main-content .wt-snippet pre { margin: 0; }
+.wt-copy { position: absolute; top: 0.35rem; right: 0.35rem; border: 1px solid var(--wt-rule); background: var(--wt-paper); border-radius: 4px; font: inherit; font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; color: var(--wt-ink-2); cursor: pointer; }
+.wt-copy:hover { color: var(--wt-ink); }
+.wt-body [data-v] { color: var(--wt-red-ink); font-weight: 600; }
+
+/* task-list checklist */
+.main-content ul.wt-checklist { list-style: none; padding: 0; display: grid; gap: 2px; }
+.main-content ul.wt-checklist > li { margin: 0; padding: 0; }
+.main-content ul.wt-checklist > li::before { content: none; }
+.wt-checklist label { display: grid; grid-template-columns: 1.2rem minmax(0, 1fr); gap: 0.6rem; align-items: start; padding: 0.3rem 0.4rem; border-radius: 4px; cursor: pointer; }
+.wt-checklist label:hover { background: var(--wt-paper-2); }
+.wt-checklist input { width: 1rem; height: 1rem; margin: 0.3rem 0 0; accent-color: var(--wt-done); }
+
+/* callouts */
+.wt-careful { background: var(--wt-caution-soft); border-radius: var(--wt-radius); padding: 0.7rem 1rem; font-size: 0.92rem; display: grid; gap: 0.15rem; }
+.wt-careful .wt-label { color: var(--wt-caution-ink); }
+.main-content .wt-careful p { margin: 0; }
+.wt-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--wt-ink-3); }
+.wt-savepoint { background: var(--wt-paper-2); border-radius: var(--wt-radius); padding: 0.7rem 1rem; display: grid; gap: 0.3rem; font-size: 0.92rem; }
+.wt-savepoint .wt-label { color: var(--wt-app-vscode); }
+.wt-savepoint details summary { cursor: pointer; font-size: 0.82rem; color: var(--wt-ink-2); }
+.main-content .wt-savepoint ol { margin: 0.4rem 0 0; }
+
+.wt-check { display: grid; gap: 0.6rem; padding: 0.9rem 1rem; border: 1px solid var(--wt-rule); border-radius: var(--wt-radius); transition: background-color 300ms var(--wt-ease), border-color 300ms; }
+.wt-step.is-done .wt-check { background: var(--wt-done-soft); border-color: transparent; }
+.wt-step.is-done .wt-check .wt-label { color: var(--wt-done); }
+.main-content .wt-check p { margin: 0; }
+.wt-done-btn { justify-self: start; display: inline-flex; gap: 0.45rem; align-items: center; border: 1.5px solid var(--wt-ink); background: var(--wt-paper); color: var(--wt-ink); padding: 0.3rem 0.9rem; border-radius: 99px; font: inherit; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: background-color 200ms, color 200ms, border-color 200ms; }
+.wt-done-btn::before { content: ""; width: 0.85rem; height: 0.85rem; border: 1.5px solid currentColor; border-radius: 50%; box-sizing: border-box; }
+.wt-done-btn[aria-pressed="true"] { background: var(--wt-done); border-color: var(--wt-done); color: var(--wt-paper); }
+.wt-done-btn[aria-pressed="true"]::before { content: "✓"; border: 0; font-size: 0.85rem; line-height: 0.85rem; text-align: center; }
+
+/* collapsed "more" sections built from #### headings */
+.wt-more { border-top: 1px solid var(--wt-rule); }
+.wt-more > summary { cursor: pointer; padding: 0.6rem 0; list-style: none; display: flex; gap: 0.4rem; align-items: baseline; color: var(--wt-ink-2); }
+.wt-more > summary::-webkit-details-marker { display: none; }
+.wt-more > summary::before { content: "+"; font-family: monospace; width: 1rem; color: var(--wt-ink-3); }
+.wt-more[open] > summary::before { content: "−"; }
+.main-content .wt-more > summary h4 { display: inline; margin: 0 !important; font-size: 0.92rem !important; font-weight: 600; text-transform: none; letter-spacing: 0; color: inherit; }
+.wt-more > summary .anchor-heading { display: none; }
+.wt-more-body { padding: 0 0 1rem 1.4rem; display: grid; gap: 0.6rem; font-size: 0.92rem; }
+.main-content .wt-more-body > * { margin: 0; }
+
+/* ---------- media ---------- */
+.wt-media { display: grid; gap: 0.5rem; min-width: 0; }
+.wt-tabs { display: flex; flex-wrap: wrap; gap: 2px; font-size: 0.78rem; }
+.wt-tabs button { border: 0; background: transparent; padding: 0.2rem 0.65rem; border-radius: 99px; font: inherit; font-weight: 600; color: var(--wt-ink-2); cursor: pointer; }
+.wt-tabs button:hover { background: var(--wt-paper-2); }
+.wt-tabs button[aria-selected="true"] { background: var(--wt-paper-3); color: var(--wt-ink); }
+.wt-clip { position: relative; display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 10; border: 0; padding: 0; background: var(--wt-screen); border-radius: var(--wt-radius); overflow: hidden; cursor: pointer; }
+.wt-clip canvas, .wt-clip img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
+.main-content .wt-clip img { max-width: none; }
+.wt-clip .wt-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--wt-screen-ink); opacity: 0.6; font-size: 0.8rem; }
+.wt-clip.is-ready .wt-loading { display: none; }
+.wt-playbar { position: absolute; left: 0.6rem; bottom: 0.6rem; display: inline-flex; align-items: center; gap: 0.45rem; background: oklch(0.16 0.008 30 / 0.85); color: oklch(0.97 0.004 40); padding: 0.3rem 0.75rem 0.3rem 0.6rem; border-radius: 99px; font-size: 0.75rem; font-weight: 700; transition: transform 200ms var(--wt-ease), background-color 200ms; }
+.wt-clip:hover .wt-playbar { transform: translateY(-2px); background: oklch(0.5 0.19 25 / 0.95); }
+.wt-playbar i { border-left: 9px solid currentColor; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+.wt-clip.is-playing .wt-playbar i { border: 0; width: 9px; height: 10px; background: currentColor; border-radius: 1px; }
+.wt-caption { font-size: 0.78rem; color: var(--wt-ink-2); display: flex; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; }
+.wt-caption a { color: var(--wt-ink-2); }
+
+.wt-video { display: grid; align-content: space-between; gap: 1rem; aspect-ratio: 16 / 9; max-width: 100%; padding: 1.25rem; background: var(--wt-screen); color: var(--wt-screen-ink) !important; text-decoration: none !important; border-radius: var(--wt-radius); position: relative; overflow: hidden; }
+.wt-video::after { content: ""; position: absolute; right: -10%; bottom: -30%; width: 60%; aspect-ratio: 1; border-radius: 50%; border: 1px solid oklch(0.95 0.005 40 / 0.08); box-shadow: 0 0 0 30px oklch(0.95 0.005 40 / 0.03), 0 0 0 60px oklch(0.95 0.005 40 / 0.02); }
+.wt-video-top { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; opacity: 0.7; }
+.wt-video-title { font-size: 1.25rem; font-weight: 600; line-height: 1.25; max-width: 22ch; }
+.wt-video-play { display: inline-flex; align-items: center; gap: 0.7rem; font-weight: 700; font-size: 0.85rem; }
+.wt-video-play i { width: 42px; height: 42px; border-radius: 50%; background: oklch(0.5 0.19 25); display: grid; place-items: center; transition: transform 250ms var(--wt-ease); }
+.wt-video-play i::before { content: ""; margin-left: 3px; border-left: 12px solid oklch(0.98 0.003 40); border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+.wt-video:hover .wt-video-play i { transform: scale(1.08); }
+.wt-frame { aspect-ratio: 16 / 9; width: 100%; border: 0; border-radius: var(--wt-radius); background: var(--wt-screen); display: block; }
+
+
+.wt-toast { position: fixed; left: 50%; bottom: 1.5rem; transform: translate(-50%, 200%); background: var(--wt-ink); color: var(--wt-paper); padding: 0.45rem 1rem; border-radius: 99px; font-size: 0.85rem; font-weight: 600; transition: transform 350ms var(--wt-ease); pointer-events: none; z-index: 100; }
+.wt-toast.is-shown { transform: translate(-50%, 0); }
+
+.walkthrough :focus-visible { outline: 2px solid var(--wt-red); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .walkthrough *, .walkthrough *::before, .walkthrough *::after { transition: none !important; }
+}
+
+
+/* Standalone overrides: the walkthrough tokens already match this shell; headings use the display face. */
+.walkthrough .wt-num, .walkthrough .wt-video-title { font-family: var(--font-display); }
+</style>
+
+<header class="bar">
+  <div class="bar-inner">
+    <b>CollectionBuilder · CB-Essay</b>
+    <span><a href="https://collectionbuilder.github.io/cb-essay/">See a finished CB-Essay site ↗</a></span>
+  </div>
+</header>
+
+<div class="main-content">
+  <div class="walkthrough" id="walkthrough" data-playlist="" data-commit="github" data-personalize="{&quot;your-username&quot;:&quot;GitHub username&quot;,&quot;your-repo&quot;:&quot;Repository name&quot;,&quot;Your Site Title&quot;:&quot;Site title&quot;,&quot;Your Name&quot;:&quot;Your name&quot;}">
+    <div class="wt-content">
+
+<h1 id="your-first-cb-essay">Your first CB-Essay</h1>
+
+<p>A recipe for publishing a short essay on the web with <a href="https://collectionbuilder.github.io/cb-essay/">CB-Essay</a>: your writing, a featured quotation, a note in the margin, and a small collection of your own (a photo, a PDF and a video) woven into your words.
+Everything happens in a web browser. There’s nothing to install.</p>
+
+<dl>
+  <dt>Makes</dt>
+  <dd>One essay website with its own small collection, at your-username.github.io/your-repo</dd>
+  <dt>Time</dt>
+  <dd>About two hours, including short waits. Parts 1 and 2 make a good first sitting.</dd>
+  <dt>Resting time</dt>
+  <dd>2–3 minutes each time GitHub republishes your site</dd>
+  <dt>Skill level</dt>
+  <dd>Beginner. No coding experience needed.</dd>
+</dl>
+
+<h2 id="ingredients">Ingredients</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />A free <a href="https://github.com/signup">GitHub account</a>, with your email address verified</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />A web browser</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Three or four paragraphs of your own writing, in a document you can copy from</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />One quotation you’d like to feature, and the name of the person who said or wrote it</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />One photo (a JPG file), one PDF, and the link to one YouTube video, all things you have permission to share</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />A Google account, to use Google Sheets</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />The <a href="https://github.com/CollectionBuilder/cb-essay">CB-Essay template</a></li>
+</ul>
+
+<h2 id="good-to-know-before-you-start">Good to know before you start</h2>
+
+<ul>
+  <li>Your site and its files will be public. Free hosting on GitHub Pages needs a public repository.</li>
+  <li>You’ll write in <a href="https://www.markdownguide.org/basic-syntax/">Markdown</a>, a plain-text format: <code>*italic*</code>, <code>**bold**</code>, and <code>## Heading</code>.</li>
+  <li>The template comes with a small demo collection, so you can use its items before adding your own.</li>
+  <li>Each change you save is called a <strong>commit</strong>. After each one, GitHub takes 2–3 minutes to republish your site.</li>
+</ul>
+
+<h2 id="prepare-the-site">Prepare the site</h2>
+
+<p>When you finish this part you’ll have your own copy of CB-Essay, published on the web.</p>
+
+<h3 app="web" id="make-your-copy-of-the-template">Make your copy of the template</h3>
+
+<ol>
+  <li>
+    <p>Sign in to GitHub and open the <a href="https://github.com/CollectionBuilder/cb-essay">CB-Essay template</a>.</p>
+  </li>
+  <li>
+    <p>Choose <strong>Use this template</strong>, then <strong>Create a new repository</strong>.</p>
+  </li>
+  <li>
+    <p>Name it <code>your-repo</code>. The name becomes part of your site’s address, so keep it short and lowercase, with no spaces.</p>
+  </li>
+  <li>
+    <p>Leave it <strong>Public</strong>, then choose <strong>Create repository</strong>.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Done when:</strong> your browser shows <a href="https://github.com/your-username/your-repo">github.com/your-username/your-repo</a> with a list of files.</p>
+</blockquote>
+
+<h3 app="web" id="turn-on-publishing">Turn on publishing</h3>
+
+<ol>
+  <li>
+    <p>In your repository, choose <strong>Settings</strong>, then <strong>Pages</strong> in the left-hand menu.</p>
+  </li>
+  <li>
+    <p>Under <strong>Source</strong>, choose <strong>GitHub Actions</strong>.</p>
+  </li>
+  <li>
+    <p>In the <strong>Jekyll</strong> box, choose <strong>Configure</strong>. A file named <code>jekyll.yml</code> opens in an editor.</p>
+  </li>
+  <li>
+    <p>Find the line that reads <code>ruby-version: '3.1'</code> (around line 40) and change the number so it reads:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">ruby-version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.4'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Choose <strong>Commit changes…</strong>, then <strong>Commit changes</strong> again.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Careful:</strong> Change only the number. Keep the quotation marks and the spaces at the start of the line.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> after a 2–3 minute rest, <a href="https://your-username.github.io/your-repo/">your-username.github.io/your-repo</a> shows the CB-Essay demo site.</p>
+</blockquote>
+
+<h4 id="something-went-wrong">Something went wrong</h4>
+
+<ul>
+  <li><strong>No Actions tab in your repository?</strong> Actions may be turned off for your account. Go to <strong>Settings</strong> → <strong>Actions</strong>, choose <strong>Allow all actions</strong>, and save.</li>
+  <li><strong>A red ✕ in the Actions tab?</strong> The build failed. Open it to read the error. The usual cause is the <code>ruby-version</code> line: check the quotation marks and the spaces.</li>
+</ul>
+
+<h2 id="write-your-essay">Write your essay</h2>
+
+<p>When you finish this part you’ll have your own essay on the site, with a featured quotation, a margin note, and an item from the collection.</p>
+
+<h3 app="web" id="start-your-essay-file">Start your essay file</h3>
+
+<ol>
+  <li>
+    <p>In your repository, open the <code>_essay</code> folder.</p>
+  </li>
+  <li>
+    <p>Choose <strong>Add file</strong> → <strong>Create new file</strong>, and name it <code>my-first-essay.md</code>.</p>
+  </li>
+  <li>
+    <p>Paste this at the very top, then change the title to your own:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My First Essay</span>
+<span class="na">order</span><span class="pi">:</span> <span class="m">10</span>
+<span class="nn">---</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Below the second <code>---</code>, paste your paragraphs. Leave a blank line between paragraphs.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Save point:</strong> Add my first essay</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> after a rest, your essay opens at <a href="https://your-username.github.io/your-repo/essay/my-first-essay.html">your-username.github.io/your-repo/essay/my-first-essay.html</a>.</p>
+</blockquote>
+
+<h4 id="why-order-10">Why order 10?</h4>
+
+<p><code>order</code> sets where your essay sits in the site’s navigation.
+The demo essays use 1 to 6, so 10 puts yours after them.
+Number with gaps (10, 20, 30) and you can always slot a new essay in between.</p>
+
+<h3 app="web" id="feature-a-quotation">Feature a quotation</h3>
+
+<ol>
+  <li>
+    <p>Open <code>_essay/my-first-essay.md</code> and choose the pencil icon (<strong>Edit this file</strong>).</p>
+  </li>
+  <li>
+    <p>Between two paragraphs, on a line of its own, paste this and replace the quotation and the name:</p>
+
+    <pre><code>{% include essay/feature/blockquote.html quote="The words you want to feature." speaker="Who said it" %}
+</code></pre>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Careful:</strong> If your quotation contains double quotation marks (“), change them to single ones (‘) so they don’t end the quote early.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Save point:</strong> Add a featured quotation</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> your quotation appears large and set apart between your paragraphs.</p>
+</blockquote>
+
+<h4 id="more-options">More options</h4>
+
+<p>Add <code>source="Title of the work"</code> to credit where the quotation comes from, or <code>size="lg"</code> (<code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code>) to change how large it appears.</p>
+
+<h3 app="web" id="add-a-note-in-the-margin">Add a note in the margin</h3>
+
+<ol>
+  <li>
+    <p>Edit your essay again. Find a sentence you’d like to comment on.</p>
+  </li>
+  <li>
+    <p>Right after that sentence, on the same line, paste this and write your note:</p>
+
+    <pre><code>{% include essay/feature/aside.html text="Your note about this sentence." %}
+</code></pre>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Save point:</strong> Add a margin note</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> on a computer, your note sits in the margin beside the sentence. On a phone, it appears within the text instead.</p>
+</blockquote>
+
+<h3 app="web" id="bring-in-an-item-from-the-collection">Bring in an item from the collection</h3>
+
+<ol>
+  <li>
+    <p>Edit your essay again. After another sentence, paste this:</p>
+
+    <pre><code>{% include essay/feature/aside.html objectid="demo_001" text="What this item shows, and why it matters here." %}
+</code></pre>
+  </li>
+  <li>
+    <p><code>demo_001</code> is a photograph of the University of Idaho’s Administration Building from the demo collection. Try <code>demo_006</code> or <code>demo_031</code> for other photographs.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Save point:</strong> Add a collection item</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> a thumbnail of the item appears in the margin with your note, and clicking it opens the item.</p>
+</blockquote>
+
+<h4 id="can-i-use-my-own-items">Can I use my own items?</h4>
+
+<p>Yes. That’s the next part.</p>
+
+<h2 id="add-your-own-collection">Add your own collection</h2>
+
+<p>When you finish this part you’ll have a small collection of your own (one photo, one PDF and one video) described in a spreadsheet, with all three working in your essay.
+Starting with just three items keeps it quick, and covers each kind of item you’re likely to use later.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> A CB-Essay site gets its collection from a spreadsheet. Each row describes one item: what it’s called, what kind of file it is, and where the file lives.
+Once your spreadsheet is in place, any item can appear in your essay by its ID.</p>
+</blockquote>
+
+<h3 app="files" id="gather-your-three-items">Gather your three items</h3>
+
+<ol>
+  <li>
+    <p>Choose one photo (a JPG) and one PDF from your computer.</p>
+  </li>
+  <li>
+    <p>Rename both files in lowercase with no spaces, such as <code>garden-photo.jpg</code> and <code>field-notes.pdf</code>.</p>
+  </li>
+  <li>
+    <p>Find a YouTube video and copy its link from the <strong>Share</strong> button. It looks like <code>https://youtu.be/CVXQ3X6Q8oU</code>. The part after <code>youtu.be/</code> is the video’s ID.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Careful:</strong> Each file must be under 25 MB to upload in the browser. A photo straight from a phone camera is usually fine.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> you have two renamed files and a YouTube link ready.</p>
+</blockquote>
+
+<h3 app="web" id="upload-your-files">Upload your files</h3>
+
+<ol>
+  <li>
+    <p>In your repository, open the <code>objects</code> folder.</p>
+  </li>
+  <li>
+    <p>Choose <strong>Add file</strong> → <strong>Upload files</strong>, and drag in your photo and your PDF.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Save point:</strong> Add my photo and PDF</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> the <code>objects</code> folder lists <code>garden-photo.jpg</code> and <code>field-notes.pdf</code> (or your own file names).</p>
+</blockquote>
+
+<h3 app="sheets" id="copy-the-spreadsheet-template">Copy the spreadsheet template</h3>
+
+<ol>
+  <li>
+    <p>Open the <a href="https://docs.google.com/spreadsheets/d/1nN_k4JQB4LJraIzns7WcM3OXK-xxGMQhW1shMssflNM/copy?usp=sharing">CollectionBuilder metadata template</a> and choose <strong>Make a copy</strong>.</p>
+  </li>
+  <li>
+    <p>Your copy has example rows. Select rows 2 and below, right-click, and choose <strong>Delete rows</strong>. Keep row 1, the column names.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Done when:</strong> your copy has only the column names in row 1.</p>
+</blockquote>
+
+<h4 id="what-are-all-these-columns">What are all these columns?</h4>
+
+<p>You’ll fill in only a few columns for each item and can leave the rest blank.
+When you’re ready for more, the <a href="https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/">CSV Metadata documentation</a> explains every column, including <code>date</code>, <code>subject</code> and <code>location</code>, which power the Timeline, Subjects and Map pages.</p>
+
+<h3 app="sheets" id="describe-your-photo">Describe your photo</h3>
+
+<ol>
+  <li>
+    <p>In row 2, fill in these columns. Use your own file name and words:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Column</th>
+          <th>What to write</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>objectid</code></td>
+          <td><code>my_photo</code></td>
+        </tr>
+        <tr>
+          <td><code>title</code></td>
+          <td>A short title, like <code>Garden in June</code></td>
+        </tr>
+        <tr>
+          <td><code>description</code></td>
+          <td>A sentence or two about it</td>
+        </tr>
+        <tr>
+          <td><code>format</code></td>
+          <td><code>image/jpeg</code></td>
+        </tr>
+        <tr>
+          <td><code>display_template</code></td>
+          <td><code>image</code></td>
+        </tr>
+        <tr>
+          <td><code>object_location</code></td>
+          <td><code>/objects/garden-photo.jpg</code></td>
+        </tr>
+        <tr>
+          <td><code>image_small</code></td>
+          <td><code>/objects/garden-photo.jpg</code></td>
+        </tr>
+        <tr>
+          <td><code>image_thumb</code></td>
+          <td><code>/objects/garden-photo.jpg</code></td>
+        </tr>
+        <tr>
+          <td><code>image_alt_text</code></td>
+          <td>What the photo shows, for people who can’t see it</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Careful:</strong> File paths start with <code>/objects/</code> and must match your file name exactly, including capital letters.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> row 2 describes your photo.</p>
+</blockquote>
+
+<h4 id="about-objectid">About objectid</h4>
+
+<p>The <code>objectid</code> is how your essay finds an item.
+It must be unique, lowercase, with no spaces. Underscores and dashes are fine.
+You can use your own IDs instead of <code>my_photo</code>, as long as you use the same ID everywhere.</p>
+
+<h3 app="sheets" id="describe-your-pdf">Describe your PDF</h3>
+
+<ol>
+  <li>
+    <p>In row 3, fill in:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Column</th>
+          <th>What to write</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>objectid</code></td>
+          <td><code>my_pdf</code></td>
+        </tr>
+        <tr>
+          <td><code>title</code></td>
+          <td>A short title</td>
+        </tr>
+        <tr>
+          <td><code>description</code></td>
+          <td>A sentence or two about it</td>
+        </tr>
+        <tr>
+          <td><code>format</code></td>
+          <td><code>application/pdf</code></td>
+        </tr>
+        <tr>
+          <td><code>display_template</code></td>
+          <td><code>pdf</code></td>
+        </tr>
+        <tr>
+          <td><code>object_location</code></td>
+          <td><code>/objects/field-notes.pdf</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Leave <code>image_small</code> and <code>image_thumb</code> blank. Your site will show a PDF icon instead.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Done when:</strong> row 3 describes your PDF.</p>
+</blockquote>
+
+<h3 app="sheets" id="describe-your-video">Describe your video</h3>
+
+<ol>
+  <li>
+    <p>In row 4, fill in these columns, replacing <code>VIDEO-ID</code> with your video’s ID (the part after <code>youtu.be/</code>):</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Column</th>
+          <th>What to write</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>objectid</code></td>
+          <td><code>my_video</code></td>
+        </tr>
+        <tr>
+          <td><code>title</code></td>
+          <td>The video’s title</td>
+        </tr>
+        <tr>
+          <td><code>description</code></td>
+          <td>Why it’s in your collection</td>
+        </tr>
+        <tr>
+          <td><code>format</code></td>
+          <td><code>video/mp4</code></td>
+        </tr>
+        <tr>
+          <td><code>display_template</code></td>
+          <td><code>video</code></td>
+        </tr>
+        <tr>
+          <td><code>object_location</code></td>
+          <td><code>https://youtu.be/VIDEO-ID</code></td>
+        </tr>
+        <tr>
+          <td><code>image_small</code></td>
+          <td><code>https://img.youtube.com/vi/VIDEO-ID/hqdefault.jpg</code></td>
+        </tr>
+        <tr>
+          <td><code>image_thumb</code></td>
+          <td><code>https://img.youtube.com/vi/VIDEO-ID/mqdefault.jpg</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Done when:</strong> row 4 describes your video, and pasting the <code>image_small</code> link into a browser shows a still from the video.</p>
+</blockquote>
+
+<h3 app="sheets web" id="add-the-spreadsheet-to-your-site">Add the spreadsheet to your site</h3>
+
+<ol>
+  <li>
+    <p>In your spreadsheet, choose <strong>File</strong> → <strong>Download</strong> → <strong>Comma Separated Values (.csv)</strong>.</p>
+  </li>
+  <li>
+    <p>Without opening it, rename the downloaded file to <code>my-collection.csv</code>.</p>
+  </li>
+  <li>
+    <p>In your repository, open the <code>_data</code> folder, choose <strong>Add file</strong> → <strong>Upload files</strong>, and add <code>my-collection.csv</code>. Commit.</p>
+  </li>
+  <li>
+    <p>Open <code>_config.yml</code> and choose the pencil icon. Find the <code>metadata:</code> line and change it to:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">metadata</span><span class="pi">:</span> <span class="s">my-collection</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Careful:</strong> Don’t open the CSV in Excel. If Excel saves it, special characters can display wrongly on your site.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Save point:</strong> Use my own collection</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> after a rest, your site’s Browse page at <a href="https://your-username.github.io/your-repo/browse.html">your-username.github.io/your-repo/browse.html</a> shows your three items.</p>
+</blockquote>
+
+<h4 id="where-did-the-demo-items-go">Where did the demo items go?</h4>
+
+<p>Your site now uses your spreadsheet instead of the demo one, so the demo essays lose their example items. That’s expected.
+To change or add items later, edit your Google Sheet, download it again as <code>my-collection.csv</code>, and upload it to <code>_data</code> to replace the old one.</p>
+
+<h3 app="web" id="put-your-items-to-work">Put your items to work</h3>
+
+<p>Edit your essay and try each of these. Each one shows off a different kind of item.</p>
+
+<ol>
+  <li>
+    <p><strong>Your photo in the margin.</strong> In your collection-item note from Part 2, change <code>demo_001</code> to <code>my_photo</code>:</p>
+
+    <pre><code>{% include essay/feature/aside.html objectid="my_photo" text="What this photo shows, and why it matters here." %}
+</code></pre>
+  </li>
+  <li>
+    <p><strong>Your PDF beside a sentence.</strong> PDFs and videos in the margin show as a small card that opens the item:</p>
+
+    <pre><code>{% include essay/feature/aside.html objectid="my_pdf" text="The original notes." %}
+</code></pre>
+  </li>
+  <li>
+    <p><strong>Your video in the flow of the essay.</strong> On a line of its own, between paragraphs:</p>
+
+    <pre><code>{% include feature/video.html objectid="my_video" %}
+</code></pre>
+  </li>
+  <li>
+    <p><strong>All three in a gallery.</strong> On a line of its own, list the IDs separated by semicolons:</p>
+
+    <pre><code>{% include essay/feature/image-gallery.html objectid="my_photo;my_pdf;my_video" %}
+</code></pre>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Save point:</strong> Use my collection in my essay</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> your essay shows your photo in the margin, a card for your PDF, your video playing in the page, and a gallery of all three.</p>
+</blockquote>
+
+<h4 id="show-the-whole-pdf-on-the-page">Show the whole PDF on the page</h4>
+
+<p>To show the PDF itself instead of a card, use <code>{% include feature/pdf.html objectid="my_pdf" %}</code> on a line of its own.</p>
+
+<h2 id="season-to-taste">Season to taste</h2>
+
+<p>When you finish this part your site will carry your name and a look you chose, and you’ll have a link to share.</p>
+
+<h3 app="web" id="put-your-name-on-it">Put your name on it</h3>
+
+<ol>
+  <li>
+    <p>Open <code>_config.yml</code> and choose the pencil icon.</p>
+  </li>
+  <li>
+    <p>Find <code>title:</code> and <code>author:</code> near the top and fill them in:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Your Site Title</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Your Name</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Save point:</strong> Add title and author</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> your site’s homepage shows your title, with “by” and your name below it.</p>
+</blockquote>
+
+<h3 app="web" id="choose-a-look">Choose a look</h3>
+
+<ol>
+  <li>
+    <p>Open <code>_data/theme.yml</code> and choose the pencil icon.</p>
+  </li>
+  <li>
+    <p>Find <code>color-theme:</code> and pick one of <code>default</code>, <code>idaho</code>, <code>lyre</code>, <code>nonesuch</code>, <code>aldine</code>, <code>doves</code>, <code>kelmscott</code>, <code>gregynog</code> or <code>ashendene</code>:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">color-theme</span><span class="pi">:</span> <span class="s">kelmscott</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Save point:</strong> Change the color theme</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Done when:</strong> your site’s colors change. Try a few until one suits your essay.</p>
+</blockquote>
+
+<h3 app="browser" id="serve-and-share">Serve and share</h3>
+
+<ol>
+  <li>
+    <p>Open <a href="https://your-username.github.io/your-repo/">your-username.github.io/your-repo</a> and read your essay from the start.</p>
+  </li>
+  <li>
+    <p>Copy the address and send it to someone.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Done when:</strong> someone else has opened your essay on their own device.</p>
+</blockquote>
+
+<h2 id="variations">Variations</h2>
+
+<ul>
+  <li><strong>Start from a classic.</strong> CB-Essay can import a public domain book from Project Gutenberg. In the <strong>Actions</strong> tab, choose <strong>Extract Gutenberg Book</strong> → <strong>Run workflow</strong>, enter a book number (<code>84</code> is <em>Frankenstein</em>), and choose <strong>Run workflow</strong> again. See <a href="https://collectionbuilder.github.io/cb-essay/essay/035-gutenberg-extraction.html">Extracting a Book from Project Gutenberg</a>.</li>
+  <li><strong>Grow your collection.</strong> Add a row to your spreadsheet for each new item, upload any new files to <code>objects</code>, and replace <code>_data/my-collection.csv</code> with the new download. Fill in <code>date</code>, <code>subject</code> and <code>location</code> to light up your site’s Timeline, Subjects and Map pages.</li>
+  <li><strong>Tell it by scrolling.</strong> Pin images or a map behind your text as the reader scrolls. See <a href="https://collectionbuilder.github.io/cb-essay/essay/05-scroll-features.html">Scroll-Based Features</a>.</li>
+  <li><strong>Print it.</strong> Your site has a Print &amp; PDF page at your-username.github.io/your-repo/print/ for printing an essay or making a PDF.</li>
+  <li><strong>Make it all yours.</strong> When you’re ready, delete the demo essays from the <code>_essay</code> folder.</li>
+</ul>
+
+<h2 id="for-instructors">For instructors</h2>
+
+<ul>
+  <li>Students need only a web browser and their own GitHub account. Ask them to create and verify their accounts before class, since the verification email can take a few minutes.</li>
+  <li>Each published change takes 2–3 minutes to appear. Students can keep writing while they wait.</li>
+  <li>Students’ sites and repositories are public.</li>
+  <li>The full <a href="https://collectionbuilder.github.io/cb-essay/docs.html">CB-Essay documentation</a> covers every feature. Questions are welcome in the <a href="https://github.com/orgs/CollectionBuilder/discussions">CollectionBuilder Discussion Forum</a>.</li>
+</ul>
+
+
+    </div>
+  </div>
+</div>
+
+<footer class="foot">
+  From the <a href="https://collectionbuilder.github.io/cb-docs/">CollectionBuilder documentation</a>. CB-Essay is made by the <a href="https://cdil.lib.uidaho.edu/">Center for Digital Inquiry and Learning</a> at the University of Idaho Library. Your progress and the names you enter stay in this browser.
+</footer>
+
+<script>
+/*
+  Walkthrough enhancer. Loaded only by _layouts/walkthrough.html.
+
+  Reads the ordinary Markdown output inside .wt-content and rearranges it:
+    h2                  -> a part (first paragraph = what you'll have at the end)
+    h3 {: app video}    -> a step, with app labels and a media pane (video + clips)
+    ol in a step        -> lettered actions; images inside become clips with "Show me" links
+    ul.task-list        -> a checklist that remembers what's ticked
+    > **Done when:**    -> checkpoint with a "Mark done" button
+    > **Careful:**      -> warning
+    > **Save point:**   -> commit reminder
+    > **Note:**         -> side note
+    h4                  -> collapsed section, up to the next heading
+    h2 with no steps    -> an ordinary section, left where it is. Those before the first step
+                           (e.g. "Ingredients") sit side by side at the top.
+    dl in the intro     -> a row of facts (Makes, Time, Skill level...)
+  Placeholder text listed in front matter "personalize" is replaced with the reader's own values.
+  If anything here fails, the page stays a readable Markdown page.
+*/
+(function () {
+  "use strict";
+
+  var root = document.getElementById("walkthrough");
+  if (!root) return;
+  var content = root.querySelector(".wt-content");
+  if (!content) return;
+
+  var PLAYLIST = root.getAttribute("data-playlist") || "";
+  // Where readers commit: "github" (the GitHub.com editor) or VS Code (default).
+  var COMMIT_HOWTO = root.getAttribute("data-commit") === "github"
+    ? "<li>Choose <strong>Commit changes…</strong> at the top right of the editor.</li><li>Type the message.</li><li>Choose <strong>Commit changes</strong>.</li>"
+    : "<li>Open <strong>Source Control</strong> (Ctrl + Shift + G).</li><li>Hover over <strong>Changes</strong> and choose <strong>+</strong>.</li><li>Type the message and choose <strong>Commit</strong>.</li>";
+  var personalize = {};
+  try { personalize = JSON.parse(root.getAttribute("data-personalize") || "{}") || {}; } catch (e) {}
+
+  var APPS = {
+    web: "GitHub.com", desktop: "GitHub Desktop", vscode: "VS Code", term: "Terminal",
+    browser: "Browser", sheets: "Google Sheets", files: "Your computer"
+  };
+  // Inline video embeds work on the docs site; local file previews can't frame YouTube.
+  var CAN_EMBED = location.protocol !== "file:";
+  var reduceMotion = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ---------- storage ----------
+  var KEY = "cb-walkthrough:" + location.pathname;
+  var MODE_KEY = "cb-walkthrough:mode";
+  var VALUES_KEY = "cb-walkthrough:values";
+  function load(key, fallback) { try { var v = JSON.parse(localStorage.getItem(key)); return v == null ? fallback : v; } catch (e) { return fallback; } }
+  function store(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {} }
+  var progress = load(KEY, { done: [], checks: [] });
+  progress.done = progress.done || []; progress.checks = progress.checks || [];
+  var mode = load(MODE_KEY, "read");
+  var values = load(VALUES_KEY, {});
+
+  // ---------- helpers ----------
+  function el(tag, attrs, html) {
+    var n = document.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+    if (html != null) n.innerHTML = html;
+    return n;
+  }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function headingText(h) {
+    var c = h.cloneNode(true);
+    Array.prototype.forEach.call(c.querySelectorAll(".anchor-heading"), function (a) { a.remove(); });
+    return c.textContent.trim();
+  }
+  // A blockquote whose first paragraph starts with <strong>Label:</strong> is a callout.
+  function calloutKind(bq) {
+    var p = bq.firstElementChild;
+    if (!p || p.tagName !== "P") return null;
+    var first = p.firstChild;
+    while (first && first.nodeType === 3 && !first.textContent.trim()) first = first.nextSibling;
+    if (!first || first.nodeName !== "STRONG") return null;
+    var key = first.textContent.trim().replace(/:$/, "").toLowerCase();
+    if (["done when", "careful", "save point", "note", "tip"].indexOf(key) < 0) return null;
+    first.remove();
+    p.innerHTML = p.innerHTML.replace(/^\s*:?\s*/, "");
+    return key;
+  }
+
+  var toastEl = el("div", { "class": "wt-toast", role: "status", "aria-live": "polite" });
+  document.body.appendChild(toastEl);
+  var toastTimer;
+  function toast(msg) {
+    toastEl.textContent = msg; toastEl.classList.add("is-shown");
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { toastEl.classList.remove("is-shown"); }, 2000);
+  }
+
+  // ---------- lazy GIF player: shows a still first frame until played ----------
+  var lazyIO = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { lazyIO.unobserve(en.target); en.target._wtLoad(); } });
+  }, { rootMargin: "600px 0px" }) : null;
+
+  function makePlayer(src, label, alt) {
+    var btn = el("button", { type: "button", "class": "wt-clip", "aria-label": "Play clip: " + (alt || label) },
+      '<span class="wt-loading">Loading clip…</span><canvas aria-hidden="true"></canvas><span class="wt-playbar"><i aria-hidden="true"></i><span>Play</span></span>');
+    var canvas = btn.querySelector("canvas");
+    var pbLabel = btn.querySelector(".wt-playbar span");
+    var still = new Image();
+    still.onload = function () {
+      canvas.width = still.naturalWidth; canvas.height = still.naturalHeight;
+      btn.style.aspectRatio = still.naturalWidth + " / " + still.naturalHeight;
+      try { canvas.getContext("2d").drawImage(still, 0, 0); } catch (e) {}
+      btn.classList.add("is-ready");
+    };
+    still.onerror = function () { btn.querySelector(".wt-loading").textContent = "Clip unavailable"; };
+    var start = function () { if (!still.src) still.src = src; };
+    if (lazyIO) { btn._wtLoad = start; lazyIO.observe(btn); } else start();
+
+    btn.addEventListener("click", function () {
+      var live = btn.querySelector("img");
+      if (live) {
+        live.remove(); canvas.hidden = false; btn.classList.remove("is-playing");
+        pbLabel.textContent = "Play"; btn.setAttribute("aria-label", "Play clip: " + (alt || label));
+        return;
+      }
+      start();
+      var anim = el("img", { alt: alt || label, src: src }); // a fresh element restarts the GIF
+      btn.insertBefore(anim, btn.querySelector(".wt-playbar"));
+      canvas.hidden = true; btn.classList.add("is-playing", "is-ready");
+      pbLabel.textContent = "Stop"; btn.setAttribute("aria-label", "Stop clip: " + (alt || label));
+    });
+    return btn;
+  }
+
+  // Pull an <img> out of the flow; remove its paragraph if that's all it held.
+  function takeImage(img) {
+    var p = img.parentElement;
+    var clip = { src: img.getAttribute("src"), label: img.getAttribute("title") || img.getAttribute("alt") || "Clip", alt: img.getAttribute("alt") || "" };
+    img.remove();
+    if (p && p.tagName === "P" && !p.textContent.trim() && !p.children.length) p.remove();
+    return clip;
+  }
+
+  // A GFM task list ("- [ ] item") becomes a checklist whose ticks are remembered.
+  function makeChecklist(ul, prefix) {
+    ul.classList.add("wt-checklist");
+    Array.prototype.forEach.call(ul.children, function (li, i) {
+      var cb = li.querySelector("input[type=checkbox]");
+      if (!cb) return;
+      var cid = prefix + "-check-" + i;
+      cb.removeAttribute("disabled"); cb.id = cid; cb.setAttribute("data-check", cid);
+      var label = el("label", { "for": cid });
+      label.appendChild(cb);
+      var span = el("span");
+      while (li.firstChild) span.appendChild(li.firstChild);
+      label.appendChild(span); li.appendChild(label);
+    });
+  }
+  // A section with no steps keeps its heading and content as they are.
+  function sectionEl(p) {
+    var sec = el("section", { "class": "wt-section" });
+    if (p.head) sec.appendChild(p.head);
+    p.pre.forEach(function (n) {
+      if (n.tagName === "UL" && n.classList.contains("task-list")) makeChecklist(n, p.head && p.head.id || "section");
+      sec.appendChild(n);
+    });
+    return sec;
+  }
+
+  // ---------- parse ----------
+  var nodes = Array.prototype.slice.call(content.children);
+  var intro = [], parts = [], part = null, step = null;
+  nodes.forEach(function (n) {
+    if (n.tagName === "H2") { part = { head: n, pre: [], steps: [] }; parts.push(part); step = null; return; }
+    if (n.tagName === "H3") {
+      if (!part) { part = { head: null, pre: [], steps: [] }; parts.push(part); }
+      step = { head: n, els: [] }; part.steps.push(step); return;
+    }
+    if (step) step.els.push(n); else if (part) part.pre.push(n); else intro.push(n);
+  });
+  var stepParts = parts.filter(function (p) { return p.steps.length; });
+  if (!stepParts.length) return;
+  // Sections before the first part with steps are preparation (e.g. "Ingredients").
+  var firstStepPart = parts.indexOf(stepParts[0]);
+  var prep = parts.slice(0, firstStepPart);
+
+  // ---------- build ----------
+  var layout = el("div", { "class": "wt-layout" });
+  var main = el("div", { "class": "wt-main" });
+  var rail = el("nav", { "class": "wt-rail", "aria-label": "Walkthrough steps" });
+  layout.appendChild(main); layout.appendChild(rail);
+
+  var introEl = el("div", { "class": "wt-intro" });
+  intro.forEach(function (n) {
+    if (n.tagName === "DL") {
+      // Wrap each dt + dd pair so the facts can wrap as a grid.
+      n.classList.add("wt-facts");
+      var pair = null;
+      Array.prototype.slice.call(n.children).forEach(function (c) {
+        if (c.tagName === "DT") { pair = el("div"); n.insertBefore(pair, c); }
+        if (pair) pair.appendChild(c);
+      });
+    }
+    introEl.appendChild(n);
+  });
+  main.appendChild(introEl);
+
+  if (prep.length) {
+    var prepEl = el("div", { "class": "wt-prep" });
+    prep.forEach(function (p) { prepEl.appendChild(sectionEl(p)); });
+    main.appendChild(prepEl);
+  }
+
+  var setup = el("section", { "class": "wt-setup", "aria-label": "Set up this walkthrough" });
+  main.appendChild(setup);
+
+  var allSteps = [];
+  var stepNum = 0;
+  var tocHtml = "";
+
+  parts.slice(firstStepPart).forEach(function (p) {
+    if (!p.steps.length) { main.appendChild(sectionEl(p)); return; }
+    var pi = stepParts.indexOf(p);
+    var sec = el("section", { "class": "wt-part" });
+    var head = el("header", { "class": "wt-part-head" });
+    head.appendChild(el("span", { "class": "wt-eyebrow" }, "Part " + (pi + 1) + " of " + stepParts.length));
+    if (p.head) head.appendChild(p.head);
+    sec.appendChild(head);
+    var outcomeTaken = false;
+    p.pre.forEach(function (n) {
+      if (n.tagName === "P" && !outcomeTaken) { outcomeTaken = true; head.appendChild(n); return; }
+      if (n.tagName === "BLOCKQUOTE" && calloutKind(n)) { var note = el("aside", { "class": "wt-note" }); while (n.firstChild) note.appendChild(n.firstChild); sec.appendChild(note); n.remove(); return; }
+      sec.appendChild(n);
+    });
+
+    var tocItems = "";
+    p.steps.forEach(function (s) {
+      stepNum += 1;
+      var h = s.head;
+      var id = h.id || ("step-" + stepNum);
+      var title = headingText(h);
+      var apps = (h.getAttribute("app") || "").split(/\s+/).filter(Boolean);
+      var video = h.getAttribute("video");
+      var badge = h.getAttribute("badge");
+      var info = { id: id, n: stepNum, title: title, video: video, clips: [] };
+      allSteps.push(info);
+      tocItems += '<li><a href="#' + esc(id) + '" data-step="' + esc(id) + '"><span class="wt-toc-num">' + stepNum + '</span><span>' + esc(title) + "</span></a></li>";
+
+      var art = el("article", { "class": "wt-step", "data-step": id });
+      info.el = art;
+      var sh = el("div", { "class": "wt-step-head" });
+      sh.appendChild(el("span", { "class": "wt-num", "aria-hidden": "true" }, String(stepNum)));
+      var st = el("div", { "class": "wt-step-title" });
+      st.appendChild(h);
+      var where = apps.map(function (a) { return '<span class="wt-app" data-app="' + esc(a) + '">' + esc(APPS[a] || a) + "</span>"; }).join('<span class="wt-arrow" aria-hidden="true">→</span>');
+      if (where || badge) st.appendChild(el("div", { "class": "wt-where" }, (where ? "<span>In</span> " + where : "") + (badge ? ' <span class="wt-badge">' + esc(badge) + "</span>" : "")));
+      sh.appendChild(st);
+      art.appendChild(sh);
+
+      var grid = el("div", { "class": "wt-grid" });
+      var body = el("div", { "class": "wt-body" });
+      var media = el("div", { "class": "wt-media" });
+      grid.appendChild(body); grid.appendChild(media);
+      art.appendChild(grid);
+
+      var more = null, hasCheck = false;
+      s.els.forEach(function (n) {
+        if (n.tagName === "H4") {
+          more = el("details", { "class": "wt-more" });
+          var sum = el("summary"); sum.appendChild(n); more.appendChild(sum);
+          more.appendChild(el("div", { "class": "wt-more-body" }));
+          body.appendChild(more);
+          return;
+        }
+        if (more) {
+          more.querySelector(".wt-more-body").appendChild(n);
+          Array.prototype.forEach.call(n.tagName === "IMG" ? [n] : n.querySelectorAll("img"), function (img) {
+            var c = takeImage(img);
+            more.querySelector(".wt-more-body").appendChild(makePlayer(c.src, c.label, c.alt));
+          });
+          return;
+        }
+        if (n.tagName === "OL") {
+          n.classList.add("wt-actions");
+          Array.prototype.forEach.call(n.children, function (li) {
+            var wrap = el("div", { "class": "wt-act" });
+            while (li.firstChild) wrap.appendChild(li.firstChild);
+            li.appendChild(wrap);
+            Array.prototype.forEach.call(wrap.querySelectorAll("img"), function (img) {
+              info.clips.push(takeImage(img));
+              wrap.appendChild(el("button", { type: "button", "class": "wt-show", "data-clip": String(info.clips.length - 1) }, "Show me"));
+            });
+          });
+          body.appendChild(n);
+          return;
+        }
+        if (n.tagName === "UL" && n.classList.contains("task-list")) {
+          makeChecklist(n, id);
+          body.appendChild(n);
+          return;
+        }
+        if (n.tagName === "BLOCKQUOTE") {
+          var kind = calloutKind(n);
+          if (kind === "done when") {
+            hasCheck = true;
+            var chk = el("div", { "class": "wt-check" }, '<span class="wt-label">You\'re done when</span>');
+            while (n.firstChild) chk.appendChild(n.firstChild);
+            chk.appendChild(el("button", { type: "button", "class": "wt-done-btn", "aria-pressed": "false" }, "Mark step " + stepNum + " done"));
+            body.appendChild(chk); return;
+          }
+          if (kind === "careful") {
+            var c = el("div", { "class": "wt-careful" }, '<span class="wt-label">Careful</span>');
+            while (n.firstChild) c.appendChild(n.firstChild);
+            body.appendChild(c); return;
+          }
+          if (kind === "save point") {
+            var msg = n.textContent.trim();
+            body.appendChild(el("div", { "class": "wt-savepoint" },
+              '<span class="wt-label">Save point</span><span>Commit your changes with the message <code>' + esc(msg) + "</code></span>" +
+              "<details><summary>How do I commit again?</summary><ol>" + COMMIT_HOWTO + "</ol></details>"));
+            return;
+          }
+          if (kind) { var nt = el("aside", { "class": "wt-note" }); while (n.firstChild) nt.appendChild(n.firstChild); body.appendChild(nt); return; }
+        }
+        // Loose images in the step body become clips without a "Show me" link.
+        Array.prototype.forEach.call(n.tagName === "IMG" ? [n] : n.querySelectorAll("img"), function (img) { info.clips.push(takeImage(img)); });
+        if (n.tagName === "P" && !n.textContent.trim() && !n.children.length) return;
+        body.appendChild(n);
+      });
+      if (!hasCheck) {
+        body.insertBefore(el("div", { "class": "wt-check" }, '<button type="button" class="wt-done-btn" aria-pressed="false">Mark step ' + stepNum + " done</button>"), more ? body.querySelector(".wt-more") : null);
+      }
+
+      // copy buttons on code blocks
+      Array.prototype.forEach.call(body.querySelectorAll("pre"), function (pre) {
+        if (pre.closest(".wt-more")) return;
+        var box = pre.closest("div.highlighter-rouge");
+        if (!box) { box = el("div"); pre.parentNode.insertBefore(box, pre); box.appendChild(pre); }
+        if (box.classList.contains("wt-snippet")) return;
+        box.classList.add("wt-snippet");
+        box.appendChild(el("button", { type: "button", "class": "wt-copy" }, "Copy"));
+      });
+
+      // media pane
+      if (video || info.clips.length) {
+        var tabs = "";
+        if (video) tabs += '<button type="button" role="tab" data-tab="video">Video</button>';
+        info.clips.forEach(function (c, ci) {
+          tabs += '<button type="button" role="tab" data-tab="clip" data-clip="' + ci + '">' + (info.clips.length > 1 ? (ci + 1) + ". " : "") + esc(c.label) + "</button>";
+        });
+        media.innerHTML = '<div class="wt-tabs" role="tablist" aria-label="Media for step ' + stepNum + '">' + tabs + '</div><div class="wt-stage"></div>';
+      } else {
+        media.remove();
+        grid.classList.add("no-media");
+      }
+      sec.appendChild(art);
+    });
+    tocHtml += '<li><span class="wt-toc-part">' + (pi + 1) + " · " + esc(p.head ? headingText(p.head) : "Steps") + "</span><ol>" + tocItems + "</ol></li>";
+    main.appendChild(sec);
+  });
+
+  // ---------- setup panel ----------
+  var placeholders = Object.keys(personalize);
+  var hasVideo = allSteps.some(function (s) { return s.video; });
+  var setupHtml = !hasVideo ? "" :
+    '<div><h2>How do you like to learn?</h2><p class="wt-help">Every step has a short video and written steps with screen clips. Choose which one each step shows first. You can switch on any step.</p>' +
+    '<div class="wt-mode" role="group" aria-label="Learning mode"><button type="button" data-mode="read">Read and look</button><button type="button" data-mode="watch">Watch videos</button></div>' +
+    (PLAYLIST ? '<a class="wt-playlist" href="https://www.youtube.com/playlist?list=' + esc(PLAYLIST) + '">Or watch the whole series on YouTube ↗</a>' : "") + "</div>";
+  if (placeholders.length) {
+    setupHtml += '<div><h2>Your project</h2><p class="wt-help">Fill these in once and the commands and settings below will use your names, ready to copy.</p><div class="wt-fields">' +
+      placeholders.map(function (ph, i) {
+        return '<div class="wt-field"><label for="wt-field-' + i + '">' + esc(personalize[ph]) + '</label><input id="wt-field-' + i + '" data-ph="' + esc(ph) + '" type="text" autocomplete="off" spellcheck="false" placeholder="' + esc(ph) + '"></div>';
+      }).join("") + "</div></div>";
+  }
+  if (setupHtml) setup.innerHTML = setupHtml; else setup.remove();
+  if (setup.children.length === 1) setup.classList.add("is-single");
+
+  rail.innerHTML = '<div class="wt-rail-inner"><div class="wt-progress"><span class="wt-progress-label"></span><div class="wt-meter" aria-hidden="true"><span></span></div></div>' +
+    '<details class="wt-toc-details"><summary>All steps</summary><ol class="wt-toc">' + tocHtml + "</ol></details>" +
+    '<div class="wt-rail-foot"><span>Your progress is saved in this browser.</span><button type="button" class="wt-linklike wt-reset">Reset progress</button></div></div>';
+
+  content.replaceWith(layout);
+  root.classList.add("is-enhanced");
+
+  // ---------- personalization ----------
+  // Placeholders read naturally ("your-repo"), so they're plain words, not {tokens}.
+  var isSlug = function (ph) { return !/\s/.test(ph); };
+  var tidy = function (ph, v) {
+    v = v.trim();
+    if (!isSlug(ph)) return v;
+    v = v.replace(/\s+/g, "-").replace(/[^A-Za-z0-9._-]/g, "");
+    return ph === ph.toLowerCase() ? v.toLowerCase() : v; // lowercase placeholder = lowercase value
+  };
+  if (placeholders.length) {
+    var sorted = placeholders.slice().sort(function (a, b) { return b.length - a.length; });
+    // Whole words only, so "your-repo" doesn't match inside "your-repository".
+    var re = new RegExp("(?<![A-Za-z0-9-])(" + sorted.map(function (p) { return p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }).join("|") + ")(?![A-Za-z0-9])", "g");
+    var walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (t) { return t.parentNode.closest(".wt-setup, script, style") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; }
+    });
+    var hits = [];
+    while (walker.nextNode()) { re.lastIndex = 0; if (re.test(walker.currentNode.nodeValue)) hits.push(walker.currentNode); }
+    hits.forEach(function (t) {
+      var frag = document.createDocumentFragment();
+      t.nodeValue.split(re).forEach(function (part, i) {
+        if (i % 2) { var s = el("span", { "data-v": part }); s.textContent = part; frag.appendChild(s); }
+        else if (part) frag.appendChild(document.createTextNode(part));
+      });
+      t.parentNode.replaceChild(frag, t);
+    });
+    Array.prototype.forEach.call(main.querySelectorAll("a[href]"), function (a) {
+      re.lastIndex = 0;
+      if (a.getAttribute("href").charAt(0) !== "#" && re.test(a.getAttribute("href"))) a.setAttribute("data-href-tpl", a.getAttribute("href"));
+    });
+    var paint = function () {
+      Array.prototype.forEach.call(main.querySelectorAll("[data-v]"), function (s) { s.textContent = values[s.getAttribute("data-v")] || s.getAttribute("data-v"); });
+      Array.prototype.forEach.call(main.querySelectorAll("[data-href-tpl]"), function (a) {
+        a.setAttribute("href", a.getAttribute("data-href-tpl").replace(re, function (m) { return values[m] || m; }));
+      });
+    };
+    Array.prototype.forEach.call(setup.querySelectorAll("input[data-ph]"), function (inp) {
+      var ph = inp.getAttribute("data-ph");
+      inp.value = values[ph] || "";
+      inp.addEventListener("input", function () { values[ph] = tidy(ph, inp.value); store(VALUES_KEY, values); paint(); });
+      inp.addEventListener("blur", function () { inp.value = values[ph] || ""; });
+    });
+    paint();
+  }
+
+  // ---------- media ----------
+  var byId = {};
+  allSteps.forEach(function (s) { byId[s.id] = s; });
+
+  function renderVideo(stage, s) {
+    var url = "https://www.youtube.com/watch?v=" + encodeURIComponent(s.video) + (PLAYLIST ? "&list=" + encodeURIComponent(PLAYLIST) : "");
+    stage.innerHTML = '<a class="wt-video" href="' + esc(url) + '" target="_blank" rel="noopener"><span class="wt-video-top">Video · Step ' + s.n + " of " + allSteps.length + '</span><span class="wt-video-title">' + esc(s.title) + '</span><span class="wt-video-play"><i aria-hidden="true"></i>' + (CAN_EMBED ? "Play video" : "Watch on YouTube ↗") + "</span></a>" +
+      '<div class="wt-caption"><span>From the walkthrough video series</span>' + (PLAYLIST ? '<a href="https://www.youtube.com/playlist?list=' + esc(PLAYLIST) + '" target="_blank" rel="noopener">Full playlist ↗</a>' : "") + "</div>";
+    if (!CAN_EMBED) return;
+    stage.querySelector(".wt-video").addEventListener("click", function (e) {
+      e.preventDefault();
+      var f = el("iframe", { "class": "wt-frame", title: "Video: " + s.title, allow: "autoplay; encrypted-media; picture-in-picture", allowfullscreen: "",
+        src: "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(s.video) + "?rel=0&modestbranding=1&autoplay=1" });
+      this.replaceWith(f);
+    });
+  }
+  function show(s, which, ci, play) {
+    var stage = s.el.querySelector(".wt-stage");
+    if (!stage) return;
+    if (which === "clip" && !s.clips.length) which = "video";
+    if (which === "video" && !s.video) { which = "clip"; ci = 0; }
+    Array.prototype.forEach.call(s.el.querySelectorAll(".wt-tabs button"), function (b) {
+      var on = which === "video" ? b.getAttribute("data-tab") === "video" : b.getAttribute("data-tab") === "clip" && +b.getAttribute("data-clip") === ci;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    Array.prototype.forEach.call(s.el.querySelectorAll(".wt-show"), function (b) {
+      b.setAttribute("aria-current", which === "clip" && +b.getAttribute("data-clip") === ci ? "true" : "false");
+    });
+    if (which === "video") { renderVideo(stage, s); return; }
+    var c = s.clips[ci];
+    stage.innerHTML = "";
+    var player = makePlayer(c.src, c.label, c.alt);
+    stage.appendChild(player);
+    stage.appendChild(el("div", { "class": "wt-caption" }, "<span>" + esc(c.label) + '</span><a href="' + esc(c.src) + '" target="_blank" rel="noopener">Open full size ↗</a>'));
+    if (play) player.click();
+  }
+  function applyMode() {
+    if (!hasVideo) mode = "read";
+    Array.prototype.forEach.call(setup.querySelectorAll(".wt-mode button"), function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-mode") === mode ? "true" : "false"); });
+    allSteps.forEach(function (s) { show(s, mode === "watch" ? "video" : "clip", 0, false); });
+  }
+  Array.prototype.forEach.call(setup.querySelectorAll(".wt-mode button"), function (b) {
+    b.addEventListener("click", function () { mode = b.getAttribute("data-mode"); store(MODE_KEY, mode); applyMode(); });
+  });
+  applyMode();
+
+  // ---------- progress ----------
+  var label = rail.querySelector(".wt-progress-label");
+  var meter = rail.querySelector(".wt-meter span");
+  function paintProgress() {
+    allSteps.forEach(function (s) {
+      var d = progress.done.indexOf(s.id) >= 0;
+      s.el.classList.toggle("is-done", d);
+      var b = s.el.querySelector(".wt-done-btn");
+      b.setAttribute("aria-pressed", d ? "true" : "false");
+      b.textContent = d ? "Step " + s.n + " done" : "Mark step " + s.n + " done";
+      var a = rail.querySelector('a[data-step="' + s.id + '"]');
+      if (a) { a.classList.toggle("is-done", d); a.querySelector(".wt-toc-num").textContent = d ? "✓" : String(s.n); }
+    });
+    var count = allSteps.filter(function (s) { return progress.done.indexOf(s.id) >= 0; }).length;
+    label.innerHTML = count === allSteps.length ? "<b>All " + count + " steps done.</b> Nice work." : "<b>" + count + "</b> of " + allSteps.length + " steps done";
+    meter.style.transform = "scaleX(" + count / allSteps.length + ")";
+    Array.prototype.forEach.call(main.querySelectorAll("[data-check]"), function (cb) { cb.checked = progress.checks.indexOf(cb.getAttribute("data-check")) >= 0; });
+  }
+  paintProgress();
+
+  // ---------- events ----------
+  main.addEventListener("click", function (e) {
+    var t = e.target;
+    var tab = t.closest(".wt-tabs button");
+    if (tab) { show(byId[tab.closest(".wt-step").getAttribute("data-step")], tab.getAttribute("data-tab"), +tab.getAttribute("data-clip") || 0, false); return; }
+    var sm = t.closest(".wt-show");
+    if (sm) {
+      var art = sm.closest(".wt-step");
+      show(byId[art.getAttribute("data-step")], "clip", +sm.getAttribute("data-clip"), true);
+      var m = art.querySelector(".wt-media"), r = m.getBoundingClientRect();
+      if (r.top < 0 || r.bottom > innerHeight) m.scrollIntoView({ block: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
+      return;
+    }
+    var db = t.closest(".wt-done-btn");
+    if (db) {
+      var id = db.closest(".wt-step").getAttribute("data-step");
+      var i = progress.done.indexOf(id);
+      if (i >= 0) progress.done.splice(i, 1); else progress.done.push(id);
+      store(KEY, progress); paintProgress();
+      if (i < 0) {
+        var idx = allSteps.findIndex(function (s) { return s.id === id; });
+        var next = allSteps[idx + 1];
+        toast(next ? "Step " + (idx + 1) + " done. Next: " + next.title : "All done. Your site is live!");
+      }
+      return;
+    }
+    var cp = t.closest(".wt-copy");
+    if (cp) {
+      var code = cp.parentNode.querySelector("pre");
+      var text = code ? code.textContent : "";
+      var fallback = function () { var r = document.createRange(); r.selectNodeContents(code); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Selected. Press Ctrl/⌘ + C to copy"); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { cp.textContent = "Copied"; setTimeout(function () { cp.textContent = "Copy"; }, 1500); }, fallback);
+      else fallback();
+    }
+  });
+  main.addEventListener("change", function (e) {
+    var cb = e.target.closest("[data-check]");
+    if (!cb) return;
+    var cid = cb.getAttribute("data-check");
+    progress.checks = progress.checks.filter(function (c) { return c !== cid; });
+    if (cb.checked) progress.checks.push(cid);
+    store(KEY, progress);
+  });
+
+  var resetBtn = rail.querySelector(".wt-reset"), armed = false, armT;
+  resetBtn.addEventListener("click", function () {
+    if (!armed) { armed = true; resetBtn.textContent = "Click again to clear progress"; armT = setTimeout(function () { armed = false; resetBtn.textContent = "Reset progress"; }, 4000); return; }
+    clearTimeout(armT); armed = false; resetBtn.textContent = "Reset progress";
+    progress = { done: [], checks: [] }; store(KEY, progress); paintProgress(); toast("Progress cleared");
+  });
+
+  // ---------- rail: open on wide screens, highlight the current step ----------
+  var det = rail.querySelector(".wt-toc-details");
+  var wide = window.matchMedia("(min-width: 80rem)");
+  var syncDet = function () { if (wide.matches) det.open = true; };
+  syncDet();
+  if (wide.addEventListener) wide.addEventListener("change", syncDet);
+  det.addEventListener("click", function (e) { if (e.target.closest("a") && !wide.matches) det.open = false; });
+  if ("IntersectionObserver" in window) {
+    var links = rail.querySelectorAll(".wt-toc a");
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        Array.prototype.forEach.call(links, function (l) { l.removeAttribute("aria-current"); });
+        var a = rail.querySelector('a[data-step="' + en.target.getAttribute("data-step") + '"]');
+        if (a) a.setAttribute("aria-current", "step");
+      });
+    }, { rootMargin: "-30% 0px -60% 0px" });
+    allSteps.forEach(function (s) { spy.observe(s.el); });
+  }
+})();
+
+</script>
