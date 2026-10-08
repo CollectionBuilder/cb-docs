@@ -1,0 +1,53 @@
+# Option A: everything in one data file (_data/walkthroughs/csv.yml)
+# Rendered by a Liquid include: {% include walkthrough.html data=site.data.walkthroughs.csv %}
+#
+# Good: perfectly structured, easy to render, easy to reorder steps.
+# Hard: prose lives inside quoted strings. Markdown, links, quotes and colons
+#       need care, indentation errors break the whole page, and a typo gives
+#       an error message nobody on a docs team wants to read.
+
+title: Build your first collection website
+template: CollectionBuilder-CSV
+playlist: PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ
+
+parts:
+  - title: Make your own copy
+    outcome: your own copy of the template, on GitHub and on your computer.
+    steps:
+      - id: repo
+        title: Create your repository from the template
+        apps: [web]
+        video: sjwhM7wGNYs
+        actions:
+          - text: >-
+              Make sure you're signed in, then open the
+              [collectionbuilder-csv template](https://github.com/CollectionBuilder/collectionbuilder-csv).
+          - text: Choose **Use this template**, then **Create a new repository**.
+            clip: { file: use-csv-template.gif, label: Use this template }
+          - text: >-
+              Leave it **Public**. Name it `your-repo`, then choose
+              **Create repository from template**.
+            clip: { file: create-repo-csv.gif, label: Name and create }
+        done: "Your browser shows `github.com/your-username/your-repo` with a list of files."
+
+  - title: Add your metadata
+    outcome: the metadata in your project, and the site set up to use it.
+    steps:
+      - id: config
+        title: Point the site at your metadata
+        apps: [vscode]
+        video: 9K52tsTQq0o
+        actions:
+          - text: >-
+              Open `_config.yml`. Under **COLLECTION SETTINGS**, set `metadata`
+              to your file name without `.csv`:
+            code: "metadata: your-repo"
+            clip: { file: change-metadata-file.gif, label: Set metadata }
+          - text: "Under **SITE SETTINGS**, give your site a title:"   # quoted because of the colon
+            code: "title: Your Site Title"
+            clip: { file: change-title.gif, label: Set title }
+        save: Update site settings
+        done: Both lines match yours, and the tab has no unsaved dot.
+        more:
+          title: What else is in _config.yml?
+          text: Everything about how your site is built. See the [Site Config docs](/docs/config/).

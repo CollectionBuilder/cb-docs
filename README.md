@@ -31,6 +31,7 @@ Documentation follows these conventions:
     - Each should have front matter variables `parent` (matching the title of section index) and `nav_order` (setting order within the section). 
     - Content can be styled using [Just the Docs classes and utilities](https://just-the-docs.github.io/just-the-docs/) and CB specific features documented below.
 - For pages that shouldn't appear in nav, add front matter `nav_exclude: true`.
+- Walkthroughs use the `walkthrough` layout and a few Markdown conventions. See "docs/walkthroughs/writing-walkthroughs.md".
 
 Example section index front matter:
 

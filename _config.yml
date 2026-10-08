@@ -18,7 +18,7 @@ baseurl: /cb-docs # the subpath of your site, e.g. /blog
 #url: "https://collectionbuilder.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE.txt", "README.md", "Rakefile"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE.txt", "README.md", "Rakefile", "prototypes"]
 
 # Set a path/url to a logo that will be displayed instead of the title
 #logo: "/assets/images/just-the-docs.png"

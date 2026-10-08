@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% comment %}
+    Walkthrough layout. The page is ordinary Markdown; assets/js/walkthrough.js rearranges it
+    into parts, steps, checkpoints and media panes. Without JavaScript it reads as a normal docs page.
+    Conventions are documented in docs/walkthroughs/writing-walkthroughs.md.
+
+    Front matter:
+    - "playlist" = optional, YouTube playlist ID for the whole walkthrough
+    - "personalize" = optional, map of placeholder text to a field label, e.g. your-repo: Repository name
+
+    Images written as /assets/... get the site baseurl added and are lazy loaded.
+{% endcomment %}
+{%- assign asset_src = 'src="' | append: site.baseurl | append: '/assets/' -%}
+{%- assign lazy_img = '<img loading="lazy" src="' | append: site.baseurl | append: '/assets/' -%}
+<link rel="stylesheet" href="{{ '/assets/css/walkthrough.css' | relative_url }}">
+<div class="walkthrough" id="walkthrough" data-playlist="{{ page.playlist }}" data-personalize="{{ page.personalize | jsonify | escape }}">
+<div class="wt-content">
+{{ content | replace: '<img src="/assets/', lazy_img | replace: 'src="/assets/', asset_src }}
+</div>
+</div>
+<script src="{{ '/assets/js/walkthrough.js' | relative_url }}"></script>

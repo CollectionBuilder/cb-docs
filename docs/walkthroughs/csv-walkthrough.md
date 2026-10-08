@@ -2,356 +2,373 @@
 title: CSV Walkthrough
 parent: Walkthroughs
 nav_order: 3
-lazyload: true
+layout: walkthrough
+playlist: PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ
+personalize:
+  your-username: GitHub username
+  your-repo: Repository name
+  Your Site Title: Site title
 ---
 
-# CollectionBuilder-CSV Walkthrough
+<!--
+  This page uses the walkthrough layout. See docs/walkthroughs/writing-walkthroughs.md for the conventions.
+-->
 
-This walkthrough provides steps for creating an example digital collection using preexisting demo metadata from the University of Idaho's [Psychiana Digital Collection](https://www.lib.uidaho.edu/digital/psychiana/), the **CollectionBuilder-CSV Template**, and the **GitHub Actions** feature.
+# Build your first collection website
 
-{:.alert .alert-red}
-**Important Note:** You will need to install free, open-source software on your computer and create a free GitHub account for this walkthrough.
+You'll take sample metadata from the University of Idaho's [Psychiana Digital Collection](https://www.lib.uidaho.edu/digital/psychiana/) and turn it into a working, published collection site using the **CollectionBuilder-CSV** template.
+You'll move between a few apps on your computer, and each step tells you which one you should be in.
 
-{:.alert .alert-blue}
-**Video Option:** If you would prefer to move through a video version of this walkthrough, check out our  [YouTube Playlist](https://www.youtube.com/playlist?list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ) or click on the video version of each step linked below.
+You'll need a computer where you can install free software, and a free GitHub account (step 1).
 
-## 1. Create a GitHub account. [(Video Version)](https://youtu.be/zNp6bqBDRr0?si=z_eiNcrUnvck668i){:.text-small}  
+## Get set up
 
-- If you don't have an account, visit [GitHub](https://www.github.com) and click the **Sign up** button. You do not need a paid account for using CollectionBuilder. After signing up, check your email to verify your account.
+When you finish this part you'll have a GitHub account, and the free software CollectionBuilder uses installed on your computer.
 
-## 2. Download and install software on your computer (Git, GitHub Desktop, Visual Studio Code, Ruby, Jekyll, ImageMagic and Ghostscript) [(Video Version)](https://www.youtube.com/watch?v=cvYQiJBHo3k&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=1){:.text-small}
+### Create a GitHub account
+{: app="web" video="zNp6bqBDRr0"}
 
-- Click on the links below to our documentation for detailed help with the installation process for each piece of free, open-source software:
+1. Go to [github.com/signup](https://github.com/signup) and create an account. The free plan is all you need.
 
-    - [Install Git](https://collectionbuilder.github.io/cb-docs/docs/software/git/)
-    - [Install GitHub Desktop](https://collectionbuilder.github.io/cb-docs/docs/software/git/#install-github-desktop)
-    - [Install Visual Studio Code (VS Code)](https://collectionbuilder.github.io/cb-docs/docs/software/texteditor/)
-    - [Install Ruby](https://collectionbuilder.github.io/cb-docs/docs/software/ruby/)
-    - [Install Jekyll](https://collectionbuilder.github.io/cb-docs/docs/software/jekyll/)
-    - [Install ImageMagick and Ghostscript](https://collectionbuilder.github.io/cb-docs/docs/software/optional/#imagemagick-and-ghostscript) (*Optional:* You only need this software if you want to create object derivatives)
+2. Open the email GitHub sends you and verify your address.
 
-- In our documentation we've tried to anticipate common issues to help with troubleshooting, but if these options do not work, try Googling your problem using a specific search (include the error message you are getting!). 
+> **Done when:** you can sign in at github.com, and your username shows in the top-right menu.
 
-- If you are still having problems installing software, please feel free to reach out to the CollectionBuilder team at [collectionbuilder.team@gmail.com](mailto:collectionbuilder.team@gmail.com).
+### Install the software
+{: app="files" video="cvYQiJBHo3k"}
 
-## 3. Create a new repository [(Video Version)](https://www.youtube.com/watch?v=sjwhM7wGNYs&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=2){:.text-small}
+This step takes the longest.
+Each link opens our install guide for that tool. Tick them off as you go.
 
-- After ensuring you are logged in to your GitHub account, visit the [**collectionbuilder-csv repository page**](https://github.com/CollectionBuilder/collectionbuilder-csv). 
+- [ ] [Git](https://collectionbuilder.github.io/cb-docs/docs/software/git/)
+- [ ] [GitHub Desktop](https://collectionbuilder.github.io/cb-docs/docs/software/git/#install-github-desktop)
+- [ ] [Visual Studio Code (VS Code)](https://collectionbuilder.github.io/cb-docs/docs/software/texteditor/)
+- [ ] [Ruby](https://collectionbuilder.github.io/cb-docs/docs/software/ruby/)
+- [ ] [Jekyll](https://collectionbuilder.github.io/cb-docs/docs/software/jekyll/)
+- [ ] [ImageMagick and Ghostscript](https://collectionbuilder.github.io/cb-docs/docs/software/optional/#imagemagick-and-ghostscript) (optional, only needed to make your own image derivatives)
 
-- Click the green **Use this template** button and then the **Create a new repository** dropdown option. 
+> **Done when:** in a terminal, `ruby -v` and `jekyll -v` each print a version number.
 
-{% include feature/image.html img="use-csv-template.gif" alt="User clicking on use template button and then create a new repository option" border=true width="80%" %}
+#### Something went wrong
 
-- Leave the repository as **Public**. Enter a repository name (use a lowercase name without spaces or odd characters, e.g. **demo-repository**) and click **Create repository from template**.
+- Search the web for the exact error message you see, in quotes.
+- Each install guide has troubleshooting notes for common problems.
+- Still stuck? Ask in the [CollectionBuilder Discussion Forum](https://github.com/orgs/CollectionBuilder/discussions) or email the team at collectionbuilder.team@gmail.com.
 
-{% include feature/image.html img="create-repo-csv.gif" alt="User entering a repository name and clicking create repository from template button" border=true width="80%" %}
+## Make your own copy
 
-## 4. Clone your repository using GitHub Desktop [(Video Version)](https://www.youtube.com/watch?v=OdHfBF0doN4&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=3){:.text-small}
+When you finish this part you'll have your own copy of the CollectionBuilder-CSV template, on GitHub and on your computer, open in VS Code.
 
-- On your new repository's home page, click on the green button labeled **Code**. In the box that pops up, click on the button labeled **Open with GitHub Desktop**. This action will open GitHub Desktop on your computer.
+### Create your repository from the template
+{: app="web" video="sjwhM7wGNYs"}
 
-{% include feature/image.html img="clone-launch-repo.gif" alt="User clicking on Code dropdown and then the Open with GitHub Desktop button" border=true width="80%" %}
+1. Make sure you're signed in to GitHub, then open the [collectionbuilder-csv template](https://github.com/CollectionBuilder/collectionbuilder-csv).
 
-- GitHub Desktop will ask you to confirm the path of the repository you are cloning. Once you click the blue **Clone** button, GitHub Desktop will create a new folder on your computer with the matching your repository name and clone the contents of the repository from GitHub. 
+2. Choose **Use this template**, then **Create a new repository**.
 
-{% include feature/image.html img="clone-demo.gif" alt="User clicking on the clone button in GitHub Desktop to clone the repository from GitHub" border=true width="80%" %}
+   ![User clicking on use template button and then create a new repository option](/assets/images/use-csv-template.gif "Use this template")
 
-- **Note:** The repository is a folder of files and you can store it anywhere, but we recommend using the default storage location on your computer: documents/GitHub.
+3. Leave it **Public**. Name it `your-repo` (lowercase, no spaces), then choose **Create repository from template**.
 
-{:.alert .alert-green}
-**A quick explanation of Fetch, Pull, and Push:** On the top right of GitHub Desktop, you can Fetch origin, Pull origin, or Push origin. Clicking these commands allows you to sync the local version of your repository with the version on GitHub, using Git to push and pull changes between them. 
+   ![User entering a repository name and clicking create repository from template button](/assets/images/create-repo-csv.gif "Name and create")
 
-- **Reminder:** When you are working on multiple computers or collaborating with others, be sure to fetch and pull changes from GitHub before you start working on your project.
+> **Done when:** your browser shows [github.com/your-username/your-repo](https://github.com/your-username/your-repo) with a list of files.
 
-{% include feature/image.html img="fetch-pull-gh-desktop.gif" alt="GitHub Desktop user clicking on fetch origin button and then pull origin button" border=true width="80%" %}
+### Copy it to your computer (clone)
+{: app="web desktop" video="OdHfBF0doN4"}
 
-## 5. Use GitHub Desktop to open your repository in VS Code [(Video Version)](https://www.youtube.com/watch?v=q4VBBUcwZpY&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=4){:.text-small}
+1. On your repository's page, choose the green **Code** button, then **Open with GitHub Desktop**.
 
-- Check to make sure you are in the correct repository by viewing the top left section of GitHub Desktop. To switch between repositories, locate the **Current Repository** dropdown, and select the repository you'd like to open. 
+   ![User clicking on Code dropdown and then the Open with GitHub Desktop button](/assets/images/clone-launch-repo.gif "Open with GitHub Desktop")
 
-- In the top menu, locate and click on **Repository**, and select the option, **Open in Visual Studio Code**. 
+2. GitHub Desktop opens and asks where to save the repository. Keep the suggested folder (Documents/GitHub) and choose **Clone**.
 
-{% include feature/image.html img="open-repository-menu.gif" alt="GitHub Desktop user clicking on Repository and then Open in Visual Studio Code option" border=true width="80%" %}
+   ![User clicking on the clone button in GitHub Desktop to clone the repository from GitHub](/assets/images/clone-demo.gif "Clone")
 
-- Alternatively, in the box that says **Open the repository in your external editor**, you can click the button that says **Open in Visual Studio Code**.
+> **Done when:** GitHub Desktop shows `your-repo` under **Current Repository** in the top left.
 
-{% include feature/image.html img="open-vs-code.gif" alt="GitHub Desktop user clicking on Open in Visual Studio Code button to open VS Code application" border=true width="80%" %}
+#### Good to know: Fetch, Pull and Push
 
-## 6. Add your objects to your repository directly (if necessary) [(Video Version)](https://www.youtube.com/watch?v=xgSnRN4aT9Q&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=5){:.text-small}
+The button at the top right of GitHub Desktop keeps your computer and GitHub in sync.
+**Fetch** checks for changes, **Pull** brings them down to your computer, and **Push** sends yours up.
+If you work on more than one computer, or with other people, fetch and pull before you start.
 
-{:.alert .alert-red}
-**Important!** The demo metadata for this walkthrough already contains links to external objects (e.g., image files, PDFs, mp3s, etc.) in the object_location, image_small, and image_thumb fields, so **you do not need to add any object files directly to the repository in VS Code.**
+![GitHub Desktop user clicking on fetch origin button and then pull origin button](/assets/images/fetch-pull-gh-desktop.gif "Fetch and pull")
 
-- If you want to get started right away with building a collection site using the demo metadata, [continue to Step 7](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#7-prepare-your-metadata-for-upload) of this walkthrough.
+### Open the project in VS Code
+{: app="desktop vscode" video="q4VBBUcwZpY"}
 
-- **Interested in learning how to add object files directly to your repository?** If so, you can check out our [Object Derivatives Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/). This walkthrough also reviews how to generate thumb and small object derivatives using CollectionBuilder-CSV's built-in rake tasks and how to update your metadata spreadsheet to include these derivatives.
+1. Check that **Current Repository** says `your-repo`.
 
-- For more information on the **object_location** field, visit our [Object Location Fields documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/#object-location-fields) which covers how to use the correct file paths or URLs for your objects.
+2. From the menu bar, choose **Repository** → **Open in Visual Studio Code**.
 
-## 7. Prepare your metadata for upload [(Video Version)](https://www.youtube.com/watch?v=qG-7WtUtR4A&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=6){:.text-small}
+   ![GitHub Desktop user clicking on Repository and then Open in Visual Studio Code option](/assets/images/open-repository-menu.gif "Repository menu")
 
-- Make a copy of this Google Sheet of pre-made demo metadata: [Psychiana Digital Collection Metadata](https://docs.google.com/spreadsheets/d/1U_DAC_YW_ryoJ2Ub6gEqxMXh3Y6xrDUIUbKjFqhBTsM/copy)
+> **Done when:** VS Code opens, with `your-repo` at the top of the file list on the left.
 
-- Download the spreadsheet as a .csv file by clicking **File** → **Download** → **Comma Separated Values (.csv)**
+#### Another way to open it
 
-{% include feature/image.html img="download-csv-metadata.gif" alt="Google Sheets user clicking on File, Download, and Comma Separated Values to download metadata as a csv file." border=true width="80%" %}
+GitHub Desktop also shows an **Open in Visual Studio Code** button in the middle of the window.
 
-- Locate the file in the Downloads folder on your computer. 
+![GitHub Desktop user clicking on Open in Visual Studio Code button to open VS Code application](/assets/images/open-vs-code.gif "The Open in VS Code button")
 
-{:.alert .alert-red}
-**Warning:** Do not open the CSV file to avoid issues with Microsoft Excel scrambling your UTF-8 encoding. Excel cannot correctly export a CSV for use with CollectionBuilder. It's super annoying! We know!
+## Add your metadata
 
-- Without opening the file, rename it using all lowercase letters, no spaces, and no special characters. For example: **"demo-repository.csv"**
+When you finish this part you'll have the collection's metadata in your project, and the site set up to use it.
 
-## 8. Upload your metadata file [(Video Version)](https://www.youtube.com/watch?v=u9WEx_nOBtM&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=7){:.text-small}
+> **Note:** The demo metadata links to images and media that are already online, so you won't add any object files to your project.
+> When you build with your own collection, the [Object Derivatives Walkthrough](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/) shows how ([video](https://www.youtube.com/watch?v=xgSnRN4aT9Q&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ)).
 
-- In VS Code, click on the **"_data"** folder.
+### Get the demo metadata as a CSV
+{: app="sheets files" video="qG-7WtUtR4A"}
 
-{% include feature/image.html img="open-data-folder-vscode.gif" alt="Visual Studio Code user clicks on the Data folder to expand it" border=true width="80%" %}
+1. Make your own copy of the [Psychiana demo metadata](https://docs.google.com/spreadsheets/d/1U_DAC_YW_ryoJ2Ub6gEqxMXh3Y6xrDUIUbKjFqhBTsM/copy) in Google Sheets.
 
-- Navigate to the location of your saved metadata CSV (probably in your Downloads folder or on the Desktop), and select the file.
+2. In your copy, choose **File** → **Download** → **Comma Separated Values (.csv)**.
 
-- Drag the file into the **"_data"** folder on VS Code.
+   ![Google Sheets user clicking on File, Download, and Comma Separated Values to download metadata as a csv file](/assets/images/download-csv-metadata.gif "Download as CSV")
 
-{% include feature/image.html img="drag-metadata.gif" alt="User clicking on metadata file and dragging it into the data folder on Visual Studio Code" border=true width="80%" %}
+3. Find the file in your Downloads folder. Without opening it, rename it to `your-repo.csv`.
 
-- **Note:** The folders and files in the left side of the VS Code interface work like any other folder and file on your computer -- you can drag things in there as you'd like.
+> **Careful:** Don't open the CSV in Excel. If Excel saves it, special characters will display wrongly on your site. It's super annoying! We know!
 
-## 9. Commit your changes using VS Code [(Video Version)](https://www.youtube.com/watch?v=h8mt9i6JoEI&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=8){:.text-small}
+> **Done when:** your Downloads folder has a file named `your-repo.csv`.
 
-- In VS Code, click on the **Source Control** icon, i.e. the network icon on the left side, or press Ctrl + Shift + G.
+### Add the CSV to your project
+{: app="files vscode" video="u9WEx_nOBtM"}
 
-{% include feature/image.html img="click-source-control.gif" alt="Visual Studio Code user clicks on the Source Control icon" border=true width="80%" %}
+1. In VS Code's file list, click the `_data` folder to open it.
 
-- Changed files will be listed under **Changes**. Hover over the file name and click on the plus icon to add individual files, or hover next to **Changes** and click on the plus icon to add all. Once added, the files will move to a new list called **Staged Changes** which are ready to commit.
+   ![Visual Studio Code user clicks on the Data folder to expand it](/assets/images/open-data-folder-vscode.gif "Open _data")
 
-{:.alert .alert-blue}
-**Tip:** Hovering over icons on VS Code will pop up more information about what they represent.
+2. Drag `your-repo.csv` from your Downloads folder onto `_data`.
 
-- Click in the text box at the top labeled **Message**. Type your **commit message** into the box (e.g. Add metadata).
+   ![User clicking on metadata file and dragging it into the data folder on Visual Studio Code](/assets/images/drag-metadata.gif "Drag the file in")
 
-- Click the blue **Commit** button below the message box to commit the change.
+> **Done when:** `your-repo.csv` appears inside `_data` in VS Code's file list.
 
-{% include feature/image.html img="commit-csv.gif" alt="Visual Studio Code user stages a change by clicking the plus sign, types in a commit message, and then presses the commit button" border=true width="80%" %}
+### Make a save point (commit)
+{: app="vscode" video="h8mt9i6JoEI"}
 
-## 10. Configure your site settings in the _config.yml file [(Video Version)](https://www.youtube.com/watch?v=9K52tsTQq0o&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=9){:.text-small}
+A commit is a save point for your project.
+You'll make one after every change from here on, so this step is worth learning well.
 
-- In VS Code, click on the **"_config.yml"** file.
+1. Open **Source Control**. It's the branching icon in the left-hand bar, or press Ctrl + Shift + G.
 
-- Under the **COLLECTION SETTINGS** section, replace the `metadata` placeholder text with the filename of your uploaded metadata file **_without the CSV extension_**. 
+   ![Visual Studio Code user clicks on the Source Control icon](/assets/images/click-source-control.gif "Source Control")
 
-For example:
+2. Hover over **Changes** and choose the **+** to stage everything.
 
-```yaml
-metadata: demo-repository
-``` 
+3. Type a short message, like `Add metadata`, and choose **Commit**.
 
-{% include feature/image.html img="change-metadata-file.gif" alt="Visual Studio Code user changes metadata placeholder text to the filename of their metadata file" border=true width="80%" %}
+   ![Visual Studio Code user stages a change by clicking the plus sign, types in a commit message, and then presses the commit button](/assets/images/commit-csv.gif "Stage and commit")
 
-- Under the **SITE SETTINGS** section, replace the `title` placeholder text with a title of your choice. 
+> **Done when:** the **Changes** list is empty.
 
-For example:
+#### Good to know: what does each icon do?
 
-```yaml
-title: Demo Repository
-``` 
+Hover over any icon in VS Code to see what it does.
 
-{% include feature/image.html img="change-title.gif" alt="Visual Studio Code user changes title placeholder text to the title of their site" border=true width="80%" %}
+### Point the site at your metadata
+{: app="vscode" video="9K52tsTQq0o"}
 
-- **Optional:** Write a new `tagline`, `description`, and `author`.
+1. Open `_config.yml`. Under **COLLECTION SETTINGS**, set `metadata` to your file name without `.csv`:
 
-{:.alert .alert-blue}
-**Note:** To view more information about the **_config.yml** file and what it can change in your site, check out our [Site Config documentation](https://collectionbuilder.github.io/cb-docs/docs/config/).
+   ```yaml
+   metadata: your-repo
+   ```
 
-- Save your changes with Ctrl + S or by clicking File → Save.
+   ![Visual Studio Code user changes metadata placeholder text to the filename of their metadata file](/assets/images/change-metadata-file.gif "Set metadata")
 
-- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update site settings."
+2. Under **SITE SETTINGS**, give your site a title:
 
-## 11. Open the terminal in VS Code [(Video Version)](https://www.youtube.com/watch?v=UH7JVpUZOoU&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=10){:.text-small}
+   ```yaml
+   title: Your Site Title
+   ```
 
-- In VS Code, open the terminal by clicking on **Terminal** in the top menu bar and then **New Terminal**.
+   ![Visual Studio Code user changes title placeholder text to the title of their site](/assets/images/change-title.gif "Set title")
 
-{% include feature/image.html img="newterminal.gif" alt="Visual Studio Code user opens a new terminal by clicking on Terminal and then New Terminal" border=true width="80%" %}
+3. If you like, also fill in `tagline`, `description` and `author`. Then save with Ctrl/⌘ + S.
 
-## 12. Run the "bundle install" command (only necessary for your first time working on a project) [(Video Version)](https://www.youtube.com/watch?v=iEsEy3Zf3Vo&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=11){:.text-small}
+> **Save point:** Update site settings
 
-- The first time you work on a project in VS Code on a computer, type the command **bundle install** into the terminal and then press enter. This will enable you to generate your site on your computer.
+> **Done when:** both lines match yours, and the `_config.yml` tab has no unsaved dot.
 
-- You will see a bunch of output in your terminal window. Once the Bundler installation is complete, your terminal prompt will return (which ends in a percentage sign %).
+#### What else is in _config.yml?
 
-{% include feature/image.html img="bundle-install.gif" alt="Visual Studio Code user runs the bundle install command in the terminal" border=true width="80%" %}
+Everything about how your site is built. See the [Site Config documentation](https://collectionbuilder.github.io/cb-docs/docs/config/).
 
-## 13. Run the "bundle exec jekyll serve" command to generate your site [(Video Version)](https://www.youtube.com/watch?v=Shqm2Uwk4K8&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=12){:.text-small}
+## See it on your computer
 
-- The **bundle exec jekyll serve** command starts a development server on your local computer and "serves" (i.e. makes available) the HTML, CSS, and JavaScript files that comprise your website. These files are built (and rebuilt) in the **"_site"** folder. 
+When you finish this part you'll have your collection site running in your own browser, before anyone else can see it.
 
-{:.alert .alert-blue}
-**Note:** After the development server is started, Jekyll will rebuild the website each time you save a change to a file in the project folder. Learn more about the jekyll serve command in our [Generate Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/repository/generate/).
+### Open the terminal
+{: app="vscode" video="UH7JVpUZOoU"}
 
-- In the terminal in VS Code, type the command **bundle exec jekyll s** and press enter.
+1. From the menu bar, choose **Terminal** → **New Terminal**.
 
-- You'll see some text appear (messages from Jekyll), including a URL that appears after the title **Server address:**. The server address will typically start with: **http://127.0.0.1:4000/**.
+   ![Visual Studio Code user opens a new terminal by clicking on Terminal and then New Terminal](/assets/images/newterminal.gif "New Terminal")
 
-{% include feature/image.html img="bundle-exec-jekyll-s.gif" alt="Visual Studio Code user runs the bundle exec jekyll serve command in the terminal" border=true width="80%" %}
+> **Done when:** a terminal panel opens at the bottom of VS Code, and the line ends with `your-repo`.
 
-- Hold down **Ctrl / Command** and click the server address link to open the site in your browser, or copy the URL and paste it into a browser.'
+### Install the project's tools
+{: app="term" video="iEsEy3Zf3Vo" badge="First time only"}
 
-{% include feature/image.html img="open-csv-site.gif" alt="Visual Studio Code clicks on the server address link to open the site in their browser" border=true width="80%" %}
+1. Type this and press Enter:
 
-- After you start the server, note that whenever you make a change to a file and save it, the terminal will note that it rebuilt the site in a certain amount of seconds. 
+   ```
+   bundle install
+   ```
 
-- **Important note:** If you make a change to the **"_config.yml"** file, that change won't be reflected until you restart the server because that file is only referenced when the development site is first built. 
+   ![Visual Studio Code user runs the bundle install command in the terminal](/assets/images/bundle-install.gif "bundle install")
 
-- To restart the build, end the current session with Ctrl + C, and then run the **bundle exec jekyll s** command in the terminal again. (**Pro Tip:** Push the up arrow key in your terminal to automatically retype the last command you entered). Click on the server address once it is ready and the changes should be live.
+2. A lot of text scrolls past. That's normal. Wait for the prompt to come back.
 
-- When you're ready to end your Jekyll session, type Ctrl + C into the terminal. This stops the server from running.
+> **Done when:** the terminal says `Bundle complete!` and you can type again.
 
-## 14. Add a featured homepage image [(Video Version)](https://www.youtube.com/watch?v=nZcBduxKLTM&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=13){:.text-small}
+#### Something went wrong
 
-- Visit your site and use the Browse page to view potential featured images.
+Errors here are almost always about Ruby.
+Revisit the [Ruby install guide](https://collectionbuilder.github.io/cb-docs/docs/software/ruby/) and its troubleshooting notes.
 
-{% include feature/image.html img="browse-images-csv.gif" alt="User clicks the Browse button to look through collection images" border=true width="80%" %}
+### Start your site
+{: app="term browser" video="Shqm2Uwk4K8"}
 
-- To find the `objectid` for an image, click on the image title and then check the end of the URL of the item page. The URL will include the `objectid` after **/items/**. 
+1. Type this and press Enter:
 
-For example:
+   ```
+   bundle exec jekyll s
+   ```
 
-For the URL, http://127.0.0.1:4000/items/**psychiana005**.html, the `objectid` is **psychiana005**.
+   ![Visual Studio Code user runs the bundle exec jekyll serve command in the terminal](/assets/images/bundle-exec-jekyll-s.gif "Start the server")
 
-{% include feature/image.html img="find-objectid-csv.gif" alt="User highlights the objectid at the end of the item page URL" border=true width="80%" %}
+2. Wait for `Server address: http://127.0.0.1:4000/`. Hold Ctrl (or ⌘ on a Mac) and click it.
 
-{:.alert .alert-blue}
-**Tip:** It is best to choose a large horizontal image if possible.
+   ![Visual Studio Code user clicks on the server address link to open the site in their browser](/assets/images/open-csv-site.gif "Open in browser")
 
-- In VS Code, click on the **"_data"** folder. Then click on the **"theme.yml"** file.
+> **Done when:** your browser shows your collection's homepage, with items from Psychiana.
 
-- Under the **HOME PAGE** section, replace the `objectid` placeholder text with the `objectid` of an image in the collection that you want to be the top image on the homepage. 
+#### Good to know: rebuilding and stopping
 
-For example:
+- Leave the server running while you work. Each time you save a file, the site rebuilds, and you can refresh your browser to see it.
+- Changes to `_config.yml` need a restart. Press Ctrl + C, then run the command again. Pressing the up arrow brings the last command back.
+- Press Ctrl + C to stop the server when you're finished.
+- Learn more in [Generate Your Site](https://collectionbuilder.github.io/cb-docs/docs/repository/generate/).
 
-```yaml
-featured-image: psychiana005
-```
+### Choose a homepage image
+{: app="browser vscode" video="nZcBduxKLTM"}
 
-{% include feature/image.html img="featured-image-csv.gif" alt="Visual Studio code user updates the featured image in the theme.yml file" border=true width="80%" %}
+1. On your local site, open **Browse** and pick a wide image.
 
-- Save your changes with Ctrl + S or by clicking File → Save.
+   ![User clicks the Browse button to look through collection images](/assets/images/browse-images-csv.gif "Browse")
 
-- After you have updated the featured image, write your commit message (e.g. Add featured image) and follow the instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes. 
+2. Open the item. Its ID is the end of the address, between `/items/` and `.html`. For example, `psychiana005`.
 
-- View your changes by refreshing your site in your browser window. 
+   ![User highlights the objectid at the end of the item page URL](/assets/images/find-objectid-csv.gif "Find the ID")
 
-{% include feature/image.html img="refresh-site.gif" alt="User refreshes the site to see the new featured home page image" border=true width="80%" %}
+3. In VS Code, open `_data/theme.yml`. Under **HOME PAGE**, set `featured-image` to that ID:
 
-{:.alert .alert-green}
-**Want to learn more about customization options?** Check out our [Theme Configuration documentation](https://collectionbuilder.github.io/cb-docs/docs/theme/) to find out how to customize other site display options by editing the **theme.yml** file. For further info on customizations, see: [Configuring and Customizing Pages](https://collectionbuilder.github.io/cb-docs/docs/customization/), [Theme Color Configuration](https://collectionbuilder.github.io/cb-docs/docs/customization/config-theme-colors/), and [Adding Custom CSS](https://collectionbuilder.github.io/cb-docs/docs/add-more/custom-css/).
+   ```yaml
+   featured-image: psychiana005
+   ```
 
-## 15. Optional: Edit the About Page [(Video Version)](https://www.youtube.com/watch?v=nCK_cuAz66U&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=14){:.text-small}
+   ![Visual Studio Code user updates the featured image in the theme.yml file](/assets/images/featured-image-csv.gif "Edit theme.yml")
 
-- In VS Code, click on the **"pages"** folder. Then click on the **"about.md"** file.
+4. Save, then refresh your browser.
 
-- Try writing some text in this file using Markdown. 
+   ![User refreshes the site to see the new featured home page image](/assets/images/refresh-site.gif "Refresh")
 
-{:.alert .alert-blue}
-**New to Markdown?** Learn about what Markdown is and check out some learning resources on our [Markdown glossary page](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown).
+> **Save point:** Add featured image
 
-- Practice using example code from our [Feature Includes Bonanza page](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html).
+> **Done when:** your homepage opens with the image you chose.
 
-- Save your changes with Ctrl + S or by clicking File → Save.
+#### More ways to change the look
 
-- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update the About page."
+See [Theme Configuration](https://collectionbuilder.github.io/cb-docs/docs/theme/), [Configuring and Customizing Pages](https://collectionbuilder.github.io/cb-docs/docs/customization/), [Theme Colors](https://collectionbuilder.github.io/cb-docs/docs/customization/config-theme-colors/) and [Adding Custom CSS](https://collectionbuilder.github.io/cb-docs/docs/add-more/custom-css/).
 
-- View your changes by refreshing your site in your browser window. 
+### Write your About page
+{: app="vscode" video="nCK_cuAz66U" badge="Optional"}
 
-## 16. Prep your repository for publishing with GitHub Actions [(Video Version)](https://www.youtube.com/watch?v=3LAtMRoTUx0&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=15){:.text-small}
+1. Open `pages/about.md` and write a few lines in [Markdown](https://collectionbuilder.github.io/cb-docs/docs/glossary/#markdown).
 
-- In this walkthrough, you will be hosting your site on **GitHub Pages** by setting up an alternative build using the **GitHub Actions** feature. Before using GitHub Actions, you have to prepare your repository for this build process.
+2. For ideas, try the examples on the [Feature Includes Bonanza](https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html) page.
 
-- In VS Code, open your **"_config.yml"** file. In the **URL VARIABLES** section, update the `url` and `baseurl` values following this pattern: 
+> **Save point:** Update the About page
 
-```yaml
-URL: https://username.github.io
-baseurl: /repository-name
-```
+> **Done when:** your words show up on the About page of your local site.
 
-For example:
+## Publish it
 
-```yaml
-URL: https://juliastone0729.github.io
-baseurl: /demo-repository
-``` 
+When you finish this part you'll have your collection online at https://your-username.github.io/your-repo/.
 
-{% include feature/image.html img="change-url-variables.gif" alt="Visual Studio Code user types in new URL variables in the config.yml file" border=true width="80%" %}
+### Tell the site where it will live
+{: app="vscode" video="3LAtMRoTUx0"}
 
-- Save your changes with Ctrl + S or by clicking File → Save.
+1. In `_config.yml`, find **URL VARIABLES** and set:
 
-- Follow the same instructions [(from Step 9)](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/#9-commit-your-changes-using-visual-studio-code) to commit your changes in VS Code. Your commit message might be something like, "Update URL variables."
+   ```yaml
+   url: https://your-username.github.io
+   baseurl: /your-repo
+   ```
 
-{:.alert .alert-yellow}
-**Another option for deploying your site:** If you have your own server for hosting your site, you can build the site with Jekyll and then move the files to your web server. This allows for the publishing of CollectionBuilder sites on your own or your organization's web servers. Read our [Building Your Site documentation](https://collectionbuilder.github.io/cb-docs/docs/deploy/build/) for more info. 
+   ![Visual Studio Code user types in new URL variables in the config.yml file](/assets/images/change-url-variables.gif "URL variables")
 
-## 17. Push your changes to GitHub using VS Code [(Video Version)](https://www.youtube.com/watch?v=YXLju-mJX-E&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=16){:.text-small}
+> **Save point:** Update URL variables
 
-- To Push all your committed local changes up to GitHub, click on the **Source Control** icon, i.e. the network icon on the left side, or press Ctrl + Shift + G.
+> **Done when:** your two lines match the ones above, and you've made a save point.
 
-- Then click the blue **Sync Changes** button. This will sync your local changes with the GitHub repository.
+#### Hosting on your own server instead?
 
-{% include feature/image.html img="push-changes.gif" alt="Visual Studio Code user clicks the blue sync changes button to push changes to GitHub" border=true width="80%" %}
+You can build the site yourself and copy the files to any web server.
+See [Building Your Site](https://collectionbuilder.github.io/cb-docs/docs/deploy/build/).
 
-## 18. Publish your site using GitHub Actions [(Video Version)](https://www.youtube.com/watch?v=__iuI5-PBpc&list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ&index=17){:.text-small}
+### Send your save points to GitHub (sync)
+{: app="vscode" video="YXLju-mJX-E"}
 
-- Visit [github.com](https://github.com/) and log into your account.
+1. In **Source Control**, choose the blue **Sync Changes** button.
 
-- Navigate to your repository. Click the **Settings** tab in the top right and then click **Pages** in the left side menu.
+   ![Visual Studio Code user clicks the blue sync changes button to push changes to GitHub](/assets/images/push-changes.gif "Sync Changes")
 
-{% include feature/image.html img="settings-then-pages-csv.gif" alt="GitHub user clicks on Settings and then Pages in the left side menu" border=true width="80%" %}
+> **Done when:** on [github.com/your-username/your-repo](https://github.com/your-username/your-repo), the latest commit message is `Update URL variables`.
 
-- On the **Pages** page, under **Source**, click the dropdown and select **GitHub Actions**.
+### Turn on publishing
+{: app="web" video="__iuI5-PBpc"}
 
-{% include feature/image.html img="github-actions.gif" alt="GitHub user clicks on Source dropdown and then selects GitHub Actions" border=true width="80%" %}
+1. On your repository's page, choose **Settings** → **Pages**.
 
-{:.alert .alert-red}
-**Warning:** Some accounts may have GitHub Actions disabled by default. If you do not see the **Actions** tab in your repository's navigation (in between **Discussions** and **Projects**), it will need to be turned on first. Visit the repository's **Settings**, click on **Actions** in the left side nav menu, select **Allow all actions**, and click **Save**.
+   ![GitHub user clicks on Settings and then Pages in the left side menu](/assets/images/settings-then-pages-csv.gif "Settings → Pages")
 
-- Below the **Source** dropdown, a box will appear under **Use a suggested workflow** titled **Jekyll**. Click the **Configure** button.
+2. Under **Source**, choose **GitHub Actions**.
 
-{% include feature/image.html img="configure-button.gif" alt="GitHub user clicks on the Configure button below the Source dropdown" border=true width="80%" %}
+   ![GitHub user clicks on Source dropdown and then selects GitHub Actions](/assets/images/github-actions.gif "GitHub Actions")
 
-- This will open an editor page creating a new file named **".github/workflows/jekyll.yml"** populated with GitHub's starter Jekyll workflow. 
+3. In the **Jekyll** box, choose **Configure**.
 
-- You can ignore the file and other options displayed on the right side, and just click the green **Commit changes...** button.
+   ![GitHub user clicks on the Configure button below the Source dropdown](/assets/images/configure-button.gif "Configure")
 
-- Write a commit message (e.g., Deploy site) and click the green **Commit changes** button.
+4. A file opens. You don't need to change it. Choose **Commit changes…**, then **Commit changes** again.
 
-{% include feature/image.html img="deploy.gif" alt="GitHub user clicks on the Commit changes button and deploys the site" border=true width="80%" %}
+   ![GitHub user clicks on the Commit changes button and deploys the site](/assets/images/deploy.gif "Commit")
 
-- Committing the action file to your repository will start the build process. It may take a few minutes for it to complete. 
+5. Wait a few minutes. Your address appears under **Settings** → **Pages**.
 
-{:.alert .alert-yellow}
-**Troubleshooting:** If a red "X" appears next to your commit, the build failed, and your updates will not be deployed -- the last working version of the site will still be live. Visit the **Actions** tab to see detailed information about the error to help debug the issue. If the site was building fine on your local computer, this will be unlikely to occur!
+   ![GitHub user clicks on Settings and then Pages to find the live URL](/assets/images/find-live-url.gif "Find your URL")
 
-- Once the action successfully completes, your site will be live. To find the URL you can visit **Settings** and then **Pages**. 
+> **Done when:** [your-username.github.io/your-repo](https://your-username.github.io/your-repo/) shows your collection. From now on, every sync republishes it.
 
-{% include feature/image.html img="find-live-url.gif" alt="GitHub user clicks on Settings and then Pages to find the live URL" border=true width="80%" %}
+#### Something went wrong
 
-- Click on the link to see your published site. 
+- **No Actions tab?** Actions may be turned off for your account. Go to **Settings** → **Actions**, choose **Allow all actions**, and save.
+- **Red ✕ next to your commit?** The build failed, and your last working site is still live. Open the **Actions** tab to read the error.
 
-- Going forward, each time you push or directly commit to the repository, **GitHub Actions** will rebuild the live site.
+## What next?
 
-## 19. Explore potential next steps
+You now have the whole loop: edit on your computer, preview it locally, make a save point, sync, and GitHub publishes.
+Everything else builds on that loop.
 
-Your collection website is complete! To implement additional customization options, your next steps could be:
+- [Swap in your own metadata](https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/)
+- [Add your own image and PDF files](https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/)
+- [Change theme options](https://collectionbuilder.github.io/cb-docs/docs/theme/) and [configure your pages](https://collectionbuilder.github.io/cb-docs/docs/customization/)
+- [Add timelines, cloud pages, and more](https://collectionbuilder.github.io/cb-docs/docs/add-more/)
 
-- [Customizing your theme options](https://collectionbuilder.github.io/cb-docs/docs/theme/)
-
-- [Configuring your pages](https://collectionbuilder.github.io/cb-docs/docs/customization/)
-
-- [Adding more pages](https://collectionbuilder.github.io/cb-docs/docs/pages/add_page/)
-
-If you want to get into more Advanced Options, you could explore:
-
-- [Including a TimelineJS feature](https://collectionbuilder.github.io/cb-docs/docs/add-more/timelinejs/)
-
-- [Creating new cloud pages](https://collectionbuilder.github.io/cb-docs/docs/add-more/cloudpage/)
-
-- [And more advanced customization options!](https://collectionbuilder.github.io/cb-docs/docs/add-more/)
+Stuck anywhere? Ask in the [CollectionBuilder Discussion Forum](https://github.com/orgs/CollectionBuilder/discussions) or email collectionbuilder.team@gmail.com.

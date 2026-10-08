@@ -1,0 +1,818 @@
+<title>CSV Walkthrough Prototype</title>
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Literata:opsz,wght@7..72,500;7..72,650&display=swap">
+<style>
+/* Layout: a sticky "where am I" rail beside one reading column; each step pairs instructions (left) with a media pane (right) when there's room. */
+:root {
+  --paper:      oklch(0.988 0.003 40);
+  --paper-2:    oklch(0.963 0.007 35);
+  --paper-3:    oklch(0.93 0.01 32);
+  --ink:        oklch(0.25 0.014 30);
+  --ink-2:      oklch(0.46 0.014 30);
+  --ink-3:      oklch(0.6 0.012 30);
+  --rule:       oklch(0.89 0.008 30);
+  --red:        oklch(0.52 0.19 25);
+  --red-ink:    oklch(0.47 0.17 25);
+  --red-soft:   oklch(0.955 0.025 25);
+  --done:       oklch(0.5 0.1 158);
+  --done-soft:  oklch(0.95 0.03 158);
+  --caution-soft: oklch(0.96 0.04 85);
+  --caution-ink:  oklch(0.42 0.08 70);
+  --masthead:   oklch(0.16 0.008 30);
+  --masthead-ink: oklch(0.96 0.004 40);
+  --screen:     oklch(0.22 0.01 30);
+  --screen-ink: oklch(0.95 0.005 40);
+
+  --app-web:     oklch(0.45 0.02 260);
+  --app-desktop: oklch(0.5 0.15 300);
+  --app-vscode:  oklch(0.55 0.14 245);
+  --app-term:    oklch(0.42 0.04 150);
+  --app-browser: oklch(0.58 0.13 55);
+  --app-sheets:  oklch(0.55 0.13 150);
+  --app-files:   oklch(0.55 0.03 30);
+
+  --font-display: "Literata", "Iowan Old Style", Georgia, serif;
+  --font-body: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.3rem;
+  --step-2: clamp(1.55rem, 1.3rem + 0.9vw, 1.9rem);
+  --step-3: clamp(2.1rem, 1.6rem + 2vw, 3rem);
+
+  --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px;
+  --space-lg: 24px; --space-xl: 32px; --space-2xl: 48px; --space-3xl: 64px; --space-4xl: 96px;
+  --radius: 6px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: oklch(0.2 0.008 30); --paper-2: oklch(0.24 0.01 30); --paper-3: oklch(0.29 0.012 30);
+    --ink: oklch(0.93 0.006 40); --ink-2: oklch(0.76 0.01 35); --ink-3: oklch(0.62 0.01 35);
+    --rule: oklch(0.33 0.01 30);
+    --red: oklch(0.66 0.17 25); --red-ink: oklch(0.74 0.14 25); --red-soft: oklch(0.29 0.05 25);
+    --done: oklch(0.72 0.12 158); --done-soft: oklch(0.28 0.04 158);
+    --caution-soft: oklch(0.29 0.04 80); --caution-ink: oklch(0.85 0.08 85);
+    --masthead: oklch(0.13 0.006 30); --masthead-ink: oklch(0.95 0.004 40);
+    --screen: oklch(0.14 0.008 30); --screen-ink: oklch(0.94 0.005 40);
+    --app-web: oklch(0.72 0.03 260); --app-desktop: oklch(0.72 0.13 300); --app-vscode: oklch(0.72 0.12 245);
+    --app-term: oklch(0.72 0.08 150); --app-browser: oklch(0.76 0.12 60); --app-sheets: oklch(0.74 0.12 150); --app-files: oklch(0.72 0.03 40);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: oklch(0.2 0.008 30); --paper-2: oklch(0.24 0.01 30); --paper-3: oklch(0.29 0.012 30);
+  --ink: oklch(0.93 0.006 40); --ink-2: oklch(0.76 0.01 35); --ink-3: oklch(0.62 0.01 35);
+  --rule: oklch(0.33 0.01 30);
+  --red: oklch(0.66 0.17 25); --red-ink: oklch(0.74 0.14 25); --red-soft: oklch(0.29 0.05 25);
+  --done: oklch(0.72 0.12 158); --done-soft: oklch(0.28 0.04 158);
+  --caution-soft: oklch(0.29 0.04 80); --caution-ink: oklch(0.85 0.08 85);
+  --masthead: oklch(0.13 0.006 30); --masthead-ink: oklch(0.95 0.004 40);
+  --screen: oklch(0.14 0.008 30); --screen-ink: oklch(0.94 0.005 40);
+  --app-web: oklch(0.72 0.03 260); --app-desktop: oklch(0.72 0.13 300); --app-vscode: oklch(0.72 0.12 245);
+  --app-term: oklch(0.72 0.08 150); --app-browser: oklch(0.76 0.12 60); --app-sheets: oklch(0.74 0.12 150); --app-files: oklch(0.72 0.03 40);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--space-lg); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: var(--step-0); line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--red-ink); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; border-radius: 3px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 650; line-height: 1.15; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+code, .code { font-family: var(--font-mono); font-size: 0.92em; }
+:not(pre) > code { background: var(--paper-3); padding: 0.05em 0.35em; border-radius: 4px; overflow-wrap: anywhere; }
+.ui { font-weight: 700; white-space: nowrap; }
+kbd { font-family: var(--font-mono); font-size: 0.85em; border: 1px solid var(--rule); border-bottom-width: 2px; border-radius: 4px; padding: 0 0.35em; background: var(--paper); }
+button { font: inherit; color: inherit; cursor: pointer; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Masthead */
+.masthead { background: var(--masthead); color: var(--masthead-ink); padding: var(--space-sm) var(--space-md); }
+.masthead-inner { max-width: 84rem; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); flex-wrap: wrap; }
+.brand { font-family: var(--font-display); font-weight: 650; font-size: 1.05rem; letter-spacing: 0.01em; display: flex; align-items: center; gap: var(--space-xs); }
+.brand-mark { width: 14px; height: 14px; background: var(--red); border-radius: 2px; display: inline-block; }
+.proto-tag { font-size: var(--step--1); color: var(--masthead-ink); opacity: 0.8; }
+.proto-tag a { color: inherit; }
+
+/* Page */
+.page { max-width: 84rem; margin: 0 auto; padding-inline: var(--space-md); display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+@media (min-width: 64rem) { .page { grid-template-columns: 15.5rem minmax(0, 1fr); padding-inline: var(--space-xl); } }
+main { min-width: 0; padding-bottom: var(--space-4xl); }
+
+/* Intro */
+.intro { padding-block: var(--space-2xl) var(--space-xl); display: grid; gap: var(--space-lg); max-width: 46rem; }
+.eyebrow { font-size: var(--step--1); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red-ink); }
+.intro h1 { font-size: var(--step-3); letter-spacing: -0.01em; }
+.lede { font-size: 1.15rem; color: var(--ink-2); max-width: 40rem; }
+.facts { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-xl); margin: 0; padding: 0; list-style: none; font-size: var(--step--1); color: var(--ink-2); }
+.facts b { color: var(--ink); }
+
+/* Setup panel: learning mode + your values */
+.setup { display: grid; gap: var(--space-xl); grid-template-columns: minmax(0, 1fr); padding: var(--space-lg); background: var(--paper-2); border-radius: var(--radius); margin-bottom: var(--space-3xl); }
+@media (min-width: 52rem) { .setup { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); } }
+.setup h2 { font-size: var(--step-1); margin-bottom: var(--space-xs); }
+.setup .help { font-size: var(--step--1); color: var(--ink-2); margin-bottom: var(--space-md); max-width: 34rem; }
+.mode-switch { display: inline-grid; grid-template-columns: 1fr 1fr; background: var(--paper); border: 1px solid var(--rule); border-radius: 999px; padding: 3px; gap: 2px; }
+.mode-switch button { border: 0; background: transparent; padding: var(--space-xs) var(--space-md); border-radius: 999px; font-weight: 600; color: var(--ink-2); display: inline-flex; gap: var(--space-xs); align-items: center; justify-content: center; transition: background-color 200ms var(--ease-out), color 200ms var(--ease-out); }
+.mode-switch button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.playlist-link { display: inline-flex; margin-top: var(--space-md); font-size: var(--step--1); font-weight: 600; }
+.fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: var(--space-md); }
+.field { display: grid; gap: var(--space-2xs); }
+.field label { font-weight: 600; font-size: var(--step--1); }
+.field input { font: inherit; font-family: var(--font-mono); font-size: 1rem; padding: var(--space-xs) var(--space-sm); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); color: var(--ink); width: 100%; }
+.field input:focus { outline: 2px solid var(--red); outline-offset: 0; border-color: transparent; }
+.field small { color: var(--ink-3); font-size: 0.8rem; }
+.preview-url { margin-top: var(--space-md); font-size: var(--step--1); color: var(--ink-2); overflow-wrap: anywhere; }
+.preview-url code { color: var(--ink); }
+
+/* Rail */
+.rail { min-width: 0; }
+@media (min-width: 64rem) {
+  .rail-inner { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--space-lg)); max-height: calc(100vh - var(--space-2xl)); overflow-y: auto; padding-block: var(--space-2xl) var(--space-lg); padding-right: var(--space-xs); }
+}
+.progress { display: grid; gap: var(--space-xs); margin-bottom: var(--space-lg); }
+.progress-label { font-size: var(--step--1); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.progress-label b { color: var(--ink); }
+.meter { height: 6px; background: var(--paper-3); border-radius: 99px; overflow: hidden; }
+.meter span { display: block; height: 100%; width: 100%; background: var(--done); border-radius: inherit; transform-origin: left; transform: scaleX(0); transition: transform 500ms var(--ease-out); }
+.rail details > summary { list-style: none; cursor: pointer; font-weight: 700; font-size: var(--step--1); padding: var(--space-sm) var(--space-md); border: 1px solid var(--rule); border-radius: var(--radius); display: flex; justify-content: space-between; }
+.rail details > summary::-webkit-details-marker { display: none; }
+.rail details > summary::after { content: "Show"; font-weight: 400; color: var(--ink-2); }
+.rail details[open] > summary::after { content: "Hide"; }
+@media (min-width: 64rem) { .rail details > summary { display: none; } }
+.rail-mobile-bar { padding-top: var(--space-lg); }
+@media (min-width: 64rem) { .rail-mobile-bar { padding-top: 0; } }
+.toc { list-style: none; margin: var(--space-md) 0 0; padding: 0; display: grid; gap: var(--space-lg); }
+@media (min-width: 64rem) { .toc { margin-top: 0; } }
+.toc-part > span { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: var(--space-2xs); }
+.toc-part ol { list-style: none; margin: 0; padding: 0; display: grid; }
+.toc a { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: var(--space-xs); align-items: baseline; padding: 5px var(--space-xs); border-radius: 4px; color: var(--ink-2); text-decoration: none; font-size: 0.92rem; line-height: 1.35; }
+.toc a:hover { background: var(--paper-2); color: var(--ink); }
+.toc a[aria-current="step"] { background: var(--red-soft); color: var(--ink); font-weight: 600; }
+.toc .num { font-variant-numeric: tabular-nums; color: var(--ink-3); font-size: 0.8rem; text-align: right; }
+.toc a.is-done .num { color: var(--done); font-weight: 700; }
+.toc a.is-done .num::before { content: "✓"; }
+.toc a.is-done .num span { display: none; }
+.rail-foot { margin-top: var(--space-xl); font-size: 0.8rem; color: var(--ink-3); display: grid; gap: var(--space-xs); }
+.linklike { background: none; border: 0; padding: 0; color: var(--ink-2); text-decoration: underline; text-underline-offset: 0.18em; font-size: inherit; justify-self: start; }
+
+/* Parts */
+.part { display: grid; gap: var(--space-2xl); margin-bottom: var(--space-4xl); }
+.part-head { display: grid; gap: var(--space-xs); padding-top: var(--space-lg); border-top: 2px solid var(--ink); max-width: 46rem; }
+.part-head .eyebrow { color: var(--ink-3); }
+.part-head h2 { font-size: var(--step-2); }
+.part-head .outcome { color: var(--ink-2); }
+.part-head .outcome b { color: var(--ink); font-weight: 600; }
+
+/* Step */
+.step { container-type: inline-size; scroll-margin-top: var(--space-lg); }
+.step-grid { display: grid; gap: var(--space-lg); grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 50rem) {
+  .step-grid { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: var(--space-xl); align-items: start; }
+  .step-media { position: sticky; top: var(--space-lg); }
+}
+.step-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--space-xs) var(--space-md); align-items: start; margin-bottom: var(--space-md); }
+.step-num { font-family: var(--font-display); font-size: var(--step-1); font-weight: 650; width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; border: 1.5px solid var(--ink); font-variant-numeric: tabular-nums; transition: background-color 300ms var(--ease-out), border-color 300ms var(--ease-out), color 300ms; }
+.step.is-done .step-num { background: var(--done); border-color: var(--done); color: var(--paper); }
+.step-title { display: grid; gap: var(--space-2xs); }
+.step-title h3 { font-size: var(--step-1); padding-top: 0.25rem; }
+.where { display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-xs); align-items: center; font-size: 0.8rem; color: var(--ink-2); }
+.app { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--ink); white-space: nowrap; }
+.app::before { content: ""; width: 9px; height: 9px; border-radius: 2px; background: var(--c, var(--ink-3)); }
+.app[data-app="web"] { --c: var(--app-web); }
+.app[data-app="desktop"] { --c: var(--app-desktop); }
+.app[data-app="vscode"] { --c: var(--app-vscode); }
+.app[data-app="term"] { --c: var(--app-term); }
+.app[data-app="browser"] { --c: var(--app-browser); }
+.app[data-app="sheets"] { --c: var(--app-sheets); }
+.app[data-app="files"] { --c: var(--app-files); }
+.where .arrow { color: var(--ink-3); }
+.badge { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 1px 7px; border-radius: 99px; background: var(--paper-3); color: var(--ink-2); }
+
+.step-body { display: grid; gap: var(--space-md); }
+.step-body > p { max-width: 38rem; color: var(--ink-2); }
+.actions { margin: 0; padding: 0; list-style: none; counter-reset: act; display: grid; gap: var(--space-sm); }
+.actions > li { counter-increment: act; display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); gap: var(--space-xs); max-width: 38rem; }
+.actions > li::before { content: counter(act, lower-alpha); font-weight: 700; color: var(--ink-3); font-size: 0.9rem; padding-top: 0.1rem; }
+.actions .act-text { display: grid; gap: var(--space-xs); min-width: 0; }
+.show-me { justify-self: start; background: none; border: 0; padding: 0; color: var(--red-ink); font-size: var(--step--1); font-weight: 600; display: inline-flex; gap: 6px; align-items: center; }
+.show-me::before { content: ""; width: 0; height: 0; border-left: 7px solid currentColor; border-top: 4.5px solid transparent; border-bottom: 4.5px solid transparent; }
+.show-me:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+.show-me[aria-current="true"] { color: var(--ink); }
+
+.snippet { position: relative; background: var(--paper-2); border: 1px solid var(--rule); border-radius: var(--radius); display: flex; align-items: stretch; min-width: 0; }
+.snippet pre { margin: 0; padding: var(--space-sm) var(--space-md); overflow-x: auto; flex: 1; min-width: 0; font-family: var(--font-mono); font-size: 0.92rem; line-height: 1.5; }
+.snippet .k { color: var(--ink-2); }
+.snippet [data-v] { color: var(--red-ink); font-weight: 600; }
+.copy { border: 0; border-left: 1px solid var(--rule); background: transparent; padding: 0 var(--space-md); font-size: 0.8rem; font-weight: 600; color: var(--ink-2); border-radius: 0 var(--radius) var(--radius) 0; }
+.copy:hover { background: var(--paper-3); color: var(--ink); }
+
+.careful { background: var(--caution-soft); color: var(--ink); border-radius: var(--radius); padding: var(--space-sm) var(--space-md); max-width: 38rem; display: grid; gap: 2px; font-size: 0.97rem; }
+.careful b:first-child { color: var(--caution-ink); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+
+.checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; max-width: 38rem; }
+.checklist label { display: grid; grid-template-columns: 1.25rem minmax(0,1fr); gap: var(--space-sm); align-items: start; padding: 6px var(--space-xs); border-radius: 4px; cursor: pointer; }
+.checklist label:hover { background: var(--paper-2); }
+.checklist input { width: 1.05rem; height: 1.05rem; margin-top: 0.25rem; accent-color: var(--done); }
+.checklist .opt { color: var(--ink-3); font-size: 0.85rem; }
+
+.checkpoint { margin-top: var(--space-xs); display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-sm); padding: var(--space-md); border: 1px solid var(--rule); border-radius: var(--radius); max-width: 38rem; transition: background-color 300ms var(--ease-out), border-color 300ms; }
+.step.is-done .checkpoint { background: var(--done-soft); border-color: transparent; }
+.checkpoint .label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.step.is-done .checkpoint .label { color: var(--done); }
+.checkpoint p { color: var(--ink); }
+.done-btn { justify-self: start; display: inline-flex; gap: var(--space-xs); align-items: center; border: 1.5px solid var(--ink); background: var(--paper); padding: 6px var(--space-md); border-radius: 99px; font-weight: 700; font-size: 0.92rem; transition: background-color 200ms, color 200ms, border-color 200ms; }
+.done-btn::before { content: ""; width: 0.95rem; height: 0.95rem; border: 1.5px solid currentColor; border-radius: 50%; }
+.done-btn[aria-pressed="true"] { background: var(--done); border-color: var(--done); color: var(--paper); }
+.done-btn[aria-pressed="true"]::before { content: "✓"; border: 0; font-size: 0.9rem; line-height: 0.95rem; text-align: center; }
+
+.savepoint { display: grid; gap: var(--space-xs); padding: var(--space-sm) var(--space-md); background: var(--paper-2); border-radius: var(--radius); max-width: 38rem; }
+.savepoint-head { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-sm); align-items: baseline; }
+.savepoint-head .label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--app-vscode); }
+.savepoint details summary { cursor: pointer; font-size: var(--step--1); color: var(--ink-2); }
+.savepoint details ol { margin: var(--space-xs) 0 0; padding-left: 1.25rem; font-size: 0.95rem; display: grid; gap: 4px; }
+
+details.more { max-width: 38rem; border-top: 1px solid var(--rule); }
+details.more > summary { cursor: pointer; padding: var(--space-sm) 0; font-weight: 600; font-size: 0.95rem; color: var(--ink-2); list-style: none; display: flex; gap: var(--space-xs); align-items: center; }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::before { content: "+"; font-family: var(--font-mono); width: 1rem; color: var(--ink-3); }
+details.more[open] > summary::before { content: "−"; }
+details.more > div { padding: 0 0 var(--space-md) 1.5rem; display: grid; gap: var(--space-sm); font-size: 0.97rem; }
+details.more ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 6px; }
+
+/* Media pane */
+.step-media { display: grid; gap: var(--space-xs); min-width: 0; }
+.media-tabs { display: flex; gap: 2px; flex-wrap: wrap; font-size: 0.82rem; }
+.media-tabs button { border: 0; background: transparent; padding: 4px var(--space-sm); border-radius: 99px; color: var(--ink-2); font-weight: 600; }
+.media-tabs button:hover { background: var(--paper-2); }
+.media-tabs button[aria-selected="true"] { background: var(--paper-3); color: var(--ink); }
+.screen { position: relative; background: var(--screen); border-radius: var(--radius); overflow: hidden; max-width: 100%; }
+.clip { position: relative; display: block; width: 100%; max-width: 100%; border: 0; padding: 0; background: var(--screen); cursor: pointer; }
+.clip canvas, .clip img { display: block; width: 100%; height: 100%; object-fit: contain; position: absolute; inset: 0; }
+.clip .loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--screen-ink); opacity: 0.6; font-size: 0.85rem; }
+.clip.ready .loading { display: none; }
+.clip .playbar { position: absolute; left: var(--space-sm); bottom: var(--space-sm); display: inline-flex; align-items: center; gap: var(--space-xs); background: oklch(0.16 0.008 30 / 0.85); color: oklch(0.97 0.004 40); padding: 6px 12px 6px 10px; border-radius: 99px; font-size: 0.8rem; font-weight: 700; transition: transform 200ms var(--ease-out), background-color 200ms; }
+.clip:hover .playbar { transform: translateY(-2px); background: oklch(0.52 0.19 25 / 0.95); }
+.clip .playbar i { width: 0; height: 0; border-left: 9px solid currentColor; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+.clip.playing .playbar i { border: 0; width: 9px; height: 10px; background: currentColor; border-radius: 1px; }
+.clip-caption { font-size: 0.82rem; color: var(--ink-2); display: flex; justify-content: space-between; gap: var(--space-sm); flex-wrap: wrap; }
+.clip-caption a { color: var(--ink-2); }
+
+.video-card { display: grid; align-content: space-between; gap: var(--space-lg); aspect-ratio: 16 / 9; max-width: 100%; padding: var(--space-lg); background: var(--screen); color: var(--screen-ink); text-decoration: none; border-radius: var(--radius); position: relative; overflow: hidden; }
+.video-card::after { content: ""; position: absolute; right: -10%; bottom: -30%; width: 60%; aspect-ratio: 1; border-radius: 50%; border: 1px solid oklch(0.95 0.005 40 / 0.08); box-shadow: 0 0 0 30px oklch(0.95 0.005 40 / 0.03), 0 0 0 60px oklch(0.95 0.005 40 / 0.02); }
+.video-card .vc-top { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; opacity: 0.7; }
+.video-card .vc-title { font-family: var(--font-display); font-size: clamp(1.1rem, 2.4cqi, 1.45rem); line-height: 1.2; max-width: 22ch; }
+.video-card .vc-play { display: inline-flex; align-items: center; gap: var(--space-sm); font-weight: 700; font-size: 0.9rem; }
+.video-card .vc-play i { width: 44px; height: 44px; border-radius: 50%; background: oklch(0.52 0.19 25); display: grid; place-items: center; transition: transform 250ms var(--ease-out); }
+.video-card .vc-play i::before { content: ""; margin-left: 3px; border-left: 12px solid oklch(0.98 0.003 40); border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+.video-card:hover .vc-play i { transform: scale(1.08); }
+.video-frame { aspect-ratio: 16 / 9; width: 100%; border: 0; border-radius: var(--radius); background: var(--screen); display: block; }
+
+/* Asides, next steps, notes */
+.aside-note { max-width: 46rem; padding: var(--space-md) var(--space-lg); background: var(--paper-2); border-radius: var(--radius); display: grid; gap: var(--space-xs); }
+.aside-note h3 { font-size: 1.05rem; }
+.aside-note p { color: var(--ink-2); font-size: 0.97rem; }
+.finish { max-width: 46rem; display: grid; gap: var(--space-md); }
+.finish h2 { font-size: var(--step-2); }
+.finish ul { margin: 0; padding-left: 1.2rem; display: grid; gap: 6px; }
+.notes { margin-top: var(--space-4xl); padding-top: var(--space-xl); border-top: 1px dashed var(--rule); max-width: 46rem; display: grid; gap: var(--space-md); font-size: 0.97rem; }
+.notes h2 { font-size: var(--step-1); }
+.notes dl { margin: 0; display: grid; gap: var(--space-md); }
+.notes dt { font-weight: 700; }
+.notes dd { margin: 0; color: var(--ink-2); }
+
+.toast { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + var(--space-lg)); transform: translate(-50%, 150%); background: var(--ink); color: var(--paper); padding: var(--space-xs) var(--space-md); border-radius: 99px; font-size: 0.9rem; font-weight: 600; transition: transform 350ms var(--ease-out); pointer-events: none; z-index: 10; }
+.toast.show { transform: translate(-50%, 0); }
+</style>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <span class="brand"><span class="brand-mark" aria-hidden="true"></span>CollectionBuilder Docs</span>
+    <span class="proto-tag">Walkthrough prototype · <a href="#notes">What changed and why</a></span>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="rail" aria-label="Walkthrough steps">
+    <div class="rail-inner">
+      <div class="rail-mobile-bar">
+        <div class="progress">
+          <span class="progress-label" id="progress-label"><b>0</b> of 17 steps done</span>
+          <div class="meter" aria-hidden="true"><span id="meter"></span></div>
+        </div>
+        <details id="toc-details">
+          <summary>All steps</summary>
+          <ol class="toc" id="toc"></ol>
+        </details>
+      </div>
+      <div class="rail-foot">
+        <span>Your progress is saved in this browser.</span>
+        <button class="linklike" id="reset" type="button">Reset progress</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="intro">
+      <span class="eyebrow">Walkthrough · CollectionBuilder-CSV</span>
+      <h1>Build your first collection website</h1>
+      <p class="lede">You'll take a sample of real archival metadata from the University of Idaho's <a href="https://www.lib.uidaho.edu/digital/psychiana/">Psychiana Digital Collection</a> and turn it into a working, published collection site. You'll work in five places on your computer, and each step says which one.</p>
+      <ul class="facts">
+        <li><b>17 steps</b> in 5 parts</li>
+        <li>Plan for <b>one or two sittings</b></li>
+        <li>Needs a computer where you can <b>install software</b></li>
+      </ul>
+    </section>
+
+    <section class="setup" aria-label="Set up this walkthrough">
+      <div>
+        <h2>How do you like to learn?</h2>
+        <p class="help">Every step has both a short video and written steps with screen clips. Choose which one you see first. You can switch on any step.</p>
+        <div class="mode-switch" role="group" aria-label="Learning mode">
+          <button type="button" data-mode="read" aria-pressed="true">Read and look</button>
+          <button type="button" data-mode="watch" aria-pressed="false">Watch videos</button>
+        </div>
+        <br>
+        <a class="playlist-link" href="https://www.youtube.com/playlist?list=PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ">Or watch the whole series on YouTube (17 videos) ↗</a>
+      </div>
+      <div>
+        <h2>Your project</h2>
+        <p class="help">Fill these in once and every command and setting below will use your names. You can copy them as they are.</p>
+        <div class="fields">
+          <div class="field">
+            <label for="gh-user">GitHub username</label>
+            <input id="gh-user" type="text" autocomplete="off" spellcheck="false" placeholder="your-username">
+            <small>The name you sign in to GitHub with</small>
+          </div>
+          <div class="field">
+            <label for="gh-repo">Repository name</label>
+            <input id="gh-repo" type="text" autocomplete="off" spellcheck="false" placeholder="demo-collection">
+            <small>Lowercase, no spaces. We'll tidy it for you.</small>
+          </div>
+        </div>
+        <p class="preview-url">Your finished site will live at <code><span data-v="liveurl"></span></code></p>
+      </div>
+    </section>
+
+    <div id="parts"></div>
+
+    <section class="finish" id="finish">
+      <h2>Your collection is live. What next?</h2>
+      <p>You now have the whole loop: edit on your computer, preview locally, make a save point, sync, and GitHub publishes. Everything else builds on that loop.</p>
+      <ul>
+        <li><a href="https://collectionbuilder.github.io/cb-docs/docs/metadata/csv_metadata/">Swap in your own metadata</a></li>
+        <li><a href="https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/derivatives-walkthrough/">Add your own image and PDF files</a></li>
+        <li><a href="https://collectionbuilder.github.io/cb-docs/docs/theme/">Change theme options</a> and <a href="https://collectionbuilder.github.io/cb-docs/docs/customization/">configure your pages</a></li>
+        <li><a href="https://collectionbuilder.github.io/cb-docs/docs/add-more/">Add timelines, cloud pages, and more</a></li>
+      </ul>
+      <p>Stuck anywhere? Ask in the <a href="https://github.com/orgs/CollectionBuilder/discussions">CollectionBuilder Discussion Forum</a> or email the team at <code>collectionbuilder.team@gmail.com</code>.</p>
+    </section>
+
+    <section class="notes" id="notes">
+      <h2>About this prototype</h2>
+      <p>This is a working draft for the docs team. It covers the same content as the <a href="https://collectionbuilder.github.io/cb-docs/docs/walkthroughs/csv-walkthrough/">current CSV walkthrough</a>, reorganized around how someone working alone actually moves through it.</p>
+      <dl>
+        <dt>Five parts instead of nineteen equal headings</dt>
+        <dd>Each part opens by saying what you'll have when it's done. The old step 6 ("add objects, if necessary") was mostly a skip, so it's now a note.</dd>
+        <dt>Each step names its app</dt>
+        <dd>The walkthrough moves between GitHub.com, GitHub Desktop, VS Code, the terminal, and the browser. The coloured label under each title shows where to look.</dd>
+        <dt>Screen clips start paused</dt>
+        <dd>The GIFs are the same files, but each one shows its first frame until you press play. Actions with a clip get a "Show me" link that plays it, so the picture matches the sentence you're reading.</dd>
+        <dt>Video is a choice, not a footnote</dt>
+        <dd>The mode switch at the top decides whether each step opens on its video or its clips, and it's remembered. On the docs site the video plays in place. In this preview it links to YouTube, because the preview can't embed other sites.</dd>
+        <dt>"You're done when…" checkpoints</dt>
+        <dd>Every step ends with something you can see that confirms it worked. Marking a step done fills in the progress rail.</dd>
+        <dt>Your names, filled in</dt>
+        <dd>Commands and settings use the username and repository name you enter, so nobody has to translate <code>username.github.io</code> by hand.</dd>
+        <dt>Save points</dt>
+        <dd>Committing is taught once in step 9. After that it appears as a short "Save point" with a suggested message and the steps tucked inside, instead of a link back up the page.</dd>
+      </dl>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  const PLAYLIST = "PLt9zT3xACQo6aLD8ayLFOGp5T_mEw3tMQ";
+  const MEDIA = "media/";
+  const DOCS = "https://collectionbuilder.github.io/cb-docs/docs/";
+  // Inline embeds work on the docs site; artifact previews can't frame other sites, so they link out.
+  const CAN_EMBED = !/claude|anthropic/.test(location.hostname) && location.protocol !== "file:";
+
+  const v = (k) => `<span data-v="${k}"></span>`;
+  const ui = (t) => `<span class="ui">${t}</span>`;
+  const code = (lines) => `<div class="snippet"><pre><code>${lines}</code></pre><button class="copy" type="button">Copy</button></div>`;
+  const clip = (file, w, h, label) => ({ file, w, h, label });
+
+  const PARTS = [
+    { title: "Get set up", outcome: "a GitHub account, and the free software CollectionBuilder uses installed on your computer.", steps: [
+      { id: "account", title: "Create a GitHub account", where: [["web", "GitHub.com"]], video: "zNp6bqBDRr0",
+        actions: [
+          { html: `Go to <a href="https://github.com/signup">github.com/signup</a> and create an account. The free plan is all you need.` },
+          { html: `Open the email GitHub sends you and verify your address.` }],
+        done: `You can sign in at github.com, and your username is in the top-right menu.` },
+      { id: "software", title: "Install the software", where: [["files", "Your computer"]], video: "cvYQiJBHo3k",
+        intro: `This takes the longest. Each link opens our install guide for that tool. Tick them off as you go.`,
+        checklist: [
+          ["Git", "software/git/"], ["GitHub Desktop", "software/git/#install-github-desktop"], ["Visual Studio Code (VS Code)", "software/texteditor/"],
+          ["Ruby", "software/ruby/"], ["Jekyll", "software/jekyll/"], ["ImageMagick and Ghostscript", "software/optional/#imagemagick-and-ghostscript", "Optional. Only needed for making your own image derivatives."]],
+        done: `In a terminal, <code>ruby -v</code> and <code>jekyll -v</code> each print a version number.`,
+        trouble: `<ul><li>Search for the exact error message you see. Include the whole line in quotes.</li><li>Each install guide has a troubleshooting section for common problems.</li><li>Still stuck? Post in the <a href="https://github.com/orgs/CollectionBuilder/discussions">Discussion Forum</a> or email <code>collectionbuilder.team@gmail.com</code>.</li></ul>` }]},
+
+    { title: "Make your own copy", outcome: "your own copy of the CollectionBuilder-CSV template, on GitHub and on your computer, open in VS Code.", steps: [
+      { id: "repo", title: "Create your repository from the template", where: [["web", "GitHub.com"]], video: "sjwhM7wGNYs",
+        actions: [
+          { html: `Make sure you're signed in, then open the <a href="https://github.com/CollectionBuilder/collectionbuilder-csv">collectionbuilder-csv template</a>.` },
+          { html: `Choose ${ui("Use this template")}, then ${ui("Create a new repository")}.`, clip: 0 },
+          { html: `Leave it ${ui("Public")}. Name it <code>${v("repo")}</code>, then choose ${ui("Create repository from template")}.`, clip: 1 }],
+        clips: [clip("use-csv-template.gif", 948, 470, "Use this template"), clip("create-repo-csv.gif", 818, 588, "Name and create")],
+        done: `Your browser shows <code>github.com/${v("user")}/${v("repo")}</code> with a list of files.` },
+      { id: "clone", title: "Copy it to your computer (clone)", where: [["web", "GitHub.com"], ["desktop", "GitHub Desktop"]], video: "OdHfBF0doN4",
+        actions: [
+          { html: `On your repository's page, choose the green ${ui("Code")} button, then ${ui("Open with GitHub Desktop")}.`, clip: 0 },
+          { html: `GitHub Desktop opens and asks where to save it. Keep the suggested folder (Documents/GitHub) and choose ${ui("Clone")}.`, clip: 1 }],
+        clips: [clip("clone-launch-repo.gif", 648, 406, "Open with GitHub Desktop"), clip("clone-demo.gif", 958, 634, "Clone")],
+        done: `GitHub Desktop shows <code>${v("repo")}</code> under ${ui("Current Repository")} in the top left.`,
+        more: { title: "Good to know: Fetch, Pull and Push", html: `<p>The button at the top right of GitHub Desktop keeps your computer and GitHub in sync. <b>Fetch</b> checks for changes, <b>Pull</b> brings them down, and <b>Push</b> sends yours up. If you work on more than one computer, fetch and pull before you start.</p>` }},
+      { id: "open", title: "Open the project in VS Code", where: [["desktop", "GitHub Desktop"], ["vscode", "VS Code"]], video: "q4VBBUcwZpY",
+        actions: [
+          { html: `Check that ${ui("Current Repository")} says <code>${v("repo")}</code>.` },
+          { html: `From the menu bar, choose ${ui("Repository")} → ${ui("Open in Visual Studio Code")}.`, clip: 0 }],
+        clips: [clip("open-repository-menu.gif", 958, 650, "Repository menu"), clip("open-vs-code.gif", 1056, 738, "Or use the button")],
+        done: `VS Code opens with <code>${v("repoUpper")}</code> at the top of the file list on the left.` }]},
+
+    { title: "Add your metadata", outcome: "the collection's metadata in your project, and the site set up to use it.",
+      note: { title: "No image files needed for this demo", html: `The demo metadata links to images and media that are already online, so you won't add any object files. When you build with your own collection, the <a href="${DOCS}walkthroughs/derivatives-walkthrough/">Object Derivatives walkthrough</a> shows how. <a href="https://www.youtube.com/watch?v=xgSnRN4aT9Q&list=${PLAYLIST}">Video ↗</a>` },
+      steps: [
+      { id: "download", title: "Get the demo metadata as a CSV", where: [["sheets", "Google Sheets"], ["files", "Your computer"]], video: "qG-7WtUtR4A",
+        actions: [
+          { html: `Make your own copy of the <a href="https://docs.google.com/spreadsheets/d/1U_DAC_YW_ryoJ2Ub6gEqxMXh3Y6xrDUIUbKjFqhBTsM/copy">Psychiana demo metadata</a>.` },
+          { html: `In your copy, choose ${ui("File")} → ${ui("Download")} → ${ui("Comma Separated Values (.csv)")}.`, clip: 0 },
+          { html: `Find the file in your Downloads folder. Without opening it, rename it to <code>${v("repo")}.csv</code>.` }],
+        careful: `Don't open the CSV in Excel. If Excel saves it, special characters will display wrongly on your site. It's super annoying! We know!`,
+        clips: [clip("download-csv-metadata.gif", 738, 504, "Download as CSV")],
+        done: `Your Downloads folder has a file named <code>${v("repo")}.csv</code>.` },
+      { id: "upload", title: "Add the CSV to your project", where: [["files", "Your computer"], ["vscode", "VS Code"]], video: "u9WEx_nOBtM",
+        actions: [
+          { html: `In VS Code's file list, click the <code>_data</code> folder to open it.`, clip: 0 },
+          { html: `Drag <code>${v("repo")}.csv</code> from your Downloads folder onto <code>_data</code>.`, clip: 1 }],
+        clips: [clip("open-data-folder-vscode.gif", 738, 504, "Open _data"), clip("drag-metadata.gif", 600, 504, "Drag the file in")],
+        done: `<code>${v("repo")}.csv</code> appears inside <code>_data</code> in the file list.` },
+      { id: "commit", title: "Make a save point (commit)", where: [["vscode", "VS Code"]], video: "h8mt9i6JoEI",
+        intro: `A commit is a save point for your project. You'll make one after every change from here on, so this step is worth learning well.`,
+        actions: [
+          { html: `Open ${ui("Source Control")}. It's the branching icon in the left bar, or press <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>G</kbd>.`, clip: 0 },
+          { html: `Hover over ${ui("Changes")} and choose the ${ui("+")} to stage everything.` },
+          { html: `Type a short message, like <code>Add metadata</code>, and choose ${ui("Commit")}.`, clip: 1 }],
+        clips: [clip("click-source-control.gif", 656, 500, "Source Control"), clip("commit-csv.gif", 656, 500, "Stage and commit")],
+        done: `The ${ui("Changes")} list is empty.` },
+      { id: "config", title: "Point the site at your metadata", where: [["vscode", "VS Code"]], video: "9K52tsTQq0o",
+        actions: [
+          { html: `Open <code>_config.yml</code>. Under ${ui("COLLECTION SETTINGS")}, set <code>metadata</code> to your file name without <code>.csv</code>:`, after: code(`<span class="k">metadata:</span> ${v("repo")}`), clip: 0 },
+          { html: `Under ${ui("SITE SETTINGS")}, give your site a title:`, after: code(`<span class="k">title:</span> ${v("title")}`), clip: 1 },
+          { html: `If you like, also fill in <code>tagline</code>, <code>description</code> and <code>author</code>. Then save with <kbd>Ctrl</kbd>/<kbd>⌘</kbd> <kbd>S</kbd>.` }],
+        clips: [clip("change-metadata-file.gif", 800, 468, "Set metadata"), clip("change-title.gif", 804, 502, "Set title")],
+        save: "Update site settings",
+        done: `Both lines match yours, and the <code>_config.yml</code> tab has no unsaved dot.`,
+        more: { title: "What else is in _config.yml?", html: `<p>Everything about how your site is built. See the <a href="${DOCS}config/">Site Config docs</a>.</p>` }}]},
+
+    { title: "See it on your computer", outcome: "your collection site running in your own browser, before anyone else can see it.", steps: [
+      { id: "terminal", title: "Open the terminal", where: [["vscode", "VS Code"]], video: "UH7JVpUZOoU",
+        actions: [{ html: `From the menu bar, choose ${ui("Terminal")} → ${ui("New Terminal")}.`, clip: 0 }],
+        clips: [clip("newterminal.gif", 640, 508, "New Terminal")],
+        done: `A terminal panel opens at the bottom, and the line ends with <code>${v("repo")}</code>.` },
+      { id: "bundle", title: "Install the project's tools", badge: "First time only", where: [["term", "Terminal"]], video: "iEsEy3Zf3Vo",
+        actions: [{ html: `Type this and press <kbd>Enter</kbd>:`, after: code(`bundle install`), clip: 0 },
+          { html: `A lot of text scrolls past. That's normal. Wait for the prompt to come back.` }],
+        clips: [clip("bundle-install.gif", 640, 226, "bundle install")],
+        done: `The terminal says <code>Bundle complete!</code> and you can type again.`,
+        trouble: `<p>Errors here are almost always about Ruby. Revisit the <a href="${DOCS}software/ruby/">Ruby install guide</a> and its troubleshooting notes.</p>` },
+      { id: "serve", title: "Start your site", where: [["term", "Terminal"], ["browser", "Browser"]], video: "Shqm2Uwk4K8",
+        actions: [
+          { html: `Type this and press <kbd>Enter</kbd>:`, after: code(`bundle exec jekyll s`), clip: 0 },
+          { html: `Wait for <code>Server address: http://127.0.0.1:4000/</code>. Hold <kbd>Ctrl</kbd>/<kbd>⌘</kbd> and click it.`, clip: 1 }],
+        clips: [clip("bundle-exec-jekyll-s.gif", 928, 318, "Start the server"), clip("open-csv-site.gif", 1920, 1080, "Open in browser")],
+        done: `Your browser shows your collection's homepage, with items from Psychiana.`,
+        more: { title: "Good to know: rebuilding and stopping", html: `<ul><li>Leave it running while you work. Each time you save a file, the site rebuilds and you can refresh.</li><li>Changes to <code>_config.yml</code> need a restart. Press <kbd>Ctrl</kbd> <kbd>C</kbd>, then run the command again. Pressing <kbd>↑</kbd> brings it back.</li><li>Press <kbd>Ctrl</kbd> <kbd>C</kbd> to stop when you're finished.</li></ul>` }},
+      { id: "featured", title: "Choose a homepage image", where: [["browser", "Browser"], ["vscode", "VS Code"]], video: "nZcBduxKLTM",
+        actions: [
+          { html: `On your local site, open ${ui("Browse")} and pick a wide image.`, clip: 0 },
+          { html: `Open the item. Its ID is the end of the address, between <code>/items/</code> and <code>.html</code>. For example, <code>psychiana005</code>.`, clip: 1 },
+          { html: `In VS Code, open <code>_data/theme.yml</code>. Under ${ui("HOME PAGE")}, set:`, after: code(`<span class="k">featured-image:</span> psychiana005`), clip: 2 },
+          { html: `Save, then refresh your browser.`, clip: 3 }],
+        clips: [clip("browse-images-csv.gif", 1304, 670, "Browse"), clip("find-objectid-csv.gif", 1302, 670, "Find the ID"), clip("featured-image-csv.gif", 800, 330, "Edit theme.yml"), clip("refresh-site.gif", 1200, 744, "Refresh")],
+        save: "Add featured image",
+        done: `Your homepage opens with the image you chose.`,
+        more: { title: "More ways to change the look", html: `<p>See <a href="${DOCS}theme/">Theme Configuration</a>, <a href="${DOCS}customization/config-theme-colors/">Theme Colors</a> and <a href="${DOCS}add-more/custom-css/">Custom CSS</a>.</p>` }},
+      { id: "about", title: "Write your About page", badge: "Optional", where: [["vscode", "VS Code"]], video: "nCK_cuAz66U",
+        actions: [
+          { html: `Open <code>pages/about.md</code> and write a few lines in <a href="${DOCS}glossary/#markdown">Markdown</a>.` },
+          { html: `For ideas, try the examples on the <a href="https://collectionbuilder.github.io/collectionbuilder-gh/feature_options.html">Feature Includes Bonanza</a> page.` }],
+        save: "Update the About page",
+        done: `Your words show up on the About page of your local site.` }]},
+
+    { title: "Publish it", outcome: `your collection online at <code>${v("liveurl")}</code>.`, steps: [
+      { id: "urls", title: "Tell the site where it will live", where: [["vscode", "VS Code"]], video: "3LAtMRoTUx0",
+        actions: [{ html: `In <code>_config.yml</code>, find ${ui("URL VARIABLES")} and set:`, after: code(`<span class="k">url:</span> https://${v("user")}.github.io\n<span class="k">baseurl:</span> /${v("repo")}`), clip: 0 }],
+        clips: [clip("change-url-variables.gif", 798, 372, "URL variables")],
+        save: "Update URL variables",
+        done: `Your two lines match the ones above, and you've made a save point.`,
+        more: { title: "Hosting on your own server instead?", html: `<p>You can build the site yourself and copy the files to any web server. See <a href="${DOCS}deploy/build/">Building Your Site</a>.</p>` }},
+      { id: "push", title: "Send your save points to GitHub (sync)", where: [["vscode", "VS Code"]], video: "YXLju-mJX-E",
+        actions: [{ html: `In ${ui("Source Control")}, choose the blue ${ui("Sync Changes")} button.`, clip: 0 }],
+        clips: [clip("push-changes.gif", 554, 486, "Sync Changes")],
+        done: `On <code>github.com/${v("user")}/${v("repo")}</code>, the latest commit message is <code>Update URL variables</code>.` },
+      { id: "actions", title: "Turn on publishing", where: [["web", "GitHub.com"]], video: "__iuI5-PBpc",
+        actions: [
+          { html: `On your repository page, choose ${ui("Settings")} → ${ui("Pages")}.`, clip: 0 },
+          { html: `Under ${ui("Source")}, choose ${ui("GitHub Actions")}.`, clip: 1 },
+          { html: `In the ${ui("Jekyll")} box, choose ${ui("Configure")}.`, clip: 2 },
+          { html: `A file opens. You don't need to change it. Choose ${ui("Commit changes…")}, then ${ui("Commit changes")} again.`, clip: 3 },
+          { html: `Wait a few minutes. Your address appears under ${ui("Settings")} → ${ui("Pages")}.`, clip: 4 }],
+        clips: [clip("settings-then-pages-csv.gif", 982, 594, "Settings → Pages"), clip("github-actions.gif", 982, 594, "GitHub Actions"), clip("configure-button.gif", 982, 594, "Configure"), clip("deploy.gif", 640, 386, "Commit"), clip("find-live-url.gif", 982, 586, "Find your URL")],
+        done: `<code>${v("liveurl")}</code> shows your collection. From now on, every sync republishes it.`,
+        trouble: `<ul><li><b>No Actions tab?</b> Actions may be off for your account. Go to ${ui("Settings")} → ${ui("Actions")}, choose ${ui("Allow all actions")}, and save.</li><li><b>Red ✕ next to your commit?</b> The build failed and your last working site is still live. Open the ${ui("Actions")} tab to read the error.</li></ul>` }]}
+  ];
+
+  // ---------- state ----------
+  const KEY = "cb-walkthrough-csv-v1";
+  let state = { done: [], mode: "read", user: "", repo: "", checks: [] };
+  try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) {}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
+
+  const tidyRepo = (s) => s.toLowerCase().trim().replace(/\s+/g, "-").replace(/[^a-z0-9._-]/g, "").replace(/-+/g, "-");
+  const tidyUser = (s) => s.trim().replace(/[^A-Za-z0-9-]/g, "");
+  const values = () => {
+    const user = state.user || "your-username";
+    const repo = state.repo || "demo-collection";
+    const title = repo.split(/[-_.]+/).filter(Boolean).map(w => w[0].toUpperCase() + w.slice(1)).join(" ");
+    return { user, repo, repoUpper: repo.toUpperCase(), title, liveurl: `https://${user.toLowerCase()}.github.io/${repo}/` };
+  };
+
+  // ---------- render ----------
+  const partsEl = document.getElementById("parts");
+  const tocEl = document.getElementById("toc");
+  let n = 0;
+  const allSteps = [];
+  const appsLine = (where) => where.map(([k, l]) => `<span class="app" data-app="${k}">${l}</span>`).join(`<span class="arrow" aria-hidden="true">→</span>`);
+
+  PARTS.forEach((part, pi) => {
+    const sec = document.createElement("section");
+    sec.className = "part";
+    sec.id = `part${pi + 1}`;
+    let html = `<header class="part-head"><span class="eyebrow">Part ${pi + 1} of ${PARTS.length}</span><h2>${part.title}</h2><p class="outcome">When you finish this part you'll have <b>${part.outcome}</b></p></header>`;
+    if (part.note) html += `<aside class="aside-note"><h3>${part.note.title}</h3><p>${part.note.html}</p></aside>`;
+    const tocItems = [];
+    part.steps.forEach((s) => {
+      n += 1; s.n = n; allSteps.push(s);
+      tocItems.push(`<li><a href="#${s.id}" data-step="${s.id}"><span class="num"><span>${n}</span></span><span>${s.title}</span></a></li>`);
+      const acts = (s.actions || []).map((a, ai) => `<li><div class="act-text"><span>${a.html}</span>${a.after || ""}${a.clip != null ? `<button type="button" class="show-me" data-clip="${a.clip}">Show me</button>` : ""}</div></li>`).join("");
+      const checklist = s.checklist ? `<ul class="checklist">${s.checklist.map(([label, href, opt], ci) => {
+        const id = `${s.id}-c${ci}`;
+        return `<li><label for="${id}"><input type="checkbox" id="${id}" data-check="${id}"><span><a href="${DOCS}${href}">${label}</a>${opt ? `<br><span class="opt">${opt}</span>` : ""}</span></label></li>`;
+      }).join("")}</ul>` : "";
+      const savepoint = s.save ? `<div class="savepoint"><div class="savepoint-head"><span class="label">Save point</span><span>Commit with the message <code>${s.save}</code></span></div><details><summary>How do I commit again?</summary><ol><li>Open ${ui("Source Control")} (<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>G</kbd>).</li><li>Hover over ${ui("Changes")} and choose ${ui("+")}.</li><li>Type the message and choose ${ui("Commit")}.</li></ol></details></div>` : "";
+      const more = s.more ? `<details class="more"><summary>${s.more.title}</summary><div>${s.more.html}</div></details>` : "";
+      const trouble = s.trouble ? `<details class="more"><summary>Something went wrong</summary><div>${s.trouble}</div></details>` : "";
+      const tabs = [`<button type="button" role="tab" data-tab="video">Video</button>`]
+        .concat((s.clips || []).map((c, ci) => `<button type="button" role="tab" data-tab="clip" data-clip="${ci}">${s.clips.length > 1 ? `${ci + 1}. ` : ""}${c.label}</button>`)).join("");
+      html += `
+      <article class="step" id="${s.id}" data-step="${s.id}">
+        <div class="step-head">
+          <span class="step-num" aria-hidden="true">${n}</span>
+          <div class="step-title">
+            <h3><span class="visually-hidden">Step ${n}: </span>${s.title}</h3>
+            <div class="where"><span>In</span> ${appsLine(s.where)} ${s.badge ? `<span class="badge">${s.badge}</span>` : ""}</div>
+          </div>
+        </div>
+        <div class="step-grid">
+          <div class="step-body">
+            ${s.intro ? `<p>${s.intro}</p>` : ""}
+            ${acts ? `<ol class="actions">${acts}</ol>` : ""}
+            ${checklist}
+            ${s.careful ? `<div class="careful"><b>Careful</b><span>${s.careful}</span></div>` : ""}
+            ${savepoint}
+            <div class="checkpoint">
+              <span class="label">You're done when</span>
+              <p>${s.done}</p>
+              <button type="button" class="done-btn" aria-pressed="false">Mark step ${n} done</button>
+            </div>
+            ${trouble}${more}
+          </div>
+          <div class="step-media">
+            <div class="media-tabs" role="tablist" aria-label="Media for step ${n}">${tabs}</div>
+            <div class="media-stage"></div>
+          </div>
+        </div>
+      </article>`;
+    });
+    sec.innerHTML = html;
+    partsEl.appendChild(sec);
+    const li = document.createElement("li");
+    li.className = "toc-part";
+    li.innerHTML = `<span>${pi + 1} · ${part.title}</span><ol>${tocItems.join("")}</ol>`;
+    tocEl.appendChild(li);
+  });
+
+  // ---------- values ----------
+  const userIn = document.getElementById("gh-user");
+  const repoIn = document.getElementById("gh-repo");
+  userIn.value = state.user; repoIn.value = state.repo;
+  const paintValues = () => {
+    const vals = values();
+    document.querySelectorAll("[data-v]").forEach(el => { el.textContent = vals[el.dataset.v]; });
+  };
+  userIn.addEventListener("input", () => { state.user = tidyUser(userIn.value); save(); paintValues(); });
+  repoIn.addEventListener("input", () => { state.repo = tidyRepo(repoIn.value); save(); paintValues(); });
+  repoIn.addEventListener("blur", () => { repoIn.value = state.repo; });
+  paintValues();
+
+  // ---------- toast ----------
+  const toastEl = document.getElementById("toast");
+  let toastT;
+  const toast = (msg) => { toastEl.textContent = msg; toastEl.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove("show"), 1800); };
+
+  // ---------- copy ----------
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".copy");
+    if (!btn) return;
+    const text = btn.previousElementSibling.textContent;
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(btn.previousElementSibling); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Selected. Press Ctrl/⌘ C to copy"); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => { btn.textContent = "Copied"; setTimeout(() => btn.textContent = "Copy", 1500); }, fallback);
+    } else fallback();
+  });
+
+  // ---------- media ----------
+  const stepById = Object.fromEntries(allSteps.map(s => [s.id, s]));
+
+  // Only fetch a clip's GIF when its step is near the viewport.
+  const lazyIO = "IntersectionObserver" in window ? new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting) { lazyIO.unobserve(en.target); en.target._load(); } });
+  }, { rootMargin: "800px 0px" }) : null;
+  const lazyLoad = (el, fn) => { if (!lazyIO) return fn(); el._load = fn; lazyIO.observe(el); };
+
+  function renderClip(stage, c, stepN) {
+    const ratio = `${c.w} / ${c.h}`;
+    stage.innerHTML = `
+      <div class="screen"><button type="button" class="clip" style="aspect-ratio:${ratio}" aria-label="Play clip: ${c.label}">
+        <span class="loading">Loading clip…</span><canvas width="${c.w}" height="${c.h}" aria-hidden="true"></canvas>
+        <span class="playbar"><i aria-hidden="true"></i><span class="pb-label">Play</span></span>
+      </button></div>
+      <div class="clip-caption"><span>${c.label}</span><a href="${MEDIA}${c.file}" target="_blank" rel="noopener">Open full size ↗</a></div>`;
+    const btn = stage.querySelector(".clip");
+    const canvas = btn.querySelector("canvas");
+    const src = MEDIA + c.file;
+    const img = new Image();
+    img.decoding = "async";
+    img.onload = () => {
+      try { canvas.getContext("2d").drawImage(img, 0, 0, c.w, c.h); } catch (e) {}
+      btn.classList.add("ready");
+    };
+    img.onerror = () => { btn.querySelector(".loading").textContent = "Clip unavailable"; };
+    lazyLoad(btn, () => { img.src = src; });
+    btn.addEventListener("click", () => {
+      const live = btn.querySelector("img");
+      if (live) { live.remove(); canvas.hidden = false; btn.classList.remove("playing"); btn.querySelector(".pb-label").textContent = "Play"; btn.setAttribute("aria-label", `Play clip: ${c.label}`); return; }
+      const anim = document.createElement("img");
+      anim.alt = c.label; anim.src = src; // a fresh element restarts the GIF from frame one
+      btn.insertBefore(anim, btn.querySelector(".playbar"));
+      canvas.hidden = true; btn.classList.add("playing", "ready");
+      btn.querySelector(".pb-label").textContent = "Stop";
+      btn.setAttribute("aria-label", `Stop clip: ${c.label}`);
+    });
+    return btn;
+  }
+
+  function renderVideo(stage, s) {
+    const url = `https://www.youtube.com/watch?v=${s.video}&list=${PLAYLIST}`;
+    stage.innerHTML = `<a class="video-card" href="${url}" target="_blank" rel="noopener">
+        <span class="vc-top">Video · Step ${s.n} of 17</span>
+        <span class="vc-title">${s.title}</span>
+        <span class="vc-play"><i aria-hidden="true"></i>${CAN_EMBED ? "Play video" : "Watch on YouTube ↗"}</span>
+      </a>
+      <div class="clip-caption"><span>From the CSV walkthrough series</span><a href="https://www.youtube.com/playlist?list=${PLAYLIST}" target="_blank" rel="noopener">Full playlist ↗</a></div>`;
+    if (CAN_EMBED) {
+      stage.querySelector(".video-card").addEventListener("click", (e) => {
+        e.preventDefault();
+        stage.querySelector(".video-card").outerHTML = `<iframe class="video-frame" title="Video: ${s.title}" src="https://www.youtube-nocookie.com/embed/${s.video}?rel=0&modestbranding=1&autoplay=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+      });
+    }
+  }
+
+  function showMedia(article, which, clipIndex, play) {
+    const s = stepById[article.dataset.step];
+    const stage = article.querySelector(".media-stage");
+    article.querySelectorAll(".media-tabs button").forEach(b => {
+      const on = which === "video" ? b.dataset.tab === "video" : b.dataset.tab === "clip" && +b.dataset.clip === clipIndex;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    article.querySelectorAll(".show-me").forEach(b => b.setAttribute("aria-current", which === "clip" && +b.dataset.clip === clipIndex ? "true" : "false"));
+    if (which === "video" || !s.clips) { renderVideo(stage, s); return; }
+    const btn = renderClip(stage, s.clips[clipIndex], s.n);
+    if (play) btn.click();
+  }
+
+  const applyMode = () => {
+    document.querySelectorAll(".mode-switch button").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === state.mode ? "true" : "false"));
+    document.querySelectorAll(".step").forEach(a => {
+      const s = stepById[a.dataset.step];
+      if (state.mode === "watch" || !s.clips) showMedia(a, "video");
+      else showMedia(a, "clip", 0, false);
+    });
+  };
+  document.querySelectorAll(".mode-switch button").forEach(b => b.addEventListener("click", () => { state.mode = b.dataset.mode; save(); applyMode(); }));
+
+  document.addEventListener("click", (e) => {
+    const tab = e.target.closest(".media-tabs button");
+    if (tab) { const a = tab.closest(".step"); showMedia(a, tab.dataset.tab, +tab.dataset.clip || 0, false); return; }
+    const show = e.target.closest(".show-me");
+    if (show) {
+      const a = show.closest(".step");
+      showMedia(a, "clip", +show.dataset.clip, true);
+      const media = a.querySelector(".step-media");
+      const r = media.getBoundingClientRect();
+      if (r.top < 0 || r.bottom > innerHeight) media.scrollIntoView({ block: "nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    }
+  });
+  applyMode();
+
+  // ---------- progress ----------
+  const meter = document.getElementById("meter");
+  const label = document.getElementById("progress-label");
+  const paintProgress = () => {
+    const doneSet = new Set(state.done);
+    document.querySelectorAll(".step").forEach(a => {
+      const d = doneSet.has(a.dataset.step);
+      a.classList.toggle("is-done", d);
+      const b = a.querySelector(".done-btn");
+      b.setAttribute("aria-pressed", d ? "true" : "false");
+      b.lastChild.textContent = d ? `Step ${stepById[a.dataset.step].n} done` : `Mark step ${stepById[a.dataset.step].n} done`;
+    });
+    tocEl.querySelectorAll("a").forEach(a => a.classList.toggle("is-done", doneSet.has(a.dataset.step)));
+    const count = allSteps.filter(s => doneSet.has(s.id)).length;
+    label.innerHTML = count === allSteps.length ? `<b>All ${count} steps done</b>. Nice work.` : `<b>${count}</b> of ${allSteps.length} steps done`;
+    meter.style.transform = `scaleX(${count / allSteps.length})`;
+    document.querySelectorAll("[data-check]").forEach(cb => { cb.checked = state.checks.includes(cb.dataset.check); });
+  };
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest(".done-btn");
+    if (!b) return;
+    const id = b.closest(".step").dataset.step;
+    const i = state.done.indexOf(id);
+    if (i >= 0) state.done.splice(i, 1); else state.done.push(id);
+    save(); paintProgress();
+    if (i < 0) {
+      const idx = allSteps.findIndex(s => s.id === id);
+      const next = allSteps[idx + 1];
+      toast(next ? `Step ${idx + 1} done. Next: ${next.title}` : "All done. Your site is live!");
+    }
+  });
+  document.addEventListener("change", (e) => {
+    const cb = e.target.closest("[data-check]");
+    if (!cb) return;
+    state.checks = state.checks.filter(c => c !== cb.dataset.check);
+    if (cb.checked) state.checks.push(cb.dataset.check);
+    save();
+  });
+  paintProgress();
+
+  const resetBtn = document.getElementById("reset");
+  let armed = false, armT;
+  resetBtn.addEventListener("click", () => {
+    if (!armed) { armed = true; resetBtn.textContent = "Click again to clear all progress"; armT = setTimeout(() => { armed = false; resetBtn.textContent = "Reset progress"; }, 4000); return; }
+    clearTimeout(armT); armed = false; resetBtn.textContent = "Reset progress";
+    state.done = []; state.checks = []; save(); paintProgress(); toast("Progress cleared");
+  });
+
+  // ---------- rail: open on desktop, track current step ----------
+  const det = document.getElementById("toc-details");
+  const wide = matchMedia("(min-width: 64rem)");
+  const syncDetails = () => { if (wide.matches) det.open = true; };
+  syncDetails(); wide.addEventListener("change", syncDetails);
+  det.addEventListener("click", (e) => { if (e.target.closest("a") && !wide.matches) det.open = false; });
+
+  const links = Object.fromEntries([...tocEl.querySelectorAll("a")].map(a => [a.dataset.step, a]));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      Object.values(links).forEach(l => l.removeAttribute("aria-current"));
+      links[en.target.dataset.step]?.setAttribute("aria-current", "step");
+    });
+  }, { rootMargin: "-30% 0px -60% 0px" });
+  document.querySelectorAll(".step").forEach(a => io.observe(a));
+})();
+</script>
