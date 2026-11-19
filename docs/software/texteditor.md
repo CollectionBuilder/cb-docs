@@ -46,6 +46,12 @@ For working on CollectionBuilder projects we recommend two extensions:
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker), which will check your spelling which is handy for content writing!
 - [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), highlights CSVs to make them easier to read directly in the editor.
 
+## Update VS Code
+
+Much like your web browser, VS Code and it's plugins will receive regular updates automatically. 
+Updates are usually automatically downloaded, but require the application to restart to apply. 
+Please be sure to keep it up to date!
+
 *Please note:* Visual Studio Code is NOT the same thing as Visual Studio IDE (great naming Microsoft!).
 VS Code is the lighter code editor; Visual Studio is a full traditional heavy IDE system.
 You do not want Visual Studio.

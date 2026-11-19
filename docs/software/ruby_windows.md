@@ -42,5 +42,5 @@ However, new stable branches (e.g. 3.1.x to 3.2.x) should be updated by first un
 - In your list of "Apps & features", search for "ruby"
 - Click on your ruby installation, then click "Uninstall"
 - Once the uninstaller finishes, look in your C: drive for the folder "Ruby32-x64" where Ruby was installed. Delete this folder to finish cleaning your system.
-- Install your new version using RubyInstaller as normal. Keep in mind, your previous gems and configuration will no longer exist! You will have to `gem install bundler jekyll` again to get started.
-- In any existing projects, you will want to delete the "Gemfile.lock" file (since it is based on your old versions). 
+- Install your new version using RubyInstaller as normal. Keep in mind, your previous gems and configuration will no longer exist!
+- In any existing projects, delete the "Gemfile.lock" file (since it is based on your old versions). Then run `bundle install` to get a fresh version of the dependencies.

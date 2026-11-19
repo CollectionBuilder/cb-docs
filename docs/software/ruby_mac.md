@@ -74,15 +74,15 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 ## Install Ruby
 
-- Check the [Ruby download page](https://www.ruby-lang.org/en/downloads/) to find the latest stable version number. For example, in June 2026, the current stable version was "4.0.5". (You do not need to download anything, just check the version number!)
+- Check the [Ruby download page](https://www.ruby-lang.org/en/downloads/) to find the latest stable version number. For example, in Nov 2026, the current stable version was "4.0.10". (You do not need to download anything, just check the version number!)
 - Back in your terminal, install the latest version of ruby by copy/pasting or typing: 
 ```
-rbenv install 4.0.5
+rbenv install 4.0.10
 ```
 - Installation may take a long time!
 - Next, set that version as your global Ruby version by typing: 
 ```
-rbenv global 4.0.5
+rbenv global 4.0.10
 ```
 - Finally, refresh your terminal by running rehash:
 ```
@@ -120,8 +120,10 @@ Having your MacOS up to date will also help!
 
 To update your Ruby version on Mac, you will want to start by updating rbenv using: `brew upgrade rbenv ruby-build`.
 
-Next, follow the [Install Ruby](#install-ruby) instructions above for your new version. 
+Next, follow the [Install Ruby](#install-ruby) instructions above for your new version, installing and setting it as global. 
 
 Then update Gems with `gem update --system`.
 
-In any existing projects, you will want to delete the "Gemfile.lock" file (since it is based on your old versions). 
+In any existing projects, you will want to delete the "Gemfile.lock" file (since it is based on your old versions) and do a fresh `bundle install` to get the updated dependencies. 
+
+Finally, to clean up old versions of Ruby, you can list all versions installed using `rbenv versions`, then remove old versions with `rbenv uninstall`, like `rbenv uninstall 4.0.5`.
